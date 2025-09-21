@@ -2,8 +2,8 @@ pid = 78b6bea1aa9444dbb0a5c1d2def5420e
 persistentId = 2327251169
 name = Irpont Kerman
 type = EVA
-sit = LANDED
-landed = True
+sit = SUB_ORBITAL
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = False
@@ -11,17 +11,17 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 13062.351895928383
+met = 89323.55523684621
 lct = 147274047.72244507
-lastUT = 147287110.074341
-distanceTraveled = 5344.632391872739
+lastUT = 147363371.29768193
+distanceTraveled = 5431.727278634379
 root = 0
-lat = -10.502381009265921
-lon = -110.27398195098648
-alt = 906.7300300931311
-hgt = 0.25584513
-nrm = -0.11495521664619446,0.990818202495575,-0.0711667537689209
-rot = 0.4817334,-0.60456043,0.60014904,-0.20557424
+lat = -10.520219516958008
+lon = -110.2925471077467
+alt = 912.1058088774516
+hgt = 2.3805964
+nrm = 0.05743372440338135,0.9707768559455872,-0.23301059007644653
+rot = 0.25827232,0.4903233,-0.7242823,-0.41023624
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -35,19 +35,20 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.01399949
-cHdg = -9.735997
+cPch = 0.2
+cHdg = 0.3
 cMod = 0
 ORBIT
 {
-	SMA = 22453.431114071056
-	ECC = 0.999994112345311
-	INC = 10.502381009265921
-	LPE = 90.00000000000001
-	LAN = 115.28633016298556
-	MNA = 3.141592653589651
-	EPH = 147287112.71434242
+	SMA = 22456.27014374347
+	ECC = 0.9999815448546312
+	INC = 133.06683363015674
+	LPE = 14.473134540176044
+	LAN = 245.70224613947147
+	MNA = 3.138920398736495
+	EPH = 147363370.1176813
 	REF = 14
+	IDENT = Squad/Pol
 }
 PART
 {
@@ -62,19 +63,19 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
+	sqor = 0
 	sepI = -1
-	sidx = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
 	mass = 0.0782463253
 	shielded = False
-	temp = 60.968190624725644
-	tempExt = 61.013477995385401
+	temp = 128.89504180637567
+	tempExt = 128.89504189756283
 	tempExtUnexp = 312.37811869398234
 	staticPressureAtm = 0
 	expt = 0
@@ -111,6 +112,42 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -119,13 +156,13 @@ PART
 	{
 		name = KerbalEVA
 		isEnabled = True
-		JetpackDeployed = True
+		JetpackDeployed = False
 		lampOn = True
 		isHelmetEnabled = True
 		isNeckRingEnabled = True
 		isVisorEnabled = False
 		thrustPercentage = 100
-		lastBoundStep = 3.59967041
+		lastBoundStep = 1.20833337
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
@@ -527,7 +564,7 @@ PART
 					cid = 4294879348
 					uid = 0
 					mid = 0
-					persistentId = 2562162449
+					persistentId = 2980489293
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -618,7 +655,7 @@ PART
 					cid = 4294879442
 					uid = 0
 					mid = 0
-					persistentId = 1002236249
+					persistentId = 3049771834
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -714,6 +751,42 @@ PART
 	}
 	MODULE
 	{
+		name = KASLinkTargetKerbal
+		isEnabled = True
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASLinkTargetKerbal
+		isEnabled = True
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleScienceExperiment
 		isEnabled = True
 		Deployed = False
@@ -737,6 +810,51 @@ PART
 				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIModuleWearablesController
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIModuleEVAOverrides
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIModuleEVAResourceTransfer
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -786,7 +904,7 @@ CTRLSTATE
 }
 VESSELMODULES
 {
-	FlightIntegrator
+	ModularFlightIntegrator
 	{
 	}
 	AxisGroupsModule
@@ -799,5 +917,31 @@ VESSELMODULES
 	{
 		controlState = None
 		canComm = False
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
 	}
 }
