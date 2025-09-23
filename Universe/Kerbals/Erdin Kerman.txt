@@ -13,7 +13,7 @@ inactiveTimeEnd = 0
 gExperienced = 0
 outDueToG = False
 ToD = 2000.02
-idx = 0
+idx = -1
 extraXP = 0
 hasHelmetOn = True
 hasNeckRingOn = True
@@ -25,6 +25,48 @@ completedFirstEVA = True
 suit = Slim
 hero = False
 comboId = slim_male_2
+EVACHUTE
+{
+	name = ModuleEvaChute
+	isEnabled = True
+	chuteYawRateAtMaxSpeed = 1
+	chuteMaxSpeedForYawRate = 50
+	chuteYawRateAtMinSpeed = 1
+	chuteMinSpeedForYawRate = 1
+	chuteRollRate = 1
+	chutePitchRate = 1
+	chuteDefaultForwardPitch = 9
+	semiDeployedChuteForwardPitch = 25
+	chutePitchRateDivisorWhenTurning = 1
+	chuteRollRateDivisorWhenPitching = 1
+	chuteYawRateDivisorWhenPitching = 1
+	persistentState = STOWED
+	animTime = 0
+	minAirPressureToOpen = 0.0399999991
+	deployAltitude = 1000
+	spreadAngle = 7
+	automateSafeDeploy = 0
+	stagingEnabled = False
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		DeployAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		CutAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	UPGRADESAPPLIED
+	{
+	}
+}
 INVENTORY
 {
 	name = ModuleInventoryPart
@@ -52,7 +94,7 @@ INVENTORY
 				cid = 4294881514
 				uid = 0
 				mid = 0
-				persistentId = 315788474
+				persistentId = 2540209025
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -175,7 +217,7 @@ INVENTORY
 				cid = 4294881578
 				uid = 0
 				mid = 0
-				persistentId = 2535421153
+				persistentId = 3530439960
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -313,4 +355,7 @@ CAREER_LOG
 FLIGHT_LOG
 {
 	flight = 1
+	1 = ExitVessel,Kerbin
+	1 = Orbit,Kerbin
+	1 = BoardVessel,Kerbin
 }
