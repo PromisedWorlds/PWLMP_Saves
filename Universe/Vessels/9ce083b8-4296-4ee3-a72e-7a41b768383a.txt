@@ -1,27 +1,27 @@
-pid = 289ff0a9bb7648d4bd01cd579b1919f5
-persistentId = 737920400
-name = soyuz-apollo, for convinience
-type = Flag
-sit = LANDED
-landed = True
+pid = 9ce083b842964ee3a72e7a41b768383a
+persistentId = 340687662
+name = Mun Lander Debris
+type = Debris
+sit = ESCAPING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = 
+launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 318382.5685281637
-lct = 2829435.833634368
-lastUT = 3147818.402162532
-distanceTraveled = 0
+met = 0.3799999561160803
+lct = 3273523.9666580637
+lastUT = 3273524.386658015
+distanceTraveled = 1680.7706493337034
 root = 0
-lat = 2.4493750817404387
-lon = 81.52258986075323
-alt = 4753.159208293277
-hgt = 0.34206018
-nrm = -0.0632300078868866,0.9962448477745056,-0.05914866924285889
-rot = -0.6713125,0.10554818,0.19833711,-0.70630133
+lat = 2.2434210161155597
+lon = 81.52213890304232
+alt = 5026.422158287198
+hgt = 5026.4224
+nrm = 0.0760558545589447,-0.9969280362129211,-0.01870495080947876
+rot = -0.123782404,0.84555775,-0.5006024,0.13822901
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -40,52 +40,54 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 102390.34274659133
-	ECC = 0.9997311632703737
-	INC = 2.4493750817404383
-	LPE = 270.000000465576
-	LAN = 60.83836459386794
-	MNA = 3.141592653349579
-	EPH = 3273590.0466504325
+	SMA = -6107.993706587297
+	ECC = 32.568104550149684
+	INC = 89.91967633184863
+	LPE = 157.5784820886643
+	LAN = 330.6704689734524
+	MNA = 11.171266317200864
+	EPH = 3273524.066658052
 	REF = 2
 	IDENT = Squad/Mun
 }
 PART
 {
-	name = flag
-	cid = 4287454194
-	uid = 401548081
-	mid = 2088509366
-	persistentId = 3895050075
-	launchID = 2
+	name = batteryBank
+	cid = 4294366776
+	uid = 3610312709
+	mid = 1589185377
+	persistentId = 1221989708
+	launchID = 1
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = -1
 	resPri = 0
 	dstg = 0
 	sqor = -1
-	sepI = 0
+	sepI = -1
 	sidx = -1
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	mass = 0.00999999978
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.0500000007
 	shielded = False
-	temp = 4
-	tempExt = 4
+	temp = 211.97144257660611
+	tempExt = 212.16070276898512
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
-	attached = True
-	autostrutMode = Off
+	attached = False
+	autostrutMode = Root
 	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	flag = Squad/Agencies/Rockomax
+	rTrf = batteryBank
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -113,37 +115,31 @@ PART
 		AutostrutOff
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutRoot
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutHeaviest
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutGrandparent
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesEnableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -152,28 +148,12 @@ PART
 	}
 	MODULE
 	{
-		name = FlagSite
+		name = ModuleCargoPart
 		isEnabled = True
-		placedBy = Janbro Kerman
-		PlaqueText = 
-		stagingEnabled = True
-		state = Placed
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		isMirrored = False
+		packedVolume = 360
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -187,7 +167,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIModuleEVAVariants
+		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -199,16 +179,42 @@ PART
 		UPGRADESAPPLIED
 		{
 		}
+	}
+	MODULE
+	{
+		name = ModuleFreeIva
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 999.99932861328125
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
-	Gear = False, 0
-	Light = False, 0
+	Stage = True, 2989813.44856812
+	Gear = True, 2989993.74093888
+	Light = True, 2990240.84093911
 	RCS = False, 0
 	SAS = False, 0
-	Brakes = False, 0
+	Brakes = True, 2990077.94093895
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -244,4 +250,54 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	ELVesselWorkNet
+	{
+		lastUpdate = 0
+		selectedPad = 0
+		Productivity = 0
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }

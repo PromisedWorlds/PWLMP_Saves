@@ -1,8 +1,8 @@
-pid = 3bee2105396149d28f6af07580636e8f
-persistentId = 1268638635
+pid = 75046f4afe534b299b887a2c1f290b56
+persistentId = 71193189
 name = Mun station launcher Debris
 type = Debris
-sit = SPLASHED
+sit = ORBITING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
@@ -10,20 +10,20 @@ vesselSpawning = True
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
-splashed = True
-met = 274968.11607030453
-lct = 2872825.286092204
-lastUT = 3147793.4221625086
-distanceTraveled = 71.61789852265474
+splashed = False
+met = 26.673689102288336
+lct = 2874579.1957484363
+lastUT = 2874605.9294375386
+distanceTraveled = 50113.45142207716
 root = 0
-lat = -0.08098659289062692
-lon = -74.41201146574778
-alt = -2.2644317902158946
-hgt = -2.2644317
-nrm = 0.03424045443534851,0.9993498921394348,-0.011286139488220215
-rot = -0.1745121,-0.6992422,0.69212604,-0.039592262
+lat = -0.071686008925190961
+lon = -28.871035198645679
+alt = 99651.290969153401
+hgt = 99651.2891
+nrm = -0.00457450841,0.185636818,-0.982607901
+rot = 0.301965445,-0.300493985,-0.644245684,0.635191143
 CoM = 0,0,0
-stg = 5
+stg = 3
 prst = False
 ref = 0
 ctrl = False
@@ -40,45 +40,44 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300780.8285612371
-	ECC = 0.9948004613046527
-	INC = 0.08098659254988393
-	LPE = 89.99999999999999
-	LAN = 169.1537833752451
-	MNA = 3.1415926535897976
-	EPH = 3128471.64915936
+	SMA = 700074.04574207787
+	ECC = 0.0064190493970892803
+	INC = 0.073311308966240774
+	LPE = 7.0553533001552244
+	LAN = 281.13626770165638
+	MNA = 4.8129937923715902
+	EPH = 2874579.2557484363
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = rocketNoseCone.v3
-	cid = 4290973780
-	uid = 2338901416
-	mid = 804180512
-	persistentId = 1114181379
+	name = radialDecoupler2
+	cid = 4284315018
+	uid = 2190546502
+	mid = 4222466954
+	persistentId = 2369048813
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,0.999999821
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 3
 	resPri = 0
-	dstg = 11
-	sqor = -1
-	sepI = -1
-	sidx = -1
-	attm = 0
+	dstg = 5
+	sqor = 3
+	sepI = 3
+	sidx = 9
+	attm = 1
 	sameVesselCollision = False
-	srfN = , -1
-	attN = bottom, -1
-	mass = 0.200000003
+	srfN = srfAttach, -1,COL_TANK_XLONG
+	mass = 0.0500000007
 	shielded = False
-	temp = 608.34774656350726
-	tempExt = 401.58336985360046
-	tempExtUnexp = 401.45180844981508
-	staticPressureAtm = 1.2311787668420284
+	temp = 312.30192231787936
+	tempExt = 315.06441288622557
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 1
 	PreFailState = 0
@@ -86,10 +85,10 @@ PART
 	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = rocketNoseCone.v3
+	rTrf = radialDecoupler2
 	modCost = 0
 	modMass = 0
-	moduleVariantName = White
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -149,9 +148,77 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			EnableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DisableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = -1
+		packedVolume = 750
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -181,45 +248,14 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 2872706.4322027
+	Stage = True, 2874059.54514968
 	Gear = False, 0
 	Light = False, 0
-	RCS = True, 2872699.55220269
-	SAS = False, 2872705.0322027
+	RCS = True, 2873848.63424948
+	SAS = True, 2874554.58326293
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -252,7 +288,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
