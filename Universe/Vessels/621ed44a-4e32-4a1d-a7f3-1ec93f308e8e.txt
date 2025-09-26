@@ -11,42 +11,42 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 128527.40637292992
+met = 129733.22107958561
 lct = 3278775.261648538
-lastUT = 3407302.708021468
-distanceTraveled = 1422521.8689057652
+lastUT = 3408508.522728119
+distanceTraveled = 1422522.1289238136
 root = 0
-lat = 2.463769987639739
-lon = 81.52410212409212
-alt = 4874.598404681892
-hgt = 3.7535517
-nrm = -0.01851707696914673,0.9990584850311279,-0.03923594951629639
-rot = 0.07545137,0.7204566,0.68171024,-0.102570035
-CoM = -0.00682982802,4.96389246,0.000799536705
+lat = 2.4637427321411156
+lon = 81.52380851012789
+alt = 4874.330987711204
+hgt = 3.663572
+nrm = 0.06402640044689178,0.997296929359436,-0.0360487699508667
+rot = 0.106156915,0.7157341,0.67796296,-0.1296984
+CoM = 0.00126719475,4.46513319,0.00283479691
 stg = 1
 prst = False
 ref = 2178632374
 ctrl = True
 PQSMin = 2
-PQSMax = 10
+PQSMax = 9
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 1.432
-cHdg = -5.580969
-cMod = 1
+cPch = 0.158
+cHdg = 0.7299995
+cMod = 0
 ORBIT
 {
-	SMA = 102453.08973312707
-	ECC = 0.9997350917087382
-	INC = 2.901184463106209
-	LPE = 238.13962516344372
-	LAN = 79.07089758702892
-	MNA = 3.1416846443804767
-	EPH = 3407299.908021577
+	SMA = 102453.15675343512
+	ECC = 0.9997306741925507
+	INC = 2.463763156510127
+	LPE = 270
+	LAN = 50.15210640834039
+	MNA = 3.1415926535897727
+	EPH = 3408448.4027333255
 	REF = 2
 	IDENT = Squad/Mun
 }
@@ -76,8 +76,8 @@ PART
 	attN = top, 8
 	mass = 0.100000001
 	shielded = False
-	temp = 206.21153899380667
-	tempExt = 206.05686647461735
+	temp = 185.16395953751314
+	tempExt = 185.02627784208869
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -328,6 +328,22 @@ PART
 	}
 	MODULE
 	{
+		name = ParkingBrakeModule
+		isEnabled = True
+		brakeActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -420,8 +436,8 @@ PART
 	attN = bottom, 0
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.3599554620576
-	tempExt = 206.12073539924276
+	temp = 185.15114890222836
+	tempExt = 185.00637534653856
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -718,8 +734,8 @@ PART
 	attN = bottom, 3
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.38351746593003
-	tempExt = 206.14661977782316
+	temp = 185.17247039278408
+	tempExt = 185.00863361530571
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1014,8 +1030,8 @@ PART
 	attN = top, 2
 	mass = 1.25200009
 	shielded = False
-	temp = 206.42248770241494
-	tempExt = 206.18910735899976
+	temp = 185.19797730781502
+	tempExt = 185.0227310942783
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1706,6 +1722,22 @@ PART
 	}
 	MODULE
 	{
+		name = ParkingBrakeModule
+		isEnabled = True
+		brakeActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -2058,8 +2090,8 @@ PART
 	srfN = srfAttach, 3,COLPod.collider
 	mass = 0.100000001
 	shielded = False
-	temp = 206.31979708471459
-	tempExt = 206.11744405545289
+	temp = 185.1882993684716
+	tempExt = 184.95259683801299
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2135,7 +2167,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = False
+		isGrounded = True
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -2158,10 +2190,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
+		springTweakable = 1.03999996
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (-7.53204361E-08, 1.93715096E-07, 0.252590656)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -2183,7 +2215,7 @@ PART
 		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -2305,8 +2337,8 @@ PART
 	srfN = srfAttach, 3,COLPod.collider
 	mass = 0.100000001
 	shielded = False
-	temp = 206.319233161488
-	tempExt = 206.13187165335978
+	temp = 185.18883344679818
+	tempExt = 184.96966213125188
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2382,7 +2414,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = False
+		isGrounded = True
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -2405,10 +2437,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
+		springTweakable = 1.03999996
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (-2.20018762E-07, 2.83122063E-07, 0.329200774)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -2430,7 +2462,7 @@ PART
 		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -2552,8 +2584,8 @@ PART
 	srfN = srfAttach, 3,COLPod.collider
 	mass = 0.100000001
 	shielded = False
-	temp = 206.3173420899318
-	tempExt = 206.08514149957603
+	temp = 185.19303369508606
+	tempExt = 185.12507732530372
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2629,7 +2661,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = False
+		isGrounded = True
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -2652,10 +2684,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
+		springTweakable = 1.03999996
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (-1.3385079E-07, 1.93715096E-07, 0.303587586)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -2677,7 +2709,7 @@ PART
 		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -2799,8 +2831,8 @@ PART
 	srfN = srfAttach, 3,COLPod.collider
 	mass = 0.100000001
 	shielded = False
-	temp = 206.3173347137548
-	tempExt = 206.08704076870117
+	temp = 185.19237406300789
+	tempExt = 185.10006758237404
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2876,7 +2908,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = False
+		isGrounded = True
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -2899,10 +2931,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
+		springTweakable = 1.03999996
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (-2.46880802E-07, 3.12924385E-07, 0.382560134)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -2924,7 +2956,7 @@ PART
 		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -3047,8 +3079,8 @@ PART
 	attN = top, 9
 	mass = 0.25
 	shielded = False
-	temp = 206.16529971561195
-	tempExt = 206.07425789835855
+	temp = 185.1899978514449
+	tempExt = 185.08558535587372
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3184,8 +3216,8 @@ PART
 	attN = N4, -1
 	mass = 0.140000001
 	shielded = False
-	temp = 206.1105735806193
-	tempExt = 205.97025018729477
+	temp = 185.17708422184486
+	tempExt = 185.05421126485274
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3267,7 +3299,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = 1.70754777E-06
+		previousTargetAngle = -0.00198720582
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -3277,7 +3309,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,2.2737367E-15,1.36560612E-08
-		servoTransformRotation = 0,-1.73416411E-05,0,1
+		servoTransformRotation = 0,-1.64071516E-05,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3490,7 +3522,7 @@ PART
 	launchID = 1
 	parent = 9
 	position = 0,2.0975341796875,0
-	rotation = 0,-1.73410317E-05,0,1
+	rotation = 0,-1.64065405E-05,0,1
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3506,8 +3538,8 @@ PART
 	attN = top, 11
 	mass = 0.140000001
 	shielded = False
-	temp = 206.08055913011907
-	tempExt = 205.93134264010135
+	temp = 185.17575704504364
+	tempExt = 185.04361585226954
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3587,7 +3619,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = 8.53773543E-07
+		previousTargetAngle = -0.0204513371
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 1.28700865E-32,-1.13446405E-16,1.13446405E-16,1
@@ -3597,7 +3629,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.000178471586,0,0,1
+		servoTransformRotation = 0.00017850475,0,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3806,8 +3838,8 @@ PART
 	persistentId = 3476490658
 	launchID = 1
 	parent = 10
-	position = -7.7179569402119341E-09,2.7225680351257324,0.00022313020599540323
-	rotation = 0.000178488583,-1.73435637E-05,3.07214698E-09,1
+	position = -7.3022907720599051E-09,2.7225680351257324,0.00022317164984997362
+	rotation = 0.000178521746,-1.64090725E-05,2.90589486E-09,1
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3823,8 +3855,8 @@ PART
 	attN = top, 12
 	mass = 0.140000001
 	shielded = False
-	temp = 206.06974651659004
-	tempExt = 205.8755578700015
+	temp = 185.1775048574051
+	tempExt = 185.03825053271439
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3904,7 +3936,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = 0
+		previousTargetAngle = -0.0265489612
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 1.28700865E-32,-1.13446405E-16,1.13446405E-16,1
@@ -3914,7 +3946,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.000231683371,0,0,1
+		servoTransformRotation = 0.000117412885,0,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -4107,8 +4139,8 @@ PART
 	persistentId = 156033757
 	launchID = 1
 	parent = 11
-	position = -4.1949146378783553E-08,3.9231717586517334,0.0012079649604856968
-	rotation = 0.000410163659,-1.73416392E-05,7.11110948E-09,0.99999994
+	position = -3.0690571861669014E-08,3.9231719970703125,0.00093369855312630534
+	rotation = 0.000295926293,-1.6407148E-05,4.85306595E-09,0.99999994
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -4124,8 +4156,8 @@ PART
 	attN = top, 13
 	mass = 0.659999967
 	shielded = False
-	temp = 206.08079288093759
-	tempExt = 205.89823999971327
+	temp = 185.18496560813946
+	tempExt = 185.04641176615351
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4212,7 +4244,7 @@ PART
 		servoMotorSize = 100
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
-		servoTransformPosition = 0,6.29655779E-06,0
+		servoTransformPosition = 0,0.000956440577,0
 		servoTransformRotation = 0.707106829,0,0,0.707106709
 		useMultipleDragCubes = False
 		stagingEnabled = True
@@ -4418,8 +4450,8 @@ PART
 	persistentId = 1723251235
 	launchID = 1
 	parent = 12
-	position = -1.2173063623777125E-07,6.7227902412414551,0.0035046299453824759
-	rotation = -0.99999994,-7.11110948E-09,-1.73416392E-05,0.000410163659
+	position = -8.520622429841751E-08,6.7237410545349121,0.0025912837591022253
+	rotation = -0.99999994,-4.85306595E-09,-1.6407148E-05,0.000295926293
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -4435,8 +4467,8 @@ PART
 	attN = top, 12
 	mass = 0.375
 	shielded = False
-	temp = 206.17105790507011
-	tempExt = 205.9420022087981
+	temp = 185.17987992921826
+	tempExt = 185.05653432141
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4582,8 +4614,8 @@ PART
 	persistentId = 768152590
 	launchID = 1
 	parent = 13
-	position = -1.6354735521417751E-07,8.1980705261230469,0.0047157369554042816
-	rotation = 0.000410163659,-1.73416392E-05,7.11110948E-09,0.99999994
+	position = -1.1369758823320808E-07,8.1990213394165039,0.0034653269685804844
+	rotation = 0.000295926293,-1.6407148E-05,4.85306595E-09,0.99999994
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -4603,8 +4635,8 @@ PART
 	attN = N4, -1
 	mass = 0.140000001
 	shielded = False
-	temp = 206.12763591396964
-	tempExt = 206.00236290991415
+	temp = 185.17680305793405
+	tempExt = 185.0462439455242
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4686,7 +4718,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = 0
+		previousTargetAngle = -0.00735473633
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -4696,7 +4728,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,2.2737367E-15,1.36560612E-08
-		servoTransformRotation = 0,6.41821825E-05,0,-1
+		servoTransformRotation = 0,-3.70218295E-05,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -4892,8 +4924,8 @@ PART
 	persistentId = 2454315522
 	launchID = 1
 	parent = 14
-	position = -1.9013545227153372E-07,9.1354465484619141,0.005484370980411768
-	rotation = -0.0004102065,8.15144813E-05,1.92852383E-08,-0.99999994
+	position = -1.318380355996851E-07,9.1363973617553711,0.0040197945199906826
+	rotation = 0.000295969134,-5.3419637E-05,-6.17608231E-09,0.99999994
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -4909,8 +4941,8 @@ PART
 	attN = top, 16
 	mass = 0.140000001
 	shielded = False
-	temp = 206.14436182537654
-	tempExt = 206.03106732019887
+	temp = 185.18077003394546
+	tempExt = 185.04122050811804
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4990,7 +5022,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = 8.53773543E-07
+		previousTargetAngle = -0.0209226981
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -5000,7 +5032,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.00018258499,0,0,1
+		servoTransformRotation = 0.000182304051,0,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -5193,8 +5225,8 @@ PART
 	persistentId = 19699111
 	launchID = 1
 	parent = 15
-	position = -2.4374787699343869E-07,9.7605209350585938,0.0062219882383942604
-	rotation = -0.000592730881,8.15329186E-05,4.49508075E-09,-0.999999821
+	position = -1.6713337913643045E-07,9.7614717483520508,0.0046142465434968472
+	rotation = 0.000478212605,-5.34380742E-05,3.47318041E-09,0.999999881
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -5210,8 +5242,8 @@ PART
 	attN = top, 17
 	mass = 0.140000001
 	shielded = False
-	temp = 206.17298984802477
-	tempExt = 206.17434603866212
+	temp = 185.17958133942761
+	tempExt = 185.04880158739186
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5291,7 +5323,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -1.8783021E-05
+		previousTargetAngle = 0.00279878499
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 1.28700865E-32,-1.13446405E-16,1.13446405E-16,1
@@ -5301,7 +5333,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = -2.44240073E-05,0,0,1
+		servoTransformRotation = -1.24052156E-06,0,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -5494,8 +5526,8 @@ PART
 	persistentId = 471375956
 	launchID = 1
 	parent = 16
-	position = -3.8664151702505478E-07,11.548134803771973,0.0082579152658581734
-	rotation = -0.999999821,6.43506937E-09,-8.1524282E-05,0.000568365154
+	position = -2.7063381935477082E-07,11.549086570739746,0.0063236309215426445
+	rotation = 0.999999881,3.4558334E-09,5.34294413E-05,-0.000477030408
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -5511,8 +5543,8 @@ PART
 	attN = top, 16
 	mass = 0.375
 	shielded = False
-	temp = 206.23345119249484
-	tempExt = 206.24331277041443
+	temp = 185.17068441420528
+	tempExt = 185.06213512052364
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5658,8 +5690,8 @@ PART
 	persistentId = 3421742092
 	launchID = 1
 	parent = 17
-	position = -5.0623140168681857E-07,13.023368835449219,0.0099346432834863663
-	rotation = -0.000568365154,8.1524282E-05,6.43506937E-09,-0.999999821
+	position = -3.5790702668236918E-07,13.024320602416992,0.0077308784238994122
+	rotation = 0.000477030408,-5.34294413E-05,3.4558334E-09,0.999999881
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -5675,8 +5707,8 @@ PART
 	attN = bottom, 17
 	mass = 0.0199999996
 	shielded = False
-	temp = 206.27163346952324
-	tempExt = 206.72863603834233
+	temp = 185.19570270453701
+	tempExt = 185.67798038359564
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5924,8 +5956,8 @@ PART
 	persistentId = 651971597
 	launchID = 1
 	parent = 13
-	position = 0.29612964391708374,6.7380123138427734,0.0035274527035653591
-	rotation = -1.75104706E-05,-0.000410161796,0.99999994,-7.03336767E-09
+	position = 0.29612967371940613,6.7389631271362305,0.0026100750546902418
+	rotation = -1.65759793E-05,-0.00029592443,0.99999994,-4.79461226E-09
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -5940,8 +5972,8 @@ PART
 	srfN = srfAttach, 13,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.30033150770336
-	tempExt = 206.1512184431981
+	temp = 185.23241667561265
+	tempExt = 185.11481260279405
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6124,8 +6156,8 @@ PART
 	persistentId = 3824252616
 	launchID = 1
 	parent = 19
-	position = 1.5193113088607788,6.6714506149291992,0.0035155327059328556
-	rotation = 1.75514742E-05,0.000410163426,-0.99999994,4.91415335E-08
+	position = 1.5193114280700684,6.6724014282226563,0.0026110769249498844
+	rotation = 1.66169775E-05,0.00029592606,-0.99999994,4.69074521E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -6142,8 +6174,8 @@ PART
 	attN = bottom, 22
 	mass = 0.5
 	shielded = False
-	temp = 206.33342734810839
-	tempExt = 206.20626476260816
+	temp = 185.24713987946549
+	tempExt = 185.12471764428841
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6250,7 +6282,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 3406897.285768528
+		LastUpdateTime = 3408122.1600196296
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -6346,7 +6378,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 139.616348029131
+		amount = 139.61634802913099
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -6375,8 +6407,8 @@ PART
 	persistentId = 3143917296
 	launchID = 1
 	parent = 20
-	position = 1.5820084810256958,4.4409270286560059,0.0016888011014088988
-	rotation = 0.0613403209,-0.704375625,-0.0619163401,-0.704456329
+	position = 1.5820086002349854,4.4418778419494629,0.0012938461732119322
+	rotation = 0.0614207275,-0.704383433,-0.061835926,-0.704448581
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -6393,8 +6425,8 @@ PART
 	attN = bottom, -1
 	mass = 3.29999995
 	shielded = False
-	temp = 206.22092547672625
-	tempExt = 206.19461907426765
+	temp = 185.21936176407246
+	tempExt = 185.13933993155911
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6829,8 +6861,8 @@ PART
 	persistentId = 4130221598
 	launchID = 1
 	parent = 20
-	position = 1.519307017326355,8.6590156555175781,0.0051454887725412846
-	rotation = 0.000410163659,-1.73416392E-05,7.11110948E-09,0.99999994
+	position = 1.519307017326355,8.6599664688110352,0.0037869238294661045
+	rotation = 0.000295926293,-1.6407148E-05,4.85306595E-09,0.99999994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -6847,8 +6879,8 @@ PART
 	attN = top, 23
 	mass = 0.100000001
 	shielded = False
-	temp = 206.30676222599629
-	tempExt = 206.17062468125181
+	temp = 185.22510075518784
+	tempExt = 185.20224569770534
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -7099,6 +7131,22 @@ PART
 	}
 	MODULE
 	{
+		name = ParkingBrakeModule
+		isEnabled = True
+		brakeActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -7174,8 +7222,8 @@ PART
 	persistentId = 3993984375
 	launchID = 1
 	parent = 22
-	position = 1.5193144083023071,8.9580221176147461,0.0053920396603643894
-	rotation = -7.1370363E-09,0.99999994,0.000410163659,1.72976124E-05
+	position = 1.5193144083023071,8.9589729309082031,0.0039651603437960148
+	rotation = -4.87396257E-09,0.99999994,0.000295926293,1.63631212E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -7192,8 +7240,8 @@ PART
 	attN = bottom, 22
 	mass = 0.100000001
 	shielded = False
-	temp = 206.28495154205882
-	tempExt = 206.41872336094258
+	temp = 185.20922778236562
+	tempExt = 185.40099704474238
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7362,8 +7410,8 @@ PART
 	persistentId = 1916627828
 	launchID = 1
 	parent = 23
-	position = 1.5193099975585938,9.2679023742675781,0.0056451051495969296
-	rotation = -7.1370363E-09,0.99999994,0.000410163659,1.72976124E-05
+	position = 1.5193099975585938,9.2688531875610352,0.0041474252939224243
+	rotation = -4.87396257E-09,0.99999994,0.000295926293,1.63631212E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -7380,8 +7428,8 @@ PART
 	attN = bottom, 23
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.30763406334893
-	tempExt = 206.8128459371234
+	temp = 185.22977654907578
+	tempExt = 185.88130525792886
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7520,8 +7568,8 @@ PART
 	persistentId = 2731116871
 	launchID = 1
 	parent = 23
-	position = 0.90368509292602539,9.0377264022827148,0.0054358844645321369
-	rotation = -0.000410165521,1.72977889E-05,-6.69492835E-08,-0.99999994
+	position = 0.90368521213531494,9.0386772155761719,0.0039919447153806686
+	rotation = -0.000295928156,1.63632903E-05,-6.46862119E-08,-0.99999994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -7536,8 +7584,8 @@ PART
 	srfN = srfAttach, 23,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.25676211157037
-	tempExt = 206.32451003998324
+	temp = 185.18781085930021
+	tempExt = 185.23344313916638
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -7728,8 +7776,8 @@ PART
 	persistentId = 1698316250
 	launchID = 1
 	parent = 13
-	position = -0.29613640904426575,6.7380123138427734,0.0035068790894001722
-	rotation = -0.99999994,-7.04134395E-09,-1.7553999E-05,0.000410163659
+	position = -0.29613637924194336,6.7389631271362305,0.0025906083174049854
+	rotation = -0.99999994,-4.80755924E-09,-1.66195077E-05,0.000295926293
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -7744,8 +7792,8 @@ PART
 	srfN = srfAttach, 13,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.30826808467083
-	tempExt = 206.17497299571278
+	temp = 185.23414520184181
+	tempExt = 185.12343976570818
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7928,8 +7976,8 @@ PART
 	persistentId = 2396615378
 	launchID = 1
 	parent = 26
-	position = -1.5193235874176025,6.671450138092041,0.0034092576242983341
-	rotation = 0.99999994,-3.5150677E-08,1.75946589E-05,-0.000410161796
+	position = -1.5193237066268921,6.672400951385498,0.0025104812812060118
+	rotation = 0.99999994,-3.73798095E-08,1.66601731E-05,-0.00029592443
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -7946,8 +7994,8 @@ PART
 	attN = bottom, 29
 	mass = 0.5
 	shielded = False
-	temp = 206.34294841208441
-	tempExt = 206.24197927890276
+	temp = 185.24915706735368
+	tempExt = 185.13648020745615
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8054,7 +8102,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 3406897.285768528
+		LastUpdateTime = 3408122.1600196296
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -8150,7 +8198,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 139.616348029131
+		amount = 139.61634802913099
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -8179,8 +8227,8 @@ PART
 	persistentId = 1881278114
 	launchID = 1
 	parent = 27
-	position = -1.5820261240005493,4.4409260749816895,0.0015781611436977983
-	rotation = 0.0613386706,0.704399765,0.0619185939,-0.70443213
+	position = -1.5820262432098389,4.4418768882751465,0.0011891199974343181
+	rotation = 0.0614191964,0.704406142,0.0618380755,-0.704425812
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -8197,8 +8245,8 @@ PART
 	attN = bottom, -1
 	mass = 3.29999995
 	shielded = False
-	temp = 206.22563200651939
-	tempExt = 206.25132570478203
+	temp = 185.2220729111994
+	tempExt = 185.17309514979385
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8641,8 +8689,8 @@ PART
 	persistentId = 3841127916
 	launchID = 1
 	parent = 27
-	position = -1.5193036794662476,8.6590175628662109,0.0050391387194395065
-	rotation = 7.08753145E-09,-0.99999994,-0.000410163659,-1.73853168E-05
+	position = -1.5193037986755371,8.659968376159668,0.0036862525157630444
+	rotation = 4.83447771E-09,-0.99999994,-0.000295926293,-1.64508256E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -8659,8 +8707,8 @@ PART
 	attN = top, 30
 	mass = 0.100000001
 	shielded = False
-	temp = 206.31524870891076
-	tempExt = 206.1956622766657
+	temp = 185.22667905836053
+	tempExt = 185.21415590376193
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -8911,6 +8959,22 @@ PART
 	}
 	MODULE
 	{
+		name = ParkingBrakeModule
+		isEnabled = True
+		brakeActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -8986,8 +9050,8 @@ PART
 	persistentId = 3591823329
 	launchID = 1
 	parent = 29
-	position = -1.5193071365356445,8.9580259323120117,0.0052857636474072933
-	rotation = 0.000410163659,-1.73416392E-05,7.11110948E-09,0.99999994
+	position = -1.5193072557449341,8.9589767456054688,0.0038645626045763493
+	rotation = 0.000295926293,-1.6407148E-05,4.85306595E-09,0.99999994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -9004,8 +9068,8 @@ PART
 	attN = bottom, 29
 	mass = 0.100000001
 	shielded = False
-	temp = 206.29203094283645
-	tempExt = 206.47671125032579
+	temp = 185.21043885558265
+	tempExt = 185.40873027592224
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9174,8 +9238,8 @@ PART
 	persistentId = 344438522
 	launchID = 1
 	parent = 30
-	position = -1.519301176071167,9.2679042816162109,0.0055389092303812504
-	rotation = 0.000410163659,-1.73416392E-05,7.11110948E-09,0.99999994
+	position = -1.5193012952804565,9.268855094909668,0.0040469085797667503
+	rotation = 0.000295926293,-1.6407148E-05,4.85306595E-09,0.99999994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -9192,8 +9256,8 @@ PART
 	attN = bottom, 30
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.31711981697123
-	tempExt = 206.908190997975
+	temp = 185.23128883520351
+	tempExt = 185.88827874898814
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9332,8 +9396,8 @@ PART
 	persistentId = 1620295583
 	launchID = 1
 	parent = 30
-	position = -0.90370476245880127,9.0377254486083984,0.0053723412565886974
-	rotation = 5.27285096E-08,0.99999994,0.000410165521,1.73419048E-05
+	position = -0.90370464324951172,9.0386762619018555,0.0039317803457379341
+	rotation = 5.49865184E-08,0.99999994,0.000295928156,1.64074208E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -9348,8 +9412,8 @@ PART
 	srfN = srfAttach, 30,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.26012196227458
-	tempExt = 206.34280554732339
+	temp = 185.18831243002532
+	tempExt = 185.23649620548395
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -9540,8 +9604,8 @@ PART
 	persistentId = 2030267689
 	launchID = 1
 	parent = 12
-	position = 0.40797847509384155,3.3281662464141846,0.40872278809547424
-	rotation = 0.664226592,0.266202003,-0.274899065,0.642160475
+	position = 0.40797922015190125,3.3282597064971924,0.40858373045921326
+	rotation = 0.664153039,0.266171217,-0.27493009,0.642235994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9560,8 +9624,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 206.06318192328064
-	tempExt = 205.86606390654151
+	temp = 185.14812404880576
+	tempExt = 185.05798981434808
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9708,8 +9772,8 @@ PART
 	persistentId = 3173354899
 	launchID = 1
 	parent = 33
-	position = 0.53145015239715576,3.4279301166534424,0.53229612112045288
-	rotation = -0.27529633,0.265841872,0.664059103,-0.642312586
+	position = 0.53145110607147217,3.4280517101287842,0.53213411569595337
+	rotation = -0.275222331,0.265917212,0.664028943,-0.642344356
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9726,8 +9790,8 @@ PART
 	srfN = srfAttach, 33,TrussSquareMed
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16728801596906
-	tempExt = 206.09385463443761
+	temp = 185.18029544676912
+	tempExt = 185.12590213025251
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -9918,8 +9982,8 @@ PART
 	persistentId = 558754131
 	launchID = 1
 	parent = 12
-	position = 0.4080062210559845,3.32883620262146,-0.40725672245025635
-	rotation = 0.275139689,0.642698944,-0.663686097,0.266001791
+	position = 0.40800544619560242,3.3287429809570313,-0.40739592909812927
+	rotation = 0.275108665,0.642623365,-0.663759768,0.266032636
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9938,8 +10002,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 206.07092862723164
-	tempExt = 205.92905056369995
+	temp = 185.16831367753491
+	tempExt = 185.13720040591852
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10086,8 +10150,8 @@ PART
 	persistentId = 1270030235
 	launchID = 1
 	parent = 35
-	position = 0.531482994556427,3.4288082122802734,-0.53065586090087891
-	rotation = 0.274744511,-0.266364813,0.663847208,-0.642551243
+	position = 0.53148198127746582,3.4286868572235107,-0.53081804513931274
+	rotation = 0.27481854,-0.266289532,0.663877428,-0.642519593
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10104,8 +10168,8 @@ PART
 	srfN = srfAttach, 35,TrussSquareMed
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16736612627994
-	tempExt = 206.09179652292738
+	temp = 185.18037383995099
+	tempExt = 185.12883606710517
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -10296,8 +10360,8 @@ PART
 	persistentId = 950283523
 	launchID = 1
 	parent = 12
-	position = -0.40797364711761475,3.3288352489471436,-0.4072858989238739
-	rotation = -0.275117397,0.642707467,-0.663696587,-0.265978098
+	position = -0.40797442197799683,3.3287420272827148,-0.40742358565330505
+	rotation = -0.275087655,0.642631412,-0.663769722,-0.266010106
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10316,8 +10380,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 206.0631819109239
-	tempExt = 205.86606380179791
+	temp = 185.15465029042821
+	tempExt = 185.08330849705047
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10464,8 +10528,8 @@ PART
 	persistentId = 3674229638
 	launchID = 1
 	parent = 37
-	position = -0.53146439790725708,3.4288079738616943,-0.53069221973419189
-	rotation = 0.663841069,-0.642538786,0.274768054,-0.266385972
+	position = -0.53146541118621826,3.4286866188049316,-0.53085243701934814
+	rotation = 0.663871765,-0.642507613,0.274840862,-0.26630953
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10482,8 +10546,8 @@ PART
 	srfN = srfAttach, 37,TrussSquareMed
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16728801577645
-	tempExt = 206.09385462684992
+	temp = 185.18034137535363
+	tempExt = 185.12752237831685
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -10674,8 +10738,8 @@ PART
 	persistentId = 3539902257
 	launchID = 1
 	parent = 12
-	position = -0.40800198912620544,3.3281655311584473,0.40869426727294922
-	rotation = -0.664215446,0.266226172,-0.274920821,-0.642152607
+	position = -0.40800124406814575,3.3282589912414551,0.40855672955513
+	rotation = -0.66414237,0.266194195,-0.274950594,-0.642228723
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10694,8 +10758,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 206.06318193184939
-	tempExt = 205.86606397906695
+	temp = 185.14812404025704
+	tempExt = 185.0579897760997
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10842,8 +10906,8 @@ PART
 	persistentId = 2486754230
 	launchID = 1
 	parent = 39
-	position = -0.53150033950805664,3.4279308319091797,0.53225761651992798
-	rotation = 0.664063871,-0.64232713,-0.275272101,0.265820175
+	position = -0.53149938583374023,3.4280524253845215,0.53209757804870605
+	rotation = 0.664033234,-0.642358243,-0.275199413,0.265896618
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10860,8 +10924,8 @@ PART
 	srfN = srfAttach, 39,TrussSquareMed
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16728801610253
-	tempExt = 206.09385463969136
+	temp = 185.18029544666948
+	tempExt = 185.12590212778031
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -11070,8 +11134,8 @@ PART
 	srfN = srfAttach, 8,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16378604758339
-	tempExt = 206.12330147079109
+	temp = 185.18974548707669
+	tempExt = 185.13946187050871
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -11280,8 +11344,8 @@ PART
 	srfN = srfAttach, 8,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16377964842701
-	tempExt = 206.11572882074029
+	temp = 185.18998201059787
+	tempExt = 185.14540132960323
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -11490,8 +11554,8 @@ PART
 	srfN = srfAttach, 8,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16378604737781
-	tempExt = 206.1233014618152
+	temp = 185.18983467960263
+	tempExt = 185.14112735555054
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -11700,8 +11764,8 @@ PART
 	srfN = srfAttach, 8,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.16378604772564
-	tempExt = 206.12330147700573
+	temp = 185.18974548697892
+	tempExt = 185.13946186803437
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -11910,8 +11974,8 @@ PART
 	attN = bottom, -1
 	mass = 0.180000007
 	shielded = False
-	temp = 206.62246494162207
-	tempExt = 206.53015306515454
+	temp = 185.36109699582295
+	tempExt = 185.65793513222491
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12008,7 +12072,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 66981.491844314936
 		stagingEnabled = True
-		lastUpdateTime = 3406900.0834443117
+		lastUpdateTime = 3408122.1600196296
 		EVENTS
 		{
 		}
@@ -12078,8 +12142,8 @@ PART
 	attN = bottom, -1
 	mass = 0.180000007
 	shielded = False
-	temp = 206.59217132561187
-	tempExt = 206.34230093871378
+	temp = 185.34600172569625
+	tempExt = 185.17887999384681
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12176,7 +12240,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 66981.491844314936
 		stagingEnabled = True
-		lastUpdateTime = 3406900.0834443117
+		lastUpdateTime = 3408122.1600196296
 		EVENTS
 		{
 		}
@@ -12244,8 +12308,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.41735225322685
-	tempExt = 206.26255850762212
+	temp = 185.19933134947343
+	tempExt = 185.10735638814702
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -12452,8 +12516,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 206.41735225322685
-	tempExt = 206.26255850762212
+	temp = 185.19933134947343
+	tempExt = 185.10735638814702
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -12638,9 +12702,9 @@ PART
 ACTIONGROUPS
 {
 	Stage = True, 3406899.52344431
-	Gear = True
+	Gear = True, 0
 	Light = False, 0
-	RCS = False
+	RCS = False, 0
 	SAS = True, 3278772.90164854
 	Brakes = False, 0
 	Abort = False, 0
@@ -12668,9 +12732,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.5385415
-	yaw = 0.9979184
-	roll = -0.0035169704
+	pitch = 0.00712543121
+	yaw = 0.493640661
+	roll = -0.00529622845
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -12684,28 +12748,26 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SuspensionLoadBalancer
+	SystemHeatVessel
 	{
 	}
-	CommNetVessel
-	{
-		controlState = ProbeFull
-		canComm = True
-	}
-	VesselDataManager
+	VesselModuleSave
 	{
 	}
-	ModuleDynamicBatteryStorage
+	SpaceDustVessel
 	{
 	}
-	ELVesselWorkNet
+	VesselPhysicsHold
 	{
-		lastUpdate = 3406900.0834443117
-		selectedPad = 0
-		Productivity = 0
+		physicsHold = False
+		roboticsOverride = False
 	}
-	AtmoFxModule
+	ParkingBrake
 	{
+		lat = 0
+		lon = 0
+		alt = 0
+		positionSet = False
 	}
 	RPMVesselComputer
 	{
@@ -12718,13 +12780,27 @@ VESSELMODULES
 			AVAS_ON = 0
 		}
 	}
-	SpaceDustVessel
+	AtmoFxModule
 	{
 	}
-	VesselModuleSave
+	ELVesselWorkNet
+	{
+		lastUpdate = 3408122.1600196296
+		selectedPad = 0
+		Productivity = 0
+	}
+	ModuleDynamicBatteryStorage
 	{
 	}
-	SystemHeatVessel
+	VesselDataManager
+	{
+	}
+	CommNetVessel
+	{
+		controlState = ProbeFull
+		canComm = True
+	}
+	SuspensionLoadBalancer
 	{
 	}
 	GoldStrikeVesselModule
