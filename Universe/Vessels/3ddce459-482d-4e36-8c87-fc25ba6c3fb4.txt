@@ -1,95 +1,94 @@
-pid = 35b229b7d42440da9ad0729adc2a1665
-persistentId = 82782573
-name = Mun Lander Relay
-type = Relay
-sit = SUB_ORBITAL
-landed = False
+pid = 3ddce459482d4e368c87fc25ba6c3fb4
+persistentId = 1882371590
+name = Orb8ter Debris
+type = Debris
+sit = LANDED
+landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = False
-launchedFrom = LaunchPad
-landedAt = 
-displaylandedAt = 
+vesselSpawning = True
+launchedFrom = TSC 39A
+landedAt = LaunchpadFX
+displaylandedAt = LaunchpadFX
 splashed = False
-met = 856675.93986977916
-lct = 3273523.9666580637
-lastUT = 4130199.9265278429
-distanceTraveled = 369150.32813816424
+met = 1818.8079379163682
+lct = 4128679.264144763
+lastUT = 4130498.1120826793
+distanceTraveled = 0
 root = 0
-lat = -70.174898520665835
-lon = -50.330828060092706
-alt = 2682112125.7843032
-hgt = 2.682112E+09
-nrm = 0.0986172855,-0.474307716,0.874818087
-rot = -0.0974995568,0.9090662,-0.38340798,0.130731314
+lat = 0.01323816868240117
+lon = -74.561928382728894
+alt = 77.353057434549555
+hgt = 2.99636841
+nrm = 0.000298544765,0.999972343,-0.00744557381
+rot = -0.344352692,0.499614865,-0.618991435,0.498654157
 CoM = 0,0,0
-stg = 0
+stg = 3
 prst = False
 ref = 0
 ctrl = False
 PQSMin = 2
-PQSMax = 9
+PQSMax = 10
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = ASL
-cPch = 0.7180002
-cHdg = -0.8799983
-cMod = 0
+altDispState = DEFAULT
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 1494035965.1362314
-	ECC = 0.9992860166770039
-	INC = 108.31697084812718
-	LPE = 97.980756513123069
-	LAN = 84.829990214872964
-	MNA = 2.6612828083547337
-	EPH = 4130199.9065278429
-	REF = 0
-	IDENT = Squad/Sun
+	SMA = 300821.05478041904
+	ECC = 0.99479838103570994
+	INC = 0.013238168682401174
+	LPE = 269.99999964309239
+	LAN = 138.25493664186052
+	MNA = 3.1415926536669621
+	EPH = 4128679.3241447629
+	REF = 1
+	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = RelayAntenna100
-	cid = 4294068248
-	uid = 344088288
-	mid = 1589185377
-	persistentId = 116683793
+	name = launchClamp1
+	cid = 4287630646
+	uid = 3109353255
+	mid = 155908838
+	persistentId = 3389131632
 	launchID = 1
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 3
 	resPri = 0
-	dstg = 0
-	sqor = -1
-	sepI = -1
-	sidx = -1
-	attm = 0
+	dstg = 6
+	sqor = 3
+	sepI = 3
+	sidx = 0
+	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = bottom, -1
-	mass = 0.649999976
+	srfN = srfAttach, -1,COLLIDER64
+	mass = 0.100000001
 	shielded = False
-	temp = 618.25516615458628
-	tempExt = 618.24935933600818
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
+	temp = 305.37603733525083
+	tempExt = 305.93825146257507
+	tempExtUnexp = 305.9378826534396
+	staticPressureAtm = 0.98858949786905526
+	expt = 0.100000001
+	state = 1
 	PreFailState = 0
-	attached = True
-	autostrutMode = Grandparent
+	attached = False
+	autostrutMode = Off
 	rigidAttachment = False
-	flag = Squad/Agencies/Rockomax
-	rTrf = RelayAntenna100 (Mun Lander Relay)
+	flag = Squad/Flags/default
+	rTrf = launchClamp1
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Size1
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -149,18 +148,68 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDataTransmitterFeedeable
+		name = ModuleGenerator
 		isEnabled = True
-		savedAntennaPower = 100000000000
-		xmitIncomplete = False
+		generatorIsActive = True
+		throttle = 1
 		stagingEnabled = True
-		canComm = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			StartTransmissionAction
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRestockLaunchClamp
+		isEnabled = True
+		scaleFactor = 1.81625926
+		height = 3.6325264
+		stagingEnabled = True
+		towerRot = -4.00229041E-08,0.923879325,9.66236371E-08,-0.382683933
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ReleaseClamp
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -172,102 +221,35 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = ModuleAnimateGeneric
 		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
-		UPGRADESAPPLIED
+		AXISGROUPS
 		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAntennaFeed
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Log
-		{
-			flight = 0
-			0 = Orbit,Mun
-			0 = Suborbit,Mun
-			0 = Land,Mun
-			0 = Flyby,Sun
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -276,12 +258,12 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 2989813.44856812
-	Gear = True, 2989993.74093888
-	Light = True, 2990240.84093911
+	Stage = False, 0
+	Gear = False, 0
+	Light = False, 0
 	RCS = False, 0
-	SAS = False, 0
-	Brakes = True, 2990077.94093895
+	SAS = True, 4128628.66214255
+	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -313,7 +295,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 1
 }
 VESSELMODULES
 {
@@ -323,28 +305,26 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SuspensionLoadBalancer
+	SystemHeatVessel
 	{
 	}
-	CommNetVessel
-	{
-		controlState = None
-		canComm = False
-	}
-	VesselDataManager
+	VesselModuleSave
 	{
 	}
-	ModuleDynamicBatteryStorage
+	SpaceDustVessel
 	{
 	}
-	ELVesselWorkNet
+	VesselPhysicsHold
 	{
-		lastUpdate = 4130199.9265278429
-		selectedPad = 0
-		Productivity = 0
+		physicsHold = False
+		roboticsOverride = False
 	}
-	AtmoFxModule
+	ParkingBrake
 	{
+		lat = 0
+		lon = 0
+		alt = 0
+		positionSet = False
 	}
 	RPMVesselComputer
 	{
@@ -352,13 +332,22 @@ VESSELMODULES
 		{
 		}
 	}
-	SpaceDustVessel
+	AtmoFxModule
 	{
 	}
-	VesselModuleSave
+	ELVesselWorkNet
+	{
+		lastUpdate = 0
+		selectedPad = 0
+		Productivity = 0
+	}
+	ModuleDynamicBatteryStorage
 	{
 	}
-	SystemHeatVessel
+	VesselDataManager
+	{
+	}
+	SuspensionLoadBalancer
 	{
 	}
 	GoldStrikeVesselModule
