@@ -12,21 +12,72 @@ inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
 outDueToG = False
-ToD = 3045835.7159075141
+ToD = 2861598.3982680212
 idx = -1
 extraXP = 0
-hasHelmetOn = False
-hasNeckRingOn = False
+hasHelmetOn = True
+hasNeckRingOn = True
 hasVisorDown = False
 lightR = 1
 lightG = 0.5176
 lightB = 0
-completedFirstEVA = False
+completedFirstEVA = True
 suit = Default
 hero = False
+EVACHUTE
+{
+	name = ModuleEvaChute
+	isEnabled = True
+	chuteYawRateAtMaxSpeed = 1
+	chuteMaxSpeedForYawRate = 50
+	chuteYawRateAtMinSpeed = 1
+	chuteMinSpeedForYawRate = 1
+	chuteRollRate = 1
+	chutePitchRate = 1
+	chuteDefaultForwardPitch = 9
+	semiDeployedChuteForwardPitch = 25
+	chutePitchRateDivisorWhenTurning = 1
+	chuteRollRateDivisorWhenPitching = 1
+	chuteYawRateDivisorWhenPitching = 1
+	persistentState = STOWED
+	animTime = 0
+	minAirPressureToOpen = 0.0399999991
+	deployAltitude = 1000
+	spreadAngle = 7
+	automateSafeDeploy = 0
+	stagingEnabled = False
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		DeployAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		CutAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	UPGRADESAPPLIED
+	{
+	}
+}
 INVENTORY
 {
+	name = ModuleInventoryPart
+	isEnabled = True
+	stagingEnabled = True
 	inventory = evaJetpack
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
 	STOREDPARTS
 	{
 		STOREDPART
@@ -42,7 +93,7 @@ INVENTORY
 				cid = 4294146878
 				uid = 0
 				mid = 0
-				persistentId = 0
+				persistentId = 1015456516
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -210,12 +261,23 @@ INVENTORY
 			}
 		}
 	}
+	UPGRADESAPPLIED
+	{
+	}
 }
 CAREER_LOG
 {
-	flight = 0
+	flight = 1
+	0 = Flight,Kerbin
+	0 = Suborbit,Kerbin
+	0 = Orbit,Kerbin
+	0 = Flyby,Mun
+	0 = Escape,Mun
+	0 = Orbit,Mun
+	0 = Suborbit,Mun
+	0 = Die
 }
 FLIGHT_LOG
 {
-	flight = 0
+	flight = 1
 }
