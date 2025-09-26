@@ -6,22 +6,22 @@ sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
-landedAt = 
-displaylandedAt = 
+landedAt = Mun
+displaylandedAt = Mun
 splashed = False
-met = 429.06035671709105
+met = 711.64591530710459
 lct = 3672303.9573493074
-lastUT = 3672733.0377060245
-distanceTraveled = 53.080421626870454
+lastUT = 3673015.6232646122
+distanceTraveled = 303.21755580703029
 root = 0
-lat = 2.4654410285060182
-lon = 81.519802037696323
-alt = 4867.0761312864488
-hgt = 0.532064915
-nrm = -6.19888306E-06,0.944110394,-0.329629362
-rot = -0.0505586714,-0.89377141,-0.410965025,0.172407135
+lat = 2.4669981419576477
+lon = 81.523178682603586
+alt = 4872.3773451405577
+hgt = 10.9141779
+nrm = 0.428858876,0.59863615,0.676546097
+rot = -0.271415442,-0.699241221,-0.635965824,-0.181501761
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.3580007
+cHdg = 1.694001
+cMod = 0
 ORBIT
 {
-	SMA = 102447.35487796862
-	ECC = 0.99973026912861396
-	INC = 2.4945169655844515
-	LPE = 278.75378581483187
-	LAN = 4.8301377510788939
-	MNA = 3.1417716609892627
-	EPH = 3672304.0173493004
+	SMA = 102449.98353645115
+	ECC = 0.99973070051541912
+	INC = 2.4669981419576472
+	LPE = 269.99999999948733
+	LAN = 15.438697573872673
+	MNA = 3.1415926535766863
+	EPH = 3673015.6032646145
 	REF = 2
 	IDENT = Squad/Mun
 }
@@ -66,16 +66,16 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
-	sepI = 0
-	sidx = -1
+	sqor = 0
+	sepI = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	mass = 0.0899999961
+	mass = 0.0880571902
 	shielded = False
-	temp = 303
-	tempExt = 303.01884452188318
+	temp = 300.61802847477463
+	tempExt = 300.51687953767589
 	tempExtUnexp = 303
 	staticPressureAtm = 0
 	expt = 0
@@ -87,7 +87,7 @@ PART
 	flag = Squad/Flags/default
 	rTrf = referenceTransform
 	modCost = 25
-	modMass = 0.0449999981
+	modMass = 0.0430571884
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	partRendererBoundsIgnore = kbEVA_flagDecals,canopy,base,flag,collider,helmet,visor,flare1,flare2,EVAStorage_flagDecals,EVAStorageSlim_flagDecals,chute_standalone_flag,chute_container_flag
@@ -160,13 +160,13 @@ PART
 		lampOn = False
 		isHelmetEnabled = True
 		isNeckRingEnabled = True
-		isVisorEnabled = False
+		isVisorEnabled = True
 		thrustPercentage = 100
-		lastBoundStep = 1.20833337
+		lastBoundStep = 0.5
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
-		state = Ladder (Acquire)
+		state = Idle (Grounded)
 		EVENTS
 		{
 		}
@@ -405,6 +405,8 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Land,Mun
+			0 = Suborbit,Mun
 		}
 		UPGRADESAPPLIED
 		{
@@ -687,7 +689,7 @@ PART
 					RESOURCE
 					{
 						name = EVA Propellant
-						amount = 5
+						amount = 4.6114375486641723
 						maxAmount = 5
 						flowState = True
 						isTweakable = False

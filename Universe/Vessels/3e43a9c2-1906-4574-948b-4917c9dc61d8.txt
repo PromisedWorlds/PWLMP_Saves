@@ -1,34 +1,34 @@
-pid = 9ce083b842964ee3a72e7a41b768383a
-persistentId = 340687662
-name = Mun Lander Debris
+pid = 3e43a9c219064574948b4917c9dc61d8
+persistentId = 2286749705
+name = International Space Port Debris
 type = Debris
-sit = ESCAPING
+sit = SUB_ORBITAL
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = LaunchPad
+launchedFrom = TSC 39A
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 0.3799999561160803
-lct = 3273523.9666580637
-lastUT = 3273524.386658015
-distanceTraveled = 1680.7706493337034
+met = 61.72000005748123
+lct = 3673658.2222884274
+lastUT = 3673719.982288485
+distanceTraveled = 66852.20332174096
 root = 0
-lat = 2.2434210161155597
-lon = 81.52213890304232
-alt = 5026.422158287198
-hgt = 5026.4224
-nrm = 0.0760558545589447,-0.9969280362129211,-0.01870495080947876
-rot = -0.123782404,0.84555775,-0.5006024,0.13822901
+lat = -0.024986904762912262
+lon = -72.11206423632929
+alt = 106406.45628765807
+hgt = 106406.45
+nrm = 0.7829535603523254,-0.40844595432281494,0.4692075252532959
+rot = 0.06980342,-0.78007656,-0.24737342,-0.5704512
 CoM = 0,0,0
-stg = 0
+stg = 1
 prst = False
 ref = 0
 ctrl = False
 PQSMin = 2
-PQSMax = 9
+PQSMax = 10
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,57 +40,57 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = -6107.993706587297
-	ECC = 32.568104550149684
-	INC = 89.91967633184863
-	LPE = 157.5784820886643
-	LAN = 330.6704689734524
-	MNA = 11.171266317200864
-	EPH = 3273524.066658052
-	REF = 2
-	IDENT = Squad/Mun
+	SMA = 384477.29105478677
+	ECC = 0.9492496522464087
+	INC = 0.5468463148746044
+	LPE = 7.244597809109748
+	LAN = 7.630025532147499
+	MNA = 2.0738080750244268
+	EPH = 3673703.2222884693
+	REF = 1
+	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = batteryBank
-	cid = 4294366776
-	uid = 3610312709
-	mid = 1589185377
-	persistentId = 1221989708
+	name = Separator.2
+	cid = 4280981838
+	uid = 528296182
+	mid = 3142889604
+	persistentId = 127994246
 	launchID = 1
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 1
 	resPri = 0
-	dstg = 0
-	sqor = -1
-	sepI = -1
-	sidx = -1
+	dstg = 3
+	sqor = 1
+	sepI = 1
+	sidx = 1
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
 	attN = top, -1
 	attN = bottom, -1
-	mass = 0.0500000007
+	mass = 0.209999993
 	shielded = False
-	temp = 211.97144257660611
-	tempExt = 212.16070276898512
-	tempExtUnexp = 4
-	staticPressureAtm = 0
+	temp = 316.01206654997168
+	tempExt = 323.0411562323435
+	tempExtUnexp = 323.1053225172829
+	staticPressureAtm = 0.00022987719526886203
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = False
-	autostrutMode = Root
+	autostrutMode = Heaviest
 	rigidAttachment = False
-	flag = Squad/Agencies/Rockomax
-	rTrf = batteryBank
+	flag = Squad/Flags/default
+	rTrf = Separator.2
 	modCost = 0
 	modMass = 0
-	moduleVariantName = 
+	moduleVariantName = BlackAndWhite
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -135,11 +135,13 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -148,9 +150,77 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			EnableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DisableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = 360
+		packedVolume = -1
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -182,8 +252,25 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = BlackAndWhite
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIModuleEVAFlagSwitch
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -195,26 +282,15 @@ PART
 		{
 		}
 	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 999.99932861328125
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 2989813.44856812
-	Gear = True, 2989993.74093888
-	Light = True, 2990240.84093911
+	Stage = False, 3673629.3822884
+	Gear = False, 0
+	Light = False, 0
 	RCS = False, 0
-	SAS = False, 0
-	Brakes = True, 2990077.94093895
+	SAS = True, 3673577.7392462
+	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
