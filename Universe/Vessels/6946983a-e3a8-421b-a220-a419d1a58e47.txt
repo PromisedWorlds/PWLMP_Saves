@@ -2,7 +2,7 @@ pid = 6946983ae3a8421ba220a419d1a58e47
 persistentId = 3201168597
 name = Scan deez nuts
 type = Probe
-sit = FLYING
+sit = ORBITING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
@@ -11,18 +11,18 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 72.0600000671111
+met = 61164.39326801803
 lct = 2380003.8433354977
-lastUT = 2380075.923335565
-distanceTraveled = 45012.267963966304
+lastUT = 2441168.2566035157
+distanceTraveled = 948894.44363436243
 root = 0
-lat = -0.1248663389484657
-lon = -71.92801764386144
-alt = 34473.586530374596
-hgt = 34473.586
-nrm = -0.9213579893112183,0.3886229395866394,-0.00849267840385437
-rot = -0.52063376,-0.47286668,-0.4844111,0.52027255
-CoM = -0.0199508071,-3.80642962,0.00120925903
+lat = -3.7102259945432667
+lon = 50.654608695111492
+alt = 356281.08249976416
+hgt = 356281.094
+nrm = 0.976105332,0.00121615082,0.217294693
+rot = -0.851260364,0.0297489408,-0.523780704,0.0111664645
+CoM = -0.0428388417,-2.57188892,0.00260382891
 stg = 2
 prst = False
 ref = 2755560436
@@ -35,20 +35,20 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.636
-cHdg = -1.054002
-cMod = 0
+cPch = 0.930002
+cHdg = 2.141217
+cMod = 1
 ORBIT
 {
-	SMA = 392810.2023347439
-	ECC = 0.7553849872545098
-	INC = 0.6008134777948622
-	LPE = 25.610477373563125
-	LAN = 347.08485593909785
-	MNA = 2.0842391336047026
-	EPH = 2380074.6033355636
-	REF = 1
-	IDENT = Squad/Kerbin
+	SMA = 555878.38020866446
+	ECC = 0.00080158564403760325
+	INC = 90.101800216711425
+	LPE = 29.046487944441299
+	LAN = 303.82203335316768
+	MNA = 2.6987005169457783
+	EPH = 2441168.2366035157
+	REF = 2
+	IDENT = Squad/Mun
 }
 PART
 {
@@ -75,11 +75,11 @@ PART
 	attN = bottom, 2
 	attN = top, 14
 	mass = 0.119999997
-	shielded = True
-	temp = 306.04340063769985
-	tempExt = 306.04430144674416
+	shielded = False
+	temp = 208.62938441115745
+	tempExt = 208.24801864588409
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010737702195332016
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -353,6 +353,11 @@ PART
 		{
 			flight = 0
 			0 = Flight,Kerbin
+			0 = Suborbit,Kerbin
+			0 = Orbit,Kerbin
+			0 = Flyby,Mun
+			0 = Escape,Mun
+			0 = Orbit,Mun
 		}
 		UPGRADESAPPLIED
 		{
@@ -393,11 +398,11 @@ PART
 	sameVesselCollision = False
 	srfN = srfAttach, 0,STP_COLLIDER
 	mass = 0.0199999996
-	shielded = True
-	temp = 306.04338683050423
-	tempExt = 306.04410835465893
+	shielded = False
+	temp = 209.43283875318784
+	tempExt = 208.31471241233004
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010736577457302799
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -589,11 +594,11 @@ PART
 	attN = top, 0
 	attN = bottom, 3
 	mass = 0.140000001
-	shielded = True
-	temp = 306.04344320471779
-	tempExt = 306.04497360852821
+	shielded = False
+	temp = 208.00169648986198
+	tempExt = 207.40924366928206
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010738443392987254
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -731,11 +736,11 @@ PART
 	attN = top, 2
 	attN = bottom, 4
 	mass = 0.0449999981
-	shielded = True
-	temp = 306.04386748552469
-	tempExt = 306.04785896150014
+	shielded = False
+	temp = 206.76341345911669
+	tempExt = 205.61624216256499
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010739726959085451
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -873,7 +878,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 2380027.78333552
+		LastUpdateTime = 2441168.2566035157
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -937,7 +942,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 32.39999771118164
+		amount = 32.399997711181641
 		maxAmount = 32.399997711181641
 		flowState = True
 		isTweakable = True
@@ -948,7 +953,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 39.60000228881836
+		amount = 39.600002288818359
 		maxAmount = 39.600002288818359
 		flowState = True
 		isTweakable = True
@@ -982,11 +987,11 @@ PART
 	attN = top, 3
 	attN = bottom, 5
 	mass = 0.129999995
-	shielded = True
-	temp = 306.07672090449256
-	tempExt = 306.07621931235127
+	shielded = False
+	temp = 208.2491047467602
+	tempExt = 207.67993914667818
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010740542276506214
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1243,14 +1248,14 @@ PART
 		MaximizePersistentIsp = True
 		MaximizePersistentPower = False
 		maneuverToleranceInDegree = 90
-		persistentAutopilotMode = StabilityAssist
+		persistentAutopilotMode = Prograde
 		persistentThrust = 0
 		persistentIsp = 0
-		persistentThrottle = 1
+		persistentThrottle = 0
 		persistentAverageDensity = 0
-		vesselAlignmentWithAutopilotMode = 0
+		vesselAlignmentWithAutopilotMode = 0.99999959137408478
 		persistentResourceChange = 
-		vesselDryMass = 3.37533569
+		vesselDryMass = 3.06999993
 		persistentVesselTargetId = 00000000-0000-0000-0000-000000000000
 		persistentVesselTargetBodyName = 
 		persistentManeuverPatch = 
@@ -1432,11 +1437,11 @@ PART
 	attN = top, 4
 	attN = bottom, 6
 	mass = 0.00999999978
-	shielded = True
-	temp = 306.4194248225528
-	tempExt = 306.18476122154618
+	shielded = False
+	temp = 209.96277196324766
+	tempExt = 209.39071115003836
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.01074104582031009
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1691,12 +1696,12 @@ PART
 	attN = interstage06b, -1
 	attN = top, 5
 	attN = bottom, 7
-	mass = 0.380335867
+	mass = 0.075000003
 	shielded = False
-	temp = 326.38676408900869
-	tempExt = 707.20264110259222
-	tempExtUnexp = 597.52372651083454
-	staticPressureAtm = 0.010741342299372186
+	temp = 210.56665660183168
+	tempExt = 210.58311311366873
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1705,8 +1710,8 @@ PART
 	rigidAttachment = False
 	flag = Squad/Flags/default
 	rTrf = fairingSize1
-	modCost = 183.201508
-	modMass = 0.30533585
+	modCost = 0
+	modMass = 1.40129846E-45
 	moduleVariantName = White
 	moduleCargoStackableQuantity = 1
 	EVENTS
@@ -1776,7 +1781,7 @@ PART
 		isCapped = True
 		stagingEnabled = True
 		isFadeLocked = False
-		fsm = st_idle
+		fsm = st_flight_deployed
 		EVENTS
 		{
 		}
@@ -1786,111 +1791,6 @@ PART
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		XSECTION
-		{
-			h = 0
-			r = 0.625
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 0
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 1
-			}
-		}
-		XSECTION
-		{
-			h = 0.463775635
-			r = 0.947078049
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 2
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 3
-			}
-		}
-		XSECTION
-		{
-			h = 2.46377563
-			r = 0.947078049
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 4
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 5
-			}
-		}
-		XSECTION
-		{
-			h = 3.6419878
-			r = 0.947078049
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 6
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 7
-			}
-		}
-		XSECTION
-		{
-			h = 4.57029343
-			r = 0.728952587
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 8
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 9
-			}
-		}
-		XSECTION
-		{
-			h = 5.30453873
-			r = 0.412492812
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 10
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 11
-			}
-		}
-		XSECTION
-		{
-			h = 5.63632011
-			r = 0.200000003
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 12
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 13
 			}
 		}
 		UPGRADESAPPLIED
@@ -2255,10 +2155,10 @@ PART
 	attN = bottom, 8
 	mass = 0.5
 	shielded = False
-	temp = 307.07848646060739
-	tempExt = 443.95220479786366
+	temp = 210.76008936442128
+	tempExt = 211.0059130324174
 	tempExtUnexp = 4
-	staticPressureAtm = 0.010743770604071251
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2363,7 +2263,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 2380027.78333552
+		LastUpdateTime = 2441168.2566035157
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -2459,7 +2359,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 338.35719000257484
+		amount = 15.353320827285485
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -2470,7 +2370,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 413.54767539575516
+		amount = 18.765149611105098
 		maxAmount = 440
 		flowState = True
 		isTweakable = True
@@ -2505,10 +2405,10 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 308.88755531502142
-	tempExt = 352.88727550035765
+	temp = 210.94129745387127
+	tempExt = 211.30882526378133
 	tempExtUnexp = 4
-	staticPressureAtm = 0.010745976549473745
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 1
 	PreFailState = 0
@@ -2588,7 +2488,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		includeinDVCalcs = False
@@ -2781,14 +2681,14 @@ PART
 		MaximizePersistentIsp = True
 		MaximizePersistentPower = False
 		maneuverToleranceInDegree = 90
-		persistentAutopilotMode = StabilityAssist
-		persistentThrust = 60
-		persistentIsp = 342.184753
-		persistentThrottle = 1
-		persistentAverageDensity = 0.004999999888241291
-		vesselAlignmentWithAutopilotMode = 0
+		persistentAutopilotMode = Prograde
+		persistentThrust = 0
+		persistentIsp = 345
+		persistentThrottle = 0
+		persistentAverageDensity = 0
+		vesselAlignmentWithAutopilotMode = 0.99999959137408478
 		persistentResourceChange = 
-		vesselDryMass = 3.37533569
+		vesselDryMass = 3.06999993
 		persistentVesselTargetId = 00000000-0000-0000-0000-000000000000
 		persistentVesselTargetBodyName = 
 		persistentManeuverPatch = 
@@ -2841,7 +2741,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2857,7 +2757,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2873,7 +2773,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2895,7 +2795,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2952,11 +2852,11 @@ PART
 	sameVesselCollision = False
 	srfN = srfAttach, 3,Cyl12
 	mass = 0.180000007
-	shielded = True
-	temp = 306.04352950070722
-	tempExt = 306.04569832473987
+	shielded = False
+	temp = 207.09873059672751
+	tempExt = 206.5742127153413
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010738977525900712
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3136,11 +3036,11 @@ PART
 	sym = 11
 	srfN = srfAttach, 3,Cyl12
 	mass = 0.300000012
-	shielded = True
-	temp = 306.0434006954448
-	tempExt = 306.04576446886995
+	shielded = False
+	temp = 204.74222711120143
+	tempExt = 205.1910609457515
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010739238709836367
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3215,10 +3115,10 @@ PART
 		isEnabled = True
 		efficiencyMult = 1
 		launchUT = 2380003.8433354977
-		currentRotation = (0.707106829, 0.707106829, -3.09086232E-08, -3.09086232E-08)
+		currentRotation = (0.706674099, 0.706658065, -0.0249576569, 0.0249652397)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3299,7 +3199,7 @@ PART
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 24.399999618530273
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
 		launchUT = 2380003.8433354977
@@ -3343,11 +3243,11 @@ PART
 	sym = 10
 	srfN = srfAttach, 3,Cyl12
 	mass = 0.300000012
-	shielded = True
-	temp = 306.0434006954448
-	tempExt = 306.04576446886995
+	shielded = False
+	temp = 204.31195755992266
+	tempExt = 204.21558794393997
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010739231650811079
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3422,10 +3322,10 @@ PART
 		isEnabled = True
 		efficiencyMult = 1
 		launchUT = 2380003.8433354977
-		currentRotation = (0.707106829, 0.707106829, -3.09086232E-08, -3.09086232E-08)
+		currentRotation = (0.0249871612, 0.0249763634, -0.706681013, 0.70664978)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3506,7 +3406,7 @@ PART
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 24.399999618530273
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
 		launchUT = 2380003.8433354977
@@ -3549,11 +3449,11 @@ PART
 	sameVesselCollision = False
 	srfN = srfAttach, 2,COLLIDER
 	mass = 0.275000006
-	shielded = True
-	temp = 306.04338965747701
-	tempExt = 306.04439094281912
+	shielded = False
+	temp = 208.82502980883115
+	tempExt = 208.19667679363621
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010737397480740419
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 1
 	PreFailState = 0
@@ -3626,7 +3526,7 @@ PART
 	{
 		name = SCANsat
 		isEnabled = True
-		scanning = False
+		scanning = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3962,11 +3862,11 @@ PART
 	sameVesselCollision = False
 	srfN = srfAttach, 2,COLLIDER
 	mass = 0.125
-	shielded = True
-	temp = 306.04339978427112
-	tempExt = 306.04440211663876
+	shielded = False
+	temp = 208.574680046358
+	tempExt = 208.2454289933421
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010739189296659351
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4039,7 +3939,7 @@ PART
 	{
 		name = SCANsat
 		isEnabled = True
-		scanning = False
+		scanning = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4179,11 +4079,11 @@ PART
 	attN = bottom, 0
 	attN = top, 15
 	mass = 0.0500000007
-	shielded = True
-	temp = 306.04338854132448
-	tempExt = 306.04382823038696
+	shielded = False
+	temp = 209.02547605161874
+	tempExt = 208.96656198873586
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010737342185042329
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4350,11 +4250,11 @@ PART
 	srfN = srfAttach, -1
 	attN = bottom, 14
 	mass = 0.300000012
-	shielded = True
-	temp = 306.04338655038219
-	tempExt = 306.04347594122004
+	shielded = False
+	temp = 209.39765543706477
+	tempExt = 209.6506797584523
 	tempExtUnexp = 306.476245555905
-	staticPressureAtm = 0.010736246859618477
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4427,7 +4327,7 @@ PART
 	{
 		name = SCANsat
 		isEnabled = True
-		scanning = False
+		scanning = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4543,13 +4443,13 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.00091563887
-	yaw = -0.4537192
-	roll = -0.00039340853
+	pitch = 0.00014764542
+	yaw = -0.00738482783
+	roll = -1.0302937E-05
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
@@ -4575,7 +4475,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 2380062.5633355523
+		lastUpdate = 2441168.2566035157
 		selectedPad = 0
 		Productivity = 0
 	}
