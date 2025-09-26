@@ -1,6 +1,6 @@
-pid = 2cb87207e5a142bea593598a3dd41b5f
-persistentId = 3501478269
-name = The hook Ship Debris
+pid = 5373e251765d4ebf9337ddb3c270e607
+persistentId = 1036294012
+name = Crew rescue Probe Debris
 type = Debris
 sit = LANDED
 landed = True
@@ -11,24 +11,24 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 8933.560809497256
-lct = 3273540.726656128
-lastUT = 3282474.3074656255
-distanceTraveled = 52.61779836591362
+met = 24.720000023022294
+lct = 3291600.4335005605
+lastUT = 3291625.1735005835
+distanceTraveled = 234.57765412655732
 root = 0
-lat = 2.462165448493462
-lon = 81.51083909347766
-alt = 4751.911137072719
-hgt = 4751.911
-nrm = -0.06312927603721619,-0.9974852204322815,0.03221648931503296
-rot = 0.13393965,0.6431183,-0.72949946,-0.19049846
+lat = 1.536431557118331
+lon = 68.31515262390272
+alt = 195.65605866967235
+hgt = 2.1715832
+nrm = -0.8638700246810913,-0.4613872468471527,-0.20211564004421234
+rot = -0.19321246,0.8700155,-0.032341674,0.4524335
 CoM = 0,0,0
-stg = 0
+stg = 1
 prst = False
 ref = 0
 ctrl = False
 PQSMin = 2
-PQSMax = 9
+PQSMax = 10
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,58 +40,59 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 102389.71810993999
-	ECC = 0.999731173370575
-	INC = 2.4621654484951896
-	LPE = 270.00006781752586
-	LAN = 60.82654639848164
-	MNA = 3.1415926952135926
-	EPH = 3273590.0466504325
-	REF = 2
-	IDENT = Squad/Mun
+	SMA = 301141.15452023357
+	ECC = 0.9930836404749881
+	INC = 7.032854240354184
+	LPE = 192.6667425731798
+	LAN = 54.5180640789647
+	MNA = 3.1314760947039058
+	EPH = 3291600.4935005605
+	REF = 1
+	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = liquidEngine3.v2
-	cid = 4291683504
-	uid = 945875268
-	mid = 3503826735
-	persistentId = 636686723
+	name = LiquidEngineRE-J10
+	cid = 4292581670
+	uid = 244598531
+	mid = 498081230
+	persistentId = 1298104996
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,0.999999881
+	rotation = 0,0,0,1.00000381
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = 1
 	resPri = 0
-	dstg = 0
-	sqor = 0
+	dstg = 4
+	sqor = 1
 	sepI = -1
-	sidx = 1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1
+	srfN = , -1
 	attN = top, -1
 	attN = bottom, -1
-	mass = 0.5
+	mass = 3.29999995
 	shielded = False
-	temp = 197.48017090784663
-	tempExt = 197.43108384949053
-	tempExtUnexp = 304.21722718305114
-	staticPressureAtm = 0
+	temp = 234.09623496055559
+	tempExt = 254.93216544036017
+	tempExtUnexp = 255.09518967552978
+	staticPressureAtm = 0.97136818683209192
 	expt = 0.5
 	state = 1
 	PreFailState = 0
 	attached = False
-	autostrutMode = Heaviest
-	rigidAttachment = False
+	autostrutMode = Grandparent
+	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = liquidEngine3.v2
+	rTrf = LiquidEngineRE-J10
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Boattail
+	moduleVariantName = Shroud
 	moduleCargoStackableQuantity = 1
+	partRendererBoundsIgnore = Shroud2x2
 	EVENTS
 	{
 	}
@@ -155,7 +156,7 @@ PART
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = True
-		flameout = False
+		flameout = True
 		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
@@ -197,6 +198,10 @@ PART
 				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 				axisSpeedMultiplier = 0
 				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 			}
 			thrustPercentage
 			{
@@ -204,6 +209,10 @@ PART
 				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 				axisSpeedMultiplier = 0
 				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 			}
 		}
 		UPGRADESAPPLIED
@@ -264,30 +273,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleJettison
-		isEnabled = True
-		activejettisonName = ShortShroud
-		isJettisoned = True
-		shroudHideOverride = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
+		name = ModuleAlternator
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -317,12 +303,31 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = ModuleJettison
 		isEnabled = True
-		packedVolume = 1300
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
+		activejettisonName = Shroud2x2
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -336,41 +341,7 @@ PART
 	}
 	MODULE
 	{
-		name = PersistentEngine
-		isEnabled = True
-		HasPersistentThrust = True
-		HasPersistentHeadingEnabled = True
-		MaximizePersistentIsp = True
-		MaximizePersistentPower = False
-		maneuverToleranceInDegree = 90
-		persistentAutopilotMode = StabilityAssist
-		persistentThrust = 0
-		persistentIsp = 345
-		persistentThrottle = 0
-		persistentAverageDensity = 0
-		vesselAlignmentWithAutopilotMode = 0
-		persistentResourceChange = 
-		vesselDryMass = 0.5
-		persistentVesselTargetId = 00000000-0000-0000-0000-000000000000
-		persistentVesselTargetBodyName = 
-		persistentManeuverPatch = 
-		persistentManeuverNextPatch = 
-		persistentManeuverUT = 0
-		defaultsLoaded = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
+		name = ModuleTestSubject
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -389,7 +360,6 @@ PART
 		isEnabled = True
 		useVariantMass = True
 		stagingEnabled = True
-		selectedVariant = Boattail
 		EVENTS
 		{
 		}
@@ -471,6 +441,36 @@ PART
 				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleLookAtConstraint
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -494,11 +494,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 3156278.9412956
-	Gear = True, 3272982.40984989
+	Stage = False, 0
+	Gear = False, 0
 	Light = False, 0
-	RCS = False, 3141065.5664618
-	SAS = True, 3116027.1252715
+	RCS = True, 3278794.22963925
+	SAS = True, 3278795.54963925
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -525,10 +525,10 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.0139999976
+	pitch = 0
 	yaw = 0
 	roll = 0
-	trimPitch = 0.0139999976
+	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
 	mainThrottle = 0
@@ -555,9 +555,6 @@ VESSELMODULES
 		lastUpdate = 0
 		selectedPad = 0
 		Productivity = 0
-	}
-	AtmoFxModule
-	{
 	}
 	RPMVesselComputer
 	{
