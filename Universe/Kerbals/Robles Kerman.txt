@@ -7,7 +7,7 @@ dumb = 0.359154671
 badS = False
 veteran = False
 tour = False
-state = Missing
+state = Assigned
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -26,16 +26,7 @@ suit = Default
 hero = False
 INVENTORY
 {
-	name = ModuleInventoryPart
-	isEnabled = True
-	stagingEnabled = True
 	inventory = evaChute,evaJetpack
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
 	STOREDPARTS
 	{
 		STOREDPART
@@ -48,10 +39,10 @@ INVENTORY
 			PART
 			{
 				name = evaChute
-				cid = 4294278544
+				cid = 4294250628
 				uid = 0
 				mid = 0
-				persistentId = 3329809135
+				persistentId = 0
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -175,6 +166,21 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 		}
 		STOREDPART
@@ -187,10 +193,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294278612
+				cid = 4294250700
 				uid = 0
 				mid = 0
-				persistentId = 1172417985
+				persistentId = 0
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -314,6 +320,21 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = EVA Propellant
@@ -328,9 +349,6 @@ INVENTORY
 			}
 		}
 	}
-	UPGRADESAPPLIED
-	{
-	}
 }
 CAREER_LOG
 {
@@ -341,4 +359,5 @@ FLIGHT_LOG
 	flight = 0
 	0 = Spawn
 	0 = Flight,Kerbin
+	0 = Suborbit,Mun
 }
