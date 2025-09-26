@@ -1,97 +1,98 @@
-pid = 2cb87207e5a142bea593598a3dd41b5f
-persistentId = 3501478269
-name = The hook Ship Debris
-type = Debris
+pid = 456a2aef648944edbdcf5aa11ffa40fe
+persistentId = 1476285639
+name = Untitled Space Craft
+type = Ship
 sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 135441.29835578706
-lct = 3273540.726656128
+met = 183.31998490635306
+lct = 3408798.705027009
 lastUT = 3408982.0650119106
-distanceTraveled = 52.61779836591362
+distanceTraveled = 157.2977354188794
 root = 0
-lat = 2.4621534146670214
-lon = 81.51080239306543
-alt = 4857.826864573086
-hgt = 105.92768
-nrm = 0.4540630877017975,-0.8838212490081787,0.11263567209243774
-rot = -0.006407624,0.61249363,-0.69034624,-0.38501
-CoM = 0,0,0
+lat = 2.4715574294697213
+lon = 81.54303183306122
+alt = 4730.644482290954
+hgt = 0.54930615
+nrm = 1.5556346625089645E-05,1.0000001192092896,-5.08427619934082E-05
+rot = -0.0026807513,0.8476182,0.5298808,-0.027617058
+CoM = 1.06869265E-07,-0.250000119,3.12924385E-07
 stg = 0
 prst = False
-ref = 0
-ctrl = False
+ref = 1216621830
+ctrl = True
 PQSMin = 2
-PQSMax = 9
+PQSMax = 10
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.6599997
+cHdg = -8.000002
+cMod = 0
 ORBIT
 {
-	SMA = 102442.70447761878
-	ECC = 0.9997307559303015
-	INC = 2.462153414667022
-	LPE = 270.0000000170751
-	LAN = 51.19345344688162
-	MNA = 3.1415926535895426
-	EPH = 3408855.38502654
+	SMA = 102378.96613071712
+	ECC = 0.9997312400050532
+	INC = 2.4715296665511053
+	LPE = 270.02255922238777
+	LAN = 51.20045315432537
+	MNA = 3.141592529835754
+	EPH = 3408854.365026658
 	REF = 2
 	IDENT = Squad/Mun
 }
 PART
 {
-	name = liquidEngine3.v2
-	cid = 4291683504
-	uid = 945875268
-	mid = 3503826735
-	persistentId = 636686723
-	launchID = 1
+	name = Mk2Pod
+	cid = 4292041500
+	uid = 1216621830
+	mid = 2432594109
+	persistentId = 2279523826
+	launchID = 2
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,0.999999881
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = -1
 	resPri = 0
 	dstg = 0
-	sqor = 0
+	sqor = -1
 	sepI = -1
-	sidx = 1
+	sidx = -1
 	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1
+	srfN = , -1
 	attN = top, -1
 	attN = bottom, -1
-	mass = 0.5
+	mass = 1.55199993
 	shielded = False
-	temp = 197.48017090784663
-	tempExt = 197.43108384949053
-	tempExtUnexp = 304.21722718305114
+	temp = 308.40640048506646
+	tempExt = 308.39792681853328
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
-	state = 1
+	state = 0
 	PreFailState = 0
-	attached = False
-	autostrutMode = Heaviest
+	attached = True
+	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = liquidEngine3.v2
+	rTrf = _default
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Boattail
+	moduleVariantName = Dark
 	moduleCargoStackableQuantity = 1
+	crew = Johnrigh Kerman
 	EVENTS
 	{
 	}
@@ -135,13 +136,11 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -150,60 +149,27 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
+		name = ModuleCommand
 		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = True
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
+		hibernation = False
+		hibernateOnWarp = False
+		activeControlPointName = _default
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			OnAction
+			MakeReferenceToggle
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ShutdownAction
+			HibernateToggle
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
 			}
 		}
 		UPGRADESAPPLIED
@@ -212,15 +178,119 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGimbal
+		name = ModuleReactionWheel
 		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
+		actuatorModeCycle = 0
+		authorityLimiter = 100
+		stateString = Idle
+		stagingEnabled = True
+		WheelState = Active
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CycleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			Activate
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			Deactivate
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			Toggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ResetAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CollectAllAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		canComm = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleColorChanger
+		isEnabled = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -229,32 +299,7 @@ PART
 		{
 			ToggleAction
 			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
+				actionGroup = Light
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -264,46 +309,10 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleJettison
+		name = FlagDecal
 		isEnabled = True
-		activejettisonName = ShortShroud
-		isJettisoned = True
-		shroudHideOverride = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSurfaceFX
-		isEnabled = True
+		flagDisplayed = True
+		isMirrored = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -319,7 +328,7 @@ PART
 	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = 1300
+		packedVolume = -1
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -336,27 +345,42 @@ PART
 	}
 	MODULE
 	{
-		name = PersistentEngine
+		name = ModuleInventoryPart
 		isEnabled = True
-		HasPersistentThrust = True
-		HasPersistentHeadingEnabled = True
-		MaximizePersistentIsp = True
-		MaximizePersistentPower = False
-		maneuverToleranceInDegree = 90
-		persistentAutopilotMode = StabilityAssist
-		persistentThrust = 0
-		persistentIsp = 345
-		persistentThrottle = 0
-		persistentAverageDensity = 0
-		vesselAlignmentWithAutopilotMode = 0
-		persistentResourceChange = 
-		vesselDryMass = 0.5
-		persistentVesselTargetId = 00000000-0000-0000-0000-000000000000
-		persistentVesselTargetBodyName = 
-		persistentManeuverPatch = 
-		persistentManeuverNextPatch = 
-		persistentManeuverUT = 0
-		defaultsLoaded = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		STOREDPARTS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFreeIva
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ParkingBrakeModule
+		isEnabled = True
+		brakeActive = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -389,7 +413,6 @@ PART
 		isEnabled = True
 		useVariantMass = True
 		stagingEnabled = True
-		selectedVariant = Boattail
 		EVENTS
 		{
 		}
@@ -402,9 +425,28 @@ PART
 	}
 	MODULE
 	{
-		name = FXModuleThrottleEffects
+		name = RasterPropMonitorComputer
 		isEnabled = True
-		state = 0
+		vesselDescription = 
+		RPMCid = be82b0bf-4fed-4023-8053-b062ddd357ec
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		PERSISTENT_VARS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ELWorkshop
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -418,9 +460,9 @@ PART
 	}
 	MODULE
 	{
-		name = FXModuleThrottleEffects
+		name = ModuleIVASwitch
 		isEnabled = True
-		state = 0
+		internalName = MK2POD_IVA
 		stagingEnabled = True
 		EVENTS
 		{
@@ -434,21 +476,16 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleColorChanger
+		name = ModuleB9PartSwitch
 		isEnabled = True
-		animState = False
 		stagingEnabled = True
+		moduleID = IVASwitch
+		currentSubtype = Stock
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -456,21 +493,50 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleColorChanger
+		name = SCANRPMStorage
 		isEnabled = True
-		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartInfo
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+			0 = Suborbit,Mun
+			0 = Land,Mun
 		}
 		UPGRADESAPPLIED
 		{
@@ -491,14 +557,40 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIModuleEVAVariants
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 199.5396728515625
+		maxAmount = 200
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
 }
 ACTIONGROUPS
 {
-	Stage = False, 3156278.9412956
-	Gear = True, 3272982.40984989
+	Stage = False, 0
+	Gear = False, 0
 	Light = False, 0
-	RCS = False, 3141065.5664618
-	SAS = True, 3116027.1252715
+	RCS = False, 0
+	SAS = False, 3408809.40502702
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -525,10 +617,10 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.0139999976
+	pitch = 0
 	yaw = 0
 	roll = 0
-	trimPitch = 0.0139999976
+	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
 	mainThrottle = 0
@@ -541,23 +633,26 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SuspensionLoadBalancer
+	SystemHeatVessel
 	{
 	}
-	VesselDataManager
+	VesselModuleSave
 	{
 	}
-	ModuleDynamicBatteryStorage
+	SpaceDustVessel
 	{
 	}
-	ELVesselWorkNet
+	VesselPhysicsHold
 	{
-		lastUpdate = 0
-		selectedPad = 0
-		Productivity = 0
+		physicsHold = False
+		roboticsOverride = False
 	}
-	AtmoFxModule
+	ParkingBrake
 	{
+		lat = 0
+		lon = 0
+		alt = 0
+		positionSet = False
 	}
 	RPMVesselComputer
 	{
@@ -565,13 +660,27 @@ VESSELMODULES
 		{
 		}
 	}
-	SpaceDustVessel
+	AtmoFxModule
 	{
 	}
-	VesselModuleSave
+	ELVesselWorkNet
+	{
+		lastUpdate = 3408844.6450270517
+		selectedPad = 0
+		Productivity = 0.36383724354760621
+	}
+	ModuleDynamicBatteryStorage
 	{
 	}
-	SystemHeatVessel
+	VesselDataManager
+	{
+	}
+	CommNetVessel
+	{
+		controlState = KerbalFull
+		canComm = True
+	}
+	SuspensionLoadBalancer
 	{
 	}
 	GoldStrikeVesselModule
