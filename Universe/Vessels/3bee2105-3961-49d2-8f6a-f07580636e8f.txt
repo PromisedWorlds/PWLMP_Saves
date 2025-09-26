@@ -1,27 +1,27 @@
-pid = 5fea413beb744aad8504cfebb1a13ccf
-persistentId = 44311075
+pid = 3bee2105396149d28f6af07580636e8f
+persistentId = 1268638635
 name = Mun station launcher Debris
 type = Debris
-sit = LANDED
-landed = True
+sit = SPLASHED
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = LaunchPad
-landedAt = LaunchPad
+landedAt = 
 displaylandedAt = 
-splashed = False
-met = 38.78000003611669
-lct = 2872706.432202698
-lastUT = 2872745.2522027344
-distanceTraveled = 0
+splashed = True
+met = 255502.37560060015
+lct = 2872825.286092204
+lastUT = 3128327.701692804
+distanceTraveled = 17.430706364455325
 root = 0
-lat = -0.096679504510676612
-lon = -74.557109777280701
-alt = 78.682889146381058
-hgt = 6.26285982
-nrm = -1.13248825E-05,1,-1.49011612E-05
-rot = 0.358095437,0.682437658,-0.610421658,-0.182844296
+lat = -0.08098659289062692
+lon = -74.41201146574778
+alt = -2.2644317902158946
+hgt = -2.2644317
+nrm = 0.03424045443534851,0.9993498921394348,-0.011286139488220215
+rot = -0.1745121,-0.6992422,0.69212604,-0.039592262
 CoM = 0,0,0
 stg = 5
 prst = False
@@ -40,55 +40,56 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300821.72445358761
-	ECC = 0.9947983609864911
-	INC = 0.096679504510676612
-	LPE = 89.999999733085943
-	LAN = 216.25105387880416
-	MNA = 3.141592653594933
-	EPH = 2872706.4722026982
+	SMA = 300780.8285612371
+	ECC = 0.9948004613046527
+	INC = 0.08098659254988393
+	LPE = 89.99999999999999
+	LAN = 169.1537833752451
+	MNA = 3.1415926535897976
+	EPH = 3128471.64915936
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = launchClamp1
-	cid = 4290918872
-	uid = 596507150
+	name = rocketNoseCone.v3
+	cid = 4290973780
+	uid = 2338901416
 	mid = 804180512
-	persistentId = 913984740
+	persistentId = 1114181379
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,0.999999821
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 5
+	istg = -1
 	resPri = 0
 	dstg = 11
-	sqor = 5
-	sepI = 5
-	sidx = 8
-	attm = 1
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1,Col001
-	mass = 0.100000001
+	srfN = , -1
+	attN = bottom, -1
+	mass = 0.200000003
 	shielded = False
-	temp = 308.69883882728197
-	tempExt = 308.86755594930321
-	tempExtUnexp = 308.86505372250889
-	staticPressureAtm = 0.98839425464162345
-	expt = 0.100000001
+	temp = 608.34774656350726
+	tempExt = 401.58336985360046
+	tempExtUnexp = 401.45180844981508
+	staticPressureAtm = 1.2311787668420284
+	expt = 0.5
 	state = 1
 	PreFailState = 0
 	attached = False
 	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = launchClamp1
+	rTrf = rocketNoseCone.v3
 	modCost = 0
 	modMass = 0
-	moduleVariantName = 
+	moduleVariantName = White
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -148,34 +149,18 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
+		name = ModuleCargoPart
 		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -183,7 +168,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTestSubject
+		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -198,22 +183,15 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRestockLaunchClamp
+		name = ModulePartVariants
 		isEnabled = True
-		scaleFactor = 3.44891739
-		height = 6.89784241
+		useVariantMass = True
 		stagingEnabled = True
-		towerRot = -2.18853469E-08,-0.923879564,-5.28358584E-08,-0.382683307
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ReleaseClamp
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -221,35 +199,14 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -258,7 +215,7 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
+	Stage = True, 2872706.4322027
 	Gear = False, 0
 	Light = False, 0
 	RCS = True, 2872699.55220269

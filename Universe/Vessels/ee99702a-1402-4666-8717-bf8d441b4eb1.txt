@@ -1,29 +1,29 @@
-pid = bb6030b084634df0a4db3fdbb07fa66f
-persistentId = 2925112068
-name = ninod Station
-type = Station
-sit = LANDED
-landed = True
+pid = ee99702a140246668717bf8d441b4eb1
+persistentId = 2495210053
+name = Mun station launcher Debris
+type = Debris
+sit = SPLASHED
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = LaunchPad
-landedAt = KSC
-displaylandedAt = #autoLOC_300900
-splashed = False
-met = 13941.256348507479
-lct = 3114391.4453443014
-lastUT = 3128332.701692809
-distanceTraveled = 0.010991444110617166
+landedAt = 
+displaylandedAt = 
+splashed = True
+met = 255502.37560060015
+lct = 2872825.286092204
+lastUT = 3128327.701692804
+distanceTraveled = 16.857165783747416
 root = 0
-lat = -0.09982678691093436
-lon = -74.53516056206693
-alt = 64.5617065896513
-hgt = 0.6290214
-nrm = -0.0011028647422790527,0.9999995231628418,0.00012499094009399414
-rot = -0.6912755,-0.09295529,-0.113617375,0.70752287
+lat = -0.08096340409209767
+lon = -74.4121308143962
+alt = -2.2407106471946463
+hgt = -2.2407107
+nrm = 0.9993574619293213,-0.011406108736991882,0.03398025035858154
+rot = 0.80265546,-0.06393767,-0.5887418,-0.07098709
 CoM = 0,0,0
-stg = 0
+stg = 4
 prst = False
 ref = 0
 ctrl = False
@@ -40,57 +40,52 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300814.58992763737
-	ECC = 0.9947987291764416
-	INC = 0.09982678690814994
+	SMA = 300780.8405490113
+	ECC = 0.9948004606818837
+	INC = 0.0809634037507126
 	LPE = 90
-	LAN = 169.07473754181626
-	MNA = 3.1415926535897887
-	EPH = 3128474.2891593627
+	LAN = 169.15366402786822
+	MNA = 3.1415926535897976
+	EPH = 3128471.64915936
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = sspx-dome-habitation-5-1
-	cid = 4292426006
-	uid = 2588296660
-	mid = 1704121350
-	persistentId = 533968714
+	name = sepMotor1
+	cid = 4288950182
+	uid = 2151075000
+	mid = 804180512
+	persistentId = 621846605
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1
+	rotation = 0,0,0,0.999999881
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 4
 	resPri = 0
-	dstg = 0
-	sqor = -1
+	dstg = 11
+	sqor = 4
 	sepI = -1
-	sidx = -1
-	attm = 0
+	sidx = 1
+	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = bottom, -1
-	attN = south, -1
-	attN = north, -1
-	attN = west, -1
-	attN = east, -1
-	mass = 3.48000002
+	srfN = srfAttach, -1,UCOL_NEW
+	mass = 0.0125000002
 	shielded = False
-	temp = 304.99082878331495
-	tempExt = 308.5925683608483
-	tempExtUnexp = 308.61661266942946
-	staticPressureAtm = 0.99047009750204318
+	temp = 515.39109434800082
+	tempExt = 413.18025482168008
+	tempExtUnexp = 412.8290591208326
+	staticPressureAtm = 1.216732356587487
 	expt = 0.5
 	state = 1
 	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
+	attached = False
+	autostrutMode = Grandparent
+	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = sspx-dome-habitation-5-1
+	rTrf = sepMotor1
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -138,11 +133,13 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -151,67 +148,60 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleColorChanger
+		name = ModuleEnginesFX
 		isEnabled = True
-		animState = False
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = True
+		flameout = True
+		EngineIgnited = True
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = Light
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
+			OnAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ResetAction
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
-		UPGRADESAPPLIED
+		AXISGROUPS
 		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			CollectAllAction
+			independentThrottlePercentage
 			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
 			}
 		}
 		UPGRADESAPPLIED
@@ -220,7 +210,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleExperienceManagement
+		name = ModuleTestSubject
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -235,11 +225,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleB9PartSwitch
+		name = ModuleCargoPart
 		isEnabled = True
+		packedVolume = 25
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
-		moduleID = northSwitch
-		currentSubtype = None
 		EVENTS
 		{
 		}
@@ -252,75 +244,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = eastSwitch
-		currentSubtype = None
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = southSwitch
-		currentSubtype = None
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = westSwitch
-		currentSubtype = None
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = endcapSwitch
-		currentSubtype = BlackHandles
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = SCANRPMStorage
+		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -335,8 +259,9 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleB9PartInfo
-		isEnabled = False
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		animState = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -350,7 +275,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTripLogger
+		name = ModuleRestockDepthMask
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -358,11 +283,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		Log
-		{
-			flight = 0
-			0 = Flight,Kerbin
 		}
 		UPGRADESAPPLIED
 		{
@@ -370,9 +290,9 @@ PART
 	}
 	RESOURCE
 	{
-		name = ElectricCharge
-		amount = 199.934326171875
-		maxAmount = 200
+		name = SolidFuel
+		amount = 0
+		maxAmount = 8
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -382,11 +302,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 3114340.90845461
+	Stage = True, 2872706.4322027
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 3114309.00845458
+	RCS = True, 2872699.55220269
+	SAS = False, 2872705.0322027
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -432,11 +352,6 @@ VESSELMODULES
 	SuspensionLoadBalancer
 	{
 	}
-	CommNetVessel
-	{
-		controlState = None
-		canComm = False
-	}
 	VesselDataManager
 	{
 	}
@@ -448,9 +363,6 @@ VESSELMODULES
 		lastUpdate = 0
 		selectedPad = 0
 		Productivity = 0
-	}
-	AtmoFxModule
-	{
 	}
 	RPMVesselComputer
 	{
