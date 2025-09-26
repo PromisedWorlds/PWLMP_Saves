@@ -7,7 +7,7 @@ dumb = 0.400000006
 badS = True
 veteran = True
 tour = False
-state = Available
+state = Assigned
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -71,7 +71,7 @@ INVENTORY
 	name = ModuleInventoryPart
 	isEnabled = True
 	stagingEnabled = True
-	inventory = evaJetpack
+	inventory = evaChute,evaJetpack
 	EVENTS
 	{
 	}
@@ -83,6 +83,145 @@ INVENTORY
 		STOREDPART
 		{
 			slotIndex = 0
+			partName = evaChute
+			quantity = 1
+			stackCapacity = 1
+			variantName = 
+			PART
+			{
+				name = evaChute
+				cid = 4294299520
+				uid = 0
+				mid = 0
+				persistentId = 2531221336
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = None, -1
+				mass = 0.00400000019
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = evaChute
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutOff
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutRoot
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutHeaviest
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutGrandparent
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					ResourcesEnableFlow
+					{
+						actionGroup = None
+						active = False
+						wasActiveBeforePartWasAdjusted = False
+					}
+					ResourcesDisableFlow
+					{
+						actionGroup = None
+						active = False
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					packedVolume = 10
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = WBIPrinterRequirements
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+		}
+		STOREDPART
+		{
+			slotIndex = 1
 			partName = evaJetpack
 			quantity = 1
 			stackCapacity = 1
@@ -90,10 +229,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294224374
+				cid = 4294299588
 				uid = 0
 				mid = 0
-				persistentId = 2190298841
+				persistentId = 779605715
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -263,4 +402,5 @@ CAREER_LOG
 FLIGHT_LOG
 {
 	flight = 1
+	1 = Spawn
 }
