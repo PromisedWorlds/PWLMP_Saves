@@ -1,34 +1,34 @@
-pid = 3bee2105396149d28f6af07580636e8f
-persistentId = 1268638635
-name = Mun station launcher Debris
+pid = 4a7aa1343ef74c3bba3b2c06fcfcfc68
+persistentId = 117644936
+name = mun jumper Station Debris
 type = Debris
-sit = SPLASHED
-landed = False
+sit = LANDED
+landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
-splashed = True
-met = 274968.11607030453
-lct = 2872825.286092204
-lastUT = 3147793.4221625086
-distanceTraveled = 71.61789852265474
+splashed = False
+met = 257.04952481389046
+lct = 3148307.5459456583
+lastUT = 3148568.410538347
+distanceTraveled = 1.5835382797500042
 root = 0
-lat = -0.08098659289062692
-lon = -74.41201146574778
-alt = -2.2644317902158946
-hgt = -2.2644317
-nrm = 0.03424045443534851,0.9993498921394348,-0.011286139488220215
-rot = -0.1745121,-0.6992422,0.69212604,-0.039592262
+lat = 2.2846558573954625
+lon = 81.08802718676894
+alt = 4272.8051469367347
+hgt = 1.24395704
+nrm = -0.0118640065,0.997406125,-0.0709986687
+rot = 0.917657554,0.234918997,-0.0229396112,0.319674045
 CoM = 0,0,0
-stg = 5
+stg = 0
 prst = False
 ref = 0
 ctrl = False
 PQSMin = 2
-PQSMax = 10
+PQSMax = 9
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,56 +40,57 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300780.8285612371
-	ECC = 0.9948004613046527
-	INC = 0.08098659254988393
-	LPE = 89.99999999999999
-	LAN = 169.1537833752451
-	MNA = 3.1415926535897976
-	EPH = 3128471.64915936
-	REF = 1
-	IDENT = Squad/Kerbin
+	SMA = 102187.84362503212
+	ECC = 0.99953220896005501
+	INC = 62.806127877844851
+	LPE = 357.40246355850002
+	LAN = 7.0693174286364524
+	MNA = 3.2072557038957554
+	EPH = 3148307.5859456584
+	REF = 2
+	IDENT = Squad/Mun
 }
 PART
 {
-	name = rocketNoseCone.v3
-	cid = 4290973780
-	uid = 2338901416
-	mid = 804180512
-	persistentId = 1114181379
-	launchID = 1
+	name = WBI.SAFER
+	cid = 4290114138
+	uid = 3511280140
+	mid = 1248936618
+	persistentId = 2954272897
+	launchID = 2
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,0.999999821
+	rotation = 0,0,0,1.00000024
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
 	resPri = 0
-	dstg = 11
+	dstg = 0
 	sqor = -1
 	sepI = -1
 	sidx = -1
-	attm = 0
+	attm = 1
 	sameVesselCollision = False
-	srfN = , -1
+	srfN = srfAttach, -1,COLLIDER
+	attN = top, -1
 	attN = bottom, -1
-	mass = 0.200000003
+	mass = 0.512000024
 	shielded = False
-	temp = 608.34774656350726
-	tempExt = 401.58336985360046
-	tempExtUnexp = 401.45180844981508
-	staticPressureAtm = 1.2311787668420284
+	temp = 328.56782632667284
+	tempExt = 319.17075794293487
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
-	state = 1
+	state = 0
 	PreFailState = 0
 	attached = False
-	autostrutMode = Grandparent
-	rigidAttachment = True
+	autostrutMode = Off
+	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = rocketNoseCone.v3
+	rTrf = WBI.SAFER
 	modCost = 0
 	modMass = 0
-	moduleVariantName = White
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -149,9 +150,89 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = ModuleOverheatDisplay
 		isEnabled = True
-		packedVolume = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCoreHeat
+		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 406389.11345463409
+		stagingEnabled = True
+		lastUpdateTime = 3148307.5859456584
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleActiveRadiator
+		isEnabled = True
+		IsCooling = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPowerMonitor
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGroundPart
+		isEnabled = True
+		beingDeployed = False
+		deployedOnGround = False
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -161,6 +242,39 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		EfficiencyBonus = 1
+		IsActivated = True
+		stagingEnabled = True
+		lastUpdateTime = 3148307.5859456584
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -181,45 +295,36 @@ PART
 		{
 		}
 	}
-	MODULE
+	RESOURCE
 	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
+		name = EnrichedUranium
+		amount = 99.999960244984791
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
-	MODULE
+	RESOURCE
 	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
+		name = DepletedUranium
+		amount = 3.577952029958667E-05
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 2872706.4322027
-	Gear = False, 0
+	Stage = True, 3148239.04594559
+	Gear = False, 3148299.62594565
 	Light = False, 0
-	RCS = True, 2872699.55220269
-	SAS = False, 2872705.0322027
+	RCS = False, 0
+	SAS = True, 3148237.66594559
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -276,6 +381,9 @@ VESSELMODULES
 		lastUpdate = 0
 		selectedPad = 0
 		Productivity = 0
+	}
+	AtmoFxModule
+	{
 	}
 	RPMVesselComputer
 	{
