@@ -12,18 +12,60 @@ inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
 outDueToG = False
-ToD = 2000.02
+ToD = 4165475.0828453316
 idx = -1
 extraXP = 0
-hasHelmetOn = False
-hasNeckRingOn = False
+hasHelmetOn = True
+hasNeckRingOn = True
 hasVisorDown = False
 lightR = 1
 lightG = 0.5176
 lightB = 0
-completedFirstEVA = False
+completedFirstEVA = True
 suit = Default
 hero = False
+EVACHUTE
+{
+	name = ModuleEvaChute
+	isEnabled = True
+	chuteYawRateAtMaxSpeed = 1
+	chuteMaxSpeedForYawRate = 50
+	chuteYawRateAtMinSpeed = 1
+	chuteMinSpeedForYawRate = 1
+	chuteRollRate = 1
+	chutePitchRate = 1
+	chuteDefaultForwardPitch = 9
+	semiDeployedChuteForwardPitch = 25
+	chutePitchRateDivisorWhenTurning = 1
+	chuteRollRateDivisorWhenPitching = 1
+	chuteYawRateDivisorWhenPitching = 1
+	persistentState = STOWED
+	animTime = 0
+	minAirPressureToOpen = 0.0399999991
+	deployAltitude = 1000
+	spreadAngle = 7
+	automateSafeDeploy = 0
+	stagingEnabled = False
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		DeployAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		CutAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	UPGRADESAPPLIED
+	{
+	}
+}
 INVENTORY
 {
 	name = ModuleInventoryPart
@@ -48,10 +90,10 @@ INVENTORY
 			PART
 			{
 				name = evaChute
-				cid = 4294278544
+				cid = 4294314014
 				uid = 0
 				mid = 0
-				persistentId = 3228624576
+				persistentId = 3654749335
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -175,6 +217,21 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 		}
 		STOREDPART
@@ -187,10 +244,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294278612
+				cid = 4294314084
 				uid = 0
 				mid = 0
-				persistentId = 1185401841
+				persistentId = 52304586
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -314,6 +371,21 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = EVA Propellant
@@ -334,7 +406,7 @@ INVENTORY
 }
 CAREER_LOG
 {
-	flight = 1
+	flight = 2
 	0 = Flight,Kerbin
 	0 = Suborbit,Kerbin
 	0 = Orbit,Kerbin
@@ -347,11 +419,12 @@ CAREER_LOG
 	0 = Flyby,Kerbin
 	0 = Land,Kerbin
 	0 = Recover
-}
-FLIGHT_LOG
-{
-	flight = 1
 	0 = Suborbit,Mun
 	0 = Land,Mun
 	0 = ExitVessel,Mun
+	1 = Die
+}
+FLIGHT_LOG
+{
+	flight = 2
 }
