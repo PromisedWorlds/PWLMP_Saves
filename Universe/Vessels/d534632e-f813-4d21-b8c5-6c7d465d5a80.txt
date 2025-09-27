@@ -1,8 +1,8 @@
-pid = 8f2f32b0d6734717830a407c408e9aab
-persistentId = 2157492583
+pid = d534632ef8134d21b8c56c7d465d5a80
+persistentId = 1428501623
 name = reserch module Debris
 type = Debris
-sit = SUB_ORBITAL
+sit = ORBITING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
@@ -11,19 +11,19 @@ launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 189.14634380396456
-lct = 5007112.08990604
-lastUT = 5007301.276249843
-distanceTraveled = 84059.62180802411
+met = 178.0139673864469
+lct = 5007354.456248654
+lastUT = 5007532.51021604
+distanceTraveled = 596863.8430914461
 root = 0
-lat = -0.06043698488712556
-lon = -73.468074001921295
-alt = 44621.28764814965
-hgt = 44621.2891
-nrm = -0.0282350779,0.820810914,-0.570501983
-rot = 0.247387514,-0.220504284,0.66623193,-0.668066084
+lat = 0.039079198914367994
+lon = -56.67061550638482
+alt = 132311.63719578716
+hgt = 132311.641
+nrm = -0.0357251465,0.237534463,-0.970722079
+rot = -0.108836353,0.13158989,0.701614738,-0.691791654
 CoM = 0,0,0
-stg = 4
+stg = 1
 prst = False
 ref = 0
 ctrl = False
@@ -40,46 +40,46 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 389723.1741420246
-	ECC = 0.86677978643202247
-	INC = 0.079705642466777638
-	LPE = 60.721462498628767
-	LAN = 274.94542697976391
-	MNA = 1.8570061901595827
-	EPH = 5007112.1299060388
+	SMA = 806539.32871281134
+	ECC = 0.10836045651204092
+	INC = 0.42650397260564715
+	LPE = 329.9495567028431
+	LAN = 159.84537771689929
+	MNA = 0.49890537081577219
+	EPH = 5007354.5162486527
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = Separator.3
-	cid = 4292943554
-	uid = 263883456
+	name = Separator.2
+	cid = 4293025204
+	uid = 4006891147
 	mid = 4085186522
-	persistentId = 1258428604
+	persistentId = 3749095469
 	launchID = 1
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Mirror
-	istg = 4
+	istg = 1
 	resPri = 0
-	dstg = 5
-	sqor = 4
-	sepI = 4
+	dstg = 1
+	sqor = 1
+	sepI = 1
 	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
 	attN = top, -1
 	attN = bottom, -1
-	mass = 0.479999989
+	mass = 0.209999993
 	shielded = False
-	temp = 660.86515074767453
-	tempExt = 682.15890433737206
-	tempExtUnexp = 682.55461032839059
-	staticPressureAtm = 0.00037998630181083611
+	temp = 323.29144569885875
+	tempExt = 326.07554180418589
+	tempExtUnexp = 307.46744125022781
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 1
 	PreFailState = 0
@@ -87,7 +87,7 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = Separator.3
+	rTrf = Separator.2
 	modCost = 0
 	modMass = 0
 	moduleVariantName = BlackAndWhite
@@ -218,10 +218,45 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModulePartVariants
 		isEnabled = True
 		useVariantMass = True
 		stagingEnabled = True
+		selectedVariant = BlackAndWhite
 		EVENTS
 		{
 		}
@@ -295,7 +330,7 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 5007013.99896715
+	Stage = False, 5007352.01624871
 	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
@@ -332,7 +367,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
