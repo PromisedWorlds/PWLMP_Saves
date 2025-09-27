@@ -1,27 +1,27 @@
-pid = 06327d1e229d4c13b4a097d97c4e7337
-persistentId = 2361283747
-name = Stamp-O-Tron Ground Anchor Debris
+pid = 55fdbe501daa48019c505c5dc64b3ca0
+persistentId = 2768171488
+name = Venga bus Debris
 type = Debris
 sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = 
-landedAt = Mun
-displaylandedAt = Mun
+launchedFrom = LaunchPad
+landedAt = 
+displaylandedAt = 
 splashed = False
-met = 154122.2764597917
-lct = 5083983.05869103
+met = 111559.33011252154
+lct = 5126546.0050383005
 lastUT = 5238105.355150822
-distanceTraveled = 0
+distanceTraveled = 1033.3832232941252
 root = 0
-lat = 2.5136134889053685
-lon = 81.47045166962509
-alt = 4716.514972253615
-hgt = 9.516834
-nrm = -0.08031487464904785,-0.01829010248184204,-0.9966018199920654
-rot = -0.42860642,-0.8738241,0.20756778,-0.09820244
+lat = 2.324968524809932
+lon = 81.49219661136614
+alt = 4654.020295338851
+hgt = 0.5982403
+nrm = 0.5522531270980835,-0.6310351490974426,0.5448039770126343
+rot = 0.21739182,0.14422286,0.24305971,-0.93427116
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -40,55 +40,57 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 102372.00942336727
-	ECC = 0.9997313336931508
-	INC = 2.513613488665493
+	SMA = 102340.7491383962
+	ECC = 0.999731504980324
+	INC = 2.324968524809932
 	LPE = 270
-	LAN = 109.3137670951931
-	MNA = 3.1415926535898144
-	EPH = 5238106.215150802
+	LAN = 109.3338542945121
+	MNA = 3.141592653589772
+	EPH = 5238105.575150817
 	REF = 2
 	IDENT = Squad/Mun
 }
 PART
 {
-	name = nfs-panel-static-truss-1
-	cid = 4278145860
-	uid = 1881357384
-	mid = 3595448995
-	persistentId = 452071746
-	launchID = 1
+	name = Separator.1
+	cid = 4291211472
+	uid = 1811044
+	mid = 1712825632
+	persistentId = 2343690981
+	launchID = 2
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1.00000048
 	mirror = 1,1,1
-	symMethod = Radial
-	istg = -1
+	symMethod = Mirror
+	istg = 0
 	resPri = 0
-	dstg = 2
-	sqor = -1
-	sepI = -1
-	sidx = -1
-	attm = 1
+	dstg = 1
+	sqor = 0
+	sepI = 0
+	sidx = 1
+	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER
-	mass = 0.00999999978
+	srfN = , -1
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.0500000007
 	shielded = False
-	temp = 259.36366480364575
-	tempExt = 258.72300491984623
-	tempExtUnexp = 4
+	temp = 186.8414592846043
+	tempExt = 184.49344269051511
+	tempExtUnexp = 298.79349472513354
 	staticPressureAtm = 0
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = False
-	autostrutMode = Heaviest
+	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = nfs-panel-static-truss-1
+	rTrf = Separator.1
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Truss
+	moduleVariantName = BlackAndWhite
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -148,36 +150,19 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDeployableSolarPanel
+		name = ModuleDecouple
 		isEnabled = True
-		efficiencyMult = 1
-		launchUT = 5081538.747286302
-		currentRotation = (-0.707106829, 0, 0, 0.707106709)
-		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = BROKEN
-		stagingEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = True
+		stagingEnabled = False
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ExtendPanelsAction
+			DecoupleAction
 			{
 				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ExtendAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RetractAction
-			{
-				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -187,15 +172,30 @@ PART
 	}
 	MODULE
 	{
-		name = ModulePartVariants
+		name = ModuleToggleCrossfeed
 		isEnabled = True
-		useVariantMass = True
+		crossfeedStatus = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			EnableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DisableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -203,11 +203,9 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleB9PartSwitch
+		name = ModuleTestSubject
 		isEnabled = True
 		stagingEnabled = True
-		moduleID = cellSwitch
-		currentSubtype = Advanced
 		EVENTS
 		{
 		}
@@ -222,7 +220,7 @@ PART
 	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = 200
+		packedVolume = 260
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -254,9 +252,11 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleB9PartInfo
-		isEnabled = False
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
 		stagingEnabled = True
+		selectedVariant = BlackAndWhite
 		EVENTS
 		{
 		}
@@ -269,18 +269,9 @@ PART
 	}
 	MODULE
 	{
-		name = KopernicusSolarPanel
-		isEnabled = True
-		nominalRate = 8
-		state = Broken
-		trackedSunIndex = 0
-		manualTracking = False
-		launchUT = 5081538.747286302
+		name = ModuleFreeIva
+		isEnabled = False
 		stagingEnabled = True
-		timeEfficCurve
-		{
-			key = 0 1 0 0
-		}
 		EVENTS
 		{
 		}
@@ -309,11 +300,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 3672619.81731283
+	Stage = False, 5126545.58503831
 	Gear = False, 0
-	Light = True, 5083565.51541659
+	Light = False, 0
 	RCS = False, 0
-	SAS = True, 3672710.377706
+	SAS = True, 5086150.8012068
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -340,10 +331,10 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0
+	pitch = 0.0200000014
 	yaw = 0
 	roll = 0
-	trimPitch = 0
+	trimPitch = 0.0200000014
 	trimYaw = 0
 	trimRoll = 0
 	mainThrottle = 0
