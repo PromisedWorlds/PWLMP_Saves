@@ -7,7 +7,7 @@ dumb = 0.678399503
 badS = False
 veteran = False
 tour = False
-state = Available
+state = Assigned
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -26,7 +26,16 @@ suit = Default
 hero = False
 INVENTORY
 {
+	name = ModuleInventoryPart
+	isEnabled = True
+	stagingEnabled = True
 	inventory = evaChute,evaJetpack
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
 	STOREDPARTS
 	{
 		STOREDPART
@@ -39,10 +48,10 @@ INVENTORY
 			PART
 			{
 				name = evaChute
-				cid = 4294298814
+				cid = 4294313990
 				uid = 0
 				mid = 0
-				persistentId = 0
+				persistentId = 4151018591
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -166,6 +175,21 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 		}
 		STOREDPART
@@ -178,10 +202,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294298882
+				cid = 4294314060
 				uid = 0
 				mid = 0
-				persistentId = 0
+				persistentId = 2347294977
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -305,6 +329,21 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = EVA Propellant
@@ -319,14 +358,18 @@ INVENTORY
 			}
 		}
 	}
+	UPGRADESAPPLIED
+	{
+	}
 }
 CAREER_LOG
 {
-	flight = 0
+	flight = 1
+	0 = Land,Kerbin
+	0 = Flight,Kerbin
+	0 = Recover
 }
 FLIGHT_LOG
 {
-	flight = 0
-	0 = Land,Kerbin
-	0 = Flight,Kerbin
+	flight = 1
 }
