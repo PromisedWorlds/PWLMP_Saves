@@ -1,6 +1,6 @@
-pid = 0452f197b438428c84e56513aa36cf0d
-persistentId = 1621824328
-name = Orb8ter Debris
+pid = f3e968e822574d5fa88427be0c5211a3
+persistentId = 348924720
+name = minmus refiner lander Debris
 type = Debris
 sit = LANDED
 landed = True
@@ -9,21 +9,21 @@ skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = TSC 39A
 landedAt = LaunchpadFX
-displaylandedAt = LaunchpadFX
+displaylandedAt = 
 splashed = False
-met = 1557581.5883053048
-lct = 7231846.570028744
-lastUT = 8789428.218334047
+met = 48.83943456225097
+lct = 8790634.065718167
+lastUT = 8790682.945152728
 distanceTraveled = 0
 root = 0
-lat = 0.013000880451203232
-lon = -74.56179386415312
-alt = 77.27901224326342
-hgt = 2.998064
-nrm = 0.001431584358215332,0.9999988079071045,-0.0006622672080993652
-rot = -0.68129826,0.0027525225,-0.19017783,0.70686454
+lat = 0.013124119771699114
+lon = -74.560876005769387
+alt = 81.096436773659661
+hgt = 6.80216312
+nrm = 0.000381043181,0.999999106,-0.0014359206
+rot = -0.616425037,-0.497649312,0.347644448,0.501506507
 CoM = 0,0,0
-stg = 3
+stg = 7
 prst = False
 ref = 0
 ctrl = False
@@ -40,50 +40,50 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300821.01737163955
-	ECC = 0.9947983829519111
-	INC = 0.013000886187852622
-	LPE = 270
-	LAN = 239.71153437510566
+	SMA = 300822.94603150157
+	ECC = 0.99479828368522938
+	INC = 0.013124119771699116
+	LPE = 269.99999992198605
+	LAN = 259.8564076419982
 	MNA = 3.1415926535897976
-	EPH = 8789428.278334046
+	EPH = 8790634.1057181656
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
 	name = launchClamp1
-	cid = 4287630800
-	uid = 2642154455
-	mid = 981859546
-	persistentId = 2806512314
-	launchID = 3
+	cid = 4290918718
+	uid = 1175234197
+	mid = 2261427500
+	persistentId = 735044939
+	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1.00000024
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 7
 	resPri = 0
-	dstg = 6
-	sqor = 3
-	sepI = 3
-	sidx = 0
+	dstg = 10
+	sqor = 7
+	sepI = 7
+	sidx = 8
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER64
+	srfN = srfAttach, -1,Col001
 	mass = 0.100000001
 	shielded = False
-	temp = 300.64293053789692
-	tempExt = 301.21177770662217
-	tempExtUnexp = 301.21140460142345
-	staticPressureAtm = 0.9886003405318976
+	temp = 305.92599849701389
+	tempExt = 306.28163310565492
+	tempExtUnexp = 306.2792628234842
+	staticPressureAtm = 0.98803998569250395
 	expt = 0.100000001
 	state = 1
 	PreFailState = 0
 	attached = False
-	autostrutMode = Off
-	rigidAttachment = False
+	autostrutMode = Grandparent
+	rigidAttachment = True
 	flag = Squad/Flags/default
 	rTrf = launchClamp1
 	modCost = 0
@@ -200,10 +200,10 @@ PART
 	{
 		name = ModuleRestockLaunchClamp
 		isEnabled = True
-		scaleFactor = 1.81626427
-		height = 3.63252831
+		scaleFactor = 3.69815326
+		height = 7.39632416
 		stagingEnabled = True
-		towerRot = -9.6623701E-08,0.38268292,4.00227691E-08,-0.923879802
+		towerRot = -5.28358548E-08,-0.382683545,-2.18853238E-08,-0.923879564
 		EVENTS
 		{
 		}
@@ -261,8 +261,8 @@ ACTIONGROUPS
 	Stage = False, 0
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 7231817.93002938
+	RCS = True, 8790177.27768239
+	SAS = False, 8790625.84420456
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -305,34 +305,13 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SystemHeatVessel
+	SuspensionLoadBalancer
 	{
 	}
-	VesselModuleSave
+	VesselDataManager
 	{
 	}
-	SpaceDustVessel
-	{
-	}
-	VesselPhysicsHold
-	{
-		physicsHold = False
-		roboticsOverride = False
-	}
-	ParkingBrake
-	{
-		lat = 0
-		lon = 0
-		alt = 0
-		positionSet = False
-	}
-	RPMVesselComputer
-	{
-		PERSISTENT_VARS
-		{
-		}
-	}
-	AtmoFxModule
+	ModuleDynamicBatteryStorage
 	{
 	}
 	ELVesselWorkNet
@@ -341,13 +320,22 @@ VESSELMODULES
 		selectedPad = 0
 		Productivity = 0
 	}
-	ModuleDynamicBatteryStorage
+	AtmoFxModule
 	{
 	}
-	VesselDataManager
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	SpaceDustVessel
 	{
 	}
-	SuspensionLoadBalancer
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
 	{
 	}
 	GoldStrikeVesselModule

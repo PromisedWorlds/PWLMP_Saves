@@ -1,29 +1,29 @@
-pid = 026acca7ecd0410fb4f823e13073ce8f
-persistentId = 3312280885
-name = Orb8ter Debris
+pid = 87535fa9e7f84e82800af494e9cd9905
+persistentId = 1351842954
+name = Space Station Module 1 Debris
 type = Debris
-sit = LANDED
-landed = True
+sit = ORBITING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = TSC 39A
-landedAt = LaunchpadFX
-displaylandedAt = LaunchpadFX
+launchedFrom = LaunchPad
+landedAt = 
+displaylandedAt = 
 splashed = False
-met = 1557581.5883053048
-lct = 7231846.570028744
-lastUT = 8789428.218334047
-distanceTraveled = 0
+met = 559.786498690024
+lct = 8801455.340670776
+lastUT = 8802015.187169464
+distanceTraveled = 482966.6893724007
 root = 0
-lat = 0.013238370262650614
-lon = -74.56192641988414
-alt = 77.28332342545036
-hgt = 2.9974837
-nrm = -0.00027748942375183105,0.9999998807907104,-0.0004361867904663086
-rot = -0.34709924,0.50099015,-0.6168984,0.49796328
+lat = -0.2065337080280524
+lon = -20.783290923886028
+alt = 205378.37270981632
+hgt = 205378.38
+nrm = -0.07486850023269653,0.5082061290740967,0.8579751253128052
+rot = 0.24609266,0.90402806,-0.27159902,-0.22001322
 CoM = 0,0,0
-stg = 3
+stg = 0
 prst = False
 ref = 0
 ctrl = False
@@ -40,55 +40,57 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300821.0195492252
-	ECC = 0.9947983828496247
-	INC = 0.013238375612264534
-	LPE = 270
-	LAN = 239.71140181963196
-	MNA = 3.1415926535897887
-	EPH = 8789428.278334046
+	SMA = 805727.6796683072
+	ECC = 0.0023977880249530046
+	INC = 0.22311333456792
+	LPE = 168.05408367809065
+	LAN = 345.9977243659314
+	MNA = 1.3828404935120757
+	EPH = 8802014.107169488
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = launchClamp1
-	cid = 4287630646
-	uid = 2249428675
-	mid = 981859546
-	persistentId = 3389131632
-	launchID = 3
+	name = Separator.2
+	cid = 4291569190
+	uid = 1083190965
+	mid = 2789492286
+	persistentId = 224724583
+	launchID = 1
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 0
 	resPri = 0
-	dstg = 6
-	sqor = 3
-	sepI = 3
-	sidx = 0
-	attm = 1
+	dstg = 1
+	sqor = 0
+	sepI = 0
+	sidx = 1
+	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER64
-	mass = 0.100000001
+	srfN = , -1
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.209999993
 	shielded = False
-	temp = 300.64293141174016
-	tempExt = 301.21178622646454
-	tempExtUnexp = 301.2114131096842
-	staticPressureAtm = 0.98859973816173974
-	expt = 0.100000001
+	temp = 183.14656857114224
+	tempExt = 183.02053845816897
+	tempExtUnexp = 307.16067836992568
+	staticPressureAtm = 0
+	expt = 0.5
 	state = 1
 	PreFailState = 0
 	attached = False
-	autostrutMode = Off
-	rigidAttachment = False
+	autostrutMode = Heaviest
+	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = launchClamp1
+	rTrf = Separator.2
 	modCost = 0
 	modMass = 0
-	moduleVariantName = 
+	moduleVariantName = BlackAndWhite
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -148,10 +150,31 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
+		name = ModuleDecouple
 		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
+		ejectionForcePercent = 100
+		isDecoupled = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -161,19 +184,16 @@ PART
 			ToggleAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ActivateAction
+			EnableAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ShutdownAction
+			DisableAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -198,22 +218,18 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRestockLaunchClamp
+		name = ModuleCargoPart
 		isEnabled = True
-		scaleFactor = 1.81626415
-		height = 3.63252831
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
-		towerRot = -4.00229041E-08,0.923879325,9.66236371E-08,-0.382683933
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ReleaseClamp
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -221,35 +237,46 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = WBIPrinterRequirements
 		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
-		AXISGROUPS
+		UPGRADESAPPLIED
 		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
+		}
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = BlackAndWhite
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIModuleEVAFlagSwitch
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -258,11 +285,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
+	Stage = False, 8801412.05478506
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 7231817.93002938
+	RCS = True, 8801353.17373659
+	SAS = True, 8789403.13833461
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -290,12 +317,12 @@ FLIGHTPLAN
 CTRLSTATE
 {
 	pitch = 0
-	yaw = 0
+	yaw = 0.098548837
 	roll = 0
 	trimPitch = 0
-	trimYaw = 0
+	trimYaw = 0.098548837
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
@@ -305,34 +332,13 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SystemHeatVessel
+	SuspensionLoadBalancer
 	{
 	}
-	VesselModuleSave
+	VesselDataManager
 	{
 	}
-	SpaceDustVessel
-	{
-	}
-	VesselPhysicsHold
-	{
-		physicsHold = False
-		roboticsOverride = False
-	}
-	ParkingBrake
-	{
-		lat = 0
-		lon = 0
-		alt = 0
-		positionSet = False
-	}
-	RPMVesselComputer
-	{
-		PERSISTENT_VARS
-		{
-		}
-	}
-	AtmoFxModule
+	ModuleDynamicBatteryStorage
 	{
 	}
 	ELVesselWorkNet
@@ -341,13 +347,19 @@ VESSELMODULES
 		selectedPad = 0
 		Productivity = 0
 	}
-	ModuleDynamicBatteryStorage
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	SpaceDustVessel
 	{
 	}
-	VesselDataManager
+	VesselModuleSave
 	{
 	}
-	SuspensionLoadBalancer
+	SystemHeatVessel
 	{
 	}
 	GoldStrikeVesselModule

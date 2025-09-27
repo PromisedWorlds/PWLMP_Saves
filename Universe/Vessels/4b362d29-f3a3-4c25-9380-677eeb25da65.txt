@@ -6,24 +6,24 @@ sit = ORBITING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 389.4088970925659
+met = 12611.10883487761
 lct = 8789404.598334575
-lastUT = 8789794.067231666
-distanceTraveled = 496599.33222088026
+lastUT = 8802015.747169452
+distanceTraveled = 2120412.4690123145
 root = 0
-lat = -0.21401994688797218
-lon = -58.08925192644481
-alt = 129584.12917488802
-hgt = 129584.13
-nrm = -0.9549359679222107,0.2968122959136963,-4.482269287109375E-05
-rot = -0.43418065,-0.5580422,-0.56125045,0.43020236
-CoM = 5.24520874E-06,-28.872715,4.29153442E-06
-stg = 2
+lat = -0.31218541102579983
+lon = -20.815866212224915
+alt = 204632.1812172404
+hgt = 204632.19
+nrm = -0.6716042160987854,0.5788155794143677,0.4625154733657837
+rot = -0.11989435,0.64493906,-0.6961975,0.291527
+CoM = 4.76837158E-07,-7.09476757,-2.2649765E-06
+stg = 0
 prst = False
 ref = 457177912
 ctrl = True
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.2
-cHdg = 0.3
+cPch = 0.1071634
+cHdg = 5.589991
 cMod = 0
 ORBIT
 {
-	SMA = 738611.8737798043
-	ECC = 0.0707819285656185
-	INC = 0.38897920979756234
-	LPE = 129.30983123120004
-	LAN = 138.91109763092936
-	MNA = 1.3273655717089186
-	EPH = 8789793.90723167
+	SMA = 803729.1719543719
+	ECC = 0.001215837997707462
+	INC = 0.4041032542720061
+	LPE = 27.52008614775012
+	LAN = 3.148178645718133
+	MNA = 3.545073530260212
+	EPH = 8802015.127169466
 	REF = 1
 	IDENT = Squad/Kerbin
 }
@@ -73,13 +73,13 @@ PART
 	sameVesselCollision = False
 	srfN = , -1
 	attN = bottom, 1
-	attN = top, 63
+	attN = top, 47
 	mass = 4.97600031
 	shielded = False
-	temp = 307.1606906904529
-	tempExt = 307.19867199468126
-	tempExtUnexp = 307.19745341444036
-	staticPressureAtm = 0.98285591281728035
+	temp = 183.85480637330357
+	tempExt = 183.76865435749389
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -187,7 +187,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -327,7 +327,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -452,6 +452,9 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Flight,Kerbin
+			0 = Suborbit,Kerbin
+			0 = Orbit,Kerbin
 		}
 		UPGRADESAPPLIED
 		{
@@ -475,7 +478,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 331.50959482139285
+		amount = 146.51151569543777
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -486,7 +489,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 120
+		amount = 114.8560350839577
 		maxAmount = 120
 		flowState = True
 		isTweakable = True
@@ -521,10 +524,10 @@ PART
 	attN = bottom, 2
 	mass = 1.3398
 	shielded = False
-	temp = 307.15922689853892
-	tempExt = 306.96857635116038
-	tempExtUnexp = 306.96560292985794
-	staticPressureAtm = 0.9832032545095839
+	temp = 183.93668836293111
+	tempExt = 183.80390189746734
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -629,7 +632,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -678,7 +681,7 @@ PART
 	RESOURCE
 	{
 		name = LqdDeuterium
-		amount = 41249.999967027856
+		amount = 41215.740514985475
 		maxAmount = 41250
 		flowState = True
 		isTweakable = True
@@ -713,10 +716,10 @@ PART
 	attN = bottom, 3
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16067710373619
-	tempExt = 307.18602986082362
-	tempExtUnexp = 307.18523089949935
-	staticPressureAtm = 0.98352627550676197
+	temp = 184.030628161577
+	tempExt = 183.89569632753225
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -786,7 +789,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -821,10 +824,10 @@ PART
 	attN = bottom, 4
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068028357529
-	tempExt = 307.19936574298748
-	tempExtUnexp = 307.19817829387836
-	staticPressureAtm = 0.98366670304982418
+	temp = 184.14385721081209
+	tempExt = 183.99392187562276
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -894,7 +897,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -929,10 +932,10 @@ PART
 	attN = bottom, 5
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068031891729
-	tempExt = 307.20039943267869
-	tempExtUnexp = 307.1991486076098
-	staticPressureAtm = 0.98380705529661661
+	temp = 184.21972721814819
+	tempExt = 184.05915356935654
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1002,7 +1005,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1037,10 +1040,10 @@ PART
 	attN = bottom, 6
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068031932394
-	tempExt = 307.2004278077136
-	tempExtUnexp = 307.1991733330712
-	staticPressureAtm = 0.98394748283967892
+	temp = 184.25286699932141
+	tempExt = 184.08198092802832
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1110,7 +1113,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1145,10 +1148,10 @@ PART
 	attN = bottom, 7
 	mass = 0.879999995
 	shielded = False
-	temp = 307.1606803202219
-	tempExt = 307.20045598632237
-	tempExtUnexp = 307.19919968421107
-	staticPressureAtm = 0.98408791038274113
+	temp = 184.25265838850567
+	tempExt = 184.10573378830659
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1218,7 +1221,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1253,10 +1256,10 @@ PART
 	attN = bottom, 8
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068032038913
-	tempExt = 307.20045742331126
-	tempExtUnexp = 307.19920097509521
-	staticPressureAtm = 0.98422833792580333
+	temp = 184.22067871388637
+	tempExt = 184.09974831250042
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1326,7 +1329,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1361,10 +1364,10 @@ PART
 	attN = bottom, 9
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068057103217
-	tempExt = 307.2004582445249
-	tempExtUnexp = 307.19920168973368
-	staticPressureAtm = 0.98436876546886565
+	temp = 184.17415833140035
+	tempExt = 184.07780767216687
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1434,7 +1437,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1469,10 +1472,10 @@ PART
 	attN = bottom, 10
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068032133052
-	tempExt = 307.20045748433779
-	tempExtUnexp = 307.19920102756561
-	staticPressureAtm = 0.98450926830819763
+	temp = 184.18531950308497
+	tempExt = 184.07318930653759
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1542,7 +1545,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1577,10 +1580,10 @@ PART
 	attN = bottom, 11
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068057103223
-	tempExt = 307.20045824599993
-	tempExtUnexp = 307.19920169094894
-	staticPressureAtm = 0.98464977114752961
+	temp = 184.17296872263071
+	tempExt = 184.07495314073523
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1650,7 +1653,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1685,10 +1688,10 @@ PART
 	attN = bottom, 12
 	mass = 0.879999995
 	shielded = False
-	temp = 307.16068032036924
-	tempExt = 307.20045747696099
-	tempExtUnexp = 307.19920102118601
-	staticPressureAtm = 0.98479027398686159
+	temp = 184.20779095100605
+	tempExt = 184.1016252090493
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1758,7 +1761,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1650
+		amount = 1579.2704824115215
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -1792,11 +1795,11 @@ PART
 	attN = top, 13
 	attN = bottom, 11
 	mass = 0.5
-	shielded = True
-	temp = 307.16067837108602
-	tempExt = 307.16067836992568
+	shielded = False
+	temp = 184.25467093450573
+	tempExt = 184.11187704223477
 	tempExtUnexp = 307.16067836992568
-	staticPressureAtm = 0.98502150883122841
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1923,11 +1926,11 @@ PART
 	attN = top, 12
 	attN = bottom, 14
 	mass = 16.7999992
-	shielded = True
-	temp = 307.16067836993204
-	tempExt = 307.16067836992568
+	shielded = False
+	temp = 184.29092942462717
+	tempExt = 183.99786235515117
 	tempExtUnexp = 307.16067836992568
-	staticPressureAtm = 0.98555626293891097
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2046,7 +2049,7 @@ PART
 	RESOURCE
 	{
 		name = NuclearSaltWater
-		amount = 32000
+		amount = 31849.612874206323
 		maxAmount = 32000
 		flowState = True
 		isTweakable = True
@@ -2078,15 +2081,15 @@ PART
 	sameVesselCollision = False
 	srfN = srfAttach, -1
 	attN = top, 13
-	attN = bottom, 15
+	attN = bottom, -1
 	mass = 12
 	shielded = False
-	temp = 307.16067967996509
-	tempExt = 307.16819150304343
-	tempExtUnexp = 307.16795218167999
-	staticPressureAtm = 0.98609990200642261
+	temp = 183.35397880601693
+	tempExt = 183.56995549272884
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Heaviest
@@ -2159,9 +2162,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -2227,12 +2230,12 @@ PART
 	{
 		name = ModuleSystemHeat
 		isEnabled = True
-		totalSystemTemperature = 0
+		totalSystemTemperature = 1600
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2286,7 +2289,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2467,3487 +2470,6 @@ PART
 }
 PART
 {
-	name = Separator.2
-	cid = 4291569190
-	uid = 1083190965
-	mid = 2789492286
-	persistentId = 224724583
-	launchID = 1
-	parent = 14
-	position = 0,-25.149160385131836,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 1
-	sqor = 0
-	sepI = 0
-	sidx = 1
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = top, 14
-	attN = bottom, 16
-	mass = 0.209999993
-	shielded = True
-	temp = 307.16067837067112
-	tempExt = 307.16067836992568
-	tempExtUnexp = 307.16067836992568
-	staticPressureAtm = 0.98653662037090573
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = Separator.2
-	modCost = 0
-	modMass = 0
-	moduleVariantName = BlackAndWhite
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = BlackAndWhite
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-fairing-5-1
-	cid = 4291491066
-	uid = 963742612
-	mid = 2789492286
-	persistentId = 3789609531
-	launchID = 1
-	parent = 15
-	position = 0,-25.469161987304688,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 3
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = interstage01a, -1
-	attN = interstage01b, -1
-	attN = interstage02a, -1
-	attN = interstage02b, -1
-	attN = interstage03a, -1
-	attN = interstage03b, -1
-	attN = interstage04a, -1
-	attN = interstage04b, -1
-	attN = interstage05a, -1
-	attN = interstage05b, -1
-	attN = interstage06a, -1
-	attN = interstage06b, -1
-	attN = top, 15
-	attN = bottom, 17
-	mass = 6.23610306
-	shielded = False
-	temp = 307.1606794115358
-	tempExt = 307.16325770105362
-	tempExtUnexp = 307.16316569995445
-	staticPressureAtm = 0.98658352994695286
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = nflv-fairing-5-1
-	modCost = 3261.66162
-	modMass = 5.43610287
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleProceduralFairing
-		isEnabled = True
-		interstageCraftID = 4291929824
-		nArcs = 6
-		ejectionForce = 100
-		useClamshell = False
-		isCapped = True
-		stagingEnabled = True
-		isFadeLocked = False
-		fsm = st_idle
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployFairingAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		XSECTION
-		{
-			h = 0
-			r = 2.5
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 0
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 1
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 2
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 3
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 4
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 5
-			}
-		}
-		XSECTION
-		{
-			h = 4
-			r = 2.5
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 6
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 7
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 8
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 9
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 10
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 11
-			}
-		}
-		XSECTION
-		{
-			h = 8
-			r = 2.5
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 12
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 13
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 14
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 15
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 16
-			}
-			ATTACHEDFLAG
-			{
-				attachedFlagPartIDs = 
-				panelIndex = 17
-			}
-		}
-		XSECTION
-		{
-			h = 12
-			r = 1.86506212
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoBay
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNodeToggle
-		isEnabled = True
-		showMesh = True
-		showNodes = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleRestockModifyFairingMaterials
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4291533840
-	uid = 2875653024
-	mid = 2789492286
-	persistentId = 2392867226
-	launchID = 1
-	parent = 16
-	position = 0,-29.410163879394531,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = top, 16
-	attN = bottom, 18
-	mass = 56
-	shielded = False
-	temp = 307.1606872207322
-	tempExt = 307.19917900467061
-	tempExtUnexp = 307.19800695631795
-	staticPressureAtm = 0.98716135352092582
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 4253.8263196315165
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4291230270
-	uid = 1433594610
-	mid = 2789492286
-	persistentId = 3184708483
-	launchID = 1
-	parent = 17
-	position = 0,-37.648162841796875,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 2
-	resPri = 0
-	dstg = 4
-	sqor = 2
-	sepI = 0
-	sidx = 1
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = top, 17
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 307.16067849597204
-	tempExt = 307.17225417192793
-	tempExtUnexp = 307.17185620642817
-	staticPressureAtm = 0.98837008453903741
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-2
-	cid = 4291193718
-	uid = 2314476912
-	mid = 2789492286
-	persistentId = 2120976619
-	launchID = 1
-	parent = 17
-	position = 2.7740793228149414,-31.26055908203125,4.8048477172851563
-	rotation = 7.22791471E-09,-0.5,-1.25191155E-08,0.866025388
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 22
-	sym = 25
-	sym = 28
-	srfN = srfAttach, 17,COL_MAGAZINE
-	attN = top, 20
-	attN = bottom, 21
-	mass = 28
-	shielded = False
-	temp = 307.16068683459514
-	tempExt = 307.1982095527718
-	tempExtUnexp = 307.19709389883684
-	staticPressureAtm = 0.98743249538825406
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-2
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 2126.9131598157583
-		maxAmount = 2800
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4291190352
-	uid = 329520311
-	mid = 2789492286
-	persistentId = 3661170544
-	launchID = 1
-	parent = 19
-	position = 2.7740793228149414,-29.405559539794922,4.8048477172851563
-	rotation = 8.8817842E-16,-0.707106829,1.33226763E-15,0.707106709
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 23
-	sym = 26
-	sym = 29
-	srfN = , -1
-	attN = bottom, 19
-	mass = 0.800000012
-	shielded = False
-	temp = 307.16068460629037
-	tempExt = 307.16528837028716
-	tempExtUnexp = 307.16511989593778
-	staticPressureAtm = 0.98716037466941919
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4291188100
-	uid = 3876848939
-	mid = 2789492286
-	persistentId = 2797839439
-	launchID = 1
-	parent = 19
-	position = 2.7740793228149414,-37.623558044433594,4.8048477172851563
-	rotation = 8.8817842E-16,-0.707106829,1.33226763E-15,0.707106709
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 2
-	resPri = 0
-	dstg = 4
-	sqor = 2
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 24
-	sym = 27
-	sym = 30
-	srfN = , -1
-	attN = top, 19
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 307.1606784907018
-	tempExt = 307.17177087298938
-	tempExtUnexp = 307.17138937712195
-	staticPressureAtm = 0.98836616913301101
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-2
-	cid = 4291191964
-	uid = 2930649068
-	mid = 2789492286
-	persistentId = 3919022025
-	launchID = 1
-	parent = 17
-	position = 4.8048477172851563,-31.26055908203125,-2.7740788459777832
-	rotation = -3.74144449E-09,0.258819073,-1.39632599E-08,0.965925872
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 19
-	sym = 25
-	sym = 28
-	srfN = srfAttach, 17,COL_MAGAZINE
-	attN = top, 23
-	attN = bottom, 24
-	mass = 28
-	shielded = False
-	temp = 307.16068683459281
-	tempExt = 307.19820954185104
-	tempExtUnexp = 307.19709388829659
-	staticPressureAtm = 0.98743226949944485
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-2
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 2126.9131598157583
-		maxAmount = 2800
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4291526514
-	uid = 638601256
-	mid = 2789492286
-	persistentId = 701782175
-	launchID = 1
-	parent = 22
-	position = 4.8048477172851563,-29.405559539794922,-2.7740788459777832
-	rotation = 0,0,2.22044605E-16,1.00000012
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 20
-	sym = 26
-	sym = 29
-	srfN = , -1
-	attN = bottom, 22
-	mass = 0.800000012
-	shielded = False
-	temp = 307.16068460629026
-	tempExt = 307.16528837017307
-	tempExtUnexp = 307.16511989583148
-	staticPressureAtm = 0.98716014878060998
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4291190022
-	uid = 2680250257
-	mid = 2789492286
-	persistentId = 2478060458
-	launchID = 1
-	parent = 22
-	position = 4.8048477172851563,-37.623558044433594,-2.7740788459777832
-	rotation = 0,0,2.22044605E-16,1.00000012
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 2
-	resPri = 0
-	dstg = 4
-	sqor = 2
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 21
-	sym = 27
-	sym = 30
-	srfN = , -1
-	attN = top, 22
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 307.16067849069191
-	tempExt = 307.17176996392817
-	tempExtUnexp = 307.17138849894985
-	staticPressureAtm = 0.98836594324420179
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-2
-	cid = 4291191892
-	uid = 200138702
-	mid = 2789492286
-	persistentId = 1271383753
-	launchID = 1
-	parent = 17
-	position = -2.7740797996520996,-31.26055908203125,-4.804847240447998
-	rotation = -1.25191155E-08,0.866025388,-7.22791427E-09,0.49999997
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 19
-	sym = 22
-	sym = 28
-	srfN = srfAttach, 17,COL_MAGAZINE
-	attN = top, 26
-	attN = bottom, 27
-	mass = 28
-	shielded = False
-	temp = 307.16068683459469
-	tempExt = 307.19820954929014
-	tempExtUnexp = 307.19709389558415
-	staticPressureAtm = 0.98743309775841193
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-2
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 2126.9131598157583
-		maxAmount = 2800
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4291190516
-	uid = 90976279
-	mid = 2789492286
-	persistentId = 3588240301
-	launchID = 1
-	parent = 25
-	position = -2.7740797996520996,-29.405559539794922,-4.804847240447998
-	rotation = 1.77635684E-15,0.707106829,-2.22044605E-15,0.707106769
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 20
-	sym = 23
-	sym = 29
-	srfN = , -1
-	attN = bottom, 25
-	mass = 0.800000012
-	shielded = False
-	temp = 307.16068460628992
-	tempExt = 307.1652883703166
-	tempExtUnexp = 307.1651198959662
-	staticPressureAtm = 0.98716097703957717
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4291188604
-	uid = 1383458933
-	mid = 2789492286
-	persistentId = 2751543345
-	launchID = 1
-	parent = 25
-	position = -2.7740797996520996,-37.623558044433594,-4.804847240447998
-	rotation = 1.77635684E-15,0.707106829,-2.22044605E-15,0.707106769
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 2
-	resPri = 0
-	dstg = 4
-	sqor = 2
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 21
-	sym = 24
-	sym = 30
-	srfN = , -1
-	attN = top, 25
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 307.16067849068605
-	tempExt = 307.17176942414017
-	tempExtUnexp = 307.17138797750334
-	staticPressureAtm = 0.98836677150316887
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-2
-	cid = 4291191820
-	uid = 1481484914
-	mid = 2789492286
-	persistentId = 2787908342
-	launchID = 1
-	parent = 17
-	position = -4.804847240447998,-31.26055908203125,2.7740795612335205
-	rotation = -1.39632599E-08,0.965925872,3.74144449E-09,-0.258819073
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 19
-	sym = 22
-	sym = 25
-	srfN = srfAttach, 17,COL_MAGAZINE
-	attN = top, 29
-	attN = bottom, 30
-	mass = 28
-	shielded = False
-	temp = 307.16068683459309
-	tempExt = 307.19820954273052
-	tempExtUnexp = 307.19709388917983
-	staticPressureAtm = 0.98743332364722114
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-2
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 2126.9131598157583
-		maxAmount = 2800
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4291190434
-	uid = 479624724
-	mid = 2789492286
-	persistentId = 3305723928
-	launchID = 1
-	parent = 28
-	position = -4.804847240447998,-29.405559539794922,2.7740795612335205
-	rotation = 0,1.00000012,0,0
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 20
-	sym = 23
-	sym = 26
-	srfN = , -1
-	attN = bottom, 28
-	mass = 0.800000012
-	shielded = False
-	temp = 307.16068460628975
-	tempExt = 307.16528837022179
-	tempExtUnexp = 307.1651198958773
-	staticPressureAtm = 0.98716120292838638
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4291188352
-	uid = 997987579
-	mid = 2789492286
-	persistentId = 910839728
-	launchID = 1
-	parent = 28
-	position = -4.804847240447998,-37.623558044433594,2.7740795612335205
-	rotation = 0,1.00000012,0,0
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 2
-	resPri = 0
-	dstg = 4
-	sqor = 2
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 21
-	sym = 24
-	sym = 27
-	srfN = , -1
-	attN = top, 28
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 307.16067849068872
-	tempExt = 307.1717696548958
-	tempExtUnexp = 307.17138820041731
-	staticPressureAtm = 0.98836699739197809
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
 	name = systemheat-coolant-tank-radial-1
 	cid = 4291794524
 	uid = 1328642062
@@ -5967,16 +2489,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 32
-	sym = 33
-	sym = 34
+	sym = 16
+	sym = 17
+	sym = 18
 	srfN = srfAttach, 10,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907236
-	tempExt = 307.20047140125115
-	tempExtUnexp = 307.19921357078533
-	staticPressureAtm = 0.98466129147679959
+	temp = 184.16642774229379
+	tempExt = 184.10804731117813
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6052,9 +2574,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6088,16 +2610,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 31
-	sym = 33
-	sym = 34
+	sym = 15
+	sym = 17
+	sym = 18
 	srfN = srfAttach, 10,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907236
-	tempExt = 307.20047140125115
-	tempExtUnexp = 307.19921357078533
-	staticPressureAtm = 0.98466159266187847
+	temp = 184.1641265903684
+	tempExt = 184.08190750517477
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6173,9 +2695,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6209,16 +2731,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 31
-	sym = 32
-	sym = 34
+	sym = 15
+	sym = 16
+	sym = 18
 	srfN = srfAttach, 10,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907236
-	tempExt = 307.20047140125115
-	tempExtUnexp = 307.19921357078533
-	staticPressureAtm = 0.98466129147679959
+	temp = 184.16195773240057
+	tempExt = 184.06282664528732
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6294,9 +2816,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6330,16 +2852,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 31
-	sym = 32
-	sym = 33
+	sym = 15
+	sym = 16
+	sym = 17
 	srfN = srfAttach, 10,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907236
-	tempExt = 307.20047140125115
-	tempExtUnexp = 307.19921357078533
-	staticPressureAtm = 0.98466106558799038
+	temp = 184.16351542515986
+	tempExt = 184.07685836495844
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6415,9 +2937,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6451,16 +2973,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 36
-	sym = 37
-	sym = 38
+	sym = 20
+	sym = 21
+	sym = 22
 	srfN = srfAttach, 9,COLLIDER
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16070555886063
-	tempExt = 307.20045864915608
-	tempExtUnexp = 307.1992020780915
-	staticPressureAtm = 0.98446921069269677
+	temp = 184.17738473271535
+	tempExt = 184.06988867318685
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6631,16 +3153,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 35
-	sym = 37
-	sym = 38
+	sym = 19
+	sym = 21
+	sym = 22
 	srfN = srfAttach, 9,COLLIDER
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16070555886063
-	tempExt = 307.20045864915608
-	tempExtUnexp = 307.1992020780915
-	staticPressureAtm = 0.98446921069269677
+	temp = 184.17676670976502
+	tempExt = 184.06968591219285
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6811,16 +3333,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 35
-	sym = 36
-	sym = 38
+	sym = 19
+	sym = 20
+	sym = 22
 	srfN = srfAttach, 9,COLLIDER
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16070555886063
-	tempExt = 307.20045864915608
-	tempExtUnexp = 307.1992020780915
-	staticPressureAtm = 0.98446890950761778
+	temp = 184.17714655945466
+	tempExt = 184.0698104956233
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6991,16 +3513,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 35
-	sym = 36
-	sym = 37
+	sym = 19
+	sym = 20
+	sym = 21
 	srfN = srfAttach, 9,COLLIDER
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16070555886063
-	tempExt = 307.20045864915608
-	tempExtUnexp = 307.1992020780915
-	staticPressureAtm = 0.98446890950761778
+	temp = 184.17679273478015
+	tempExt = 184.06969439999048
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7171,16 +3693,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 40
-	sym = 41
-	sym = 42
+	sym = 24
+	sym = 25
+	sym = 26
 	srfN = srfAttach, 8,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907231
-	tempExt = 307.20047140123404
-	tempExtUnexp = 307.19921357077186
-	staticPressureAtm = 0.9843284066682858
+	temp = 184.16611557867071
+	tempExt = 184.09600239471203
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7256,9 +3778,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7292,16 +3814,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 39
-	sym = 41
-	sym = 42
+	sym = 23
+	sym = 25
+	sym = 26
 	srfN = srfAttach, 8,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907231
-	tempExt = 307.20047140123404
-	tempExtUnexp = 307.19921357077186
-	staticPressureAtm = 0.98432863255709502
+	temp = 184.16497851026921
+	tempExt = 184.08369557447119
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7377,9 +3899,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7413,16 +3935,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 39
-	sym = 40
-	sym = 42
+	sym = 23
+	sym = 24
+	sym = 26
 	srfN = srfAttach, 8,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907231
-	tempExt = 307.20047140123404
-	tempExtUnexp = 307.19921357077186
-	staticPressureAtm = 0.9843284066682858
+	temp = 184.16299703852434
+	tempExt = 184.06469435365503
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7498,9 +4020,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7534,16 +4056,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 39
-	sym = 40
-	sym = 41
+	sym = 23
+	sym = 24
+	sym = 25
 	srfN = srfAttach, 8,COLLIDER
 	mass = 0.140000001
 	shielded = False
-	temp = 307.16096243907231
-	tempExt = 307.20047140123404
-	tempExtUnexp = 307.19921357077186
-	staticPressureAtm = 0.98432810548320682
+	temp = 184.16464928717309
+	tempExt = 184.08021382787177
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7619,9 +4141,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7655,16 +4177,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 45
-	sym = 47
-	sym = 49
+	sym = 29
+	sym = 31
+	sym = 33
 	srfN = srfAttach, 5,COLLIDER
 	mass = 1.35000002
 	shielded = False
-	temp = 307.16069367597146
-	tempExt = 307.1629588531307
-	tempExtUnexp = 307.16289375299471
-	staticPressureAtm = 0.98388220097381562
+	temp = 180.57318080289778
+	tempExt = 180.51256063237682
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7770,11 +4292,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -938.934509
+		totalSystemFlux = -9.04423428
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7842,7 +4364,7 @@ PART
 	mid = 2789492286
 	persistentId = 603908669
 	launchID = 1
-	parent = 43
+	parent = 27
 	position = 0.012785255908966064,-7.0196990966796875,-9.5891008377075195
 	rotation = 0.499999881,0.499999911,-0.50000006,0.500000238
 	mirror = 1,1,1
@@ -7855,16 +4377,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 46
-	sym = 48
-	sym = 50
-	srfN = srfAttach, 43,COLLIDER2x
+	sym = 30
+	sym = 32
+	sym = 34
+	srfN = srfAttach, 27,COLLIDER2x
 	mass = 0.228469998
 	shielded = False
-	temp = 307.16069451975068
-	tempExt = 307.16310586363613
-	tempExtUnexp = 307.16303631832892
-	staticPressureAtm = 0.98388220097381562
+	temp = 182.32083080197188
+	tempExt = 182.25986400599487
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7970,11 +4492,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -156.857285
+		totalSystemFlux = -1.51091909
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8055,16 +4577,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 43
-	sym = 47
-	sym = 49
+	sym = 27
+	sym = 31
+	sym = 33
 	srfN = srfAttach, 5,COLLIDER
 	mass = 1.35000002
 	shielded = False
-	temp = 307.16069367597754
-	tempExt = 307.1629588531365
-	tempExtUnexp = 307.16289375300005
-	staticPressureAtm = 0.98388235156635517
+	temp = 173.4146601799396
+	tempExt = 173.42840441556433
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8170,11 +4692,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -938.934509
+		totalSystemFlux = -9.04423428
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8242,7 +4764,7 @@ PART
 	mid = 2789492286
 	persistentId = 995178793
 	launchID = 1
-	parent = 45
+	parent = 29
 	position = -9.5891094207763672,-7.0196990966796875,-0.012788057327270508
 	rotation = -1.26440582E-07,0.707106948,-0.707106709,2.31807618E-07
 	mirror = 1,1,1
@@ -8255,16 +4777,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 44
-	sym = 48
-	sym = 50
-	srfN = srfAttach, 45,COLLIDER2x
+	sym = 28
+	sym = 32
+	sym = 34
+	srfN = srfAttach, 29,COLLIDER2x
 	mass = 0.228469998
 	shielded = False
-	temp = 307.16069448564849
-	tempExt = 307.16310074749902
-	tempExtUnexp = 307.16303134538407
-	staticPressureAtm = 0.98388317982532225
+	temp = 174.61690383491231
+	tempExt = 174.64647848196918
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8370,11 +4892,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -156.857285
+		totalSystemFlux = -1.51091909
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8455,16 +4977,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 43
-	sym = 45
-	sym = 49
+	sym = 27
+	sym = 29
+	sym = 33
 	srfN = srfAttach, 5,COLLIDER
 	mass = 1.35000002
 	shielded = False
-	temp = 307.16069367597146
-	tempExt = 307.16295885313059
-	tempExtUnexp = 307.16289375299459
-	staticPressureAtm = 0.98388220097381562
+	temp = 180.73787283302704
+	tempExt = 180.67542965696688
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8570,11 +5092,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -938.934509
+		totalSystemFlux = -9.04423428
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8642,7 +5164,7 @@ PART
 	mid = 2789492286
 	persistentId = 3772581394
 	launchID = 1
-	parent = 47
+	parent = 31
 	position = -0.012793004512786865,-7.0196990966796875,9.5890960693359375
 	rotation = -0.50000006,0.500000238,-0.499999851,-0.49999994
 	mirror = 1,1,1
@@ -8655,16 +5177,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 44
-	sym = 46
-	sym = 50
-	srfN = srfAttach, 47,COLLIDER2x
+	sym = 28
+	sym = 30
+	sym = 34
+	srfN = srfAttach, 31,COLLIDER2x
 	mass = 0.228469998
 	shielded = False
-	temp = 307.16069451972362
-	tempExt = 307.16310586032102
-	tempExtUnexp = 307.16303631510681
-	staticPressureAtm = 0.98388220097381562
+	temp = 179.1920916158974
+	tempExt = 179.13128255316261
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8770,11 +5292,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -156.857285
+		totalSystemFlux = -1.51091909
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8855,16 +5377,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 43
-	sym = 45
-	sym = 47
+	sym = 27
+	sym = 29
+	sym = 31
 	srfN = srfAttach, 5,COLLIDER
 	mass = 1.35000002
 	shielded = False
-	temp = 307.16069367597146
-	tempExt = 307.16295885313093
-	tempExtUnexp = 307.16289375299493
-	staticPressureAtm = 0.98388197508500641
+	temp = 172.29924275603989
+	tempExt = 172.32695841090188
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8970,11 +5492,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -938.934509
+		totalSystemFlux = -9.04423428
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9042,7 +5564,7 @@ PART
 	mid = 2789492286
 	persistentId = 82274431
 	launchID = 1
-	parent = 49
+	parent = 33
 	position = 9.5890960693359375,-7.0196990966796875,0.012787818908691406
 	rotation = -0.707106709,2.31807618E-07,1.26440582E-07,-0.707106948
 	mirror = 1,1,1
@@ -9055,16 +5577,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 44
-	sym = 46
-	sym = 48
-	srfN = srfAttach, 49,COLLIDER2x
+	sym = 28
+	sym = 30
+	sym = 32
+	srfN = srfAttach, 33,COLLIDER2x
 	mass = 0.228469998
 	shielded = False
-	temp = 307.16069448567305
-	tempExt = 307.16310075095555
-	tempExtUnexp = 307.1630313487438
-	staticPressureAtm = 0.98388114682603933
+	temp = 172.94039581624284
+	tempExt = 172.94959726316378
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9170,11 +5692,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -156.857285
+		totalSystemFlux = -1.51091909
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9255,16 +5777,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 53
-	sym = 55
-	sym = 57
+	sym = 37
+	sym = 39
+	sym = 41
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.675000012
 	shielded = False
-	temp = 307.16069324594787
-	tempExt = 307.16293457294012
-	tempExtUnexp = 307.16287006425057
-	staticPressureAtm = 0.98333434531519859
+	temp = 175.75419535756728
+	tempExt = 175.70034769089429
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9370,11 +5892,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -469.467255
+		totalSystemFlux = -4.52211714
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9442,7 +5964,7 @@ PART
 	mid = 2789492286
 	persistentId = 1004440045
 	launchID = 1
-	parent = 51
+	parent = 35
 	position = 0.02044379711151123,-3.2730178833007813,-5.7331686019897461
 	rotation = 0.500000119,0.499999881,-0.49999994,0.500000179
 	mirror = 1,1,1
@@ -9455,16 +5977,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 54
-	sym = 56
-	sym = 58
-	srfN = srfAttach, 51,COLLIDERA
+	sym = 38
+	sym = 40
+	sym = 42
+	srfN = srfAttach, 35,COLLIDERA
 	mass = 0.340999991
 	shielded = False
-	temp = 307.16069344496884
-	tempExt = 307.16296228764605
-	tempExtUnexp = 307.16289713844202
-	staticPressureAtm = 0.98333434531519859
+	temp = 176.99320282087675
+	tempExt = 176.93776847075765
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9570,11 +6092,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -237.495193
+		totalSystemFlux = -2.28765917
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9655,16 +6177,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 51
-	sym = 55
-	sym = 57
+	sym = 35
+	sym = 39
+	sym = 41
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.675000012
 	shielded = False
-	temp = 307.16069324594787
-	tempExt = 307.16293457294211
-	tempExtUnexp = 307.1628700642525
-	staticPressureAtm = 0.98333449590773803
+	temp = 172.057587740446
+	tempExt = 172.03677807574579
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9770,11 +6292,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -469.467255
+		totalSystemFlux = -4.52211714
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9842,7 +6364,7 @@ PART
 	mid = 2789492286
 	persistentId = 2822250407
 	launchID = 1
-	parent = 53
+	parent = 37
 	position = -5.7331728935241699,-3.2730178833007813,-0.02044517919421196
 	rotation = 8.42936885E-08,0.707106829,-0.707106829,1.68587391E-07
 	mirror = 1,1,1
@@ -9855,16 +6377,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 52
-	sym = 56
-	sym = 58
-	srfN = srfAttach, 53,COLLIDERA
+	sym = 36
+	sym = 40
+	sym = 42
+	srfN = srfAttach, 37,COLLIDERA
 	mass = 0.340999991
 	shielded = False
-	temp = 307.16069345482578
-	tempExt = 307.16296377831895
-	tempExtUnexp = 307.16289858764094
-	staticPressureAtm = 0.98333494768535645
+	temp = 173.42403637215239
+	tempExt = 173.41976231170625
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9970,11 +6492,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -237.495193
+		totalSystemFlux = -2.28765917
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10055,16 +6577,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 51
-	sym = 53
-	sym = 57
+	sym = 35
+	sym = 37
+	sym = 41
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.675000012
 	shielded = False
-	temp = 307.16069324594986
-	tempExt = 307.16293457294705
-	tempExtUnexp = 307.16287006425722
-	staticPressureAtm = 0.98333434531519859
+	temp = 172.18601288912205
+	tempExt = 172.13768450602953
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -10170,11 +6692,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -469.467255
+		totalSystemFlux = -4.52211714
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10242,7 +6764,7 @@ PART
 	mid = 2789492286
 	persistentId = 321090474
 	launchID = 1
-	parent = 55
+	parent = 39
 	position = -0.020447254180908203,-3.2730216979980469,5.7331695556640625
 	rotation = -0.49999997,0.500000179,-0.5,-0.49999997
 	mirror = 1,1,1
@@ -10255,16 +6777,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 52
-	sym = 54
-	sym = 58
-	srfN = srfAttach, 55,COLLIDERA
+	sym = 36
+	sym = 38
+	sym = 42
+	srfN = srfAttach, 39,COLLIDERA
 	mass = 0.340999991
 	shielded = False
-	temp = 307.16069345065608
-	tempExt = 307.16296314711178
-	tempExtUnexp = 307.1628979739952
-	staticPressureAtm = 0.98333434531519859
+	temp = 177.85971632593618
+	tempExt = 177.80065398899114
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -10370,11 +6892,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -237.495193
+		totalSystemFlux = -2.28765917
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10455,16 +6977,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 51
-	sym = 53
-	sym = 55
+	sym = 35
+	sym = 37
+	sym = 39
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.675000012
 	shielded = False
-	temp = 307.16069324594378
-	tempExt = 307.16293457292949
-	tempExtUnexp = 307.16287006424034
-	staticPressureAtm = 0.98333411942638937
+	temp = 172.09757115793909
+	tempExt = 172.07253629104252
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -10570,11 +7092,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -469.467255
+		totalSystemFlux = -4.52211714
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10642,7 +7164,7 @@ PART
 	mid = 2789492286
 	persistentId = 744539374
 	launchID = 1
-	parent = 57
+	parent = 41
 	position = 5.7331662178039551,-3.2730178833007813,0.020444929599761963
 	rotation = -0.707106829,1.68587391E-07,-8.42936885E-08,-0.707106829
 	mirror = 1,1,1
@@ -10655,16 +7177,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 52
-	sym = 54
-	sym = 56
-	srfN = srfAttach, 57,COLLIDERA
+	sym = 36
+	sym = 38
+	sym = 40
+	srfN = srfAttach, 41,COLLIDERA
 	mass = 0.340999991
 	shielded = False
-	temp = 307.16069343628016
-	tempExt = 307.16296097361339
-	tempExtUnexp = 307.16289586096912
-	staticPressureAtm = 0.98333366764877095
+	temp = 172.32607306089764
+	tempExt = 172.31985983740677
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -10770,11 +7292,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -237.495193
+		totalSystemFlux = -2.28765917
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10855,16 +7377,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 60
-	sym = 61
-	sym = 62
+	sym = 44
+	sym = 45
+	sym = 46
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16068610624154
-	tempExt = 307.18499736118991
-	tempExtUnexp = 307.18426159106207
-	staticPressureAtm = 0.98321018176639985
+	temp = 184.02681412439208
+	tempExt = 183.85307721061028
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11035,16 +7557,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 59
-	sym = 61
-	sym = 62
+	sym = 43
+	sym = 45
+	sym = 46
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16068610624154
-	tempExt = 307.18499736118991
-	tempExtUnexp = 307.18426159106207
-	staticPressureAtm = 0.98321018176639985
+	temp = 184.02679563106781
+	tempExt = 183.85306275280416
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11215,16 +7737,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 59
-	sym = 60
-	sym = 62
+	sym = 43
+	sym = 44
+	sym = 46
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16068610624154
-	tempExt = 307.18499736118991
-	tempExtUnexp = 307.18426159106207
-	staticPressureAtm = 0.98320988058132086
+	temp = 184.02681237802423
+	tempExt = 183.85307685591272
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11395,16 +7917,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 59
-	sym = 60
-	sym = 61
+	sym = 43
+	sym = 44
+	sym = 45
 	srfN = srfAttach, 1,COLLIDERA
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16068610624154
-	tempExt = 307.18499736118991
-	tempExtUnexp = 307.18426159106207
-	staticPressureAtm = 0.98320988058132086
+	temp = 184.0268090234764
+	tempExt = 183.85307232767076
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11576,14 +8098,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 64
+	attN = top, 48
 	attN = bottom, 0
 	mass = 0.200000003
 	shielded = False
-	temp = 307.1607984346486
-	tempExt = 307.21014107408809
-	tempExtUnexp = 307.20908486756878
-	staticPressureAtm = 0.98270276020463232
+	temp = 183.69424884538844
+	tempExt = 183.62524873039911
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11658,7 +8180,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -11734,7 +8256,7 @@ PART
 	mid = 2789492286
 	persistentId = 463054092
 	launchID = 1
-	parent = 63
+	parent = 47
 	position = 0,1.5480003356933594,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -11748,14 +8270,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 65
-	attN = bottom, 63
+	attN = top, 49
+	attN = bottom, 47
 	mass = 0.200000003
 	shielded = False
-	temp = 307.16076250751212
-	tempExt = 307.20095316194477
-	tempExtUnexp = 307.19968672338018
-	staticPressureAtm = 0.982629722822986
+	temp = 183.54918131608687
+	tempExt = 183.44322485955306
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11830,7 +8352,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -11906,7 +8428,7 @@ PART
 	mid = 2789492286
 	persistentId = 3666595144
 	launchID = 1
-	parent = 64
+	parent = 48
 	position = 0,2.0480003356933594,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -11920,14 +8442,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 66
-	attN = bottom, 64
+	attN = top, 50
+	attN = bottom, 48
 	mass = 0.200000003
 	shielded = False
-	temp = 307.16076153792312
-	tempExt = 307.20050273205851
-	tempExtUnexp = 307.19924363141968
-	staticPressureAtm = 0.98255668544133967
+	temp = 183.44124073381482
+	tempExt = 183.30166278978584
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12002,7 +8524,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -12078,7 +8600,7 @@ PART
 	mid = 2789492286
 	persistentId = 1505741036
 	launchID = 1
-	parent = 65
+	parent = 49
 	position = 0,2.5480003356933594,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12092,14 +8614,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 67
-	attN = bottom, 65
+	attN = top, 51
+	attN = bottom, 49
 	mass = 0.200000003
 	shielded = False
-	temp = 307.1607613986194
-	tempExt = 307.20045144908568
-	tempExtUnexp = 307.19919551260199
-	staticPressureAtm = 0.98248364805969335
+	temp = 183.38332013227435
+	tempExt = 183.18116844588627
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12174,7 +8696,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -12250,7 +8772,7 @@ PART
 	mid = 2789492286
 	persistentId = 319852702
 	launchID = 1
-	parent = 66
+	parent = 50
 	position = 0,3.0480003356933594,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12264,14 +8786,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 68
-	attN = bottom, 66
+	attN = top, 52
+	attN = bottom, 50
 	mass = 0.200000003
 	shielded = False
-	temp = 307.16076090855165
-	tempExt = 307.20023574094296
-	tempExtUnexp = 307.19899203815999
-	staticPressureAtm = 0.98241061067804702
+	temp = 183.09906659950329
+	tempExt = 183.01402141565293
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12346,7 +8868,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -12422,7 +8944,7 @@ PART
 	mid = 2789492286
 	persistentId = 2454767352
 	launchID = 1
-	parent = 67
+	parent = 51
 	position = 0,5.0559005737304688,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12436,14 +8958,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 69
-	attN = bottom, 67
+	attN = top, 53
+	attN = bottom, 51
 	mass = 13.3330002
 	shielded = False
-	temp = 307.16067846643847
-	tempExt = 307.18959326239627
-	tempExtUnexp = 307.18859931655368
-	staticPressureAtm = 0.98211733170741577
+	temp = 184.26349530692755
+	tempExt = 182.62829683119372
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12519,9 +9041,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 287.203491
-		nominalLoopTemperature = 287.203491
-		currentLoopFlux = -7211.01709
+		currentLoopTemperature = 2.76647162
+		nominalLoopTemperature = 1600
+		currentLoopFlux = -69.4597168
 		stagingEnabled = True
 		EVENTS
 		{
@@ -12626,7 +9148,7 @@ PART
 	mid = 2789492286
 	persistentId = 2956078971
 	launchID = 1
-	parent = 68
+	parent = 52
 	position = 0,6.886444091796875,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12640,14 +9162,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 70
-	attN = bottom, 68
+	attN = top, 54
+	attN = bottom, 52
 	mass = 0.600000024
 	shielded = False
-	temp = 307.16072132663015
-	tempExt = 307.20031539396564
-	tempExtUnexp = 307.19906715966164
-	staticPressureAtm = 0.98185002994984416
+	temp = 183.24892044451855
+	tempExt = 183.08779396849991
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12717,7 +9239,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9945.28822805677
+		amount = 4395.374599873875
 		maxAmount = 12000
 		flowState = True
 		isTweakable = True
@@ -12734,7 +9256,7 @@ PART
 	mid = 2789492286
 	persistentId = 3384897669
 	launchID = 1
-	parent = 69
+	parent = 53
 	position = 0,7.6381988525390625,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12748,14 +9270,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 71
-	attN = bottom, 69
+	attN = top, 55
+	attN = bottom, 53
 	mass = 0.600000024
 	shielded = False
-	temp = 307.16072146210558
-	tempExt = 307.20045206717538
-	tempExtUnexp = 307.19919606343456
-	staticPressureAtm = 0.98174024798856552
+	temp = 183.21867008092346
+	tempExt = 183.09538336820927
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12825,7 +9347,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9945.28822805677
+		amount = 4395.374599873875
 		maxAmount = 12000
 		flowState = True
 		isTweakable = True
@@ -12842,7 +9364,7 @@ PART
 	mid = 2789492286
 	persistentId = 754070032
 	launchID = 1
-	parent = 70
+	parent = 54
 	position = 0,8.38995361328125,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12856,14 +9378,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 72
-	attN = bottom, 70
+	attN = top, 56
+	attN = bottom, 54
 	mass = 0.600000024
 	shielded = False
-	temp = 307.16072147541746
-	tempExt = 307.20047264458145
-	tempExtUnexp = 307.19921437465649
-	staticPressureAtm = 0.98163046602728687
+	temp = 183.19795292748188
+	tempExt = 183.09556169493518
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12933,7 +9455,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9945.28822805677
+		amount = 4395.374599873875
 		maxAmount = 12000
 		flowState = True
 		isTweakable = True
@@ -12950,7 +9472,7 @@ PART
 	mid = 2789492286
 	persistentId = 1087624983
 	launchID = 1
-	parent = 71
+	parent = 55
 	position = 0,9.1417083740234375,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -12964,14 +9486,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 73
-	attN = bottom, 71
+	attN = top, 57
+	attN = bottom, 55
 	mass = 0.600000024
 	shielded = False
-	temp = 307.16072169188033
-	tempExt = 307.20078548950192
-	tempExtUnexp = 307.19950013498232
-	staticPressureAtm = 0.98152075936227789
+	temp = 183.18384846974737
+	tempExt = 183.07071616777196
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13041,7 +9563,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9945.28822805677
+		amount = 4395.374599873875
 		maxAmount = 12000
 		flowState = True
 		isTweakable = True
@@ -13058,7 +9580,7 @@ PART
 	mid = 2789492286
 	persistentId = 2416168248
 	launchID = 1
-	parent = 72
+	parent = 56
 	position = 0,9.893463134765625,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -13072,14 +9594,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 74
-	attN = bottom, 72
+	attN = top, 58
+	attN = bottom, 56
 	mass = 0.600000024
 	shielded = False
-	temp = 307.16072514933688
-	tempExt = 307.20620352582574
-	tempExtUnexp = 307.20463852715341
-	staticPressureAtm = 0.98141105269726892
+	temp = 183.17390441317755
+	tempExt = 183.04508302405213
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13149,7 +9671,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9945.28822805677
+		amount = 4395.374599873875
 		maxAmount = 12000
 		flowState = True
 		isTweakable = True
@@ -13166,7 +9688,7 @@ PART
 	mid = 2789492286
 	persistentId = 779514429
 	launchID = 1
-	parent = 73
+	parent = 57
 	position = 0,14.008460998535156,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -13180,16 +9702,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 75
+	attN = top01, 59
 	attN = top02, -1
-	attN = bottom01, 73
+	attN = bottom01, 57
 	attN = bottom02, -1
 	mass = 1.08765006
 	shielded = False
-	temp = 307.160690806655
-	tempExt = 307.24463544869218
-	tempExtUnexp = 307.24241353852909
-	staticPressureAtm = 0.98081056494610475
+	temp = 183.1663826149049
+	tempExt = 183.0091270791649
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13277,7 +9799,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13326,7 +9848,7 @@ PART
 	RESOURCE
 	{
 		name = LqdHydrogen
-		amount = 45000
+		amount = 44962.3765577848
 		maxAmount = 45000
 		flowState = True
 		isTweakable = True
@@ -13343,7 +9865,7 @@ PART
 	mid = 2789492286
 	persistentId = 1590533051
 	launchID = 1
-	parent = 74
+	parent = 58
 	position = 0,21.508041381835938,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -13357,16 +9879,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 76
+	attN = top01, 60
 	attN = top02, -1
-	attN = bottom01, 74
+	attN = bottom01, 58
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16145312689565
-	tempExt = 307.24136476115513
-	tempExtUnexp = 307.2392850522603
-	staticPressureAtm = 0.97971696192442326
+	temp = 182.19571539480063
+	tempExt = 182.14123496537374
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13456,7 +9978,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13511,7 +10033,7 @@ PART
 	mid = 2789492286
 	persistentId = 1072798400
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = 0,29.007621765136719,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -13525,16 +10047,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 77
+	attN = top01, 61
 	attN = top02, -1
-	attN = bottom01, 75
+	attN = bottom01, 59
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150435618181
-	tempExt = 307.24111097131828
-	tempExtUnexp = 307.23905011966929
-	staticPressureAtm = 0.9786243377542484
+	temp = 181.27989652940261
+	tempExt = 181.19762643565153
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13624,7 +10146,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13679,7 +10201,7 @@ PART
 	mid = 2789492286
 	persistentId = 4279765666
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = 0,36.5072021484375,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -13693,16 +10215,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 78
+	attN = top01, 62
 	attN = top02, -1
-	attN = bottom01, 76
+	attN = bottom01, 60
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150516516302
-	tempExt = 307.24110067512123
-	tempExtUnexp = 307.23904091494819
-	staticPressureAtm = 0.97753276773184983
+	temp = 180.43816802098593
+	tempExt = 180.35217433406325
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13792,7 +10314,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13847,7 +10369,7 @@ PART
 	mid = 2789492286
 	persistentId = 2563516852
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = 0,44.006782531738281,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -13861,16 +10383,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 79
+	attN = top01, 63
 	attN = top02, -1
-	attN = bottom01, 77
+	attN = bottom01, 61
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150514691691
-	tempExt = 307.24110011680818
-	tempExtUnexp = 307.23904041360879
-	staticPressureAtm = 0.97644210126468811
+	temp = 179.69048770080582
+	tempExt = 179.59411619736909
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13960,7 +10482,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14015,7 +10537,7 @@ PART
 	mid = 2789492286
 	persistentId = 1937545747
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = 0,51.506355285644531,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -14029,16 +10551,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 80
+	attN = top01, 64
 	attN = top02, -1
-	attN = bottom01, 78
+	attN = bottom01, 62
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150514762029
-	tempExt = 307.24110012560226
-	tempExtUnexp = 307.23904042223865
-	staticPressureAtm = 0.9753524889453028
+	temp = 178.95455118470187
+	tempExt = 178.83667549481956
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -14128,7 +10650,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14183,7 +10705,7 @@ PART
 	mid = 2789492286
 	persistentId = 2437135425
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = 0,59.005935668945313,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -14197,16 +10719,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 81
+	attN = top01, 65
 	attN = top02, -1
-	attN = bottom01, 79
+	attN = bottom01, 63
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150519963855
-	tempExt = 307.24110055287758
-	tempExtUnexp = 307.23904082958393
-	staticPressureAtm = 0.97426385547742411
+	temp = 178.18145657087223
+	tempExt = 178.04779712526175
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -14296,7 +10818,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14351,7 +10873,7 @@ PART
 	mid = 2789492286
 	persistentId = 753025462
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = 0,66.505523681640625,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -14365,16 +10887,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 82
+	attN = top01, 66
 	attN = top02, -1
-	attN = bottom01, 80
+	attN = bottom01, 64
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150506599553
-	tempExt = 307.24109946627021
-	tempExtUnexp = 307.2390397910134
-	staticPressureAtm = 0.97317620086105194
+	temp = 177.30433633670555
+	tempExt = 177.22276528846444
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -14464,7 +10986,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14519,7 +11041,7 @@ PART
 	mid = 2789492286
 	persistentId = 4059484995
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = 0,74.005096435546875,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -14533,16 +11055,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 83
+	attN = top01, 67
 	attN = top02, -1
-	attN = bottom01, 81
+	attN = bottom01, 65
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150522256453
-	tempExt = 307.24110245197721
-	tempExtUnexp = 307.23904251896874
-	staticPressureAtm = 0.9720895250961864
+	temp = 176.82346941209025
+	tempExt = 176.70582684853895
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -14632,7 +11154,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14687,7 +11209,7 @@ PART
 	mid = 2789492286
 	persistentId = 3725301983
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = 0,81.504676818847656,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -14701,16 +11223,16 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top01, 88
+	attN = top01, 72
 	attN = top02, -1
-	attN = bottom01, 82
+	attN = bottom01, 66
 	attN = bottom02, -1
 	mass = 0.449999988
 	shielded = False
-	temp = 307.16150758623371
-	tempExt = 307.24115170126464
-	tempExtUnexp = 307.2390884112026
-	staticPressureAtm = 0.97100382818282749
+	temp = 175.99732770677579
+	tempExt = 176.01507859500066
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -14800,7 +11322,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8789383.939003313
+		LastUpdateTime = 8790093.1529076677
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14855,7 +11377,7 @@ PART
 	mid = 2789492286
 	persistentId = 1282576435
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = -1.1920928955078125E-07,81.361366271972656,-1.1862602233886719
 	rotation = 8.70464355E-05,0.707106888,-0.707106769,8.70464501E-05
 	mirror = 1,1,1
@@ -14868,18 +11390,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 85
-	sym = 86
-	sym = 87
-	srfN = srfAttach, 83,COLLISION15
+	sym = 69
+	sym = 70
+	sym = 71
+	srfN = srfAttach, 67,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107169849761
-	tempExt = 307.20549844170529
-	tempExtUnexp = 307.20396770866216
-	staticPressureAtm = 0.97102453465700556
+	temp = 175.9611020880769
+	tempExt = 175.9369556196813
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15068,7 +11590,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15126,7 +11648,7 @@ PART
 	mid = 2789492286
 	persistentId = 1991542670
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = -1.1862602233886719,81.361366271972656,2.9802322387695313E-08
 	rotation = -0.499938428,0.500061631,-0.500061512,-0.499938518
 	mirror = 1,1,1
@@ -15139,18 +11661,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 84
-	sym = 86
-	sym = 87
-	srfN = srfAttach, 83,COLLISION15
+	sym = 68
+	sym = 70
+	sym = 71
+	srfN = srfAttach, 67,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107169849761
-	tempExt = 307.20549844170529
-	tempExtUnexp = 307.20396770866216
-	staticPressureAtm = 0.97102468524954499
+	temp = 175.9611020880769
+	tempExt = 175.9369556196813
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15335,7 +11857,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15393,7 +11915,7 @@ PART
 	mid = 2789492286
 	persistentId = 664238464
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = 1.7881393432617188E-07,81.361366271972656,1.1862602233886719
 	rotation = -0.707106769,8.70155418E-05,-8.70155272E-05,-0.707106888
 	mirror = 1,1,1
@@ -15406,18 +11928,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 84
-	sym = 85
-	sym = 87
-	srfN = srfAttach, 83,COLLISION15
+	sym = 68
+	sym = 69
+	sym = 71
+	srfN = srfAttach, 67,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107169849761
-	tempExt = 307.20549844170529
-	tempExtUnexp = 307.20396770866216
-	staticPressureAtm = 0.97102453465700556
+	temp = 175.9611020880769
+	tempExt = 175.9369556196813
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15602,7 +12124,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15660,7 +12182,7 @@ PART
 	mid = 2789492286
 	persistentId = 1396811713
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = 1.1862601041793823,81.361366271972656,-1.7881393432617188E-07
 	rotation = -0.500061512,-0.499938518,0.499938428,-0.500061631
 	mirror = 1,1,1
@@ -15673,18 +12195,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 84
-	sym = 85
-	sym = 86
-	srfN = srfAttach, 83,COLLISION15
+	sym = 68
+	sym = 69
+	sym = 70
+	srfN = srfAttach, 67,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107169849761
-	tempExt = 307.20549844170529
-	tempExtUnexp = 307.20396770866216
-	staticPressureAtm = 0.97102445936073578
+	temp = 175.9611020880769
+	tempExt = 175.9369556196813
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15869,7 +12391,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15927,7 +12449,7 @@ PART
 	mid = 2789492286
 	persistentId = 2179401233
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = 0,85.601844787597656,0
 	rotation = -1,0,0,0
 	mirror = 1,1,1
@@ -15941,14 +12463,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top, 83
-	attN = bottom, 89
+	attN = top, 67
+	attN = bottom, 73
 	mass = 0.0799999982
 	shielded = False
-	temp = 307.16161816310671
-	tempExt = 307.24369599862035
-	tempExtUnexp = 307.24154452650617
-	staticPressureAtm = 0.97041109594744634
+	temp = 175.56382540796466
+	tempExt = 175.47182082900363
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16060,7 +12582,7 @@ PART
 	mid = 2789492286
 	persistentId = 611703423
 	launchID = 1
-	parent = 88
+	parent = 72
 	position = 0,86.722969055175781,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -16074,14 +12596,14 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 90
-	attN = bottom, 88
+	attN = top, 74
+	attN = bottom, 72
 	mass = 0.100000001
 	shielded = False
-	temp = 307.16133281485082
-	tempExt = 307.19895737290614
-	tempExtUnexp = 307.1977967226137
-	staticPressureAtm = 0.97024898307869933
+	temp = 175.09265447345106
+	tempExt = 174.98437336507777
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16224,7 +12746,7 @@ PART
 	mid = 2789492286
 	persistentId = 4283875167
 	launchID = 1
-	parent = 89
+	parent = 73
 	position = 0,87.478279113769531,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -16238,13 +12760,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = bottom, 89
+	attN = bottom, 73
 	mass = 0.100000001
 	shielded = False
-	temp = 307.16068386298986
-	tempExt = 307.16615736849349
-	tempExtUnexp = 307.16590412515785
-	staticPressureAtm = 0.97013972819130889
+	temp = 174.78080594194054
+	tempExt = 174.88932982808842
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16400,8 +12922,8 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
+		animSwitch = False
+		animTime = 1
 		animSpeed = -33.3333359
 		deployPercent = 100
 		animationIsDisabled = False
@@ -16458,7 +12980,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -16514,7 +13036,7 @@ PART
 	mid = 2789492286
 	persistentId = 3171055237
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = 1.3113021850585938E-06,79.447425842285156,-1.1915271282196045
 	rotation = -5.96342602E-08,0.707193851,5.96195804E-08,-0.707019806
 	mirror = 1,1,1
@@ -16527,16 +13049,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 92
-	sym = 93
-	sym = 94
-	srfN = srfAttach, 83,COLLISION15
+	sym = 76
+	sym = 77
+	sym = 78
+	srfN = srfAttach, 67,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071270466017
-	tempExt = 307.20724874179763
-	tempExtUnexp = 307.20563116561624
-	staticPressureAtm = 0.97130154963337334
+	temp = 178.00966658639106
+	tempExt = 176.86989025963234
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16694,7 +13216,7 @@ PART
 	mid = 2789492286
 	persistentId = 3743177404
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = -1.1915268898010254,79.447425842285156,-1.4007091522216797E-06
 	rotation = -1.0380195E-11,0.000123068792,8.4325201E-08,-1
 	mirror = 1,1,1
@@ -16707,16 +13229,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 91
-	sym = 93
-	sym = 94
-	srfN = srfAttach, 83,COLLISION15
+	sym = 75
+	sym = 77
+	sym = 78
+	srfN = srfAttach, 67,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071270466017
-	tempExt = 307.20724874179763
-	tempExtUnexp = 307.20563116561624
-	staticPressureAtm = 0.97130170022591289
+	temp = 177.82821525343067
+	tempExt = 176.80887863703308
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16874,7 +13396,7 @@ PART
 	mid = 2789492286
 	persistentId = 3329168222
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = -1.2516975402832031E-06,79.447425842285156,1.1915271282196045
 	rotation = 5.96195733E-08,-0.707019806,5.96342531E-08,-0.707193732
 	mirror = 1,1,1
@@ -16887,16 +13409,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 91
-	sym = 92
-	sym = 94
-	srfN = srfAttach, 83,COLLISION15
+	sym = 75
+	sym = 76
+	sym = 78
+	srfN = srfAttach, 67,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071270466017
-	tempExt = 307.20724874179763
-	tempExtUnexp = 307.20563116561624
-	staticPressureAtm = 0.97130154963337334
+	temp = 178.00913002806473
+	tempExt = 176.86971817868925
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -17054,7 +13576,7 @@ PART
 	mid = 2789492286
 	persistentId = 587868313
 	launchID = 1
-	parent = 83
+	parent = 67
 	position = 1.1915270090103149,79.447425842285156,1.2516975402832031E-06
 	rotation = 8.4325201E-08,-1,1.0380195E-11,-0.000123068792
 	mirror = 1,1,1
@@ -17067,16 +13589,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 91
-	sym = 92
-	sym = 93
-	srfN = srfAttach, 83,COLLISION15
+	sym = 75
+	sym = 76
+	sym = 77
+	srfN = srfAttach, 67,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071270466017
-	tempExt = 307.20724874179763
-	tempExtUnexp = 307.20563116561624
-	staticPressureAtm = 0.9713013990408339
+	temp = 177.82758554966989
+	tempExt = 176.8086793023551
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -17234,7 +13756,7 @@ PART
 	mid = 2789492286
 	persistentId = 4216489287
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = -1.1920928955078125E-07,74.050155639648438,-1.1864845752716064
 	rotation = 8.70727526E-05,0.707106888,-0.707106769,8.70727672E-05
 	mirror = 1,1,1
@@ -17247,18 +13769,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 96
-	sym = 97
-	sym = 98
-	srfN = srfAttach, 82,COLLISION15
+	sym = 80
+	sym = 81
+	sym = 82
+	srfN = srfAttach, 66,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156820817
-	tempExt = 307.20549452070026
-	tempExtUnexp = 307.20396417327368
-	staticPressureAtm = 0.97208297432071922
+	temp = 176.75426358590212
+	tempExt = 176.65531533306068
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -17447,7 +13969,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -17505,7 +14027,7 @@ PART
 	mid = 2789492286
 	persistentId = 311111754
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = -1.1864843368530273,74.050155639648438,2.9802322387695313E-08
 	rotation = -0.499938399,0.500061631,-0.500061572,-0.499938488
 	mirror = 1,1,1
@@ -17518,18 +14040,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 95
-	sym = 97
-	sym = 98
-	srfN = srfAttach, 82,COLLISION15
+	sym = 79
+	sym = 81
+	sym = 82
+	srfN = srfAttach, 66,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156820817
-	tempExt = 307.20549452070026
-	tempExtUnexp = 307.20396417327368
-	staticPressureAtm = 0.97208312491325866
+	temp = 176.75426358590212
+	tempExt = 176.65531533306068
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -17714,7 +14236,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -17772,7 +14294,7 @@ PART
 	mid = 2789492286
 	persistentId = 446756767
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = 1.7881393432617188E-07,74.050155639648438,1.1864845752716064
 	rotation = -0.707106769,8.70418589E-05,-8.70418444E-05,-0.707106888
 	mirror = 1,1,1
@@ -17785,18 +14307,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 95
-	sym = 96
-	sym = 98
-	srfN = srfAttach, 82,COLLISION15
+	sym = 79
+	sym = 80
+	sym = 82
+	srfN = srfAttach, 66,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156820817
-	tempExt = 307.20549452070026
-	tempExtUnexp = 307.20396417327368
-	staticPressureAtm = 0.97208297432071922
+	temp = 176.75426358590212
+	tempExt = 176.65531533306068
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -17981,7 +14503,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18039,7 +14561,7 @@ PART
 	mid = 2789492286
 	persistentId = 3439739546
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = 1.1864843368530273,74.050155639648438,-1.7881393432617188E-07
 	rotation = -0.500061572,-0.499938488,0.499938399,-0.500061631
 	mirror = 1,1,1
@@ -18052,18 +14574,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 95
-	sym = 96
-	sym = 97
-	srfN = srfAttach, 82,COLLISION15
+	sym = 79
+	sym = 80
+	sym = 81
+	srfN = srfAttach, 66,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156820817
-	tempExt = 307.20549452070026
-	tempExtUnexp = 307.20396417327368
-	staticPressureAtm = 0.97208289902444944
+	temp = 176.75426358590212
+	tempExt = 176.65531533306068
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -18248,7 +14770,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18306,7 +14828,7 @@ PART
 	mid = 2789492286
 	persistentId = 1134427683
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = 1.3113021850585938E-06,71.975967407226563,-1.1920661926269531
 	rotation = -5.96342602E-08,0.707193911,5.96195804E-08,-0.707019746
 	mirror = 1,1,1
@@ -18319,16 +14841,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 100
-	sym = 101
-	sym = 102
-	srfN = srfAttach, 82,COLLISION15
+	sym = 84
+	sym = 85
+	sym = 86
+	srfN = srfAttach, 66,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269525918
-	tempExt = 307.20724414860496
-	tempExtUnexp = 307.20562705649667
-	staticPressureAtm = 0.97238340643697563
+	temp = 178.42441562055819
+	tempExt = 177.39907354272805
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -18486,7 +15008,7 @@ PART
 	mid = 2789492286
 	persistentId = 652627701
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = -1.1920661926269531,71.975967407226563,-1.4007091522216797E-06
 	rotation = -1.0380195E-11,0.000123153091,8.4325201E-08,-1
 	mirror = 1,1,1
@@ -18499,16 +15021,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 99
-	sym = 101
-	sym = 102
-	srfN = srfAttach, 82,COLLISION15
+	sym = 83
+	sym = 85
+	sym = 86
+	srfN = srfAttach, 66,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269525918
-	tempExt = 307.20724414860496
-	tempExtUnexp = 307.20562705649667
-	staticPressureAtm = 0.97238355702951518
+	temp = 178.24783136042078
+	tempExt = 177.33980592554826
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -18666,7 +15188,7 @@ PART
 	mid = 2789492286
 	persistentId = 2757361670
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = -1.2516975402832031E-06,71.975967407226563,1.1920661926269531
 	rotation = 5.96195804E-08,-0.707019806,5.96342602E-08,-0.707193851
 	mirror = 1,1,1
@@ -18679,16 +15201,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 99
-	sym = 100
-	sym = 102
-	srfN = srfAttach, 82,COLLISION15
+	sym = 83
+	sym = 84
+	sym = 86
+	srfN = srfAttach, 66,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269525918
-	tempExt = 307.20724414860496
-	tempExtUnexp = 307.20562705649667
-	staticPressureAtm = 0.97238340643697563
+	temp = 178.42393365629869
+	tempExt = 177.39891898926791
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -18846,7 +15368,7 @@ PART
 	mid = 2789492286
 	persistentId = 3794665281
 	launchID = 1
-	parent = 82
+	parent = 66
 	position = 1.1920660734176636,71.975967407226563,1.2516975402832031E-06
 	rotation = 8.4325201E-08,-1,1.0380195E-11,-0.000123153091
 	mirror = 1,1,1
@@ -18859,16 +15381,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 99
-	sym = 100
-	sym = 101
-	srfN = srfAttach, 82,COLLISION15
+	sym = 83
+	sym = 84
+	sym = 85
+	srfN = srfAttach, 66,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269525918
-	tempExt = 307.20724414860496
-	tempExtUnexp = 307.20562705649667
-	staticPressureAtm = 0.97238333114070596
+	temp = 178.24710934310664
+	tempExt = 177.33957660147377
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -19026,7 +15548,7 @@ PART
 	mid = 2789492286
 	persistentId = 2041331736
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = 1.1920928955078125E-07,66.418182373046875,-1.1865274906158447
 	rotation = 8.7033266E-05,0.707106829,-0.707106829,8.7033266E-05
 	mirror = 1,1,1
@@ -19039,18 +15561,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 104
-	sym = 105
-	sym = 106
-	srfN = srfAttach, 81,COLLISION15
+	sym = 88
+	sym = 89
+	sym = 90
+	srfN = srfAttach, 65,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610715574098
-	tempExt = 307.20549413943831
-	tempExtUnexp = 307.20396382347053
-	staticPressureAtm = 0.973188850634368
+	temp = 177.17997847173555
+	tempExt = 177.11442559055507
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -19239,7 +15761,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -19297,7 +15819,7 @@ PART
 	mid = 2789492286
 	persistentId = 2756088203
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = -1.1865272521972656,66.418182373046875,-1.7881393432617188E-07
 	rotation = -0.499938488,0.500061572,-0.500061572,-0.499938488
 	mirror = 1,1,1
@@ -19310,18 +15832,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 103
-	sym = 105
-	sym = 106
-	srfN = srfAttach, 81,COLLISION15
+	sym = 87
+	sym = 89
+	sym = 90
+	srfN = srfAttach, 65,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610715574098
-	tempExt = 307.20549413943831
-	tempExtUnexp = 307.20396382347053
-	staticPressureAtm = 0.97318900122690755
+	temp = 177.17997847173555
+	tempExt = 177.11442559055507
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -19506,7 +16028,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -19564,7 +16086,7 @@ PART
 	mid = 2789492286
 	persistentId = 3821547815
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = 0,66.418182373046875,1.1865274906158447
 	rotation = -0.707106829,8.70023578E-05,-8.70023578E-05,-0.707106829
 	mirror = 1,1,1
@@ -19577,18 +16099,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 103
-	sym = 104
-	sym = 106
-	srfN = srfAttach, 81,COLLISION15
+	sym = 87
+	sym = 88
+	sym = 90
+	srfN = srfAttach, 65,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610715574098
-	tempExt = 307.20549413943831
-	tempExtUnexp = 307.20396382347053
-	staticPressureAtm = 0.973188850634368
+	temp = 177.17997847173555
+	tempExt = 177.11442559055507
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -19773,7 +16295,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -19831,7 +16353,7 @@ PART
 	mid = 2789492286
 	persistentId = 2533810089
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = 1.1865272521972656,66.418182373046875,2.9802322387695313E-08
 	rotation = -0.500061572,-0.499938488,0.499938488,-0.500061572
 	mirror = 1,1,1
@@ -19844,18 +16366,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 103
-	sym = 104
-	sym = 105
-	srfN = srfAttach, 81,COLLISION15
+	sym = 87
+	sym = 88
+	sym = 89
+	srfN = srfAttach, 65,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610715574098
-	tempExt = 307.20549413943831
-	tempExtUnexp = 307.20396382347053
-	staticPressureAtm = 0.97318870004182856
+	temp = 177.17997847173555
+	tempExt = 177.11442559055507
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -20040,7 +16562,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -20098,7 +16620,7 @@ PART
 	mid = 2789492286
 	persistentId = 852264573
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = 1.3113021850585938E-06,64.366996765136719,-1.1912662982940674
 	rotation = 4.4499866E-09,0.707193851,-4.44889148E-09,-0.707019806
 	mirror = 1,1,1
@@ -20111,16 +16633,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 108
-	sym = 109
-	sym = 110
-	srfN = srfAttach, 81,COLLISION15
+	sym = 92
+	sym = 93
+	sym = 94
+	srfN = srfAttach, 65,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269453522
-	tempExt = 307.20724386311497
-	tempExtUnexp = 307.2056268017019
-	staticPressureAtm = 0.97348627089983497
+	temp = 178.68295856395005
+	tempExt = 177.92948463552827
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -20278,7 +16800,7 @@ PART
 	mid = 2789492286
 	persistentId = 1670486870
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = -1.1912660598754883,64.366996765136719,-1.4007091522216797E-06
 	rotation = 7.74369609E-13,0.000123068792,-6.29245678E-09,-1
 	mirror = 1,1,1
@@ -20291,16 +16813,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 107
-	sym = 109
-	sym = 110
-	srfN = srfAttach, 81,COLLISION15
+	sym = 91
+	sym = 93
+	sym = 94
+	srfN = srfAttach, 65,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269453522
-	tempExt = 307.20724386311497
-	tempExtUnexp = 307.2056268017019
-	staticPressureAtm = 0.97348634619610475
+	temp = 178.5126925784806
+	tempExt = 177.87235933694632
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -20458,7 +16980,7 @@ PART
 	mid = 2789492286
 	persistentId = 2925363363
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = -1.2516975402832031E-06,64.366996765136719,1.1912662982940674
 	rotation = -4.44889103E-09,-0.707019806,-4.44998616E-09,-0.707193732
 	mirror = 1,1,1
@@ -20471,16 +16993,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 107
-	sym = 108
-	sym = 110
-	srfN = srfAttach, 81,COLLISION15
+	sym = 91
+	sym = 92
+	sym = 94
+	srfN = srfAttach, 65,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269453522
-	tempExt = 307.20724386311497
-	tempExtUnexp = 307.2056268017019
-	staticPressureAtm = 0.97348627089983497
+	temp = 178.6825147597005
+	tempExt = 177.92934233570372
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -20638,7 +17160,7 @@ PART
 	mid = 2789492286
 	persistentId = 667336038
 	launchID = 1
-	parent = 81
+	parent = 65
 	position = 1.1912660598754883,64.366996765136719,1.2516975402832031E-06
 	rotation = -6.29245678E-09,-1,-7.74369609E-13,-0.000123068792
 	mirror = 1,1,1
@@ -20651,16 +17173,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 107
-	sym = 108
-	sym = 109
-	srfN = srfAttach, 81,COLLISION15
+	sym = 91
+	sym = 92
+	sym = 93
+	srfN = srfAttach, 65,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269453522
-	tempExt = 307.20724386311497
-	tempExtUnexp = 307.2056268017019
-	staticPressureAtm = 0.97348612030729542
+	temp = 178.51204332642212
+	tempExt = 177.87215304978739
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -20818,7 +17340,7 @@ PART
 	mid = 2789492286
 	persistentId = 994386726
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = 1.1920928955078125E-07,59.06005859375,-1.1887435913085938
 	rotation = 8.70727526E-05,0.707106888,-0.707106769,8.70727672E-05
 	mirror = 1,1,1
@@ -20831,18 +17353,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 112
-	sym = 113
-	sym = 114
-	srfN = srfAttach, 80,COLLISION15
+	sym = 96
+	sym = 97
+	sym = 98
+	srfN = srfAttach, 64,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156824484
-	tempExt = 307.20549448386356
-	tempExtUnexp = 307.20396414730919
-	staticPressureAtm = 0.97425602466537131
+	temp = 178.09793495052369
+	tempExt = 177.98905724079881
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -21031,7 +17553,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -21089,7 +17611,7 @@ PART
 	mid = 2789492286
 	persistentId = 3408762814
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = -1.1887435913085938,59.06005859375,-1.7881393432617188E-07
 	rotation = -0.499938399,0.500061631,-0.500061572,-0.499938488
 	mirror = 1,1,1
@@ -21102,18 +17624,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 111
-	sym = 113
-	sym = 114
-	srfN = srfAttach, 80,COLLISION15
+	sym = 95
+	sym = 97
+	sym = 98
+	srfN = srfAttach, 64,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156824484
-	tempExt = 307.20549448386356
-	tempExtUnexp = 307.20396414730919
-	staticPressureAtm = 0.97425609996164098
+	temp = 178.09793495052369
+	tempExt = 177.98905724079881
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -21298,7 +17820,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -21356,7 +17878,7 @@ PART
 	mid = 2789492286
 	persistentId = 3031981897
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = 0,59.06005859375,1.1887435913085938
 	rotation = -0.707106769,8.70418589E-05,-8.70418444E-05,-0.707106888
 	mirror = 1,1,1
@@ -21369,18 +17891,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 111
-	sym = 112
-	sym = 114
-	srfN = srfAttach, 80,COLLISION15
+	sym = 95
+	sym = 96
+	sym = 98
+	srfN = srfAttach, 64,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156824484
-	tempExt = 307.20549448386356
-	tempExtUnexp = 307.20396414730919
-	staticPressureAtm = 0.97425602466537131
+	temp = 178.09793495052369
+	tempExt = 177.98905724079881
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -21565,7 +18087,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -21623,7 +18145,7 @@ PART
 	mid = 2789492286
 	persistentId = 1553651995
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = 1.1887433528900146,59.06005859375,2.9802322387695313E-08
 	rotation = -0.500061572,-0.499938488,0.499938399,-0.500061631
 	mirror = 1,1,1
@@ -21636,18 +18158,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 111
-	sym = 112
-	sym = 113
-	srfN = srfAttach, 80,COLLISION15
+	sym = 95
+	sym = 96
+	sym = 97
+	srfN = srfAttach, 64,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156824484
-	tempExt = 307.20549448386356
-	tempExtUnexp = 307.20396414730919
-	staticPressureAtm = 0.97425587407283176
+	temp = 178.09793495052369
+	tempExt = 177.98905724079881
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -21832,7 +18354,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -21890,7 +18412,7 @@ PART
 	mid = 2789492286
 	persistentId = 2040984397
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = 1.3113021850585938E-06,56.839195251464844,-1.1912693977355957
 	rotation = -5.96342602E-08,0.707193911,5.96195804E-08,-0.707019746
 	mirror = 1,1,1
@@ -21903,16 +18425,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 116
-	sym = 117
-	sym = 118
-	srfN = srfAttach, 80,COLLISION15
+	sym = 100
+	sym = 101
+	sym = 102
+	srfN = srfAttach, 64,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269523951
-	tempExt = 307.2072440386865
-	tempExtUnexp = 307.20562696451503
-	staticPressureAtm = 0.97457829269985197
+	temp = 179.27244744021067
+	tempExt = 178.66716677041111
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -22070,7 +18592,7 @@ PART
 	mid = 2789492286
 	persistentId = 460047180
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = -1.1912693977355957,56.839195251464844,-1.4007091522216797E-06
 	rotation = -1.0380195E-11,0.000123153091,8.4325201E-08,-1
 	mirror = 1,1,1
@@ -22083,16 +18605,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 115
-	sym = 117
-	sym = 118
-	srfN = srfAttach, 80,COLLISION15
+	sym = 99
+	sym = 101
+	sym = 102
+	srfN = srfAttach, 64,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269523951
-	tempExt = 307.2072440386865
-	tempExtUnexp = 307.20562696451503
-	staticPressureAtm = 0.97457836799612163
+	temp = 179.11368796803484
+	tempExt = 178.61399739952009
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -22250,7 +18772,7 @@ PART
 	mid = 2789492286
 	persistentId = 446495851
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = -1.2516975402832031E-06,56.839195251464844,1.1912693977355957
 	rotation = 5.96195804E-08,-0.707019806,5.96342602E-08,-0.707193851
 	mirror = 1,1,1
@@ -22263,16 +18785,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 115
-	sym = 116
-	sym = 118
-	srfN = srfAttach, 80,COLLISION15
+	sym = 99
+	sym = 100
+	sym = 102
+	srfN = srfAttach, 64,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269523951
-	tempExt = 307.2072440386865
-	tempExtUnexp = 307.20562696451503
-	staticPressureAtm = 0.97457829269985197
+	temp = 179.27228657452574
+	tempExt = 178.66711518393689
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -22430,7 +18952,7 @@ PART
 	mid = 2789492286
 	persistentId = 1109458623
 	launchID = 1
-	parent = 80
+	parent = 64
 	position = 1.1912692785263062,56.839195251464844,1.2516975402832031E-06
 	rotation = 8.4325201E-08,-1,1.0380195E-11,-0.000123153091
 	mirror = 1,1,1
@@ -22443,16 +18965,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 115
-	sym = 116
-	sym = 117
-	srfN = srfAttach, 80,COLLISION15
+	sym = 99
+	sym = 100
+	sym = 101
+	srfN = srfAttach, 64,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269523951
-	tempExt = 307.2072440386865
-	tempExtUnexp = 307.20562696451503
-	staticPressureAtm = 0.97457814210731242
+	temp = 179.11306887613031
+	tempExt = 178.61380039073509
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -22610,7 +19132,7 @@ PART
 	mid = 2789492286
 	persistentId = 1921276058
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = -1.1920928955078125E-07,51.433082580566406,-1.1869621276855469
 	rotation = 8.71253724E-05,0.707107067,-0.70710659,8.71254306E-05
 	mirror = 1,1,1
@@ -22623,18 +19145,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 120
-	sym = 121
-	sym = 122
-	srfN = srfAttach, 79,COLLISION15
+	sym = 104
+	sym = 105
+	sym = 106
+	srfN = srfAttach, 63,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156398937
-	tempExt = 307.20549434704594
-	tempExtUnexp = 307.20396401867225
-	staticPressureAtm = 0.97536310571933593
+	temp = 178.89239740688467
+	tempExt = 178.78924526081013
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -22823,7 +19345,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -22881,7 +19403,7 @@ PART
 	mid = 2789492286
 	persistentId = 1149731038
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = -1.1869621276855469,51.433082580566406,2.9802322387695313E-08
 	rotation = -0.49993825,0.50006181,-0.500061452,-0.499938577
 	mirror = 1,1,1
@@ -22894,18 +19416,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 119
-	sym = 121
-	sym = 122
-	srfN = srfAttach, 79,COLLISION15
+	sym = 103
+	sym = 105
+	sym = 106
+	srfN = srfAttach, 63,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156398937
-	tempExt = 307.20549434704594
-	tempExtUnexp = 307.20396401867225
-	staticPressureAtm = 0.97536325631187537
+	temp = 178.89239740688467
+	tempExt = 178.78924526081013
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -23090,7 +19612,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -23148,7 +19670,7 @@ PART
 	mid = 2789492286
 	persistentId = 1165372845
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = 1.7881393432617188E-07,51.433082580566406,1.1869621276855469
 	rotation = -0.70710659,8.70945223E-05,-8.70944641E-05,-0.707107067
 	mirror = 1,1,1
@@ -23161,18 +19683,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 119
-	sym = 120
-	sym = 122
-	srfN = srfAttach, 79,COLLISION15
+	sym = 103
+	sym = 104
+	sym = 106
+	srfN = srfAttach, 63,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156398937
-	tempExt = 307.20549434704594
-	tempExtUnexp = 307.20396401867225
-	staticPressureAtm = 0.97536310571933593
+	temp = 178.89239740688467
+	tempExt = 178.78924526081013
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -23357,7 +19879,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -23415,7 +19937,7 @@ PART
 	mid = 2789492286
 	persistentId = 927233611
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = 1.1869618892669678,51.433082580566406,-1.7881393432617188E-07
 	rotation = -0.500061452,-0.499938577,0.49993825,-0.50006181
 	mirror = 1,1,1
@@ -23428,18 +19950,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 119
-	sym = 120
-	sym = 121
-	srfN = srfAttach, 79,COLLISION15
+	sym = 103
+	sym = 104
+	sym = 105
+	srfN = srfAttach, 63,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156398937
-	tempExt = 307.20549434704594
-	tempExtUnexp = 307.20396401867225
-	staticPressureAtm = 0.97536303042306616
+	temp = 178.89239740688467
+	tempExt = 178.78924526081013
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -23624,7 +20146,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -23682,7 +20204,7 @@ PART
 	mid = 2789492286
 	persistentId = 3584582012
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = 1.3113021850585938E-06,49.555030822753906,-1.1915326118469238
 	rotation = -2.20281578E-07,0.707193971,2.20227292E-07,-0.707019687
 	mirror = 1,1,1
@@ -23695,16 +20217,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 124
-	sym = 125
-	sym = 126
-	srfN = srfAttach, 79,COLLISION15
+	sym = 108
+	sym = 109
+	sym = 110
+	srfN = srfAttach, 63,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496342
-	tempExt = 307.20724396979728
-	tempExtUnexp = 307.20562690065583
-	staticPressureAtm = 0.97563590410459844
+	temp = 179.91843681247181
+	tempExt = 179.40268707900069
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -23862,7 +20384,7 @@ PART
 	mid = 2789492286
 	persistentId = 1906683979
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = -1.1915326118469238,49.555030822753906,-1.4007091522216797E-06
 	rotation = -3.83856211E-11,0.000123237376,3.11486815E-07,-1
 	mirror = 1,1,1
@@ -23875,16 +20397,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 123
-	sym = 125
-	sym = 126
-	srfN = srfAttach, 79,COLLISION15
+	sym = 107
+	sym = 109
+	sym = 110
+	srfN = srfAttach, 63,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496342
-	tempExt = 307.20724396979728
-	tempExtUnexp = 307.20562690065583
-	staticPressureAtm = 0.97563605469713788
+	temp = 179.77889790893352
+	tempExt = 179.35597870262595
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -24042,7 +20564,7 @@ PART
 	mid = 2789492286
 	persistentId = 893714694
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = -1.2516975402832031E-06,49.555030822753906,1.1915326118469238
 	rotation = 2.20227307E-07,-0.707019746,2.20281564E-07,-0.707193911
 	mirror = 1,1,1
@@ -24055,16 +20577,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 123
-	sym = 124
-	sym = 126
-	srfN = srfAttach, 79,COLLISION15
+	sym = 107
+	sym = 108
+	sym = 110
+	srfN = srfAttach, 63,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496342
-	tempExt = 307.20724396979728
-	tempExtUnexp = 307.20562690065583
-	staticPressureAtm = 0.97563590410459844
+	temp = 179.91827221746669
+	tempExt = 179.40263433692118
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -24222,7 +20744,7 @@ PART
 	mid = 2789492286
 	persistentId = 1757099466
 	launchID = 1
-	parent = 79
+	parent = 63
 	position = 1.1915324926376343,49.555030822753906,1.2516975402832031E-06
 	rotation = 3.11486815E-07,-1,3.83856211E-11,-0.000123237376
 	mirror = 1,1,1
@@ -24235,16 +20757,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 123
-	sym = 124
-	sym = 125
-	srfN = srfAttach, 79,COLLISION15
+	sym = 107
+	sym = 108
+	sym = 109
+	srfN = srfAttach, 63,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496342
-	tempExt = 307.20724396979728
-	tempExtUnexp = 307.20562690065583
-	staticPressureAtm = 0.97563575351205889
+	temp = 179.77837168053236
+	tempExt = 179.35581113671483
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -24402,7 +20924,7 @@ PART
 	mid = 2789492286
 	persistentId = 1358250404
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = 1.1920928955078125E-07,44.229095458984375,-1.1870269775390625
 	rotation = 8.7085893E-05,0.707106948,-0.707106709,8.70859221E-05
 	mirror = 1,1,1
@@ -24415,18 +20937,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 128
-	sym = 129
-	sym = 130
-	srfN = srfAttach, 78,COLLISION15
+	sym = 112
+	sym = 113
+	sym = 114
+	srfN = srfAttach, 62,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156395725
-	tempExt = 307.20549434646807
-	tempExtUnexp = 307.20396401815367
-	staticPressureAtm = 0.97640979916497039
+	temp = 179.6479771827299
+	tempExt = 179.55390137213658
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -24615,7 +21137,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -24673,7 +21195,7 @@ PART
 	mid = 2789492286
 	persistentId = 3126088708
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = -1.1870269775390625,44.229095458984375,-1.7881393432617188E-07
 	rotation = -0.499938369,0.500061691,-0.500061512,-0.499938518
 	mirror = 1,1,1
@@ -24686,18 +21208,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 127
-	sym = 129
-	sym = 130
-	srfN = srfAttach, 78,COLLISION15
+	sym = 111
+	sym = 113
+	sym = 114
+	srfN = srfAttach, 62,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156395725
-	tempExt = 307.20549434646807
-	tempExtUnexp = 307.20396401815367
-	staticPressureAtm = 0.97640994975750983
+	temp = 179.6479771827299
+	tempExt = 179.55390137213658
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -24882,7 +21404,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -24940,7 +21462,7 @@ PART
 	mid = 2789492286
 	persistentId = 101049513
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = 0,44.229095458984375,1.1870269775390625
 	rotation = -0.707106709,8.70550139E-05,-8.70549848E-05,-0.707106948
 	mirror = 1,1,1
@@ -24953,18 +21475,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 127
-	sym = 128
-	sym = 130
-	srfN = srfAttach, 78,COLLISION15
+	sym = 111
+	sym = 112
+	sym = 114
+	srfN = srfAttach, 62,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156395725
-	tempExt = 307.20549434646807
-	tempExtUnexp = 307.20396401815367
-	staticPressureAtm = 0.97640979916497039
+	temp = 179.6479771827299
+	tempExt = 179.55390137213658
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -25149,7 +21671,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -25207,7 +21729,7 @@ PART
 	mid = 2789492286
 	persistentId = 4124164235
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = 1.1870268583297729,44.229095458984375,2.9802322387695313E-08
 	rotation = -0.500061512,-0.499938518,0.499938369,-0.500061691
 	mirror = 1,1,1
@@ -25220,18 +21742,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 127
-	sym = 128
-	sym = 129
-	srfN = srfAttach, 78,COLLISION15
+	sym = 111
+	sym = 112
+	sym = 113
+	srfN = srfAttach, 62,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156395725
-	tempExt = 307.20549434646807
-	tempExtUnexp = 307.20396401815367
-	staticPressureAtm = 0.97640964857243084
+	temp = 179.6479771827299
+	tempExt = 179.55390137213658
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -25416,7 +21938,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -25474,7 +21996,7 @@ PART
 	mid = 2789492286
 	persistentId = 3321550397
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = 1.3113021850585938E-06,41.614273071289063,-1.1912775039672852
 	rotation = -1.18469593E-07,0.707193911,1.18440418E-07,-0.707019746
 	mirror = 1,1,1
@@ -25487,16 +22009,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 132
-	sym = 133
-	sym = 134
-	srfN = srfAttach, 78,COLLISION15
+	sym = 116
+	sym = 117
+	sym = 118
+	srfN = srfAttach, 62,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496103
-	tempExt = 307.20724396887692
-	tempExtUnexp = 307.20562689982233
-	staticPressureAtm = 0.97678997003087986
+	temp = 180.52527895601364
+	tempExt = 180.11181161556064
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -25654,7 +22176,7 @@ PART
 	mid = 2789492286
 	persistentId = 4288574661
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = -1.1912775039672852,41.614273071289063,-1.4007091522216797E-06
 	rotation = -2.06297583E-11,0.000123153091,1.67520668E-07,-1
 	mirror = 1,1,1
@@ -25667,16 +22189,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 131
-	sym = 133
-	sym = 134
-	srfN = srfAttach, 78,COLLISION15
+	sym = 115
+	sym = 117
+	sym = 118
+	srfN = srfAttach, 62,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496103
-	tempExt = 307.20724396887692
-	tempExtUnexp = 307.20562689982233
-	staticPressureAtm = 0.97679004532714964
+	temp = 180.40396097900162
+	tempExt = 180.07122536333353
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -25834,7 +22356,7 @@ PART
 	mid = 2789492286
 	persistentId = 1011659767
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = -1.2516975402832031E-06,41.614273071289063,1.1912775039672852
 	rotation = 1.18440425E-07,-0.707019806,1.18469586E-07,-0.707193851
 	mirror = 1,1,1
@@ -25847,16 +22369,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 131
-	sym = 132
-	sym = 134
-	srfN = srfAttach, 78,COLLISION15
+	sym = 115
+	sym = 116
+	sym = 118
+	srfN = srfAttach, 62,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496103
-	tempExt = 307.20724396887692
-	tempExtUnexp = 307.20562689982233
-	staticPressureAtm = 0.97678997003087986
+	temp = 180.52517707312305
+	tempExt = 180.1117790044739
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -26014,7 +22536,7 @@ PART
 	mid = 2789492286
 	persistentId = 1415648765
 	launchID = 1
-	parent = 78
+	parent = 62
 	position = 1.1912773847579956,41.614273071289063,1.2516975402832031E-06
 	rotation = 1.67520668E-07,-1,2.06297583E-11,-0.000123153091
 	mirror = 1,1,1
@@ -26027,16 +22549,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 131
-	sym = 132
-	sym = 133
-	srfN = srfAttach, 78,COLLISION15
+	sym = 115
+	sym = 116
+	sym = 117
+	srfN = srfAttach, 62,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269496103
-	tempExt = 307.20724396887692
-	tempExtUnexp = 307.20562689982233
-	staticPressureAtm = 0.97678981943834042
+	temp = 180.40362689045841
+	tempExt = 180.07111895889068
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -26194,7 +22716,7 @@ PART
 	mid = 2789492286
 	persistentId = 3748892013
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = 1.1920928955078125E-07,36.856735229492188,-1.1865308284759521
 	rotation = 8.7085893E-05,0.707106948,-0.707106709,8.70859221E-05
 	mirror = 1,1,1
@@ -26207,18 +22729,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 136
-	sym = 137
-	sym = 138
-	srfN = srfAttach, 77,COLLISION15
+	sym = 120
+	sym = 121
+	sym = 122
+	srfN = srfAttach, 61,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156592471
-	tempExt = 307.20549442896004
-	tempExtUnexp = 307.20396409416867
-	staticPressureAtm = 0.97748186745350663
+	temp = 180.39100384152133
+	tempExt = 180.30510926048851
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -26407,7 +22929,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -26465,7 +22987,7 @@ PART
 	mid = 2789492286
 	persistentId = 837485179
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = -1.186530590057373,36.856735229492188,-1.7881393432617188E-07
 	rotation = -0.499938369,0.500061691,-0.500061512,-0.499938518
 	mirror = 1,1,1
@@ -26478,18 +23000,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 135
-	sym = 137
-	sym = 138
-	srfN = srfAttach, 77,COLLISION15
+	sym = 119
+	sym = 121
+	sym = 122
+	srfN = srfAttach, 61,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156592471
-	tempExt = 307.20549442896004
-	tempExtUnexp = 307.20396409416867
-	staticPressureAtm = 0.97748201804604606
+	temp = 180.39100384152133
+	tempExt = 180.30510926048851
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -26674,7 +23196,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -26732,7 +23254,7 @@ PART
 	mid = 2789492286
 	persistentId = 3186090923
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = 0,36.856735229492188,1.1865308284759521
 	rotation = -0.707106709,8.70550139E-05,-8.70549848E-05,-0.707106948
 	mirror = 1,1,1
@@ -26745,18 +23267,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 135
-	sym = 136
-	sym = 138
-	srfN = srfAttach, 77,COLLISION15
+	sym = 119
+	sym = 120
+	sym = 122
+	srfN = srfAttach, 61,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156592471
-	tempExt = 307.20549442896004
-	tempExtUnexp = 307.20396409416867
-	staticPressureAtm = 0.97748186745350663
+	temp = 180.39100384152133
+	tempExt = 180.30510926048851
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -26941,7 +23463,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -26999,7 +23521,7 @@ PART
 	mid = 2789492286
 	persistentId = 2884587047
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = 1.1865307092666626,36.856735229492188,2.9802322387695313E-08
 	rotation = -0.500061512,-0.499938518,0.499938369,-0.500061691
 	mirror = 1,1,1
@@ -27012,18 +23534,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 135
-	sym = 136
-	sym = 137
-	srfN = srfAttach, 77,COLLISION15
+	sym = 119
+	sym = 120
+	sym = 121
+	srfN = srfAttach, 61,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107156592471
-	tempExt = 307.20549442896004
-	tempExtUnexp = 307.20396409416867
-	staticPressureAtm = 0.97748179215723685
+	temp = 180.39100384152133
+	tempExt = 180.30510926048851
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -27208,7 +23730,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -27266,7 +23788,7 @@ PART
 	mid = 2789492286
 	persistentId = 4118309906
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = 1.3113021850585938E-06,34.029289245605469,-1.1937270164489746
 	rotation = -1.18469593E-07,0.707193911,1.18440418E-07,-0.707019746
 	mirror = 1,1,1
@@ -27279,16 +23801,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 140
-	sym = 141
-	sym = 142
-	srfN = srfAttach, 77,COLLISION15
+	sym = 124
+	sym = 125
+	sym = 126
+	srfN = srfAttach, 61,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269508984
-	tempExt = 307.20724402270588
-	tempExtUnexp = 307.20562694785895
-	staticPressureAtm = 0.97789328627135763
+	temp = 181.12508052727094
+	tempExt = 180.84770847837532
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -27446,7 +23968,7 @@ PART
 	mid = 2789492286
 	persistentId = 1979092305
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = -1.1937270164489746,34.029289245605469,-1.4007091522216797E-06
 	rotation = -2.06297583E-11,0.000123153091,1.67520668E-07,-1
 	mirror = 1,1,1
@@ -27459,16 +23981,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 139
-	sym = 141
-	sym = 142
-	srfN = srfAttach, 77,COLLISION15
+	sym = 123
+	sym = 125
+	sym = 126
+	srfN = srfAttach, 61,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269508984
-	tempExt = 307.20724402270588
-	tempExtUnexp = 307.20562694785895
-	staticPressureAtm = 0.97789343686389707
+	temp = 181.0314260119618
+	tempExt = 180.81627085002782
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -27626,7 +24148,7 @@ PART
 	mid = 2789492286
 	persistentId = 407413676
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = -1.2516975402832031E-06,34.029289245605469,1.1937270164489746
 	rotation = 1.18440425E-07,-0.707019806,1.18469586E-07,-0.707193851
 	mirror = 1,1,1
@@ -27639,16 +24161,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 139
-	sym = 140
-	sym = 142
-	srfN = srfAttach, 77,COLLISION15
+	sym = 123
+	sym = 124
+	sym = 126
+	srfN = srfAttach, 61,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269508984
-	tempExt = 307.20724402270588
-	tempExtUnexp = 307.20562694785895
-	staticPressureAtm = 0.97789328627135763
+	temp = 181.1249472252654
+	tempExt = 180.84766580804023
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -27806,7 +24328,7 @@ PART
 	mid = 2789492286
 	persistentId = 2871424258
 	launchID = 1
-	parent = 77
+	parent = 61
 	position = 1.1937267780303955,34.029289245605469,1.2516975402832031E-06
 	rotation = 1.67520668E-07,-1,2.06297583E-11,-0.000123153091
 	mirror = 1,1,1
@@ -27819,16 +24341,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 139
-	sym = 140
-	sym = 141
-	srfN = srfAttach, 77,COLLISION15
+	sym = 123
+	sym = 124
+	sym = 125
+	srfN = srfAttach, 61,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269508984
-	tempExt = 307.20724402270588
-	tempExtUnexp = 307.20562694785895
-	staticPressureAtm = 0.97789321097508786
+	temp = 181.03110849534869
+	tempExt = 180.81616964700643
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -27986,7 +24508,7 @@ PART
 	mid = 2789492286
 	persistentId = 4203729054
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = 1.1920928955078125E-07,29.093727111816406,-1.1870326995849609
 	rotation = 8.70727526E-05,0.707106888,-0.707106769,8.70727672E-05
 	mirror = 1,1,1
@@ -27999,18 +24521,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 144
-	sym = 145
-	sym = 146
-	srfN = srfAttach, 76,COLLISION15
+	sym = 128
+	sym = 129
+	sym = 130
+	srfN = srfAttach, 60,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107153797606
-	tempExt = 307.20549498597831
-	tempExtUnexp = 307.20396457600225
-	staticPressureAtm = 0.97861183857347178
+	temp = 181.24096456265096
+	tempExt = 181.15604849145384
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -28199,7 +24721,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -28257,7 +24779,7 @@ PART
 	mid = 2789492286
 	persistentId = 3428098977
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = -1.1870326995849609,29.093727111816406,-1.7881393432617188E-07
 	rotation = -0.499938399,0.500061631,-0.500061572,-0.499938488
 	mirror = 1,1,1
@@ -28270,18 +24792,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 143
-	sym = 145
-	sym = 146
-	srfN = srfAttach, 76,COLLISION15
+	sym = 127
+	sym = 129
+	sym = 130
+	srfN = srfAttach, 60,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107153797606
-	tempExt = 307.20549498597831
-	tempExtUnexp = 307.20396457600225
-	staticPressureAtm = 0.97861191386974156
+	temp = 181.24096456265096
+	tempExt = 181.15604849145384
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -28466,7 +24988,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -28524,7 +25046,7 @@ PART
 	mid = 2789492286
 	persistentId = 946253334
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = 0,29.093727111816406,1.1870326995849609
 	rotation = -0.707106769,8.70418589E-05,-8.70418444E-05,-0.707106888
 	mirror = 1,1,1
@@ -28537,18 +25059,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 143
-	sym = 144
-	sym = 146
-	srfN = srfAttach, 76,COLLISION15
+	sym = 127
+	sym = 128
+	sym = 130
+	srfN = srfAttach, 60,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107153797606
-	tempExt = 307.20549498597831
-	tempExtUnexp = 307.20396457600225
-	staticPressureAtm = 0.97861183857347178
+	temp = 181.24096456265096
+	tempExt = 181.15604849145384
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -28733,7 +25255,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -28791,7 +25313,7 @@ PART
 	mid = 2789492286
 	persistentId = 1787517513
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = 1.1870325803756714,29.093727111816406,2.9802322387695313E-08
 	rotation = -0.500061572,-0.499938488,0.499938399,-0.500061631
 	mirror = 1,1,1
@@ -28804,18 +25326,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 143
-	sym = 144
-	sym = 145
-	srfN = srfAttach, 76,COLLISION15
+	sym = 127
+	sym = 128
+	sym = 129
+	srfN = srfAttach, 60,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16107153797606
-	tempExt = 307.20549498597831
-	tempExtUnexp = 307.20396457600225
-	staticPressureAtm = 0.97861168798093234
+	temp = 181.24096456265096
+	tempExt = 181.15604849145384
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -29000,7 +25522,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -29058,7 +25580,7 @@ PART
 	mid = 2789492286
 	persistentId = 547641930
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = 1.3113021850585938E-06,26.374610900878906,-1.1980667114257813
 	rotation = -5.96342602E-08,0.707193911,5.96195804E-08,-0.707019746
 	mirror = 1,1,1
@@ -29071,16 +25593,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 148
-	sym = 149
-	sym = 150
-	srfN = srfAttach, 76,COLLISION15
+	sym = 132
+	sym = 133
+	sym = 134
+	srfN = srfAttach, 60,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269320827
-	tempExt = 307.20724472938372
-	tempExtUnexp = 307.20562755453398
-	staticPressureAtm = 0.9790078216560264
+	temp = 181.83710559988802
+	tempExt = 181.68443860200424
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -29238,7 +25760,7 @@ PART
 	mid = 2789492286
 	persistentId = 4268392085
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = -1.1980667114257813,26.374610900878906,-1.4007091522216797E-06
 	rotation = -1.0380195E-11,0.000123153091,8.4325201E-08,-1
 	mirror = 1,1,1
@@ -29251,16 +25773,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 147
-	sym = 149
-	sym = 150
-	srfN = srfAttach, 76,COLLISION15
+	sym = 131
+	sym = 133
+	sym = 134
+	srfN = srfAttach, 60,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269320827
-	tempExt = 307.20724472938372
-	tempExtUnexp = 307.20562755453398
-	staticPressureAtm = 0.97900797224856584
+	temp = 181.81543162743901
+	tempExt = 181.67642195878977
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -29418,7 +25940,7 @@ PART
 	mid = 2789492286
 	persistentId = 1100415699
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = -1.2516975402832031E-06,26.374610900878906,1.1980667114257813
 	rotation = 5.96195804E-08,-0.707019806,5.96342602E-08,-0.707193851
 	mirror = 1,1,1
@@ -29431,16 +25953,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 147
-	sym = 148
-	sym = 150
-	srfN = srfAttach, 76,COLLISION15
+	sym = 131
+	sym = 132
+	sym = 134
+	srfN = srfAttach, 60,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269320827
-	tempExt = 307.20724472938372
-	tempExtUnexp = 307.20562755453398
-	staticPressureAtm = 0.9790078216560264
+	temp = 181.83703047015794
+	tempExt = 181.68441458569728
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -29598,7 +26120,7 @@ PART
 	mid = 2789492286
 	persistentId = 4147953549
 	launchID = 1
-	parent = 76
+	parent = 60
 	position = 1.1980664730072021,26.374610900878906,1.2516975402832031E-06
 	rotation = 8.4325201E-08,-1,1.0380195E-11,-0.000123153091
 	mirror = 1,1,1
@@ -29611,16 +26133,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 147
-	sym = 148
-	sym = 149
-	srfN = srfAttach, 76,COLLISION15
+	sym = 131
+	sym = 132
+	sym = 133
+	srfN = srfAttach, 60,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.16071269320827
-	tempExt = 307.20724472938372
-	tempExtUnexp = 307.20562755453398
-	staticPressureAtm = 0.97900774635975663
+	temp = 181.81533431983402
+	tempExt = 181.67639114499337
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -29778,7 +26300,7 @@ PART
 	mid = 2789492286
 	persistentId = 3558792343
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = -1.1920928955078125E-07,21.668739318847656,-1.1862659454345703
 	rotation = 8.71253724E-05,0.707107067,-0.70710659,8.71254306E-05
 	mirror = 1,1,1
@@ -29791,18 +26313,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 152
-	sym = 153
-	sym = 154
-	srfN = srfAttach, 75,COLLISION15
+	sym = 136
+	sym = 137
+	sym = 138
+	srfN = srfAttach, 59,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16106910000605
-	tempExt = 307.20551146939999
-	tempExtUnexp = 307.2039792352939
-	staticPressureAtm = 0.97969354478453452
+	temp = 182.17657342793302
+	tempExt = 182.10495614158361
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -29991,7 +26513,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -30049,7 +26571,7 @@ PART
 	mid = 2789492286
 	persistentId = 3173292231
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = -1.1862659454345703,21.668739318847656,2.9802322387695313E-08
 	rotation = -0.49993825,0.50006181,-0.500061452,-0.499938577
 	mirror = 1,1,1
@@ -30062,18 +26584,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 151
-	sym = 153
-	sym = 154
-	srfN = srfAttach, 75,COLLISION15
+	sym = 135
+	sym = 137
+	sym = 138
+	srfN = srfAttach, 59,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16106910000605
-	tempExt = 307.20551146939999
-	tempExtUnexp = 307.2039792352939
-	staticPressureAtm = 0.97969369537707407
+	temp = 182.17657342793302
+	tempExt = 182.10495614158361
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -30258,7 +26780,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -30316,7 +26838,7 @@ PART
 	mid = 2789492286
 	persistentId = 2374299827
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = 1.7881393432617188E-07,21.668739318847656,1.1862659454345703
 	rotation = -0.70710659,8.70945223E-05,-8.70944641E-05,-0.707107067
 	mirror = 1,1,1
@@ -30329,18 +26851,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 151
-	sym = 152
-	sym = 154
-	srfN = srfAttach, 75,COLLISION15
+	sym = 135
+	sym = 136
+	sym = 138
+	srfN = srfAttach, 59,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16106910000605
-	tempExt = 307.20551146939999
-	tempExtUnexp = 307.2039792352939
-	staticPressureAtm = 0.97969354478453452
+	temp = 182.17657342793302
+	tempExt = 182.10495614158361
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -30525,7 +27047,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -30583,7 +27105,7 @@ PART
 	mid = 2789492286
 	persistentId = 44194218
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = 1.1862657070159912,21.668739318847656,-1.7881393432617188E-07
 	rotation = -0.500061452,-0.499938577,0.49993825,-0.50006181
 	mirror = 1,1,1
@@ -30596,18 +27118,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 151
-	sym = 152
-	sym = 153
-	srfN = srfAttach, 75,COLLISION15
+	sym = 135
+	sym = 136
+	sym = 137
+	srfN = srfAttach, 59,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.16106910000605
-	tempExt = 307.20551146939999
-	tempExtUnexp = 307.2039792352939
-	staticPressureAtm = 0.97969339419199508
+	temp = 182.17657342793302
+	tempExt = 182.10495614158361
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -30792,7 +27314,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -30850,7 +27372,7 @@ PART
 	mid = 2789492286
 	persistentId = 1997845318
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = 1.3113021850585938E-06,19.239349365234375,-1.1951742172241211
 	rotation = -2.20281578E-07,0.707193971,2.20227292E-07,-0.707019687
 	mirror = 1,1,1
@@ -30863,16 +27385,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 156
-	sym = 157
-	sym = 158
-	srfN = srfAttach, 75,COLLISION15
+	sym = 140
+	sym = 141
+	sym = 142
+	srfN = srfAttach, 59,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.1607125256989
-	tempExt = 307.20726679528713
-	tempExtUnexp = 307.20564715415918
-	staticPressureAtm = 0.98004766314111458
+	temp = 183.16781847006428
+	tempExt = 182.87325773605667
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -31030,7 +27552,7 @@ PART
 	mid = 2789492286
 	persistentId = 4004751367
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = -1.1951742172241211,19.239349365234375,-1.4007091522216797E-06
 	rotation = -3.83856211E-11,0.000123237376,3.11486815E-07,-1
 	mirror = 1,1,1
@@ -31043,16 +27565,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 155
-	sym = 157
-	sym = 158
-	srfN = srfAttach, 75,COLLISION15
+	sym = 139
+	sym = 141
+	sym = 142
+	srfN = srfAttach, 59,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.1607125256989
-	tempExt = 307.20726679528713
-	tempExtUnexp = 307.20564715415918
-	staticPressureAtm = 0.98004781373365402
+	temp = 183.17059947306788
+	tempExt = 182.87462769749277
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -31210,7 +27732,7 @@ PART
 	mid = 2789492286
 	persistentId = 2978222115
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = -1.2516975402832031E-06,19.239349365234375,1.1951742172241211
 	rotation = 2.20227307E-07,-0.707019746,2.20281564E-07,-0.707193911
 	mirror = 1,1,1
@@ -31223,16 +27745,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 155
-	sym = 156
-	sym = 158
-	srfN = srfAttach, 75,COLLISION15
+	sym = 139
+	sym = 140
+	sym = 142
+	srfN = srfAttach, 59,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.1607125256989
-	tempExt = 307.20726679528713
-	tempExtUnexp = 307.20564715415918
-	staticPressureAtm = 0.98004766314111458
+	temp = 183.16781741719237
+	tempExt = 182.87325679221044
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -31390,7 +27912,7 @@ PART
 	mid = 2789492286
 	persistentId = 766874619
 	launchID = 1
-	parent = 75
+	parent = 59
 	position = 1.195173978805542,19.239349365234375,1.2516975402832031E-06
 	rotation = 3.11486815E-07,-1,3.83856211E-11,-0.000123237376
 	mirror = 1,1,1
@@ -31403,16 +27925,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 155
-	sym = 156
-	sym = 157
-	srfN = srfAttach, 75,COLLISION15
+	sym = 139
+	sym = 140
+	sym = 141
+	srfN = srfAttach, 59,COLLISION15
 	mass = 0.0599999987
 	shielded = False
-	temp = 307.1607125256989
-	tempExt = 307.20726679528713
-	tempExtUnexp = 307.20564715415918
-	staticPressureAtm = 0.98004751254857514
+	temp = 183.17060001603124
+	tempExt = 182.87462858961587
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -31570,7 +28092,7 @@ PART
 	mid = 2789492286
 	persistentId = 2040101182
 	launchID = 1
-	parent = 74
+	parent = 58
 	position = 1.1920928955078125E-07,13.784507751464844,-1.1870334148406982
 	rotation = 8.70727526E-05,0.707106888,-0.707106769,8.70727672E-05
 	mirror = 1,1,1
@@ -31583,18 +28105,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 160
-	sym = 161
-	sym = 162
-	srfN = srfAttach, 74,COLLISION15
+	sym = 144
+	sym = 145
+	sym = 146
+	srfN = srfAttach, 58,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610262499953
-	tempExt = 307.20705402160718
-	tempExtUnexp = 307.20543314219492
-	staticPressureAtm = 0.98084324352717123
+	temp = 183.15777784376172
+	tempExt = 183.02908524790797
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -31783,7 +28305,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -31841,7 +28363,7 @@ PART
 	mid = 2789492286
 	persistentId = 2086776739
 	launchID = 1
-	parent = 74
+	parent = 58
 	position = -1.1870331764221191,13.784507751464844,-1.7881393432617188E-07
 	rotation = -0.499938399,0.500061631,-0.500061572,-0.499938488
 	mirror = 1,1,1
@@ -31854,18 +28376,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 159
-	sym = 161
-	sym = 162
-	srfN = srfAttach, 74,COLLISION15
+	sym = 143
+	sym = 145
+	sym = 146
+	srfN = srfAttach, 58,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610262499953
-	tempExt = 307.20705402160718
-	tempExtUnexp = 307.20543314219492
-	staticPressureAtm = 0.98084331882344089
+	temp = 183.15777784376172
+	tempExt = 183.02908524790797
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -32050,7 +28572,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -32108,7 +28630,7 @@ PART
 	mid = 2789492286
 	persistentId = 1982857354
 	launchID = 1
-	parent = 74
+	parent = 58
 	position = 0,13.784507751464844,1.1870334148406982
 	rotation = -0.707106769,8.70418589E-05,-8.70418444E-05,-0.707106888
 	mirror = 1,1,1
@@ -32121,18 +28643,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 159
-	sym = 160
-	sym = 162
-	srfN = srfAttach, 74,COLLISION15
+	sym = 143
+	sym = 144
+	sym = 146
+	srfN = srfAttach, 58,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610262499953
-	tempExt = 307.20705402160718
-	tempExtUnexp = 307.20543314219492
-	staticPressureAtm = 0.98084324352717123
+	temp = 183.15777784376172
+	tempExt = 183.02908524790797
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -32317,7 +28839,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -32375,7 +28897,7 @@ PART
 	mid = 2789492286
 	persistentId = 3714731437
 	launchID = 1
-	parent = 74
+	parent = 58
 	position = 1.1870331764221191,13.784507751464844,2.9802322387695313E-08
 	rotation = -0.500061572,-0.499938488,0.499938399,-0.500061631
 	mirror = 1,1,1
@@ -32388,18 +28910,18 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 159
-	sym = 160
-	sym = 161
-	srfN = srfAttach, 74,COLLISION15
+	sym = 143
+	sym = 144
+	sym = 145
+	srfN = srfAttach, 58,COLLISION15
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 307.1610262499953
-	tempExt = 307.20705402160718
-	tempExtUnexp = 307.20543314219492
-	staticPressureAtm = 0.98084309293463168
+	temp = 183.15777784376172
+	tempExt = 183.02908524790797
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -32584,7 +29106,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = False
+		animState = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -32636,11 +29158,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True
+	Stage = True, 8801455.34067078
 	Gear = False, 0
-	Light = False, 0
-	RCS = False, 0
-	SAS = True
+	Light = True
+	RCS = True, 8801353.17373659
+	SAS = True, 8789403.13833461
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -32665,11 +29187,16 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
+TARGET
+{
+	type = Vessel
+	vesselID = d6458456-674c-404b-991f-198770e8c0d5
+}
 CTRLSTATE
 {
-	pitch = -0.00022289674
-	yaw = -0.05237291
-	roll = -4.4172834E-06
+	pitch = 0
+	yaw = -1
+	roll = -0.04381992
 	trimPitch = 0
 	trimYaw = 0.09854884
 	trimRoll = 0
@@ -32699,7 +29226,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 8789383.939003313
+		lastUpdate = 8801455.860670764
 		selectedPad = 0
 		Productivity = 0.61318017728532048
 	}
