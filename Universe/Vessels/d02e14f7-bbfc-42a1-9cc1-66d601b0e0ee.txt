@@ -2,31 +2,31 @@ pid = d02e14f7bbfc42a19cc166d601b0e0ee
 persistentId = 853220562
 name = StarChaser
 type = Probe
-sit = ORBITING
+sit = SUB_ORBITAL
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = TSC 39A
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 484.0417599324137
-lct = 8803461.746172689
-lastUT = 8803945.82793262
-distanceTraveled = 693752.363715243
+met = 173040.25666813925
+lct = 8803461.7461726889
+lastUT = 8976502.0228408277
+distanceTraveled = 935882.15936613572
 root = 0
-lat = 0.38477606590083718
-lon = 172.05080561273417
-alt = 203751.75031300436
-hgt = 203751.75
-nrm = -0.327854663,-0.943627179,-0.0455967188
-rot = 0.558716476,0.475418866,-0.42573899,0.529678404
-CoM = 0.00247084908,-2.92964911,-0.00904153939
+lat = 0.043571380563809783
+lon = 89.250905103726382
+alt = 196808.97091345617
+hgt = 196808.969
+nrm = -0.0826170743,-0.517450988,0.851715386
+rot = -0.11790397,0.25114131,-0.802043021,0.52891767
+CoM = 0.00117087364,-2.8894527,-0.0120534897
 stg = 1
 prst = False
-ref = 527883089
-ctrl = False
+ref = 3536927273
+ctrl = True
 PQSMin = 2
 PQSMax = 10
 GroupOverride = 0
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.7840002
+cHdg = -9.785999
+cMod = 0
 ORBIT
 {
-	SMA = 803882.88017717586
-	ECC = 0.0021424359473884249
-	INC = 0.38483497611241224
-	LPE = 5.1828911802202899
-	LAN = 359.79580631760672
-	MNA = 1.4940110107238391
-	EPH = 8803465.5059674159
+	SMA = 556838.52212855429
+	ECC = 0.43948453079983302
+	INC = 0.77170314981657961
+	LPE = 349.68857816604225
+	LAN = 201.97831465225119
+	MNA = 3.4251081104544494
+	EPH = 8976502.0028408282
 	REF = 1
 	IDENT = Squad/Kerbin
 }
@@ -60,7 +60,7 @@ PART
 	launchID = 3
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -76,8 +76,8 @@ PART
 	attN = top, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 115.37230214508665
-	tempExt = 115.48159732026778
+	temp = 182.99670416903149
+	tempExt = 183.46668047708667
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -343,6 +343,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -366,7 +381,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0
+		amount = 15
 		maxAmount = 15
 		flowState = True
 		isTweakable = True
@@ -400,8 +415,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 115.53785274776955
-	tempExt = 115.58165230134468
+	temp = 183.2871543837058
+	tempExt = 183.3695655948232
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -576,6 +591,51 @@ PART
 	MODULE
 	{
 		name = ModuleRestockRCSGlow
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -629,8 +689,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 115.55066790365083
-	tempExt = 115.53474054634228
+	temp = 183.30034412168337
+	tempExt = 183.36618467513031
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -819,6 +879,51 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -858,8 +963,8 @@ PART
 	attN = bottom01, 0
 	mass = 0.075000003
 	shielded = False
-	temp = 115.45983070738222
-	tempExt = 115.62426015210572
+	temp = 183.02984064302558
+	tempExt = 183.79853296110016
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -982,6 +1087,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -1020,8 +1140,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER
 	mass = 0.0450000018
 	shielded = False
-	temp = 115.45611318699977
-	tempExt = 115.58734995284546
+	temp = 182.97891239619395
+	tempExt = 183.63646412660202
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1452,6 +1572,36 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = RSE_Wheels
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -1479,8 +1629,8 @@ PART
 	attN = bottom, 0
 	mass = 0.100000001
 	shielded = False
-	temp = 115.35077286377704
-	tempExt = 115.37348788631897
+	temp = 182.9368248115604
+	tempExt = 183.01609541815827
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1624,6 +1774,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -1650,8 +1815,8 @@ PART
 	srfN = srfAttach, 5,COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 115.30790551063534
-	tempExt = 115.34855725419331
+	temp = 182.61675417806831
+	tempExt = 182.90952817770011
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -1894,6 +2059,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -1933,8 +2113,8 @@ PART
 	srfN = srfAttach, 5,COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 115.33373955274725
-	tempExt = 115.43310188792368
+	temp = 182.61245045097894
+	tempExt = 182.86351387348299
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -2169,6 +2349,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2209,8 +2404,8 @@ PART
 	attN = bottom, 5
 	mass = 0.300000012
 	shielded = False
-	temp = 115.29287207837369
-	tempExt = 115.30765018686103
+	temp = 183.06471052772542
+	tempExt = 183.46596458905822
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2291,7 +2486,7 @@ PART
 		targetAngle = 0
 		inverted = False
 		stagingEnabled = False
-		state = Disengage
+		state = Disabled
 		dockUId = 524809148
 		dockNodeIdx = 0
 		EVENTS
@@ -2374,9 +2569,9 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		aniState = LOCKED
-		animSwitch = False
-		animTime = 1
-		animSpeed = 1
+		animSwitch = True
+		animTime = 0
+		animSpeed = -1
 		deployPercent = 100
 		animationIsDisabled = False
 		stagingEnabled = True
@@ -2464,6 +2659,36 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = RSE_Coupler
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -2491,8 +2716,8 @@ PART
 	attN = bottom, 8
 	mass = 0.25
 	shielded = False
-	temp = 115.27381217855651
-	tempExt = 115.27407388152439
+	temp = 183.36228081342969
+	tempExt = 183.86783667052327
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2614,6 +2839,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2633,7 +2873,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8803461.7461726889
+		LastUpdateTime = 8976502.0228408277
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -2697,7 +2937,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 130.20834721778365
+		amount = 80.325609218400572
 		maxAmount = 180
 		flowState = True
 		isTweakable = True
@@ -2708,7 +2948,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 159.14353255721554
+		amount = 98.175738732531585
 		maxAmount = 220
 		flowState = True
 		isTweakable = True
@@ -2743,8 +2983,8 @@ PART
 	attN = bottom, 9
 	mass = 0.125
 	shielded = False
-	temp = 115.2705413347573
-	tempExt = 115.23930923557768
+	temp = 185.93441733955967
+	tempExt = 185.219704106124
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2866,6 +3106,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2885,7 +3140,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 8803461.7461726889
+		LastUpdateTime = 8976502.0228408277
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -2949,7 +3204,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 65.10417360889183
+		amount = 40.162804609200286
 		maxAmount = 90
 		flowState = True
 		isTweakable = True
@@ -2960,7 +3215,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 79.57176627860777
+		amount = 49.087869366265792
 		maxAmount = 110
 		flowState = True
 		isTweakable = True
@@ -2994,8 +3249,8 @@ PART
 	srfN = srfAttach, 10,Cyl12
 	mass = 0.0500000007
 	shielded = False
-	temp = 115.25050951337448
-	tempExt = 115.2204210782602
+	temp = 183.94876883250737
+	tempExt = 184.41877141753594
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -3115,6 +3370,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -3141,8 +3411,8 @@ PART
 	srfN = srfAttach, 11,COL 11
 	mass = 0.0599999987
 	shielded = False
-	temp = 115.22798395395624
-	tempExt = 115.20504678404647
+	temp = 182.77302140939227
+	tempExt = 183.67002501223098
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -3359,6 +3629,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -3385,8 +3670,8 @@ PART
 	srfN = srfAttach, 11,COL 11
 	mass = 0.0450000018
 	shielded = False
-	temp = 115.24656714326154
-	tempExt = 115.21697769233097
+	temp = 183.24354179064412
+	tempExt = 184.15517128194267
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3849,6 +4134,36 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = RSE_Wheels
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -3875,8 +4190,8 @@ PART
 	srfN = srfAttach, 10,Cyl12
 	mass = 0.0500000007
 	shielded = False
-	temp = 115.2767381683306
-	tempExt = 115.27805215502961
+	temp = 183.95817949188077
+	tempExt = 184.53206001966873
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -3996,6 +4311,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -4022,8 +4352,8 @@ PART
 	srfN = srfAttach, 14,COL 11
 	mass = 0.0599999987
 	shielded = False
-	temp = 115.29207255401741
-	tempExt = 115.26857708150746
+	temp = 182.78351911582956
+	tempExt = 183.97338052275592
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -4248,6 +4578,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -4274,8 +4619,8 @@ PART
 	srfN = srfAttach, 14,COL 11
 	mass = 0.0450000018
 	shielded = False
-	temp = 115.28550790974268
-	tempExt = 115.27556793089998
+	temp = 183.24563401329985
+	tempExt = 184.27704389118611
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4706,6 +5051,36 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = RSE_Wheels
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -4733,8 +5108,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 115.26686609238583
-	tempExt = 115.24936718657366
+	temp = 197.64415599384361
+	tempExt = 195.14024251559397
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5109,6 +5484,83 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		isEnabled = True
+		stagingEnabled = True
+		moduleID = plumeSwitch
+		currentSubtype = default
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_Engines
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartInfo
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -5148,8 +5600,8 @@ PART
 	srfN = srfAttach, 10,Cyl12
 	mass = 0.0299999993
 	shielded = False
-	temp = 115.28379671000874
-	tempExt = 115.28095946883558
+	temp = 185.74637835346954
+	tempExt = 185.53711375858535
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5252,10 +5704,25 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 5.3901578310671425
+		amount = 0.74925638677953543
 		maxAmount = 50
 		flowState = True
 		isTweakable = True
@@ -5289,8 +5756,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 115.4526371624948
-	tempExt = 115.34537788366437
+	temp = 184.3784712366425
+	tempExt = 185.11502215972044
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5465,6 +5932,51 @@ PART
 	MODULE
 	{
 		name = ModuleRestockRCSGlow
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -5518,8 +6030,8 @@ PART
 	srfN = srfAttach, 10,Cyl12
 	mass = 0.0299999993
 	shielded = False
-	temp = 115.28506477706175
-	tempExt = 115.27408871674432
+	temp = 185.74571937450114
+	tempExt = 185.5353211957368
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5622,10 +6134,25 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 5.3901578310671425
+		amount = 0.74925638677953543
 		maxAmount = 50
 		flowState = True
 		isTweakable = True
@@ -5659,8 +6186,8 @@ PART
 	srfN = srfAttach, 20,COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 115.47472390891888
-	tempExt = 115.33553161523521
+	temp = 184.37164284424173
+	tempExt = 185.10763550627462
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5849,6 +6376,51 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -5888,8 +6460,8 @@ PART
 	srfN = srfAttach, 10,Cyl12
 	mass = 0.100000001
 	shielded = False
-	temp = 115.2620580029284
-	tempExt = 115.2305339471461
+	temp = 183.35248635497209
+	tempExt = 184.7093627927492
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -6106,6 +6678,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -6132,8 +6719,8 @@ PART
 	srfN = srfAttach, 10,Cyl12
 	mass = 0.100000001
 	shielded = False
-	temp = 115.26323263763469
-	tempExt = 115.23339843891654
+	temp = 183.36167013228689
+	tempExt = 184.77629905172387
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -6350,6 +6937,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -6377,8 +6979,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 115.2689567764487
-	tempExt = 115.2511329029798
+	temp = 185.89805027331985
+	tempExt = 185.7656733383175
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6567,6 +7169,36 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_Coupler
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleColorChanger
 		isEnabled = True
 		animState = True
@@ -6644,8 +7276,8 @@ PART
 	srfN = srfAttach, 9,Cyl12
 	mass = 0.0199999996
 	shielded = False
-	temp = 115.27324661957164
-	tempExt = 115.26750054571711
+	temp = 183.34563636266094
+	tempExt = 183.63822133514284
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6773,6 +7405,21 @@ PART
 		name = ModulePartVariants
 		isEnabled = True
 		useVariantMass = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6825,8 +7472,8 @@ PART
 	srfN = srfAttach, 9,Cyl12
 	mass = 0.0199999996
 	shielded = False
-	temp = 115.27662436831201
-	tempExt = 115.30724439187274
+	temp = 183.34563979797048
+	tempExt = 183.63824681532387
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6967,6 +7614,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -7006,8 +7668,8 @@ PART
 	srfN = srfAttach, 9,Cyl12
 	mass = 0.0250000004
 	shielded = False
-	temp = 115.26930856434444
-	tempExt = 115.26230223964933
+	temp = 183.19284233161926
+	tempExt = 184.27302441271632
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7084,10 +7746,10 @@ PART
 		isEnabled = True
 		efficiencyMult = 1
 		launchUT = 7905963.0597812897
-		currentRotation = (-0.707106829, 0, 0, 0.707106829)
+		currentRotation = (-0.677644372, 0.202000603, -0.202006638, 0.677633584)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7165,10 +7827,25 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 1.6399999856948853
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
 		launchUT = 7905963.0597812897
@@ -7213,8 +7890,8 @@ PART
 	srfN = srfAttach, 9,Cyl12
 	mass = 0.0250000004
 	shielded = False
-	temp = 115.26982554960726
-	tempExt = 115.27611781375822
+	temp = 183.28150620070392
+	tempExt = 184.48495798627127
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7291,10 +7968,10 @@ PART
 		isEnabled = True
 		efficiencyMult = 1
 		launchUT = 7905963.0597812897
-		currentRotation = (-0.707106829, 0, 0, 0.707106829)
+		currentRotation = (-0.677629352, -0.202005416, 0.202004775, 0.677647769)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7372,10 +8049,25 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 1.6399999856948853
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
 		launchUT = 7905963.0597812897
@@ -7399,12 +8091,12 @@ ACTIONGROUPS
 {
 	Stage = False, 0
 	Gear = False, 0
-	Light = True
-	RCS = False, 0
-	SAS = True
+	Light = True, 0
+	RCS = True, 8976492.26284105
+	SAS = True, 8976490.50284109
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0
+	Custom01 = True, 8976353.34861429
 	Custom02 = False, 0
 	Custom03 = False, 0
 	Custom04 = False, 0
@@ -7428,9 +8120,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.67721784
-	yaw = -0.0011370329
-	roll = -0.0007933557
+	pitch = 0
+	yaw = 0
+	roll = 0
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -7449,7 +8141,7 @@ VESSELMODULES
 	}
 	CommNetVessel
 	{
-		controlState = ProbePartial
+		controlState = ProbeFull
 		canComm = True
 	}
 	VesselDataManager
@@ -7460,15 +8152,21 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 8976502.0228408277
 		selectedPad = 0
 		Productivity = 0
+	}
+	AtmoFxModule
+	{
 	}
 	RPMVesselComputer
 	{
 		PERSISTENT_VARS
 		{
 		}
+	}
+	ShipEffects
+	{
 	}
 	SpaceDustVessel
 	{
