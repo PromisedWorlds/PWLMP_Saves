@@ -1,31 +1,31 @@
-pid = 1a27b1dbf1a44f34a655f24babc3017d
-persistentId = 2987904341
-name = n one (none) (n1) Ship
-type = Ship
+pid = ba2a2157d1db473cb4612c8f5dd93cdb
+persistentId = 1500222402
+name = Stamp-O-Tron Ground Anchor Debris
+type = Debris
 sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = False
-launchedFrom = LaunchPad
-landedAt = 
+vesselSpawning = True
+launchedFrom = 
+landedAt = Mun
 displaylandedAt = 
 splashed = False
-met = 2255669.458962358
-lct = 2828803.1377648073
+met = 489.5380361350253
+lct = 5083983.05869103
 lastUT = 5084472.596727165
-distanceTraveled = 114508.06459498501
+distanceTraveled = 0
 root = 0
-lat = 2.45024786126357
-lon = 81.52325884339709
-alt = 4752.491983057756
-hgt = 4752.492
-nrm = 0.07115422189235687,0.9974621534347534,-0.002537071704864502
-rot = 0.5743323,-0.31362206,-0.34635386,0.67217755
+lat = 2.418462092741678
+lon = 81.52966461374311
+alt = 4755.71676077749
+hgt = 14.702303
+nrm = 0.6062078475952148,0.4822887182235718,0.6323843598365784
+rot = -0.29112965,0.28939387,-0.02276258,-0.91157925
 CoM = 0,0,0
 stg = 0
 prst = False
-ref = 3174225980
+ref = 0
 ctrl = False
 PQSMin = 2
 PQSMax = 9
@@ -34,30 +34,30 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = ASL
-cPch = 0.07799921
-cHdg = 15.606
-cMod = 1
+altDispState = DEFAULT
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 102390.00893670891
-	ECC = 0.9997311662471182
-	INC = 2.4502478612635765
-	LPE = 269.99999572382524
-	LAN = 71.4249393808239
-	MNA = 3.141592653596171
-	EPH = 5084473.816727138
+	SMA = 102391.62284198977
+	ECC = 0.9997311408644769
+	INC = 2.418462092741678
+	LPE = 270
+	LAN = 71.4313408710841
+	MNA = 3.141592653589772
+	EPH = 5084473.796727139
 	REF = 2
 	IDENT = Squad/Mun
 }
 PART
 {
-	name = dockingPort2
-	cid = 4290282554
-	uid = 3174225980
-	mid = 2088509366
-	persistentId = 723726295
-	launchID = 2
+	name = nfs-panel-static-truss-1
+	cid = 4278145934
+	uid = 2918695380
+	mid = 3595448995
+	persistentId = 752528744
+	launchID = 1
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1.00000012
@@ -65,32 +65,30 @@ PART
 	symMethod = Radial
 	istg = -1
 	resPri = 0
-	dstg = 4
+	dstg = 2
 	sqor = -1
-	sepI = 0
+	sepI = -1
 	sidx = -1
-	attm = 0
+	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = top, -1
-	attN = bottom, -1
-	mass = 0.0500000007
+	srfN = srfAttach, -1,COLLIDER
+	mass = 0.00999999978
 	shielded = False
-	temp = 1437.8710938941822
-	tempExt = 1348.189561503752
-	tempExtUnexp = 306.01741932358317
+	temp = 259.40573122937252
+	tempExt = 259.1788058079153
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
-	attached = True
-	autostrutMode = Off
+	attached = False
+	autostrutMode = Heaviest
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = dockingPort2
+	rTrf = nfs-panel-static-truss-1
 	modCost = 0
 	modMass = 0
-	moduleVariantName = 
+	moduleVariantName = Truss
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -150,81 +148,71 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDockingNode
+		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		acquireForceTweak = 100
-		crossfeed = True
-		nodeIsLocked = True
-		targetAngle = 0
-		inverted = False
-		stagingEnabled = False
-		state = Ready
-		dockUId = 3115772645
-		dockNodeIdx = 0
+		efficiencyMult = 1
+		launchUT = 5081538.747286302
+		currentRotation = (-0.707106829, 0, 0, 0.707106709)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 0
+		deployState = BROKEN
+		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleLockedAction
+			ExtendPanelsAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ServoEngageLockAction
+			ExtendAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ServoDisgageLockAction
+			RetractAction
 			{
 				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			UndockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableXFeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableXFeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleXFeedAction
-			{
-				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
-		AXISGROUPS
+		UPGRADESAPPLIED
 		{
-			targetAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
+		}
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		isEnabled = True
+		stagingEnabled = True
+		moduleID = cellSwitch
+		currentSubtype = Advanced
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -234,7 +222,7 @@ PART
 	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = 800
+		packedVolume = 200
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -266,46 +254,47 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleColorChanger
-		isEnabled = True
-		animState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = lookSwitch
-		currentSubtype = Stripe
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartInfo
 		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KopernicusSolarPanel
+		isEnabled = True
+		nominalRate = 8
+		state = Broken
+		trackedSunIndex = 0
+		manualTracking = False
+		launchUT = 5081538.747286302
+		stagingEnabled = True
+		timeEfficCurve
+		{
+			key = 0 1 0 0
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIModuleEVAFlagSwitch
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -320,11 +309,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 2828827.11776483
-	Gear = True, 2829178.59363413
-	Light = True, 2828828.59776483
-	RCS = True, 2828805.95776481
-	SAS = False, 2829423.37363436
+	Stage = False, 3672619.81731283
+	Gear = False, 0
+	Light = True, 5083565.51541659
+	RCS = False, 0
+	SAS = True, 3672710.377706
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -367,28 +356,26 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SuspensionLoadBalancer
+	SystemHeatVessel
 	{
 	}
-	CommNetVessel
-	{
-		controlState = None
-		canComm = False
-	}
-	VesselDataManager
+	VesselModuleSave
 	{
 	}
-	ModuleDynamicBatteryStorage
+	SpaceDustVessel
 	{
 	}
-	ELVesselWorkNet
+	VesselPhysicsHold
 	{
-		lastUpdate = 2861655.6231560116
-		selectedPad = 0
-		Productivity = 0
+		physicsHold = False
+		roboticsOverride = False
 	}
-	AtmoFxModule
+	ParkingBrake
 	{
+		lat = 0
+		lon = 0
+		alt = 0
+		positionSet = False
 	}
 	RPMVesselComputer
 	{
@@ -396,13 +383,22 @@ VESSELMODULES
 		{
 		}
 	}
-	SpaceDustVessel
+	AtmoFxModule
 	{
 	}
-	VesselModuleSave
+	ELVesselWorkNet
+	{
+		lastUpdate = 0
+		selectedPad = 0
+		Productivity = 0
+	}
+	ModuleDynamicBatteryStorage
 	{
 	}
-	SystemHeatVessel
+	VesselDataManager
+	{
+	}
+	SuspensionLoadBalancer
 	{
 	}
 	GoldStrikeVesselModule
