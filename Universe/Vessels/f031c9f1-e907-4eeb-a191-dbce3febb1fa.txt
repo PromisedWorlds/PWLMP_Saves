@@ -6,23 +6,23 @@ sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2846.0599363856018
+met = 2998.579932976514
 lct = 7681567.74489635
-lastUT = 7684413.844832735
+lastUT = 7684566.3448293265
 distanceTraveled = 6012.743971443324
 root = 0
-lat = 13.972899708497376
-lon = 6.474293107281219
-alt = 2353.8751621668926
-hgt = 0.6931383
-nrm = 0.00580684095621109,-0.007761731743812561,-0.9999530911445618
-rot = -0.7183723,-0.30747387,0.5462827,0.30162275
-CoM = -0.0371823683,0.203708887,-0.390424937
+lat = -6.8454921037623846
+lon = -14.289820691892267
+alt = 0.64218280156637775
+hgt = 0.648154199
+nrm = 0.0009354949,-0.0042372942,-0.999990642
+rot = -0.215544343,0.576280773,0.361954361,-0.70030725
+CoM = -0.0372252278,0.203691438,-0.390447408
 stg = 0
 prst = False
 ref = 3789856113
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.4240004
+cHdg = 21.34202
+cMod = 1
 ORBIT
 {
-	SMA = 31197.786060204468
-	ECC = 0.9987139883476074
-	INC = 65.52263500098277
-	LPE = 344.60205319695257
-	LAN = 123.40388357690182
-	MNA = 3.1594880247493995
-	EPH = 7682781.08486923
+	SMA = 30044.339464613146
+	ECC = 0.99708273684370585
+	INC = 6.8453376176054839
+	LPE = 89.984171215660623
+	LAN = 21.138824001263686
+	MNA = 3.1415766536808518
+	EPH = 7684462.9448316377
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -81,8 +81,8 @@ PART
 	attN = node_stack_right, -1
 	mass = 1
 	shielded = False
-	temp = 251.18799194251835
-	tempExt = 251.47062264880552
+	temp = 251.77721475544638
+	tempExt = 251.94959159953646
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -906,7 +906,7 @@ PART
 			{
 				markUT = 7681567.76489635
 				deltaVExpended = 0
-				dragLosses = 2.0731231070784601E-12
+				dragLosses = -1.2059058696735747E-09
 				gravityLosses = 0
 				steeringLosses = 0
 				markLAN = 28.796435280810176
@@ -914,7 +914,7 @@ PART
 				markLongitude = 9.8346041342810988
 				markAltitude = 382.72489036351107
 				markBodyIndex = 3
-				maxDragGees = 1.5000176080520825E-11
+				maxDragGees = 1.5290709882786839E-11
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1039,8 +1039,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 250.96310032009293
-	tempExt = 251.14295252890003
+	temp = 251.72692191746967
+	tempExt = 251.70748389713404
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1132,7 +1132,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,1.25765682E-05,0,1
+		servoTransformRotation = 0,7.92554692E-06,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -1289,8 +1289,8 @@ PART
 	persistentId = 3645935905
 	launchID = 1
 	parent = 1
-	position = -0.99999916553497314,1.8359824077718301E-11,0.37272953987121582
-	rotation = -0.707106769,8.86349881E-06,-8.89320745E-06,0.707106769
+	position = -0.99999916553497314,2.5160930630652167E-11,0.37272953987121582
+	rotation = -0.707106769,5.5753967E-06,-5.6049339E-06,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -1306,8 +1306,8 @@ PART
 	attN = node_stack_top, 1
 	mass = 0.0399999991
 	shielded = False
-	temp = 250.92350079004532
-	tempExt = 251.0956742383222
+	temp = 251.709911958319
+	tempExt = 251.64011878646778
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1383,7 +1383,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = MOTORIZED
-		isGrounded = False
+		isGrounded = True
 		autoFriction = True
 		frictionMultiplier = 1.99965847
 		stagingEnabled = True
@@ -1407,9 +1407,9 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (2.42143052E-08, 2.77161598E-06, -0.0437697172)
+		suspensionPos = (3.7979205E-06, 1.2435019E-05, -0.00833615288)
 		suspensionDefaultPos = (0, 1.49011612E-07, 0.0362277925)
 		autoBoost = 0
 		stagingEnabled = True
@@ -1518,7 +1518,7 @@ PART
 		name = ModuleWheelBrakes
 		isEnabled = True
 		brakeTweakable = 50
-		brakeInput = 0
+		brakeInput = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1597,8 +1597,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 250.95036154247285
-	tempExt = 251.03953640343499
+	temp = 251.72802629204369
+	tempExt = 251.7081506703577
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1690,7 +1690,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-1.48564668E-05,0,1
+		servoTransformRotation = 0,4.94344431E-06,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -1831,8 +1831,8 @@ PART
 	persistentId = 2671060394
 	launchID = 1
 	parent = 3
-	position = 0.99999970197677612,-4.4693211805058031E-12,0.37272739410400391
-	rotation = -0.707106769,-1.05055205E-05,1.05055205E-05,0.707106769
+	position = 0.99999970197677612,4.8805195995704764E-12,0.37272739410400391
+	rotation = -0.707106769,3.49439483E-06,-3.49439483E-06,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -1848,8 +1848,8 @@ PART
 	attN = node_stack_top, 3
 	mass = 0.0399999991
 	shielded = False
-	temp = 250.8856130326738
-	tempExt = 250.76432027494229
+	temp = 251.71128428407923
+	tempExt = 251.64116080476549
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1925,7 +1925,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = MOTORIZED
-		isGrounded = False
+		isGrounded = True
 		autoFriction = True
 		frictionMultiplier = 1.99965847
 		stagingEnabled = True
@@ -1949,9 +1949,9 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (3.87894488E-07, 5.58793545E-07, -0.0437697396)
+		suspensionPos = (-3.9476763E-05, 7.86036253E-06, -0.0106758811)
 		suspensionDefaultPos = (0, 1.49011612E-07, 0.0362277925)
 		autoBoost = 0
 		stagingEnabled = True
@@ -2052,7 +2052,7 @@ PART
 		name = ModuleWheelBrakes
 		isEnabled = True
 		brakeTweakable = 50
-		brakeInput = 0
+		brakeInput = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2131,8 +2131,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 250.98088789213998
-	tempExt = 251.16966859318339
+	temp = 251.72716306922521
+	tempExt = 251.70760820664421
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2224,7 +2224,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,9.93906815E-06,0,1
+		servoTransformRotation = 0,1.02631986E-06,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -2382,7 +2382,7 @@ PART
 	launchID = 1
 	parent = 5
 	position = -0.99999916553497314,0.90000152587890625,0.37272858619689941
-	rotation = -0.707106769,6.99858083E-06,-7.02841317E-06,0.707106769
+	rotation = -0.707106769,6.96222514E-07,-7.26789779E-07,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2398,8 +2398,8 @@ PART
 	attN = node_stack_top, 5
 	mass = 0.0399999991
 	shielded = False
-	temp = 250.94805005183608
-	tempExt = 251.14170154047602
+	temp = 251.71021578960639
+	tempExt = 251.64033894023441
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2475,7 +2475,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = MOTORIZED
-		isGrounded = False
+		isGrounded = True
 		autoFriction = True
 		frictionMultiplier = 1.99965847
 		stagingEnabled = True
@@ -2499,11 +2499,11 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (-7.29223075E-07, 6.70552254E-08, -0.0437697098)
+		suspensionPos = (2.54334009E-05, -3.60533595E-05, -0.00450247154)
 		suspensionDefaultPos = (0, 1.49011612E-07, 0.0362277925)
-		autoBoost = 0
+		autoBoost = 0.797999918
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2610,7 +2610,7 @@ PART
 		name = ModuleWheelBrakes
 		isEnabled = True
 		brakeTweakable = 50
-		brakeInput = 0
+		brakeInput = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2689,8 +2689,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 250.97982246447867
-	tempExt = 251.16338202888727
+	temp = 251.72839452302009
+	tempExt = 251.70833962168356
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2782,7 +2782,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-7.62940363E-06,0,1
+		servoTransformRotation = 0,-2.08057418E-06,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -2924,7 +2924,7 @@ PART
 	launchID = 1
 	parent = 7
 	position = 0.99999970197677612,0.90000152587890625,0.37272739410400391
-	rotation = -0.707106769,-5.39465827E-06,5.39465827E-06,0.707106769
+	rotation = -0.707106769,-1.47132971E-06,1.47132971E-06,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2940,8 +2940,8 @@ PART
 	attN = node_stack_top, 7
 	mass = 0.0399999991
 	shielded = False
-	temp = 250.94662513740806
-	tempExt = 251.1378658429156
+	temp = 251.71174578967214
+	tempExt = 251.64149388321863
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3017,7 +3017,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = MOTORIZED
-		isGrounded = False
+		isGrounded = True
 		autoFriction = True
 		frictionMultiplier = 1.99965847
 		stagingEnabled = True
@@ -3041,11 +3041,11 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (3.0733537E-07, 3.57627869E-07, -0.0437697247)
+		suspensionPos = (-4.30828322E-06, 3.10875475E-05, -0.00627096742)
 		suspensionDefaultPos = (0, 1.49011612E-07, 0.0362277925)
-		autoBoost = 0
+		autoBoost = 0.761999846
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3144,7 +3144,7 @@ PART
 		name = ModuleWheelBrakes
 		isEnabled = True
 		brakeTweakable = 50
-		brakeInput = 0
+		brakeInput = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3223,8 +3223,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 250.95810550742615
-	tempExt = 251.04345560238738
+	temp = 251.73222175528448
+	tempExt = 251.71029597240906
 	tempExtUnexp = 303.8703451558527
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3316,7 +3316,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-2.3737537E-05,0,1
+		servoTransformRotation = 0,6.01634065E-06,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3474,7 +3474,7 @@ PART
 	launchID = 1
 	parent = 9
 	position = -0.99999916553497314,-0.90000152587890625,0.37272953987121582
-	rotation = -0.707106769,-1.68145307E-05,1.67847684E-05,0.707106769
+	rotation = -0.707106769,4.22245739E-06,-4.25321014E-06,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3490,8 +3490,8 @@ PART
 	attN = node_stack_top, 9
 	mass = 0.0399999991
 	shielded = False
-	temp = 250.89490406160775
-	tempExt = 250.77261240181369
+	temp = 251.71650545916879
+	tempExt = 251.64493015534876
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3567,7 +3567,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = MOTORIZED
-		isGrounded = False
+		isGrounded = True
 		autoFriction = True
 		frictionMultiplier = 1.99965847
 		stagingEnabled = True
@@ -3591,9 +3591,9 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (3.63680243E-07, 3.65078449E-07, -0.0437697098)
+		suspensionPos = (1.31874833E-06, 2.96086073E-05, -0.0121207833)
 		suspensionDefaultPos = (0, 1.49011612E-07, 0.0362277925)
 		autoBoost = 0
 		stagingEnabled = True
@@ -3702,7 +3702,7 @@ PART
 		name = ModuleWheelBrakes
 		isEnabled = True
 		brakeTweakable = 50
-		brakeInput = 0
+		brakeInput = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3781,8 +3781,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 250.9577709504419
-	tempExt = 251.04326804684791
+	temp = 251.73361883411656
+	tempExt = 251.74504856712326
 	tempExtUnexp = 303.8703451558527
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3874,7 +3874,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-4.70876967E-06,0,1
+		servoTransformRotation = 0,-1.22375786E-06,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -4016,7 +4016,7 @@ PART
 	launchID = 1
 	parent = 11
 	position = 0.99999970197677612,-0.90000152587890625,0.37272739410400391
-	rotation = -0.707106769,-3.32948639E-06,3.32948639E-06,0.707106769
+	rotation = -0.707106769,-8.66228561E-07,8.66228561E-07,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -4032,8 +4032,8 @@ PART
 	attN = node_stack_top, 11
 	mass = 0.0399999991
 	shielded = False
-	temp = 250.89445734406826
-	tempExt = 250.76967197079946
+	temp = 251.71870245987222
+	tempExt = 251.66313721448117
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4109,7 +4109,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = MOTORIZED
-		isGrounded = False
+		isGrounded = True
 		autoFriction = True
 		frictionMultiplier = 1.99965847
 		stagingEnabled = True
@@ -4133,9 +4133,9 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (9.17349539E-08, 3.50177288E-07, -0.0437697321)
+		suspensionPos = (-2.84629805E-05, 2.40691006E-05, -0.0150737427)
 		suspensionDefaultPos = (0, 1.49011612E-07, 0.0362277925)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4236,7 +4236,7 @@ PART
 		name = ModuleWheelBrakes
 		isEnabled = True
 		brakeTweakable = 50
-		brakeInput = 0
+		brakeInput = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4316,8 +4316,8 @@ PART
 	attN = node_stack_Side2, 14
 	mass = 1.78399992
 	shielded = False
-	temp = 251.09291335347081
-	tempExt = 250.90590021965696
+	temp = 251.80019173586945
+	tempExt = 252.14130702286784
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4332,7 +4332,6 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Enmona Kerman
 	crew = Mersonho Kerman
 	crew = Jean Kerman
 	crew = Gilfield Kerman
@@ -4425,9 +4424,9 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Disabled
 		stagingEnabled = True
-		WheelState = Active
+		WheelState = Disabled
 		EVENTS
 		{
 		}
@@ -4896,8 +4895,8 @@ PART
 	attN = nodeBottom, 13
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.06696020324193
-	tempExt = 250.8232115589623
+	temp = 251.80155971770247
+	tempExt = 251.89505036714755
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5233,8 +5232,8 @@ PART
 	attN = node_stack_bottom, 13
 	mass = 0.200000003
 	shielded = False
-	temp = 251.0609953605443
-	tempExt = 250.91080687925594
+	temp = 251.8110050926918
+	tempExt = 252.2108603421384
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5310,9 +5309,9 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = -62.0833359
+		animSwitch = False
+		animTime = 1
+		animSpeed = 1
 		deployPercent = 100
 		animationIsDisabled = False
 		stagingEnabled = True
@@ -5414,12 +5413,12 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True
+	Stage = True, 7682657.74487199
 	Gear = True, 7681489.86489809
 	Light = False, 0
 	RCS = True, 7204084.82939767
 	SAS = True, 7681529.5848972
-	Brakes = False
+	Brakes = True, 7684439.06483217
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -5443,11 +5442,16 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
+TARGET
+{
+	type = Generic
+	tgtId = New Game Object
+}
 CTRLSTATE
 {
-	pitch = -0.003902454
-	yaw = 1
-	roll = -0.04979354
+	pitch = -1
+	yaw = -0.035512336
+	roll = 0.027854942
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -5477,7 +5481,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 7684462.9648316372
 		selectedPad = 0
 		Productivity = 0.38199904309581278
 	}
