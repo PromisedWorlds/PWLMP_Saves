@@ -4,25 +4,25 @@ name = Minmus ore refiner Working
 type = Lander
 sit = LANDED
 landed = True
-skipGroundPositioning = False
+skipGroundPositioning = True
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = False
 launchedFrom = TSC 39A
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 483375.68972474895
+met = 484027.54971017875
 lct = 12023332.453015408
-lastUT = 12506708.162740156
+lastUT = 12507360.022725586
 distanceTraveled = 0
 root = 0
-lat = -6.858980930277119
-lon = -14.298821149586804
-alt = 2.727963773708325
-hgt = 2.7288218
-nrm = -1.9997358322143555E-05,1.0000001192092896,6.729364395141602E-05
-rot = -0.4871083,-0.5430855,0.56788695,-0.3811669
-CoM = -0.00351119041,4.5801692,-0.000867605209
+lat = -6.8589811475191169
+lon = -14.29882348115683
+alt = 2.7278611633882974
+hgt = 2.72874522
+nrm = 1.47521496E-05,1.00000012,5.84721565E-05
+rot = -0.487071544,-0.543042421,0.567923784,-0.3812204
+CoM = -0.00217580795,2.75235653,-0.000529527664
 stg = 1
 prst = False
 ref = 3661608123
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.2
-cHdg = 0.3
+cPch = 0.02199984
+cHdg = -5.004002
 cMod = 0
 ORBIT
 {
-	SMA = 30046.62435426308
-	ECC = 0.9970815199511808
-	INC = 6.858981505850679
-	LPE = 89.97670961347819
-	LAN = 151.6384122893561
-	MNA = 3.141604384248828
-	EPH = 12506708.102740157
+	SMA = 30046.562831323045
+	ECC = 0.99708301356690754
+	INC = 6.8589814857421985
+	LPE = 90.017374477876658
+	LAN = 157.40650183206731
+	MNA = 3.1415681885356244
+	EPH = 12507360.002725586
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -76,8 +76,8 @@ PART
 	attN = bottom, -1
 	mass = 4.30000019
 	shielded = False
-	temp = 85.448906329203908
-	tempExt = 85.459648944740039
+	temp = 278.75693116601309
+	tempExt = 288.16764603380147
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -169,7 +169,7 @@ PART
 	RESOURCE
 	{
 		name = Ore
-		amount = 0.006244562724726732
+		amount = 3399.2718956944282
 		maxAmount = 3500
 		flowState = True
 		isTweakable = True
@@ -200,12 +200,12 @@ PART
 	attm = 1
 	sameVesselCollision = False
 	srfN = srfAttach, 0,jumbo_COLLIDER
-	attN = top, -1
 	attN = bottom, -1
+	attN = top, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 85.448898094195144
-	tempExt = 85.449913197683145
+	temp = 280.94257410978662
+	tempExt = 285.67756836606139
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -389,8 +389,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 85.448898070331452
-	tempExt = 85.449403038518994
+	temp = 276.62525328001783
+	tempExt = 283.64746456531083
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -465,10 +465,10 @@ PART
 	{
 		name = KASLinkResourceConnector
 		isEnabled = True
-		persistedIsConnectorLocked = True
-		persistedLinkState = Available
-		persistedLinkPartId = 0
-		persistedLinkNodeName = 
+		persistedIsConnectorLocked = False
+		persistedLinkState = Linked
+		persistedLinkPartId = 2055143913
+		persistedLinkNodeName = top
 		stagingEnabled = True
 		EVENTS
 		{
@@ -500,7 +500,7 @@ PART
 		name = KASJointCableBase
 		isEnabled = True
 		coupleWhenLinked = False
-		persistedLinkLength = -1
+		persistedLinkLength = 30
 		stagingEnabled = True
 		EVENTS
 		{
@@ -592,8 +592,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -688,9 +688,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -778,8 +778,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -874,9 +874,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -964,8 +964,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1060,9 +1060,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -1150,8 +1150,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871107091
+	tempExt = 282.10595570739508
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1246,9 +1246,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967178213
+		CoreThermalEnergy = 193979.65734803758
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -1336,8 +1336,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66823023120389
+	tempExt = 282.10667484452091
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1432,9 +1432,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967178213
+		CoreThermalEnergy = 193979.65734803758
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -1522,8 +1522,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1618,9 +1618,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -1708,8 +1708,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1804,9 +1804,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -1894,8 +1894,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1990,9 +1990,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -2080,8 +2080,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2176,9 +2176,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -2266,8 +2266,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872587498
+	tempExt = 282.10595571414729
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2362,9 +2362,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267695871553
+		CoreThermalEnergy = 193979.65807673094
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -2452,8 +2452,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2548,9 +2548,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -2638,8 +2638,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2734,9 +2734,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -2824,8 +2824,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871074792
+	tempExt = 282.1059557072482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2920,9 +2920,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266951079633
+		CoreThermalEnergy = 193979.657331939
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -3010,8 +3010,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871107091
+	tempExt = 282.10595570739508
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3106,9 +3106,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967178213
+		CoreThermalEnergy = 193979.65734803758
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -3196,8 +3196,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665871107091
+	tempExt = 282.10595570739508
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3292,9 +3292,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967178213
+		CoreThermalEnergy = 193979.65734803758
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -3382,8 +3382,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3478,9 +3478,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -3568,8 +3568,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3664,9 +3664,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -3754,8 +3754,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3850,9 +3850,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -3940,8 +3940,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.67075276683022
+	tempExt = 282.1078291720234
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4036,9 +4036,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -4126,8 +4126,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068963246
-	tempExt = 85.448869608686508
+	temp = 275.66665872579443
+	tempExt = 282.10595571411045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4222,9 +4222,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267691982037
+		CoreThermalEnergy = 193979.65807284141
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -4294,8 +4294,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 85.448960304587885
-	tempExt = 85.487775089763829
+	temp = 274.19425358059493
+	tempExt = 278.11161872115139
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4371,7 +4371,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = True
+		isGrounded = False
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -4397,7 +4397,7 @@ PART
 		springTweakable = 2.11999989
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-1.03190096E-07, 1.78813934E-07, 0.395315289)
+		suspensionPos = (-1.54023382E-05, -6.2584877E-07, 0.549692512)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4543,8 +4543,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 85.448960304664155
-	tempExt = 85.487775137314102
+	temp = 273.82168903047352
+	tempExt = 277.71040129250997
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4620,7 +4620,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = True
+		isGrounded = False
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -4646,7 +4646,7 @@ PART
 		springTweakable = 2.11999989
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-1.51023471E-07, 1.1920929E-07, 0.395887822)
+		suspensionPos = (-5.44394497E-05, 5.00679016E-06, 0.549819589)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4792,8 +4792,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 85.448960301148801
-	tempExt = 85.487772945863767
+	temp = 273.62614054601636
+	tempExt = 277.41661953027165
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4869,7 +4869,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = True
+		isGrounded = False
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -4895,7 +4895,7 @@ PART
 		springTweakable = 2.11999989
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-2.0672843E-07, -2.68220901E-07, 0.396171451)
+		suspensionPos = (-3.63672734E-05, -5.94556332E-05, 0.549736261)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -5041,8 +5041,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 85.448960302301273
-	tempExt = 85.487773664317601
+	temp = 273.62630245042624
+	tempExt = 277.41686192843281
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5118,7 +5118,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = True
+		isGrounded = False
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -5144,7 +5144,7 @@ PART
 		springTweakable = 2.11999989
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-3.73472005E-07, -4.02331352E-07, 0.395600051)
+		suspensionPos = (-3.59421319E-05, 6.21080399E-05, 0.549708128)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -5289,8 +5289,8 @@ PART
 	attN = bottom, 0
 	mass = 0.5
 	shielded = False
-	temp = 85.448893751010957
-	tempExt = 85.44677977268222
+	temp = 293.23238308839507
+	tempExt = 286.58020471271027
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5362,7 +5362,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9998.402504864145
+		amount = 9998.1787109375
 		maxAmount = 10000
 		flowState = True
 		isTweakable = True
@@ -5416,8 +5416,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.08368867085215
+	tempExt = 284.78763715359594
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5512,9 +5512,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967280557
+		CoreThermalEnergy = 193979.65734813994
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -5602,8 +5602,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931476285
+	tempExt = 284.75800774320271
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5698,9 +5698,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967280557
+		CoreThermalEnergy = 193979.65734813994
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -5788,8 +5788,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.11494542619005
+	tempExt = 284.86461415514731
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5884,9 +5884,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267698339339
+		CoreThermalEnergy = 193979.65807919871
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -5974,8 +5974,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907932404714
+	tempExt = 284.75800774640135
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6070,9 +6070,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267698339339
+		CoreThermalEnergy = 193979.65807919871
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -6160,8 +6160,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07962869019917
+	tempExt = 284.7581977796728
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6256,9 +6256,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266966287927
+		CoreThermalEnergy = 193979.65734714729
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -6346,8 +6346,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931475069
+	tempExt = 284.75800774319856
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6442,9 +6442,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266966287927
+		CoreThermalEnergy = 193979.65734714729
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -6532,8 +6532,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931475069
+	tempExt = 284.75800774319856
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6628,9 +6628,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266966287927
+		CoreThermalEnergy = 193979.65734714729
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -6718,8 +6718,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931460932
+	tempExt = 284.75800774315002
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6814,9 +6814,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266955072402
+		CoreThermalEnergy = 193979.65733593178
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -6904,8 +6904,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931460932
+	tempExt = 284.75800774315002
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7000,9 +7000,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266955072402
+		CoreThermalEnergy = 193979.65733593178
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -7090,8 +7090,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931460932
+	tempExt = 284.75800774315002
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7186,9 +7186,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266955072402
+		CoreThermalEnergy = 193979.65733593178
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -7276,8 +7276,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931460932
+	tempExt = 284.75800774315002
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7372,9 +7372,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266955072402
+		CoreThermalEnergy = 193979.65733593178
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -7462,8 +7462,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931475069
+	tempExt = 284.75800774319856
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7558,9 +7558,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266966287927
+		CoreThermalEnergy = 193979.65734714729
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -7648,8 +7648,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931475069
+	tempExt = 284.75800774319856
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7744,9 +7744,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266966287927
+		CoreThermalEnergy = 193979.65734714729
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -7834,8 +7834,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931475069
+	tempExt = 284.75800774319856
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7930,9 +7930,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266966287927
+		CoreThermalEnergy = 193979.65734714729
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -8020,8 +8020,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907932404714
+	tempExt = 284.75800774640135
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8116,9 +8116,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267698339339
+		CoreThermalEnergy = 193979.65807919871
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -8206,8 +8206,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907932404714
+	tempExt = 284.75800774640135
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8302,9 +8302,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.267698339339
+		CoreThermalEnergy = 193979.65807919871
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -8392,8 +8392,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931476285
+	tempExt = 284.75800774320271
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8488,9 +8488,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967280557
+		CoreThermalEnergy = 193979.65734813994
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -8578,8 +8578,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.10354706873699
+	tempExt = 284.81923253465317
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8674,9 +8674,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967280557
+		CoreThermalEnergy = 193979.65734813994
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -8764,8 +8764,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.08992259917829
+	tempExt = 284.78436381541059
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8860,9 +8860,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967280557
+		CoreThermalEnergy = 193979.65734813994
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -8950,8 +8950,8 @@ PART
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 85.448898068266814
-	tempExt = 85.448021421198902
+	temp = 282.07907931476285
+	tempExt = 284.75800774320271
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9046,9 +9046,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.266967280557
+		CoreThermalEnergy = 193979.65734813994
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -9117,8 +9117,8 @@ PART
 	attN = bottom, 27
 	mass = 0.850000024
 	shielded = False
-	temp = 85.448898068075394
-	tempExt = 85.448020931035046
+	temp = 296.87811685925203
+	tempExt = 294.38185043194409
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -9971,13 +9971,13 @@ PART
 				}
 				Kp
 				{
-					_val = 0.125
-					_text = 0.125
+					_val = 0.12492219800962338
+					_text = 0.124922198009623
 				}
 				Ki
 				{
-					_val = 0.070000000000000007
-					_text = 0.07
+					_val = 0.0073611111111111091
+					_text = 0.00736111111111111
 				}
 				Kd
 				{
@@ -10015,10 +10015,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 9415790.0421659835
-				deltaVExpended = 0
+				deltaVExpended = NaN
 				dragLosses = 0
 				gravityLosses = 0
-				steeringLosses = 0
+				steeringLosses = NaN
 				markLAN = 328.77999124551104
 				markLatitude = -6.8589668627122489
 				markLongitude = -14.298790598503217
@@ -10075,7 +10075,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 79.98722003891316
+		amount = 79.98543101828696
 		maxAmount = 80
 		flowState = True
 		isTweakable = True
@@ -10110,8 +10110,8 @@ PART
 	attN = bottom, 48
 	mass = 4.25
 	shielded = False
-	temp = 85.448898068279746
-	tempExt = 85.448021404225926
+	temp = 300.7919866083534
+	tempExt = 295.87381322400012
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10202,9 +10202,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10237,7 +10237,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10270,7 +10270,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10303,7 +10303,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10334,9 +10334,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 977505.49926757813
+		CoreThermalEnergy = 3376916.2506103516
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10384,7 +10384,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10417,7 +10417,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10450,7 +10450,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10483,7 +10483,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10516,7 +10516,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -10569,8 +10569,8 @@ PART
 	attN = bottom, 49
 	mass = 1
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.448021419218875
+	temp = 291.95122489190447
+	tempExt = 292.47707645819605
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10676,7 +10676,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 9415790.0421659835
+		LastUpdateTime = 12507360.022725586
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -10740,7 +10740,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 44.23578422341409
+		amount = 85.573727961352432
 		maxAmount = 720
 		flowState = True
 		isTweakable = True
@@ -10751,7 +10751,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 54.065961099376864
+		amount = 54.247898554372512
 		maxAmount = 880
 		flowState = True
 		isTweakable = True
@@ -10786,8 +10786,8 @@ PART
 	attN = bottom, 50
 	mass = 0.159999996
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.448021289978797
+	temp = 284.23461763245678
+	tempExt = 284.13834264418932
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11019,8 +11019,8 @@ PART
 	attN = bottom, 51
 	mass = 2
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.448019604666285
+	temp = 276.6948328778609
+	tempExt = 276.78064490666173
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11126,7 +11126,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 9415790.0421659835
+		LastUpdateTime = 12507360.022725586
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -11190,7 +11190,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 1440
+		amount = 1298.8816505679747
 		maxAmount = 1440
 		flowState = True
 		isTweakable = True
@@ -11201,7 +11201,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 1760
+		amount = 1627.7957838065518
 		maxAmount = 1760
 		flowState = True
 		isTweakable = True
@@ -11237,8 +11237,8 @@ PART
 	attN = bottom, -1
 	mass = 0.25
 	shielded = False
-	temp = 85.448898068123313
-	tempExt = 85.447986643307772
+	temp = 275.12610608911189
+	tempExt = 275.63014889382117
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11379,7 +11379,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 9415790.0421659835
+		LastUpdateTime = 12507360.022725586
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -11443,7 +11443,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 180
+		amount = 162.36020632099684
 		maxAmount = 180
 		flowState = True
 		isTweakable = True
@@ -11454,7 +11454,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 220
+		amount = 203.47447297581897
 		maxAmount = 220
 		flowState = True
 		isTweakable = True
@@ -11488,8 +11488,8 @@ PART
 	srfN = srfAttach, 53,Cyl12
 	mass = 0.899999976
 	shielded = False
-	temp = 85.448897096311484
-	tempExt = 85.447387005047545
+	temp = 273.69970328590171
+	tempExt = 274.30142489585046
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11927,8 +11927,8 @@ PART
 	attN = bottom, -1
 	mass = 0.25
 	shielded = False
-	temp = 85.448898068123313
-	tempExt = 85.447986643307772
+	temp = 275.1354907592509
+	tempExt = 275.7097764281126
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12069,7 +12069,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 9415790.0421659835
+		LastUpdateTime = 12507360.022725586
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -12133,7 +12133,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 180
+		amount = 162.36020632099684
 		maxAmount = 180
 		flowState = True
 		isTweakable = True
@@ -12144,7 +12144,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 220
+		amount = 203.47447297581897
 		maxAmount = 220
 		flowState = True
 		isTweakable = True
@@ -12178,8 +12178,8 @@ PART
 	srfN = srfAttach, 55,Cyl12
 	mass = 0.899999976
 	shielded = False
-	temp = 85.448897096311484
-	tempExt = 85.447387005047545
+	temp = 273.72143957825296
+	tempExt = 274.36032050622936
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12610,8 +12610,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.44802142113096
+	temp = 291.85891462864777
+	tempExt = 292.07367960651112
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12817,8 +12817,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.44802142113096
+	temp = 291.85379758862967
+	tempExt = 291.98128523306923
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13024,8 +13024,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.44802142113096
+	temp = 291.85379758862967
+	tempExt = 291.98128523306923
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13231,8 +13231,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 85.448898068283455
-	tempExt = 85.44802142113096
+	temp = 291.86218036702945
+	tempExt = 292.13276194476134
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13437,8 +13437,8 @@ PART
 	srfN = srfAttach, 48,BOXOLLIDER
 	mass = 0.675000012
 	shielded = False
-	temp = 85.448896294816564
-	tempExt = 85.447785728074578
+	temp = 267.19001085225347
+	tempExt = 267.02467021498995
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13546,11 +13546,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = 0
+		totalSystemFlux = -4.41357613
 		currentLoopID = 0
-		currentLoopTemperature = 22.4686069
+		currentLoopTemperature = 2.70007014
 		nominalLoopTemperature = 2.70000005
-		currentLoopFlux = 0
+		currentLoopFlux = -17.6543045
 		stagingEnabled = True
 		EVENTS
 		{
@@ -13637,8 +13637,8 @@ PART
 	srfN = srfAttach, 48,BOXOLLIDER
 	mass = 0.675000012
 	shielded = False
-	temp = 85.448896294817445
-	tempExt = 85.447785728075488
+	temp = 271.74361420130077
+	tempExt = 271.82111661727515
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13746,11 +13746,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = 0
+		totalSystemFlux = -4.41357613
 		currentLoopID = 0
-		currentLoopTemperature = 22.4686069
+		currentLoopTemperature = 2.70007014
 		nominalLoopTemperature = 2.70000005
-		currentLoopFlux = 0
+		currentLoopFlux = -17.6543045
 		stagingEnabled = True
 		EVENTS
 		{
@@ -13837,8 +13837,8 @@ PART
 	srfN = srfAttach, 48,BOXOLLIDER
 	mass = 0.675000012
 	shielded = False
-	temp = 85.448896294816791
-	tempExt = 85.447785728074791
+	temp = 265.08912011901629
+	tempExt = 264.81446752584236
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13946,11 +13946,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = 0
+		totalSystemFlux = -4.41357613
 		currentLoopID = 0
-		currentLoopTemperature = 22.4686069
+		currentLoopTemperature = 2.70007014
 		nominalLoopTemperature = 2.70000005
-		currentLoopFlux = 0
+		currentLoopFlux = -17.6543045
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14037,8 +14037,8 @@ PART
 	srfN = srfAttach, 48,BOXOLLIDER
 	mass = 0.675000012
 	shielded = False
-	temp = 85.448896294816791
-	tempExt = 85.44778572807482
+	temp = 265.09307373069532
+	tempExt = 264.81841525256425
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14146,11 +14146,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = 0
+		totalSystemFlux = -4.41357613
 		currentLoopID = 0
-		currentLoopTemperature = 22.4686069
+		currentLoopTemperature = 2.70007014
 		nominalLoopTemperature = 2.70000005
-		currentLoopFlux = 0
+		currentLoopFlux = -17.6543045
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14237,8 +14237,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 85.44892997301038
-	tempExt = 85.474320741536218
+	temp = 417.50420456627103
+	tempExt = 399.83410750563769
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14331,7 +14331,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14365,7 +14365,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14399,7 +14399,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14461,9 +14461,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 287531.005859375
+		CoreThermalEnergy = 495805.33866882324
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14536,8 +14536,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 85.448929973837906
-	tempExt = 85.474321370505521
+	temp = 417.07367492726638
+	tempExt = 398.97758533969005
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14630,7 +14630,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14664,7 +14664,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14698,7 +14698,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14760,9 +14760,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 287530.94482421875
+		CoreThermalEnergy = 495805.33866882324
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14835,8 +14835,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 85.448929975558798
-	tempExt = 85.474322678425551
+	temp = 416.82306147466676
+	tempExt = 398.76010359177752
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14929,7 +14929,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14963,7 +14963,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -14997,7 +14997,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -15059,9 +15059,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 287530.94482421875
+		CoreThermalEnergy = 495805.33866882324
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -15134,8 +15134,8 @@ PART
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 85.448929975157668
-	tempExt = 85.474322373558948
+	temp = 416.7748178565534
+	tempExt = 398.83142480278906
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15228,7 +15228,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -15262,7 +15262,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -15296,7 +15296,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -15358,9 +15358,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 287531.005859375
+		CoreThermalEnergy = 495805.33866882324
 		stagingEnabled = True
-		lastUpdateTime = 9187861.920620162
+		lastUpdateTime = 12507360.022725586
 		EVENTS
 		{
 		}
@@ -15415,8 +15415,8 @@ ACTIONGROUPS
 	SAS = True, 9187734.70370753
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = True
-	Custom02 = True
+	Custom01 = True, 0
+	Custom02 = True, 12507222.6427287
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -15439,9 +15439,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.00033067894
-	yaw = -3.710253E-05
-	roll = -9.003535E-07
+	pitch = -0.0032519165
+	yaw = -0.00438315654
+	roll = -9.66653988E-06
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -15471,7 +15471,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 9415790.0421659835
+		lastUpdate = 12507360.022725586
 		selectedPad = 0
 		Productivity = 0
 	}
