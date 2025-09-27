@@ -1,6 +1,6 @@
-pid = 026acca7ecd0410fb4f823e13073ce8f
-persistentId = 3312280885
-name = Orb8ter Debris
+pid = e1928ef5e04d42fd8292e3a217d75d8c
+persistentId = 1107031590
+name = Orb8ter Probe Debris
 type = Debris
 sit = LANDED
 landed = True
@@ -8,22 +8,22 @@ skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = TSC 39A
-landedAt = LaunchpadFX
-displaylandedAt = LaunchpadFX
+landedAt = 
+displaylandedAt = 
 splashed = False
-met = 674141.5697519854
-lct = 7231846.570028744
-lastUT = 7905988.159780729
-distanceTraveled = 0
+met = 1.1599999740719795
+lct = 7683731.580731935
+lastUT = 7683732.780731908
+distanceTraveled = 3.852924057295066
 root = 0
-lat = 0.013238370262650614
-lon = -74.56192641988414
-alt = 77.28332342545036
-hgt = 2.9974837
-nrm = -0.00027748942375183105,0.9999998807907104,-0.0004361867904663086
-rot = -0.34709924,0.50099015,-0.6168984,0.49796328
+lat = -0.8373029972158929
+lon = 20.626766847772526
+alt = 1134.135406294139
+hgt = 0.80262345
+nrm = 0.6130380034446716,0.04803547263145447,0.7885918617248535
+rot = 0.76530975,0.012652283,0.59201616,-0.2523049
 CoM = 0,0,0
-stg = 3
+stg = 0
 prst = False
 ref = 0
 ctrl = False
@@ -40,52 +40,52 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300821.01954926434
-	ECC = 0.9947983828496229
-	INC = 0.013238375612262826
-	LPE = 270
-	LAN = 241.21281649332678
-	MNA = 3.1415926535897976
-	EPH = 7905991.719780649
+	SMA = 301291.56173831143
+	ECC = 0.9951928737341239
+	INC = 2.2120624970733234
+	LPE = 157.7473496670322
+	LAN = 335.60494487782336
+	MNA = 3.145719779409553
+	EPH = 7683731.660731933
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = launchClamp1
-	cid = 4287630646
-	uid = 2249428675
+	name = rcsblock-aero-5way-1
+	cid = 4287278158
+	uid = 1016852429
 	mid = 981859546
-	persistentId = 3389131632
+	persistentId = 2927825685
 	launchID = 3
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = -1
 	resPri = 0
 	dstg = 6
-	sqor = 3
-	sepI = 3
-	sidx = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER64
-	mass = 0.100000001
+	srfN = srfAttach, -1,COLLIDER
+	mass = 0.0500000007
 	shielded = False
-	temp = 300.64293141174016
-	tempExt = 301.21178622646454
-	tempExtUnexp = 301.2114131096842
-	staticPressureAtm = 0.98859973816173974
-	expt = 0.100000001
+	temp = 259.16624128105855
+	tempExt = 263.33830684886885
+	tempExtUnexp = 263.33046765348723
+	staticPressureAtm = 0.84299188703776518
+	expt = 0.5
 	state = 1
 	PreFailState = 0
 	attached = False
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = launchClamp1
+	rTrf = rcsblock-aero-5way-1
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -148,88 +148,20 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
+		name = ModuleRCSFX
 		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleRestockLaunchClamp
-		isEnabled = True
-		scaleFactor = 1.81626415
-		height = 3.63252831
-		stagingEnabled = True
-		towerRot = -4.00229041E-08,0.923879325,9.66236371E-08,-0.382683933
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ReleaseClamp
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
 		EVENTS
 		{
 		}
@@ -241,15 +173,54 @@ PART
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
-		AXISGROUPS
+		UPGRADESAPPLIED
 		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 50
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWaterfallFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -258,12 +229,12 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
+	Stage = True, 7231846.57002874
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 7231817.93002938
-	Brakes = False, 0
+	RCS = True, 7683502.90418453
+	SAS = True, 7682336.12097187
+	Brakes = True, 7681215.98099691
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -337,7 +308,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 7683731.6607319331
 		selectedPad = 0
 		Productivity = 0
 	}
