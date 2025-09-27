@@ -2,7 +2,7 @@ pid = ab4ed02d74e14e0f9b9a333aec6aa205
 persistentId = 999370312
 name = far probe
 type = Relay
-sit = ORBITING
+sit = ESCAPING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
@@ -11,19 +11,19 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2092024.1955459397
-lct = 9435081.621397538
-lastUT = 11529105.816943478
-distanceTraveled = 4762488.94983966
+met = 2587617.4470888972
+lct = 9435081.6213975381
+lastUT = 12022699.108486434
+distanceTraveled = 31100839.265768688
 root = 0
-lat = -0.09456165655645292
-lon = -120.28058951607356
-alt = 12999167776.877567
-hgt = 1.2999168E+10
-nrm = -0.37340977787971497,-0.6753709316253662,-0.6359553337097168
-rot = 0.4246122,0.2830241,-0.052632414,0.858389
-CoM = 0.0032877028,-10.6017418,-0.016254425
-stg = 1
+lat = 0.2987959084176437
+lon = -2.2406417107109031
+alt = 12993680287.259634
+hgt = 1.29936804E+10
+nrm = -0.362541378,-0.787264526,0.498776913
+rot = 0.348353833,-0.787451744,-0.27825135,-0.425611973
+CoM = 0.0235099569,0.536904693,-0.116646349
+stg = 0
 prst = False
 ref = 2141945519
 ctrl = True
@@ -35,20 +35,20 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.2
-cHdg = 0.3
+cPch = 0.3600009
+cHdg = -4.893992
 cMod = 0
 ORBIT
 {
-	SMA = 13995419104.522036
-	ECC = 0.06010494947195743
-	INC = 0.09500350167060564
-	LPE = 244.65323957770232
-	LAN = 8.446392211878788
-	MNA = 0.10078583541914712
-	EPH = 11137999.591250116
+	SMA = -6838078413.9839191
+	ECC = 2.4215658873777057
+	INC = 41.568518667556475
+	LPE = 51.897395074776142
+	LAN = 296.3383624215686
+	MNA = -1.0222057055700509
+	EPH = 12022699.088486435
 	REF = 0
-	IDENT = Squad/Kerbin
+	IDENT = Squad/Sun
 }
 PART
 {
@@ -76,8 +76,8 @@ PART
 	attN = top, 17
 	mass = 0.200000003
 	shielded = False
-	temp = 284.70995864096284
-	tempExt = 260.9985743813528
+	temp = 250.46843869684395
+	tempExt = 250.69627925929109
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0
@@ -355,6 +355,9 @@ PART
 			0 = Flight,Kerbin
 			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
+			0 = Flyby,Sun
+			0 = Orbit,Sun
+			0 = Escape,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -363,7 +366,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 63827.5
+		amount = 1000
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -396,8 +399,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 1.10000002
 	shielded = False
-	temp = 282.00420639570859
-	tempExt = 258.34913863306406
+	temp = 252.05080972014576
+	tempExt = 252.4261996859351
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -474,7 +477,7 @@ PART
 		isEnabled = True
 		currentRotation = (0, 0, 0.1305262, 0.991444886)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
 		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
@@ -528,8 +531,8 @@ PART
 	attN = bottom, -1
 	mass = 0.150000006
 	shielded = False
-	temp = 284.77079841335041
-	tempExt = 261.30639240414945
+	temp = 250.22063819743036
+	tempExt = 250.33668142389661
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -706,6 +709,9 @@ PART
 			0 = Flight,Kerbin
 			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
+			0 = Flyby,Sun
+			0 = Orbit,Sun
+			0 = Escape,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -752,8 +758,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 284.5848830914104
-	tempExt = 261.254317334012
+	temp = 250.37562429360585
+	tempExt = 250.40517932177778
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -893,8 +899,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 284.5848830914104
-	tempExt = 261.254317334012
+	temp = 250.37562429360585
+	tempExt = 250.40517932177778
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1037,8 +1043,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0419999994
 	shielded = False
-	temp = 284.92583236591332
-	tempExt = 256.64999347114326
+	temp = 250.35069425365725
+	tempExt = 248.9496464768952
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1114,9 +1120,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1140,11 +1146,11 @@ PART
 		CurrentThrottle = 0
 		CurrentElectricalGeneration = 0
 		MaxElectricalGeneration = 0
-		InternalCoreTemperature = 1300
+		InternalCoreTemperature = 4.85948801
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 1300
 		FirstLoad = False
-		LastUpdateTime = 11735105.816943478
+		LastUpdateTime = 12022699.108486434
 		CoreIntegrity = 0
 		stagingEnabled = True
 		EVENTS
@@ -1342,8 +1348,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0419999994
 	shielded = False
-	temp = 284.92657469937109
-	tempExt = 256.6732832632452
+	temp = 250.35380676124981
+	tempExt = 248.97670210759063
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1419,9 +1425,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1445,11 +1451,11 @@ PART
 		CurrentThrottle = 0
 		CurrentElectricalGeneration = 0
 		MaxElectricalGeneration = 0
-		InternalCoreTemperature = 1300
+		InternalCoreTemperature = 4.85948801
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 1300
 		FirstLoad = False
-		LastUpdateTime = 11735105.816943478
+		LastUpdateTime = 12022699.108486434
 		CoreIntegrity = 0
 		stagingEnabled = True
 		EVENTS
@@ -1647,8 +1653,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0419999994
 	shielded = False
-	temp = 284.92607793959803
-	tempExt = 256.68892416681086
+	temp = 250.35069431281332
+	tempExt = 248.94964674087322
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1724,9 +1730,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1750,11 +1756,11 @@ PART
 		CurrentThrottle = 0
 		CurrentElectricalGeneration = 0
 		MaxElectricalGeneration = 0
-		InternalCoreTemperature = 1300
+		InternalCoreTemperature = 4.85948801
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 1300
 		FirstLoad = False
-		LastUpdateTime = 11735105.816943478
+		LastUpdateTime = 12022699.108486434
 		CoreIntegrity = 0
 		stagingEnabled = True
 		EVENTS
@@ -1904,7 +1910,7 @@ PART
 	RESOURCE
 	{
 		name = DepletedFuel
-		amount = 3.633748364895922E-06
+		amount = 3.6337483648959221E-06
 		maxAmount = 2.5
 		flowState = True
 		isTweakable = False
@@ -1915,7 +1921,7 @@ PART
 	RESOURCE
 	{
 		name = EnrichedUranium
-		amount = 2.499996366252758
+		amount = 2.4999963662527578
 		maxAmount = 2.5
 		flowState = True
 		isTweakable = True
@@ -1952,8 +1958,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0419999994
 	shielded = False
-	temp = 284.92582842979465
-	tempExt = 256.64991333590126
+	temp = 250.35068460833395
+	tempExt = 248.94964244032266
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2029,9 +2035,9 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2055,11 +2061,11 @@ PART
 		CurrentThrottle = 0
 		CurrentElectricalGeneration = 0
 		MaxElectricalGeneration = 0
-		InternalCoreTemperature = 1300
+		InternalCoreTemperature = 4.85948801
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 1300
 		FirstLoad = False
-		LastUpdateTime = 11735105.816943478
+		LastUpdateTime = 12022699.108486434
 		CoreIntegrity = 0
 		stagingEnabled = True
 		EVENTS
@@ -2220,7 +2226,7 @@ PART
 	RESOURCE
 	{
 		name = EnrichedUranium
-		amount = 2.499996366275648
+		amount = 2.4999963662756479
 		maxAmount = 2.5
 		flowState = True
 		isTweakable = True
@@ -2256,8 +2262,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.0240000002
 	shielded = False
-	temp = 280.38050360852515
-	tempExt = 262.75431954031217
+	temp = 243.90619969813093
+	tempExt = 243.73186956582455
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2399,11 +2405,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -8.96177959
+		totalSystemFlux = -0.28547433
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2458,8 +2464,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.0240000002
 	shielded = False
-	temp = 280.36366780469672
-	tempExt = 262.74490592248299
+	temp = 243.89224911850022
+	tempExt = 243.71801236862325
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2601,11 +2607,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -8.96177959
+		totalSystemFlux = -0.28547433
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2660,8 +2666,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.0240000002
 	shielded = False
-	temp = 280.36366780469672
-	tempExt = 262.74490592248299
+	temp = 243.8913221606924
+	tempExt = 243.7170916156567
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2803,11 +2809,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -8.96177959
+		totalSystemFlux = -0.28547433
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2862,8 +2868,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.0240000002
 	shielded = False
-	temp = 280.36366780469672
-	tempExt = 262.74490592248299
+	temp = 243.8913221606924
+	tempExt = 243.7170916156567
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3005,11 +3011,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -8.96177959
+		totalSystemFlux = -0.28547433
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3064,8 +3070,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.00300000003
 	shielded = False
-	temp = 279.23602557156886
-	tempExt = 262.07364922413086
+	temp = 242.44048504754949
+	tempExt = 242.32713594851035
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3207,11 +3213,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -1.19490397
+		totalSystemFlux = -0.0380632468
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3266,8 +3272,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.00300000003
 	shielded = False
-	temp = 279.17464037962759
-	tempExt = 262.03963130237719
+	temp = 242.32833908535289
+	tempExt = 242.21641531613531
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3409,11 +3415,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -1.19490397
+		totalSystemFlux = -0.0380632468
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3468,8 +3474,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.00300000003
 	shielded = False
-	temp = 279.17464037962759
-	tempExt = 262.03963130237719
+	temp = 242.32833908535289
+	tempExt = 242.21641531613531
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3611,11 +3617,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -1.19490397
+		totalSystemFlux = -0.0380632468
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3670,8 +3676,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.00300000003
 	shielded = False
-	temp = 279.17464037962759
-	tempExt = 262.03963130237719
+	temp = 242.32833908535289
+	tempExt = 242.21641531613531
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3813,11 +3819,11 @@ PART
 		name = ModuleSystemHeat
 		isEnabled = True
 		totalSystemTemperature = 0
-		totalSystemFlux = -1.19490397
+		totalSystemFlux = -0.0380632468
 		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
+		currentLoopTemperature = 4.75790548
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1.29427981
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3870,8 +3876,8 @@ PART
 	attN = bottom, 0
 	mass = 1.75
 	shielded = False
-	temp = 284.78477470809122
-	tempExt = 261.50037962998334
+	temp = 250.12651765695406
+	tempExt = 250.08012395077756
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3946,7 +3952,7 @@ PART
 	{
 		name = SCANsat
 		isEnabled = True
-		scanning = False
+		scanning = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4053,8 +4059,8 @@ PART
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	mass = 0.762499988
 	shielded = False
-	temp = 284.9342112277966
-	tempExt = 257.79810496807335
+	temp = 250.24553306633553
+	tempExt = 250.0071957525482
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4278,8 +4284,8 @@ PART
 	attN = bottom, 28
 	mass = 0.100000001
 	shielded = False
-	temp = 284.83593449683087
-	tempExt = 261.24033691541661
+	temp = 250.05439341032522
+	tempExt = 249.85322076361328
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4455,8 +4461,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4606,8 +4612,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4757,8 +4763,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4908,8 +4914,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5059,8 +5065,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5210,8 +5216,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5361,8 +5367,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5512,8 +5518,8 @@ PART
 	srfN = srfAttach, 19,COLLIDER
 	mass = 0.0199999996
 	shielded = False
-	temp = 284.64388328835969
-	tempExt = 261.18862263348365
+	temp = 249.93656387885133
+	tempExt = 249.69647108003176
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5654,12 +5660,12 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 29
+	attN = top, -1
 	attN = bottom, 19
 	mass = 0.0399999991
 	shielded = False
-	temp = 285.05275239048785
-	tempExt = 261.31931237790923
+	temp = 249.99388449953025
+	tempExt = 249.70028875110782
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5803,4298 +5809,6 @@ PART
 }
 PART
 {
-	name = Decoupler.2
-	cid = 4292234202
-	uid = 2891330804
-	mid = 3556785419
-	persistentId = 1145804598
-	launchID = 1
-	parent = 28
-	position = 0,-0.91754913330078125,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 1
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = top, 28
-	attN = bottom, 30
-	mass = 0.159999996
-	shielded = False
-	temp = 285.21318793435819
-	tempExt = 261.38204644793905
-	tempExtUnexp = 298.25861010306483
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = Decoupler.2
-	modCost = 0
-	modMass = 0
-	moduleVariantName = Metallic
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = restock-adapter-skeletal-25-375-1
-	cid = 4292273826
-	uid = 1952327320
-	mid = 3556785419
-	persistentId = 3031783138
-	launchID = 1
-	parent = 29
-	position = 0,-1.6935501098632813,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 2
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = top, 29
-	attN = bottom, 31
-	mass = 0.349999994
-	shielded = False
-	temp = 285.3017533491365
-	tempExt = 261.14786238770211
-	tempExtUnexp = 298.25861010306483
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = restock-adapter-skeletal-25-375-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	name = fairingSize3
-	cid = 4292224546
-	uid = 499999745
-	mid = 3556785419
-	persistentId = 389264889
-	launchID = 1
-	parent = 30
-	position = 0,-2.2715530395507813,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 3
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = interstage01a, -1
-	attN = interstage01b, -1
-	attN = interstage02a, -1
-	attN = interstage02b, -1
-	attN = interstage03a, -1
-	attN = interstage03b, -1
-	attN = interstage04a, -1
-	attN = interstage04b, -1
-	attN = interstage05a, -1
-	attN = interstage05b, -1
-	attN = interstage06a, -1
-	attN = interstage06b, -1
-	attN = top, 30
-	attN = bottom, 32
-	mass = 0.474999994
-	shielded = False
-	temp = 285.50161825933651
-	tempExt = 257.47526918779124
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fairingSize3
-	modCost = 0
-	modMass = 1.40129846E-45
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleProceduralFairing
-		isEnabled = True
-		interstageCraftID = 0
-		nArcs = 2
-		ejectionForce = 400
-		useClamshell = True
-		isCapped = True
-		stagingEnabled = True
-		isFadeLocked = False
-		fsm = st_flight_deployed
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployFairingAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoBay
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNode
-		isEnabled = True
-		spawnState = False
-		visibilityState = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleStructuralNodeToggle
-		isEnabled = True
-		showMesh = True
-		showNodes = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleRestockModifyFairingMaterials
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-fusion-375-2
-	cid = 4292112954
-	uid = 2937771465
-	mid = 3556785419
-	persistentId = 2038118609
-	launchID = 1
-	parent = 31
-	position = 0,-4.2015495300292969,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = top, 31
-	attN = bottom, 33
-	mass = 0.657360017
-	shielded = False
-	temp = 285.53819031789072
-	tempExt = 261.29181836987414
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-fusion-375-2
-	modCost = 188314.5
-	modMass = -0.682439983
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = fuelSwitch
-		currentSubtype = D/He3
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = meshSwitch
-		currentSubtype = 375m
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCryoTank
-		isEnabled = True
-		LastUpdateTime = 9441156.4065553341
-		CoolingAllowed = True
-		CoolingEnabled = True
-		BoiloffOccuring = False
-		DebugMode = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LqdDeuterium
-		amount = 8245.744231297133
-		maxAmount = 8250
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = LqdHe3
-		amount = 32982.976869749626
-		maxAmount = 33000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fueltank-fusion-375-2
-	cid = 4292076830
-	uid = 1256036317
-	mid = 3556785419
-	persistentId = 218434319
-	launchID = 1
-	parent = 32
-	position = 0,-7.6615486145019531,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = top, 32
-	attN = bottom, 34
-	mass = 0.657360017
-	shielded = False
-	temp = 285.44656170147323
-	tempExt = 261.54340611049781
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-fusion-375-2
-	modCost = 188314.5
-	modMass = -0.682439983
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = fuelSwitch
-		currentSubtype = D/He3
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = meshSwitch
-		currentSubtype = 375m
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCryoTank
-		isEnabled = True
-		LastUpdateTime = 9441156.4065553341
-		CoolingAllowed = True
-		CoolingEnabled = True
-		BoiloffOccuring = False
-		DebugMode = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LqdDeuterium
-		amount = 8245.73655662388
-		maxAmount = 8250
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = LqdHe3
-		amount = 32982.94617105656
-		maxAmount = 33000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = hydrogen-375-2
-	cid = 4292089198
-	uid = 706503357
-	mid = 3556785419
-	persistentId = 4238053997
-	launchID = 1
-	parent = 33
-	position = 0,-11.264549255371094,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = top01, 33
-	attN = bottom01, 35
-	attN = top02, -1
-	attN = bottom02, -1
-	mass = 0.765179992
-	shielded = False
-	temp = 285.31926157674422
-	tempExt = 261.49600951035063
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = hydrogen-375-2
-	modCost = 1439.99988
-	modMass = 1.97906047E-08
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = textureSwitch
-		currentSubtype = White
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = fuelSwitch
-		currentSubtype = LH2
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCryoTank
-		isEnabled = True
-		LastUpdateTime = 9441156.4065553341
-		CoolingAllowed = True
-		CoolingEnabled = True
-		BoiloffOccuring = False
-		DebugMode = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LqdHydrogen
-		amount = 50668.97523655801
-		maxAmount = 54000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fusion-magnetic-tokamak-1
-	cid = 4292075552
-	uid = 2020395172
-	mid = 3556785419
-	persistentId = 377100486
-	launchID = 1
-	parent = 34
-	position = 0,-16.418548583984375,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 1
-	attm = 0
-	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = top, 34
-	attN = bottom, -1
-	mass = 20
-	shielded = False
-	temp = 284.88802970732837
-	tempExt = 255.75244401120742
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fusion-magnetic-tokamak-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = MultiModeEngine
-		isEnabled = True
-		runningPrimary = False
-		autoSwitch = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ModeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = False
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = True
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 1400
-		totalSystemFlux = 1500
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatEngine
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatEngine
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFusionEngine
-		isEnabled = True
-		Enabled = True
-		CurrentModeID = 
-		Charged = False
-		Charging = True
-		CurrentCharge = 0
-		ChargeRate = 820
-		currentModeIndex = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			EnableChargingAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableChargingAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleChargingAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292035938
-	uid = 1010960232
-	mid = 3556785419
-	persistentId = 929187225
-	launchID = 1
-	parent = 34
-	position = -2.9802322387695313E-08,-11.34161376953125,1.3670746088027954
-	rotation = -0.500000119,0.500000119,-0.499999911,-0.499999911
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 37
-	sym = 38
-	sym = 39
-	srfN = srfAttach, 34,COLLIDER
-	mass = 0.337500006
-	shielded = False
-	temp = 280.79215082665235
-	tempExt = 263.28053614876563
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292035432
-	uid = 3243706347
-	mid = 3556785419
-	persistentId = 2812745760
-	launchID = 1
-	parent = 34
-	position = 1.3670746088027954,-11.34161376953125,1.1920928955078125E-07
-	rotation = 0.707106829,-1.68587405E-07,-1.68587405E-07,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 36
-	sym = 38
-	sym = 39
-	srfN = srfAttach, 34,COLLIDER
-	mass = 0.337500006
-	shielded = False
-	temp = 280.86565382152355
-	tempExt = 263.32032972721277
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292035314
-	uid = 1455125092
-	mid = 3556785419
-	persistentId = 551030616
-	launchID = 1
-	parent = 34
-	position = 2.0861625671386719E-07,-11.34161376953125,-1.3670744895935059
-	rotation = 0.499999911,0.499999911,-0.500000119,0.500000119
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 36
-	sym = 37
-	sym = 39
-	srfN = srfAttach, 34,COLLIDER
-	mass = 0.337500006
-	shielded = False
-	temp = 280.80831978145483
-	tempExt = 263.27558617829254
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292035196
-	uid = 578196530
-	mid = 3556785419
-	persistentId = 3373633441
-	launchID = 1
-	parent = 34
-	position = -1.3670746088027954,-11.34161376953125,0
-	rotation = -1.99496029E-07,0.707106829,-0.707106829,1.37678782E-07
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 36
-	sym = 37
-	sym = 38
-	srfN = srfAttach, 34,COLLIDER
-	mass = 0.337500006
-	shielded = False
-	temp = 280.86866052355919
-	tempExt = 263.27457522223102
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292042478
-	uid = 2378363803
-	mid = 3556785419
-	persistentId = 3259891189
-	launchID = 1
-	parent = 33
-	position = -2.9802322387695313E-08,-7.5425376892089844,1.3680378198623657
-	rotation = -0.500000119,0.500000119,-0.499999911,-0.499999911
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 41
-	sym = 42
-	sym = 43
-	srfN = srfAttach, 33,COLLIDERA
-	mass = 0.337500006
-	shielded = False
-	temp = 281.24110331083551
-	tempExt = 263.60664248176897
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292042180
-	uid = 22880663
-	mid = 3556785419
-	persistentId = 2250400968
-	launchID = 1
-	parent = 33
-	position = 1.3680380582809448,-7.5425376892089844,1.1920928955078125E-07
-	rotation = 0.707106829,-1.47513987E-07,-1.47513987E-07,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 40
-	sym = 42
-	sym = 43
-	srfN = srfAttach, 33,COLLIDERA
-	mass = 0.337500006
-	shielded = False
-	temp = 280.94244006572427
-	tempExt = 263.36114425178096
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292042068
-	uid = 706136248
-	mid = 3556785419
-	persistentId = 3292892925
-	launchID = 1
-	parent = 33
-	position = 2.0861625671386719E-07,-7.5425376892089844,-1.3680379390716553
-	rotation = 0.499999911,0.499999911,-0.500000119,0.500000119
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 40
-	sym = 41
-	sym = 43
-	srfN = srfAttach, 33,COLLIDERA
-	mass = 0.337500006
-	shielded = False
-	temp = 280.95467989147954
-	tempExt = 263.4137219863203
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-1
-	cid = 4292041956
-	uid = 1980730905
-	mid = 3556785419
-	persistentId = 3536010170
-	launchID = 1
-	parent = 33
-	position = -1.3680380582809448,-7.5425376892089844,0
-	rotation = -1.7842261E-07,0.707106829,-0.707106829,1.16605364E-07
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 40
-	sym = 41
-	sym = 42
-	srfN = srfAttach, 33,COLLIDERA
-	mass = 0.337500006
-	shielded = False
-	temp = 280.86620840629598
-	tempExt = 263.26714914115524
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-1
-	modCost = -17500
-	modMass = -0.337500006
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -123.511703
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = Half
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-2
-	cid = 4292049192
-	uid = 1470528035
-	mid = 3556785419
-	persistentId = 1162435067
-	launchID = 1
-	parent = 32
-	position = -2.9802322387695313E-08,-3.8402175903320313,1.4491034746170044
-	rotation = -0.50000006,0.50000006,-0.5,-0.5
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 45
-	sym = 46
-	sym = 47
-	srfN = srfAttach, 32,COLLIDERA
-	mass = 0.170499995
-	shielded = False
-	temp = 283.20173552868749
-	tempExt = 264.57920276093654
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-2
-	modCost = -8750
-	modMass = -0.170499995
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -62.0430908
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = 22
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-2
-	cid = 4292048932
-	uid = 576944117
-	mid = 3556785419
-	persistentId = 1915821855
-	launchID = 1
-	parent = 32
-	position = 1.4491035938262939,-3.8402175903320313,1.1920928955078125E-07
-	rotation = 0.707106829,-4.21468478E-08,-4.21468478E-08,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 44
-	sym = 46
-	sym = 47
-	srfN = srfAttach, 32,COLLIDERA
-	mass = 0.170499995
-	shielded = False
-	temp = 283.26434628473959
-	tempExt = 264.62930704526633
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-2
-	modCost = -8750
-	modMass = -0.170499995
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -62.0430908
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = 22
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-2
-	cid = 4292048840
-	uid = 1801301664
-	mid = 3556785419
-	persistentId = 615667890
-	launchID = 1
-	parent = 32
-	position = 2.0861625671386719E-07,-3.8402175903320313,-1.4491033554077148
-	rotation = 0.5,0.5,-0.50000006,0.50000006
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 44
-	sym = 45
-	sym = 47
-	srfN = srfAttach, 32,COLLIDERA
-	mass = 0.170499995
-	shielded = False
-	temp = 282.74924824401614
-	tempExt = 264.32385788656546
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-2
-	modCost = -8750
-	modMass = -0.170499995
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -62.0430908
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = 22
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = radiator-microchannel-fixed-2
-	cid = 4292048748
-	uid = 4233639543
-	mid = 3556785419
-	persistentId = 3328376900
-	launchID = 1
-	parent = 32
-	position = -1.4491035938262939,-3.8402175903320313,0
-	rotation = -7.30554675E-08,0.707106829,-0.707106829,1.12382263E-08
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 44
-	sym = 45
-	sym = 46
-	srfN = srfAttach, 32,COLLIDERA
-	mass = 0.170499995
-	shielded = False
-	temp = 282.74800713458069
-	tempExt = 264.33727695541825
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = radiator-microchannel-fixed-2
-	modCost = -8750
-	modMass = -0.170499995
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatRadiator
-		isEnabled = True
-		sunTracking = True
-		IsCooling = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleRadiatorAction
-			{
-				actionGroup = Custom03
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeat
-		isEnabled = True
-		totalSystemTemperature = 0
-		totalSystemFlux = -62.0430908
-		currentLoopID = 0
-		currentLoopTemperature = 149.362991
-		nominalLoopTemperature = 1400
-		currentLoopFlux = 229.121887
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = sizeSwitch
-		currentSubtype = 22
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSystemHeatColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartInfo
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
 	name = nfe-rtg-gphs-1
 	cid = 4292495208
 	uid = 1419554363
@@ -10114,16 +5828,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 49
-	sym = 50
-	sym = 51
+	sym = 30
+	sym = 31
+	sym = 32
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 284.83816094049075
-	tempExt = 261.30322492717835
+	temp = 250.73525939252175
+	tempExt = 250.55513030814166
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10218,9 +5932,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.258020414607
+		CoreThermalEnergy = 155302.87357522419
 		stagingEnabled = True
-		lastUpdateTime = 9435445.4146447256
+		lastUpdateTime = 12022699.108486434
 		EVENTS
 		{
 		}
@@ -10284,16 +5998,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 48
-	sym = 50
-	sym = 51
+	sym = 29
+	sym = 31
+	sym = 32
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 284.83816094049075
-	tempExt = 261.30322492717835
+	temp = 250.73525939252175
+	tempExt = 250.55513030814166
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10388,9 +6102,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.258020414607
+		CoreThermalEnergy = 155302.87357522419
 		stagingEnabled = True
-		lastUpdateTime = 9435445.4146447256
+		lastUpdateTime = 12022699.108486434
 		EVENTS
 		{
 		}
@@ -10454,16 +6168,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 48
-	sym = 49
-	sym = 51
+	sym = 29
+	sym = 30
+	sym = 32
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 284.83982035838721
-	tempExt = 261.30399187906727
+	temp = 250.73979197526279
+	tempExt = 250.55670399303764
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10558,9 +6272,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.258020414607
+		CoreThermalEnergy = 155302.87357522419
 		stagingEnabled = True
-		lastUpdateTime = 9435445.4146447256
+		lastUpdateTime = 12022699.108486434
 		EVENTS
 		{
 		}
@@ -10624,16 +6338,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 48
-	sym = 49
-	sym = 50
+	sym = 29
+	sym = 30
+	sym = 31
 	srfN = srfAttach, 0,CHFR_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 284.83816075059394
-	tempExt = 261.30322483942496
+	temp = 250.73525939252175
+	tempExt = 250.55513030814166
 	tempExtUnexp = 298.25861010306483
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10728,9 +6442,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 59878.258020414607
+		CoreThermalEnergy = 155302.87357522419
 		stagingEnabled = True
-		lastUpdateTime = 9435445.4146447256
+		lastUpdateTime = 12022699.108486434
 		EVENTS
 		{
 		}
@@ -10779,7 +6493,7 @@ ACTIONGROUPS
 	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = True
+	SAS = True, 9575437.22614888
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = True, 0
@@ -10804,11 +6518,16 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
+TARGET
+{
+	type = CelestialBody
+	tgtId = Debdeb
+}
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = 0.00012657851
+	yaw = 0.00013562094
+	roll = -0.000562459638
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -10838,7 +6557,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 9441156.4065553341
+		lastUpdate = 12022699.108486434
 		selectedPad = 0
 		Productivity = 0
 	}
