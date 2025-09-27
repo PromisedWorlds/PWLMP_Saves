@@ -1,6 +1,6 @@
-pid = 20e5a909eb4e498e92c6b72f4166ae0d
-persistentId = 3924526437
-name = Untitled Space Craft Debris
+pid = 7bfa4e12a3c2451c81989a7f840dcb69
+persistentId = 3331263939
+name = F/A-18 Super Hornet (stock) Debris
 type = Debris
 sit = FLYING
 landed = False
@@ -11,24 +11,24 @@ launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 28.485254786908627
-lct = 9415445.704938196
-lastUT = 9415474.230192982
-distanceTraveled = 42685.1873068798
+met = 8.4698373004794121
+lct = 9434852.720829973
+lastUT = 9434861.1906672735
+distanceTraveled = 85028.223729039746
 root = 0
-lat = -0.08880175955957105
-lon = -70.863220077481344
-alt = 53089.790422492893
-hgt = 53089.7891
-nrm = -0.00195832294,0.180781767,-0.983521402
-rot = -0.0528919511,0.0546377897,0.706611335,-0.703503907
-CoM = 0,0,0
-stg = 5
+lat = 0.18718429849866355
+lon = -74.610249010412701
+alt = 6669.8510897867382
+hgt = 6669.85107
+nrm = -0.977602482,0.105311111,-0.182217419
+rot = -0.21875222,0.661009431,-0.434005499,-0.571711004
+CoM = -4.65810226E-05,-0.329814106,-0.000221848401
+stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 10
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,57 +40,55 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 448874.38754052721
-	ECC = 0.55792004691200403
-	INC = 0.4237480385099533
-	LPE = 31.375816804760781
-	LAN = 159.42460939927992
-	MNA = 2.2013364646665829
-	EPH = 9415445.7449381948
-	REF = 1
-	IDENT = Squad/Kerbin
+	SMA = -102.64370281031829
+	ECC = 67615.050396621664
+	INC = 56.732395552820449
+	LPE = 349.79762204644675
+	LAN = 28.162438517970202
+	MNA = 12441.337325457149
+	EPH = 9434861.1906672735
+	REF = 24
+	IDENT = Glumo
 }
 PART
 {
-	name = Separator.2
-	cid = 4286012282
-	uid = 2525478651
-	mid = 3989978666
-	persistentId = 2964032156
-	launchID = 4
+	name = smallCtrlSrf
+	cid = 4293914702
+	uid = 31839221
+	mid = 2940679093
+	persistentId = 2439284945
+	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,1.00000215
 	mirror = 1,1,1
 	symMethod = Mirror
-	istg = 5
+	istg = -1
 	resPri = 0
-	dstg = 5
-	sqor = 5
-	sepI = 5
-	sidx = 0
-	attm = 0
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 1
 	sameVesselCollision = False
-	srfN = , -1
-	attN = top, -1
-	attN = bottom, -1
-	mass = 0.209999993
+	srfN = srfAttach, -1,NCSCOL
+	mass = 0.0399999991
 	shielded = False
-	temp = 242.32596379138411
-	tempExt = 260.31611012761283
-	tempExtUnexp = 260.52143913347896
-	staticPressureAtm = 8.8312790669131327E-05
-	expt = 0.5
-	state = 1
+	temp = 307.4714359619378
+	tempExt = 331.87912756594392
+	tempExtUnexp = 311.7127609942807
+	staticPressureAtm = 96.503573741672824
+	expt = 0.100000001
+	state = 0
 	PreFailState = 0
 	attached = False
-	autostrutMode = Grandparent
+	autostrutMode = Off
 	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = Separator.2
+	flag = Squad/FlagsOrganization/rocketlab
+	rTrf = smallCtrlSrf
 	modCost = 0
 	modMass = 0
-	moduleVariantName = BlackAndWhite
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -150,67 +148,111 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDecouple
+		name = ModuleControlSurface
 		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = True
-		stagingEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
+		mirrorDeploy = True
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
+			ActionToggle
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			EnableAction
+			ActionExtend
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			DisableAction
+			ActionRetract
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			PitchActive
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			PitchInactive
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			TogglePitch
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			YawActive
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			YawInactive
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RollActive
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RollInactive
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DeactivateAllControls
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
-		UPGRADESAPPLIED
+		AXISGROUPS
 		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -220,7 +262,7 @@ PART
 	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = -1
+		packedVolume = 135
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -252,69 +294,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = BlackAndWhite
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = tjs_DecouplerLight
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = RSE_Coupler
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ShipEffectsCollisions
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -330,11 +310,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 9415441.02932012
-	Gear = False, 0
+	Stage = False, 0
+	Gear = True, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = True, 9187686.47272205
+	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -367,7 +347,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
