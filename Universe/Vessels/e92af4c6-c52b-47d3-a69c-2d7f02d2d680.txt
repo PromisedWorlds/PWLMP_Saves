@@ -2,8 +2,8 @@ pid = e92af4c6c52b47d3a69c2d7f02d2d680
 persistentId = 50062176
 name = Minmus crew lander refuelable Station
 type = Station
-sit = ORBITING
-landed = False
+sit = LANDED
+landed = True
 skipGroundPositioning = True
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = False
@@ -11,18 +11,18 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 440045850.134802
+met = 440047934.94300973
 lct = 12492736.815467304
-lastUT = 452538588.9502693
-distanceTraveled = 227495.36243673574
+lastUT = 452540671.798477
+distanceTraveled = 239716.51183430545
 root = 0
-lat = -4.1796768262593131
-lon = 11.021603479557506
-alt = 7779.2323909712868
-hgt = 7779.23242
-nrm = 0.298728824,-0.891804814,0.339772642
-rot = 0.59220469,-0.394185156,0.536685228,0.453740746
-CoM = -1.49011612E-06,-2.56142998,0.0059633255
+lat = -6.8745847565799787
+lon = -14.311009377171638
+alt = 6.9931303915145691
+hgt = 7.01012659
+nrm = -0.00041616708,0.997343719,0.0728398561
+rot = 0.7230196,0.550451458,0.254573256,-0.330814719
+CoM = -1.60932541E-06,-2.53052855,0.00673651695
 stg = 1
 prst = False
 ref = 1451351299
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = AGL
-cPch = -0.3789877
-cHdg = 4.402607
-cMod = 0
+cPch = 0.4378084
+cHdg = 0.5048949
+cMod = 1
 ORBIT
 {
-	SMA = 67657.003552789422
-	ECC = 0.0025902574952159827
-	INC = 6.839230545341878
-	LPE = 82.349277353441323
-	LAN = 173.27867434804443
-	MNA = 2.3591878364621399
-	EPH = 452537209.70161492
+	SMA = 30046.054915730889
+	ECC = 0.99708314193962311
+	INC = 6.8744443697048192
+	LPE = 89.984200328005684
+	LAN = 124.36850678746504
+	MNA = 3.141585337447157
+	EPH = 452540450.0186885
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -76,8 +76,8 @@ PART
 	attN = bottom, 1
 	mass = 0.0500000007
 	shielded = False
-	temp = 216.5577699651555
-	tempExt = 222.68373238226101
+	temp = 213.72072911175687
+	tempExt = 214.01624587672202
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -158,7 +158,7 @@ PART
 		targetAngle = 0
 		inverted = False
 		stagingEnabled = False
-		state = Disengage
+		state = Ready
 		dockUId = 1683937661
 		dockNodeIdx = 0
 		EVENTS
@@ -225,12 +225,6 @@ PART
 				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 			}
-		}
-		DOCKEDVESSEL
-		{
-			vesselName = Minmus crew lander refuelable Station
-			vesselType = Station
-			rootUId = 1451351299
 		}
 		UPGRADESAPPLIED
 		{
@@ -350,8 +344,8 @@ PART
 	attN = bottom, 2
 	mass = 0.879999995
 	shielded = False
-	temp = 216.02765237361541
-	tempExt = 217.87186537440218
+	temp = 213.70337360126868
+	tempExt = 214.28411604332425
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -423,7 +417,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 1160.2340615628998
+		amount = 1113.8960155747036
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -458,8 +452,8 @@ PART
 	attN = bottom, 11
 	mass = 0.5
 	shielded = False
-	temp = 216.53126794423386
-	tempExt = 216.61666363546101
+	temp = 214.14260188400823
+	tempExt = 214.49201318905136
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -531,7 +525,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9999.642857142857
+		amount = 9999.996428571509
 		maxAmount = 10000
 		flowState = True
 		isTweakable = True
@@ -565,8 +559,8 @@ PART
 	srfN = srfAttach, 2,COLLIDER 2 (2)
 	mass = 0.300000012
 	shielded = False
-	temp = 217.86218314397445
-	tempExt = 219.38045675853508
+	temp = 215.63879036954063
+	tempExt = 217.56304456718098
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -643,7 +637,7 @@ PART
 		isEnabled = True
 		efficiencyMult = 1
 		launchUT = 12026020.940021183
-		currentRotation = (-0.699177206, -0.698954642, 0.106342621, -0.106325068)
+		currentRotation = (0.053317856, 0.0533038564, 0.705254316, -0.704934299)
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
 		deployState = EXTENDED
@@ -772,8 +766,8 @@ PART
 	srfN = srfAttach, 2,COLLIDER 2 (2)
 	mass = 0.300000012
 	shielded = False
-	temp = 216.7658572490399
-	tempExt = 216.62183906031379
+	temp = 215.27338735060144
+	tempExt = 216.91775207042758
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -850,7 +844,7 @@ PART
 		isEnabled = True
 		efficiencyMult = 1
 		launchUT = 12026020.940021183
-		currentRotation = (-0.699162841, -0.698963702, -0.106385708, 0.106316678)
+		currentRotation = (0.0533345006, 0.0532639697, -0.70524323, 0.704947114)
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
 		deployState = EXTENDED
@@ -981,8 +975,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 216.51793370257616
-	tempExt = 216.61268725588988
+	temp = 214.0660497304861
+	tempExt = 214.28139781108555
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1079,7 +1073,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 64958.209109073476
 		stagingEnabled = True
-		lastUpdateTime = 452537209.70161492
+		lastUpdateTime = 452540450.03868848
 		EVENTS
 		{
 		}
@@ -1149,8 +1143,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 216.49929651919527
-	tempExt = 216.50073475905995
+	temp = 214.06620518795424
+	tempExt = 214.28144874123004
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1247,7 +1241,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 64958.209097705825
 		stagingEnabled = True
-		lastUpdateTime = 452537209.70161492
+		lastUpdateTime = 452540450.03868848
 		EVENTS
 		{
 		}
@@ -1319,8 +1313,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 216.4985842896759
-	tempExt = 216.50042857452308
+	temp = 214.06606375699448
+	tempExt = 214.28140240637566
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1417,7 +1411,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 64958.209097400562
 		stagingEnabled = True
-		lastUpdateTime = 452537209.70161492
+		lastUpdateTime = 452540450.03868848
 		EVENTS
 		{
 		}
@@ -1489,8 +1483,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 216.50008236812121
-	tempExt = 216.50080248216361
+	temp = 214.06888894736872
+	tempExt = 214.30230063880197
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1587,7 +1581,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 64958.209106937378
 		stagingEnabled = True
-		lastUpdateTime = 452537209.70161492
+		lastUpdateTime = 452540450.03868848
 		EVENTS
 		{
 		}
@@ -1659,8 +1653,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 216.66658642053252
-	tempExt = 216.59063925020763
+	temp = 214.07183234853645
+	tempExt = 214.2832922814477
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1757,7 +1751,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 64958.209106937378
 		stagingEnabled = True
-		lastUpdateTime = 452537209.70161492
+		lastUpdateTime = 452540450.03868848
 		EVENTS
 		{
 		}
@@ -1829,8 +1823,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 216.50828513519403
-	tempExt = 216.50574566384199
+	temp = 214.06539160372276
+	tempExt = 214.28118219911559
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1927,7 +1921,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 64958.209097400562
 		stagingEnabled = True
-		lastUpdateTime = 452537209.70161492
+		lastUpdateTime = 452540450.03868848
 		EVENTS
 		{
 		}
@@ -1996,8 +1990,8 @@ PART
 	attN = bottom, 18
 	mass = 0.850000024
 	shielded = False
-	temp = 217.18028867552684
-	tempExt = 217.2566006891422
+	temp = 215.16878865984168
+	tempExt = 215.20623428388726
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -2115,7 +2109,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Running
+		stateString = Idle
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -2896,7 +2890,7 @@ PART
 				markUT = 12492736.835467303
 				deltaVExpended = NaN
 				dragLosses = 1.9212571267344016E-12
-				gravityLosses = -0.67173513549975938
+				gravityLosses = -4.0199617601479041
 				steeringLosses = NaN
 				markLAN = 11.275296898476245
 				markLatitude = 1.6582612871685058
@@ -2962,7 +2956,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 79.99714285714286
+		amount = 79.99997142857207
 		maxAmount = 80
 		flowState = True
 		isTweakable = True
@@ -2997,8 +2991,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0549999997
 	shielded = False
-	temp = 217.21094670924799
-	tempExt = 217.1568878503866
+	temp = 215.15444009277812
+	tempExt = 215.10630269532919
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3199,8 +3193,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0549999997
 	shielded = False
-	temp = 217.19591947879078
-	tempExt = 217.15403302449843
+	temp = 215.16213960154309
+	tempExt = 215.17302658378378
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3402,8 +3396,8 @@ PART
 	srfN = srfAttach, 11,BOXOLLIDER
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.17199024858388
-	tempExt = 217.14530382193408
+	temp = 215.15444515766123
+	tempExt = 215.10966069383693
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3568,8 +3562,8 @@ PART
 	srfN = srfAttach, 11,BOXOLLIDER
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.1720461843924
-	tempExt = 217.14537694459727
+	temp = 215.15444515766123
+	tempExt = 215.10966069383693
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3734,8 +3728,8 @@ PART
 	srfN = srfAttach, 11,BOXOLLIDER
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.17223970821448
-	tempExt = 217.1517802286256
+	temp = 215.15444515766123
+	tempExt = 215.10966069383693
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3900,8 +3894,8 @@ PART
 	srfN = srfAttach, 11,BOXOLLIDER
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.17199024855839
-	tempExt = 217.1453038219
+	temp = 215.15444515766123
+	tempExt = 215.10966069383693
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4065,8 +4059,8 @@ PART
 	attN = bottom, 33
 	mass = 2.25
 	shielded = False
-	temp = 217.53492870946249
-	tempExt = 217.59817224319741
+	temp = 215.45894107293879
+	tempExt = 215.48510876999077
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4172,7 +4166,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 452537209.18161541
+		LastUpdateTime = 452540419.47871763
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -4236,7 +4230,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 1363.2264493511075
+		amount = 1046.1388633515726
 		maxAmount = 1620
 		flowState = True
 		isTweakable = True
@@ -4247,7 +4241,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 1666.1655896578807
+		amount = 1278.6140769906274
 		maxAmount = 1980
 		flowState = True
 		isTweakable = True
@@ -4283,8 +4277,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61929974092467
-	tempExt = 217.54648742712121
+	temp = 215.58761404545095
+	tempExt = 215.45831348244096
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4470,8 +4464,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61929974092467
-	tempExt = 217.54648742712121
+	temp = 215.58761404545095
+	tempExt = 215.45831348244096
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4657,8 +4651,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61929974092467
-	tempExt = 217.54648742712121
+	temp = 215.58761404546391
+	tempExt = 215.45831348245409
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4844,8 +4838,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61929974092467
-	tempExt = 217.54648742712121
+	temp = 215.58761404545101
+	tempExt = 215.45831348244107
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5031,8 +5025,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61837185460891
-	tempExt = 217.53576931960023
+	temp = 215.58494170548022
+	tempExt = 215.45153969748608
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5218,8 +5212,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61837185460891
-	tempExt = 217.53576931960023
+	temp = 215.58494170548022
+	tempExt = 215.45153969748608
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5405,8 +5399,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61837185460891
-	tempExt = 217.53576931960023
+	temp = 215.58494170548022
+	tempExt = 215.45153969748608
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5592,8 +5586,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.00499999989
 	shielded = False
-	temp = 217.61837185460891
-	tempExt = 217.53576931960023
+	temp = 215.58494170548022
+	tempExt = 215.45153969748608
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5780,8 +5774,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 217.55096492793396
-	tempExt = 217.51372809261923
+	temp = 215.45589029077823
+	tempExt = 215.41023312570761
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5902,6 +5896,7 @@ PART
 			DeployAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ResetAction
@@ -5992,8 +5987,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 217.55778799390148
-	tempExt = 217.51587497309063
+	temp = 215.45590946415754
+	tempExt = 215.4102392749636
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6114,6 +6109,7 @@ PART
 			DeployAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ResetAction
@@ -6204,8 +6200,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 217.55111894099147
-	tempExt = 217.51377655289104
+	temp = 215.45590496719984
+	tempExt = 215.41023783270629
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6326,6 +6322,7 @@ PART
 			DeployAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ResetAction
@@ -6416,8 +6413,8 @@ PART
 	attN = bottom, -1
 	mass = 0.0500000007
 	shielded = False
-	temp = 217.55096313552346
-	tempExt = 217.51372752863659
+	temp = 215.45588854018078
+	tempExt = 215.41023256425854
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6538,6 +6535,7 @@ PART
 			DeployAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ResetAction
@@ -6626,8 +6624,8 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 217.61852637860397
-	tempExt = 217.52704734750475
+	temp = 215.58660929189111
+	tempExt = 215.44724883896799
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6873,8 +6871,8 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 217.61855035977308
-	tempExt = 217.53714008798056
+	temp = 215.58660929189111
+	tempExt = 215.44724883896799
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7114,10 +7112,10 @@ PART
 	srfN = , -1
 	attN = top, 18
 	attN = bottom, -1
-	mass = 3.84000039
+	mass = 3.57000017
 	shielded = False
-	temp = 217.62178132407209
-	tempExt = 217.92273797133979
+	temp = 215.48746116225351
+	tempExt = 215.6509384172235
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7132,10 +7130,6 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Gemmin Kerman
-	crew = Wiltrey Kerman
-	crew = Natabal Kerman
-	crew = Kerfrey Kerman
 	EVENTS
 	{
 	}
@@ -7462,8 +7456,8 @@ PART
 	srfN = srfAttach, 33,COLLIDERCYL
 	mass = 0.100000001
 	shielded = False
-	temp = 217.63925978157803
-	tempExt = 217.78374474755523
+	temp = 215.49329574870882
+	tempExt = 215.75053988618299
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7565,7 +7559,7 @@ PART
 		springTweakable = 1.03999996
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (-1.06826437E-05, 4.56869602E-05, 0.549671352)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -7584,10 +7578,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -7711,8 +7705,8 @@ PART
 	srfN = srfAttach, 33,COLLIDERCYL
 	mass = 0.100000001
 	shielded = False
-	temp = 217.63920715988516
-	tempExt = 217.78373382116354
+	temp = 215.5066055340441
+	tempExt = 215.86051538774896
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7788,7 +7782,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = False
+		isGrounded = True
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -7814,7 +7808,7 @@ PART
 		springTweakable = 1.03999996
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (-9.7234315E-06, 2.34246254E-05, 0.365081102)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -7833,10 +7827,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -7960,8 +7954,8 @@ PART
 	srfN = srfAttach, 33,COLLIDERCYL
 	mass = 0.100000001
 	shielded = False
-	temp = 217.63928432211443
-	tempExt = 217.79225195229205
+	temp = 215.48095800821304
+	tempExt = 215.64337339378497
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8037,7 +8031,7 @@ PART
 		name = ModuleWheelBase
 		isEnabled = True
 		wheelType = LEG
-		isGrounded = False
+		isGrounded = True
 		autoFriction = False
 		frictionMultiplier = 1
 		stagingEnabled = True
@@ -8063,7 +8057,7 @@ PART
 		springTweakable = 1.03999996
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (1.51710701E-05, 3.99500132E-05, 0.366469949)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -8082,10 +8076,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -8209,8 +8203,8 @@ PART
 	srfN = srfAttach, 33,COLLIDERCYL
 	mass = 0.100000001
 	shielded = False
-	temp = 217.63920872577654
-	tempExt = 217.78373414631082
+	temp = 215.48278073147725
+	tempExt = 215.66671029786357
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8312,7 +8306,7 @@ PART
 		springTweakable = 1.03999996
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -8.28877091E-08, 0.0505998433)
+		suspensionPos = (8.80110201E-06, 7.84993172E-05, 0.549669087)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -8331,10 +8325,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 0
+		position = 1
 		EVENTS
 		{
 		}
@@ -8455,8 +8449,8 @@ PART
 	srfN = srfAttach, 33,COLLIDERCYL
 	mass = 0.100000001
 	shielded = False
-	temp = 217.64016931748003
-	tempExt = 217.76004653011842
+	temp = 215.5072792913252
+	tempExt = 215.72300094305538
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8532,9 +8526,9 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		aniState = LOCKED
-		animSwitch = False
-		animTime = 1
-		animSpeed = 1
+		animSwitch = True
+		animTime = 0
+		animSpeed = -1
 		deployPercent = 100
 		animationIsDisabled = False
 		stagingEnabled = True
@@ -8595,8 +8589,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.075000003
 	shielded = False
-	temp = 217.48908611399699
-	tempExt = 217.493983444615
+	temp = 215.45090040713697
+	tempExt = 215.40844650798311
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8775,8 +8769,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.075000003
 	shielded = False
-	temp = 217.5012466800913
-	tempExt = 217.49787040537527
+	temp = 215.45080565866172
+	tempExt = 215.40841583927815
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8955,8 +8949,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.075000003
 	shielded = False
-	temp = 217.48869948654715
-	tempExt = 217.49385436293707
+	temp = 215.45090484804169
+	tempExt = 215.40844794543801
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9135,8 +9129,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.075000003
 	shielded = False
-	temp = 217.50799708912783
-	tempExt = 217.49980437706799
+	temp = 215.45083779031296
+	tempExt = 215.40842623983264
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9315,8 +9309,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.899999976
 	shielded = False
-	temp = 218.42584354949506
-	tempExt = 218.03830548335969
+	temp = 216.67374801035757
+	tempExt = 216.20484000917824
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9754,8 +9748,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.899999976
 	shielded = False
-	temp = 218.45434803907685
-	tempExt = 218.24321504099552
+	temp = 216.67405293886245
+	tempExt = 216.20506440768057
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10185,8 +10179,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.899999976
 	shielded = False
-	temp = 218.46366634151715
-	tempExt = 218.06567584269308
+	temp = 216.67788505036179
+	tempExt = 216.20788447888623
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10616,8 +10610,8 @@ PART
 	srfN = srfAttach, 18,COLLIDER 2
 	mass = 0.899999976
 	shielded = False
-	temp = 218.42339876141943
-	tempExt = 218.0694462550095
+	temp = 216.67373602832595
+	tempExt = 216.20483119153761
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11047,8 +11041,8 @@ PART
 	attN = top, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 217.61910186293554
-	tempExt = 217.53603369147234
+	temp = 215.58739065760557
+	tempExt = 215.45224466481065
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11231,12 +11225,11 @@ PART
 	sameVesselCollision = False
 	sym = 47
 	srfN = srfAttach, 18,COLLIDER 2
-	attN = top, -1
 	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 217.61910186293554
-	tempExt = 217.53603369147234
+	temp = 215.58739065760636
+	tempExt = 215.45224466481139
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11311,7 +11304,7 @@ PART
 	{
 		name = KASLinkTargetBase
 		isEnabled = True
-		persistedLinkState = Available
+		persistedLinkState = Locked
 		persistedLinkPartId = 0
 		persistedLinkNodeName = 
 		stagingEnabled = True
@@ -11329,7 +11322,7 @@ PART
 	{
 		name = KASLinkTargetBase
 		isEnabled = True
-		persistedLinkState = Available
+		persistedLinkState = Locked
 		persistedLinkPartId = 0
 		persistedLinkNodeName = 
 		stagingEnabled = True
@@ -11347,9 +11340,9 @@ PART
 	{
 		name = KASLinkTargetBase
 		isEnabled = True
-		persistedLinkState = Available
-		persistedLinkPartId = 0
-		persistedLinkNodeName = 
+		persistedLinkState = Linked
+		persistedLinkPartId = 3134555003
+		persistedLinkNodeName = kasSrcAuto0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -11423,8 +11416,8 @@ PART
 	srfN = srfAttach, 1,COLLIDER
 	mass = 0.075000003
 	shielded = False
-	temp = 215.95085981302614
-	tempExt = 217.20048475855717
+	temp = 213.59716316606296
+	tempExt = 213.99712771960694
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11603,8 +11596,8 @@ PART
 	srfN = srfAttach, 1,COLLIDER
 	mass = 0.075000003
 	shielded = False
-	temp = 215.95084931382956
-	tempExt = 217.26521532834994
+	temp = 213.59717329623916
+	tempExt = 213.99713101539609
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11783,8 +11776,8 @@ PART
 	srfN = srfAttach, 1,COLLIDER
 	mass = 0.075000003
 	shielded = False
-	temp = 215.95091755028119
-	tempExt = 217.20050355340922
+	temp = 213.59714398845134
+	tempExt = 213.99712148029198
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11963,8 +11956,8 @@ PART
 	srfN = srfAttach, 1,COLLIDER
 	mass = 0.075000003
 	shielded = False
-	temp = 215.95083924257872
-	tempExt = 217.19510848352056
+	temp = 213.59718798372305
+	tempExt = 213.9971357938764
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12119,10 +12112,10 @@ PART
 ACTIONGROUPS
 {
 	Stage = True, 12492718.9554677
-	Gear = False, 452536645.586985
+	Gear = True, 452539962.056986
 	Light = False, 0
-	RCS = True, 452537197.021627
-	SAS = True
+	RCS = True, 452540232.898896
+	SAS = False, 452540270.798859
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -12146,6 +12139,11 @@ DISCOVERY
 }
 FLIGHTPLAN
 {
+}
+TARGET
+{
+	type = Vessel
+	vesselID = 399b60c3-36e8-4869-991b-3819a59ae77b
 }
 CTRLSTATE
 {
@@ -12181,7 +12179,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 452537209.70161492
+		lastUpdate = 452540450.03868848
 		selectedPad = 0
 		Productivity = 0
 	}
