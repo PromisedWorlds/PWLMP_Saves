@@ -1,27 +1,27 @@
-pid = 3558684c441447e5b69e6927de190e6d
-persistentId = 3122845996
-name = kerb-lab station Debris
+pid = 30df720e55f34554b8aa8014f9f287e5
+persistentId = 1249592780
+name = Orb8ter Debris
 type = Debris
-sit = ORBITING
-landed = False
+sit = LANDED
+landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = Runway
-landedAt = 
-displaylandedAt = 
+launchedFrom = TSC 39A
+landedAt = LaunchpadFX
+displaylandedAt = LaunchpadFX
 splashed = False
-met = 1666505.6671714773
-lct = 5565058.551461171
-lastUT = 7231564.238632648
-distanceTraveled = 642626.7770385337
+met = 231.76345406845212
+lct = 7231846.570028744
+lastUT = 7232078.373482811
+distanceTraveled = 0
 root = 0
-lat = 0.08492841860296971
-lon = -2.3878847842180275
-alt = 194870.37115512113
-hgt = 194870.38
-nrm = 0.8429728150367737,-0.5062664151191711,0.1819102168083191
-rot = 0.6817347,-0.08110531,0.2220043,0.6923684
+lat = 0.013371275794747554
+lon = -74.561689052790712
+alt = 77.286122716730461
+hgt = 2.99777532
+nrm = -0.00139731169,0.999998629,-0.000939160585
+rot = 0.190009341,0.706316054,-0.681914091,-0.00270498893
 CoM = 0,0,0
 stg = 3
 prst = False
@@ -40,57 +40,55 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 798024.0908598297
-	ECC = 0.00881063132750335
-	INC = 0.39616483662660085
-	LPE = 103.81884997533288
-	LAN = 9.94725376314824
-	MNA = 1.0743305913220378
-	EPH = 5565127.542526227
+	SMA = 300821.02159606904
+	ECC = 0.9947983785803296
+	INC = 0.013371288328559884
+	LPE = 269.92155000043357
+	LAN = 139.16990897296284
+	MNA = 3.141592692790323
+	EPH = 7231846.6100287428
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = Separator.1p5
-	cid = 4290063992
-	uid = 149378217
-	mid = 3755990113
-	persistentId = 1420107022
-	launchID = 2
+	name = launchClamp1
+	cid = 4287630492
+	uid = 3209441429
+	mid = 981859546
+	persistentId = 1146561843
+	launchID = 3
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	istg = 3
 	resPri = 0
-	dstg = 1
+	dstg = 6
 	sqor = 3
 	sepI = 3
 	sidx = 0
-	attm = 0
+	attm = 1
 	sameVesselCollision = False
-	srfN = , -1
-	attN = top, -1
-	attN = bottom, -1
-	mass = 0.119999997
+	srfN = srfAttach, -1,COLLIDER64
+	mass = 0.100000001
 	shielded = False
-	temp = 217.79679695810714
-	tempExt = 216.05177783432441
-	tempExtUnexp = 306.98108269862252
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
+	temp = 300.64293155845843
+	tempExt = 301.21178759287773
+	tempExtUnexp = 301.21141451359887
+	staticPressureAtm = 0.98859936168039098
+	expt = 0.100000001
+	state = 1
 	PreFailState = 0
 	attached = False
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = Separator.1p5
+	rTrf = launchClamp1
 	modCost = 0
 	modMass = 0
-	moduleVariantName = GrayAndOrange
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -150,31 +148,10 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDecouple
+		name = ModuleGenerator
 		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = True
-		stagingEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
+		generatorIsActive = True
+		throttle = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -184,16 +161,19 @@ PART
 			ToggleAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			EnableAction
+			ActivateAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			DisableAction
+			ShutdownAction
 			{
 				actionGroup = None
+				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -218,18 +198,22 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = ModuleRestockLaunchClamp
 		isEnabled = True
-		packedVolume = 900
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
+		scaleFactor = 1.81626415
+		height = 3.63252831
 		stagingEnabled = True
+		towerRot = 4.00227655E-08,0.923879802,9.6623701E-08,0.38268292
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ReleaseClamp
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -237,91 +221,35 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleAnimateGeneric
 		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
-		UPGRADESAPPLIED
+		AXISGROUPS
 		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = GrayAndOrange
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = tjs_DecouplerLight
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = RSE_Coupler
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ShipEffectsCollisions
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -332,9 +260,9 @@ ACTIONGROUPS
 {
 	Stage = False, 0
 	Gear = False, 0
-	Light = True, 0
-	RCS = True, 5097534.98851009
-	SAS = True, 4954497.02038832
+	Light = False, 0
+	RCS = False, 0
+	SAS = True, 7231817.93002938
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -367,7 +295,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 1
 }
 VESSELMODULES
 {
@@ -386,11 +314,17 @@ VESSELMODULES
 	SpaceDustVessel
 	{
 	}
-	ShipEffects
+	VesselPhysicsHold
 	{
+		physicsHold = False
+		roboticsOverride = False
 	}
-	MouseAimVesselModule
+	ParkingBrake
 	{
+		lat = 0
+		lon = 0
+		alt = 0
+		positionSet = False
 	}
 	RPMVesselComputer
 	{

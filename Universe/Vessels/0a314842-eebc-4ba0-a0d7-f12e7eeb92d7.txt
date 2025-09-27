@@ -1,29 +1,29 @@
-pid = 3558684c441447e5b69e6927de190e6d
-persistentId = 3122845996
-name = kerb-lab station Debris
+pid = 0a314842eebc4ba0a0d7f12e7eeb92d7
+persistentId = 3798625357
+name = so: yuz Station Debris
 type = Debris
 sit = ORBITING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = Runway
+launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 1666505.6671714773
-lct = 5565058.551461171
-lastUT = 7231564.238632648
-distanceTraveled = 642626.7770385337
+met = 127.63999714702368
+lct = 7231727.218629005
+lastUT = 7231854.878626152
+distanceTraveled = 239212.41858827928
 root = 0
-lat = 0.08492841860296971
-lon = -2.3878847842180275
-alt = 194870.37115512113
-hgt = 194870.38
-nrm = 0.8429728150367737,-0.5062664151191711,0.1819102168083191
-rot = 0.6817347,-0.08110531,0.2220043,0.6923684
+lat = -0.28138703362140671
+lon = -55.74863948074411
+alt = 203753.81525235751
+hgt = 203753.813
+nrm = -0.00711872242,0.221199244,-0.97520268
+rot = 0.128633961,-0.134795621,-0.69829452,0.691135466
 CoM = 0,0,0
-stg = 3
+stg = 2
 prst = False
 ref = 0
 ctrl = False
@@ -40,35 +40,35 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 798024.0908598297
-	ECC = 0.00881063132750335
-	INC = 0.39616483662660085
-	LPE = 103.81884997533288
-	LAN = 9.94725376314824
-	MNA = 1.0743305913220378
-	EPH = 5565127.542526227
+	SMA = 803419.27819092106
+	ECC = 0.0010259427606084236
+	INC = 0.43434172978254859
+	LPE = 106.38085485595735
+	LAN = 25.531712742774857
+	MNA = 1.9877809682406284
+	EPH = 7231727.2586290045
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
 	name = Separator.1p5
-	cid = 4290063992
-	uid = 149378217
-	mid = 3755990113
-	persistentId = 1420107022
+	cid = 4293033432
+	uid = 2480886035
+	mid = 3604040732
+	persistentId = 283923655
 	launchID = 2
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1
 	mirror = 1,1,1
-	symMethod = Mirror
-	istg = 3
+	symMethod = Radial
+	istg = 2
 	resPri = 0
-	dstg = 1
-	sqor = 3
-	sepI = 3
-	sidx = 0
+	dstg = 5
+	sqor = 2
+	sepI = 2
+	sidx = 1
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
@@ -76,12 +76,12 @@ PART
 	attN = bottom, -1
 	mass = 0.119999997
 	shielded = False
-	temp = 217.79679695810714
-	tempExt = 216.05177783432441
-	tempExtUnexp = 306.98108269862252
+	temp = 342.58198687748967
+	tempExt = 343.25678654254256
+	tempExtUnexp = 307.06604491818143
 	staticPressureAtm = 0
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = False
 	autostrutMode = Off
@@ -90,7 +90,7 @@ PART
 	rTrf = Separator.1p5
 	modCost = 0
 	modMass = 0
-	moduleVariantName = GrayAndOrange
+	moduleVariantName = BlackAndWhite
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -256,22 +256,7 @@ PART
 		isEnabled = True
 		useVariantMass = True
 		stagingEnabled = True
-		selectedVariant = GrayAndOrange
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = tjs_DecouplerLight
-		isEnabled = True
-		stagingEnabled = True
+		selectedVariant = BlackAndWhite
 		EVENTS
 		{
 		}
@@ -330,15 +315,15 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
+	Stage = False, 7231363.62468016
 	Gear = False, 0
-	Light = True, 0
-	RCS = True, 5097534.98851009
-	SAS = True, 4954497.02038832
+	Light = False, 0
+	RCS = False, 7231435.60467855
+	SAS = True, 7215381.28129667
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0
-	Custom02 = False, 0
+	Custom01 = True, 7231370.86468
+	Custom02 = True, 7231346.06468055
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -377,28 +362,13 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SystemHeatVessel
+	SuspensionLoadBalancer
 	{
 	}
-	VesselModuleSave
+	VesselDataManager
 	{
 	}
-	SpaceDustVessel
-	{
-	}
-	ShipEffects
-	{
-	}
-	MouseAimVesselModule
-	{
-	}
-	RPMVesselComputer
-	{
-		PERSISTENT_VARS
-		{
-		}
-	}
-	AtmoFxModule
+	ModuleDynamicBatteryStorage
 	{
 	}
 	ELVesselWorkNet
@@ -407,13 +377,25 @@ VESSELMODULES
 		selectedPad = 0
 		Productivity = 0
 	}
-	ModuleDynamicBatteryStorage
+	AtmoFxModule
 	{
 	}
-	VesselDataManager
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	ShipEffects
 	{
 	}
-	SuspensionLoadBalancer
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
 	{
 	}
 	GoldStrikeVesselModule
