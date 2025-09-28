@@ -1,6 +1,6 @@
-pid = 831fc3b1dac54236b9bb4f7857a47647
-persistentId = 1027691662
-name = Jean Kerman
+pid = 6321066098dd4ec5b09e2f400eb826c8
+persistentId = 4129702034
+name = Mersonho Kerman
 type = EVA
 sit = LANDED
 landed = True
@@ -11,17 +11,17 @@ launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 3388.1731657981873
-lct = 1267051239.1379402
-lastUT = 1267054627.351106
-distanceTraveled = 182.83995427187966
+met = 484.97471284866333
+lct = 1267054644.9276032
+lastUT = 1267055129.942316
+distanceTraveled = 1149.3402522977333
 root = 0
-lat = -6.830061018473391
-lon = -14.299407914980558
-alt = 0.24141461049293866
-hgt = 0.25687972
-nrm = -9.363889694213867E-05,0.9999997615814209,-0.0009126663208007812
-rot = -0.6290762,-0.62958604,0.40487054,-0.2096771
+lat = -6.850149701373607
+lon = -14.301154674929803
+alt = 0.2429905913231778
+hgt = 0.25641853
+nrm = -0.001572832465171814,0.9999090433120728,-0.013392612338066101
+rot = -0.13265552,0.03835649,-0.73636615,0.6623415
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -40,24 +40,24 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 30043.93897661439
-	ECC = 0.9970830542996875
-	INC = 6.83006101847339
-	LPE = 89.99999999403244
-	LAN = 208.8247519486606
-	MNA = 3.1415926535895546
-	EPH = 1267054328.3779395
+	SMA = 30043.936078213104
+	ECC = 0.9970832994183331
+	INC = 6.850149701373606
+	LPE = 89.99999994875
+	LAN = 215.30233199476024
+	MNA = 3.141592653549499
+	EPH = 1267055055.502387
 	REF = 3
 	IDENT = Squad/Minmus
 }
 PART
 {
-	name = kerbalEVAfemale
-	cid = 4283178508
-	uid = 238402253
-	mid = 370834
-	persistentId = 484029946
-	launchID = 2
+	name = kerbalEVA
+	cid = 4289023448
+	uid = 778544161
+	mid = 1731413171
+	persistentId = 3681890471
+	launchID = 3
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -74,8 +74,8 @@ PART
 	srfN = , -1
 	mass = 0.0899999961
 	shielded = False
-	temp = 302.99998998573108
-	tempExt = 302.98740465790598
+	temp = 302.99951757804354
+	tempExt = 302.816109514424
 	tempExtUnexp = 303
 	staticPressureAtm = 0
 	expt = 0
@@ -91,7 +91,7 @@ PART
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	partRendererBoundsIgnore = kbEVA_flagDecals,canopy,base,flag,collider,helmet,visor,flare1,flare2,EVAStorage_flagDecals,EVAStorageSlim_flagDecals,chute_standalone_flag,chute_container_flag
-	crew = Jean Kerman
+	crew = Mersonho Kerman
 	EVENTS
 	{
 	}
@@ -156,7 +156,7 @@ PART
 	{
 		name = KerbalEVA
 		isEnabled = True
-		JetpackDeployed = True
+		JetpackDeployed = False
 		lampOn = False
 		isHelmetEnabled = True
 		isNeckRingEnabled = True
@@ -166,7 +166,7 @@ PART
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
-		state = Idle (Floating)
+		state = Ladder (Acquire)
 		EVENTS
 		{
 		}
@@ -222,9 +222,9 @@ PART
 		}
 		vInfo
 		{
-			vesselName = Jean Kerman
+			vesselName = Mersonho Kerman
 			vesselType = EVA
-			rootUId = 238402253
+			rootUId = 778544161
 		}
 		UPGRADESAPPLIED
 		{
@@ -560,7 +560,7 @@ PART
 					cid = 4294224960
 					uid = 0
 					mid = 0
-					persistentId = 434380841
+					persistentId = 355860605
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -770,22 +770,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIModuleEVAVariants
 		isEnabled = True
 		stagingEnabled = True
@@ -850,7 +834,7 @@ ACTIONGROUPS
 	Stage = False, 0
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
+	RCS = True
 	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
@@ -916,9 +900,6 @@ VESSELMODULES
 		PERSISTENT_VARS
 		{
 		}
-	}
-	kOSVesselModule
-	{
 	}
 	SpaceDustVessel
 	{
