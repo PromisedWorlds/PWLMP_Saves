@@ -1,34 +1,34 @@
-pid = 0fc85e3e0dbf4d7784406f92744210e9
-persistentId = 1861582698
-name = minmus refiner lander Debris
+pid = e91aeff3b4644e89a4e481e6528ed12d
+persistentId = 29749125
+name = Minmus ore refiner Debris
 type = Debris
 sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = TSC 39A
-landedAt = LaunchpadFX
-displaylandedAt = LaunchpadFX
+launchedFrom = LaunchPad
+landedAt = 
+displaylandedAt = 
 splashed = False
-met = 5979314.33494997
-lct = 1260410809.4096234
-lastUT = 1266390123.7645733
-distanceTraveled = 0
+met = 1796.8638560771942
+lct = 1266388387.5002768
+lastUT = 1266390184.4841328
+distanceTraveled = 4.66815122135162
 root = 0
-lat = 0.013518377248371276
-lon = -74.56226593072536
-alt = 81.16842162190005
-hgt = 6.7604837
-nrm = 0.0008739382028579712,0.9999858736991882,-0.005245983600616455
-rot = 0.34555638,-0.49975005,0.61784625,-0.4991059
+lat = -6.8548962583923725
+lon = -14.299047902672736
+alt = 1.9721717970678583
+hgt = 1.9863435
+nrm = -0.29740849137306213,0.9547504782676697,0.0002159029245376587
+rot = -0.0418871,-0.23864965,0.8293511,-0.5034567
 CoM = 0,0,0
-stg = 7
+stg = 0
 prst = False
 ref = 0
 ctrl = False
 PQSMin = 2
-PQSMax = 10
+PQSMax = 7
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,52 +40,52 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300822.9823976845
-	ECC = 0.9947982818298962
-	INC = 0.013518377931292774
-	LPE = 270
-	LAN = 202.78002936938873
-	MNA = 3.1415926535897887
-	EPH = 1266390121.8645751
-	REF = 1
-	IDENT = Squad/Kerbin
+	SMA = 30044.75918837003
+	ECC = 0.9970861405697427
+	INC = 6.854896438266749
+	LPE = 89.98690161628873
+	LAN = 50.73633590750893
+	MNA = 3.141596380007539
+	EPH = 1266390185.8241315
+	REF = 3
+	IDENT = Squad/Minmus
 }
 PART
 {
-	name = launchClamp1
-	cid = 4291512036
-	uid = 2945837303
-	mid = 1838290362
-	persistentId = 590606249
-	launchID = 3
+	name = RadialDrill
+	cid = 4287077054
+	uid = 2305643183
+	mid = 3543470310
+	persistentId = 651318611
+	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 7
+	istg = -1
 	resPri = 0
-	dstg = 10
-	sqor = 7
-	sepI = 7
-	sidx = 8
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,Col001
-	mass = 0.100000001
+	srfN = srfAttach, -1,jumbo_COLLIDER
+	mass = 1.25
 	shielded = False
-	temp = 301.91856811232594
-	tempExt = 302.2776077433694
-	tempExtUnexp = 302.27670022201823
-	staticPressureAtm = 0.98802944421474059
-	expt = 0.100000001
-	state = 1
+	temp = 129.73890739277317
+	tempExt = 148.7768991675193
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
 	PreFailState = 0
 	attached = False
 	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = launchClamp1
+	rTrf = RadialDrill
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -148,42 +148,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
-		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
+		name = ModuleOverheatDisplay
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -198,18 +163,62 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRestockLaunchClamp
+		name = ModuleResourceHarvester
 		isEnabled = True
-		scaleFactor = 3.69815731
-		height = 7.39632416
+		EfficiencyBonus = 1
+		IsActivated = False
 		stagingEnabled = True
-		towerRot = 2.18853398E-08,-0.923879504,-5.28358441E-08,0.382683456
+		lastUpdateTime = 1266388412.4138885
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ReleaseClamp
+			StopResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = Custom02
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAsteroidDrill
+		isEnabled = False
+		DirectAttach = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 1266388412.4138885
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleResourceConverterAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -221,39 +230,116 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = ModuleCometDrill
+		isEnabled = False
+		DirectAttach = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 1266388412.4138885
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimationGroup
 		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
+		isDeployed = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
+			DeployModuleAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
+			RetractModuleAction
 			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
 			}
+			ToggleModuleAction
+			{
+				actionGroup = Custom01
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCoreHeat
+		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 356750.94056638883
+		stagingEnabled = True
+		lastUpdateTime = 1266058159.9978666
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -263,14 +349,14 @@ PART
 ACTIONGROUPS
 {
 	Stage = False, 0
-	Gear = False, 0
+	Gear = True, 0
 	Light = False, 0
-	RCS = True, 1260410799.46963
-	SAS = False, 1260410808.46962
+	RCS = False, 0
+	SAS = True, 1265834627.51055
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0
-	Custom02 = False, 0
+	Custom01 = True, 1265834654.41053
+	Custom02 = True, 1265834668.55052
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -299,7 +385,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
