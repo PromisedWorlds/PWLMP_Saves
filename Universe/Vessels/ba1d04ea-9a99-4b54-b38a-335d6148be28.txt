@@ -4,49 +4,49 @@ name = Miner
 type = Lander
 sit = LANDED
 landed = True
-skipGroundPositioning = False
+skipGroundPositioning = True
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 161695.56403684616
+met = 188560.89850473404
 lct = 1267054657.4465237
-lastUT = 1267216353.0675607
+lastUT = 1267243218.4020286
 distanceTraveled = 2031543.2075113435
 root = 0
-lat = 13.104988549511168
-lon = 177.65534034982608
-alt = 5.91642624889937
-hgt = 5.928675
-nrm = -1.0855495929718018E-05,1,-6.735324859619141E-06
-rot = 0.4510515,-0.5455595,0.42814532,0.56179094
-CoM = 5.63263893E-05,-2.91080213,7.74860382E-05
+lat = 13.10498856331597
+lon = 177.65533867128752
+alt = 5.916364144773979
+hgt = 5.9286227
+nrm = -1.8134713172912598E-05,1,-1.7881393432617188E-07
+rot = 0.45103863,-0.54554224,0.42815518,0.56181055
+CoM = 8.18967819E-05,-2.9161849,4.57763672E-05
 stg = 1
 prst = False
 ref = 4289790953
 ctrl = True
 PQSMin = 2
-PQSMax = 10
+PQSMax = 7
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.5565528
-cHdg = -4.483423
+cPch = 0.4702677
+cHdg = 1.519363
 cMod = 0
 ORBIT
 {
-	SMA = 30043.6563068099
-	ECC = 0.997193259178123
-	INC = 13.104989383066988
-	LPE = 269.99462981974017
-	LAN = 224.504031888542
-	MNA = 3.1415852341229784
-	EPH = 1267216345.73354
+	SMA = 30043.70645046793
+	ECC = 0.9971929189815589
+	INC = 13.10498923373822
+	LPE = 270
+	LAN = 103.96030074854684
+	MNA = 3.141592653589787
+	EPH = 1267243218.6490293
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -76,8 +76,8 @@ PART
 	attN = top, 1
 	mass = 0.5
 	shielded = False
-	temp = 197.18614705801318
-	tempExt = 197.0643117486714
+	temp = 201.71952804396167
+	tempExt = 200.16767563269687
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -993,16 +993,16 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 1267054657.4465237
-				deltaVExpended = 4873.2553999825514
-				dragLosses = 168.10570618839347
-				gravityLosses = 904.23793421404901
-				steeringLosses = 955.85619175038948
+				deltaVExpended = NaN
+				dragLosses = NaN
+				gravityLosses = 886.3798968922149
+				steeringLosses = NaN
 				markLAN = 324.14467553137717
 				markLatitude = -0.09720382331453227
 				markLongitude = -74.557756923942677
 				markAltitude = 95.573797588085284
 				markBodyIndex = 1
-				maxDragGees = 0.48404705163043105
+				maxDragGees = NaN
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1068,6 +1068,7 @@ PART
 			0 = Escape,Minmus
 			0 = Orbit,Minmus
 			0 = Suborbit,Minmus
+			0 = Land,Minmus
 		}
 		UPGRADESAPPLIED
 		{
@@ -1076,7 +1077,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 29.99672849232881
+		amount = 29.994741774771928
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -1111,8 +1112,8 @@ PART
 	attN = top, -1
 	mass = 0.940000057
 	shielded = False
-	temp = 197.15846696092657
-	tempExt = 197.04325926437113
+	temp = 186.7070573189898
+	tempExt = 187.84337371944278
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1127,7 +1128,6 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Meldock Kerman
 	EVENTS
 	{
 	}
@@ -1671,6 +1671,7 @@ PART
 			0 = Escape,Minmus
 			0 = Orbit,Minmus
 			0 = Suborbit,Minmus
+			0 = Land,Minmus
 		}
 		UPGRADESAPPLIED
 		{
@@ -1694,7 +1695,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 199.97818994885884
+		amount = 199.96494516514625
 		maxAmount = 200
 		flowState = True
 		isTweakable = True
@@ -1742,8 +1743,8 @@ PART
 	attN = top, 0
 	mass = 1.35500014
 	shielded = False
-	temp = 197.22460983082229
-	tempExt = 197.10704658590879
+	temp = 201.93449072027872
+	tempExt = 202.18498878488319
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2288,6 +2289,7 @@ PART
 			0 = Escape,Minmus
 			0 = Orbit,Minmus
 			0 = Suborbit,Minmus
+			0 = Land,Minmus
 		}
 		UPGRADESAPPLIED
 		{
@@ -2326,7 +2328,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 99.98909497442942
+		amount = 99.98247258257312
 		maxAmount = 100
 		flowState = True
 		isTweakable = True
@@ -2384,8 +2386,8 @@ PART
 	attN = bottom, 81
 	mass = 0.174999997
 	shielded = False
-	temp = 197.29080761929805
-	tempExt = 197.14516928179069
+	temp = 202.76274341373963
+	tempExt = 203.5118719318061
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2857,8 +2859,8 @@ PART
 	attN = bottom, 3
 	mass = 0.549000025
 	shielded = False
-	temp = 197.32828787769805
-	tempExt = 196.09774725921699
+	temp = 187.72729824842187
+	tempExt = 195.4895678893989
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2964,7 +2966,7 @@ PART
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 800
 		FirstLoad = False
-		LastUpdateTime = 1267216355.651568
+		LastUpdateTime = 1267243219.5800319
 		CoreIntegrity = 100
 		stagingEnabled = True
 		EVENTS
@@ -3085,7 +3087,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 199.97818994885884
+		amount = 199.96494516514625
 		maxAmount = 200
 		flowState = True
 		isTweakable = True
@@ -3096,7 +3098,7 @@ PART
 	RESOURCE
 	{
 		name = DepletedFuel
-		amount = 0.021009003977810737
+		amount = 0.02137820368094637
 		maxAmount = 30
 		flowState = True
 		isTweakable = False
@@ -3107,7 +3109,7 @@ PART
 	RESOURCE
 	{
 		name = EnrichedUranium
-		amount = 29.97899099601863
+		amount = 27.821325693476307
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -3145,8 +3147,8 @@ PART
 	attN = bottom, -1
 	mass = 1.56640005
 	shielded = False
-	temp = 197.23345592773222
-	tempExt = 197.11227491890773
+	temp = 203.11635120245276
+	tempExt = 201.69571892566228
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3234,7 +3236,7 @@ PART
 	RESOURCE
 	{
 		name = Lithium
-		amount = 8800
+		amount = 8020.702626545638
 		maxAmount = 8800
 		flowState = True
 		isTweakable = True
@@ -3272,8 +3274,8 @@ PART
 	attN = bottom, 5
 	mass = 1
 	shielded = False
-	temp = 197.29063827307422
-	tempExt = 197.1428566678519
+	temp = 195.67023145409806
+	tempExt = 197.48536999115564
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3395,7 +3397,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -3508,8 +3510,8 @@ PART
 	attN = bottom01, 6
 	mass = 0.446246386
 	shielded = False
-	temp = 197.26878736150599
-	tempExt = 197.15816217919428
+	temp = 191.89121405266221
+	tempExt = 194.61315313672415
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3632,7 +3634,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -3730,8 +3732,8 @@ PART
 	attN = bottom, 7
 	mass = 0.200000003
 	shielded = False
-	temp = 197.26187672782007
-	tempExt = 197.14177008724161
+	temp = 192.75210871465148
+	tempExt = 193.77616360242439
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3919,8 +3921,8 @@ PART
 	srfN = srfAttach, 5,Collider
 	mass = 1.25
 	shielded = False
-	temp = 197.21161357022245
-	tempExt = 197.08989007433112
+	temp = 229.67292991641349
+	tempExt = 215.84402527356895
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4009,11 +4011,11 @@ PART
 	MODULE
 	{
 		name = ModuleResourceHarvester
-		isEnabled = False
+		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4047,7 +4049,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4081,7 +4083,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4120,7 +4122,7 @@ PART
 		{
 			DeployModuleAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			RetractModuleAction
@@ -4143,9 +4145,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 195554.46609740064
+		CoreThermalEnergy = 495805.35659790039
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4236,8 +4238,8 @@ PART
 	attN = bottom, 21
 	mass = 4.25
 	shielded = False
-	temp = 197.2033165181619
-	tempExt = 197.14822117527828
+	temp = 199.36754756603307
+	tempExt = 199.06831800253221
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4328,9 +4330,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4343,7 +4345,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4361,9 +4363,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4376,7 +4378,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4394,9 +4396,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4409,7 +4411,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4427,9 +4429,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4442,7 +4444,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4460,9 +4462,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 665296.20606803277
+		CoreThermalEnergy = 638125.26506159711
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4508,9 +4510,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4523,7 +4525,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4541,9 +4543,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4556,7 +4558,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4574,9 +4576,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4589,7 +4591,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4607,9 +4609,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4622,7 +4624,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4656,9 +4658,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -4671,7 +4673,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -4714,8 +4716,8 @@ PART
 	attN = bottom, 10
 	mass = 1.20000005
 	shielded = False
-	temp = 197.19390224445726
-	tempExt = 197.04835798399478
+	temp = 194.69722216244264
+	tempExt = 196.1184079434644
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4823,7 +4825,7 @@ PART
 	RESOURCE
 	{
 		name = Ore
-		amount = 417.1479892661779
+		amount = 0
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4859,8 +4861,8 @@ PART
 	srfN = srfAttach, 11,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 192.54090766019968
-	tempExt = 192.52364842526697
+	temp = 182.90901008433369
+	tempExt = 182.86275988753712
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5077,8 +5079,8 @@ PART
 	srfN = srfAttach, 11,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 192.96498290476549
-	tempExt = 192.95284786446908
+	temp = 183.12458782997308
+	tempExt = 183.08360481079214
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5297,8 +5299,8 @@ PART
 	attN = bottom, 11
 	mass = 0.125
 	shielded = False
-	temp = 197.26199513023579
-	tempExt = 197.17987362207188
+	temp = 190.79178370713905
+	tempExt = 192.20179191955015
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5420,7 +5422,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 2499.7273743607348
+		amount = 2499.561814564331
 		maxAmount = 2500
 		flowState = True
 		isTweakable = True
@@ -5458,8 +5460,8 @@ PART
 	attN = bottom, 14
 	mass = 0.400000006
 	shielded = False
-	temp = 197.33767188856896
-	tempExt = 197.28197454827495
+	temp = 188.7360749458546
+	tempExt = 189.12914942231956
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5583,8 +5585,8 @@ PART
 	srfN = srfAttach, 15,collider.collider.001
 	mass = 0.049999997
 	shielded = False
-	temp = 197.33158573169618
-	tempExt = 197.29118324344878
+	temp = 188.18352365550427
+	tempExt = 188.77854704516412
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5830,8 +5832,8 @@ PART
 	srfN = srfAttach, 11,medium_COLLIDER
 	mass = 0.0149999997
 	shielded = False
-	temp = 197.17170002863571
-	tempExt = 197.03847832506204
+	temp = 194.66230818739709
+	tempExt = 195.60853200362388
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6102,8 +6104,8 @@ PART
 	srfN = srfAttach, 11,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.11392528994145
-	tempExt = 196.99808696244699
+	temp = 193.4803706641558
+	tempExt = 194.51260604754012
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6201,7 +6203,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -6479,7 +6481,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -6526,7 +6528,7 @@ PART
 	dstg = 2
 	sqor = 1
 	sepI = -1
-	sidx = 0
+	sidx = 1
 	attm = 1
 	sameVesselCollision = False
 	sym = 38
@@ -6535,8 +6537,8 @@ PART
 	srfN = srfAttach, 11,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.11039776335508
-	tempExt = 196.99600984189055
+	temp = 193.47381043243328
+	tempExt = 194.4890016479645
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6634,7 +6636,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -6912,7 +6914,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -6968,8 +6970,8 @@ PART
 	srfN = srfAttach, 11,medium_COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 197.23243573520921
-	tempExt = 197.07751103036935
+	temp = 194.07538159829161
+	tempExt = 195.42795482179753
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7229,8 +7231,8 @@ PART
 	attN = front, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 197.1994650260749
-	tempExt = 197.10820240305583
+	temp = 199.31251831027342
+	tempExt = 199.85821889760214
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7411,8 +7413,8 @@ PART
 	srfN = srfAttach, 21,Panel2
 	mass = 0.100000001
 	shielded = False
-	temp = 197.17464989681233
-	tempExt = 197.07958567653282
+	temp = 198.56361885407171
+	tempExt = 199.36414518643653
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7614,8 +7616,8 @@ PART
 	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 197.18434517320472
-	tempExt = 197.08351126348526
+	temp = 199.14402913787052
+	tempExt = 199.56616978497564
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7820,8 +7822,8 @@ PART
 	attN = bottom, -1
 	mass = 1.56640005
 	shielded = False
-	temp = 197.22554947393033
-	tempExt = 197.09000176526143
+	temp = 203.14785950800839
+	tempExt = 201.769374299715
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7893,7 +7895,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -7909,7 +7911,7 @@ PART
 	RESOURCE
 	{
 		name = Lithium
-		amount = 8800
+		amount = 8020.702626545638
 		maxAmount = 8800
 		flowState = True
 		isTweakable = True
@@ -7947,8 +7949,8 @@ PART
 	attN = bottom, 24
 	mass = 1
 	shielded = False
-	temp = 197.28532449864466
-	tempExt = 197.13446416701632
+	temp = 195.68807901075894
+	tempExt = 197.56383915579701
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8070,7 +8072,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -8183,8 +8185,8 @@ PART
 	attN = bottom01, 25
 	mass = 0.446246386
 	shielded = False
-	temp = 197.26295779131493
-	tempExt = 197.15632862498265
+	temp = 191.90826437238039
+	tempExt = 194.70850516868541
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8307,7 +8309,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -8405,8 +8407,8 @@ PART
 	attN = bottom, 26
 	mass = 0.200000003
 	shielded = False
-	temp = 197.25637779243959
-	tempExt = 197.1573386970812
+	temp = 192.95105182383247
+	tempExt = 193.98636822687993
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8594,8 +8596,8 @@ PART
 	srfN = srfAttach, 24,Collider
 	mass = 1.25
 	shielded = False
-	temp = 197.19990041044389
-	tempExt = 197.07159856863788
+	temp = 229.696986020151
+	tempExt = 215.72581223047771
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8684,11 +8686,11 @@ PART
 	MODULE
 	{
 		name = ModuleResourceHarvester
-		isEnabled = False
+		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -8722,7 +8724,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -8756,7 +8758,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -8795,7 +8797,7 @@ PART
 		{
 			DeployModuleAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			RetractModuleAction
@@ -8818,9 +8820,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 195537.9503331552
+		CoreThermalEnergy = 495805.35659790039
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -8868,7 +8870,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -8911,8 +8913,8 @@ PART
 	attN = bottom, 40
 	mass = 4.25
 	shielded = False
-	temp = 197.18328371839931
-	tempExt = 197.0675020066972
+	temp = 199.4121800242992
+	tempExt = 199.25450448340192
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9005,7 +9007,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9018,7 +9020,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9036,9 +9038,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9051,7 +9053,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9069,9 +9071,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9084,7 +9086,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9102,9 +9104,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9117,7 +9119,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9135,9 +9137,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 665296.13535289373
+		CoreThermalEnergy = 638103.59726119263
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9183,9 +9185,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9198,7 +9200,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9216,9 +9218,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9231,7 +9233,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9249,9 +9251,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9264,7 +9266,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9282,9 +9284,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9297,7 +9299,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9313,7 +9315,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -9331,9 +9333,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -9346,7 +9348,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -9389,8 +9391,8 @@ PART
 	attN = bottom, 29
 	mass = 1.20000005
 	shielded = False
-	temp = 197.17457551850507
-	tempExt = 196.99738386198939
+	temp = 194.75859299820866
+	tempExt = 196.25868165184386
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9498,7 +9500,7 @@ PART
 	RESOURCE
 	{
 		name = Ore
-		amount = 417.1479892661779
+		amount = 0
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -9534,8 +9536,8 @@ PART
 	srfN = srfAttach, 30,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 191.76372044306328
-	tempExt = 191.69376564680712
+	temp = 186.54958050474227
+	tempExt = 186.58670617936204
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9752,8 +9754,8 @@ PART
 	srfN = srfAttach, 30,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 192.39638207543595
-	tempExt = 192.34223280703853
+	temp = 183.13564413349553
+	tempExt = 183.09486160693686
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9972,8 +9974,8 @@ PART
 	attN = bottom, 30
 	mass = 0.125
 	shielded = False
-	temp = 197.24782017668065
-	tempExt = 197.13276839235976
+	temp = 190.88496540723648
+	tempExt = 192.51011603642445
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10095,7 +10097,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 2499.7273743607348
+		amount = 2499.561814564331
 		maxAmount = 2500
 		flowState = True
 		isTweakable = True
@@ -10133,8 +10135,8 @@ PART
 	attN = bottom, 33
 	mass = 0.400000006
 	shielded = False
-	temp = 197.32957442152093
-	tempExt = 197.24056050826442
+	temp = 188.84482610584243
+	tempExt = 189.70966823376267
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10258,8 +10260,8 @@ PART
 	srfN = srfAttach, 34,collider.collider.001
 	mass = 0.049999997
 	shielded = False
-	temp = 197.32451486010785
-	tempExt = 197.21875659787528
+	temp = 188.32125945878414
+	tempExt = 189.21913062221901
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10505,8 +10507,8 @@ PART
 	srfN = srfAttach, 30,medium_COLLIDER
 	mass = 0.0149999997
 	shielded = False
-	temp = 197.15009210018775
-	tempExt = 196.99645307875218
+	temp = 194.72745489977032
+	tempExt = 195.72282627771472
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10777,8 +10779,8 @@ PART
 	srfN = srfAttach, 30,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.09131061882951
-	tempExt = 196.96345274665239
+	temp = 193.53808257848337
+	tempExt = 194.60351523893362
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10876,7 +10878,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -11201,7 +11203,7 @@ PART
 	dstg = 2
 	sqor = 1
 	sepI = -1
-	sidx = 0
+	sidx = 1
 	attm = 1
 	sameVesselCollision = False
 	sym = 19
@@ -11210,8 +11212,8 @@ PART
 	srfN = srfAttach, 30,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.12064216285518
-	tempExt = 197.08098004172842
+	temp = 193.53152532550001
+	tempExt = 194.57992813926396
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11309,7 +11311,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -11643,8 +11645,8 @@ PART
 	srfN = srfAttach, 30,medium_COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 197.22008829542381
-	tempExt = 197.05591605205916
+	temp = 194.13503442039257
+	tempExt = 195.54076225532859
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11904,8 +11906,8 @@ PART
 	attN = front, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 197.17804987468327
-	tempExt = 197.04948153932011
+	temp = 199.35643157593969
+	tempExt = 199.90512633683676
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12086,8 +12088,8 @@ PART
 	srfN = srfAttach, 40,Panel2
 	mass = 0.100000001
 	shielded = False
-	temp = 197.15173428483845
-	tempExt = 197.03180830159673
+	temp = 198.60434908793752
+	tempExt = 199.42991389850343
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12289,8 +12291,8 @@ PART
 	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 197.16002504131336
-	tempExt = 197.03515982515208
+	temp = 199.18588921787
+	tempExt = 199.61124301231681
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12495,8 +12497,8 @@ PART
 	attN = bottom, -1
 	mass = 1.56640005
 	shielded = False
-	temp = 197.22268773970936
-	tempExt = 197.07618498723724
+	temp = 203.2137493544223
+	tempExt = 201.87557418576162
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12584,7 +12586,7 @@ PART
 	RESOURCE
 	{
 		name = Lithium
-		amount = 8800
+		amount = 8020.702626545638
 		maxAmount = 8800
 		flowState = True
 		isTweakable = True
@@ -12622,8 +12624,8 @@ PART
 	attN = bottom, 43
 	mass = 1
 	shielded = False
-	temp = 197.28263622184565
-	tempExt = 197.12778961618417
+	temp = 195.72702874201875
+	tempExt = 197.63961571565892
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12745,7 +12747,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -12858,8 +12860,8 @@ PART
 	attN = bottom01, 44
 	mass = 0.446246386
 	shielded = False
-	temp = 197.259038386074
-	tempExt = 197.14339402423678
+	temp = 191.93293276307318
+	tempExt = 194.75216236242585
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12982,7 +12984,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13080,8 +13082,8 @@ PART
 	attN = bottom, 45
 	mass = 0.200000003
 	shielded = False
-	temp = 197.25149996901447
-	tempExt = 197.12337303750448
+	temp = 192.97155315831984
+	tempExt = 194.00443973658059
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13269,8 +13271,8 @@ PART
 	srfN = srfAttach, 43,Collider
 	mass = 1.25
 	shielded = False
-	temp = 197.19520662943737
-	tempExt = 197.06146230575055
+	temp = 229.75589673365513
+	tempExt = 215.70288705195756
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13359,11 +13361,11 @@ PART
 	MODULE
 	{
 		name = ModuleResourceHarvester
-		isEnabled = False
+		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13397,7 +13399,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13431,7 +13433,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13470,7 +13472,7 @@ PART
 		{
 			DeployModuleAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			RetractModuleAction
@@ -13493,9 +13495,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 195536.0607017978
+		CoreThermalEnergy = 495805.35659790039
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13543,7 +13545,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -13586,8 +13588,8 @@ PART
 	attN = bottom, 59
 	mass = 4.25
 	shielded = False
-	temp = 197.17437136203614
-	tempExt = 197.03507379600737
+	temp = 199.50312978523749
+	tempExt = 199.56652805396789
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13678,9 +13680,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13693,7 +13695,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13711,9 +13713,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13726,7 +13728,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13744,9 +13746,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13759,7 +13761,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13777,9 +13779,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13792,7 +13794,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13810,9 +13812,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 665296.06463774759
+		CoreThermalEnergy = 638204.71046790481
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13858,9 +13860,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13873,7 +13875,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13891,9 +13893,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13906,7 +13908,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13924,9 +13926,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13939,7 +13941,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -13957,9 +13959,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -13972,7 +13974,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -14006,9 +14008,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -14021,7 +14023,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -14064,8 +14066,8 @@ PART
 	attN = bottom, 48
 	mass = 1.20000005
 	shielded = False
-	temp = 197.16247043563791
-	tempExt = 196.96485787615518
+	temp = 194.84412071550574
+	tempExt = 196.54750802928245
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14173,7 +14175,7 @@ PART
 	RESOURCE
 	{
 		name = Ore
-		amount = 417.1479892661779
+		amount = 0
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -14209,8 +14211,8 @@ PART
 	srfN = srfAttach, 49,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 191.76232126166562
-	tempExt = 191.6923208930786
+	temp = 183.32727669222942
+	tempExt = 183.31343355919708
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14427,8 +14429,8 @@ PART
 	srfN = srfAttach, 49,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 191.76232126166562
-	tempExt = 191.6923208930786
+	temp = 185.0228577540561
+	tempExt = 185.04907205871336
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14647,8 +14649,8 @@ PART
 	attN = bottom, 49
 	mass = 0.125
 	shielded = False
-	temp = 197.23691743515081
-	tempExt = 197.08158571188318
+	temp = 190.95046293366084
+	tempExt = 192.68494364301279
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14770,7 +14772,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 2499.7273743607348
+		amount = 2499.561814564331
 		maxAmount = 2500
 		flowState = True
 		isTweakable = True
@@ -14808,8 +14810,8 @@ PART
 	attN = bottom, 52
 	mass = 0.400000006
 	shielded = False
-	temp = 197.32035063326009
-	tempExt = 197.15379561940424
+	temp = 188.89909610658549
+	tempExt = 189.82794846621488
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14933,8 +14935,8 @@ PART
 	srfN = srfAttach, 53,collider.collider.001
 	mass = 0.049999997
 	shielded = False
-	temp = 197.31570771549391
-	tempExt = 197.156531883279
+	temp = 188.39552757951449
+	tempExt = 189.50646940269129
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15180,8 +15182,8 @@ PART
 	srfN = srfAttach, 49,medium_COLLIDER
 	mass = 0.0149999997
 	shielded = False
-	temp = 197.13732169575377
-	tempExt = 196.98127700265192
+	temp = 194.8273227419615
+	tempExt = 195.9497971032639
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15452,8 +15454,8 @@ PART
 	srfN = srfAttach, 49,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.08161909211205
-	tempExt = 196.9444323330211
+	temp = 193.64551933595988
+	tempExt = 194.78551480008275
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15551,7 +15553,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -15885,8 +15887,8 @@ PART
 	srfN = srfAttach, 49,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.07980474927095
-	tempExt = 196.94336469652242
+	temp = 193.63893489692754
+	tempExt = 194.7619422612423
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15984,7 +15986,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -16318,8 +16320,8 @@ PART
 	srfN = srfAttach, 49,medium_COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 197.2083640779031
-	tempExt = 197.0270269290063
+	temp = 194.23255577333612
+	tempExt = 195.76755255904516
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16579,8 +16581,8 @@ PART
 	attN = front, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 197.16887293067566
-	tempExt = 197.02617269440802
+	temp = 199.44723793608631
+	tempExt = 199.99295690103935
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16761,8 +16763,8 @@ PART
 	srfN = srfAttach, 59,Panel2
 	mass = 0.100000001
 	shielded = False
-	temp = 197.14330110783914
-	tempExt = 197.01361858495622
+	temp = 198.69152777126436
+	tempExt = 199.50413907723973
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16964,8 +16966,8 @@ PART
 	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 197.15061496440933
-	tempExt = 197.01640927134989
+	temp = 199.27676395075841
+	tempExt = 199.6999677259995
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17170,8 +17172,8 @@ PART
 	attN = bottom, -1
 	mass = 1.56640005
 	shielded = False
-	temp = 197.2281894689381
-	tempExt = 197.09584112806886
+	temp = 212.02815221266553
+	tempExt = 209.75012097493956
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17259,7 +17261,7 @@ PART
 	RESOURCE
 	{
 		name = Lithium
-		amount = 8800
+		amount = 8020.702626545638
 		maxAmount = 8800
 		flowState = True
 		isTweakable = True
@@ -17297,8 +17299,8 @@ PART
 	attN = bottom, 62
 	mass = 1
 	shielded = False
-	temp = 197.28932113055876
-	tempExt = 197.13797496226306
+	temp = 200.98063867885446
+	tempExt = 203.68963514660047
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17420,7 +17422,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -17533,8 +17535,8 @@ PART
 	attN = bottom01, 63
 	mass = 0.446246386
 	shielded = False
-	temp = 197.26876305474352
-	tempExt = 197.16041288788438
+	temp = 195.38963576416648
+	tempExt = 199.51621968136482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17657,7 +17659,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -17755,8 +17757,8 @@ PART
 	attN = bottom, 64
 	mass = 0.200000003
 	shielded = False
-	temp = 197.26262214635867
-	tempExt = 197.15818028616957
+	temp = 196.94852334825677
+	tempExt = 198.47186944700712
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17944,8 +17946,8 @@ PART
 	srfN = srfAttach, 62,Collider
 	mass = 1.25
 	shielded = False
-	temp = 197.20553500927682
-	tempExt = 197.07794453497448
+	temp = 237.64767677282472
+	tempExt = 222.91222985843467
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18034,11 +18036,11 @@ PART
 	MODULE
 	{
 		name = ModuleResourceHarvester
-		isEnabled = False
+		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18072,7 +18074,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18106,7 +18108,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18145,7 +18147,7 @@ PART
 		{
 			DeployModuleAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			RetractModuleAction
@@ -18168,9 +18170,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 195546.09907408361
+		CoreThermalEnergy = 495805.35659790039
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18218,7 +18220,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -18261,8 +18263,8 @@ PART
 	attN = bottom, 78
 	mass = 4.25
 	shielded = False
-	temp = 197.19208911354445
-	tempExt = 197.07684176113426
+	temp = 223.88105908559493
+	tempExt = 217.65970400656042
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18353,9 +18355,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18368,7 +18370,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18386,9 +18388,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18401,7 +18403,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18419,9 +18421,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18434,7 +18436,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18452,9 +18454,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18467,7 +18469,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18485,9 +18487,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 665296.13535289373
+		CoreThermalEnergy = 2530546.129661819
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18533,9 +18535,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18548,7 +18550,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18566,9 +18568,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18581,7 +18583,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18599,9 +18601,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18614,7 +18616,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18632,9 +18634,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18647,7 +18649,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18681,9 +18683,9 @@ PART
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
-		IsActivated = False
+		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1267205520.3074551
+		lastUpdateTime = 1267216647.0970623
 		EVENTS
 		{
 		}
@@ -18696,7 +18698,7 @@ PART
 			}
 			StartResourceConverterAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ToggleResourceConverterAction
@@ -18739,8 +18741,8 @@ PART
 	attN = bottom, 67
 	mass = 1.20000005
 	shielded = False
-	temp = 197.18398694713088
-	tempExt = 197.00790868970353
+	temp = 211.38576140282859
+	tempExt = 213.11480870977175
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18848,7 +18850,7 @@ PART
 	RESOURCE
 	{
 		name = Ore
-		amount = 417.1479892661779
+		amount = 0
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -18884,8 +18886,8 @@ PART
 	srfN = srfAttach, 68,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 192.58724271291237
-	tempExt = 192.53370660260265
+	temp = 185.76279907151741
+	tempExt = 185.72950551304157
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19102,8 +19104,8 @@ PART
 	srfN = srfAttach, 68,medium_COLLIDER
 	mass = 0.133000001
 	shielded = False
-	temp = 191.76467077958156
-	tempExt = 191.69472951907952
+	temp = 189.84596736286531
+	tempExt = 189.89522827894305
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19322,8 +19324,8 @@ PART
 	attN = bottom, 68
 	mass = 0.125
 	shielded = False
-	temp = 197.25470205806045
-	tempExt = 197.14276206103898
+	temp = 202.57602619218187
+	tempExt = 205.34427667971192
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19445,7 +19447,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 2499.7273743607348
+		amount = 2499.561814564331
 		maxAmount = 2500
 		flowState = True
 		isTweakable = True
@@ -19483,8 +19485,8 @@ PART
 	attN = bottom, 71
 	mass = 0.400000006
 	shielded = False
-	temp = 197.33351673091693
-	tempExt = 197.25177755466302
+	temp = 197.93763603363027
+	tempExt = 199.20155330093638
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19608,8 +19610,8 @@ PART
 	srfN = srfAttach, 72,collider.collider.001
 	mass = 0.049999997
 	shielded = False
-	temp = 197.32768568081852
-	tempExt = 197.23661028288458
+	temp = 196.67925953673139
+	tempExt = 198.3293792159364
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19855,8 +19857,8 @@ PART
 	srfN = srfAttach, 68,medium_COLLIDER
 	mass = 0.0149999997
 	shielded = False
-	temp = 197.16122568409503
-	tempExt = 197.01703086211785
+	temp = 211.26624912504764
+	tempExt = 212.4528363678601
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20127,8 +20129,8 @@ PART
 	srfN = srfAttach, 68,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.13320088866021
-	tempExt = 197.09036498449677
+	temp = 209.04720649416947
+	tempExt = 210.63485102539423
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20226,7 +20228,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -20551,7 +20553,7 @@ PART
 	dstg = 2
 	sqor = 1
 	sepI = -1
-	sidx = 0
+	sidx = 1
 	attm = 1
 	sameVesselCollision = False
 	sym = 19
@@ -20560,8 +20562,8 @@ PART
 	srfN = srfAttach, 68,medium_COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 197.09932308185552
-	tempExt = 196.97286455550662
+	temp = 209.04065731268145
+	tempExt = 210.61129135935448
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20659,7 +20661,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom07
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -20993,8 +20995,8 @@ PART
 	srfN = srfAttach, 68,medium_COLLIDER
 	mass = 0.049999997
 	shielded = False
-	temp = 197.22038241737073
-	tempExt = 197.0629637079395
+	temp = 210.21747239234503
+	tempExt = 212.12780518846853
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21254,8 +21256,8 @@ PART
 	attN = front, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 197.18729069829848
-	tempExt = 197.05970318059539
+	temp = 223.676628199059
+	tempExt = 220.16549791909725
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21436,8 +21438,8 @@ PART
 	srfN = srfAttach, 78,Panel2
 	mass = 0.100000001
 	shielded = False
-	temp = 197.16276154783756
-	tempExt = 197.04302017978725
+	temp = 222.26080745551249
+	tempExt = 220.91910961913229
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21639,8 +21641,8 @@ PART
 	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 197.17050022566465
-	tempExt = 197.04616888078834
+	temp = 223.20168997196981
+	tempExt = 221.09273364031606
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21842,8 +21844,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.837804854
 	shielded = False
-	temp = 197.5023389513083
-	tempExt = 197.37498591930409
+	temp = 196.00691144853312
+	tempExt = 199.81177465915886
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21966,7 +21968,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1267056067.3200972
+		LastUpdateTime = 1267216599.5969288
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -22062,8 +22064,8 @@ PART
 	srfN = srfAttach, 81,COLLIDERSTRUCT
 	mass = 0.049999997
 	shielded = False
-	temp = 197.3691003953125
-	tempExt = 197.34756406542763
+	temp = 195.11551981490825
+	tempExt = 198.21120791725895
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22309,8 +22311,8 @@ PART
 	srfN = srfAttach, 81,COLLIDERSTRUCT
 	mass = 0.049999997
 	shielded = False
-	temp = 197.36926361765771
-	tempExt = 197.34760391275984
+	temp = 195.11552002000008
+	tempExt = 198.21120987137328
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22556,8 +22558,8 @@ PART
 	srfN = srfAttach, 81,COLLIDERSTRUCT
 	mass = 0.049999997
 	shielded = False
-	temp = 197.36920322350085
-	tempExt = 197.34759644074308
+	temp = 195.11551981353696
+	tempExt = 198.21120790420898
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22803,8 +22805,8 @@ PART
 	srfN = srfAttach, 81,COLLIDERSTRUCT
 	mass = 0.049999997
 	shielded = False
-	temp = 197.36942874001468
-	tempExt = 197.34765703197323
+	temp = 195.1155200204829
+	tempExt = 198.21120987596561
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23052,8 +23054,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 197.2129379166268
-	tempExt = 197.11724174405995
+	temp = 197.65320669374961
+	tempExt = 201.33868338271631
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23239,8 +23241,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 197.2129379166268
-	tempExt = 197.11724174405995
+	temp = 197.65320669374961
+	tempExt = 201.33868338271631
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23426,8 +23428,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 197.2129379166268
-	tempExt = 197.11724174405995
+	temp = 197.65320669374961
+	tempExt = 201.33868338271631
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23613,8 +23615,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 197.21296154346336
-	tempExt = 197.1172492209825
+	temp = 197.65320669374961
+	tempExt = 201.33868338271631
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23798,8 +23800,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER25
 	mass = 0.229500026
 	shielded = False
-	temp = 194.76715133236951
-	tempExt = 194.684290289085
+	temp = 182.88637156139657
+	tempExt = 182.83888653293678
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24014,8 +24016,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER25
 	mass = 0.229500026
 	shielded = False
-	temp = 194.76704818108968
-	tempExt = 194.68418741206943
+	temp = 182.88637342441308
+	tempExt = 182.83888841384189
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24230,8 +24232,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER25
 	mass = 0.229500026
 	shielded = False
-	temp = 194.76704924471895
-	tempExt = 194.68418847334087
+	temp = 182.88626131638915
+	tempExt = 182.83877471517815
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24337,7 +24339,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -24446,8 +24448,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER25
 	mass = 0.229500026
 	shielded = False
-	temp = 194.76753334775384
-	tempExt = 194.68464952748951
+	temp = 182.88637276170189
+	tempExt = 182.8388877456147
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24641,7 +24643,7 @@ ACTIONGROUPS
 	Gear = False, 0
 	Light = True, 1267054888.0067
 	RCS = True, 1267205499.26177
-	SAS = True
+	SAS = True, 1267206284.08601
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -24650,7 +24652,7 @@ ACTIONGROUPS
 	Custom04 = False, 0
 	Custom05 = False, 0
 	Custom06 = False, 0
-	Custom07 = True
+	Custom07 = True, 1267206324.10759
 	Custom08 = False, 0
 	Custom09 = False, 0
 	Custom10 = False, 0
@@ -24668,9 +24670,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = -0.00090656185
-	yaw = 0.0012017705
-	roll = -2.1796486E-05
+	pitch = 0
+	yaw = 0.00028095397
+	roll = 0.00054421206
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -24700,7 +24702,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 1267205520.3074551
+		lastUpdate = 1267216647.0970623
 		selectedPad = 0
 		Productivity = 0.33465609975215993
 	}
