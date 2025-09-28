@@ -1,27 +1,27 @@
-pid = 2745568468ca421fb0dc8bb8fffe9675
-persistentId = 930339559
+pid = e6163a0cfd3f450fb5c1c0590a0471c3
+persistentId = 1357100175
 name = Minmus ore refiner Debris
 type = Debris
-sit = LANDED
-landed = True
+sit = ESCAPING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = LaunchPad
+launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 661090.5785195827
-lct = 1266388387.5002768
-lastUT = 1267049478.1587963
-distanceTraveled = 0.8116926140324106
+met = 0.27999973297119141
+lct = 1266390280.744041
+lastUT = 1266390281.0240407
+distanceTraveled = 547.41352417711926
 root = 0
-lat = -6.857041191472642
-lon = -14.298308463819398
-alt = 2.125263638139586
-hgt = 2.140135
-nrm = -0.19943305850028992,0.9799114465713501,1.519918441772461E-05
-rot = -0.5218573,-0.6607578,0.49081415,-0.2239767
+lat = -6.8602432671502109
+lon = -14.588557965679531
+alt = 51.407529039970541
+hgt = 51.4209557
+nrm = -0.00178009644,-0.00384092331,-0.999991179
+rot = -0.396217793,0.468746424,0.581114292,-0.534410477
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -40,27 +40,27 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 30044.88145031047
-	ECC = 0.9970831092434916
-	INC = 6.857041191472643
-	LPE = 89.99999994118622
-	LAN = 165.59574028620068
-	MNA = 3.141592653601889
-	EPH = 1267049476.9987974
+	SMA = -1880.4431218615066
+	ECC = 32.489674577760866
+	INC = 173.08235047706296
+	LPE = 252.90811449749097
+	LAN = 223.85980349010478
+	MNA = 5.2306180502372746
+	EPH = 1266390281.0240407
 	REF = 3
 	IDENT = Squad/Minmus
 }
 PART
 {
-	name = RadialDrill
-	cid = 4287076904
-	uid = 1312325363
+	name = nfe-rtg-gphs-1
+	cid = 4289996788
+	uid = 1073773147
 	mid = 3543470310
-	persistentId = 3506405480
+	persistentId = 3365838043
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1.00000048
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -72,11 +72,13 @@ PART
 	attm = 1
 	sameVesselCollision = False
 	srfN = srfAttach, -1,jumbo_COLLIDER
-	mass = 1.25
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.300000012
 	shielded = False
-	temp = 129.78184729326657
-	tempExt = 148.90308693024238
-	tempExtUnexp = 4
+	temp = 198.4079618971123
+	tempExt = 197.83523033818093
+	tempExtUnexp = 299.84925334155395
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -85,7 +87,7 @@ PART
 	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = RadialDrill
+	rTrf = nfe-rtg-gphs-1
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -148,146 +150,18 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleOverheatDisplay
+		name = ModuleCargoPart
 		isEnabled = True
+		packedVolume = 120
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleResourceHarvester
-		isEnabled = True
-		EfficiencyBonus = 1
-		IsActivated = False
-		stagingEnabled = True
-		lastUpdateTime = 1266388412.4138885
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StopResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			StartResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleResourceConverterAction
-			{
-				actionGroup = Custom02
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAsteroidDrill
-		isEnabled = False
-		DirectAttach = False
-		EfficiencyBonus = 1
-		IsActivated = False
-		stagingEnabled = True
-		lastUpdateTime = 1266388412.4138885
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StopResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			StartResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCometDrill
-		isEnabled = False
-		DirectAttach = False
-		EfficiencyBonus = 1
-		IsActivated = False
-		stagingEnabled = True
-		lastUpdateTime = 1266388412.4138885
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StopResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			StartResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimationGroup
-		isEnabled = True
-		isDeployed = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployModuleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RetractModuleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleModuleAction
-			{
-				actionGroup = Custom01
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -298,28 +172,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 356751.65406968084
+		CoreThermalEnergy = 245194.09276505839
 		stagingEnabled = True
-		lastUpdateTime = 1266058159.9978666
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
+		lastUpdateTime = 1266390281.0240407
 		EVENTS
 		{
 		}
@@ -345,18 +200,34 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleRadioisotopeGenerator
+		isEnabled = True
+		EasyMode = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 ACTIONGROUPS
 {
 	Stage = False, 0
-	Gear = True, 0
+	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = True, 1265834627.51055
+	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = True, 1265834654.41053
-	Custom02 = True, 1265834668.55052
+	Custom01 = False, 0
+	Custom02 = False, 0
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -406,7 +277,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 1266390281.0240407
 		selectedPad = 0
 		Productivity = 0
 	}

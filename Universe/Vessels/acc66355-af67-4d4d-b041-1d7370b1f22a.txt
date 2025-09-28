@@ -1,27 +1,27 @@
-pid = e5a70ff8961647018c07dd7762e01a6e
-persistentId = 2261174715
-name = Charmich minmus base
-type = Flag
-sit = LANDED
-landed = True
+pid = acc66355af674d4db0411d7370b1f22a
+persistentId = 1070948604
+name = Minmus ore refiner Debris
+type = Debris
+sit = ESCAPING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = 
+launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 1262879605.1369705
-lct = 3510564.2271767803
-lastUT = 1266390169.4041471
-distanceTraveled = 0
+met = 0.27999973297119141
+lct = 1266390280.744041
+lastUT = 1266390281.0240407
+distanceTraveled = 547.41354147653431
 root = 0
-lat = -6.842045873480904
-lon = -14.28865277634882
-alt = 0.3701365502347471
-hgt = 0.37976268
-nrm = -0.00041669607162475586,0.9982739686965942,-0.0587276816368103
-rot = 0.55108905,0.5638527,-0.5322862,0.30828947
+lat = -6.8596209661139937
+lon = -14.59279711805441
+alt = 51.424605664869887
+hgt = 51.4391479
+nrm = 0.000500708818,0.00418698788,-0.999991238
+rot = 0.400989741,0.464663476,-0.436933547,-0.657559276
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -40,52 +40,54 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 30044.00151331585
-	ECC = 0.9970831818110972
-	INC = 6.842045873480905
-	LPE = 90.00000011025392
-	LAN = 50.733542351572396
-	MNA = 3.1415926482164593
-	EPH = 1266390185.8241315
+	SMA = -1880.4429825212565
+	ECC = 32.489286375334665
+	INC = 173.08301854397345
+	LPE = 252.9063216277884
+	LAN = 223.85817546236675
+	MNA = 5.2329497527696844
+	EPH = 1266390281.0240407
 	REF = 3
 	IDENT = Squad/Minmus
 }
 PART
 {
-	name = flag
-	cid = 4289670072
-	uid = 1477267134
-	mid = 4178075928
-	persistentId = 3079550421
-	launchID = 4
+	name = nfe-rtg-gphs-1
+	cid = 4289997238
+	uid = 3545529083
+	mid = 3543470310
+	persistentId = 4127448357
+	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1
+	rotation = 0,0,0,1.0000006
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = -1
 	resPri = 0
 	dstg = 0
 	sqor = -1
-	sepI = 0
+	sepI = -1
 	sidx = -1
-	attm = 0
+	attm = 1
 	sameVesselCollision = False
-	srfN = , -1
-	mass = 0.00999999978
+	srfN = srfAttach, -1,jumbo_COLLIDER
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.300000012
 	shielded = False
-	temp = 4
-	tempExt = 4
-	tempExtUnexp = 4
+	temp = 198.4079621165823
+	tempExt = 197.83522583386653
+	tempExtUnexp = 299.84875854542696
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
+	attached = False
+	autostrutMode = Grandparent
+	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	rTrf = nfe-rtg-gphs-1
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -113,25 +115,21 @@ PART
 		AutostrutOff
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutRoot
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutHeaviest
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutGrandparent
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesEnableFlow
@@ -152,28 +150,12 @@ PART
 	}
 	MODULE
 	{
-		name = FlagSite
+		name = ModuleCargoPart
 		isEnabled = True
-		placedBy = Donsy Kerman
-		PlaqueText = 
-		stagingEnabled = True
-		state = Placed
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		isMirrored = False
+		packedVolume = 120
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -187,8 +169,42 @@ PART
 	}
 	MODULE
 	{
-		name = WBIModuleEVAVariants
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 245194.10508165549
+		stagingEnabled = True
+		lastUpdateTime = 1266390281.0240407
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRadioisotopeGenerator
+		isEnabled = True
+		EasyMode = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -244,4 +260,54 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	ELVesselWorkNet
+	{
+		lastUpdate = 1266390281.0240407
+		selectedPad = 0
+		Productivity = 0
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }
