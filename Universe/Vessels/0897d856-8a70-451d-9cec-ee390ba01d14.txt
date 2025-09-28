@@ -1,31 +1,31 @@
-pid = e6867a82f9784b869b435269cea9f87a
-persistentId = 1257906023
+pid = 0897d8568a70451d9cecee390ba01d14
+persistentId = 4075656265
 name = Minmus ore refiner
 type = Probe
-sit = LANDED
+sit = PRELAUNCH
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
-launchedFrom = Runway
+vesselSpawning = False
+launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 178787.9195227623
-lct = 1266208856.201878
-lastUT = 1266387644.1813407
-distanceTraveled = 2.772299864423158
+met = 0
+lct = 1266055739.9578667
+lastUT = 1266055739.9978666
+distanceTraveled = 0
 root = 0
-lat = -6.855997362258546
-lon = -14.299975348005226
-alt = 2.5887732818810036
-hgt = 2.600617
-nrm = 1.1198222637176514E-05,1.000000238418579,-2.7418136596679688E-06
-rot = 0.5906508,0.40682325,0.4592665,-0.5241191
-CoM = -0.00162637234,4.05878258,-0.000458180904
+lat = -6.8560066703240325
+lon = -14.299969585551567
+alt = 2.5899120180329191
+hgt = 2.60044885
+nrm = -1.25169754E-05,1.00000012,-1.11460686E-05
+rot = 0.589310825,0.405352086,0.460989147,-0.525253773
+CoM = -0.00142872334,4.20359421,-0.00038433075
 stg = 2
 prst = False
-ref = 0
+ref = 2738440013
 ctrl = True
 PQSMin = 2
 PQSMax = 7
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.2859998
+cHdg = -0.2500003
+cMod = 0
 ORBIT
 {
-	SMA = 30047.149426764
-	ECC = 0.9970828541937292
-	INC = 6.855998611244085
-	LPE = 90.00893702594055
-	LAN = 28.05637874390169
-	MNA = 3.141582917867136
-	EPH = 1266387643.222303
+	SMA = 30047.229508569704
+	ECC = 0.99708240949438709
+	INC = 6.8560079250842474
+	LPE = 89.999924592944978
+	LAN = 310.51196531559975
+	MNA = 3.1415938631699465
+	EPH = 1266055739.9778666
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -60,7 +60,7 @@ PART
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -72,13 +72,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top, 25
+	attN = top, 26
 	attN = bottom, -1
 	mass = 4.30000019
 	shielded = False
-	temp = 4.8874188742865243
-	tempExt = 45.143470538228947
-	tempExtUnexp = 299.8302699489945
+	temp = 460.12107182242795
+	tempExt = 420.94671730859835
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -87,7 +87,7 @@ PART
 	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = restock-oretank-375-1 (Minmus ore refiner)
+	rTrf = restock-oretank-375-1
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -166,11 +166,122 @@ PART
 		{
 		}
 	}
+	RESOURCE
+	{
+		name = Ore
+		amount = 3500
+		maxAmount = 3500
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	name = KAS.RTS1
+	cid = 4290026128
+	uid = 784355813
+	mid = 3543470310
+	persistentId = 1888316853
+	launchID = 1
+	parent = 0
+	position = -1.8071756362915039,-0.60035514831542969,-0.48423117399215698
+	rotation = 0.43045935,-0.560985506,0.560985506,0.43045935
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 1
+	sameVesselCollision = False
+	srfN = srfAttach, 0,jumbo_COLLIDER
+	mass = 0.100000001
+	shielded = False
+	temp = 452.13940160755425
+	tempExt = 440.03781795138769
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Grandparent
+	rigidAttachment = True
+	flag = Squad/Flags/default
+	rTrf = KAS.RTS1
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 2
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = KASLinkResourceConnector
+		isEnabled = True
+		persistedIsConnectorLocked = True
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -182,16 +293,71 @@ PART
 		{
 		}
 	}
-	RESOURCE
+	MODULE
 	{
-		name = Ore
-		amount = 3498.1102988329226
-		maxAmount = 3500
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
+		name = KASRendererPipe
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASJointCableBase
+		isEnabled = True
+		coupleWhenLinked = False
+		persistedLinkLength = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 63
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 }
 PART
@@ -203,8 +369,8 @@ PART
 	persistentId = 1722284952
 	launchID = 1
 	parent = 0
-	position = -2.2574062347412109,0.7675815224647522,-7.9837664088699967E-06
-	rotation = 0.49999997,-0.500000298,0.500000238,0.5
+	position = -2.2574081420898438,0.7676239013671875,1.7881393432617188E-07
+	rotation = 0.50000006,-0.49999997,0.49999997,0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -215,7 +381,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 2
 	sym = 3
 	sym = 4
 	sym = 5
@@ -234,14 +399,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -332,9 +498,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -347,9 +516,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -387,8 +555,8 @@ PART
 	persistentId = 145732572
 	launchID = 1
 	parent = 0
-	position = -2.1469056606292725,0.76756453514099121,0.69755923748016357
-	rotation = 0.572064519,-0.415627539,0.415629894,0.572056174
+	position = -2.1469225883483887,0.7676239013671875,0.69757771492004395
+	rotation = 0.572061479,-0.415626913,0.415626913,0.572061479
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -399,8 +567,7 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
-	sym = 3
+	sym = 2
 	sym = 4
 	sym = 5
 	sym = 6
@@ -418,14 +585,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -516,9 +684,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -531,9 +702,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -571,8 +741,8 @@ PART
 	persistentId = 2891771327
 	launchID = 1
 	parent = 0
-	position = -1.8263205289840698,0.76755458116531372,1.3268530368804932
-	rotation = 0.630039632,-0.321020931,0.321023136,0.630032003
+	position = -1.8262813091278076,0.7676239013671875,1.326871395111084
+	rotation = 0.630036831,-0.321019709,0.321019709,0.630036831
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -583,9 +753,8 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
-	sym = 4
+	sym = 3
 	sym = 5
 	sym = 6
 	sym = 7
@@ -602,14 +771,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -700,9 +870,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -715,9 +888,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -755,8 +927,8 @@ PART
 	persistentId = 3603882456
 	launchID = 1
 	parent = 0
-	position = -1.3269249200820923,0.76749676465988159,1.8262745141983032
-	rotation = 0.672500312,-0.218504325,0.218520656,0.672494173
+	position = -1.3268706798553467,0.7676239013671875,1.8262817859649658
+	rotation = 0.672498584,-0.218507931,0.218507931,0.672498584
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -767,10 +939,9 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
-	sym = 5
+	sym = 4
 	sym = 6
 	sym = 7
 	sym = 8
@@ -786,14 +957,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2123250113751114
-	tempExt = 40.567959071170861
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -884,9 +1056,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -899,9 +1074,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -939,8 +1113,8 @@ PART
 	persistentId = 1651486784
 	launchID = 1
 	parent = 0
-	position = -0.69761806726455688,0.76753759384155273,2.1469185352325439
-	rotation = 0.698408902,-0.110618614,0.110618427,0.698392808
+	position = -0.69757735729217529,0.7676239013671875,2.1469228267669678
+	rotation = 0.698401153,-0.11061582,0.11061582,0.698401153
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -951,11 +1125,10 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
-	sym = 6
+	sym = 5
 	sym = 7
 	sym = 8
 	sym = 9
@@ -970,14 +1143,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84925375370028
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -1068,9 +1242,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -1083,9 +1260,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1123,8 +1299,8 @@ PART
 	persistentId = 706655871
 	launchID = 1
 	parent = 0
-	position = -5.0485316023696214E-05,0.76751828193664551,2.2574005126953125
-	rotation = 0.707112908,-2.56934709E-06,5.85220641E-06,0.707101047
+	position = 4.4703483581542969E-08,0.7676239013671875,2.2574079036712646
+	rotation = 0.707106829,6.3220277E-08,-6.3220277E-08,0.707106829
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1135,12 +1311,11 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
 	sym = 5
-	sym = 7
+	sym = 6
 	sym = 8
 	sym = 9
 	sym = 10
@@ -1154,14 +1329,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -1252,9 +1428,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -1267,9 +1446,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1307,8 +1485,8 @@ PART
 	persistentId = 1323862574
 	launchID = 1
 	parent = 0
-	position = 0.69756919145584106,0.76755017042160034,2.1469206809997559
-	rotation = 0.698398113,0.110617742,-0.110610068,0.698405147
+	position = 0.6975780725479126,0.7676239013671875,2.1469225883483887
+	rotation = 0.698401153,0.110616006,-0.110616006,0.698401153
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1319,13 +1497,12 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
 	sym = 5
 	sym = 6
-	sym = 8
+	sym = 7
 	sym = 9
 	sym = 10
 	sym = 11
@@ -1338,14 +1515,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -1436,9 +1614,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -1451,9 +1632,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1491,8 +1671,8 @@ PART
 	persistentId = 2701135689
 	launchID = 1
 	parent = 0
-	position = 1.3269065618515015,0.76759445667266846,1.8262838125228882
-	rotation = 0.672499597,0.218510315,-0.218503967,0.672498405
+	position = 1.326871395111084,0.7676239013671875,1.8262815475463867
+	rotation = 0.672498524,0.218508065,-0.218508065,0.672498524
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1503,14 +1683,13 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
 	sym = 5
 	sym = 6
 	sym = 7
-	sym = 9
+	sym = 8
 	sym = 10
 	sym = 11
 	sym = 12
@@ -1522,14 +1701,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -1620,9 +1800,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -1635,9 +1818,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1675,8 +1857,8 @@ PART
 	persistentId = 391490742
 	launchID = 1
 	parent = 0
-	position = 1.8262752294540405,0.76743996143341064,1.3268667459487915
-	rotation = 0.630042315,0.321017474,-0.321021527,0.630031824
+	position = 1.8262817859649658,0.7676239013671875,1.3268709182739258
+	rotation = 0.630036712,0.321019828,-0.321019828,0.630036712
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1687,7 +1869,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -1695,7 +1876,7 @@ PART
 	sym = 6
 	sym = 7
 	sym = 8
-	sym = 10
+	sym = 9
 	sym = 11
 	sym = 12
 	sym = 13
@@ -1706,14 +1887,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2132656257263008
-	tempExt = 40.65350676803547
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -1804,9 +1986,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -1819,9 +2004,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1859,8 +2043,8 @@ PART
 	persistentId = 725402749
 	launchID = 1
 	parent = 0
-	position = 2.1469781398773193,0.76758331060409546,0.6975853443145752
-	rotation = 0.572058558,0.415633708,-0.415613115,0.572069824
+	position = 2.1469230651855469,0.7676239013671875,0.69757747650146484
+	rotation = 0.572061419,0.415627003,-0.415627003,0.572061419
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1871,7 +2055,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -1880,7 +2063,7 @@ PART
 	sym = 7
 	sym = 8
 	sym = 9
-	sym = 11
+	sym = 10
 	sym = 12
 	sym = 13
 	sym = 14
@@ -1890,14 +2073,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2130548346199372
-	tempExt = 40.635275338770214
-	tempExtUnexp = 299.84924522047584
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -1988,9 +2172,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -2003,9 +2190,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2043,8 +2229,8 @@ PART
 	persistentId = 3064783386
 	launchID = 1
 	parent = 0
-	position = 2.2574865818023682,0.7675626277923584,-9.3861199275124818E-06
-	rotation = 0.500002027,0.500000238,-0.5,0.499998122
+	position = 2.2574081420898438,0.7676239013671875,-3.7252902984619141E-07
+	rotation = 0.49999994,0.50000006,-0.50000006,0.49999994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2055,7 +2241,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -2065,7 +2250,7 @@ PART
 	sym = 8
 	sym = 9
 	sym = 10
-	sym = 12
+	sym = 11
 	sym = 13
 	sym = 14
 	sym = 15
@@ -2074,14 +2259,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122728470191655
-	tempExt = 40.567941261312157
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -2172,9 +2358,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -2187,9 +2376,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2227,8 +2415,8 @@ PART
 	persistentId = 2239959349
 	launchID = 1
 	parent = 0
-	position = 2.1469864845275879,0.76758241653442383,-0.69758546352386475
-	rotation = 0.415616602,0.572066665,-0.572057724,0.415635616
+	position = 2.1469223499298096,0.7676239013671875,-0.6975780725479126
+	rotation = 0.415626824,0.572061479,-0.572061479,0.415626824
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2239,7 +2427,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -2250,7 +2437,7 @@ PART
 	sym = 9
 	sym = 10
 	sym = 11
-	sym = 13
+	sym = 12
 	sym = 14
 	sym = 15
 	sym = 16
@@ -2258,14 +2445,15 @@ PART
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122835990527241
-	tempExt = 40.567944932251876
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -2356,9 +2544,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -2371,9 +2562,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2411,8 +2601,8 @@ PART
 	persistentId = 3587701373
 	launchID = 1
 	parent = 0
-	position = 1.8262470960617065,0.76751172542572021,-1.3268660306930542
-	rotation = 0.321032345,0.630042732,-0.630029619,0.321010143
+	position = 1.8262810707092285,0.7676239013671875,-1.3268721103668213
+	rotation = 0.32101962,0.630036891,-0.630036891,0.32101962
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2423,7 +2613,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -2435,21 +2624,22 @@ PART
 	sym = 10
 	sym = 11
 	sym = 12
-	sym = 14
+	sym = 13
 	sym = 15
 	sym = 16
 	sym = 17
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122753837515772
-	tempExt = 40.567942165879515
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -2540,9 +2730,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -2555,9 +2748,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2595,8 +2787,8 @@ PART
 	persistentId = 3851417416
 	launchID = 1
 	parent = 0
-	position = 1.3268520832061768,0.76756691932678223,-1.82627272605896
-	rotation = 0.218515411,0.672508299,-0.672488451,0.218502522
+	position = 1.3268716335296631,0.7676239013671875,-1.8262815475463867
+	rotation = 0.218508035,0.672498524,-0.672498524,0.218508035
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2607,7 +2799,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -2620,20 +2811,21 @@ PART
 	sym = 11
 	sym = 12
 	sym = 13
-	sym = 15
+	sym = 14
 	sym = 16
 	sym = 17
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -2724,9 +2916,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -2739,9 +2934,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2779,8 +2973,8 @@ PART
 	persistentId = 4217619701
 	launchID = 1
 	parent = 0
-	position = 0.69754588603973389,0.76752865314483643,-2.1469368934631348
-	rotation = 0.110612437,0.698401749,-0.698400855,0.110618964
+	position = 0.69757747650146484,0.7676239013671875,-2.1469225883483887
+	rotation = 0.110615849,0.698401153,-0.698401153,0.110615849
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2791,7 +2985,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -2805,19 +2998,20 @@ PART
 	sym = 12
 	sym = 13
 	sym = 14
-	sym = 16
+	sym = 15
 	sym = 17
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2123059908306253
-	tempExt = 40.571134328067181
-	tempExtUnexp = 299.84925334155395
+	temp = 300.36226248923776
+	tempExt = 364.83779470717479
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -2908,9 +3102,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325257329
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -2923,9 +3120,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2963,8 +3159,8 @@ PART
 	persistentId = 2278826507
 	launchID = 1
 	parent = 0
-	position = -2.3703651095274836E-05,0.76754885911941528,-2.2574183940887451
-	rotation = -3.57604404E-06,0.707107544,-0.707106352,3.15366674E-06
+	position = -3.1292438507080078E-07,0.7676239013671875,-2.2574079036712646
+	rotation = -6.3220277E-08,0.707106829,-0.707106829,-6.3220277E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2975,7 +3171,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -2990,18 +3185,19 @@ PART
 	sym = 13
 	sym = 14
 	sym = 15
-	sym = 17
+	sym = 16
 	sym = 18
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -3092,9 +3288,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -3107,9 +3306,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3147,8 +3345,8 @@ PART
 	persistentId = 2296212589
 	launchID = 1
 	parent = 0
-	position = -0.69764268398284912,0.76751601696014404,-2.1469378471374512
-	rotation = -0.110619955,0.698400676,-0.698402941,-0.110605158
+	position = -0.6975780725479126,0.7676239013671875,-2.1469225883483887
+	rotation = -0.110616006,0.698401153,-0.698401153,-0.110616006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3159,7 +3357,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -3175,17 +3372,18 @@ PART
 	sym = 14
 	sym = 15
 	sym = 16
-	sym = 18
+	sym = 17
 	sym = 19
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -3276,9 +3474,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -3291,9 +3492,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3331,8 +3531,8 @@ PART
 	persistentId = 142839731
 	launchID = 1
 	parent = 0
-	position = -1.3268262147903442,0.76754820346832275,-1.8262815475463867
-	rotation = -0.218503416,0.672514796,-0.672485113,-0.218504712
+	position = -1.3268718719482422,0.7676239013671875,-1.8262810707092285
+	rotation = -0.218508169,0.672498465,-0.672498465,-0.218508169
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3343,7 +3543,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -3360,16 +3559,17 @@ PART
 	sym = 15
 	sym = 16
 	sym = 17
-	sym = 19
+	sym = 18
 	sym = 20
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -3460,9 +3660,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -3475,9 +3678,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3515,8 +3717,8 @@ PART
 	persistentId = 3288370976
 	launchID = 1
 	parent = 0
-	position = -1.8262336254119873,0.7675899863243103,-1.326887845993042
-	rotation = -0.321023107,0.63004142,-0.630032778,-0.321015865
+	position = -1.8262815475463867,0.7676239013671875,-1.3268711566925049
+	rotation = -0.321019799,0.630036771,-0.630036771,-0.321019799
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3527,7 +3729,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -3545,15 +3746,16 @@ PART
 	sym = 16
 	sym = 17
 	sym = 18
-	sym = 20
+	sym = 19
+	sym = 21
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2122696060833897
-	tempExt = 40.567940154797789
-	tempExtUnexp = 299.84875854542696
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -3644,9 +3846,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -3659,9 +3864,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3699,8 +3903,8 @@ PART
 	persistentId = 2188420731
 	launchID = 1
 	parent = 0
-	position = -2.1469352245330811,0.76744306087493896,-0.69759488105773926
-	rotation = -0.415631503,0.572059393,-0.572064877,-0.415620893
+	position = -2.1469228267669678,0.7676239013671875,-0.69757723808288574
+	rotation = -0.415627033,0.57206136,-0.57206136,-0.415627033
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3711,7 +3915,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 1
 	sym = 2
 	sym = 3
 	sym = 4
@@ -3730,14 +3933,15 @@ PART
 	sym = 17
 	sym = 18
 	sym = 19
+	sym = 20
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.2123147110981662
-	tempExt = 40.567955554469279
-	tempExtUnexp = 299.84924661108198
+	temp = 300.36226248923799
+	tempExt = 364.83779470717491
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -3828,9 +4032,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325502194
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -3843,9 +4050,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3883,8 +4089,8 @@ PART
 	persistentId = 2431474159
 	launchID = 1
 	parent = 0
-	position = -1.4861057996749878,-0.9042285680770874,-1.4861520528793335
-	rotation = 0.115073808,0.881120324,0.277816623,-0.364970565
+	position = -1.4861371517181396,-0.90425014495849609,-1.4861369132995605
+	rotation = 0.115075156,0.881119609,0.277815998,-0.364971697
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3895,15 +4101,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 22
 	sym = 23
 	sym = 24
+	sym = 25
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 10.610145742388884
-	tempExt = 67.098810049042271
-	tempExtUnexp = 299.81938562737992
+	temp = 444.11124154990011
+	tempExt = 436.43131104551441
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -4001,10 +4207,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.03999996
+		springTweakable = 1.09000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -5.21540642E-08, 0.539055109)
+		suspensionPos = (-1.71312891E-07, 0, 0.534316063)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4111,22 +4317,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4148,8 +4338,8 @@ PART
 	persistentId = 2960243893
 	launchID = 1
 	parent = 0
-	position = -1.4862713813781738,-0.90424591302871704,1.486128568649292
-	rotation = 0.277811229,0.364979714,0.115067936,-0.881119013
+	position = -1.4861369132995605,-0.90425014495849609,1.4861369132995605
+	rotation = 0.277815998,0.364971668,0.115075149,-0.881119609
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4160,15 +4350,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 21
-	sym = 23
+	sym = 22
 	sym = 24
+	sym = 25
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 10.610139676301131
-	tempExt = 67.098879624087573
-	tempExtUnexp = 299.81938562494298
+	temp = 444.1112754347422
+	tempExt = 436.43134935637516
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -4266,10 +4456,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.03999996
+		springTweakable = 1.09000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -5.21540642E-08, 0.539055109)
+		suspensionPos = (-3.46144333E-07, -2.98023224E-08, 0.534282446)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4376,22 +4566,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4413,8 +4587,8 @@ PART
 	persistentId = 2753468592
 	launchID = 1
 	parent = 0
-	position = 1.4861987829208374,-0.90433049201965332,1.4861528873443604
-	rotation = 0.27781415,-0.364988267,-0.115081228,-0.881112695
+	position = 1.4861373901367188,-0.90425014495849609,1.4861366748809814
+	rotation = 0.277816027,-0.364971727,-0.115075178,-0.881119549
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4425,15 +4599,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 21
 	sym = 22
-	sym = 24
+	sym = 23
+	sym = 25
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 10.61473488017163
-	tempExt = 67.317038827631805
-	tempExtUnexp = 299.81938764496982
+	temp = 444.11127387584833
+	tempExt = 436.43134759154583
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -4531,10 +4705,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.03999996
+		springTweakable = 1.09000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -5.21540642E-08, 0.539055109)
+		suspensionPos = (-9.18212706E-08, 8.94069672E-08, 0.53424418)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4641,22 +4815,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4678,8 +4836,8 @@ PART
 	persistentId = 3722120396
 	launchID = 1
 	parent = 0
-	position = 1.4861311912536621,-0.90423434972763062,-1.4861434698104858
-	rotation = 0.115074709,-0.88111496,-0.277823806,-0.364977479
+	position = 1.4861369132995605,-0.90425014495849609,-1.4861371517181396
+	rotation = 0.115075149,-0.881119609,-0.277815998,-0.364971668
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4690,15 +4848,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 21
 	sym = 22
 	sym = 23
+	sym = 24
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 0.100000001
 	shielded = False
-	temp = 10.611848051366765
-	tempExt = 67.201862216031401
-	tempExtUnexp = 299.81938764499
+	temp = 444.11126606698218
+	tempExt = 436.4313387776387
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -4796,10 +4954,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.03999996
+		springTweakable = 1.09000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (0, -5.21540642E-08, 0.539055109)
+		suspensionPos = (-4.17667479E-07, 2.98023224E-08, 0.534272432)
 		suspensionDefaultPos = (-1.77635684E-15, 7.4505806E-09, 0.0506000035)
 		autoBoost = 0
 		stagingEnabled = True
@@ -4917,22 +5075,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 }
 PART
 {
@@ -4943,8 +5085,8 @@ PART
 	persistentId = 1733330347
 	launchID = 1
 	parent = 0
-	position = 5.4311814892571419E-05,1.1269198656082153,-2.3444374619430164E-06
-	rotation = 2.78876541E-06,-6.07775019E-06,1.33294425E-05,1.00000024
+	position = 0,1.1269989013671875,0
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4956,13 +5098,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 46
+	attN = top, 47
 	attN = bottom, 0
 	mass = 0.5
 	shielded = False
-	temp = 7.5186816144272566
-	tempExt = 32.186827894799883
-	tempExtUnexp = 299.84179818743513
+	temp = 347.35004302944736
+	tempExt = 340.39129292819382
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -5030,26 +5172,10 @@ PART
 	PARTDATA
 	{
 	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9998.8071508818248
+		amount = 10000
 		maxAmount = 10000
 		flowState = True
 		isTweakable = True
@@ -5066,9 +5192,9 @@ PART
 	mid = 3543470310
 	persistentId = 3513513778
 	launchID = 1
-	parent = 25
-	position = -2.2603423595428467,1.1856995820999146,-2.6623125449987128E-05
-	rotation = 0.499995589,-0.499998748,0.50000298,0.500003219
+	parent = 26
+	position = -2.2603719234466553,1.1857757568359375,1.7881393432617188E-07
+	rotation = 0.500000179,-0.499999881,0.50000006,0.49999997
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5079,7 +5205,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 27
 	sym = 28
 	sym = 29
 	sym = 30
@@ -5098,14 +5223,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208694887898396
-	tempExt = 30.302470076646244
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -5196,9 +5322,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -5211,9 +5340,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5250,9 +5378,9 @@ PART
 	mid = 3543470310
 	persistentId = 271653969
 	launchID = 1
-	parent = 25
-	position = -2.1497728824615479,1.185799241065979,0.69849812984466553
-	rotation = 0.572061896,-0.415629745,0.415628612,0.572058082
+	parent = 26
+	position = -2.1497414112091064,1.1857757568359375,0.6984935998916626
+	rotation = 0.572061598,-0.415626824,0.415626973,0.57206136
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5263,8 +5391,7 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
-	sym = 28
+	sym = 27
 	sym = 29
 	sym = 30
 	sym = 31
@@ -5282,14 +5409,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208768024983389
-	tempExt = 30.302472978338795
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -5380,9 +5508,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -5395,9 +5526,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5434,9 +5564,9 @@ PART
 	mid = 3543470310
 	persistentId = 2281770942
 	launchID = 1
-	parent = 25
-	position = -1.8286526203155518,1.1857733726501465,1.3286178112030029
-	rotation = 0.63004005,-0.321018249,0.321021914,0.630033553
+	parent = 26
+	position = -1.828679084777832,1.1857757568359375,1.3286135196685791
+	rotation = 0.63003695,-0.321019679,0.321019769,0.630036712
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5447,9 +5577,8 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
-	sym = 29
+	sym = 28
 	sym = 30
 	sym = 31
 	sym = 32
@@ -5466,14 +5595,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1209171638417441
-	tempExt = 30.302488991583534
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -5564,9 +5694,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -5579,9 +5712,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5618,9 +5750,9 @@ PART
 	mid = 3543470310
 	persistentId = 3788777235
 	launchID = 1
-	parent = 25
-	position = -1.3286054134368896,1.1856822967529297,1.8286842107772827
-	rotation = 0.672510684,-0.218518913,0.218513712,0.672481298
+	parent = 26
+	position = -1.3286128044128418,1.1857757568359375,1.8286795616149902
+	rotation = 0.672498703,-0.218507901,0.21850796,0.672498465
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5631,10 +5763,9 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
-	sym = 30
+	sym = 29
 	sym = 31
 	sym = 32
 	sym = 33
@@ -5650,14 +5781,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1209414465133154
-	tempExt = 30.302498625661528
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -5748,9 +5880,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -5763,9 +5898,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5802,9 +5936,9 @@ PART
 	mid = 3543470310
 	persistentId = 2046537272
 	launchID = 1
-	parent = 25
-	position = -0.69853025674819946,1.1856783628463745,2.149747371673584
-	rotation = 0.698408544,-0.110616453,0.110625461,0.698392451
+	parent = 26
+	position = -0.69849318265914917,1.1857757568359375,2.1497416496276855
+	rotation = 0.698401332,-0.110615797,0.11061582,0.698401034
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5815,11 +5949,10 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
-	sym = 31
+	sym = 30
 	sym = 32
 	sym = 33
 	sym = 34
@@ -5834,14 +5967,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1209003518376788
-	tempExt = 30.302482321470364
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -5932,9 +6066,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -5947,9 +6084,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5986,9 +6122,9 @@ PART
 	mid = 3543470310
 	persistentId = 2891405509
 	launchID = 1
-	parent = 25
-	position = -3.7159243220230564E-05,1.185724139213562,2.2603797912597656
-	rotation = 0.707108855,-5.91035996E-06,1.87701517E-08,0.70710516
+	parent = 26
+	position = 4.4703483581542969E-08,1.1857757568359375,2.2603716850280762
+	rotation = 0.707106948,6.32202699E-08,-8.42936956E-08,0.70710665
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5999,12 +6135,11 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
 	sym = 30
-	sym = 32
+	sym = 31
 	sym = 33
 	sym = 34
 	sym = 35
@@ -6018,14 +6153,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208740385337048
-	tempExt = 30.302472350580665
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -6116,9 +6252,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -6131,9 +6270,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6170,9 +6308,9 @@ PART
 	mid = 3543470310
 	persistentId = 3988274712
 	launchID = 1
-	parent = 25
-	position = 0.69847100973129272,1.1857445240020752,2.149744987487793
-	rotation = 0.698399484,0.11062403,-0.110621355,0.698400974
+	parent = 26
+	position = 0.69849395751953125,1.1857757568359375,2.1497414112091064
+	rotation = 0.698401272,0.110615984,-0.110616051,0.698401034
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6183,13 +6321,12 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
 	sym = 30
 	sym = 31
-	sym = 33
+	sym = 32
 	sym = 34
 	sym = 35
 	sym = 36
@@ -6202,14 +6339,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -6300,9 +6438,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -6315,9 +6456,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6354,9 +6494,9 @@ PART
 	mid = 3543470310
 	persistentId = 3899857652
 	launchID = 1
-	parent = 25
-	position = 1.3285456895828247,1.1857292652130127,1.828688383102417
-	rotation = 0.672511518,0.218508452,-0.21848917,0.672491968
+	parent = 26
+	position = 1.3286135196685791,1.1857757568359375,1.8286793231964111
+	rotation = 0.672498643,0.218508035,-0.218508139,0.672498405
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6367,14 +6507,13 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
 	sym = 30
 	sym = 31
 	sym = 32
-	sym = 34
+	sym = 33
 	sym = 35
 	sym = 36
 	sym = 37
@@ -6386,14 +6525,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1215451523626339
-	tempExt = 30.357824693082133
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -6484,9 +6624,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -6499,9 +6642,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6538,9 +6680,9 @@ PART
 	mid = 3543470310
 	persistentId = 1005116450
 	launchID = 1
-	parent = 25
-	position = 1.8286911249160767,1.1856552362442017,1.3286328315734863
-	rotation = 0.63004446,0.321021467,-0.321017563,0.630029619
+	parent = 26
+	position = 1.8286795616149902,1.1857757568359375,1.3286130428314209
+	rotation = 0.630036831,0.321019769,-0.321019918,0.630036592
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6551,7 +6693,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -6559,7 +6700,7 @@ PART
 	sym = 31
 	sym = 32
 	sym = 33
-	sym = 35
+	sym = 34
 	sym = 36
 	sym = 37
 	sym = 38
@@ -6570,14 +6711,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1233155762326321
-	tempExt = 30.512246724905946
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -6668,9 +6810,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -6683,9 +6828,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6722,9 +6866,9 @@ PART
 	mid = 3543470310
 	persistentId = 489729227
 	launchID = 1
-	parent = 25
-	position = 2.1497471332550049,1.1857882738113403,0.69850307703018188
-	rotation = 0.572069466,0.415630996,-0.415621221,0.572055042
+	parent = 26
+	position = 2.1497416496276855,1.1857757568359375,0.69849330186843872
+	rotation = 0.572061539,0.415626913,-0.415627092,0.5720613
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6735,7 +6879,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -6744,7 +6887,7 @@ PART
 	sym = 32
 	sym = 33
 	sym = 34
-	sym = 36
+	sym = 35
 	sym = 37
 	sym = 38
 	sym = 39
@@ -6754,14 +6897,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1225344324962654
-	tempExt = 30.445239497966668
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -6852,9 +6996,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -6867,9 +7014,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6906,9 +7052,9 @@ PART
 	mid = 3543470310
 	persistentId = 980293939
 	launchID = 1
-	parent = 25
-	position = 2.2603781223297119,1.1858372688293457,9.6425446827197447E-06
-	rotation = 0.499995679,0.500003755,-0.499997854,0.500003159
+	parent = 26
+	position = 2.2603719234466553,1.1857757568359375,-3.7997961044311523E-07
+	rotation = 0.50000006,0.5,-0.500000179,0.499999851
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6919,7 +7065,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -6929,7 +7074,7 @@ PART
 	sym = 33
 	sym = 34
 	sym = 35
-	sym = 37
+	sym = 36
 	sym = 38
 	sym = 39
 	sym = 40
@@ -6938,14 +7083,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208557627241653
-	tempExt = 30.302464660463958
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -7036,9 +7182,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -7051,9 +7200,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7090,9 +7238,9 @@ PART
 	mid = 3543470310
 	persistentId = 3989222041
 	launchID = 1
-	parent = 25
-	position = 2.1496922969818115,1.1857714653015137,-0.69848340749740601
-	rotation = 0.415630311,0.57205981,-0.572060466,0.415627658
+	parent = 26
+	position = 2.1497409343719482,1.1857757568359375,-0.69849395751953125
+	rotation = 0.415626913,0.57206136,-0.572061598,0.415626764
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7103,7 +7251,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -7114,7 +7261,7 @@ PART
 	sym = 34
 	sym = 35
 	sym = 36
-	sym = 38
+	sym = 37
 	sym = 39
 	sym = 40
 	sym = 41
@@ -7122,14 +7269,15 @@ PART
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -7220,9 +7368,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -7235,9 +7386,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7274,9 +7424,9 @@ PART
 	mid = 3543470310
 	persistentId = 3712948381
 	launchID = 1
-	parent = 25
-	position = 1.8286881446838379,1.1857601404190063,-1.3286023139953613
-	rotation = 0.321016371,0.630037963,-0.630035579,0.321023822
+	parent = 26
+	position = 1.8286788463592529,1.1857757568359375,-1.3286142349243164
+	rotation = 0.321019679,0.630036712,-0.63003701,0.32101953
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7287,7 +7437,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -7299,21 +7448,22 @@ PART
 	sym = 35
 	sym = 36
 	sym = 37
-	sym = 39
+	sym = 38
 	sym = 40
 	sym = 41
 	sym = 42
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1233214550846657
-	tempExt = 30.51228748189747
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -7404,9 +7554,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -7419,9 +7572,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7458,9 +7610,9 @@ PART
 	mid = 3543470310
 	persistentId = 1625946979
 	launchID = 1
-	parent = 25
-	position = 1.328603982925415,1.1857349872589111,-1.8286784887313843
-	rotation = 0.218512565,0.672496736,-0.672499835,0.218505889
+	parent = 26
+	position = 1.3286137580871582,1.1857757568359375,-1.8286793231964111
+	rotation = 0.218508065,0.672498405,-0.672498703,0.218508005
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7471,7 +7623,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -7484,20 +7635,21 @@ PART
 	sym = 36
 	sym = 37
 	sym = 38
-	sym = 40
+	sym = 39
 	sym = 41
 	sym = 42
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1214190435127005
-	tempExt = 30.35350470484903
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -7588,9 +7740,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -7603,9 +7758,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7642,9 +7796,9 @@ PART
 	mid = 3543470310
 	persistentId = 1092701802
 	launchID = 1
-	parent = 25
-	position = 0.69852834939956665,1.1857390403747559,-2.1497368812561035
-	rotation = 0.110614881,0.698408425,-0.698393822,0.110618472
+	parent = 26
+	position = 0.69849330186843872,1.1857757568359375,-2.1497411727905273
+	rotation = 0.110615849,0.698401034,-0.698401272,0.110615835
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7655,7 +7809,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -7669,19 +7822,20 @@ PART
 	sym = 37
 	sym = 38
 	sym = 39
-	sym = 41
+	sym = 40
 	sym = 42
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -7772,9 +7926,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -7787,9 +7944,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7826,9 +7982,9 @@ PART
 	mid = 3543470310
 	persistentId = 4133225853
 	launchID = 1
-	parent = 25
-	position = 3.4266806324012578E-05,1.1856940984725952,-2.2603795528411865
-	rotation = 2.5635743E-06,0.70710355,-0.707110226,3.46786669E-06
+	parent = 26
+	position = -3.1292438507080078E-07,1.1857757568359375,-2.2603716850280762
+	rotation = -8.42936956E-08,0.70710665,-0.707106948,-6.32202699E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7839,7 +7995,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -7854,18 +8009,19 @@ PART
 	sym = 38
 	sym = 39
 	sym = 40
-	sym = 42
+	sym = 41
 	sym = 43
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -7956,9 +8112,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -7971,9 +8130,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8010,9 +8168,9 @@ PART
 	mid = 3543470310
 	persistentId = 3760625936
 	launchID = 1
-	parent = 25
-	position = -0.69847255945205688,1.1856770515441895,-2.1497683525085449
-	rotation = -0.11060977,0.698403478,-0.698400557,-0.110612094
+	parent = 26
+	position = -0.69849395751953125,1.1857757568359375,-2.1497414112091064
+	rotation = -0.110616051,0.698401034,-0.698401272,-0.110615984
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8023,7 +8181,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -8039,17 +8196,18 @@ PART
 	sym = 39
 	sym = 40
 	sym = 41
-	sym = 43
+	sym = 42
 	sym = 44
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984494
+	tempExt = 326.14466110723896
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -8140,9 +8298,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325260486
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -8155,9 +8316,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8194,9 +8354,9 @@ PART
 	mid = 3543470310
 	persistentId = 1312797038
 	launchID = 1
-	parent = 25
-	position = -1.3286632299423218,1.1857270002365112,-1.8286888599395752
-	rotation = -0.218505099,0.672500372,-0.672499239,-0.218504101
+	parent = 26
+	position = -1.3286139965057373,1.1857757568359375,-1.8286788463592529
+	rotation = -0.218508244,0.672498345,-0.672498643,-0.218508139
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8207,7 +8367,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -8224,16 +8383,17 @@ PART
 	sym = 40
 	sym = 41
 	sym = 42
-	sym = 44
+	sym = 43
 	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -8324,9 +8484,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -8339,9 +8502,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8378,9 +8540,9 @@ PART
 	mid = 3543470310
 	persistentId = 107826089
 	launchID = 1
-	parent = 25
-	position = -1.8286932706832886,1.1857610940933228,-1.3286291360855103
-	rotation = -0.321018815,0.630041301,-0.630037725,-0.321010739
+	parent = 26
+	position = -1.8286793231964111,1.1857757568359375,-1.32861328125
+	rotation = -0.321019888,0.630036652,-0.630036891,-0.321019739
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8391,7 +8553,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -8409,15 +8570,16 @@ PART
 	sym = 41
 	sym = 42
 	sym = 43
-	sym = 45
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 44
+	sym = 46
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1208482130625086
-	tempExt = 30.302461635562974
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -8508,9 +8670,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -8523,9 +8688,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8562,9 +8726,9 @@ PART
 	mid = 3543470310
 	persistentId = 351959144
 	launchID = 1
-	parent = 25
-	position = -2.1497128009796143,1.1857479810714722,-0.69850039482116699
-	rotation = -0.415630996,0.572066724,-0.572059691,-0.415618539
+	parent = 26
+	position = -2.1497416496276855,1.1857757568359375,-0.69849312305450439
+	rotation = -0.415627122,0.5720613,-0.572061479,-0.415626943
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8575,7 +8739,6 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 26
 	sym = 27
 	sym = 28
 	sym = 29
@@ -8594,14 +8757,15 @@ PART
 	sym = 42
 	sym = 43
 	sym = 44
-	srfN = srfAttach, 25,COLLIDER 2 (2)
+	sym = 45
+	srfN = srfAttach, 26,COLLIDER 2 (2)
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.300000012
 	shielded = False
-	temp = 6.1209119879060037
-	tempExt = 30.302486938046279
-	tempExtUnexp = 299.83364702074687
+	temp = 300.31050926984534
+	tempExt = 326.14466110723907
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -8692,9 +8856,12 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleCoreHeat
 		isEnabled = True
+		CoreTempGoalAdjustment = 0
+		CoreThermalEnergy = 155302.88325698403
 		stagingEnabled = True
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -8707,9 +8874,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8746,9 +8912,9 @@ PART
 	mid = 3543470310
 	persistentId = 1292491285
 	launchID = 1
-	parent = 25
-	position = 6.4809377363417298E-05,1.5259662866592407,3.8418111216742545E-06
-	rotation = 1.02562244E-05,-1.20103714E-05,1.37644256E-05,1.00000024
+	parent = 26
+	position = 0,1.5259971618652344,0
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8760,13 +8926,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 47
-	attN = bottom, 25
+	attN = top, 48
+	attN = bottom, 26
 	mass = 0.850000024
 	shielded = False
-	temp = 9.8375927519726201
-	tempExt = 37.583609583485796
-	tempExtUnexp = 299.8287136534488
+	temp = 460.06404580188519
+	tempExt = 434.76091996894422
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
 	state = 0
@@ -8883,7 +9049,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -9661,15 +9827,15 @@ PART
 			}
 			MechJebModuleFlightRecorder
 			{
-				markUT = 1266208844.6534648
+				markUT = 1266055739.9978666
 				deltaVExpended = 0
 				dragLosses = 0
 				gravityLosses = 0
 				steeringLosses = 0
-				markLAN = 247.05666355448366
-				markLatitude = -6.8560079988658531
-				markLongitude = -14.299971657145068
-				markAltitude = 6.7935187115981535
+				markLAN = 310.51122052760218
+				markLatitude = -6.8560080052326979
+				markLongitude = -14.299971645898188
+				markAltitude = 6.7935060918156527
 				markBodyIndex = 3
 				maxDragGees = 0
 				unlockParts = 
@@ -9687,9 +9853,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = FlightEngineerModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9715,7 +9880,6 @@ PART
 		Log
 		{
 			flight = 0
-			0 = Land,Minmus
 		}
 		UPGRADESAPPLIED
 		{
@@ -9724,7 +9888,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 79.990457207054618
+		amount = 80
 		maxAmount = 80
 		flowState = True
 		isTweakable = True
@@ -9741,9 +9905,9 @@ PART
 	mid = 3543470310
 	persistentId = 2045570197
 	launchID = 1
-	parent = 46
-	position = 3.9869424654170871E-05,3.2628631591796875,2.5045819711522199E-05
-	rotation = 5.83903238E-06,-1.46300454E-05,-4.08134565E-06,1.00000024
+	parent = 47
+	position = 0,3.2629966735839844,0
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9755,13 +9919,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 48
-	attN = bottom, 46
+	attN = top, 49
+	attN = bottom, 47
 	mass = 4.25
 	shielded = False
-	temp = 12.052360468454191
-	tempExt = 42.884658164387439
-	tempExtUnexp = 299.82837443266169
+	temp = 464.37369343679899
+	tempExt = 449.84962625445115
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -9853,7 +10017,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -9886,7 +10050,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -9919,7 +10083,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -9952,7 +10116,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -9983,9 +10147,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 3376896.2581626717
+		CoreThermalEnergy = 2646981.6716092373
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -10033,7 +10197,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -10066,7 +10230,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -10099,7 +10263,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -10132,7 +10296,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -10160,28 +10324,12 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = True
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleResourceConverter
 		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -10216,9 +10364,9 @@ PART
 	mid = 3543470310
 	persistentId = 2456237129
 	launchID = 1
-	parent = 47
-	position = -2.7099347789771855E-05,5.6829190254211426,4.9834932724479586E-05
-	rotation = -3.36208291E-06,-1.29803611E-05,5.04885838E-06,1.00000024
+	parent = 48
+	position = 0,5.6829967498779297,0
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10230,13 +10378,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
-	attN = top, 49
-	attN = bottom, 47
+	attN = top, 50
+	attN = bottom, 48
 	mass = 1
 	shielded = False
-	temp = 4.9464529499970844
-	tempExt = 56.783532003365124
-	tempExtUnexp = 299.82600351957046
+	temp = 371.86534099754402
+	tempExt = 347.93342513102101
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -10322,22 +10470,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -10357,7 +10489,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1266208845.9122019
+		LastUpdateTime = 1266055739.9978666
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -10449,9 +10581,9 @@ PART
 	mid = 3543470310
 	persistentId = 3809453028
 	launchID = 1
-	parent = 48
-	position = -1.6308027625200339E-05,6.702913761138916,4.7349149099318311E-05
-	rotation = 4.73815362E-06,-4.00425733E-06,1.15109026E-06,1.00000024
+	parent = 49
+	position = 0,6.7029972076416016,0
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -10463,13 +10595,13 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	attN = top, 50
-	attN = bottom, 48
+	attN = top, 51
+	attN = bottom, 49
 	mass = 0.159999996
 	shielded = False
-	temp = 5.2694386916097322
-	tempExt = 36.08943960675262
-	tempExtUnexp = 299.82832064986047
+	temp = 482.16956775099823
+	tempExt = 482.77141699349636
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -10660,22 +10792,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -10698,9 +10814,9 @@ PART
 	mid = 3543470310
 	persistentId = 907184669
 	launchID = 1
-	parent = 49
-	position = -2.5200450181728229E-05,8.6629924774169922,8.108998736133799E-05
-	rotation = 8.5131087E-06,-6.1631531E-06,3.81978771E-06,1.00000024
+	parent = 50
+	position = 0,8.6629981994628906,0
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -10713,12 +10829,12 @@ PART
 	sameVesselCollision = False
 	srfN = srfAttach, -1
 	attN = top, -1
-	attN = bottom, 49
+	attN = bottom, 50
 	mass = 2
 	shielded = False
-	temp = 4.6144616640579645
-	tempExt = 21.25192071324344
-	tempExtUnexp = 299.8283565412097
+	temp = 491.01531365506946
+	tempExt = 485.66042556234504
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -10804,22 +10920,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -10839,7 +10939,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1266208845.9122019
+		LastUpdateTime = 1266055739.9978666
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -10931,9 +11031,9 @@ PART
 	mid = 3543470310
 	persistentId = 2721799400
 	launchID = 1
-	parent = 50
-	position = -4.3544705476961099E-06,9.4444742202758789,-2.161240816116333
-	rotation = -6.56969451E-06,0.707110703,6.23907681E-06,-0.707103193
+	parent = 51
+	position = -1.6391277313232422E-07,9.4445858001708984,-2.1613178253173828
+	rotation = -6.10660962E-08,0.707106769,6.10661033E-08,-0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -10944,17 +11044,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 53
-	sym = 55
-	sym = 57
-	srfN = srfAttach, 50,COLLIDER32
+	sym = 54
+	sym = 56
+	sym = 58
+	srfN = srfAttach, 51,COLLIDER32
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.5625
 	shielded = False
-	temp = 4.9252190300020455
-	tempExt = 20.277014903726609
-	tempExtUnexp = 299.82798571265675
+	temp = 492.10925446755056
+	tempExt = 486.08222644648822
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -11040,22 +11140,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -11075,7 +11159,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1266208845.9122019
+		LastUpdateTime = 1266055739.9978666
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -11167,9 +11251,9 @@ PART
 	mid = 3543470310
 	persistentId = 999050261
 	launchID = 1
-	parent = 51
-	position = 6.1212376749608666E-05,9.0929384231567383,-3.0772314071655273
-	rotation = -1.91285903E-06,-1.00000036,-4.32256593E-06,-1.47126991E-06
+	parent = 52
+	position = -2.8312206268310547E-07,9.0929145812988281,-3.0772933959960938
+	rotation = -7.10542736E-15,-1.00000012,-4.00800921E-08,2.08616257E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -11180,15 +11264,15 @@ PART
 	sidx = 0
 	attm = 1
 	sameVesselCollision = False
-	sym = 54
-	sym = 56
-	sym = 58
-	srfN = srfAttach, 51,COLLIDER
+	sym = 55
+	sym = 57
+	sym = 59
+	srfN = srfAttach, 52,COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 7.9417658333936005
-	tempExt = 15.943257844094649
-	tempExtUnexp = 299.8115960775213
+	temp = 490.98361681372251
+	tempExt = 485.70382386870739
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -11561,9 +11645,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = ModuleWaterfallFX
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -11599,9 +11682,9 @@ PART
 	mid = 3543470310
 	persistentId = 1700844561
 	launchID = 1
-	parent = 50
-	position = -2.1614024639129639,9.4445371627807617,5.8705605624709278E-05
-	rotation = -8.24839481E-06,6.98404483E-06,-6.39389384E-07,-1.00000024
+	parent = 51
+	position = -2.1613175868988037,9.4445858001708984,3.7252902984619141E-08
+	rotation = 5.02429578E-15,-8.42936956E-08,8.63605081E-08,-1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -11612,17 +11695,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 51
-	sym = 55
-	sym = 57
-	srfN = srfAttach, 50,COLLIDER32
+	sym = 52
+	sym = 56
+	sym = 58
+	srfN = srfAttach, 51,COLLIDER32
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.5625
 	shielded = False
-	temp = 4.9250573035771321
-	tempExt = 20.249190112832888
-	tempExtUnexp = 299.82798588727229
+	temp = 492.10925446487164
+	tempExt = 486.08222644477257
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -11708,22 +11791,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -11743,7 +11810,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1266208845.9122019
+		LastUpdateTime = 1266055739.9978666
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -11835,9 +11902,9 @@ PART
 	mid = 3543470310
 	persistentId = 596429258
 	launchID = 1
-	parent = 53
-	position = -3.0772712230682373,9.092926025390625,4.2908945033559576E-05
-	rotation = 2.56298836E-06,-0.707110822,-4.14470151E-06,0.707103074
+	parent = 54
+	position = -3.07729172706604,9.0929145812988281,2.4586915969848633E-07
+	rotation = -2.83409349E-08,-0.70710665,-2.8340903E-08,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -11848,15 +11915,15 @@ PART
 	sidx = 0
 	attm = 1
 	sameVesselCollision = False
-	sym = 52
-	sym = 56
-	sym = 58
-	srfN = srfAttach, 53,COLLIDER
+	sym = 53
+	sym = 57
+	sym = 59
+	srfN = srfAttach, 54,COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 7.9415256101876928
-	tempExt = 15.931682936428366
-	tempExtUnexp = 299.81160245445591
+	temp = 490.98361680938939
+	tempExt = 485.703823865537
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -12237,9 +12304,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = ModuleWaterfallFX
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -12275,9 +12341,9 @@ PART
 	mid = 3543470310
 	persistentId = 1827500751
 	launchID = 1
-	parent = 50
-	position = -7.9183620982803404E-05,9.444493293762207,2.1613879203796387
-	rotation = 1.26585769E-06,-0.707102895,-7.66115591E-07,-0.707111001
+	parent = 51
+	position = 3.5390257835388184E-07,9.4445858001708984,2.1613178253173828
+	rotation = 6.10661033E-08,-0.707106948,6.10660962E-08,-0.707106709
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -12288,17 +12354,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 51
-	sym = 53
-	sym = 57
-	srfN = srfAttach, 50,COLLIDER32
+	sym = 52
+	sym = 54
+	sym = 58
+	srfN = srfAttach, 51,COLLIDER32
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.5625
 	shielded = False
-	temp = 4.9253156710722505
-	tempExt = 20.291406247655647
-	tempExtUnexp = 299.82798582293617
+	temp = 492.10925446330373
+	tempExt = 486.08222644416207
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -12384,22 +12450,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -12419,7 +12469,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1266208845.9122019
+		LastUpdateTime = 1266055739.9978666
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -12511,9 +12561,9 @@ PART
 	mid = 3543470310
 	persistentId = 2675769374
 	launchID = 1
-	parent = 55
-	position = -4.553734470391646E-05,9.0928077697753906,3.0773780345916748
-	rotation = 6.66384722E-06,-5.20553976E-06,1.75688086E-07,1.00000024
+	parent = 56
+	position = 8.3073973655700684E-07,9.0929145812988281,3.0772933959960938
+	rotation = -4.00800957E-08,2.38418579E-07,-2.13162821E-14,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -12524,15 +12574,15 @@ PART
 	sidx = 0
 	attm = 1
 	sameVesselCollision = False
-	sym = 52
-	sym = 54
-	sym = 58
-	srfN = srfAttach, 55,COLLIDER
+	sym = 53
+	sym = 55
+	sym = 59
+	srfN = srfAttach, 56,COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 7.9421322883333154
-	tempExt = 15.949480874974187
-	tempExtUnexp = 299.81160010491772
+	temp = 490.98361680687702
+	tempExt = 485.70382386385529
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -12905,9 +12955,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = ModuleWaterfallFX
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -12943,9 +12992,9 @@ PART
 	mid = 3543470310
 	persistentId = 1804336365
 	launchID = 1
-	parent = 50
-	position = 2.1612417697906494,9.4445810317993164,0.00011761690984712914
-	rotation = 4.06436175E-06,-1.00000024,-8.5267593E-06,-6.02546243E-06
+	parent = 51
+	position = 2.1613175868988037,9.4445858001708984,-2.905726432800293E-07
+	rotation = 8.63605081E-08,-1,-5.02429578E-15,8.42936956E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -12956,17 +13005,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 51
-	sym = 53
-	sym = 55
-	srfN = srfAttach, 50,COLLIDER32
+	sym = 52
+	sym = 54
+	sym = 56
+	srfN = srfAttach, 51,COLLIDER32
 	attN = top, -1
 	attN = bottom, -1
 	mass = 0.5625
 	shielded = False
-	temp = 4.926051185247629
-	tempExt = 20.437804275738515
-	tempExtUnexp = 299.82798562535288
+	temp = 492.10925446301582
+	tempExt = 486.08222644404981
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -13052,22 +13101,6 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -13087,7 +13120,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1266208845.9122019
+		LastUpdateTime = 1266055739.9978666
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -13179,9 +13212,9 @@ PART
 	mid = 3543470310
 	persistentId = 1000875969
 	launchID = 1
-	parent = 57
-	position = 3.0772876739501953,9.0928211212158203,0.0001016780806821771
-	rotation = 5.74749447E-06,0.707107008,2.70058808E-06,0.707106888
+	parent = 58
+	position = 3.07729172706604,9.0929145812988281,-4.9918889999389648E-07
+	rotation = -2.83409065E-08,0.707106888,2.83409065E-08,0.70710665
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -13192,15 +13225,15 @@ PART
 	sidx = 0
 	attm = 1
 	sameVesselCollision = False
-	sym = 52
-	sym = 54
-	sym = 56
-	srfN = srfAttach, 57,COLLIDER
+	sym = 53
+	sym = 55
+	sym = 57
+	srfN = srfAttach, 58,COLLIDER
 	mass = 0.899999976
 	shielded = False
-	temp = 7.9559512024964398
-	tempExt = 16.385296969339539
-	tempExtUnexp = 299.81159288923402
+	temp = 490.98361680641409
+	tempExt = 485.70382386354549
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -13573,9 +13606,8 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
+		name = ModuleWaterfallFX
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -13605,15 +13637,636 @@ PART
 }
 PART
 {
-	name = largeSolarPanel
-	cid = 4278941842
-	uid = 1562941073
+	name = radiator-microchannel-2
+	cid = 4287506830
+	uid = 1590898820
 	mid = 3543470310
-	persistentId = 31197749
+	persistentId = 2135054091
 	launchID = 1
-	parent = 48
-	position = -1.2490973472595215,5.5246601104736328,3.0411807529162616E-05
-	rotation = 2.12735654E-06,8.83853261E-07,6.43879503E-06,1.00000024
+	parent = 49
+	position = -0.98611313104629517,5.6493568420410156,-0.98611277341842651
+	rotation = -0.270597667,0.653281629,0.653281689,0.270597756
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 1
+	sameVesselCollision = False
+	sym = 61
+	sym = 62
+	sym = 63
+	srfN = srfAttach, 49,COLLIDER16
+	mass = 2.88899994
+	shielded = False
+	temp = 566.35451331489196
+	tempExt = 560.30777810275833
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Grandparent
+	rigidAttachment = True
+	flag = Squad/Flags/default
+	rTrf = radiator-microchannel-2
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 1
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableRadiator
+		isEnabled = True
+		currentRotation = (-0.706760883, 0.000242084236, -9.65129439E-05, 0.707452476)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ExtendAction
+			{
+				actionGroup = Custom01
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatRadiator
+		isEnabled = True
+		sunTracking = True
+		IsCooling = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeat
+		isEnabled = True
+		totalSystemTemperature = 0
+		totalSystemFlux = -13.5002518
+		currentLoopID = 0
+		currentLoopTemperature = 2.70005035
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -54.0010071
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatColorAnimator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	name = radiator-microchannel-2
+	cid = 4287502456
+	uid = 4030840528
+	mid = 3543470310
+	persistentId = 2713618203
+	launchID = 1
+	parent = 49
+	position = -0.98611277341842651,5.6493568420410156,0.98611301183700562
+	rotation = 0.270598471,0.653281391,0.653281331,-0.270598352
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 1
+	sameVesselCollision = False
+	sym = 60
+	sym = 62
+	sym = 63
+	srfN = srfAttach, 49,COLLIDER16
+	mass = 2.88899994
+	shielded = False
+	temp = 567.00496240910581
+	tempExt = 560.93183410397125
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Grandparent
+	rigidAttachment = True
+	flag = Squad/Flags/default
+	rTrf = radiator-microchannel-2
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 1
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableRadiator
+		isEnabled = True
+		currentRotation = (-0.707278848, -0.000167444334, 0.000263221533, 0.70693469)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ExtendAction
+			{
+				actionGroup = Custom01
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatRadiator
+		isEnabled = True
+		sunTracking = True
+		IsCooling = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeat
+		isEnabled = True
+		totalSystemTemperature = 0
+		totalSystemFlux = -13.5002518
+		currentLoopID = 0
+		currentLoopTemperature = 2.70005035
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -54.0010071
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatColorAnimator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	name = radiator-microchannel-2
+	cid = 4287502248
+	uid = 2522308453
+	mid = 3543470310
+	persistentId = 4121120416
+	launchID = 1
+	parent = 49
+	position = 0.98611319065093994,5.6493568420410156,0.98611271381378174
+	rotation = 0.653281689,0.270597726,0.270597637,-0.653281629
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 1
+	sameVesselCollision = False
+	sym = 60
+	sym = 61
+	sym = 63
+	srfN = srfAttach, 49,COLLIDER16
+	mass = 2.88899994
+	shielded = False
+	temp = 566.35594253294028
+	tempExt = 560.30914423414833
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Grandparent
+	rigidAttachment = True
+	flag = Squad/Flags/default
+	rTrf = radiator-microchannel-2
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 1
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableRadiator
+		isEnabled = True
+		currentRotation = (-0.707192004, 7.36936927E-05, -0.00025960803, 0.707021594)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ExtendAction
+			{
+				actionGroup = Custom01
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatRadiator
+		isEnabled = True
+		sunTracking = True
+		IsCooling = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeat
+		isEnabled = True
+		totalSystemTemperature = 0
+		totalSystemFlux = -13.5002518
+		currentLoopID = 0
+		currentLoopTemperature = 2.70005035
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -54.0010071
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatColorAnimator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	name = radiator-microchannel-2
+	cid = 4287502040
+	uid = 3018470504
+	mid = 3543470310
+	persistentId = 283297925
+	launchID = 1
+	parent = 49
+	position = 0.98611259460449219,5.6493568420410156,-0.98611313104629517
+	rotation = 0.653281331,-0.270598352,-0.270598471,-0.653281391
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13627,12 +14280,219 @@ PART
 	sym = 60
 	sym = 61
 	sym = 62
-	srfN = srfAttach, 48,COLLIDER16
+	srfN = srfAttach, 49,COLLIDER16
+	mass = 2.88899994
+	shielded = False
+	temp = 567.00467944626234
+	tempExt = 560.93156395353014
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Grandparent
+	rigidAttachment = True
+	flag = Squad/Flags/default
+	rTrf = radiator-microchannel-2
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 1
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableRadiator
+		isEnabled = True
+		currentRotation = (-0.706885397, -0.000204086304, 0.000270679593, 0.707328022)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ExtendAction
+			{
+				actionGroup = Custom01
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatRadiator
+		isEnabled = True
+		sunTracking = True
+		IsCooling = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeat
+		isEnabled = True
+		totalSystemTemperature = 0
+		totalSystemFlux = -13.5002518
+		currentLoopID = 0
+		currentLoopTemperature = 2.70005035
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -54.0010071
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatColorAnimator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	name = largeSolarPanel
+	cid = 4278941842
+	uid = 1562941073
+	mid = 3543470310
+	persistentId = 31197749
+	launchID = 1
+	parent = 49
+	position = -1.2490239143371582,5.5247325897216797,7.4505805969238281E-08
+	rotation = -1.25607405E-15,8.42937027E-08,-2.3140359E-08,1
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
+	attm = 1
+	sameVesselCollision = False
+	sym = 65
+	sym = 66
+	sym = 67
+	srfN = srfAttach, 49,COLLIDER16
 	mass = 0.300000012
 	shielded = False
-	temp = 5.4340821388607194
-	tempExt = 119.90468164073037
-	tempExtUnexp = 299.78489442183275
+	temp = 300.93566256832639
+	tempExt = 310.4635084564286
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -13707,11 +14567,11 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 1266208844.6534648
-		currentRotation = (0.707106829, 0.707106829, -3.09086232E-08, -3.09086232E-08)
+		launchUT = 1266055739.9978666
+		currentRotation = (0.528365731, 0.52885747, 0.470015854, -0.469280958)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -13789,29 +14649,13 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 24.399999618530273
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 1266208844.6534648
+		launchUT = 1266055739.9978666
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -13836,9 +14680,9 @@ PART
 	mid = 3543470310
 	persistentId = 1781010917
 	launchID = 1
-	parent = 48
-	position = -7.4284820584580302E-05,5.5247340202331543,1.2490626573562622
-	rotation = -2.06153413E-06,0.70710808,4.37211747E-06,0.707105875
+	parent = 49
+	position = 0,5.5247325897216797,1.2490236759185791
+	rotation = -1.6362705E-08,0.707106829,-1.63627032E-08,0.707106709
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13849,15 +14693,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 59
-	sym = 61
-	sym = 62
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 64
+	sym = 66
+	sym = 67
+	srfN = srfAttach, 49,COLLIDER16
 	mass = 0.300000012
 	shielded = False
-	temp = 5.4341009958836066
-	tempExt = 119.90996134355967
-	tempExtUnexp = 299.78489442183275
+	temp = 300.9399892704036
+	tempExt = 310.86297084596839
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -13932,11 +14776,11 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 1266208844.6534648
-		currentRotation = (0.707106829, 0.707106829, -3.09086232E-08, -3.09086232E-08)
+		launchUT = 1266055739.9978666
+		currentRotation = (0.412697434, 0.412670404, 0.574148238, -0.574227989)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14014,29 +14858,13 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 24.399999618530273
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 1266208844.6534648
+		launchUT = 1266055739.9978666
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -14061,9 +14889,9 @@ PART
 	mid = 3543470310
 	persistentId = 2892591837
 	launchID = 1
-	parent = 48
-	position = 1.2490063905715942,5.5246405601501465,5.8587702369550243E-05
-	rotation = -3.40284441E-06,1.00000024,3.73753642E-06,4.6381947E-06
+	parent = 49
+	position = 1.2490239143371582,5.5247325897216797,-1.862645149230957E-07
+	rotation = -2.3140359E-08,1,2.26757136E-15,-1.28005098E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14074,15 +14902,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 59
-	sym = 60
-	sym = 62
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 64
+	sym = 65
+	sym = 67
+	srfN = srfAttach, 49,COLLIDER16
 	mass = 0.300000012
 	shielded = False
-	temp = 5.4354348277799929
-	tempExt = 120.32029735602589
-	tempExtUnexp = 299.78489442183275
+	temp = 300.93566001213304
+	tempExt = 310.46327423996581
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -14157,11 +14985,11 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 1266208844.6534648
-		currentRotation = (0.707106829, 0.707106829, -3.09086232E-08, -3.09086232E-08)
+		launchUT = 1266055739.9978666
+		currentRotation = (0.469250858, 0.470033258, 0.528871655, -0.528362691)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14239,29 +15067,13 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 24.399999618530273
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 1266208844.6534648
+		launchUT = 1266055739.9978666
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -14286,9 +15098,9 @@ PART
 	mid = 3543470310
 	persistentId = 2956689228
 	launchID = 1
-	parent = 48
-	position = 2.1936488337814808E-05,5.524686336517334,-1.248996376991272
-	rotation = -2.23803886E-06,0.707108915,2.3205821E-06,-0.707104981
+	parent = 49
+	position = -1.4901161193847656E-07,5.5247325897216797,-1.2490239143371582
+	rotation = -1.63627032E-08,0.707106709,1.6362705E-08,-0.707106829
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14299,15 +15111,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 59
-	sym = 60
-	sym = 61
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 64
+	sym = 65
+	sym = 66
+	srfN = srfAttach, 49,COLLIDER16
 	mass = 0.300000012
 	shielded = False
-	temp = 5.4340821388607194
-	tempExt = 119.90468164073037
-	tempExtUnexp = 299.78489442183275
+	temp = 300.93999865556628
+	tempExt = 310.86383289317786
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -14382,11 +15194,11 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 1266208844.6534648
-		currentRotation = (0.707106829, 0.707106829, -3.09086232E-08, -3.09086232E-08)
+		launchUT = 1266055739.9978666
+		currentRotation = (0.574221432, 0.574155509, 0.412658364, -0.412708521)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14464,29 +15276,13 @@ PART
 	}
 	MODULE
 	{
-		name = KOSNameTag
-		isEnabled = True
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 24.399999618530273
-		state = Retracted
+		state = Extended
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 1266208844.6534648
+		launchUT = 1266055739.9978666
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -14511,9 +15307,9 @@ PART
 	mid = 3543470310
 	persistentId = 2832413724
 	launchID = 1
-	parent = 48
-	position = -1.0862212181091309,6.3134641647338867,0.62716025114059448
-	rotation = 0.612374246,-0.353556663,0.353554636,0.612368405
+	parent = 49
+	position = -1.0862016677856445,6.3135738372802734,0.62711888551712036
+	rotation = 0.612372518,-0.353553385,0.353553414,0.612372398
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14524,16 +15320,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 64
-	sym = 65
-	sym = 66
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 69
+	sym = 70
+	sym = 71
+	srfN = srfAttach, 49,COLLIDER16
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 9.1221448913253269
-	tempExt = 49.974012149370552
-	tempExtUnexp = 299.82831572130675
+	temp = 387.80469216933727
+	tempExt = 385.70123467064599
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -14609,8 +15405,8 @@ PART
 		isEnabled = True
 		currentRotation = (-0.707106829, 0, 0, 0.707106829)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14644,7 +15440,7 @@ PART
 		savedAntennaPower = 15000000000
 		xmitIncomplete = False
 		stagingEnabled = True
-		canComm = False
+		canComm = True
 		EVENTS
 		{
 		}
@@ -14683,22 +15479,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14734,9 +15514,9 @@ PART
 	mid = 3543470310
 	persistentId = 3287474374
 	launchID = 1
-	parent = 48
-	position = 0.62714332342147827,6.3135290145874023,1.0862756967544556
-	rotation = 0.68301791,0.183010325,-0.183007494,0.683009863
+	parent = 49
+	position = 0.62711876630783081,6.3135738372802734,1.0862016677856445
+	rotation = 0.683012784,0.183012679,-0.183012739,0.683012664
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14747,16 +15527,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 63
-	sym = 65
-	sym = 66
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 68
+	sym = 70
+	sym = 71
+	srfN = srfAttach, 49,COLLIDER16
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 9.1265490126476685
-	tempExt = 50.14404071265308
-	tempExtUnexp = 299.82831572130675
+	temp = 387.80469216933727
+	tempExt = 385.70123467064599
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -14832,8 +15612,8 @@ PART
 		isEnabled = True
 		currentRotation = (-0.707106829, 0, 0, 0.707106829)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14867,7 +15647,7 @@ PART
 		savedAntennaPower = 15000000000
 		xmitIncomplete = False
 		stagingEnabled = True
-		canComm = False
+		canComm = True
 		EVENTS
 		{
 		}
@@ -14906,22 +15686,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14957,9 +15721,9 @@ PART
 	mid = 3543470310
 	persistentId = 985502091
 	launchID = 1
-	parent = 48
-	position = 1.0862264633178711,6.3135161399841309,-0.62707668542861938
-	rotation = 0.353546262,0.612378478,-0.612368464,0.353557795
+	parent = 49
+	position = 1.0862016677856445,6.3135738372802734,-0.62711900472640991
+	rotation = 0.353553385,0.612372398,-0.612372518,0.353553355
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14970,16 +15734,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 63
-	sym = 64
-	sym = 66
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 68
+	sym = 69
+	sym = 71
+	srfN = srfAttach, 49,COLLIDER16
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 9.1235396656525598
-	tempExt = 50.028346120073394
-	tempExtUnexp = 299.82831572130675
+	temp = 387.80469216933727
+	tempExt = 385.70123467064599
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -15055,8 +15819,8 @@ PART
 		isEnabled = True
 		currentRotation = (-0.707106829, 0, 0, 0.707106829)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15090,7 +15854,7 @@ PART
 		savedAntennaPower = 15000000000
 		xmitIncomplete = False
 		stagingEnabled = True
-		canComm = False
+		canComm = True
 		EVENTS
 		{
 		}
@@ -15129,22 +15893,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15180,9 +15928,9 @@ PART
 	mid = 3543470310
 	persistentId = 1839543696
 	launchID = 1
-	parent = 48
-	position = -0.62709873914718628,6.313565731048584,-1.0861681699752808
-	rotation = -0.183015153,0.683014154,-0.683012009,-0.183008879
+	parent = 49
+	position = -0.62711888551712036,6.3135738372802734,-1.0862016677856445
+	rotation = -0.183012739,0.683012664,-0.683012784,-0.183012679
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15193,16 +15941,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 63
-	sym = 64
-	sym = 65
-	srfN = srfAttach, 48,COLLIDER16
+	sym = 68
+	sym = 69
+	sym = 70
+	srfN = srfAttach, 49,COLLIDER16
 	attN = bottom, -1
 	mass = 0.0599999987
 	shielded = False
-	temp = 9.1221448913253269
-	tempExt = 49.974012149370552
-	tempExtUnexp = 299.82831572130675
+	temp = 387.80469216933727
+	tempExt = 385.70123467064599
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -15278,8 +16026,8 @@ PART
 		isEnabled = True
 		currentRotation = (-0.707106829, 0, 0, 0.707106829)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = RETRACTED
+		storedAnimationSpeed = 1
+		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15313,7 +16061,7 @@ PART
 		savedAntennaPower = 15000000000
 		xmitIncomplete = False
 		stagingEnabled = True
-		canComm = False
+		canComm = True
 		EVENTS
 		{
 		}
@@ -15352,22 +16100,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15404,8 +16136,8 @@ PART
 	persistentId = 3719441262
 	launchID = 1
 	parent = 0
-	position = -1.84342360496521,-0.11421766877174377,-0.4939836859703064
-	rotation = 0.430464089,-0.560979009,0.561000943,0.430443496
+	position = -1.8434423208236694,-0.11406707763671875,-0.49394875764846802
+	rotation = 0.43045935,-0.560985506,0.560985506,0.43045935
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15416,17 +16148,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 68
-	sym = 69
-	sym = 70
+	sym = 73
+	sym = 74
+	sym = 75
 	srfN = srfAttach, 0,jumbo_COLLIDER
-	attN = bottom, -1
 	attN = top, -1
+	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 11.034996783738819
-	tempExt = 42.260275632012686
-	tempExtUnexp = 299.82953418453826
+	temp = 455.74350403665079
+	tempExt = 441.14467152941842
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -15573,22 +16305,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15610,8 +16326,8 @@ PART
 	persistentId = 1384225079
 	launchID = 1
 	parent = 0
-	position = -0.49396976828575134,-0.1141754612326622,1.8434314727783203
-	rotation = 0.701057911,-0.0922977328,0.0922937095,0.701057255
+	position = -0.49394887685775757,-0.11406707763671875,1.8434422016143799
+	rotation = 0.701057374,-0.0922959298,0.0922959298,0.701057374
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15622,17 +16338,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 67
-	sym = 69
-	sym = 70
+	sym = 72
+	sym = 74
+	sym = 75
 	srfN = srfAttach, 0,jumbo_COLLIDER
-	attN = bottom, -1
 	attN = top, -1
+	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 11.034769281347051
-	tempExt = 42.260196261869538
-	tempExtUnexp = 299.82953418453826
+	temp = 455.74350403665079
+	tempExt = 441.14467152941842
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -15779,22 +16495,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15816,8 +16516,8 @@ PART
 	persistentId = 1804542042
 	launchID = 1
 	parent = 0
-	position = 1.8434042930603027,-0.11412979662418365,0.49392899870872498
-	rotation = 0.560981631,0.430472493,-0.430445999,0.560990095
+	position = 1.8434423208236694,-0.11406707763671875,0.49394860863685608
+	rotation = 0.560985506,0.43045938,-0.43045938,0.560985506
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15828,17 +16528,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 67
-	sym = 68
-	sym = 70
+	sym = 72
+	sym = 73
+	sym = 75
 	srfN = srfAttach, 0,jumbo_COLLIDER
-	attN = bottom, -1
 	attN = top, -1
+	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 11.034567728133009
-	tempExt = 42.260125947468026
-	tempExtUnexp = 299.82953418453826
+	temp = 455.74350403665079
+	tempExt = 441.14467152941842
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -15985,22 +16685,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -16022,8 +16706,8 @@ PART
 	persistentId = 401133152
 	launchID = 1
 	parent = 0
-	position = 0.49398833513259888,-0.11406000703573227,-1.8434453010559082
-	rotation = 0.0922992527,0.701059639,-0.701054633,0.0922990516
+	position = 0.49394857883453369,-0.11406707763671875,-1.8434422016143799
+	rotation = 0.0922959298,0.701057374,-0.701057374,0.0922959298
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16034,17 +16718,17 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 67
-	sym = 68
-	sym = 69
+	sym = 72
+	sym = 73
+	sym = 74
 	srfN = srfAttach, 0,jumbo_COLLIDER
-	attN = bottom, -1
 	attN = top, -1
+	attN = bottom, -1
 	mass = 0.00800000038
 	shielded = False
-	temp = 11.03994046717302
-	tempExt = 42.384091722356445
-	tempExtUnexp = 299.82953418453826
+	temp = 455.74350403665079
+	tempExt = 441.14467152941842
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -16202,22 +16886,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 }
 PART
 {
@@ -16228,8 +16896,8 @@ PART
 	persistentId = 3710755675
 	launchID = 1
 	parent = 0
-	position = -1.8972949981689453,-0.22441250085830688,0.50838065147399902
-	rotation = 1.51582367E-06,0.130524248,-1.46811499E-06,0.991445363
+	position = -1.8973319530487061,-0.22437095642089844,0.50838863849639893
+	rotation = 0,0.13052623,0,0.991444886
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16240,15 +16908,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 72
-	sym = 73
-	sym = 74
+	sym = 77
+	sym = 78
+	sym = 79
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 20.098624313780334
-	tempExt = 44.409027675937963
-	tempExtUnexp = 299.84951924593543
+	temp = 458.3837585768739
+	tempExt = 450.43415869917578
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -16340,7 +17008,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16374,7 +17042,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16408,7 +17076,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16470,9 +17138,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 496103.07409215125
+		CoreThermalEnergy = 454537.40796807228
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16506,22 +17174,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -16543,8 +17195,8 @@ PART
 	persistentId = 3184927829
 	launchID = 1
 	parent = 0
-	position = 0.50831311941146851,-0.22443389892578125,1.8973405361175537
-	rotation = -2.28308795E-06,0.793355405,1.03670518E-05,0.608759165
+	position = 0.50838851928710938,-0.22437095642089844,1.897331714630127
+	rotation = 0,0.793353379,0,0.60876143
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16555,15 +17207,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 71
-	sym = 73
-	sym = 74
+	sym = 76
+	sym = 78
+	sym = 79
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 20.098692306489973
-	tempExt = 44.514588814366498
-	tempExtUnexp = 299.84951873449666
+	temp = 458.38353147533229
+	tempExt = 450.43389078178103
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -16655,7 +17307,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16689,7 +17341,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16723,7 +17375,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16785,9 +17437,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 496103.07409215125
+		CoreThermalEnergy = 454537.4079680724
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -16821,22 +17473,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -16858,8 +17494,8 @@ PART
 	persistentId = 242442458
 	launchID = 1
 	parent = 0
-	position = 1.8973525762557983,-0.22443929314613342,-0.50837600231170654
-	rotation = -1.12071884E-05,0.991445959,4.28113344E-06,-0.13052018
+	position = 1.8973319530487061,-0.22437095642089844,-0.50838881731033325
+	rotation = 0,0.991444886,0,-0.130526274
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16870,15 +17506,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 71
-	sym = 72
-	sym = 74
+	sym = 76
+	sym = 77
+	sym = 79
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 20.099936487115663
-	tempExt = 44.6379663748843
-	tempExtUnexp = 299.8495176304865
+	temp = 458.38411372508381
+	tempExt = 450.43457739417408
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -16970,7 +17606,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17004,7 +17640,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17038,7 +17674,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17100,9 +17736,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 496103.07409215125
+		CoreThermalEnergy = 454538.31704468618
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17136,22 +17772,6 @@ PART
 	{
 		name = WBIPrinterRequirements
 		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -17173,8 +17793,8 @@ PART
 	persistentId = 259957970
 	launchID = 1
 	parent = 0
-	position = -0.50837033987045288,-0.22438083589076996,-1.8973420858383179
-	rotation = -3.41326518E-06,0.608760893,1.13149906E-06,-0.793354034
+	position = -0.5083886981010437,-0.22437095642089844,-1.8973319530487061
+	rotation = 0,0.60876143,0,-0.793353379
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -17185,15 +17805,15 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 71
-	sym = 72
-	sym = 73
+	sym = 76
+	sym = 77
+	sym = 78
 	srfN = srfAttach, 0,jumbo_COLLIDER
 	mass = 1.25
 	shielded = False
-	temp = 20.093619125564075
-	tempExt = 44.407170301628028
-	tempExtUnexp = 299.84951800569445
+	temp = 458.38386725391661
+	tempExt = 450.43428683282451
+	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -17285,7 +17905,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = True
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17319,7 +17939,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17353,7 +17973,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17415,9 +18035,9 @@ PART
 		name = ModuleCoreHeat
 		isEnabled = True
 		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 496103.07409215125
+		CoreThermalEnergy = 454537.40796807228
 		stagingEnabled = True
-		lastUpdateTime = 1266208856.2618179
+		lastUpdateTime = 1266055739.9978666
 		EVENTS
 		{
 		}
@@ -17462,232 +18082,18 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = KAS.RTS1
-	cid = 4290026128
-	uid = 784355813
-	mid = 3543470310
-	persistentId = 1888316853
-	launchID = 1
-	parent = 0
-	position = -1.8072421550750732,-0.60039979219436646,-0.48421880602836609
-	rotation = 0.430450112,-0.560980141,0.560998142,0.430459589
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sqor = -1
-	sepI = -1
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	srfN = srfAttach, 0,jumbo_COLLIDER
-	mass = 0.100000001
-	shielded = False
-	temp = 25.9948211399945
-	tempExt = 56.101763247363834
-	tempExtUnexp = 299.84264543129933
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Grandparent
-	rigidAttachment = True
-	flag = Squad/Flags/default
-	rTrf = KAS.RTS1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 2
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = KASLinkResourceConnector
-		isEnabled = True
-		persistedIsConnectorLocked = False
-		persistedLinkState = Linked
-		persistedLinkPartId = 249892724
-		persistedLinkNodeName = top
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KASRendererPipe
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KASJointCableBase
-		isEnabled = True
-		coupleWhenLinked = False
-		persistedLinkLength = 30
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = 63
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = True
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 }
 ACTIONGROUPS
 {
 	Stage = False, 0
-	Gear = False, 0
+	Gear = True, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = False, 0
+	SAS = True, 1265834627.51055
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0
-	Custom02 = False, 0
+	Custom01 = True, 1265834654.41053
+	Custom02 = True, 1265834668.55052
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -17710,9 +18116,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = -0.0148704685
+	yaw = -0.0377632268
+	roll = 0.00639303681
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -17731,7 +18137,7 @@ VESSELMODULES
 	}
 	CommNetVessel
 	{
-		controlState = ProbePartial
+		controlState = ProbeFull
 		canComm = True
 	}
 	VesselDataManager
@@ -17742,7 +18148,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 1266055739.9978666
 		selectedPad = 0
 		Productivity = 0
 	}
@@ -17754,9 +18160,6 @@ VESSELMODULES
 		PERSISTENT_VARS
 		{
 		}
-	}
-	kOSVesselModule
-	{
 	}
 	SpaceDustVessel
 	{
