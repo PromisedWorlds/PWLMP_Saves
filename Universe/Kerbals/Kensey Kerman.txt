@@ -7,7 +7,7 @@ dumb = 0.687623918
 badS = False
 veteran = False
 tour = False
-state = Assigned
+state = Available
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -39,7 +39,7 @@ EVACHUTE
 	chutePitchRateDivisorWhenTurning = 1
 	chuteRollRateDivisorWhenPitching = 1
 	chuteYawRateDivisorWhenPitching = 1
-	persistentState = DEPLOYED
+	persistentState = STOWED
 	animTime = 1
 	minAirPressureToOpen = 0.0399999991
 	deployAltitude = 1000
@@ -406,16 +406,17 @@ INVENTORY
 }
 CAREER_LOG
 {
-	flight = 1
+	flight = 2
 	0 = Spawn
 	0 = Land,Kerbin
 	0 = Flight,Kerbin
 	0 = Recover
-}
-FLIGHT_LOG
-{
-	flight = 1
 	1 = Flight,Kerbin
 	1 = ExitVessel,Kerbin
 	1 = Land,Kerbin
+	1 = Recover
+}
+FLIGHT_LOG
+{
+	flight = 2
 }
