@@ -6,22 +6,22 @@ sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 454674.13041448593
+met = 40259669.489706278
 lct = 1267054644.9276032
-lastUT = 1267509319.0780177
-distanceTraveled = 1190.6228880956899
+lastUT = 1307314314.4373095
+distanceTraveled = 1248.9239962868548
 root = 0
-lat = -6.85014898267735
-lon = -14.30114713194248
-alt = 0.24815180681616766
-hgt = 0.2568148
-nrm = 0.0014453083276748657,0.9999988675117493,-0.0007005929946899414
-rot = -0.13700803,0.04308074,-0.73505634,0.66261995
+lat = -6.8527746509480316
+lon = -14.302292097576833
+alt = 0.24589434676454403
+hgt = 0.257748455
+nrm = 0.000574022532,0.999998152,-0.00182966888
+rot = 0.67559737,0.650325716,-0.322748631,0.128366947
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.2800001
+cHdg = -2.48
+cMod = 0
 ORBIT
 {
-	SMA = 30043.938675420315
-	ECC = 0.9970832986541235
-	INC = 6.850148984676496
+	SMA = 30043.937055540799
+	ECC = 0.99708333110361547
+	INC = 6.8527746509480325
 	LPE = 90
-	LAN = 303.19523125116586
-	MNA = 3.141592653589787
-	EPH = 1267509319.0180178
+	LAN = 41.172713631547083
+	MNA = 3.1415926535897869
+	EPH = 1307314314.4173095
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -66,16 +66,16 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
-	sepI = 0
-	sidx = -1
+	sqor = 0
+	sepI = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
 	mass = 0.0899999961
 	shielded = False
-	temp = 302.99951757804354
-	tempExt = 302.816109514424
+	temp = 294.95203071094647
+	tempExt = 294.39197101368421
 	tempExtUnexp = 303
 	staticPressureAtm = 0
 	expt = 0
@@ -162,11 +162,11 @@ PART
 		isNeckRingEnabled = True
 		isVisorEnabled = False
 		thrustPercentage = 100
-		lastBoundStep = 1.20833337
+		lastBoundStep = 2.20593262
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
-		state = Ladder (Acquire)
+		state = Idle (Grounded)
 		EVENTS
 		{
 		}
@@ -405,6 +405,8 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Suborbit,Minmus
+			0 = Land,Minmus
 		}
 		UPGRADESAPPLIED
 		{
@@ -560,7 +562,7 @@ PART
 					cid = 4294224960
 					uid = 0
 					mid = 0
-					persistentId = 355860605
+					persistentId = 302507542
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -834,7 +836,7 @@ ACTIONGROUPS
 	Stage = False, 0
 	Gear = False, 0
 	Light = False, 0
-	RCS = True
+	RCS = True, 0
 	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
