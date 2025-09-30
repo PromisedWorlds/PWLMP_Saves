@@ -4,25 +4,25 @@ name = Vall refinery 1
 type = Base
 sit = LANDED
 landed = True
-skipGroundPositioning = False
+skipGroundPositioning = True
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 61.84632849693298
+met = 834.2598226070404
 lct = 1506897440.1596346
-lastUT = 1506897502.065963
-distanceTraveled = 102.81145619305344
+lastUT = 1506898274.4594572
+distanceTraveled = 142.83079392063618
 root = 0
-lat = -12.870624874945275
-lon = -66.98989352578187
-alt = 1344.0747854975634
-hgt = 0.99782485
-nrm = 0.42285117506980896,0.8511770367622375,-0.310957670211792
-rot = -0.3353515,-0.42467856,0.81716245,-0.19857793
-CoM = -0.000712305366,0.508260489,0.000517457724
+lat = -12.870492355929004
+lon = -66.9900302172991
+alt = 1343.4641691269935
+hgt = 0.40551347
+nrm = -8.448958396911621E-06,1,-5.066394805908203E-06
+rot = -0.12039083,-0.60472876,0.7770436,-0.12654088
+CoM = 6.6459188E-06,0.509473145,-5.96046448E-07
 stg = 0
 prst = False
 ref = 1507340266
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.314
+cHdg = -1.312
+cMod = 0
 ORBIT
 {
-	SMA = 150705.46513153292
-	ECC = 0.9995592752074203
-	INC = 12.87066131357946
-	LPE = 89.99891604526609
-	LAN = 59.125916132675684
-	MNA = 3.141593404193736
-	EPH = 1506897496.1195812
+	SMA = 150705.2407444046
+	ECC = 0.999559266645526
+	INC = 12.870493992155703
+	LPE = 90.00064598554233
+	LAN = 61.76880665699264
+	MNA = 3.1415925961714084
+	EPH = 1506898274.599457
 	REF = 10
 	IDENT = Squad/Vall
 }
@@ -76,10 +76,10 @@ PART
 	attN = nose, -1
 	attN = bottom, -1
 	attN = top, 1
-	mass = 1.35500014
+	mass = 1.26100004
 	shielded = False
-	temp = 451.65323358735418
-	tempExt = 449.6585675591711
+	temp = 442.13873680189732
+	tempExt = 438.49832919366179
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -94,7 +94,6 @@ PART
 	modMass = 0
 	moduleVariantName = Lander
 	moduleCargoStackableQuantity = 1
-	crew = Marzor Kerman
 	crew = Пабло Керман
 	EVENTS
 	{
@@ -185,7 +184,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -222,7 +221,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1104,7 +1103,7 @@ PART
 			{
 				markUT = 1506897440.1796346
 				deltaVExpended = 0
-				dragLosses = 5.3490886953473324E-10
+				dragLosses = -5.1021774123567074E-06
 				gravityLosses = 0
 				steeringLosses = 0
 				markLAN = 32.115760979906625
@@ -1112,7 +1111,7 @@ PART
 				markLongitude = -6.6984833122193779
 				markAltitude = 135.08500721579767
 				markBodyIndex = 10
-				maxDragGees = 1.816829411281254E-09
+				maxDragGees = 1.0386886735379045E-08
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1191,7 +1190,7 @@ PART
 	{
 		name = TrajectoriesVesselSettings
 		isEnabled = True
-		Initialized = False
+		Initialized = True
 		EntryAngle = 3.1415926535897931
 		EntryHorizon = False
 		HighAngle = 3.1415926535897931
@@ -1287,7 +1286,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 95.003761291503906
+		amount = 100
 		maxAmount = 100
 		flowState = True
 		isTweakable = True
@@ -1298,7 +1297,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 39.991945950884123
+		amount = 0
 		maxAmount = 40
 		flowState = True
 		isTweakable = True
@@ -1330,11 +1329,11 @@ PART
 	sameVesselCollision = False
 	srfN = , -1
 	attN = bottom, 0
-	attN = top, -1
+	attN = top, 10
 	mass = 0.936000049
 	shielded = False
-	temp = 445.85751904768512
-	tempExt = 444.32103533752525
+	temp = 442.08714722303904
+	tempExt = 438.4689776679125
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1439,7 +1438,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -1541,7 +1540,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1957,7 +1956,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 190.00751596774816
+		amount = 200
 		maxAmount = 200
 		flowState = True
 		isTweakable = True
@@ -1968,7 +1967,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 9.9979864877210307
+		amount = 0
 		maxAmount = 10
 		flowState = True
 		isTweakable = True
@@ -1978,7 +1977,7 @@ PART
 	}
 	VESSELNAMING
 	{
-		name = Vall refinery 1
+		name = Random vall base totally not a crashed ship
 		type = Base
 		priority = 20
 	}
@@ -2010,8 +2009,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.00200000009
 	shielded = False
-	temp = 447.84185398238446
-	tempExt = 444.29687172716649
+	temp = 441.90933696534728
+	tempExt = 438.40895439776853
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2090,7 +2089,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = True
+		isOn = False
 		uiWriteLock = False
 		disableColorPicker = False
 		lightR = 0.933300018
@@ -2307,8 +2306,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.00200000009
 	shielded = False
-	temp = 447.84204790314158
-	tempExt = 444.29740889718192
+	temp = 441.90933696534728
+	tempExt = 438.40895439776853
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2387,7 +2386,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = True
+		isOn = False
 		uiWriteLock = False
 		disableColorPicker = False
 		lightR = 0.933300018
@@ -2580,8 +2579,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.00200000009
 	shielded = False
-	temp = 447.84193115779698
-	tempExt = 444.29698161693136
+	temp = 441.90933696534728
+	tempExt = 438.40895439776853
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2660,7 +2659,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = True
+		isOn = False
 		uiWriteLock = False
 		disableColorPicker = False
 		lightR = 0.933300018
@@ -2853,8 +2852,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.00200000009
 	shielded = False
-	temp = 447.84185428988053
-	tempExt = 444.29687203187484
+	temp = 441.90933696534728
+	tempExt = 438.40895439776853
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2933,7 +2932,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = True
+		isOn = False
 		uiWriteLock = False
 		disableColorPicker = False
 		lightR = 0.933300018
@@ -3126,8 +3125,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.049999997
 	shielded = False
-	temp = 404.05607748977661
-	tempExt = 430.77648086291163
+	temp = 442.33997044998671
+	tempExt = 438.55050866073935
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3373,8 +3372,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.049999997
 	shielded = False
-	temp = 403.90209444918645
-	tempExt = 430.72636052472649
+	temp = 442.35652929534621
+	tempExt = 438.55556915014608
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3620,8 +3619,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.049999997
 	shielded = False
-	temp = 403.97643198501078
-	tempExt = 430.74191482664673
+	temp = 442.34161404340512
+	tempExt = 438.55101101510797
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3867,8 +3866,8 @@ PART
 	srfN = srfAttach, 1,collider_base.collider
 	mass = 0.049999997
 	shielded = False
-	temp = 403.80875883836353
-	tempExt = 430.52700870752346
+	temp = 442.3544601494861
+	tempExt = 438.55493814493553
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4087,12 +4086,330 @@ PART
 		}
 	}
 }
+PART
+{
+	name = nfe-reactor-tiny-2
+	cid = 0
+	uid = 2247902294
+	mid = 3053749632
+	persistentId = 3059231783
+	launchID = 0
+	parent = 1
+	position = 5.2362687711138278E-05,2.2979269027709961,1.0013580322265625E-05
+	rotation = 1.0924422E-05,0.671496153,-7.75083572E-06,0.741008162
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sqor = 0
+	sepI = 0
+	sidx = 0
+	attm = 0
+	sameVesselCollision = False
+	srfN = srfAttach, -1
+	attN = bottom, 1
+	mass = 0.0419999994
+	shielded = False
+	temp = 92.158242947898927
+	tempExt = 92.158242871308445
+	tempExtUnexp = 92.158242947898927
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Off
+	rigidAttachment = False
+	flag = Squad/Flags/default
+	rTrf = nfe-reactor-tiny-2
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 1
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleSystemHeat
+		isEnabled = True
+		totalSystemTemperature = 0
+		totalSystemFlux = 0
+		currentLoopID = 3
+		currentLoopTemperature = 1302.5
+		nominalLoopTemperature = 750
+		currentLoopFlux = 50
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatFissionReactor
+		isEnabled = True
+		Enabled = False
+		HibernateOnWarp = False
+		Hibernating = False
+		ManualControl = True
+		CurrentReactorThrottle = 100
+		CurrentThrottle = 0
+		CurrentElectricalGeneration = 0
+		MaxElectricalGeneration = 0
+		InternalCoreTemperature = 576.46674
+		InternalCoreTemperatureResponseScale = 0.25
+		CurrentSafetyOverride = 1300
+		FirstLoad = False
+		LastUpdateTime = 1506898275.8394558
+		CoreIntegrity = 95.87499
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleHibernateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			EnableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DisableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatFissionFuelContainer
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		isEnabled = True
+		stagingEnabled = True
+		moduleID = meshSwitch
+		currentSubtype = Compact
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleMultiJettison
+		isEnabled = True
+		isJettisoned = False
+		fairingEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 450
+		beingAttached = True
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartInfo
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 6.050521577845387
+		maxAmount = 15
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = DepletedFuel
+		amount = 0.00013931913296073498
+		maxAmount = 2.5
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = EnrichedUranium
+		amount = 2.4998606808707837
+		maxAmount = 2.5
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
 ACTIONGROUPS
 {
 	Stage = False, 1506822186.73917
 	Gear = True, 1506884647.37742
-	Light = True, 1467848846.47642
-	RCS = True, 1506894522.60982
+	Light = False
+	RCS = False
 	SAS = True, 1506884606.89746
 	Brakes = False, 0
 	Abort = False, 0
@@ -4120,9 +4437,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = 7.7917764E-05
+	yaw = -0.000121640885
+	roll = 3.857437E-06
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -4152,9 +4469,9 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 1506897440.2596345
+		lastUpdate = 1506897818.5382202
 		selectedPad = 0
-		Productivity = 0.54895440661899475
+		Productivity = 0.26604538990619414
 	}
 	AtmoFxModule
 	{
