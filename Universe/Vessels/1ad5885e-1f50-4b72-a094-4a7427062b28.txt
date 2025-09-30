@@ -2,27 +2,27 @@ pid = 1ad5885e1f504b72a0944a7427062b28
 persistentId = 1919654
 name = Speeder 1
 type = Plane
-sit = FLYING
-landed = False
+sit = LANDED
+landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2228.8553218841553
+met = 3774.9096353054047
 lct = 1507036483.9809158
-lastUT = 1507038712.8962376
-distanceTraveled = 840391.3988247077
+lastUT = 1507040258.950551
+distanceTraveled = 1345491.7986288397
 root = 0
-lat = -0.048600151449849048
-lon = -74.724468455004697
-alt = 72.306099922279827
-hgt = 3.30002975
-nrm = -0.000828057062,-0.00217136741,-0.999997258
-rot = 0.094479382,-0.0950038582,-0.703250229,0.698202729
-CoM = -2.04890966E-07,-7.45349646,0.3898139
+lat = 79.624672474786422
+lon = -79.97414823247675
+alt = 31.163131631910801
+hgt = 1.15369546
+nrm = 3.48910689E-05,-0.0397412777,-0.99921006
+rot = -0.599973679,0.254741341,-0.294201106,-0.69898802
+CoM = -0.000165224075,-7.32572269,0.374062538
 stg = 0
 prst = False
 ref = 3957311127
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = ASL
-cPch = 0.2
-cHdg = 0.3
+altDispState = AGL
+cPch = 0.133321
+cHdg = -3.747997
 cMod = 0
 ORBIT
 {
-	SMA = 300818.3156641919
-	ECC = 0.99479852545868652
-	INC = 0.048595155251619171
-	LPE = 90
-	LAN = 88.105063462857515
-	MNA = 3.1415926535897976
-	EPH = 1507036472.9609263
+	SMA = 300040.84628017276
+	ECC = 0.99983130885412497
+	INC = 79.624105204268659
+	LPE = 270.0000618496187
+	LAN = 322.90412497405111
+	MNA = 3.1415914195739867
+	EPH = 1507040067.3107338
 	REF = 1
 	IDENT = Squad/Kerbin
 }
@@ -74,12 +74,12 @@ PART
 	srfN = , -1
 	attN = top, 1
 	attN = bottom, 7
-	mass = 1.99199998
+	mass = 1.90199995
 	shielded = False
-	temp = 308.91255030881314
-	tempExt = 308.91850323887894
-	tempExtUnexp = 308.91832739637448
-	staticPressureAtm = 0.98933071434836073
+	temp = 284.58593954493119
+	tempExt = 279.69309826872484
+	tempExtUnexp = 283.08880371845851
+	staticPressureAtm = 0.99539025695183347
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -92,8 +92,8 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Зелдлин Керман
 	crew = Kergard Kerman
+	crew = Зелдлин Керман
 	EVENTS
 	{
 	}
@@ -588,14 +588,14 @@ PART
 			MechJebModuleAirplaneAutopilot
 			{
 				HeadingHoldEnabled = False
-				AltitudeHoldEnabled = False
-				VertSpeedHoldEnabled = False
+				AltitudeHoldEnabled = True
+				VertSpeedHoldEnabled = True
 				RollHoldEnabled = False
 				SpeedHoldEnabled = False
-				AltitudeTarget = 0
-				HeadingTarget = 90
+				AltitudeTarget = 5000
+				HeadingTarget = 0
 				RollTarget = 0
-				SpeedTarget = 0
+				SpeedTarget = 700
 				VertSpeedTarget = 0
 				BankAngle = 30
 				unlockParts = 
@@ -1043,17 +1043,17 @@ PART
 			}
 			MechJebModuleFlightRecorder
 			{
-				markUT = 1507036472.9809263
-				deltaVExpended = 0
-				dragLosses = 0
-				gravityLosses = 0
-				steeringLosses = 0
-				markLAN = 88.103559943888698
-				markLatitude = -0.048595155818860931
-				markLongitude = -74.725181060218802
-				markAltitude = 71.932517895707861
+				markUT = 1507036483.9809158
+				deltaVExpended = 21586.531521710091
+				dragLosses = 21520.9636065472
+				gravityLosses = 28.823879717596153
+				steeringLosses = 2739.8781293706829
+				markLAN = 93.248060071682247
+				markLatitude = -0.04859616514962882
+				markLongitude = -74.72503313449559
+				markAltitude = 71.764659882255359
 				markBodyIndex = 1
-				maxDragGees = 0
+				maxDragGees = 13.425133122433804
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1156,6 +1156,8 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Land,Kerbin
+			0 = Flight,Kerbin
 		}
 		UPGRADESAPPLIED
 		{
@@ -1179,7 +1181,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 150
+		amount = 90.1795654296875
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -1225,10 +1227,10 @@ PART
 	attN = bottom, 0
 	mass = 0.569999993
 	shielded = False
-	temp = 308.91243663886797
-	tempExt = 308.71617495107932
-	tempExtUnexp = 308.71307409643362
-	staticPressureAtm = 0.98933176849613702
+	temp = 273.53466968979336
+	tempExt = 270.4265052619121
+	tempExtUnexp = 272.6544201250378
+	staticPressureAtm = 0.99540840335284042
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1346,7 +1348,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1507036472.9809263
+		LastUpdateTime = 1507040067.3107338
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -1395,7 +1397,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 275.2543478659908
+		amount = 227.5567069691545
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -1441,10 +1443,10 @@ PART
 	attN = bottom01, 1
 	mass = 0.100000001
 	shielded = False
-	temp = 308.91253948507915
-	tempExt = 308.90032658087529
-	tempExtUnexp = 308.9006762156672
-	staticPressureAtm = 0.98933259675510421
+	temp = 262.40988596842448
+	tempExt = 261.50869564763411
+	tempExtUnexp = 262.81638806867699
+	staticPressureAtm = 0.99542368849559737
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1529,7 +1531,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 61.16763285910664
+		amount = 50.56815710425169
 		maxAmount = 80
 		flowState = True
 		isTweakable = True
@@ -1563,10 +1565,10 @@ PART
 	attN = bottom01, 2
 	mass = 0.00999999978
 	shielded = False
-	temp = 308.91254565012929
-	tempExt = 308.91161913521171
-	tempExtUnexp = 308.91174571853526
-	staticPressureAtm = 0.98933304853272264
+	temp = 262.33831016336825
+	tempExt = 261.54694813428102
+	tempExtUnexp = 261.54695846273904
+	staticPressureAtm = 0.99543166990018961
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1709,10 +1711,10 @@ PART
 	srfN = srfAttach, 1,AdapterLongCOL
 	mass = 0.400000006
 	shielded = False
-	temp = 308.91253677886664
-	tempExt = 308.90000819637015
-	tempExtUnexp = 308.90037185747133
-	staticPressureAtm = 0.989430256016955
+	temp = 275.37410034748939
+	tempExt = 274.77557133941616
+	tempExtUnexp = 4
+	staticPressureAtm = 0.9955068908736584
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1809,10 +1811,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
+		springTweakable = 1.59000003
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-1, -1, -1)
+		suspensionPos = (4.72510749E-07, -1.35131645, -0.125176221)
 		suspensionDefaultPos = (0, -1.5144999, -0.125499099)
 		autoBoost = 0
 		stagingEnabled = True
@@ -1830,7 +1832,7 @@ PART
 	{
 		name = ModuleWheelBrakes
 		isEnabled = True
-		brakeTweakable = 50
+		brakeTweakable = 200
 		brakeInput = 0
 		stagingEnabled = True
 		EVENTS
@@ -1853,10 +1855,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 1
+		position = 0
 		EVENTS
 		{
 		}
@@ -1937,7 +1939,7 @@ PART
 		name = ModuleLight
 		isEnabled = True
 		isOn = False
-		uiWriteLock = False
+		uiWriteLock = True
 		disableColorPicker = True
 		lightR = 0.875
 		lightG = 0.875
@@ -2149,10 +2151,10 @@ PART
 	srfN = srfAttach, 0,COL2
 	mass = 0.0799999982
 	shielded = False
-	temp = 308.91253119862102
-	tempExt = 308.89850703315585
-	tempExtUnexp = 308.89848437590689
-	staticPressureAtm = 0.98933094023716994
+	temp = 267.92333123149774
+	tempExt = 269.45352935905294
+	tempExtUnexp = 271.00981247840633
+	staticPressureAtm = 0.99539161228468875
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -2401,10 +2403,10 @@ PART
 	srfN = srfAttach, 0,COL2
 	mass = 0.0799999982
 	shielded = False
-	temp = 308.91253141155295
-	tempExt = 308.89873230808581
-	tempExtUnexp = 308.89870904394678
-	staticPressureAtm = 0.98933063905209095
+	temp = 267.87311945876183
+	tempExt = 269.42389422677002
+	tempExtUnexp = 270.96846357473191
+	staticPressureAtm = 0.99539161228468875
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -2646,10 +2648,10 @@ PART
 	attN = bottom, 8
 	mass = 1.8499999
 	shielded = False
-	temp = 308.91240067129087
-	tempExt = 308.8199608906578
-	tempExtUnexp = 308.8184554791581
-	staticPressureAtm = 0.98933003668193309
+	temp = 285.46440192806045
+	tempExt = 281.38553457076563
+	tempExtUnexp = 284.83468296479424
+	staticPressureAtm = 0.99537753188224765
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2898,6 +2900,8 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Land,Kerbin
+			0 = Flight,Kerbin
 		}
 		UPGRADESAPPLIED
 		{
@@ -2930,10 +2934,10 @@ PART
 	attN = bottom, 9
 	mass = 0.569999993
 	shielded = False
-	temp = 308.91254538443945
-	tempExt = 308.91378497199281
-	tempExtUnexp = 308.9137185444236
-	staticPressureAtm = 0.98932913312669624
+	temp = 286.9785902301154
+	tempExt = 282.73308535349065
+	tempExtUnexp = 286.56867484913806
+	staticPressureAtm = 0.99536119259171441
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3033,7 +3037,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 611.6763285910897
+		amount = 505.6815710425704
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3068,10 +3072,10 @@ PART
 	attN = bottom, 10
 	mass = 0.569999993
 	shielded = False
-	temp = 308.91254707501997
-	tempExt = 308.9190040391527
-	tempExtUnexp = 308.91885482335505
-	staticPressureAtm = 0.9893279283863804
+	temp = 290.98798351525045
+	tempExt = 285.78091052772947
+	tempExtUnexp = 289.93723454448406
+	staticPressureAtm = 0.9953392813772205
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3171,7 +3175,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 611.6763285910897
+		amount = 505.6815710425704
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3206,10 +3210,10 @@ PART
 	attN = bottom, 9
 	mass = 0.569999993
 	shielded = False
-	temp = 308.91254754079154
-	tempExt = 308.92091456854928
-	tempExtUnexp = 308.92070374486457
-	staticPressureAtm = 0.98932672364606455
+	temp = 289.10422186918504
+	tempExt = 288.68460883342397
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99531752075526614
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3327,7 +3331,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 1507036472.9809263
+		LastUpdateTime = 1507040067.3107338
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -3376,7 +3380,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 275.2543478659908
+		amount = 227.5567069691545
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -3422,10 +3426,10 @@ PART
 	attN = bottom01, 10
 	mass = 0.100000001
 	shielded = False
-	temp = 308.91254635055151
-	tempExt = 308.91381900234029
-	tempExtUnexp = 308.91380929572148
-	staticPressureAtm = 0.98932589538709748
+	temp = 288.65590116972282
+	tempExt = 288.27553595676648
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99530238620504863
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3510,7 +3514,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 61.16763285910664
+		amount = 50.56815710425169
 		maxAmount = 80
 		flowState = True
 		isTweakable = True
@@ -3544,10 +3548,10 @@ PART
 	attN = bottom01, 11
 	mass = 0.00999999978
 	shielded = False
-	temp = 308.91254820208513
-	tempExt = 308.91351912039062
-	tempExtUnexp = 308.91352363260791
-	staticPressureAtm = 0.98932544360947905
+	temp = 288.55660222882233
+	tempExt = 288.16726858093665
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99529448009672616
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3691,10 +3695,10 @@ PART
 	srfN = srfAttach, 10,AdapterLongCOL
 	mass = 0.125
 	shielded = False
-	temp = 308.91254559019313
-	tempExt = 308.91323654606776
-	tempExtUnexp = 308.91324964502439
-	staticPressureAtm = 0.98926754077805013
+	temp = 287.99873513470732
+	tempExt = 287.8892634345865
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99526323214478463
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -3943,10 +3947,10 @@ PART
 	srfN = srfAttach, 10,AdapterLongCOL
 	mass = 0.125
 	shielded = False
-	temp = 308.91254559019313
-	tempExt = 308.91323654606776
-	tempExtUnexp = 308.91324964502439
-	staticPressureAtm = 0.98926769137058967
+	temp = 288.00522246727616
+	tempExt = 287.89241948814595
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99526315684851496
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -4187,10 +4191,10 @@ PART
 	srfN = srfAttach, 9,Mk2COL
 	mass = 0.5
 	shielded = False
-	temp = 308.91254562356102
-	tempExt = 308.91324679284196
-	tempExtUnexp = 308.9132604526302
-	staticPressureAtm = 0.98932732601622253
+	temp = 296.82166250530133
+	tempExt = 287.86714852148947
+	tempExtUnexp = 296.30688584645003
+	staticPressureAtm = 0.99533032112112163
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -4309,10 +4313,10 @@ PART
 	srfN = srfAttach, 15,DeltaWingCOL
 	mass = 0.230000004
 	shielded = False
-	temp = 308.91254600976436
-	tempExt = 308.91368608281391
-	tempExtUnexp = 308.91368619317842
-	staticPressureAtm = 0.98932649775725534
+	temp = 289.46549825984084
+	tempExt = 289.00468129349093
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99531842431050299
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -4561,10 +4565,10 @@ PART
 	srfN = srfAttach, 15,DeltaWingCOL
 	mass = 0.150000006
 	shielded = False
-	temp = 308.91254552539243
-	tempExt = 308.91334771182761
-	tempExtUnexp = 308.91335971200715
-	staticPressureAtm = 0.98932619657217646
+	temp = 280.53246654117527
+	tempExt = 280.97088712965649
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99531834901423322
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -4813,10 +4817,10 @@ PART
 	srfN = srfAttach, 17,ElevonCOL
 	mass = 0.100000001
 	shielded = False
-	temp = 308.9125461589885
-	tempExt = 308.91349515178985
-	tempExtUnexp = 308.91350158997335
-	staticPressureAtm = 0.98932566949828826
+	temp = 276.78107062888745
+	tempExt = 275.84233869863186
+	tempExtUnexp = 277.89845345159097
+	staticPressureAtm = 0.99531134646114761
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -5067,10 +5071,10 @@ PART
 	attN = bottom, 20
 	mass = 0.25
 	shielded = False
-	temp = 308.91254764683129
-	tempExt = 308.92762189714932
-	tempExtUnexp = 308.92719062799381
-	staticPressureAtm = 0.98943100897965242
+	temp = 309.78154621437898
+	tempExt = 305.85579514206529
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99545004219000577
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5174,7 +5178,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -5210,10 +5214,10 @@ PART
 	attN = bottom, 21
 	mass = 0.25
 	shielded = False
-	temp = 308.91254772341802
-	tempExt = 308.92848280232317
-	tempExtUnexp = 308.92799222819593
-	staticPressureAtm = 0.98942596412957995
+	temp = 313.60575927206969
+	tempExt = 305.77834243464355
+	tempExtUnexp = 311.31584332120866
+	staticPressureAtm = 0.99543468175097916
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5317,7 +5321,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -5352,12 +5356,12 @@ PART
 	attN = top, 20
 	mass = 1.20000005
 	shielded = False
-	temp = 308.91255562369145
-	tempExt = 308.92070684062952
-	tempExtUnexp = 308.92046953152169
-	staticPressureAtm = 0.98942347935267849
+	temp = 314.51107373871668
+	tempExt = 309.7603238873387
+	tempExtUnexp = 312.83619971721458
+	staticPressureAtm = 0.99542700153146579
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -5467,9 +5471,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -5856,10 +5860,10 @@ PART
 	attN = bottom, 23
 	mass = 0.25
 	shielded = False
-	temp = 308.91254757530174
-	tempExt = 308.92731907411297
-	tempExtUnexp = 308.9268782894311
-	staticPressureAtm = 0.98942950305425759
+	temp = 314.68519335816717
+	tempExt = 313.11282582635982
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99544590089517015
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5963,7 +5967,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -5999,10 +6003,10 @@ PART
 	attN = bottom, 24
 	mass = 0.25
 	shielded = False
-	temp = 308.91254763964935
-	tempExt = 308.92788661008154
-	tempExtUnexp = 308.92741451660572
-	staticPressureAtm = 0.98942453350045489
+	temp = 318.72959681083893
+	tempExt = 316.25742337982899
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99543046515987377
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6106,7 +6110,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -6141,12 +6145,12 @@ PART
 	attN = top, 23
 	mass = 1.20000005
 	shielded = False
-	temp = 308.9125551832106
-	tempExt = 308.92032131238238
-	tempExtUnexp = 308.9200962827
-	staticPressureAtm = 0.98942197342728377
+	temp = 319.6499350228471
+	tempExt = 314.57235104453105
+	tempExtUnexp = 317.87676774133342
+	staticPressureAtm = 0.99542286023663018
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -6256,9 +6260,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -6645,10 +6649,10 @@ PART
 	attN = bottom, 26
 	mass = 0.25
 	shielded = False
-	temp = 308.91254759672802
-	tempExt = 308.92745497360158
-	tempExtUnexp = 308.92701130558675
-	staticPressureAtm = 0.98942807242513253
+	temp = 317.36252120132821
+	tempExt = 315.72692180389618
+	tempExtUnexp = 4
+	staticPressureAtm = 0.9954416090077951
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6752,7 +6756,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -6788,10 +6792,10 @@ PART
 	attN = bottom, 27
 	mass = 0.25
 	shielded = False
-	temp = 308.9125475722995
-	tempExt = 308.92718630622579
-	tempExtUnexp = 308.92675746600969
-	staticPressureAtm = 0.98942649120346804
+	temp = 321.95496178731952
+	tempExt = 318.92651352373264
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99542963690090669
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6895,7 +6899,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -6930,12 +6934,12 @@ PART
 	attN = top, 26
 	mass = 1.20000005
 	shielded = False
-	temp = 308.91255566997205
-	tempExt = 308.92069445340582
-	tempExtUnexp = 308.92046323652647
-	staticPressureAtm = 0.98942573824077062
+	temp = 322.77327452241093
+	tempExt = 320.89731500909659
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99542376379186714
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -7045,9 +7049,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -7432,10 +7436,10 @@ PART
 	srfN = srfAttach, 26,CylCOL
 	mass = 0.25
 	shielded = False
-	temp = 308.91254635308218
-	tempExt = 308.91404983660038
-	tempExtUnexp = 308.91401684718488
-	staticPressureAtm = 0.9895158678756476
+	temp = 323.10039743194909
+	tempExt = 319.79517815481569
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99551856179546783
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7532,10 +7536,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
+		springTweakable = 3
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-1, -1, -1)
+		suspensionPos = (-1.5321566E-05, -0.0880023241, 1.13205063)
 		suspensionDefaultPos = (0, -0.0879982263, 1.18750036)
 		autoBoost = 0
 		stagingEnabled = True
@@ -7595,7 +7599,7 @@ PART
 	{
 		name = ModuleWheelBrakes
 		isEnabled = True
-		brakeTweakable = 50
+		brakeTweakable = 200
 		brakeInput = 0
 		stagingEnabled = True
 		EVENTS
@@ -7618,10 +7622,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 1
+		position = 0
 		EVENTS
 		{
 		}
@@ -7702,7 +7706,7 @@ PART
 		name = ModuleLight
 		isEnabled = True
 		isOn = False
-		uiWriteLock = False
+		uiWriteLock = True
 		disableColorPicker = True
 		lightR = 0.875
 		lightG = 0.875
@@ -7891,10 +7895,10 @@ PART
 	attN = bottom01, 25
 	mass = 0.0599999987
 	shielded = False
-	temp = 308.91254865767905
-	tempExt = 308.91493917369098
-	tempExtUnexp = 308.91488935502838
-	staticPressureAtm = 0.98942882538782995
+	temp = 317.09359788377935
+	tempExt = 312.32578997074302
+	tempExtUnexp = 317.71070614413526
+	staticPressureAtm = 0.99544755741310442
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8116,10 +8120,10 @@ PART
 	attN = bottom01, 22
 	mass = 0.0599999987
 	shielded = False
-	temp = 308.91254864332342
-	tempExt = 308.91492412492119
-	tempExtUnexp = 308.91487488550615
-	staticPressureAtm = 0.98943206312742871
+	temp = 314.48242032688074
+	tempExt = 308.72733416222968
+	tempExtUnexp = 313.85417258401355
+	staticPressureAtm = 0.99545358111468352
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8341,10 +8345,10 @@ PART
 	attN = bottom01, 19
 	mass = 0.0599999987
 	shielded = False
-	temp = 308.91254866804047
-	tempExt = 308.91495009751628
-	tempExtUnexp = 308.91489990046978
-	staticPressureAtm = 0.98943349375655376
+	temp = 309.4935835110598
+	tempExt = 303.1463690345351
+	tempExtUnexp = 308.12518212321606
+	staticPressureAtm = 0.99545772240951913
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8565,10 +8569,10 @@ PART
 	srfN = srfAttach, 15,DeltaWingCOL
 	mass = 0.0500000007
 	shielded = False
-	temp = 308.91255513510754
-	tempExt = 308.91916738521581
-	tempExtUnexp = 308.91898202107325
-	staticPressureAtm = 0.98929750869340605
+	temp = 296.37108762151638
+	tempExt = 294.34402137197873
+	tempExtUnexp = 4
+	staticPressureAtm = 0.9953001273169565
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -8648,7 +8652,7 @@ PART
 		ignorePitch = True
 		ignoreYaw = True
 		ignoreRoll = True
-		deploy = False
+		deploy = True
 		deployInvert = False
 		partDeployInvert = False
 		deployAngle = 70
@@ -8846,10 +8850,10 @@ PART
 	srfN = srfAttach, 9,Mk2COL
 	mass = 0.5
 	shielded = False
-	temp = 308.91254558582318
-	tempExt = 308.91320839762602
-	tempExtUnexp = 308.91322343325459
-	staticPressureAtm = 0.98932762720130141
+	temp = 296.86577839919374
+	tempExt = 287.87028648657792
+	tempExtUnexp = 296.33042160734959
+	staticPressureAtm = 0.99533047171366118
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -8968,10 +8972,10 @@ PART
 	srfN = srfAttach, 33,DeltaWingCOL
 	mass = 0.230000004
 	shielded = False
-	temp = 308.91254607286976
-	tempExt = 308.91390158609073
-	tempExtUnexp = 308.91389403680108
-	staticPressureAtm = 0.98932710012741332
+	temp = 289.5341725507397
+	tempExt = 289.07660523750644
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99531834901423322
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -9212,10 +9216,10 @@ PART
 	srfN = srfAttach, 33,DeltaWingCOL
 	mass = 0.150000006
 	shielded = False
-	temp = 308.91254582857215
-	tempExt = 308.91381469245863
-	tempExtUnexp = 308.91381028781382
-	staticPressureAtm = 0.98932740131249219
+	temp = 281.01659917613921
+	tempExt = 281.41196125524539
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99531834901423322
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -9456,10 +9460,10 @@ PART
 	srfN = srfAttach, 35,ElevonCOL
 	mass = 0.100000001
 	shielded = False
-	temp = 308.91254647032315
-	tempExt = 308.91355742684169
-	tempExtUnexp = 308.91356206835729
-	staticPressureAtm = 0.98932717542368298
+	temp = 277.41994838718733
+	tempExt = 276.35097417857685
+	tempExtUnexp = 278.46510264058435
+	staticPressureAtm = 0.99531127116487783
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -9702,10 +9706,10 @@ PART
 	attN = bottom, 38
 	mass = 0.25
 	shielded = False
-	temp = 308.91254764634215
-	tempExt = 308.92761660377096
-	tempExtUnexp = 308.92718599177721
-	staticPressureAtm = 0.98943138546100107
+	temp = 309.83288776588927
+	tempExt = 305.94371018878269
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99545011748627554
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9809,7 +9813,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -9845,10 +9849,10 @@ PART
 	attN = bottom, 39
 	mass = 0.25
 	shielded = False
-	temp = 308.91254771910172
-	tempExt = 308.92845194935586
-	tempExtUnexp = 308.92796237784432
-	staticPressureAtm = 0.9894263406109286
+	temp = 313.65351149748921
+	tempExt = 305.78703253789189
+	tempExtUnexp = 311.33424763298979
+	staticPressureAtm = 0.99543468175097916
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -9952,7 +9956,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -9987,12 +9991,12 @@ PART
 	attN = top, 38
 	mass = 1.20000005
 	shielded = False
-	temp = 308.91255558860331
-	tempExt = 308.92067677650988
-	tempExtUnexp = 308.92044036594126
-	staticPressureAtm = 0.98942385583402725
+	temp = 314.55669749440858
+	tempExt = 309.80927480795646
+	tempExtUnexp = 312.8859736691391
+	staticPressureAtm = 0.99542700153146579
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -10102,9 +10106,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -10507,10 +10511,10 @@ PART
 	attN = bottom, 41
 	mass = 0.25
 	shielded = False
-	temp = 308.91254756914668
-	tempExt = 308.92727409310118
-	tempExtUnexp = 308.92683452656632
-	staticPressureAtm = 0.98943018072068523
+	temp = 314.73355664314067
+	tempExt = 313.09967264511585
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99544590089517015
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -10614,7 +10618,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -10650,10 +10654,10 @@ PART
 	attN = bottom, 42
 	mass = 0.25
 	shielded = False
-	temp = 308.91254761827366
-	tempExt = 308.92773123386746
-	tempExtUnexp = 308.9272645033563
-	staticPressureAtm = 0.98942521116688253
+	temp = 318.76396266455816
+	tempExt = 316.27784223151559
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99543054045614354
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -10757,7 +10761,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -10784,7 +10788,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	sym = 24
@@ -10792,12 +10796,12 @@ PART
 	attN = top, 41
 	mass = 1.20000005
 	shielded = False
-	temp = 308.91255486166045
-	tempExt = 308.92005074539418
-	tempExtUnexp = 308.91983334434639
-	staticPressureAtm = 0.98942265109371141
+	temp = 319.6822913441049
+	tempExt = 317.89895282041692
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99542286023663018
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -10907,9 +10911,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -11296,10 +11300,10 @@ PART
 	attN = bottom, 44
 	mass = 0.25
 	shielded = False
-	temp = 308.9125475865676
-	tempExt = 308.92738328502156
-	tempExtUnexp = 308.92694182887004
-	staticPressureAtm = 0.98942905127663916
+	temp = 317.4295044272219
+	tempExt = 315.77909521543256
+	tempExtUnexp = 4
+	staticPressureAtm = 0.9954416090077951
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11403,7 +11407,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -11439,10 +11443,10 @@ PART
 	attN = bottom, 45
 	mass = 0.25
 	shielded = False
-	temp = 308.91254757009716
-	tempExt = 308.92716838557601
-	tempExtUnexp = 308.92674035759057
-	staticPressureAtm = 0.98942747005497467
+	temp = 322.0560204367394
+	tempExt = 319.00718555023201
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99542971219717646
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -11546,7 +11550,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 305.83816429554486
+		amount = 252.8407855212852
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -11573,7 +11577,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 2
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	sym = 27
@@ -11581,12 +11585,12 @@ PART
 	attN = top, 44
 	mass = 1.20000005
 	shielded = False
-	temp = 308.91255554847197
-	tempExt = 308.92059377839837
-	tempExtUnexp = 308.92036525232714
-	staticPressureAtm = 0.98942671709227725
+	temp = 322.88116552193344
+	tempExt = 320.99400543434569
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99542383908813681
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -11696,9 +11700,9 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -12083,10 +12087,10 @@ PART
 	srfN = srfAttach, 44,CylCOL
 	mass = 0.25
 	shielded = False
-	temp = 308.91254635294302
-	tempExt = 308.91404923426154
-	tempExtUnexp = 308.91401629699902
-	staticPressureAtm = 0.98951684672715423
+	temp = 323.21187143770618
+	tempExt = 319.88411978045821
+	tempExtUnexp = 4
+	staticPressureAtm = 0.9955186370917376
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12183,10 +12187,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1
+		springTweakable = 3
 		damperTweakable = 1
 		autoSpringDamper = True
-		suspensionPos = (-1, -1, -1)
+		suspensionPos = (-3.08695712E-06, -0.0879969597, 1.13202572)
 		suspensionDefaultPos = (0, -0.0879982263, 1.18750036)
 		autoBoost = 0
 		stagingEnabled = True
@@ -12254,7 +12258,7 @@ PART
 	{
 		name = ModuleWheelBrakes
 		isEnabled = True
-		brakeTweakable = 50
+		brakeTweakable = 200
 		brakeInput = 0
 		stagingEnabled = True
 		EVENTS
@@ -12277,10 +12281,10 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Retracted
-		stateString = Retracted
+		stateDisplayString = Deployed
+		stateString = Deployed
 		stagingEnabled = True
-		position = 1
+		position = 0
 		EVENTS
 		{
 		}
@@ -12361,7 +12365,7 @@ PART
 		name = ModuleLight
 		isEnabled = True
 		isOn = False
-		uiWriteLock = False
+		uiWriteLock = True
 		disableColorPicker = True
 		lightR = 0.875
 		lightG = 0.875
@@ -12574,10 +12578,10 @@ PART
 	attN = bottom01, 43
 	mass = 0.0599999987
 	shielded = False
-	temp = 308.91254865126081
-	tempExt = 308.91493239932038
-	tempExtUnexp = 308.91488284871406
-	staticPressureAtm = 0.98942980423933657
+	temp = 317.16507207926873
+	tempExt = 312.35761727060219
+	tempExtUnexp = 317.70161662627356
+	staticPressureAtm = 0.9954476327093742
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -12799,10 +12803,10 @@ PART
 	attN = bottom01, 40
 	mass = 0.0599999987
 	shielded = False
-	temp = 308.9125486322755
-	tempExt = 308.91491274845481
-	tempExtUnexp = 308.9148639279004
-	staticPressureAtm = 0.98943274079385635
+	temp = 314.50804011305178
+	tempExt = 308.95840494664634
+	tempExtUnexp = 313.95309359903774
+	staticPressureAtm = 0.99545365641095329
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13024,10 +13028,10 @@ PART
 	attN = bottom01, 37
 	mass = 0.0599999987
 	shielded = False
-	temp = 308.91254866282037
-	tempExt = 308.91494478545252
-	tempExtUnexp = 308.91489477753009
-	staticPressureAtm = 0.98943387023790241
+	temp = 309.55573366853889
+	tempExt = 303.20146748568692
+	tempExtUnexp = 308.20839931332137
+	staticPressureAtm = 0.99545772240951913
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -13248,10 +13252,10 @@ PART
 	srfN = srfAttach, 33,DeltaWingCOL
 	mass = 0.0500000007
 	shielded = False
-	temp = 308.91255513344231
-	tempExt = 308.91916611335313
-	tempExtUnexp = 308.91898083880488
-	staticPressureAtm = 0.98929863813745211
+	temp = 296.4205950059802
+	tempExt = 294.42709040394271
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99530020261322627
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -13331,7 +13335,7 @@ PART
 		ignorePitch = True
 		ignoreYaw = True
 		ignoreRoll = True
-		deploy = False
+		deploy = True
 		deployInvert = False
 		partDeployInvert = False
 		deployAngle = 70
@@ -13529,10 +13533,10 @@ PART
 	srfN = srfAttach, 9,Mk2COL
 	mass = 0.0500000007
 	shielded = False
-	temp = 308.91255526185262
-	tempExt = 308.91938001124316
-	tempExtUnexp = 308.91918035517256
-	staticPressureAtm = 0.98925602044878014
+	temp = 290.85569286385203
+	tempExt = 290.30100495735087
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99526880406874529
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -13612,7 +13616,7 @@ PART
 		ignorePitch = True
 		ignoreYaw = True
 		ignoreRoll = True
-		deploy = False
+		deploy = True
 		deployInvert = False
 		partDeployInvert = False
 		deployAngle = 70
@@ -13810,10 +13814,10 @@ PART
 	srfN = srfAttach, 9,Mk2COL
 	mass = 0.0500000007
 	shielded = False
-	temp = 308.91255526185262
-	tempExt = 308.91938001124316
-	tempExtUnexp = 308.91918035517256
-	staticPressureAtm = 0.98925579455997092
+	temp = 290.85569286385203
+	tempExt = 290.30100495735087
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99526872877247563
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -13893,7 +13897,7 @@ PART
 		ignorePitch = True
 		ignoreYaw = True
 		ignoreRoll = True
-		deploy = False
+		deploy = True
 		deployInvert = False
 		partDeployInvert = False
 		deployAngle = 70
@@ -14091,10 +14095,10 @@ PART
 	srfN = srfAttach, 8,Mk2COL
 	mass = 0.100000001
 	shielded = False
-	temp = 308.91254585070988
-	tempExt = 308.91314672421311
-	tempExtUnexp = 308.91316557209296
-	staticPressureAtm = 0.98932883194161725
+	temp = 286.24005768240926
+	tempExt = 282.60923438303195
+	tempExtUnexp = 285.96833025666842
+	staticPressureAtm = 0.99535238292815498
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -14238,10 +14242,10 @@ PART
 	srfN = srfAttach, 8,Mk2COL
 	mass = 0.100000001
 	shielded = False
-	temp = 308.91254585070988
-	tempExt = 308.91314672421311
-	tempExtUnexp = 308.91316557209296
-	staticPressureAtm = 0.98932853075653837
+	temp = 286.26700099600936
+	tempExt = 282.54745826810182
+	tempExtUnexp = 285.93751649797861
+	staticPressureAtm = 0.99535230763188531
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -14385,10 +14389,10 @@ PART
 	srfN = srfAttach, 8,Mk2COL
 	mass = 0.0500000007
 	shielded = False
-	temp = 308.91254602300677
-	tempExt = 308.9132200655805
-	tempExtUnexp = 308.91323611523518
-	staticPressureAtm = 0.98932920842296601
+	temp = 286.56041507410077
+	tempExt = 286.16975529023392
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99536006314766834
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -14532,10 +14536,10 @@ PART
 	srfN = srfAttach, 8,Mk2COL
 	mass = 0.0500000007
 	shielded = False
-	temp = 308.91254591716591
-	tempExt = 308.91316824408318
-	tempExtUnexp = 308.91318612364608
-	staticPressureAtm = 0.98932890723788702
+	temp = 286.56034614655954
+	tempExt = 286.16972210723304
+	tempExtUnexp = 4
+	staticPressureAtm = 0.99535998785139856
 	expt = 0.100000001
 	state = 0
 	PreFailState = 0
@@ -14656,12 +14660,12 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True
-	Gear = False
-	Light = True
+	Stage = True, 1507036482.72092
+	Gear = True
+	Light = True, 1507036807.71915
 	RCS = False, 0
-	SAS = True
-	Brakes = False, 0
+	SAS = False, 1507039927.41586
+	Brakes = False
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -14687,13 +14691,13 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.2238572
-	yaw = 0.0064226966
-	roll = -0.003388185
+	pitch = 0
+	yaw = 0
+	roll = 0
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
@@ -14722,9 +14726,9 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 1507036472.9809263
+		lastUpdate = 1507040067.3107338
 		selectedPad = 0
-		Productivity = 0.29807512995653712
+		Productivity = 0.13618641634690504
 	}
 	AtmoFxModule
 	{
