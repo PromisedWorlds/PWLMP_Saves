@@ -7,7 +7,7 @@ dumb = 0.800000012
 badS = False
 veteran = True
 tour = False
-state = Available
+state = Assigned
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -90,10 +90,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294190068
+				cid = 4294237142
 				uid = 0
 				mid = 0
-				persistentId = 315171769
+				persistentId = 1869289723
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -219,14 +219,21 @@ INVENTORY
 				}
 				MODULE
 				{
-					name = ShipEffectsCollisions
+					name = ModuleKaboom
 					isEnabled = True
+					delay = 0
+					isGlued = False
 					stagingEnabled = True
 					EVENTS
 					{
 					}
 					ACTIONS
 					{
+						KaboomAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
 					}
 					UPGRADESAPPLIED
 					{
