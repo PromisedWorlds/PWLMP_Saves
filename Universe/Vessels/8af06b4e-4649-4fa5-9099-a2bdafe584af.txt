@@ -1,34 +1,34 @@
-pid = 58585369b0544d8f923c195f14f1e28e
-persistentId = 2357645855
-name = Vall refinery 1 Debris
-type = Debris
+pid = 8af06b4e46494fa59099a2bdafe584af
+persistentId = 2037199633
+name = Personal Parachute
+type = DroppedPart
 sit = LANDED
 landed = True
-skipGroundPositioning = False
-skipGroundPositioningForDroppedPart = False
+skipGroundPositioning = True
+skipGroundPositioningForDroppedPart = True
 vesselSpawning = True
-launchedFrom = LaunchPad
+launchedFrom = 
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2940875151.8836517
-lct = 1506897436.477537
-lastUT = 4447772588.441191
-distanceTraveled = 1.9517293561879585
+met = 105.9006929397583
+lct = 4447772487.700616
+lastUT = 4447772593.66131
+distanceTraveled = 0
 root = 0
-lat = -12.869277665500732
-lon = -66.98669531177003
-alt = 1344.381067623035
-hgt = 0.53820425
-nrm = 0.25606098771095276,1.9818544387817383E-05,0.9666604995727539
-rot = -0.2755107,-0.9001853,0.10086831,-0.32184774
+lat = -12.863286443169248
+lon = -67.002289717984979
+alt = 1341.2865071770502
+hgt = 1341.2865
+nrm = 0,1,0
+rot = -0.766172171,-0.124282427,-0.155862406,0.610934675
 CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 9
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,52 +40,52 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 150705.40065427145
-	ECC = 0.9995592709973796
-	INC = 12.86927766550073
+	SMA = 150672.350191754
+	ECC = 0.99999999999999989
+	INC = 102.86378212325695
 	LPE = 90
-	LAN = 61.77280888073875
-	MNA = 3.141592653589777
-	EPH = 1506898274.599457
+	LAN = 249.90428953661828
+	MNA = 3.1415926207170166
+	EPH = 4447772487.7006159
 	REF = 10
 	IDENT = Squad/Vall
 }
 PART
 {
-	name = lithium-radial-125-1
-	cid = 4287018328
-	uid = 168150523
-	mid = 640547378
-	persistentId = 68449157
-	launchID = 1
+	name = evaChute
+	cid = 0
+	uid = 3397538660
+	mid = 3397538660
+	persistentId = 3585869914
+	launchID = 0
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
-	sepI = -1
-	sidx = -1
-	attm = 1
+	sqor = 0
+	sepI = 0
+	sidx = 0
+	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER16
-	mass = 0.156639993
+	srfN = , -1
+	mass = 0.00400000019
 	shielded = False
-	temp = 499.12976338365183
-	tempExt = 496.9962649374188
-	tempExtUnexp = 4
+	temp = 0
+	tempExt = 0
+	tempExtUnexp = 0
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
-	attached = False
-	autostrutMode = Heaviest
+	attached = True
+	autostrutMode = Off
 	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = lithium-radial-125-1
+	flag = 
+	rTrf = evaChute (Personal Parachute)
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -133,11 +133,13 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -148,9 +150,9 @@ PART
 	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = 150
+		packedVolume = 10
 		beingAttached = False
-		beingSettled = False
+		beingSettled = True
 		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
@@ -194,34 +196,23 @@ PART
 		{
 		}
 	}
-	RESOURCE
-	{
-		name = Lithium
-		amount = 880
-		maxAmount = 880
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
 }
 ACTIONGROUPS
 {
-	Stage = False, 1506822186.73917
-	Gear = True, 1506884647.37742
-	Light = True, 1467848846.47642
-	RCS = True, 1506894522.60982
-	SAS = True, 1506884606.89746
+	Stage = False, 0
+	Gear = False, 0
+	Light = False, 0
+	RCS = False, 0
+	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = True, 1506884899.57718
-	Custom02 = True, 1506897412.67091
+	Custom01 = False, 0
+	Custom02 = False, 0
 	Custom03 = False, 0
-	Custom04 = True, 1506884942.53714
-	Custom05 = False, 1506894459.40988
-	Custom06 = False, 1506894456.90988
-	Custom07 = True, 1506897411.37091
+	Custom04 = False, 0
+	Custom05 = False, 0
+	Custom06 = False, 0
+	Custom07 = False, 0
 	Custom08 = False, 0
 	Custom09 = False, 0
 	Custom10 = False, 0
@@ -258,17 +249,16 @@ VESSELMODULES
 	SuspensionLoadBalancer
 	{
 	}
+	CommNetVessel
+	{
+		controlState = None
+		canComm = True
+	}
 	VesselDataManager
 	{
 	}
 	ModuleDynamicBatteryStorage
 	{
-	}
-	ELVesselWorkNet
-	{
-		lastUpdate = 1506897440.2596345
-		selectedPad = 0
-		Productivity = 0
 	}
 	AtmoFxModule
 	{
