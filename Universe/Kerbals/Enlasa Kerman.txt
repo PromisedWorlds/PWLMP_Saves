@@ -7,7 +7,7 @@ dumb = 0.506088614
 badS = False
 veteran = False
 tour = False
-state = Available
+state = Assigned
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -68,16 +68,7 @@ EVACHUTE
 }
 INVENTORY
 {
-	name = ModuleInventoryPart
-	isEnabled = True
-	stagingEnabled = True
 	inventory = evaJetpack
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
 	STOREDPARTS
 	{
 		STOREDPART
@@ -90,10 +81,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294240306
+				cid = 4294237142
 				uid = 0
 				mid = 0
-				persistentId = 825665376
+				persistentId = 0
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -217,6 +208,28 @@ INVENTORY
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleKaboom
+					isEnabled = True
+					delay = 0
+					isGlued = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						KaboomAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = EVA Propellant
@@ -230,9 +243,6 @@ INVENTORY
 				}
 			}
 		}
-	}
-	UPGRADESAPPLIED
-	{
 	}
 }
 CAREER_LOG
