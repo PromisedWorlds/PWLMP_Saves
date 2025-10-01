@@ -1,7 +1,7 @@
-pid = 2b6cfc76f6c54dfb9389a7bc3a80a6d5
-persistentId = 3976763909
-name = got here first (its a good place for a base too) - Leo
-type = Flag
+pid = ffd6e68b31be414d907ab618bfb6784d
+persistentId = 377272803
+name = JS-1 Joint Socket
+type = DroppedPart
 sit = LANDED
 landed = True
 skipGroundPositioning = False
@@ -11,24 +11,24 @@ launchedFrom =
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2982984639.005127
-lct = 1464817122.7543738
+met = 28787.38849544525
+lct = 4447772974.371005
 lastUT = 4447801761.816501
 distanceTraveled = 0
 root = 0
-lat = -12.223776529378739
-lon = -67.45275171177002
-alt = 1181.414608430874
-hgt = 0.42660397
-nrm = -0.0196496844291687,0.998832106590271,0.04414060711860657
-rot = 0.56872684,0.55482554,-0.538067,-0.2814292
+lat = -12.222180820672957
+lon = -67.45346663945712
+alt = 1181.106077970937
+hgt = 0.050349172
+nrm = 0.0001614093780517578,1.0000001192092896,0.00018662214279174805
+rot = -0.7836895,-0.092292696,-0.11833884,0.60275114
 CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 9
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,24 +40,24 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 150624.0122586318
-	ECC = 0.9995577736389181
-	INC = 12.223776529378739
-	LPE = 90
-	LAN = 168.91729161067394
-	MNA = 3.141592653589777
+	SMA = 150623.8582588665
+	ECC = 0.9995577696619113
+	INC = 12.222180820672953
+	LPE = 89.99999995819442
+	LAN = 168.91657672576923
+	MNA = 3.1415926535732375
 	EPH = 4447801763.754506
 	REF = 10
 	IDENT = Squad/Vall
 }
 PART
 {
-	name = flag
-	cid = 4287638298
-	uid = 1607629014
-	mid = 370834
-	persistentId = 1679019265
-	launchID = 2
+	name = KAS.JS1
+	cid = 0
+	uid = 1957183042
+	mid = 1957183042
+	persistentId = 144095359
+	launchID = 0
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -66,17 +66,19 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
+	sqor = 0
 	sepI = 0
-	sidx = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
-	srfN = , -1
-	mass = 0.00999999978
+	srfN = srfAttach, -1
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.00800000038
 	shielded = False
-	temp = 4
-	tempExt = 4
-	tempExtUnexp = 4
+	temp = 179.66499860580603
+	tempExt = 0
+	tempExtUnexp = 0
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -85,11 +87,11 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	rTrf = KAS.JS1 (JS-1 Joint Socket)
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
+	moduleCargoStackableQuantity = 5
 	EVENTS
 	{
 	}
@@ -113,25 +115,21 @@ PART
 		AutostrutOff
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutRoot
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutHeaviest
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutGrandparent
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesEnableFlow
@@ -152,12 +150,12 @@ PART
 	}
 	MODULE
 	{
-		name = FlagSite
+		name = KASLinkTargetBase
 		isEnabled = True
-		placedBy = Shepton Kerman
-		PlaqueText = 
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
 		stagingEnabled = True
-		state = Placed
 		EVENTS
 		{
 		}
@@ -170,10 +168,63 @@ PART
 	}
 	MODULE
 	{
-		name = FlagDecal
+		name = KASLinkTargetBase
 		isEnabled = True
-		flagDisplayed = True
-		isMirrored = False
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASLinkTargetBase
+		isEnabled = True
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 6
+		beingAttached = False
+		beingSettled = True
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -188,23 +239,8 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAVariants
 		isEnabled = True
+		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -260,4 +296,56 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	CommNetVessel
+	{
+		controlState = None
+		canComm = True
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	kOSVesselModule
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }

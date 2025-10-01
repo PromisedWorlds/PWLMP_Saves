@@ -1,27 +1,27 @@
-pid = c1c6fa2f68ab490fb0dae28c29436967
-persistentId = 1025149832
-name = Marzor Kerman
+pid = 247d10a1643648669f54ff29ba8d0a8b
+persistentId = 1836951488
+name = Kergard Kerman
 type = EVA
 sit = SUB_ORBITAL
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = False
+vesselSpawning = True
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2940875152.4518814
-lct = 1506897580.9984467
-lastUT = 4447772733.488328
-distanceTraveled = 9691.032957081252
+met = 6.9920196533203125
+lct = 4447801756.306485
+lastUT = 4447801763.355505
+distanceTraveled = 177.82643182807615
 root = 0
-lat = -12.863286336448258
-lon = -67.002455474560449
-alt = 1340.3125440317672
-hgt = 0.256500691
-nrm = 0.0545919538,0.998304725,-0.020193696
-rot = -0.0753800571,0.547510922,-0.778429866,0.297652245
+lat = -12.221963888032167
+lon = -67.4541377100949
+alt = 1181.0529361405643
+hgt = 0.24997212
+nrm = -0.14072614908218384,0.9737979173660278,-0.17864465713500977
+rot = 0.71110564,0.30647385,-0.09734587,-0.62524116
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -34,29 +34,29 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = ASL
-cPch = 0.2800001
-cHdg = 2.554
-cMod = 0
+altDispState = DEFAULT
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 150703.36618542564
-	ECC = 0.99955926779540016
-	INC = 12.863286336448255
-	LPE = 90.000000000242636
-	LAN = 61.761329490691026
-	MNA = 3.1415926535895373
-	EPH = 1506898275.8394558
+	SMA = 150622.55768917323
+	ECC = 0.9995747084664195
+	INC = 12.54225673806252
+	LPE = 102.8752957334514
+	LAN = 155.7365101234584
+	MNA = 3.1420503203950645
+	EPH = 4447801763.754506
 	REF = 10
 	IDENT = Squad/Vall
 }
 PART
 {
 	name = kerbalEVA
-	cid = 4291346508
-	uid = 1205230518
-	mid = 640547378
-	persistentId = 3099585241
+	cid = 4291277672
+	uid = 3801228245
+	mid = 611149625
+	persistentId = 364803245
 	launchID = 1
 	parent = 0
 	position = 0,0,0
@@ -66,16 +66,16 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = 0
-	sepI = -1
-	sidx = 0
+	sqor = -1
+	sepI = 0
+	sidx = -1
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	mass = 0.0750256926
+	mass = 0.0939999968
 	shielded = False
-	temp = 276.81452157120623
-	tempExt = 276.27475827667121
+	temp = 302.99987515744414
+	tempExt = 302.83562239136791
 	tempExtUnexp = 303
 	staticPressureAtm = 0
 	expt = 0
@@ -86,12 +86,12 @@ PART
 	rigidAttachment = False
 	flag = Squad/Flags/default
 	rTrf = referenceTransform
-	modCost = 25
-	modMass = 0.0300256945
+	modCost = 35
+	modMass = 0.0489999987
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	partRendererBoundsIgnore = kbEVA_flagDecals,canopy,base,flag,collider,helmet,visor,flare1,flare2,EVAStorage_flagDecals,EVAStorageSlim_flagDecals,chute_standalone_flag,chute_container_flag
-	crew = Marzor Kerman
+	crew = Kergard Kerman
 	EVENTS
 	{
 	}
@@ -157,16 +157,16 @@ PART
 		name = KerbalEVA
 		isEnabled = True
 		JetpackDeployed = True
-		lampOn = True
+		lampOn = False
 		isHelmetEnabled = True
-		isNeckRingEnabled = True
+		isNeckRingEnabled = False
 		isVisorEnabled = False
 		thrustPercentage = 100
 		lastBoundStep = 1.20833337
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
-		state = Idle (Grounded)
+		state = Ladder (Acquire)
 		EVENTS
 		{
 		}
@@ -222,9 +222,9 @@ PART
 		}
 		vInfo
 		{
-			vesselName = Marzor Kerman
+			vesselName = Kergard Kerman
 			vesselType = EVA
-			rootUId = 1205230518
+			rootUId = 3801228245
 		}
 		UPGRADESAPPLIED
 		{
@@ -405,8 +405,6 @@ PART
 		Log
 		{
 			flight = 0
-			0 = Land,Vall
-			0 = Suborbit,Vall
 		}
 		UPGRADESAPPLIED
 		{
@@ -540,7 +538,7 @@ PART
 		name = ModuleInventoryPart
 		isEnabled = True
 		stagingEnabled = True
-		inventory = evaJetpack
+		inventory = evaChute,evaJetpack
 		EVENTS
 		{
 		}
@@ -551,6 +549,161 @@ PART
 		{
 			STOREDPART
 			{
+				slotIndex = 0
+				partName = evaChute
+				quantity = 1
+				stackCapacity = 1
+				variantName = 
+				PART
+				{
+					name = evaChute
+					cid = 4294314068
+					uid = 0
+					mid = 0
+					persistentId = 1841640613
+					launchID = 0
+					parent = 0
+					position = 0,0,0
+					rotation = 0,0,0,0
+					mirror = 1,1,1
+					symMethod = Radial
+					istg = 0
+					resPri = 0
+					dstg = 0
+					sqor = -1
+					sepI = 0
+					sidx = -1
+					attm = 0
+					sameVesselCollision = False
+					srfN = None, -1
+					mass = 0.00400000019
+					shielded = False
+					temp = -1
+					tempExt = 0
+					tempExtUnexp = 0
+					staticPressureAtm = 0
+					expt = 0.5
+					state = 0
+					PreFailState = 0
+					attached = True
+					autostrutMode = Off
+					rigidAttachment = False
+					flag = 
+					rTrf = evaChute
+					modCost = 0
+					modMass = 0
+					moduleVariantName = 
+					moduleCargoStackableQuantity = 1
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleSameVesselInteraction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						SetSameVesselInteraction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						RemoveSameVesselInteraction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						AutostrutOff
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						AutostrutRoot
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						AutostrutHeaviest
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						AutostrutGrandparent
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						ResourcesEnableFlow
+						{
+							actionGroup = None
+							active = False
+							wasActiveBeforePartWasAdjusted = False
+						}
+						ResourcesDisableFlow
+						{
+							actionGroup = None
+							active = False
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					PARTDATA
+					{
+					}
+					MODULE
+					{
+						name = ModuleCargoPart
+						isEnabled = True
+						packedVolume = 10
+						beingAttached = False
+						beingSettled = False
+						reinitResourcesOnStoreInVessel = False
+						stagingEnabled = True
+						EVENTS
+						{
+						}
+						ACTIONS
+						{
+						}
+						UPGRADESAPPLIED
+						{
+						}
+					}
+					MODULE
+					{
+						name = WBIPrinterRequirements
+						isEnabled = True
+						stagingEnabled = True
+						EVENTS
+						{
+						}
+						ACTIONS
+						{
+						}
+						UPGRADESAPPLIED
+						{
+						}
+					}
+					MODULE
+					{
+						name = KOSNameTag
+						isEnabled = True
+						nameTag = 
+						stagingEnabled = True
+						EVENTS
+						{
+						}
+						ACTIONS
+						{
+						}
+						UPGRADESAPPLIED
+						{
+						}
+					}
+				}
+			}
+			STOREDPART
+			{
 				slotIndex = 1
 				partName = evaJetpack
 				quantity = 1
@@ -559,10 +712,10 @@ PART
 				PART
 				{
 					name = evaJetpack
-					cid = 4294249916
+					cid = 4294314138
 					uid = 0
 					mid = 0
-					persistentId = 200178084
+					persistentId = 2542633131
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -705,7 +858,7 @@ PART
 					RESOURCE
 					{
 						name = EVA Propellant
-						amount = 2.005139038451857
+						amount = 5
 						maxAmount = 5
 						flowState = True
 						isTweakable = False
@@ -789,7 +942,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = True
+		isEnabled = False
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -893,11 +1046,6 @@ DISCOVERY
 }
 FLIGHTPLAN
 {
-}
-TARGET
-{
-	type = Vessel
-	vesselID = 6318273c-9375-4235-b395-66ddc9253162
 }
 CTRLSTATE
 {

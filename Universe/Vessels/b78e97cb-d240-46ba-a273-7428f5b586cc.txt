@@ -1,34 +1,34 @@
-pid = 2b6cfc76f6c54dfb9389a7bc3a80a6d5
-persistentId = 3976763909
-name = got here first (its a good place for a base too) - Leo
-type = Flag
+pid = b78e97cbd24046baa2737428f5b586cc
+persistentId = 258729362
+name = GP-20 Pylon
+type = DroppedPart
 sit = LANDED
 landed = True
-skipGroundPositioning = False
-skipGroundPositioningForDroppedPart = False
+skipGroundPositioning = True
+skipGroundPositioningForDroppedPart = True
 vesselSpawning = True
 launchedFrom = 
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2982984639.005127
-lct = 1464817122.7543738
+met = 28577.98890686035
+lct = 4447773183.770594
 lastUT = 4447801761.816501
 distanceTraveled = 0
 root = 0
-lat = -12.223776529378739
-lon = -67.45275171177002
-alt = 1181.414608430874
-hgt = 0.42660397
-nrm = -0.0196496844291687,0.998832106590271,0.04414060711860657
-rot = 0.56872684,0.55482554,-0.538067,-0.2814292
+lat = -12.22203180460148
+lon = -67.4545090483531
+alt = 1180.7759631544468
+hgt = 0.15907927
+nrm = 5.7816505432128906E-05,1.0000001192092896,2.7298927307128906E-05
+rot = -0.7825038,-0.086742274,-0.12563248,0.6036392
 CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 9
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,24 +40,24 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 150624.0122586318
-	ECC = 0.9995577736389181
-	INC = 12.223776529378739
-	LPE = 90
-	LAN = 168.91729161067394
-	MNA = 3.141592653589777
+	SMA = 150623.69309295597
+	ECC = 0.9995577706176922
+	INC = 12.222031804601475
+	LPE = 89.99999999734005
+	LAN = 168.9155342768113
+	MNA = 3.141592653592556
 	EPH = 4447801763.754506
 	REF = 10
 	IDENT = Squad/Vall
 }
 PART
 {
-	name = flag
-	cid = 4287638298
-	uid = 1607629014
-	mid = 370834
-	persistentId = 1679019265
-	launchID = 2
+	name = KAS.PortPylon
+	cid = 0
+	uid = 3910565622
+	mid = 3910565622
+	persistentId = 2954997741
+	launchID = 0
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -66,17 +66,24 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
+	sqor = 0
 	sepI = 0
-	sidx = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
-	srfN = , -1
-	mass = 0.00999999978
+	srfN = srfAttach, -1
+	attN = top, -1
+	attN = bottom, -1
+	attN = forwardUp, -1
+	attN = backwardUp, -1
+	attN = leftUp, -1
+	attN = rightUp, -1
+	attN = forward, -1
+	mass = 0.0199999996
 	shielded = False
-	temp = 4
-	tempExt = 4
-	tempExtUnexp = 4
+	temp = 105.34722800487224
+	tempExt = 0
+	tempExtUnexp = 0
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -84,8 +91,8 @@ PART
 	attached = True
 	autostrutMode = Off
 	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	flag = 
+	rTrf = KAS.PortPylon (GP-20 Pylon)
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -113,25 +120,21 @@ PART
 		AutostrutOff
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutRoot
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutHeaviest
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutGrandparent
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesEnableFlow
@@ -152,12 +155,12 @@ PART
 	}
 	MODULE
 	{
-		name = FlagSite
+		name = KASLinkTargetBase
 		isEnabled = True
-		placedBy = Shepton Kerman
-		PlaqueText = 
+		persistedLinkState = Available
+		persistedLinkPartId = 0
+		persistedLinkNodeName = 
 		stagingEnabled = True
-		state = Placed
 		EVENTS
 		{
 		}
@@ -170,10 +173,27 @@ PART
 	}
 	MODULE
 	{
-		name = FlagDecal
+		name = ModuleCargoPart
 		isEnabled = True
-		flagDisplayed = True
-		isMirrored = False
+		packedVolume = 325
+		beingAttached = False
+		beingSettled = True
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -188,23 +208,8 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAVariants
 		isEnabled = True
+		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -260,4 +265,56 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	CommNetVessel
+	{
+		controlState = None
+		canComm = True
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	kOSVesselModule
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }

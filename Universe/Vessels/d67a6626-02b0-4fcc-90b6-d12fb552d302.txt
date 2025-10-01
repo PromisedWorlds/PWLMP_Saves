@@ -1,34 +1,34 @@
-pid = 2b6cfc76f6c54dfb9389a7bc3a80a6d5
-persistentId = 3976763909
-name = got here first (its a good place for a base too) - Leo
-type = Flag
+pid = d67a662602b04fcc90b6d12fb552d302
+persistentId = 1707791465
+name = Aerodynamic Nose Cone
+type = DroppedPart
 sit = LANDED
 landed = True
-skipGroundPositioning = False
-skipGroundPositioningForDroppedPart = False
+skipGroundPositioning = True
+skipGroundPositioningForDroppedPart = True
 vesselSpawning = True
 launchedFrom = 
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2982984639.005127
-lct = 1464817122.7543738
+met = 42.959120750427246
+lct = 4447801718.80038
 lastUT = 4447801761.816501
 distanceTraveled = 0
 root = 0
-lat = -12.223776529378739
-lon = -67.45275171177002
-alt = 1181.414608430874
-hgt = 0.42660397
-nrm = -0.0196496844291687,0.998832106590271,0.04414060711860657
-rot = 0.56872684,0.55482554,-0.538067,-0.2814292
+lat = -12.224569188031548
+lon = -67.45386187935536
+alt = 1180.2883322809357
+hgt = 0.0004093449
+nrm = 1.4707446098327637E-05,1.0000001192092896,3.6954879760742188E-06
+rot = 0.4517109,-0.37504435,0.65117824,-0.4809013
 CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 9
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,24 +40,24 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 150624.0122586318
-	ECC = 0.9995577736389181
-	INC = 12.223776529378739
+	SMA = 150623.44842261166
+	ECC = 0.999557781250928
+	INC = 12.224569188031545
 	LPE = 90
-	LAN = 168.91729161067394
-	MNA = 3.141592653589777
+	LAN = 168.9161814430886
+	MNA = 3.141592653589809
 	EPH = 4447801763.754506
 	REF = 10
 	IDENT = Squad/Vall
 }
 PART
 {
-	name = flag
-	cid = 4287638298
-	uid = 1607629014
-	mid = 370834
-	persistentId = 1679019265
-	launchID = 2
+	name = noseCone
+	cid = 0
+	uid = 3998141121
+	mid = 3998141121
+	persistentId = 3268149789
+	launchID = 0
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -66,17 +66,18 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
+	sqor = 0
 	sepI = 0
-	sidx = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	mass = 0.00999999978
+	attN = bottom01, -1
+	mass = 0.0299999993
 	shielded = False
-	temp = 4
-	tempExt = 4
-	tempExtUnexp = 4
+	temp = 514.90163597296521
+	tempExt = 0
+	tempExtUnexp = 0
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
@@ -85,10 +86,10 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	rTrf = noseCone (Aerodynamic Nose Cone)
 	modCost = 0
 	modMass = 0
-	moduleVariantName = 
+	moduleVariantName = Dark
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -113,25 +114,21 @@ PART
 		AutostrutOff
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutRoot
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutHeaviest
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutGrandparent
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesEnableFlow
@@ -152,12 +149,13 @@ PART
 	}
 	MODULE
 	{
-		name = FlagSite
+		name = ModuleCargoPart
 		isEnabled = True
-		placedBy = Shepton Kerman
-		PlaqueText = 
+		packedVolume = 1050
+		beingAttached = False
+		beingSettled = True
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
-		state = Placed
 		EVENTS
 		{
 		}
@@ -170,11 +168,26 @@ PART
 	}
 	MODULE
 	{
-		name = FlagDecal
+		name = WBIPrinterRequirements
 		isEnabled = True
-		flagDisplayed = True
-		isMirrored = False
 		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Dark
 		EVENTS
 		{
 		}
@@ -203,7 +216,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIModuleEVAVariants
+		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -260,4 +273,56 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	CommNetVessel
+	{
+		controlState = None
+		canComm = True
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	kOSVesselModule
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }
