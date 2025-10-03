@@ -11,18 +11,18 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 33919262.576909065
+met = 33919509.542561531
 lct = 4748809306.1814165
-lastUT = 4782728568.778326
-distanceTraveled = 50815474.549313255
+lastUT = 4782728815.7439785
+distanceTraveled = 52746090.906309597
 root = 0
-lat = -11.201155054032297
-lon = -14.373739000702138
-alt = 602873.6508310623
-hgt = 602873.6
-nrm = -0.2832053601741791,0.5482088327407837,-0.7869318723678589
-rot = 0.29612574,0.6722223,0.24630156,-0.63226765
-CoM = 0.000313639641,-7.52308083,-2.0980835E-05
+lat = -25.114707443354497
+lon = -16.804127095250465
+alt = 602855.44078502338
+hgt = 602855.438
+nrm = -0.28233856,0.333669275,-0.899416327
+rot = 0.301326334,0.658544362,0.239911348,-0.64650166
+CoM = -1.07288361E-06,-7.18397427,4.76837158E-07
 stg = 0
 prst = False
 ref = 563390953
@@ -35,20 +35,20 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.001070661
-cHdg = -2.375447
+cPch = -0.6107963
+cHdg = 11.59532
 cMod = 0
 ORBIT
 {
-	SMA = 6602708.521170954
-	ECC = 2.5544806124479392E-05
-	INC = 89.92291962144668
-	LPE = 354.0815608335639
-	LAN = 11.316972125952077
-	MNA = 3.4404020561325948
-	EPH = 4782728570.598368
+	SMA = 6602708.5229839906
+	ECC = 2.5544561178410935E-05
+	INC = 89.922919622801629
+	LPE = 354.08131287723103
+	LAN = 11.316972126525229
+	MNA = 3.6832553451325643
+	EPH = 4782728815.723978
 	REF = 8
-	IDENT = Squad/Kerbin
+	IDENT = Squad/Jool
 }
 PART
 {
@@ -76,8 +76,8 @@ PART
 	attN = top, 1
 	mass = 0.5
 	shielded = False
-	temp = 228.50380409714603
-	tempExt = 228.24353159720158
+	temp = 125.26207480193199
+	tempExt = 125.25337729392788
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -653,7 +653,7 @@ PART
 			MechJebModuleSmartASS
 			{
 				mode = ORBITAL
-				target = OFF
+				target = NODE
 				advReference = INERTIAL
 				advDirection = FORWARD
 				forceRol = False
@@ -993,10 +993,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 4748809306.1814165
-				deltaVExpended = 3827.4536890324266
-				dragLosses = 282.24966574469528
-				gravityLosses = 452.2893793934889
-				steeringLosses = 343.91470487209745
+				deltaVExpended = 19620.770537983593
+				dragLosses = 270.70754967291469
+				gravityLosses = -26.790358056816942
+				steeringLosses = 19226.9686953454
 				markLAN = 198.60722773334882
 				markLatitude = -0.097207259728207179
 				markLongitude = -74.55768880398189
@@ -1034,7 +1034,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -1094,6 +1094,28 @@ PART
 			0 = Flight,Kerbin
 			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
+			0 = Escape,Kerbin
+			0 = Flyby,Sun
+			0 = Orbit,Sun
+			0 = Flyby,Jool
+			0 = Escape,Jool
+			0 = Flyby,Tylo
+			0 = Escape,Tylo
+			0 = Orbit,Jool
+			0 = Flyby,Laythe
+			0 = Escape,Laythe
+			0 = Orbit,Laythe
+			0 = Suborbit,Laythe
+			0 = Orbit,Tylo
+			0 = Suborbit,Tylo
+			0 = Flyby,Pol
+			0 = Escape,Pol
+			0 = Orbit,Pol
+			0 = Suborbit,Pol
+			0 = Land,Pol
+			0 = Flyby,Bop
+			0 = Escape,Bop
+			0 = Orbit,Bop
 		}
 		UPGRADESAPPLIED
 		{
@@ -1102,7 +1124,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 29.99992632306779
+		amount = 29.99992561340332
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -1137,8 +1159,8 @@ PART
 	attN = bottom, 2
 	mass = 0.0799999982
 	shielded = False
-	temp = 230.04296625644977
-	tempExt = 229.85819998576616
+	temp = 125.264528746446
+	tempExt = 125.26255534916919
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1317,8 +1339,8 @@ PART
 	attN = bottom, 1
 	mass = 0.649999976
 	shielded = False
-	temp = 231.37503970201368
-	tempExt = 230.9730644783065
+	temp = 125.26678022850888
+	tempExt = 125.27363477929889
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1511,6 +1533,28 @@ PART
 			0 = Flight,Kerbin
 			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
+			0 = Escape,Kerbin
+			0 = Flyby,Sun
+			0 = Orbit,Sun
+			0 = Flyby,Jool
+			0 = Escape,Jool
+			0 = Flyby,Tylo
+			0 = Escape,Tylo
+			0 = Orbit,Jool
+			0 = Flyby,Laythe
+			0 = Escape,Laythe
+			0 = Orbit,Laythe
+			0 = Suborbit,Laythe
+			0 = Orbit,Tylo
+			0 = Suborbit,Tylo
+			0 = Flyby,Pol
+			0 = Escape,Pol
+			0 = Orbit,Pol
+			0 = Suborbit,Pol
+			0 = Land,Pol
+			0 = Flyby,Bop
+			0 = Escape,Bop
+			0 = Orbit,Bop
 		}
 		UPGRADESAPPLIED
 		{
@@ -1570,8 +1614,8 @@ PART
 	attN = bottom, 5
 	mass = 0.174999997
 	shielded = False
-	temp = 226.48282130335659
-	tempExt = 227.29457697497168
+	temp = 125.25956999115633
+	tempExt = 125.26724360334144
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2042,8 +2086,8 @@ PART
 	attN = bottom, 3
 	mass = 0.200000003
 	shielded = False
-	temp = 227.89016391541486
-	tempExt = 227.60165766928574
+	temp = 125.26147165631636
+	tempExt = 125.26958287165091
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2332,8 +2376,8 @@ PART
 	attN = bottom, 6
 	mass = 5
 	shielded = False
-	temp = 160.00738092113724
-	tempExt = 212.73254389727273
+	temp = 125.17250353703412
+	tempExt = 125.26122204741951
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2435,11 +2479,11 @@ PART
 		CurrentThrottle = 100
 		CurrentElectricalGeneration = 2000
 		MaxElectricalGeneration = 2000
-		InternalCoreTemperature = 849.9939
+		InternalCoreTemperature = 849.993896
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 900
 		FirstLoad = False
-		LastUpdateTime = 4782728570.758371
+		LastUpdateTime = 4782728815.7439785
 		CoreIntegrity = 100
 		stagingEnabled = True
 		EVENTS
@@ -2560,7 +2604,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.9975441022596
+		amount = 999.99754412402763
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -2571,7 +2615,7 @@ PART
 	RESOURCE
 	{
 		name = EnrichedUranium
-		amount = 279.98502256504094
+		amount = 279.98472005408019
 		maxAmount = 280
 		flowState = True
 		isTweakable = True
@@ -2582,7 +2626,7 @@ PART
 	RESOURCE
 	{
 		name = DepletedFuel
-		amount = 0.014977436466511224
+		amount = 0.015279947646010579
 		maxAmount = 280
 		flowState = True
 		isTweakable = False
@@ -2617,8 +2661,8 @@ PART
 	attN = bottom, 7
 	mass = 0.200000003
 	shielded = False
-	temp = 191.88135222543278
-	tempExt = 199.78731739285269
+	temp = 125.19297503864614
+	tempExt = 125.18297157091654
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2699,7 +2743,7 @@ PART
 		ModuleID = lightColor
 		FirstLoad = False
 		lastUpdateTime = 0
-		dischargeActual = 3200
+		dischargeActual = 2067.9502
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2812,8 +2856,8 @@ PART
 	attN = bottom, 8
 	mass = 0.600000024
 	shielded = False
-	temp = 247.04024443569702
-	tempExt = 246.64523632635888
+	temp = 125.21111058453043
+	tempExt = 125.1950385716974
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2901,7 +2945,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 11999.970529227114
+		amount = 11999.970529488332
 		maxAmount = 12000
 		flowState = True
 		isTweakable = True
@@ -2936,8 +2980,8 @@ PART
 	attN = bottom, 9
 	mass = 1.52234662
 	shielded = False
-	temp = 247.04261672425753
-	tempExt = 246.69052543993152
+	temp = 125.21239377445337
+	tempExt = 125.20073410014805
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3009,7 +3053,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -3025,7 +3069,7 @@ PART
 	RESOURCE
 	{
 		name = ArgonGas
-		amount = 288573.7129707765
+		amount = 288573.71297077648
 		maxAmount = 2560000
 		flowState = True
 		isTweakable = True
@@ -3060,8 +3104,8 @@ PART
 	attN = bottom, 10
 	mass = 0.200000003
 	shielded = False
-	temp = 247.04772056904051
-	tempExt = 246.64838474425713
+	temp = 125.21585786602252
+	tempExt = 125.20560680431797
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3248,8 +3292,8 @@ PART
 	attN = bottom, 11
 	mass = 0.200000003
 	shielded = False
-	temp = 247.24057241231998
-	tempExt = 246.81391404840417
+	temp = 125.22000714185381
+	tempExt = 125.22533783135361
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3436,8 +3480,8 @@ PART
 	attN = bottom, -1
 	mass = 2.79999995
 	shielded = False
-	temp = 249.03458091657703
-	tempExt = 247.1866438852019
+	temp = 125.22407225153739
+	tempExt = 125.2449113773019
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3556,7 +3600,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		includeinDVCalcs = False
@@ -3819,7 +3863,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3835,7 +3879,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3851,7 +3895,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3873,7 +3917,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3947,7 +3991,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3985,7 +4029,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4110,8 +4154,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 247.38002418940883
-	tempExt = 246.88405661933706
+	temp = 125.18668547484985
+	tempExt = 125.17557630824571
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4297,8 +4341,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 247.38558380865479
-	tempExt = 246.88957204474207
+	temp = 125.1866854748492
+	tempExt = 125.17557630824552
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4484,8 +4528,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 247.37945237079811
-	tempExt = 246.88348934599077
+	temp = 125.18726268898907
+	tempExt = 125.1757808965713
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4671,8 +4715,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 247.37762679227842
-	tempExt = 246.88167827839993
+	temp = 125.18668874138173
+	tempExt = 125.17557746603852
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4854,8 +4898,8 @@ PART
 	srfN = srfAttach, 6,COLLIDER
 	mass = 1.44400001
 	shielded = False
-	temp = 382.76664654960808
-	tempExt = 381.44655984936139
+	temp = 125.53642286548713
+	tempExt = 125.55118937443464
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4930,7 +4974,7 @@ PART
 	{
 		name = ModuleDeployableRadiator
 		isEnabled = True
-		currentRotation = (-0.70712316, -1.00284806E-05, 1.23344344E-05, 0.707090437)
+		currentRotation = (-0.706575096, -4.37647068E-05, 0.00013288109, 0.707638085)
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
 		deployState = EXTENDED
@@ -5075,8 +5119,8 @@ PART
 	srfN = srfAttach, 6,COLLIDER
 	mass = 1.44400001
 	shielded = False
-	temp = 383.01131835883297
-	tempExt = 381.70062814670683
+	temp = 125.60955520930052
+	tempExt = 125.63037624703966
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5151,7 +5195,7 @@ PART
 	{
 		name = ModuleDeployableRadiator
 		isEnabled = True
-		currentRotation = (-0.707084298, -1.22673791E-05, 2.14576703E-05, 0.7071293)
+		currentRotation = (-0.706788957, -0.000103771672, 7.53551649E-05, 0.707424462)
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
 		deployState = EXTENDED
@@ -5221,7 +5265,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -5273,11 +5317,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False
+	Stage = False, 4756803270.15817
 	Gear = False, 0
 	Light = False, 0
-	RCS = False
-	SAS = True
+	RCS = False, 4779085063.29144
+	SAS = True, 4782712912.02007
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = True, 4748809429.58346
@@ -5302,16 +5346,11 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
-TARGET
-{
-	type = CelestialBody
-	tgtId = Jool
-}
 CTRLSTATE
 {
-	pitch = -1.1912331E-05
-	yaw = -5.9148056E-06
-	roll = -8.8974133E-07
+	pitch = -1.73383773E-06
+	yaw = 3.02936172E-07
+	roll = 6.56358168E-07
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -5341,7 +5380,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 4756803270.7181816
+		lastUpdate = 4782728815.7439785
 		selectedPad = 0
 		Productivity = 0
 	}
