@@ -1,96 +1,96 @@
-pid = 00c2d5312bf04d8ab7d90a88affa5b98
-persistentId = 147862681
-name = NSW mass driver 1 9% C Probe
-type = Probe
-sit = ESCAPING
+pid = 5ef9d0b4a6c24d3e920a5bcbb1ab9905
+persistentId = 3185234733
+name = NSW mass driver 1 Debris
+type = Debris
+sit = SUB_ORBITAL
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = False
+vesselSpawning = True
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 177.87617111206055
-lct = 4782803229.5350733
-lastUT = 4782803407.4312449
-distanceTraveled = 4859094401.5790911
+met = 6.5156221389770508
+lct = 4782803681.7506104
+lastUT = 4782803688.2662325
+distanceTraveled = 758.8929186267153
 root = 0
-lat = -0.042259110091842321
-lon = -65.745410280696916
-alt = 10386613736.94426
-hgt = 1.03866132E+10
-nrm = 0.727203369,-0.685040653,-0.0435284525
-rot = -0.430377334,0.556107759,0.595165074,0.388970554
+lat = -0.17458587814390242
+lon = -68.674656473536601
+alt = 483798.83829410258
+hgt = 483798.844
+nrm = -0.993353665,-0.110566109,-0.0319972634
+rot = 0.367885053,-0.592716873,0.601975322,0.388552666
 CoM = 0,0,0
-stg = 0
+stg = 1
 prst = False
 ref = 0
-ctrl = True
+ctrl = False
 PQSMin = 2
-PQSMax = 10
+PQSMax = 9
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = ASL
-cPch = -0.1920003
-cHdg = -2.038
-cMod = 0
+altDispState = DEFAULT
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = -1707.9887537596894
-	ECC = 5390633.7779740347
-	INC = 179.85738114531244
-	LPE = 227.39150737078546
-	LAN = 240.99672067596688
-	MNA = -3131820.3924352415
-	EPH = 4782803407.4112444
-	REF = 0
-	IDENT = Squad/Sun
+	SMA = -181.06123419126558
+	ECC = 3769.1818000143248
+	INC = 179.03077654275418
+	LPE = 186.54726717444123
+	LAN = 181.62066411702963
+	MNA = 2643.110645405744
+	EPH = 4782803711.089468
+	REF = 2
+	IDENT = Squad/Mun
 }
 PART
 {
-	name = probeCoreCube
-	cid = 4290834268
-	uid = 221051808
-	mid = 2529456429
-	persistentId = 1670177018
-	launchID = 10
+	name = fft-nswr-2
+	cid = 4289471638
+	uid = 2908212054
+	mid = 932165834
+	persistentId = 9231536
+	launchID = 11
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = -1
+	istg = 1
 	resPri = 0
-	dstg = 2
-	sqor = -1
+	dstg = 0
+	sqor = 1
 	sepI = -1
-	sidx = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
-	srfN = , -1
-	attN = bottom, -1
+	srfN = srfAttach, -1
 	attN = top, -1
-	mass = 0.0700000003
+	attN = bottom, -1
+	mass = 28
 	shielded = False
-	temp = 299.50694718764396
-	tempExt = 299.65783660053086
-	tempExtUnexp = 311.75353786537931
+	temp = 311.14699708107941
+	tempExt = 307.82060959169019
+	tempExtUnexp = 4
 	staticPressureAtm = 0
-	expt = 0
-	state = 0
+	expt = 0.5
+	state = 1
 	PreFailState = 0
-	attached = True
-	autostrutMode = ForceGrandparent
+	attached = False
+	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = _default
+	rTrf = fft-nswr-2
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Bare
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -135,11 +135,13 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -148,62 +150,60 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCommand
+		name = ModuleEnginesFX
 		isEnabled = True
-		hibernation = True
-		hibernateOnWarp = False
-		activeControlPointName = _default
+		independentThrottle = True
+		independentThrottlePercentage = 527795.375
+		staged = True
+		flameout = False
+		EngineIgnited = True
+		engineShutdown = False
+		currentThrottle = 5277.95361
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			MakeReferenceToggle
+			OnAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			HibernateToggle
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
-		UPGRADESAPPLIED
+		AXISGROUPS
 		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSAS
-		isEnabled = True
-		standaloneToggle = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKerbNetAccess
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OpenKerbNetAction
+			independentThrottlePercentage
 			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
 			}
 		}
 		UPGRADESAPPLIED
@@ -212,20 +212,100 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDataTransmitter
+		name = ModuleEngineExhaustDamage
 		isEnabled = True
-		xmitIncomplete = False
 		stagingEnabled = True
-		canComm = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			StartTransmissionAction
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeat
+		isEnabled = True
+		totalSystemTemperature = 1600
+		totalSystemFlux = 263897680
+		currentLoopID = 0
+		currentLoopTemperature = 14.3571348
+		nominalLoopTemperature = 2.70000005
+		currentLoopFlux = -1723.43872
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSystemHeatEngine
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
 			{
 				actionGroup = None
-				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			LockAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			FreeAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -235,12 +315,9 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = FXModuleThrottleEffects
 		isEnabled = True
-		packedVolume = 140
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
+		state = 0.875
 		stagingEnabled = True
 		EVENTS
 		{
@@ -254,7 +331,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ModuleColorAnimator
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -269,9 +346,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModulePartVariants
+		name = ModuleColorAnimator
 		isEnabled = True
-		useVariantMass = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -285,7 +361,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTripLogger
+		name = ModuleTestSubject
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -293,12 +369,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		Log
-		{
-			flight = 0
-			0 = Orbit,Kerbin
-			0 = Flyby,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -306,7 +376,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIModuleEVAFlagSwitch
+		name = ModuleSurfaceFX
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -319,25 +389,29 @@ PART
 		{
 		}
 	}
-	RESOURCE
+	MODULE
 	{
-		name = ElectricCharge
-		amount = 1.4979971647262573
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
+		name = ModuleWaterfallFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
+	Stage = True, 4782803681.73061
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 4782803215.89476
+	RCS = False, 4782803672.71048
+	SAS = True, 4782803624.07126
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -383,11 +457,6 @@ VESSELMODULES
 	SuspensionLoadBalancer
 	{
 	}
-	CommNetVessel
-	{
-		controlState = ProbePartial
-		canComm = True
-	}
 	VesselDataManager
 	{
 	}
@@ -396,7 +465,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 4782803407.4312449
+		lastUpdate = 0
 		selectedPad = 0
 		Productivity = 0
 	}
