@@ -11,18 +11,18 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 4472298217.527111
+met = 4775807806.755326
 lct = 7681567.74489635
-lastUT = 4479979785.292007
+lastUT = 4783489374.520223
 distanceTraveled = 6012.743971443324
 root = 0
-lat = -6.845431511089865
-lon = -14.289870079096302
-alt = 0.639252749584557
-hgt = 0.64779866
-nrm = -0.0009938478469848633,-0.003842175006866455,-0.9999924302101135
-rot = -0.21725188,0.5760414,0.3649636,-0.6984122
-CoM = -0.0398753211,0.189475745,-0.362536848
+lat = -6.845428765752831
+lon = -14.289869726015349
+alt = 0.638403440163529
+hgt = 0.6477044
+nrm = 0.0013990700244903564,-0.006244093179702759,-0.9999796152114868
+rot = -0.21855107,0.57566065,0.36401492,-0.6988157
+CoM = -0.0398764461,0.189474404,-0.362537056
 stg = 0
 prst = False
 ref = 3789856113
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.4719999
-cHdg = -0.726
+cPch = 0.2
+cHdg = 0.3
 cMod = 0
 ORBIT
 {
-	SMA = 30044.31823051611
-	ECC = 0.9970831293821613
-	INC = 6.845285197311678
+	SMA = 30044.317514621627
+	ECC = 0.9970831295421998
+	INC = 6.845281289053351
 	LPE = 90
-	LAN = 157.66872937804555
-	MNA = 3.1415926535897993
-	EPH = 4479979786.432034
+	LAN = 18.558208900657917
+	MNA = 3.141592653589787
+	EPH = 4783489375.140237
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -81,8 +81,8 @@ PART
 	attN = node_stack_right, -1
 	mass = 1
 	shielded = False
-	temp = 209.39016242659653
-	tempExt = 209.37970459427231
+	temp = 231.87605614013307
+	tempExt = 231.89741694355359
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -396,7 +396,7 @@ PART
 			}
 			MechJebModuleSpaceplaneGuidance
 			{
-				runwayIndex = 0
+				runwayIndex = 4
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -422,7 +422,7 @@ PART
 			}
 			MechJebModuleSpaceplaneAutopilot
 			{
-				bBreakAsSoonAsLanded = False
+				bBreakAsSoonAsLanded = True
 				unlockParts = 
 				unlockTechs = 
 				glideslope
@@ -861,13 +861,13 @@ PART
 				}
 				Kp
 				{
-					_val = 0.12492219800962338
-					_text = 0.124922198009623
+					_val = 0.125
+					_text = 0.125
 				}
 				Ki
 				{
-					_val = 0.0073611111111111091
-					_text = 0.00736111111111111
+					_val = 0.070000000000000007
+					_text = 0.07
 				}
 				Kd
 				{
@@ -945,8 +945,23 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleB9PartInfo
-		isEnabled = False
+		name = TrajectoriesVesselSettings
+		isEnabled = True
+		Initialized = True
+		EntryAngle = 3.1415926535897931
+		EntryHorizon = False
+		HighAngle = 3.1415926535897931
+		HighHorizon = False
+		LowAngle = 3.1415926535897931
+		LowHorizon = False
+		GroundAngle = 3.1415926535897931
+		GroundHorizon = False
+		RetrogradeEntry = True
+		TargetBody = 
+		TargetPosition_x = 0
+		TargetPosition_y = 0
+		TargetPosition_z = 0
+		ManualTargetTxt = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -960,8 +975,8 @@ PART
 	}
 	MODULE
 	{
-		name = FlightEngineerModule
-		isEnabled = True
+		name = ModuleB9PartInfo
+		isEnabled = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1003,7 +1018,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 496.52562473411575
+		amount = 500
 		maxAmount = 500
 		flowState = True
 		isTweakable = True
@@ -1039,8 +1054,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 209.34780784861272
-	tempExt = 209.26481994896238
+	temp = 231.87602287134177
+	tempExt = 231.83104966575252
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1122,7 +1137,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -1.70754697E-06
+		previousTargetAngle = 1.9209881E-06
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -1132,7 +1147,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,1.67637833E-08,0,1
+		servoTransformRotation = 0,0,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -1289,8 +1304,8 @@ PART
 	persistentId = 3645935905
 	launchID = 1
 	parent = 1
-	position = -0.99999916553497314,3.8583008316050993E-11,0.37272953987121582
-	rotation = -0.707106769,-1.69575376E-08,-1.25800454E-08,0.707106769
+	position = -0.99999916553497314,3.8611433494928349E-11,0.37272953987121582
+	rotation = -0.707106769,-2.88113231E-08,-7.2626094E-10,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -1306,8 +1321,8 @@ PART
 	attN = node_stack_top, 1
 	mass = 0.0399999991
 	shielded = False
-	temp = 209.32506437230614
-	tempExt = 209.2921304772062
+	temp = 231.87604186544002
+	tempExt = 231.87245286117923
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1597,8 +1612,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 209.34792908276845
-	tempExt = 209.26520470688942
+	temp = 231.87602288986855
+	tempExt = 231.83108342739487
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1680,7 +1695,7 @@ PART
 		mirrorRotation = True
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -0.000119528297
+		previousTargetAngle = 1.70754754E-06
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -1690,7 +1705,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,1.4901163E-08,0,1
+		servoTransformRotation = 0,7.45058131E-08,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -1831,8 +1846,8 @@ PART
 	persistentId = 2671060394
 	launchID = 1
 	parent = 3
-	position = 0.99999970197677612,2.530406873618718E-12,0.37272739410400391
-	rotation = -0.707106769,9.38837452E-09,-9.38837452E-09,0.707106769
+	position = 0.99999970197677612,2.558828583049122E-12,0.37272739410400391
+	rotation = -0.707106769,5.15352241E-08,-5.15352241E-08,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -1848,8 +1863,8 @@ PART
 	attN = node_stack_top, 3
 	mass = 0.0399999991
 	shielded = False
-	temp = 209.32511751069782
-	tempExt = 209.29218242270053
+	temp = 231.87604186546554
+	tempExt = 231.87245286890212
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2131,8 +2146,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 209.34780799250086
-	tempExt = 209.26482070358924
+	temp = 231.87602287134447
+	tempExt = 231.83104966641332
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2214,7 +2229,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -0.000122943398
+		previousTargetAngle = 2.4332543E-05
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -2224,7 +2239,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,2.1234149E-07,0,1
+		servoTransformRotation = 0,2.53319683E-07,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -2382,7 +2397,7 @@ PART
 	launchID = 1
 	parent = 5
 	position = -0.99999916553497314,0.90000152587890625,0.37272858619689941
-	rotation = -0.707106769,1.20652189E-07,-1.51218927E-07,0.707106769
+	rotation = -0.707106769,1.49628136E-07,-1.80194874E-07,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2398,8 +2413,8 @@ PART
 	attN = node_stack_top, 5
 	mass = 0.0399999991
 	shielded = False
-	temp = 209.32506426764041
-	tempExt = 209.2921302336884
+	temp = 231.87604186544002
+	tempExt = 231.87245286118133
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2689,8 +2704,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 209.34792896016054
-	tempExt = 209.26520405479909
+	temp = 231.87602288986855
+	tempExt = 231.83108342742474
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2772,7 +2787,7 @@ PART
 		mirrorRotation = True
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -3.07358459E-05
+		previousTargetAngle = -1.1525939E-05
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -2782,7 +2797,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-1.00582795E-07,0,1
+		servoTransformRotation = 0,-1.34110437E-07,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -2924,7 +2939,7 @@ PART
 	launchID = 1
 	parent = 7
 	position = 0.99999970197677612,0.90000152587890625,0.37272739410400391
-	rotation = -0.707106769,-7.12642247E-08,7.12642247E-08,0.707106769
+	rotation = -0.707106769,-9.49718526E-08,9.49718526E-08,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2940,8 +2955,8 @@ PART
 	attN = node_stack_top, 7
 	mass = 0.0399999991
 	shielded = False
-	temp = 209.32511759897508
-	tempExt = 209.29218263156488
+	temp = 231.87604186546452
+	tempExt = 231.87245286832916
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3223,8 +3238,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 209.34793091789555
-	tempExt = 209.26521030946941
+	temp = 231.87602288997942
+	tempExt = 231.83108362939882
 	tempExtUnexp = 303.8703451558527
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3306,7 +3321,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -0.000167339604
+		previousTargetAngle = -2.98820742E-05
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -3316,7 +3331,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-2.60770292E-07,0,1
+		servoTransformRotation = 0,-2.83122034E-07,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3474,7 +3489,7 @@ PART
 	launchID = 1
 	parent = 9
 	position = -0.99999916553497314,-0.90000152587890625,0.37272953987121582
-	rotation = -0.707106769,-2.16130459E-07,1.85377303E-07,0.707106769
+	rotation = -0.707106769,-2.31935545E-07,2.01182388E-07,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3490,8 +3505,8 @@ PART
 	attN = node_stack_top, 9
 	mass = 0.0399999991
 	shielded = False
-	temp = 209.32511846701871
-	tempExt = 209.29218347677033
+	temp = 231.87604186547611
+	tempExt = 231.87245287510203
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3781,8 +3796,8 @@ PART
 	attN = TopJoint, -1
 	mass = 0.120000005
 	shielded = False
-	temp = 209.34792912395613
-	tempExt = 209.26520479217561
+	temp = 231.87602288986321
+	tempExt = 231.83108342613411
 	tempExtUnexp = 303.8703451558527
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3864,7 +3879,7 @@ PART
 		mirrorRotation = True
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -2.21981118E-05
+		previousTargetAngle = -3.71391543E-05
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -3874,7 +3889,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0,-3.24100256E-07,0,1
+		servoTransformRotation = 0,-2.98023195E-07,0,1
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -4016,7 +4031,7 @@ PART
 	launchID = 1
 	parent = 11
 	position = 0.99999970197677612,-0.90000152587890625,0.37272739410400391
-	rotation = -0.707106769,-2.30074733E-07,2.30074733E-07,0.707106769
+	rotation = -0.707106769,-2.11635481E-07,2.11635481E-07,0.707106769
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -4032,8 +4047,8 @@ PART
 	attN = node_stack_top, 11
 	mass = 0.0399999991
 	shielded = False
-	temp = 209.3251175030683
-	tempExt = 209.29218242287089
+	temp = 231.87604186546352
+	tempExt = 231.87245286775232
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4316,8 +4331,8 @@ PART
 	attN = node_stack_Side2, 14
 	mass = 1.51399994
 	shielded = False
-	temp = 209.23686042390563
-	tempExt = 209.10096431837496
+	temp = 231.87571053055078
+	tempExt = 231.67394977478924
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4789,6 +4804,36 @@ PART
 	}
 	MODULE
 	{
+		name = TrajectoriesVesselSettings
+		isEnabled = True
+		Initialized = False
+		EntryAngle = 3.1415926535897931
+		EntryHorizon = False
+		HighAngle = 3.1415926535897931
+		HighHorizon = False
+		LowAngle = 3.1415926535897931
+		LowHorizon = False
+		GroundAngle = 3.1415926535897931
+		GroundHorizon = False
+		RetrogradeEntry = True
+		TargetBody = 
+		TargetPosition_x = 0
+		TargetPosition_y = 0
+		TargetPosition_z = 0
+		ManualTargetTxt = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -4816,21 +4861,6 @@ PART
 		{
 			key = 0 1 0 0
 		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlightEngineerModule
-		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -4871,7 +4901,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 198.610240209217
+		amount = 200
 		maxAmount = 200
 		flowState = True
 		isTweakable = True
@@ -4917,8 +4947,8 @@ PART
 	attN = nodeBottom, 13
 	mass = 0.0500000007
 	shielded = False
-	temp = 209.09140903594442
-	tempExt = 208.99536230975204
+	temp = 231.87586089515816
+	tempExt = 231.80878289333424
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5200,6 +5230,24 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleDockingNodeNamed
+		isEnabled = True
+		portName = C-100 Mk II Androgynous Docking Mechanism (Active)
+		initialized = True
+		controlTransformName = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -5254,8 +5302,8 @@ PART
 	attN = node_stack_bottom, 13
 	mass = 0.200000003
 	shielded = False
-	temp = 209.25375808527536
-	tempExt = 209.20800148306802
+	temp = 231.87598741927337
+	tempExt = 231.85458641318948
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5466,9 +5514,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.095098525
-	yaw = -0.0024236261
-	roll = -0.09085446
+	pitch = 0.24928802
+	yaw = -0.0005544745
+	roll = 0.10627238
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -5490,6 +5538,9 @@ VESSELMODULES
 		controlState = KerbalFull
 		canComm = True
 	}
+	BetterBurnTimeData
+	{
+	}
 	VesselDataManager
 	{
 	}
@@ -5498,7 +5549,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 1266388772.4939411
+		lastUpdate = 4783489294.8782434
 		selectedPad = 0
 		Productivity = 0.09382999511679066
 	}
