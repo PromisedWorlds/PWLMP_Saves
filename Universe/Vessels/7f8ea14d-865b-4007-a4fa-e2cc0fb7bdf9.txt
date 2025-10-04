@@ -1,29 +1,29 @@
-pid = 153aabd825e64bdaa6d37fdd74343e67
-persistentId = 343011980
-name = Untitled Space Craft Debris
+pid = 7f8ea14d865b4007a4fae2cc0fb7bdf9
+persistentId = 978876572
+name = 20t Launcher Debris
 type = Debris
-sit = SPLASHED
-landed = False
+sit = LANDED
+landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = Runway
-landedAt = 
+launchedFrom = LaunchPad
+landedAt = LaunchPad
 displaylandedAt = 
-splashed = True
-met = 0.96002197265625
-lct = 4782823345.362711
-lastUT = 4782823346.3627338
-distanceTraveled = 4.2549737475876643
+splashed = False
+met = 7.959615707397461
+lct = 4783019418.37927
+lastUT = 4783019426.818885
+distanceTraveled = 0
 root = 0
-lat = 0.048748798377032346
-lon = -74.096283780364303
-alt = -128.14582774764858
-hgt = 659.778137
-nrm = -0.39825359,-0.536035299,-0.744352221
-rot = 0.157523498,-0.463329285,-0.739061713,0.462925702
-CoM = -0.930955231,0.071274288,3.75509012E-06
-stg = 0
+lat = -0.09709530404512544
+lon = -74.55789922570932
+alt = 79.47740367765073
+hgt = 7.08132
+nrm = 1.4901161193847656E-08,1.0000001192092896,6.556510925292969E-07
+rot = 0.30857533,-0.53118145,0.63688844,-0.4658334
+CoM = 0,0,0
+stg = 4
 prst = False
 ref = 0
 ctrl = False
@@ -40,54 +40,54 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 302099.03392792889
-	ECC = 0.98619326077585179
-	INC = 0.71609687018689905
-	LPE = 183.75532505641752
-	LAN = 256.31131426125091
-	MNA = 3.2056480145386783
-	EPH = 4782823346.3627338
+	SMA = 300822.125843213
+	ECC = 0.9947983404533086
+	INC = 0.09709530404512541
+	LPE = 90.00000000000001
+	LAN = 25.51363738978165
+	MNA = 3.1415926535897887
+	EPH = 4783019431.298881
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = wingConnector
-	cid = 4288813542
-	uid = 2860551168
-	mid = 1539234725
-	persistentId = 1033467749
-	launchID = 1
+	name = launchClamp1
+	cid = 4288309046
+	uid = 1651726440
+	mid = 2803686740
+	persistentId = 2022210572
+	launchID = 4
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000048
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
-	symMethod = Mirror
-	istg = -1
+	symMethod = Radial
+	istg = 4
 	resPri = 0
-	dstg = 0
-	sqor = -1
-	sepI = -1
-	sidx = -1
+	dstg = 8
+	sqor = 4
+	sepI = 4
+	sidx = 1
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COL 5
-	mass = 0.284909397
+	srfN = srfAttach, -1,side_BOXCOLLIDER
+	mass = 0.100000001
 	shielded = False
-	temp = 312.23359121100833
-	tempExt = 313.79438494989864
-	tempExtUnexp = 313.79704369716774
-	staticPressureAtm = 13.258901059615749
+	temp = 308.78740127380831
+	tempExt = 309.00659357151113
+	tempExtUnexp = 309.00605059005699
+	staticPressureAtm = 0.98827762071979852
 	expt = 0.100000001
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = False
-	autostrutMode = Grandparent
+	autostrutMode = Off
 	rigidAttachment = False
-	flag = Squad/Flags/Canada
-	rTrf = wingConnector
+	flag = Squad/Flags/default
+	rTrf = launchClamp1
 	modCost = 0
-	modMass = 0.0849093944
+	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
@@ -148,18 +148,34 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = ModuleGenerator
 		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
+		generatorIsActive = True
+		throttle = 1
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -167,98 +183,7 @@ PART
 	}
 	MODULE
 	{
-		name = FundsKeeper
-		isEnabled = True
-		OriginalCost = 500
-		OriginalResourcesCost = 0
-		OriginalModulesCost = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = StealBackMyFunds
-		isEnabled = True
-		active = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FMRS_PM
-		isEnabled = True
-		stagingEnabled = True
-		MM_DYNAMIC = true
-		parent_vessel = 00000000-0000-0000-0000-000000000000
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		type = free_square
-		active = True
-		available = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (0, 0, 0)
-		DryCost = 500
-		OriginalCrewCapacity = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		massMultiplier = 1
-		massOverride = -3.40282347E+38
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = GeometryPartModule
+		name = ModuleTestSubject
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -273,14 +198,22 @@ PART
 	}
 	MODULE
 	{
-		name = FARAeroPartModule
+		name = ModuleRestockLaunchClamp
 		isEnabled = True
+		scaleFactor = 3.85950446
+		height = 7.63428116
 		stagingEnabled = True
+		towerRot = -6.18480129E-08,0.831469655,9.2562054E-08,-0.555570304
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ReleaseClamp
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -288,14 +221,35 @@ PART
 	}
 	MODULE
 	{
-		name = ShipEffectsCollisions
+		name = ModuleAnimateGeneric
 		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -303,14 +257,10 @@ PART
 	}
 	MODULE
 	{
-		name = AttachedOnEditor
-		isEnabled = True
-		active = True
-		originalPos = (4.65957975, 9.69258595, -5.12640238)
-		originalRotation = (0, 0.707106829, 0.707106829, 0)
-		moduleVersion = 6
+		name = KOSNameTag
+		isEnabled = False
+		nameTag = 
 		stagingEnabled = True
-		userReallyDeactivatedIt = False
 		EVENTS
 		{
 		}
@@ -324,11 +274,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 4782823275.62111
-	Gear = False, 4782823298.80165
+	Stage = False, 0
+	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = True, 4782823271.84103
+	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -361,7 +311,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 1
 }
 VESSELMODULES
 {
@@ -380,11 +330,11 @@ VESSELMODULES
 	ModuleDynamicBatteryStorage
 	{
 	}
-	FlightGUI
+	ELVesselWorkNet
 	{
-	}
-	FARVesselAero
-	{
+		lastUpdate = 4783019418.4592714
+		selectedPad = 0
+		Productivity = 0
 	}
 	AtmoFxModule
 	{
@@ -395,7 +345,7 @@ VESSELMODULES
 		{
 		}
 	}
-	ShipEffects
+	kOSVesselModule
 	{
 	}
 	SpaceDustVessel
@@ -405,6 +355,17 @@ VESSELMODULES
 	{
 	}
 	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
 	{
 	}
 }
