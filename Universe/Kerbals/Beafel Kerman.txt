@@ -13,7 +13,7 @@ inactiveTimeEnd = 0
 gExperienced = 0
 outDueToG = False
 ToD = 4782929688.4459286
-idx = -1
+idx = 0
 extraXP = 0
 hasHelmetOn = False
 hasNeckRingOn = False
@@ -26,7 +26,16 @@ suit = Default
 hero = False
 INVENTORY
 {
+	name = ModuleInventoryPart
+	isEnabled = True
+	stagingEnabled = True
 	inventory = evaChute,evaJetpack
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
 	STOREDPARTS
 	{
 		STOREDPART
@@ -39,10 +48,10 @@ INVENTORY
 			PART
 			{
 				name = evaChute
-				cid = 4294331874
+				cid = 4294273846
 				uid = 0
 				mid = 0
-				persistentId = 0
+				persistentId = 686885564
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -294,10 +303,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294331968
+				cid = 4294273942
 				uid = 0
 				mid = 0
-				persistentId = 0
+				persistentId = 1641915914
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -551,6 +560,9 @@ INVENTORY
 			}
 		}
 	}
+	UPGRADESAPPLIED
+	{
+	}
 }
 CAREER_LOG
 {
@@ -559,10 +571,25 @@ CAREER_LOG
 FLIGHT_LOG
 {
 	flight = 0
+	0 = Flight,Kerbin
+	0 = Land,Kerbin
 }
 KerbalExt
 {
 	experience
 	{
+		_current = Passenger
+		Passenger
+		{
+			_current = Kerbin
+			Kerbin
+			{
+				_current = LANDED
+				_currentUT = 4783099794.1056986
+				PRELAUNCH = 136.13446426391602
+				LANDED = 98.502254486083984
+				FLYING = 501.45147705078125
+			}
+		}
 	}
 }
