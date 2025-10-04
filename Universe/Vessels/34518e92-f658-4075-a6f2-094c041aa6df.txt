@@ -2,27 +2,27 @@ pid = 34518e92f6584075a6f2094c041aa6df
 persistentId = 3411910464
 name = Scooper
 type = Plane
-sit = LANDED
-landed = True
+sit = FLYING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = Runway
-landedAt = KSC_Runway_Section_4
-displaylandedAt = #autoLOC_6002131
+landedAt = 
+displaylandedAt = 
 splashed = False
-met = 37.78467845916748
+met = 82340.35418891907
 lct = 4783637507.452719
-lastUT = 4783637545.297399
-distanceTraveled = 1.4893864261210288
+lastUT = 4783719848.286907
+distanceTraveled = 52295.72126333996
 root = 0
-lat = -0.048600277492637317
-lon = -74.724471043942984
-alt = 73.763462460949086
-hgt = 4.49432325
-nrm = -0.00082774699,-0.00217135251,-0.999997318
-rot = 0.094479464,-0.0950037092,-0.703250229,0.698202789
-CoM = 8.64267349E-07,-11.8495884,-0.0013305489
+lat = -0.0492131973368551
+lon = -74.6383245688893
+alt = 72.63041913264897
+hgt = 4.780154
+nrm = -4.384515341371298E-05,0.020732268691062927,-0.9997851848602295
+rot = 0.08725336,-0.087691285,-0.7044212,0.6989192
+CoM = 3.7252903E-08,-11.8484974,-0.00133037567
 stg = 0
 prst = False
 ref = 1466157464
@@ -40,13 +40,13 @@ cHdg = 0.3
 cMod = 0
 ORBIT
 {
-	SMA = 300819.25443433528
-	ECC = 0.99479847713903635
-	INC = 0.048592384410833057
-	LPE = 90
-	LAN = 270.73831317437873
-	MNA = 3.1415926535897976
-	EPH = 4783637504.4126492
+	SMA = 302580.513089231
+	ECC = 0.9831825519025786
+	INC = 0.19994364173829374
+	LPE = 14.246749600412528
+	LAN = 279.6805401796305
+	MNA = 3.141469926816827
+	EPH = 4783719697.676525
 	REF = 1
 	IDENT = Squad/Kerbin
 }
@@ -60,7 +60,7 @@ PART
 	launchID = 2
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -75,9 +75,9 @@ PART
 	attN = bottom, 1
 	mass = 4.05480003
 	shielded = False
-	temp = 302.55367667197299
-	tempExt = 302.55508517614209
-	tempExtUnexp = 302.55503920121407
+	temp = 301.92625187152902
+	tempExt = 301.92783864797747
+	tempExtUnexp = 301.92779847084779
 	staticPressureAtm = 0.98911664705349422
 	expt = 0.5
 	state = 0
@@ -217,7 +217,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -1060,10 +1060,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 4783637504.4326496
-				deltaVExpended = 0
+				deltaVExpended = NaN
 				dragLosses = 0
 				gravityLosses = 0
-				steeringLosses = 0
+				steeringLosses = NaN
 				markLAN = 270.73680962188223
 				markLatitude = -0.048592384978042476
 				markLongitude = -74.725603299251318
@@ -1139,7 +1139,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -1375,7 +1375,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 1498.6915091514352
+		amount = 1492.2799178876094
 		maxAmount = 1500
 		flowState = True
 		isTweakable = True
@@ -1421,9 +1421,9 @@ PART
 	attN = bottom, 42
 	mass = 0.57160002
 	shielded = False
-	temp = 302.55366378122369
-	tempExt = 302.50884261855151
-	tempExtUnexp = 302.5087197671246
+	temp = 301.92623925877837
+	tempExt = 301.88306299696069
+	tempExtUnexp = 301.8829389191464
 	staticPressureAtm = 0.98911589409079692
 	expt = 0.5
 	state = 0
@@ -1512,7 +1512,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -1633,7 +1633,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -1732,7 +1732,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 299.73831724740774
+		amount = 298.45599662015826
 		maxAmount = 300
 		flowState = True
 		isTweakable = True
@@ -1795,8 +1795,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98926038763242496
 	expt = 0.5
@@ -1902,7 +1902,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -1954,8 +1954,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98926528188995799
 	expt = 0.5
@@ -2061,7 +2061,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -2113,8 +2113,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98925556867116171
 	expt = 0.5
@@ -2220,7 +2220,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -2272,8 +2272,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98923222682754286
 	expt = 0.5
@@ -2379,7 +2379,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -2431,8 +2431,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98919743995092368
 	expt = 0.5
@@ -2538,7 +2538,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -2590,8 +2590,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98915467166971216
 	expt = 0.5
@@ -2697,7 +2697,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -2749,8 +2749,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98910813857501378
 	expt = 0.5
@@ -2856,7 +2856,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -2908,8 +2908,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98906228314674316
 	expt = 0.5
@@ -3015,7 +3015,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3067,8 +3067,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9890216984573541
 	expt = 0.5
@@ -3174,7 +3174,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3226,8 +3226,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9889903752091429
 	expt = 0.5
@@ -3333,7 +3333,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3385,8 +3385,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98897124995662933
 	expt = 0.5
@@ -3492,7 +3492,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3544,8 +3544,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9889663556990963
 	expt = 0.5
@@ -3651,7 +3651,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3703,8 +3703,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98897606891789258
 	expt = 0.5
@@ -3810,7 +3810,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -3862,8 +3862,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98899941076151154
 	expt = 0.5
@@ -3969,7 +3969,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4021,8 +4021,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98903419763813061
 	expt = 0.5
@@ -4128,7 +4128,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4180,8 +4180,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98907696591934213
 	expt = 0.5
@@ -4287,7 +4287,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4339,8 +4339,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912349901404051
 	expt = 0.5
@@ -4446,7 +4446,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4498,8 +4498,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98916935444231124
 	expt = 0.5
@@ -4605,7 +4605,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4657,8 +4657,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98920993913170019
 	expt = 0.5
@@ -4764,7 +4764,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4816,8 +4816,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98924126237991139
 	expt = 0.5
@@ -4923,7 +4923,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -4975,8 +4975,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98917929354991663
 	expt = 0.5
@@ -5082,7 +5082,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -5134,8 +5134,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9891814771417391
 	expt = 0.5
@@ -5241,7 +5241,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -5293,8 +5293,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98917718525436404
 	expt = 0.5
@@ -5400,7 +5400,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -5452,8 +5452,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98916694496167956
 	expt = 0.5
@@ -5559,7 +5559,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -5611,8 +5611,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98915165981892261
 	expt = 0.5
@@ -5718,7 +5718,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -5770,8 +5770,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9891329110477578
 	expt = 0.5
@@ -5877,7 +5877,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -5929,8 +5929,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98911243046238895
 	expt = 0.5
@@ -6036,7 +6036,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -6088,8 +6088,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98909232635836875
 	expt = 0.5
@@ -6195,7 +6195,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -6247,8 +6247,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98907448114244079
 	expt = 0.5
@@ -6354,7 +6354,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -6406,8 +6406,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98906070192507856
 	expt = 0.5
@@ -6513,7 +6513,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -6565,8 +6565,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98905234403913767
 	expt = 0.5
@@ -6672,7 +6672,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -6724,8 +6724,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9890501604473152
 	expt = 0.5
@@ -6831,7 +6831,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -6883,8 +6883,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98905445233469036
 	expt = 0.5
@@ -6990,7 +6990,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7042,8 +7042,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98906469262737473
 	expt = 0.5
@@ -7149,7 +7149,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7201,8 +7201,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98907997777013168
 	expt = 0.5
@@ -7308,7 +7308,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7360,8 +7360,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98909872654129649
 	expt = 0.5
@@ -7467,7 +7467,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7519,8 +7519,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98911920712666535
 	expt = 0.5
@@ -7626,7 +7626,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7678,8 +7678,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98913931123068555
 	expt = 0.5
@@ -7785,7 +7785,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7837,8 +7837,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98915715644661362
 	expt = 0.5
@@ -7944,7 +7944,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -7996,8 +7996,8 @@ PART
 	srfN = srfAttach, 1,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367648598985
-	tempExt = 302.55367649302315
+	temp = 301.92625153224969
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98917093566397574
 	expt = 0.5
@@ -8103,7 +8103,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -8140,9 +8140,9 @@ PART
 	attN = bottom, 51
 	mass = 2.12299991
 	shielded = False
-	temp = 302.55368147172453
-	tempExt = 302.55510826336109
-	tempExtUnexp = 302.55507196115093
+	temp = 301.92626081109523
+	tempExt = 301.92798496230455
+	tempExtUnexp = 301.92794964982949
 	staticPressureAtm = 0.98911521642436928
 	expt = 0.5
 	state = 0
@@ -8334,7 +8334,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -8439,8 +8439,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912688734617871
 	expt = 0.5
@@ -8546,7 +8546,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -8580,8 +8580,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9891271885312577
 	expt = 0.5
@@ -8687,7 +8687,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -8721,8 +8721,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912666145736949
 	expt = 0.5
@@ -8828,7 +8828,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -8862,8 +8862,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912696264244848
 	expt = 0.5
@@ -8969,7 +8969,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -9003,8 +9003,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912538142078399
 	expt = 0.5
@@ -9110,7 +9110,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -9144,8 +9144,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912568260586287
 	expt = 0.5
@@ -9251,7 +9251,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -9285,8 +9285,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912779090141556
 	expt = 0.5
@@ -9392,7 +9392,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -9426,8 +9426,8 @@ PART
 	srfN = srfAttach, 42,coll.001
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649303071
-	tempExt = 302.55367649302315
+	temp = 301.92625153633224
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98912809208649455
 	expt = 0.5
@@ -9533,7 +9533,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -9568,9 +9568,9 @@ PART
 	attN = bottom, 52
 	mass = 1.33099997
 	shielded = False
-	temp = 302.55368121272471
-	tempExt = 302.5562798417098
-	tempExtUnexp = 302.55621169998437
+	temp = 301.92625945517676
+	tempExt = 301.92996037171531
+	tempExtUnexp = 301.92987550626987
 	staticPressureAtm = 0.98911423757286265
 	expt = 0.5
 	state = 0
@@ -9837,7 +9837,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -9943,9 +9943,9 @@ PART
 	attN = bottom, 53
 	mass = 3.69200015
 	shielded = False
-	temp = 302.55367654049155
-	tempExt = 302.55546436538498
-	tempExtUnexp = 302.55539491617174
+	temp = 301.92625161103871
+	tempExt = 301.92828063178666
+	tempExtUnexp = 301.92821466584172
 	staticPressureAtm = 0.9891133340176258
 	expt = 0.5
 	state = 0
@@ -10049,7 +10049,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -10166,9 +10166,9 @@ PART
 	attN = bottom, 54
 	mass = 0.550000012
 	shielded = False
-	temp = 302.55367660696703
-	tempExt = 302.55494765493847
-	tempExtUnexp = 302.55490487956888
+	temp = 301.92625178578027
+	tempExt = 301.92772632580767
+	tempExtUnexp = 301.92768844305397
 	staticPressureAtm = 0.98911258105492839
 	expt = 0.5
 	state = 0
@@ -10257,7 +10257,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -10378,7 +10378,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -10477,7 +10477,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 299.73831724740774
+		amount = 298.45599662015826
 		maxAmount = 300
 		flowState = True
 		isTweakable = True
@@ -10512,9 +10512,9 @@ PART
 	attN = bottom, 53
 	mass = 3.26000023
 	shielded = False
-	temp = 302.55367659402179
-	tempExt = 302.55527385883465
-	tempExtUnexp = 302.55521913890874
+	temp = 301.92625166875172
+	tempExt = 301.92789715229276
+	tempExtUnexp = 301.92785273213804
 	staticPressureAtm = 0.98911190338850075
 	expt = 0.5
 	state = 0
@@ -10618,7 +10618,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -10700,7 +10700,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 3588.997192360744
+		amount = 3197.2557203744054
 		maxAmount = 3600
 		flowState = True
 		isTweakable = True
@@ -10734,9 +10734,9 @@ PART
 	attN = top, 54
 	mass = 14.8999996
 	shielded = False
-	temp = 302.55368441905114
-	tempExt = 302.5624228333582
-	tempExtUnexp = 302.56219628792411
+	temp = 301.92625957856944
+	tempExt = 301.93477964231261
+	tempExtUnexp = 301.93456902833452
 	staticPressureAtm = 0.98911039746310603
 	expt = 0.5
 	state = 0
@@ -11088,7 +11088,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 0.977343
+		state = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -11163,9 +11163,9 @@ PART
 	srfN = srfAttach, 55,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514284389909
-	tempExt = 302.57030904236984
-	tempExtUnexp = 302.56980183943546
+	temp = 301.92781743837168
+	tempExt = 301.94371594058055
+	tempExtUnexp = 301.94319448735189
 	staticPressureAtm = 0.98903276700900566
 	expt = 0.5
 	state = 0
@@ -11329,9 +11329,9 @@ PART
 	srfN = srfAttach, 55,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514284389909
-	tempExt = 302.57030904236984
-	tempExtUnexp = 302.56980183943546
+	temp = 301.92781743837168
+	tempExt = 301.94371594058055
+	tempExtUnexp = 301.94319448735189
 	staticPressureAtm = 0.98903299289781488
 	expt = 0.5
 	state = 0
@@ -11495,9 +11495,9 @@ PART
 	srfN = srfAttach, 55,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514284389909
-	tempExt = 302.57030904236984
-	tempExtUnexp = 302.56980183943546
+	temp = 301.92781743837168
+	tempExt = 301.94371594058055
+	tempExtUnexp = 301.94319448735189
 	staticPressureAtm = 0.98903156226868982
 	expt = 0.5
 	state = 0
@@ -11661,9 +11661,9 @@ PART
 	srfN = srfAttach, 55,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514284389909
-	tempExt = 302.57030904236984
-	tempExtUnexp = 302.56980183943546
+	temp = 301.92781743837168
+	tempExt = 301.94371594058055
+	tempExtUnexp = 301.94319448735189
 	staticPressureAtm = 0.98903178815749904
 	expt = 0.5
 	state = 0
@@ -11826,9 +11826,9 @@ PART
 	srfN = srfAttach, 55,COLLIDERA003
 	mass = 0.289999992
 	shielded = False
-	temp = 302.55367650083849
-	tempExt = 302.55458241582858
-	tempExtUnexp = 302.55454969664885
+	temp = 301.92625207950471
+	tempExt = 301.92776666940068
+	tempExtUnexp = 301.92772655320823
 	staticPressureAtm = 0.98873617500250577
 	expt = 0.100000001
 	state = 0
@@ -12038,9 +12038,9 @@ PART
 	attN = bottom, 63
 	mass = 2.28480005
 	shielded = False
-	temp = 302.55367782374555
-	tempExt = 302.56905683084972
-	tempExtUnexp = 302.56867141898869
+	temp = 301.92625295711429
+	tempExt = 301.94233612880578
+	tempExtUnexp = 301.94194343017068
 	staticPressureAtm = 0.98911325872135603
 	expt = 0.5
 	state = 0
@@ -12143,7 +12143,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 3190.2197265428863
+		amount = 2842.0050847773473
 		maxAmount = 3200
 		flowState = True
 		isTweakable = True
@@ -12178,9 +12178,9 @@ PART
 	attN = bottom01, 61
 	mass = 4.19999981
 	shielded = False
-	temp = 302.55367646259839
-	tempExt = 302.55254154901576
-	tempExtUnexp = 302.55257469023854
+	temp = 301.92625153687038
+	tempExt = 301.92524727577529
+	tempExtUnexp = 301.92528837378518
 	staticPressureAtm = 0.98911438816540209
 	expt = 0.5
 	state = 0
@@ -12363,9 +12363,9 @@ PART
 	attN = bottom, 64
 	mass = 0.0191232003
 	shielded = False
-	temp = 302.55466959782405
-	tempExt = 302.58080157844762
-	tempExtUnexp = 302.58004865287364
+	temp = 301.92728895468883
+	tempExt = 301.95431373847299
+	tempExtUnexp = 301.95354710254225
 	staticPressureAtm = 0.98911258105492839
 	expt = 0.5
 	state = 0
@@ -12471,7 +12471,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -12567,9 +12567,9 @@ PART
 	attN = bottom, 65
 	mass = 0.0191232003
 	shielded = False
-	temp = 302.55448861022921
-	tempExt = 302.57573922015837
-	tempExtUnexp = 302.57524160444007
+	temp = 301.92709908671367
+	tempExt = 301.94905090082892
+	tempExtUnexp = 301.94854440339054
 	staticPressureAtm = 0.98911235516611917
 	expt = 0.5
 	state = 0
@@ -12675,7 +12675,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -12771,9 +12771,9 @@ PART
 	attN = bottom, 70
 	mass = 0.0191232003
 	shielded = False
-	temp = 302.55447290253392
-	tempExt = 302.57658621152098
-	tempExtUnexp = 302.57604317384198
+	temp = 301.9270820259469
+	tempExt = 301.9498969113049
+	tempExtUnexp = 301.94934915339036
 	staticPressureAtm = 0.98911212927730996
 	expt = 0.5
 	state = 0
@@ -12879,7 +12879,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -12973,9 +12973,9 @@ PART
 	srfN = srfAttach, 65,COLLIDER
 	mass = 2.19000006
 	shielded = False
-	temp = 302.55367756661883
-	tempExt = 302.55602823164804
-	tempExtUnexp = 302.5559490410281
+	temp = 301.92625273482224
+	tempExt = 301.92856641388113
+	tempExtUnexp = 301.92850014651992
 	staticPressureAtm = 0.98911258105492839
 	expt = 0.100000001
 	state = 0
@@ -13081,7 +13081,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13186,9 +13186,9 @@ PART
 	srfN = srfAttach, 66,wing_c_collider.002
 	mass = 0.189999998
 	shielded = False
-	temp = 302.55367649330731
-	tempExt = 302.55450618945713
-	tempExtUnexp = 302.55447808172795
+	temp = 301.92625209089607
+	tempExt = 301.92769830861823
+	tempExtUnexp = 301.92766247084882
 	staticPressureAtm = 0.98911197868477052
 	expt = 0.100000001
 	state = 0
@@ -13396,9 +13396,9 @@ PART
 	srfN = srfAttach, 66,wing_c_collider.002
 	mass = 0.0799999982
 	shielded = False
-	temp = 302.55367649331487
-	tempExt = 302.5545108662983
-	tempExtUnexp = 302.55448244671942
+	temp = 301.92625207406309
+	tempExt = 301.92770038061292
+	tempExtUnexp = 301.92766437415764
 	staticPressureAtm = 0.98911190338850075
 	expt = 0.100000001
 	state = 0
@@ -13606,9 +13606,9 @@ PART
 	srfN = srfAttach, 66,wing_c_collider.004
 	mass = 0.125
 	shielded = False
-	temp = 302.55367649331953
-	tempExt = 302.55388390959132
-	tempExtUnexp = 302.55387644100932
+	temp = 301.92625153668195
+	tempExt = 301.92682740368429
+	tempExtUnexp = 301.92682004938757
 	staticPressureAtm = 0.98911182809223097
 	expt = 0.100000001
 	state = 0
@@ -13851,9 +13851,9 @@ PART
 	attN = top, 65
 	mass = 14.8999996
 	shielded = False
-	temp = 302.55368575761577
-	tempExt = 302.56351388075734
-	tempExtUnexp = 302.56324245335099
+	temp = 301.92626101895138
+	tempExt = 301.93596292287043
+	tempExtUnexp = 301.93570511959359
 	staticPressureAtm = 0.98911152690715209
 	expt = 0.5
 	state = 0
@@ -14015,7 +14015,7 @@ PART
 	MODULE
 	{
 		name = ModuleEnginesFX
-		isEnabled = False
+		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -14024,7 +14024,7 @@ PART
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
-		manuallyOverridden = True
+		manuallyOverridden = False
 		includeinDVCalcs = False
 		stagingEnabled = True
 		EVENTS
@@ -14081,7 +14081,7 @@ PART
 	MODULE
 	{
 		name = ModuleEnginesFX
-		isEnabled = True
+		isEnabled = False
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -14090,7 +14090,7 @@ PART
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
-		manuallyOverridden = False
+		manuallyOverridden = True
 		includeinDVCalcs = False
 		stagingEnabled = True
 		EVENTS
@@ -14189,7 +14189,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 0.9760903
+		state = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -14266,9 +14266,9 @@ PART
 	srfN = srfAttach, 70,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.5551466824603
-	tempExt = 302.57031180219815
-	tempExtUnexp = 302.56980446605354
+	temp = 301.92782147264415
+	tempExt = 301.94371853371439
+	tempExtUnexp = 301.94319694565411
 	staticPressureAtm = 0.98903382115678196
 	expt = 0.5
 	state = 0
@@ -14434,9 +14434,9 @@ PART
 	srfN = srfAttach, 70,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55516075887095
-	tempExt = 302.57047092942526
-	tempExtUnexp = 302.56995875007726
+	temp = 301.92782147264415
+	tempExt = 301.94371853371439
+	tempExtUnexp = 301.94319694565411
 	staticPressureAtm = 0.98903404704559117
 	expt = 0.5
 	state = 0
@@ -14602,9 +14602,9 @@ PART
 	srfN = srfAttach, 70,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.5551466824603
-	tempExt = 302.57031180219815
-	tempExtUnexp = 302.56980446605354
+	temp = 301.92782147264415
+	tempExt = 301.94371853371439
+	tempExtUnexp = 301.94319694565411
 	staticPressureAtm = 0.98903261641646611
 	expt = 0.5
 	state = 0
@@ -14770,9 +14770,9 @@ PART
 	srfN = srfAttach, 70,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.5551466824603
-	tempExt = 302.57031180219815
-	tempExtUnexp = 302.56980446605354
+	temp = 301.92782147264415
+	tempExt = 301.94371853371439
+	tempExtUnexp = 301.94319694565411
 	staticPressureAtm = 0.98903284230527533
 	expt = 0.5
 	state = 0
@@ -14936,9 +14936,9 @@ PART
 	srfN = srfAttach, 70,COLLIDERA003
 	mass = 0.289999992
 	shielded = False
-	temp = 302.55367650204704
-	tempExt = 302.55459184791351
-	tempExtUnexp = 302.55455843043484
+	temp = 301.9262521187174
+	tempExt = 301.92777632608085
+	tempExtUnexp = 301.92773545735292
 	staticPressureAtm = 0.9887382080017888
 	expt = 0.100000001
 	state = 0
@@ -15146,9 +15146,9 @@ PART
 	srfN = srfAttach, 64,COLLIDER
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55369755526954
-	tempExt = 302.5552916930767
-	tempExtUnexp = 302.55522662436169
+	temp = 301.92627782664385
+	tempExt = 301.92829712622654
+	tempExtUnexp = 301.9282292055143
 	staticPressureAtm = 0.98894083026365498
 	expt = 0.5
 	state = 0
@@ -15355,9 +15355,9 @@ PART
 	srfN = srfAttach, 64,COLLIDER
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55369755526954
-	tempExt = 302.5552916930767
-	tempExtUnexp = 302.55522662436169
+	temp = 301.92627782664385
+	tempExt = 301.92829712622654
+	tempExtUnexp = 301.9282292055143
 	staticPressureAtm = 0.9889407549673852
 	expt = 0.5
 	state = 0
@@ -15564,9 +15564,9 @@ PART
 	srfN = srfAttach, 61,COLLISION
 	mass = 0.00600000005
 	shielded = False
-	temp = 302.55516983819757
-	tempExt = 302.57055845275886
-	tempExtUnexp = 302.57004324883849
+	temp = 301.92784560692968
+	tempExt = 301.94397471292433
+	tempExtUnexp = 301.94344492648531
 	staticPressureAtm = 0.98895604011014215
 	expt = 0.5
 	state = 0
@@ -15730,9 +15730,9 @@ PART
 	srfN = srfAttach, 61,COLLISION
 	mass = 0.00600000005
 	shielded = False
-	temp = 302.55516983819757
-	tempExt = 302.57055845275886
-	tempExtUnexp = 302.57004324883849
+	temp = 301.92784560692968
+	tempExt = 301.94397471292433
+	tempExtUnexp = 301.94344492648531
 	staticPressureAtm = 0.98895581422133294
 	expt = 0.5
 	state = 0
@@ -15896,9 +15896,9 @@ PART
 	srfN = srfAttach, 61,COLLISION
 	mass = 0.00600000005
 	shielded = False
-	temp = 302.55516983819757
-	tempExt = 302.57055845275886
-	tempExtUnexp = 302.57004324883849
+	temp = 301.92784560692968
+	tempExt = 301.94397471292433
+	tempExtUnexp = 301.94344492648531
 	staticPressureAtm = 0.98895604011014215
 	expt = 0.5
 	state = 0
@@ -16062,9 +16062,9 @@ PART
 	srfN = srfAttach, 61,COLLISION
 	mass = 0.600000024
 	shielded = False
-	temp = 302.55367660145481
-	tempExt = 302.55480439961593
-	tempExtUnexp = 302.55475633854633
+	temp = 301.9262520629664
+	tempExt = 301.92765754835756
+	tempExtUnexp = 301.92761181735023
 	staticPressureAtm = 0.98929404506499807
 	expt = 0.5
 	state = 0
@@ -16206,8 +16206,8 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Deployed
-		stateString = Deployed
+		stateDisplayString = Retracted
+		stateString = Retracted
 		stagingEnabled = True
 		position = 1
 		EVENTS
@@ -16470,9 +16470,9 @@ PART
 	attN = bottom, 84
 	mass = 2.28480005
 	shielded = False
-	temp = 302.55367783450652
-	tempExt = 302.56918058898685
-	tempExtUnexp = 302.56879254102739
+	temp = 301.92625295714851
+	tempExt = 301.94233677709758
+	tempExtUnexp = 301.94194403998569
 	staticPressureAtm = 0.98911235516611917
 	expt = 0.5
 	state = 0
@@ -16575,7 +16575,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 3190.2197265428863
+		amount = 2842.0050847773473
 		maxAmount = 3200
 		flowState = True
 		isTweakable = True
@@ -16610,9 +16610,9 @@ PART
 	attN = bottom01, 82
 	mass = 4.19999981
 	shielded = False
-	temp = 302.55367646259327
-	tempExt = 302.55254127058316
-	tempExtUnexp = 302.55257439308781
+	temp = 301.92625153687038
+	tempExt = 301.92525949985878
+	tempExtUnexp = 301.92530019333549
 	staticPressureAtm = 0.98911348461016524
 	expt = 0.5
 	state = 0
@@ -16795,9 +16795,9 @@ PART
 	attN = bottom, 85
 	mass = 0.0191232003
 	shielded = False
-	temp = 302.55466974911104
-	tempExt = 302.58082787624278
-	tempExtUnexp = 302.58007198897207
+	temp = 301.92728895620172
+	tempExt = 301.95431390246546
+	tempExtUnexp = 301.95354725078465
 	staticPressureAtm = 0.98911167749969153
 	expt = 0.5
 	state = 0
@@ -16903,7 +16903,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -16999,9 +16999,9 @@ PART
 	attN = bottom, 86
 	mass = 0.0191232003
 	shielded = False
-	temp = 302.55448658576091
-	tempExt = 302.57568020568436
-	tempExtUnexp = 302.57518369165149
+	temp = 301.92709907312491
+	tempExt = 301.94905089443404
+	tempExtUnexp = 301.94854439700549
 	staticPressureAtm = 0.98911145161088232
 	expt = 0.5
 	state = 0
@@ -17107,7 +17107,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -17203,9 +17203,9 @@ PART
 	attN = bottom, 91
 	mass = 0.0191232003
 	shielded = False
-	temp = 302.5544727301654
-	tempExt = 302.57658502923437
-	tempExtUnexp = 302.57604205556191
+	temp = 301.92708209594844
+	tempExt = 301.94989981276063
+	tempExtUnexp = 301.94935188379816
 	staticPressureAtm = 0.98911122572207311
 	expt = 0.5
 	state = 0
@@ -17311,7 +17311,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -17405,9 +17405,9 @@ PART
 	srfN = srfAttach, 86,COLLIDER
 	mass = 2.19000006
 	shielded = False
-	temp = 302.55367756381929
-	tempExt = 302.55602120768435
-	tempExtUnexp = 302.55594223746101
+	temp = 301.92625277630873
+	tempExt = 301.92858763315485
+	tempExtUnexp = 301.92852064361148
 	staticPressureAtm = 0.98911069864818491
 	expt = 0.100000001
 	state = 0
@@ -17513,7 +17513,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783637504.4326496
+		LastUpdateTime = 4783719654.6808586
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -17618,9 +17618,9 @@ PART
 	srfN = srfAttach, 87,wing_c_collider.002
 	mass = 0.189999998
 	shielded = False
-	temp = 302.55367649330663
-	tempExt = 302.55450615188158
-	tempExtUnexp = 302.554478046604
+	temp = 301.926252090952
+	tempExt = 301.92769841173748
+	tempExtUnexp = 301.92766256721842
 	staticPressureAtm = 0.9891099456854876
 	expt = 0.100000001
 	state = 0
@@ -17828,9 +17828,9 @@ PART
 	srfN = srfAttach, 87,wing_c_collider.002
 	mass = 0.0799999982
 	shielded = False
-	temp = 302.55367649331413
-	tempExt = 302.5545108066741
-	tempExtUnexp = 302.55448239098143
+	temp = 301.92625207413624
+	tempExt = 301.92770054593757
+	tempExtUnexp = 301.92766452864106
 	staticPressureAtm = 0.98910934331532963
 	expt = 0.100000001
 	state = 0
@@ -18038,9 +18038,9 @@ PART
 	srfN = srfAttach, 87,wing_c_collider.004
 	mass = 0.125
 	shielded = False
-	temp = 302.55367649331873
-	tempExt = 302.5542372018698
-	tempExtUnexp = 302.55421804189046
+	temp = 301.92625153670957
+	tempExt = 301.92695924404495
+	tempExtUnexp = 301.92694796219962
 	staticPressureAtm = 0.9891088915377112
 	expt = 0.100000001
 	state = 0
@@ -18283,9 +18283,9 @@ PART
 	attN = top, 86
 	mass = 14.8999996
 	shielded = False
-	temp = 302.55368575758803
-	tempExt = 302.56351387851248
-	tempExtUnexp = 302.56324245159715
+	temp = 301.92626101895888
+	tempExt = 301.93596295244498
+	tempExtUnexp = 301.93570514661383
 	staticPressureAtm = 0.98911054805564547
 	expt = 0.5
 	state = 0
@@ -18621,7 +18621,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 0.977343
+		state = 1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18698,9 +18698,9 @@ PART
 	srfN = srfAttach, 91,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55515966844536
-	tempExt = 302.57045860720592
-	tempExtUnexp = 302.56994680264017
+	temp = 301.92782147295981
+	tempExt = 301.94371853443238
+	tempExtUnexp = 301.94319694637227
 	staticPressureAtm = 0.9890329176015451
 	expt = 0.5
 	state = 0
@@ -18866,9 +18866,9 @@ PART
 	srfN = srfAttach, 91,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514668262197
-	tempExt = 302.57031180501087
-	tempExtUnexp = 302.56980446867777
+	temp = 301.92782147295981
+	tempExt = 301.94371853443238
+	tempExtUnexp = 301.94319694637227
 	staticPressureAtm = 0.98903314349035432
 	expt = 0.5
 	state = 0
@@ -19034,9 +19034,9 @@ PART
 	srfN = srfAttach, 91,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514668262197
-	tempExt = 302.57031180501087
-	tempExtUnexp = 302.56980446867777
+	temp = 301.92782147295981
+	tempExt = 301.94371853443238
+	tempExtUnexp = 301.94319694637227
 	staticPressureAtm = 0.98903171286122926
 	expt = 0.5
 	state = 0
@@ -19202,9 +19202,9 @@ PART
 	srfN = srfAttach, 91,COLLIDERA003
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55514668262197
-	tempExt = 302.57031180501087
-	tempExtUnexp = 302.56980446867777
+	temp = 301.92782147295981
+	tempExt = 301.94371853443238
+	tempExtUnexp = 301.94319694637227
 	staticPressureAtm = 0.98903193875003848
 	expt = 0.5
 	state = 0
@@ -19368,9 +19368,9 @@ PART
 	srfN = srfAttach, 91,COLLIDERA003
 	mass = 0.289999992
 	shielded = False
-	temp = 302.55367650204704
-	tempExt = 302.55459184792358
-	tempExtUnexp = 302.55455843044609
+	temp = 301.9262521187174
+	tempExt = 301.92777632623722
+	tempExtUnexp = 301.92773545749128
 	staticPressureAtm = 0.98873730444655195
 	expt = 0.100000001
 	state = 0
@@ -19578,9 +19578,9 @@ PART
 	srfN = srfAttach, 85,COLLIDER
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55369750809581
-	tempExt = 302.55529034223144
-	tempExtUnexp = 302.55522535048425
+	temp = 301.92627782640443
+	tempExt = 301.92829711991806
+	tempExtUnexp = 301.92822919957291
 	staticPressureAtm = 0.98893985141214835
 	expt = 0.5
 	state = 0
@@ -19787,9 +19787,9 @@ PART
 	srfN = srfAttach, 85,COLLIDER
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55369750809581
-	tempExt = 302.55529034223144
-	tempExtUnexp = 302.55522535048425
+	temp = 301.92627782640443
+	tempExt = 301.92829711991806
+	tempExtUnexp = 301.92822919957291
 	staticPressureAtm = 0.98893992670841813
 	expt = 0.5
 	state = 0
@@ -19996,9 +19996,9 @@ PART
 	srfN = srfAttach, 82,COLLISION
 	mass = 0.00600000005
 	shielded = False
-	temp = 302.55516984738176
-	tempExt = 302.57055852916898
-	tempExtUnexp = 302.57004332571466
+	temp = 301.927845606944
+	tempExt = 301.94397471300789
+	tempExtUnexp = 301.94344492656938
 	staticPressureAtm = 0.98895506125863553
 	expt = 0.5
 	state = 0
@@ -20162,9 +20162,9 @@ PART
 	srfN = srfAttach, 82,COLLISION
 	mass = 0.00600000005
 	shielded = False
-	temp = 302.55516984738176
-	tempExt = 302.57055852916898
-	tempExtUnexp = 302.57004332571466
+	temp = 301.927845606944
+	tempExt = 301.94397471300789
+	tempExtUnexp = 301.94344492656938
 	staticPressureAtm = 0.98895483536982631
 	expt = 0.5
 	state = 0
@@ -20328,9 +20328,9 @@ PART
 	srfN = srfAttach, 82,COLLISION
 	mass = 0.00600000005
 	shielded = False
-	temp = 302.55516984738176
-	tempExt = 302.57055852916898
-	tempExtUnexp = 302.57004332571466
+	temp = 301.927845606944
+	tempExt = 301.94397471300789
+	tempExtUnexp = 301.94344492656938
 	staticPressureAtm = 0.98895498596236575
 	expt = 0.5
 	state = 0
@@ -20494,9 +20494,9 @@ PART
 	srfN = srfAttach, 82,COLLISION
 	mass = 0.600000024
 	shielded = False
-	temp = 302.55367660183379
-	tempExt = 302.55480816357698
-	tempExtUnexp = 302.55475988650085
+	temp = 301.92625206296964
+	tempExt = 301.92765756014023
+	tempExtUnexp = 301.92761182802434
 	staticPressureAtm = 0.98929314150976122
 	expt = 0.5
 	state = 0
@@ -20638,8 +20638,8 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Deployed
-		stateString = Deployed
+		stateDisplayString = Retracted
+		stateString = Retracted
 		stagingEnabled = True
 		position = 1
 		EVENTS
@@ -20876,9 +20876,9 @@ PART
 	srfN = srfAttach, 51,collider.002
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55367821234319
-	tempExt = 302.55486927579267
-	tempExtUnexp = 302.55482902211986
+	temp = 301.9262582879411
+	tempExt = 301.92788468918963
+	tempExtUnexp = 301.92784097807692
 	staticPressureAtm = 0.98911423757286265
 	expt = 0.5
 	state = 0
@@ -21085,9 +21085,9 @@ PART
 	srfN = srfAttach, 51,collider.002
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55367821234319
-	tempExt = 302.55486927579267
-	tempExtUnexp = 302.55482902211986
+	temp = 301.9262582879411
+	tempExt = 301.92788468918963
+	tempExtUnexp = 301.92784097807692
 	staticPressureAtm = 0.98911483994302052
 	expt = 0.5
 	state = 0
@@ -21294,9 +21294,9 @@ PART
 	srfN = srfAttach, 51,collider.002
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55367821234319
-	tempExt = 302.55486927579267
-	tempExtUnexp = 302.55482902211986
+	temp = 301.9262582879411
+	tempExt = 301.92788468918963
+	tempExtUnexp = 301.92784097807692
 	staticPressureAtm = 0.98902252671632118
 	expt = 0.5
 	state = 0
@@ -21503,9 +21503,9 @@ PART
 	srfN = srfAttach, 51,collider.002
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55367821234319
-	tempExt = 302.55486927579267
-	tempExtUnexp = 302.55482902211986
+	temp = 301.9262582879411
+	tempExt = 301.92788468918963
+	tempExtUnexp = 301.92784097807692
 	staticPressureAtm = 0.98902305379020938
 	expt = 0.5
 	state = 0
@@ -21712,9 +21712,9 @@ PART
 	srfN = srfAttach, 51,collider.002
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55367821234319
-	tempExt = 302.55486927579267
-	tempExtUnexp = 302.55482902211986
+	temp = 301.9262582879411
+	tempExt = 301.92788468918963
+	tempExtUnexp = 301.92784097807692
 	staticPressureAtm = 0.98920512017043694
 	expt = 0.5
 	state = 0
@@ -21921,9 +21921,9 @@ PART
 	srfN = srfAttach, 51,collider.002
 	mass = 0.00999999978
 	shielded = False
-	temp = 302.55367821234319
-	tempExt = 302.55486927579267
-	tempExtUnexp = 302.55482902211986
+	temp = 301.9262582879411
+	tempExt = 301.92788468918963
+	tempExtUnexp = 301.92784097807692
 	staticPressureAtm = 0.98920572254059491
 	expt = 0.5
 	state = 0
@@ -22132,9 +22132,9 @@ PART
 	srfN = srfAttach, 51,collider.001
 	mass = 0.762499988
 	shielded = False
-	temp = 302.55367649469196
-	tempExt = 302.55344193736238
-	tempExtUnexp = 302.55344425155499
+	temp = 301.92625153969408
+	tempExt = 301.92696736369368
+	tempExtUnexp = 301.92695036622604
 	staticPressureAtm = 0.98893480656207589
 	expt = 0.5
 	state = 0
@@ -22358,9 +22358,9 @@ PART
 	srfN = srfAttach, 51,collider.001
 	mass = 0.762499988
 	shielded = False
-	temp = 302.55367649469196
-	tempExt = 302.55344193736238
-	tempExtUnexp = 302.55344425155499
+	temp = 301.92625153969408
+	tempExt = 301.92696736369368
+	tempExtUnexp = 301.92695036622604
 	staticPressureAtm = 0.9889345053769969
 	expt = 0.5
 	state = 0
@@ -22584,9 +22584,9 @@ PART
 	srfN = srfAttach, 51,collider.001
 	mass = 0.762499988
 	shielded = False
-	temp = 302.55367660008898
-	tempExt = 302.55608666305721
-	tempExtUnexp = 302.5560074840468
+	temp = 301.92625163124785
+	tempExt = 301.92821253237855
+	tempExtUnexp = 301.92815753134147
 	staticPressureAtm = 0.98929344269484021
 	expt = 0.5
 	state = 0
@@ -22810,9 +22810,9 @@ PART
 	srfN = srfAttach, 51,collider.001
 	mass = 0.762499988
 	shielded = False
-	temp = 302.55367659929482
-	tempExt = 302.55606883920456
-	tempExtUnexp = 302.55599020859302
+	temp = 301.92625165233312
+	tempExt = 301.92850985212095
+	tempExtUnexp = 301.92844562801048
 	staticPressureAtm = 0.9892937438799192
 	expt = 0.5
 	state = 0
@@ -23052,8 +23052,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98922575134834534
 	expt = 0.5
@@ -23159,7 +23159,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -23211,8 +23211,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98922033001692411
 	expt = 0.5
@@ -23318,7 +23318,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -23370,8 +23370,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98920451780027907
 	expt = 0.5
@@ -23477,7 +23477,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -23529,8 +23529,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98917997121634438
 	expt = 0.5
@@ -23636,7 +23636,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -23688,8 +23688,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98914902444948183
 	expt = 0.5
@@ -23795,7 +23795,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -23847,8 +23847,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98911468935048108
 	expt = 0.5
@@ -23954,7 +23954,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24006,8 +24006,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98908035425148033
 	expt = 0.5
@@ -24113,7 +24113,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24165,8 +24165,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98904933218834812
 	expt = 0.5
@@ -24272,7 +24272,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24324,8 +24324,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98902478560441331
 	expt = 0.5
@@ -24431,7 +24431,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24483,8 +24483,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98900897338776828
 	expt = 0.5
@@ -24590,7 +24590,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24642,8 +24642,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98900347676007738
 	expt = 0.5
@@ -24749,7 +24749,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24801,8 +24801,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9890088980914985
 	expt = 0.5
@@ -24908,7 +24908,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -24960,8 +24960,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98902463501187388
 	expt = 0.5
@@ -25067,7 +25067,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -25119,8 +25119,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98904918159580857
 	expt = 0.5
@@ -25226,7 +25226,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -25278,8 +25278,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98908020365894089
 	expt = 0.5
@@ -25385,7 +25385,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -25437,8 +25437,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98911453875794164
 	expt = 0.5
@@ -25544,7 +25544,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -25596,8 +25596,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98914887385694239
 	expt = 0.5
@@ -25703,7 +25703,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -25755,8 +25755,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98917982062380483
 	expt = 0.5
@@ -25862,7 +25862,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -25914,8 +25914,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9892044425040093
 	expt = 0.5
@@ -26021,7 +26021,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -26073,8 +26073,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98922025472065445
 	expt = 0.5
@@ -26180,7 +26180,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -26232,8 +26232,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98916174951906766
 	expt = 0.5
@@ -26339,7 +26339,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -26391,8 +26391,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98915557522494901
 	expt = 0.5
@@ -26498,7 +26498,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -26550,8 +26550,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98914533493226464
 	expt = 0.5
@@ -26657,7 +26657,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -26709,8 +26709,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98913208278879061
 	expt = 0.5
@@ -26816,7 +26816,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -26868,8 +26868,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98911717412738243
 	expt = 0.5
@@ -26975,7 +26975,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27027,8 +27027,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98910203957716503
 	expt = 0.5
@@ -27134,7 +27134,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27186,8 +27186,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98908803447099369
 	expt = 0.5
@@ -27293,7 +27293,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27345,8 +27345,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98907666473426314
 	expt = 0.5
@@ -27452,7 +27452,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27504,8 +27504,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98906905981101956
 	expt = 0.5
@@ -27611,7 +27611,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27663,8 +27663,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98906589736769057
 	expt = 0.5
@@ -27770,7 +27770,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27822,8 +27822,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98906747858935506
 	expt = 0.5
@@ -27929,7 +27929,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -27981,8 +27981,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9890736528834736
 	expt = 0.5
@@ -28088,7 +28088,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -28140,8 +28140,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98908389317615808
 	expt = 0.5
@@ -28247,7 +28247,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -28299,8 +28299,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98909707002336222
 	expt = 0.5
@@ -28406,7 +28406,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -28458,8 +28458,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98911197868477052
 	expt = 0.5
@@ -28565,7 +28565,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -28617,8 +28617,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9891271885312577
 	expt = 0.5
@@ -28724,7 +28724,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -28776,8 +28776,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98914111834115925
 	expt = 0.5
@@ -28883,7 +28883,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -28935,8 +28935,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.9891524880778898
 	expt = 0.5
@@ -29042,7 +29042,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -29094,8 +29094,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98916016829740316
 	expt = 0.5
@@ -29201,7 +29201,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -29253,8 +29253,8 @@ PART
 	srfN = srfAttach, 51,collider
 	mass = 0.0399999991
 	shielded = True
-	temp = 302.55367649451671
-	tempExt = 302.55367649302315
+	temp = 301.9262515393383
+	tempExt = 301.92659832132296
 	tempExtUnexp = 302.55367649302315
 	staticPressureAtm = 0.98916333074073215
 	expt = 0.5
@@ -29360,7 +29360,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 799.3021793248502
+		amount = 795.8826576474298
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -29393,9 +29393,9 @@ PART
 	srfN = srfAttach, 0,collider_j_sl_cockpit.001
 	mass = 0.600000024
 	shielded = False
-	temp = 302.55334596931601
-	tempExt = 302.32678651091561
-	tempExtUnexp = 302.32637452603933
+	temp = 301.92592035468255
+	tempExt = 301.69894410955811
+	tempExtUnexp = 301.69853470379115
 	staticPressureAtm = 0.98930933020775502
 	expt = 0.5
 	state = 0
@@ -29537,8 +29537,8 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
-		stateDisplayString = Deployed
-		stateString = Deployed
+		stateDisplayString = Retracted
+		stateString = Retracted
 		stagingEnabled = True
 		position = 1
 		EVENTS
@@ -29799,9 +29799,9 @@ PART
 	srfN = srfAttach, 0,collider_j_sl_cockpit.001
 	mass = 0.0799999982
 	shielded = False
-	temp = 302.55366111192785
-	tempExt = 302.53951093267085
-	tempExtUnexp = 302.53948318105449
+	temp = 301.9262336358251
+	tempExt = 301.91075182168316
+	tempExtUnexp = 301.91072964111351
 	staticPressureAtm = 0.989116722349764
 	expt = 0.100000001
 	state = 0
@@ -30051,9 +30051,9 @@ PART
 	srfN = srfAttach, 0,collider_j_sl_cockpit.001
 	mass = 0.0799999982
 	shielded = False
-	temp = 302.5536611190405
-	tempExt = 302.53951795414952
-	tempExtUnexp = 302.53949018421542
+	temp = 301.92623356415845
+	tempExt = 301.91068647588207
+	tempExtUnexp = 301.91066444020845
 	staticPressureAtm = 0.9891172494236522
 	expt = 0.100000001
 	state = 0
@@ -30272,15 +30272,15 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True
-	Gear = True, 0
-	Light = False, 0
+	Stage = False
+	Gear = False
+	Light = False
 	RCS = False, 0
 	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
-	Custom02 = False, 0
+	Custom02 = False
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -30303,9 +30303,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 1
-	yaw = 0
-	roll = 0
+	pitch = 0.5133186
+	yaw = -0.0018725405
+	roll = 0.007373092
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -30338,7 +30338,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 4783637504.4526501
+		lastUpdate = 4783719654.6808586
 		selectedPad = 0
 		Productivity = 0.71790197724124982
 	}
