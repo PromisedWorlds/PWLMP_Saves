@@ -7,7 +7,7 @@ dumb = 0.0669170395
 badS = False
 veteran = False
 tour = False
-state = Assigned
+state = Available
 inactive = False
 inactiveTimeEnd = 0
 gExperienced = 0
@@ -71,7 +71,7 @@ INVENTORY
 	name = ModuleInventoryPart
 	isEnabled = True
 	stagingEnabled = True
-	inventory = evaJetpack
+	inventory = evaChute,evaJetpack
 	EVENTS
 	{
 	}
@@ -83,6 +83,261 @@ INVENTORY
 		STOREDPART
 		{
 			slotIndex = 0
+			partName = evaChute
+			quantity = 1
+			stackCapacity = 1
+			variantName = 
+			PART
+			{
+				name = evaChute
+				cid = 4294331874
+				uid = 0
+				mid = 0
+				persistentId = 3270278574
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = None, -1
+				mass = 0.00400000019
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = evaChute
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutOff
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutRoot
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutHeaviest
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutGrandparent
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					ResourcesEnableFlow
+					{
+						actionGroup = None
+						active = False
+						wasActiveBeforePartWasAdjusted = False
+					}
+					ResourcesDisableFlow
+					{
+						actionGroup = None
+						active = False
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					packedVolume = 10
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FundsKeeper
+					isEnabled = True
+					OriginalCost = 0
+					OriginalResourcesCost = 0
+					OriginalModulesCost = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = StealBackMyFunds
+					isEnabled = True
+					active = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = GeometryPartModule
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FARAeroPartModule
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FARPartModule
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ShipEffectsCollisions
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = AttachedOnEditor
+					isEnabled = True
+					active = True
+					originalPos = (0, 0, 0)
+					originalRotation = (0, 0, 0, 1)
+					moduleVersion = 6
+					stagingEnabled = True
+					userReallyDeactivatedIt = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+		}
+		STOREDPART
+		{
+			slotIndex = 1
 			partName = evaJetpack
 			quantity = 1
 			stackCapacity = 1
@@ -90,10 +345,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294189836
+				cid = 4294331968
 				uid = 0
 				mid = 0
-				persistentId = 3783931362
+				persistentId = 1239346286
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -204,7 +459,88 @@ INVENTORY
 				}
 				MODULE
 				{
-					name = WBIPrinterRequirements
+					name = FundsKeeper
+					isEnabled = True
+					OriginalCost = 0
+					OriginalResourcesCost = 0
+					OriginalModulesCost = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = StealBackMyFunds
+					isEnabled = True
+					active = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = GeometryPartModule
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FARAeroPartModule
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FARPartModule
 					isEnabled = True
 					stagingEnabled = True
 					EVENTS
@@ -222,6 +558,26 @@ INVENTORY
 					name = ShipEffectsCollisions
 					isEnabled = True
 					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = AttachedOnEditor
+					isEnabled = True
+					active = True
+					originalPos = (0, 0, 0)
+					originalRotation = (0, 0, 0, 1)
+					moduleVersion = 6
+					stagingEnabled = True
+					userReallyDeactivatedIt = False
 					EVENTS
 					{
 					}
@@ -286,8 +642,34 @@ CAREER_LOG
 	3 = Land,Kerbin
 	3 = Flight,Kerbin
 	3 = Recover
+	4 = Flight,Kerbin
+	4 = Suborbit,Kerbin
+	4 = Orbit,Kerbin
+	4 = Flyby,Mun
+	4 = Escape,Mun
+	4 = Orbit,Mun
+	4 = Suborbit,Mun
+	4 = Die
 }
 FLIGHT_LOG
 {
 	flight = 4
+}
+KerbalExt
+{
+	experience
+	{
+		_current = Passenger
+		Passenger
+		{
+			_current = Kerbin
+			Kerbin
+			{
+				_current = FLYING
+				_currentUT = 4782822449.0520897
+				PRELAUNCH = 65.881507873535156
+				FLYING = 80.601844787597656
+			}
+		}
+	}
 }

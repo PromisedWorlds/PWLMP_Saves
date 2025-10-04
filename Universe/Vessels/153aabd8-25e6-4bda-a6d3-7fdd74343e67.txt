@@ -1,28 +1,28 @@
-pid = 5ad615f1b13344ed812e9754d6aaa40f
-persistentId = 319649551
-name = Destroços da Kerbal X Restock
+pid = 153aabd825e64bdaa6d37fdd74343e67
+persistentId = 343011980
+name = Untitled Space Craft Debris
 type = Debris
-sit = FLYING
+sit = SPLASHED
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = LaunchPad
+launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
-splashed = False
-met = 0.04000091552734375
-lct = 4782822436.4974174
-lastUT = 4782822436.5374184
-distanceTraveled = 0.077081909544404206
+splashed = True
+met = 0.96002197265625
+lct = 4782823345.362711
+lastUT = 4782823346.3627338
+distanceTraveled = 4.2549737475876643
 root = 0
-lat = -0.10882434706958934
-lon = -74.551372196988424
-alt = 70.202129959128797
-hgt = 2.48486447
-nrm = 0.0184196234,0.999814034,-0.00571730733
-rot = -0.252958477,-0.699620903,0.665875256,0.0561499335
-CoM = 7.87543831E-05,1.46031216E-05,-0.312963217
+lat = 0.048748798377032346
+lon = -74.096283780364303
+alt = -128.14582774764858
+hgt = 659.778137
+nrm = -0.39825359,-0.536035299,-0.744352221
+rot = 0.157523498,-0.463329285,-0.739061713,0.462925702
+CoM = -0.930955231,0.071274288,3.75509012E-06
 stg = 0
 prst = False
 ref = 0
@@ -40,56 +40,55 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300809.43531540217
-	ECC = 0.99485166968810068
-	INC = 0.2442237253002221
-	LPE = 153.54559467773146
-	LAN = 271.0200209393887
-	MNA = 3.1416850906940321
-	EPH = 4782822436.5374184
+	SMA = 302099.03392792889
+	ECC = 0.98619326077585179
+	INC = 0.71609687018689905
+	LPE = 183.75532505641752
+	LAN = 256.31131426125091
+	MNA = 3.2056480145386783
+	EPH = 4782823346.3627338
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = pointyNoseConeB
-	cid = 4286996802
-	uid = 3078555033
-	mid = 1507047370
-	persistentId = 2782337287
+	name = wingConnector
+	cid = 4288813542
+	uid = 2860551168
+	mid = 1539234725
+	persistentId = 1033467749
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1
+	rotation = 0,0,0,1.00000048
 	mirror = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	istg = -1
 	resPri = 0
-	dstg = 8
+	dstg = 0
 	sqor = -1
 	sepI = -1
 	sidx = -1
-	attm = 0
+	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = bottom01, -1
-	mass = 0.075000003
+	srfN = srfAttach, -1,COL 5
+	mass = 0.284909397
 	shielded = False
-	temp = 297.69120015802798
-	tempExt = 298.895672055403
-	tempExtUnexp = 298.89674501369734
-	staticPressureAtm = 0.98959673606934673
-	expt = 0.5
-	state = 1
+	temp = 312.23359121100833
+	tempExt = 313.79438494989864
+	tempExtUnexp = 313.79704369716774
+	staticPressureAtm = 13.258901059615749
+	expt = 0.100000001
+	state = 0
 	PreFailState = 0
 	attached = False
-	autostrutMode = Off
+	autostrutMode = Grandparent
 	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = pointyNoseConeB
+	flag = Squad/Flags/Canada
+	rTrf = wingConnector
 	modCost = 0
-	modMass = 0
-	moduleVariantName = White
+	modMass = 0.0849093944
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -168,7 +167,98 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = FundsKeeper
+		isEnabled = True
+		OriginalCost = 500
+		OriginalResourcesCost = 0
+		OriginalModulesCost = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = StealBackMyFunds
+		isEnabled = True
+		active = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FMRS_PM
+		isEnabled = True
+		stagingEnabled = True
+		MM_DYNAMIC = true
+		parent_vessel = 00000000-0000-0000-0000-000000000000
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		type = free_square
+		active = True
+		available = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 500
+		OriginalCrewCapacity = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -183,9 +273,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModulePartVariants
+		name = FARAeroPartModule
 		isEnabled = True
-		useVariantMass = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -214,9 +303,14 @@ PART
 	}
 	MODULE
 	{
-		name = WBIModuleEVAFlagSwitch
+		name = AttachedOnEditor
 		isEnabled = True
+		active = True
+		originalPos = (4.65957975, 9.69258595, -5.12640238)
+		originalRotation = (0, 0.707106829, 0.707106829, 0)
+		moduleVersion = 6
 		stagingEnabled = True
+		userReallyDeactivatedIt = False
 		EVENTS
 		{
 		}
@@ -230,11 +324,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 4782822364.91539
-	Gear = False, 0
+	Stage = True, 4782823275.62111
+	Gear = False, 4782823298.80165
 	Light = False, 0
-	RCS = True, 4782822351.48723
-	SAS = False, 4782822364.43538
+	RCS = False, 0
+	SAS = True, 4782823271.84103
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -267,7 +361,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
@@ -286,11 +380,11 @@ VESSELMODULES
 	ModuleDynamicBatteryStorage
 	{
 	}
-	ELVesselWorkNet
+	FlightGUI
 	{
-		lastUpdate = 0
-		selectedPad = 0
-		Productivity = 0
+	}
+	FARVesselAero
+	{
 	}
 	AtmoFxModule
 	{
@@ -311,17 +405,6 @@ VESSELMODULES
 	{
 	}
 	SystemHeatVessel
-	{
-	}
-	GoldStrikeVesselModule
-	{
-		lastProspectLongitude = 0
-		lastProspectLatitude = 0
-		lastProspectAltitude = 0
-		lastProspectPlanet = -1
-		lastProspectBiome = 
-	}
-	WBIPressureOverride
 	{
 	}
 }
