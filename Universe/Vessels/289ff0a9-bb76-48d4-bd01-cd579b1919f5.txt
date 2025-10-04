@@ -6,22 +6,22 @@ sit = LANDED
 landed = True
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = 
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 2409505.378641435
-lct = 2829435.833634368
-lastUT = 5238941.232275803
+met = 4812582212.9803658
+lct = 2829435.8336343681
+lastUT = 4815411648.8340006
 distanceTraveled = 0
 root = 0
-lat = 2.4493750877719616
-lon = 81.52258988101748
-alt = 4753.15907469485
-hgt = 0.35304913
-nrm = -0.06597444415092468,0.9955834746360779,-0.06679068505764008
-rot = 0.67413026,-0.10523843,-0.19858256,0.70358956
+lat = 2.4493750880393841
+lon = 81.522589881161053
+alt = 4753.1590764980356
+hgt = 0.376261503
+nrm = -0.0661890358,0.995567203,-0.0668208003
+rot = 0.674173176,-0.105232798,-0.198584706,0.70354867
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = 0.36
+cHdg = -0.676
+cMod = 0
 ORBIT
 {
-	SMA = 102390.34267977926
-	ECC = 0.9997311632704492
-	INC = 2.4493750877719616
-	LPE = 270
-	LAN = 111.53551725944703
-	MNA = 3.141592653589772
-	EPH = 5238943.8322757445
+	SMA = 102390.34268071633
+	ECC = 0.99973116326975831
+	INC = 2.4493750880393841
+	LPE = 270.00000078858932
+	LAN = 273.20688560667469
+	MNA = 3.1415926536344672
+	EPH = 4815411648.8140001
 	REF = 2
 	IDENT = Squad/Mun
 }
@@ -63,11 +63,11 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = -1
 	resPri = 0
 	dstg = 0
 	sqor = -1
-	sepI = 0
+	sepI = -1
 	sidx = -1
 	attm = 0
 	sameVesselCollision = False
@@ -85,7 +85,7 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	rTrf = flag (soyuz-apollo, for convinience)
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -244,4 +244,51 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	ShipEffects
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }

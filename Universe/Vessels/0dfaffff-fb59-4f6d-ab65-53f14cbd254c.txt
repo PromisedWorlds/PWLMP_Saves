@@ -4,25 +4,25 @@ name = RC-0 Probodobodyne RV-M8
 type = Rover
 sit = LANDED
 landed = True
-skipGroundPositioning = False
+skipGroundPositioning = True
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = False
 launchedFrom = 
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 3245.8616428375244
-lct = 4783352918.805207
-lastUT = 4783356164.726851
+met = 32058891.164456367
+lct = 4783352918.8052073
+lastUT = 4815411810.0096645
 distanceTraveled = 198.0356397135466
 root = 0
-lat = 5.58790037478739
-lon = -143.49192866525755
-alt = 1942.5948950565653
-hgt = 0.711331
-nrm = -0.0013832710683345795,-0.004512190818786621,-0.9999889135360718
-rot = -0.3189891,0.32967797,-0.6296388,0.62698764
-CoM = 0.000558307394,0.114589438,0.0743967816
+lat = 5.5876075703771182
+lon = -143.4918988370033
+alt = 1942.5141125240771
+hgt = 0.716279328
+nrm = -0.000894024968,-0.00488781929,-0.999987602
+rot = -0.298918992,0.347487122,-0.59276706,0.662213981
+CoM = 0.000560366549,0.114581615,0.0744170174
 stg = 0
 prst = False
 ref = 0
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.5399987
-cHdg = -9.044001
-cMod = 1
+cPch = 0.226
+cHdg = 1.108
+cMod = 0
 ORBIT
 {
-	SMA = 100984.18349673899
-	ECC = 0.9997440780138526
-	INC = 5.5879020991388515
-	LPE = 269.9896064430772
-	LAN = 177.47006748058993
-	MNA = 3.1415948702621246
-	EPH = 4783356163.726829
+	SMA = 100984.14443036199
+	ECC = 0.99974406143629957
+	INC = 5.5876129138631976
+	LPE = 269.99998519104201
+	LAN = 48.609977519198765
+	MNA = 3.1415926129236924
+	EPH = 4815411809.9896641
 	REF = 2
 	IDENT = Squad/Mun
 }
@@ -80,8 +80,8 @@ PART
 	attN = top, -1
 	mass = 0.150000006
 	shielded = False
-	temp = 221.79879042213804
-	tempExt = 221.69958921536636
+	temp = 254.77159446259134
+	tempExt = 254.68948536469088
 	tempExtUnexp = 225.44379369671313
 	staticPressureAtm = 0
 	expt = 0
@@ -275,696 +275,6 @@ PART
 	}
 	MODULE
 	{
-		name = MechJebCore
-		isEnabled = True
-		running = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnOrbitProgradeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnOrbitRetrogradeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnOrbitNormalAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnOrbitAntinormalAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnOrbitRadialInAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnOrbitRadialOutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnKillRotationAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnDeactivateSmartASSAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnLandsomewhereAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnLandTargetAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnPanicAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnTranslatronOffAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnTranslatronKeepVertAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnTranslatronZeroSpeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnTranslatronPlusOneSpeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnTranslatronMinusOneSpeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnTranslatronToggleHSAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			OnAscentAPToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		MechJebLocalSettings
-		{
-			MechJebModuleMenu
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRoverWindow
-			{
-				unlockParts = 
-				unlockTechs = fieldScience
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleAscentNavBall
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLogicalStageTracking
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRCSBalancerWindow
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = False
-				StabilityControl = False
-				LimitAcceleration = False
-				unlockParts = 
-				unlockTechs = 
-				heading
-				{
-					_val = 0
-					_text = 0
-				}
-				speed
-				{
-					_val = 10
-					_text = 10
-				}
-			}
-			MechJebModuleSpaceplaneGuidance
-			{
-				runwayIndex = 0
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleAscentPVG
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleInfoItems
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSmartRcs
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentClassic
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSpaceplaneAutopilot
-			{
-				bBreakAsSoonAsLanded = False
-				unlockParts = 
-				unlockTechs = 
-				glideslope
-				{
-					_val = 2.5
-					_text = 2.5
-				}
-				approachSpeed
-				{
-					_val = 80
-					_text = 80
-				}
-				touchdownSpeed
-				{
-					_val = 60
-					_text = 60
-				}
-				maximumSafeBankAngle
-				{
-					_val = 25
-					_text = 25
-				}
-			}
-			MechJebModuleAirplaneAutopilot
-			{
-				HeadingHoldEnabled = False
-				AltitudeHoldEnabled = False
-				VertSpeedHoldEnabled = False
-				RollHoldEnabled = False
-				SpeedHoldEnabled = False
-				AltitudeTarget = 0
-				HeadingTarget = 90
-				RollTarget = 0
-				SpeedTarget = 0
-				VertSpeedTarget = 0
-				BankAngle = 30
-				unlockParts = 
-				unlockTechs = 
-				AccKp
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				AccKi
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				AccKd
-				{
-					_val = 0.0050000000000000001
-					_text = 0.005
-				}
-				PitKp
-				{
-					_val = 2
-					_text = 2
-				}
-				PitKi
-				{
-					_val = 1
-					_text = 1
-				}
-				PitKd
-				{
-					_val = 0.0050000000000000001
-					_text = 0.005
-				}
-				RolKp
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				RolKi
-				{
-					_val = 0.02
-					_text = 0.02
-				}
-				RolKd
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				YawKp
-				{
-					_val = 1
-					_text = 1
-				}
-				YawKi
-				{
-					_val = 0.25
-					_text = 0.25
-				}
-				YawKd
-				{
-					_val = 0.02
-					_text = 0.02
-				}
-				YawLimit
-				{
-					_val = 10
-					_text = 10
-				}
-				RollLimit
-				{
-					_val = 45
-					_text = 45
-				}
-				PitchDownLimit
-				{
-					_val = 15
-					_text = 15
-				}
-				PitchUpLimit
-				{
-					_val = 25
-					_text = 25
-				}
-			}
-			MechJebModuleDockingGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleSettings
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentGT
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleDebugArrows
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSmartASS
-			{
-				mode = ORBITAL
-				target = OFF
-				advReference = INERTIAL
-				advDirection = FORWARD
-				forceRol = False
-				forcePitch = True
-				forceYaw = True
-				unlockParts = 
-				unlockTechs = flightControl
-				srfHdg
-				{
-					_val = 90
-					_text = 90
-				}
-				srfPit
-				{
-					_val = 90
-					_text = 90
-				}
-				srfRol
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelYaw
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelPit
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelRol
-				{
-					_val = 0
-					_text = 0
-				}
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = False
-				overrideSafeDistance = False
-				overrideTargetSize = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			ModExtensionDemo
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleThrustWindow
-			{
-				autostageSavedState = False
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleWarpHelper
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-				phaseAngle
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = flightControl
-			}
-			MechJebModuleAscentAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRendezvousAutopilotWindow
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleNodeExecutor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleNodeEditor
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingAutopilot
-			{
-				deployGears = True
-				deployChutes = True
-				rcsAdjustment = True
-				unlockParts = 
-				unlockTechs = 
-				touchdownSpeed
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				limitGearsStage
-				{
-					val = 0
-					_text = 0
-				}
-				limitChutesStage
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleScript
-			{
-				minifiedGUI = False
-				selectedSlot = 0
-				selectedMemorySlotType = 0
-				vesselSaveName = RC-0 Probodobodyne RV-M8
-				activeSavepoint = -1
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLandingGuidance
-			{
-				landingSiteIdx = 0
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleLandingPredictions
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleTranslatron
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-				trans_spd
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleAscentGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleRendezvousAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleWaypointWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleWaypointHelpWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleTargetController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleManeuverPlanner
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleStageStats
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAirplaneGuidance
-			{
-				showpid = False
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleGuidanceController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRendezvousGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleAscentClassicMenu
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleWarpController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleDeployableAntennaController
-			{
-				prev_shouldDeploy = False
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSolarPanelController
-			{
-				prev_shouldDeploy = False
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleThrustController
-			{
-				limitThrottle = False
-				limiterMinThrottle = False
-				electricThrottle = False
-				unlockParts = 
-				unlockTechs = 
-				maxThrottle
-				{
-					_val = 1
-					_text = 100
-				}
-				minThrottle
-				{
-					_val = 0.050000000000000003
-					_text = 5
-				}
-				electricThrottleLo
-				{
-					_val = 0.050000000000000003
-					_text = 5
-				}
-				electricThrottleHi
-				{
-					_val = 0.14999999999999999
-					_text = 15
-				}
-			}
-			MechJebModuleRCSController
-			{
-				unlockParts = 
-				unlockTechs = 
-				Tf
-				{
-					_val = 1
-					_text = 1
-				}
-				Kp
-				{
-					_val = 0.125
-					_text = 0.125
-				}
-				Ki
-				{
-					_val = 0.070000000000000007
-					_text = 0.07
-				}
-				Kd
-				{
-					_val = 0.53000000000000003
-					_text = 0.53
-				}
-			}
-			MechJebModuleRCSBalancer
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAttitudeController
-			{
-				unlockParts = 
-				unlockTechs = 
-				MJAttitudeController
-				{
-				}
-				KosAttitudeController
-				{
-				}
-				HybridController
-				{
-				}
-				BetterController
-				{
-				}
-			}
-			MechJebModuleStagingController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleFlightRecorder
-			{
-				markUT = 4783352918.8652086
-				deltaVExpended = NaN
-				dragLosses = NaN
-				gravityLosses = 0
-				steeringLosses = NaN
-				markLAN = 16.906449559944132
-				markLatitude = 0.5587252686739389
-				markLongitude = -14.348212382733857
-				markAltitude = 194.40992270764545
-				markBodyIndex = 2
-				maxDragGees = NaN
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleFlightRecorderGraph
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -998,21 +308,6 @@ PART
 	MODULE
 	{
 		name = ShipEffectsCollisions
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlightEngineerModule
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -1112,8 +407,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.80538496509516
-	tempExt = 221.69405103224767
+	temp = 254.76947301804822
+	tempExt = 254.60739428082729
 	tempExtUnexp = 218.23538247654704
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1212,10 +507,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.02999997
+		springTweakable = 1.22000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (-0.0850003734, 0.00815371424, -5.10364771E-07)
+		suspensionPos = (-0.0850000232, 0.00142627954, 1.86264497E-08)
 		suspensionDefaultPos = (-0.0850000978, -0.0260000005, -7.07805157E-08)
 		autoBoost = 0
 		stagingEnabled = True
@@ -1508,8 +803,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.80538504498872
-	tempExt = 221.69406173418881
+	temp = 254.82070322055873
+	tempExt = 254.88827420383677
 	tempExtUnexp = 213.14864658053773
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1608,10 +903,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.03999996
+		springTweakable = 1.22000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (-0.0849971399, 0.00141384453, -2.44379044E-06)
+		suspensionPos = (-0.085000053, -0.00538034691, 4.6566111E-08)
 		suspensionDefaultPos = (-0.0850000978, -0.0260000005, -7.07805157E-08)
 		autoBoost = 0
 		stagingEnabled = True
@@ -1904,8 +1199,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.80538496011448
-	tempExt = 221.69405036273974
+	temp = 254.8098039290245
+	tempExt = 254.83097426699214
 	tempExtUnexp = 207.23689641484324
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2004,10 +1299,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.03999996
+		springTweakable = 1.22000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (-0.0850023478, -0.000712089241, 1.30757689E-06)
+		suspensionPos = (-0.0850000381, -0.00363447471, 2.79396706E-09)
 		suspensionDefaultPos = (-0.0850000978, -0.0260000005, -7.07805157E-08)
 		autoBoost = 0
 		stagingEnabled = True
@@ -2300,8 +1595,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79335101089799
-	tempExt = 221.65858328800968
+	temp = 254.74549695370661
+	tempExt = 254.57497731343426
 	tempExtUnexp = 198.09643402746474
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2555,21 +1850,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2608,8 +1888,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79292688097368
-	tempExt = 221.65346561606827
+	temp = 254.74549695370661
+	tempExt = 254.57497731343426
 	tempExtUnexp = 197.26696181102173
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2863,21 +2143,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2916,8 +2181,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79357003541429
-	tempExt = 221.66118639334488
+	temp = 254.74549695370661
+	tempExt = 254.57497731343426
 	tempExtUnexp = 196.45467101145402
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3171,21 +2436,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -3224,8 +2474,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79292688097368
-	tempExt = 221.65346561606827
+	temp = 254.74549695370661
+	tempExt = 254.57497731343426
 	tempExtUnexp = 195.65868092504891
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3479,21 +2729,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -3532,8 +2767,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.80538504021399
-	tempExt = 221.69406109226711
+	temp = 254.77640098905877
+	tempExt = 254.64632880559927
 	tempExtUnexp = 219.01758658775611
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3632,10 +2867,10 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 1.02999997
+		springTweakable = 1.22000003
 		damperTweakable = 1.10000002
 		autoSpringDamper = True
-		suspensionPos = (-0.0849988014, 0.0107610524, 1.94087625E-06)
+		suspensionPos = (-0.0850000605, -4.77731228E-05, 4.93600858E-08)
 		suspensionDefaultPos = (-0.0850000978, -0.0260000005, -7.07805157E-08)
 		autoBoost = 0
 		stagingEnabled = True
@@ -3929,8 +3164,8 @@ PART
 	attN = bottom, 0
 	mass = 0.0599999987
 	shielded = False
-	temp = 221.80542839631784
-	tempExt = 221.65471675794157
+	temp = 254.78603586457274
+	tempExt = 254.87532033661137
 	tempExtUnexp = 184.40302293255237
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4083,7 +3318,7 @@ PART
 		isEnabled = True
 		packedVolume = 150
 		beingAttached = False
-		beingSettled = True
+		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
@@ -4151,8 +3386,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.78766924600185
-	tempExt = 221.65004183318504
+	temp = 254.69155786174599
+	tempExt = 254.57086883851724
 	tempExtUnexp = 193.51966207096359
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4310,8 +3545,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79383278081781
-	tempExt = 221.65265472811257
+	temp = 254.70344062070018
+	tempExt = 254.55871301022043
 	tempExtUnexp = 250.58420219076194
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4431,7 +3666,7 @@ PART
 		isEnabled = True
 		packedVolume = 12
 		beingAttached = False
-		beingSettled = True
+		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
@@ -4523,8 +3758,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.80534307503703
-	tempExt = 221.65495281255187
+	temp = 254.7720398870712
+	tempExt = 254.57718533635924
 	tempExtUnexp = 189.29508785673335
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4769,8 +4004,8 @@ PART
 	attN = bottom, -1
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79980759048826
-	tempExt = 221.66473984112841
+	temp = 254.76793110054697
+	tempExt = 254.60391451756891
 	tempExtUnexp = 188.93043074193383
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4851,7 +4086,7 @@ PART
 		isEnabled = True
 		currentRotation = (-0.707106829, 0, 0, 0.707106829)
 		storedAnimationTime = 0
-		storedAnimationSpeed = -1
+		storedAnimationSpeed = 0
 		deployState = RETRACTED
 		stagingEnabled = True
 		EVENTS
@@ -4991,8 +4226,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.81353848572229
-	tempExt = 221.65869549596832
+	temp = 254.783510469308
+	tempExt = 254.58348820550441
 	tempExtUnexp = 201.22438444538665
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5184,8 +4419,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.0500000007
 	shielded = False
-	temp = 221.81353887478485
-	tempExt = 221.65869562692208
+	temp = 254.783510469308
+	tempExt = 254.58348820550441
 	tempExtUnexp = 198.94331261929807
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5377,8 +4612,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79190161637516
-	tempExt = 221.663467520159
+	temp = 254.73898640382885
+	tempExt = 254.5724301733319
 	tempExtUnexp = 186.46787591257853
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5505,7 +4740,7 @@ PART
 			subjectID = gravityScan@MunSrfLandedEastFarsideCrater
 			xmit = 0.400000006
 			xmitBonus = 0
-			title = Scan de gravidade de Cratera Distante Oriental em Mun
+			title = Gravity Scan from The Mun's East Farside Crater
 			triggered = False
 			container = 1116564027
 		}
@@ -5587,8 +4822,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.7918193905123
-	tempExt = 221.65819911362459
+	temp = 254.73955538933393
+	tempExt = 254.57268982025332
 	tempExtUnexp = 176.81693072174852
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5715,7 +4950,7 @@ PART
 			subjectID = barometerScan@MunSrfLandedEastFarsideCrater
 			xmit = 0.5
 			xmitBonus = 0
-			title = Scan de pressão atmosférica de Cratera Distante Oriental em Mun
+			title = Atmospheric Pressure Scan from The Mun's East Farside Crater
 			triggered = False
 			container = 1395011294
 		}
@@ -5729,7 +4964,7 @@ PART
 		isEnabled = True
 		packedVolume = 4
 		beingAttached = False
-		beingSettled = True
+		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
@@ -5797,8 +5032,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79812111024543
-	tempExt = 221.66349628374365
+	temp = 254.76595986178373
+	tempExt = 254.59950597942185
 	tempExtUnexp = 185.39056250507141
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5925,7 +5160,7 @@ PART
 			subjectID = temperatureScan@MunSrfLandedEastFarsideCrater
 			xmit = 0.5
 			xmitBonus = 0
-			title = Scan de temperatura de Cratera Distante Oriental em Mun
+			title = Temperature Scan from The Mun's East Farside Crater
 			triggered = False
 			container = 4094142594
 		}
@@ -6007,8 +5242,8 @@ PART
 	srfN = srfAttach, 0,COLLIDER_REBUILT
 	mass = 0.00499999989
 	shielded = False
-	temp = 221.79052931347047
-	tempExt = 221.66072481129896
+	temp = 254.73102568207543
+	tempExt = 254.56954271076154
 	tempExtUnexp = 184.58225587540599
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6135,7 +5370,7 @@ PART
 			subjectID = seismicScan@MunSrfLandedEastFarsideCrater
 			xmit = 0.449999988
 			xmitBonus = 0
-			title = Scan sísmico de Cratera Distante Oriental em Mun
+			title = Seismic Scan from The Mun's East Farside Crater
 			triggered = False
 			container = 751473524
 		}
@@ -6200,7 +5435,7 @@ ACTIONGROUPS
 	Light = True, 4783353954.10256
 	RCS = True, 4783354173.4378
 	SAS = True, 4783354180.29795
-	Brakes = True
+	Brakes = True, 0
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -6231,9 +5466,9 @@ TARGET
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = 0.694911897
+	yaw = 1
+	roll = -0.148805901
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -6260,6 +5495,12 @@ VESSELMODULES
 	}
 	ModuleDynamicBatteryStorage
 	{
+	}
+	ELVesselWorkNet
+	{
+		lastUpdate = 4815411810.0096645
+		selectedPad = 0
+		Productivity = 0
 	}
 	AtmoFxModule
 	{

@@ -1,7 +1,7 @@
 pid = 2320351e58c34084a5043c6f546f9ad9
 persistentId = 3821281207
-name = Stamp-O-Tron Ground Anchor
-type = DeployedGroundPart
+name = The Hook
+type = Base
 sit = LANDED
 landed = True
 skipGroundPositioning = True
@@ -11,18 +11,18 @@ launchedFrom =
 landedAt = Mun
 displaylandedAt = Mun
 splashed = False
-met = 1702577.8678021901
+met = 4811875284.569506
 lct = 3536363.344473613
-lastUT = 5238941.232275803
+lastUT = 4815411647.93398
 distanceTraveled = 0
 root = 0
-lat = 2.4652952731841125
-lon = 81.52307885089381
-alt = 4869.159655776632
-hgt = 0.1984656
-nrm = 0.1406601071357727,0.9023350477218628,0.4074387550354004
-rot = 0.33857343,-0.0104543,-0.13207993,0.9315652
-CoM = -6.21008635,-10.2877178,-27.4965172
+lat = 2.4652937658937577
+lon = 81.5230787434226
+alt = 4869.165764410805
+hgt = 0.22991218
+nrm = 0.1426256000995636,0.8988876342773438,0.41431760787963867
+rot = 0.33568704,-0.008422816,-0.129183,0.93303543
+CoM = -2.68257666,-20.3079414,-24.6426964
 stg = 2
 prst = False
 ref = 279628214
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = -0.03800048
-cHdg = 4.931987
+cPch = 0.13
+cHdg = 4.058002
 cMod = 0
 ORBIT
 {
-	SMA = 102434.61799778038
-	ECC = 0.9997308210081517
-	INC = 2.465491396483099
-	LPE = 270
-	LAN = 111.53578977541747
-	MNA = 3.1415926535898135
-	EPH = 5238943.8322757445
+	SMA = 102432.38760831067
+	ECC = 0.9997308474532043
+	INC = 2.467360857059235
+	LPE = 271.9184379188892
+	LAN = 271.27292738615125
+	MNA = 3.141669840795034
+	EPH = 4815411643.313874
 	REF = 2
 	IDENT = Squad/Mun
 }
@@ -75,8 +75,8 @@ PART
 	attN = top, 1
 	mass = 2
 	shielded = False
-	temp = 274.00109649773776
-	tempExt = 273.62365006937193
+	temp = 166.46391599370699
+	tempExt = 166.4694498591841
 	tempExtUnexp = 321.08509033530959
 	staticPressureAtm = 0
 	expt = 0.5
@@ -216,6 +216,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -243,8 +258,8 @@ PART
 	attN = bottom, 0
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.98451221621133
-	tempExt = 273.72237315188289
+	temp = 166.48207887208198
+	tempExt = 166.51453160336945
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -439,8 +454,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = RSE_Coupler
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -454,7 +469,7 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -547,8 +562,8 @@ PART
 	attN = bottom, 3
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.89952010143912
-	tempExt = 273.49502770794339
+	temp = 166.9843493618892
+	tempExt = 166.88935825877803
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -743,8 +758,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = RSE_Coupler
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -758,7 +773,7 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -851,8 +866,8 @@ PART
 	attN = top, 4
 	mass = 0.100000001
 	shielded = False
-	temp = 273.9538568761954
-	tempExt = 273.50849874188054
+	temp = 166.99788300385183
+	tempExt = 167.04080918499477
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -1103,22 +1118,6 @@ PART
 	}
 	MODULE
 	{
-		name = ParkingBrakeModule
-		isEnabled = True
-		brakeActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -1134,8 +1133,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1212,8 +1211,8 @@ PART
 	attN = top, 5
 	mass = 0.25
 	shielded = False
-	temp = 273.98427003480987
-	tempExt = 273.91715026112638
+	temp = 167.14385131693348
+	tempExt = 167.3226195492303
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1318,6 +1317,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -1349,8 +1363,8 @@ PART
 	attN = N4, -1
 	mass = 0.140000001
 	shielded = False
-	temp = 273.92366783055536
-	tempExt = 273.7790510403691
+	temp = 167.18868420750746
+	tempExt = 167.39026852602029
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1432,7 +1446,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -81.9861145
+		previousTargetAngle = -80.0174561
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -1442,7 +1456,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,2.2737367E-15,1.36560612E-08
-		servoTransformRotation = 0,0.642904282,0,-0.765946507
+		servoTransformRotation = 0,0.64124316,0,-0.767337739
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -1631,6 +1645,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -1655,7 +1684,7 @@ PART
 	launchID = 1
 	parent = 5
 	position = -0.44451785087585449,2.7005681991577148,0.88952517509460449
-	rotation = -0.106408305,0.970985055,0.148923591,-0.153905913
+	rotation = -0.106730916,0.970649362,0.148692071,-0.156009659
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -1671,8 +1700,8 @@ PART
 	attN = top, 7
 	mass = 0.140000001
 	shielded = False
-	temp = 273.86138770006698
-	tempExt = 274.00857373152775
+	temp = 167.32278619208068
+	tempExt = 167.75685915926164
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1752,7 +1781,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -80.0699539
+		previousTargetAngle = -63.2393913
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 1.28700865E-32,-1.13446405E-16,1.13446405E-16,1
@@ -1762,7 +1791,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.524278641,0,0,0.851546764
+		servoTransformRotation = 0.645981669,0,0,0.763352931
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -1948,6 +1977,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -1971,8 +2015,8 @@ PART
 	persistentId = 3476490658
 	launchID = 1
 	parent = 6
-	position = -0.67426371574401855,3.1062610149383545,0.47323793172836304
-	rotation = -0.171300903,0.904917717,-0.382249117,-0.0752699226
+	position = -0.66739779710769653,2.954425573348999,0.36365312337875366
+	rotation = -0.182253316,0.837000668,-0.513516486,-0.0501438342
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -1988,8 +2032,8 @@ PART
 	attN = top, 8
 	mass = 0.140000001
 	shielded = False
-	temp = 273.77090247365425
-	tempExt = 273.87426795864491
+	temp = 167.42236719969318
+	tempExt = 167.96541814724969
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2069,7 +2113,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -2.6038866
+		previousTargetAngle = -0.336245418
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 1.28700865E-32,-1.13446405E-16,1.13446405E-16,1
@@ -2079,7 +2123,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.00293429056,0,0,0.999995708
+		servoTransformRotation = 0.081667915,0,0,0.996659577
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -2249,6 +2293,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2272,8 +2331,8 @@ PART
 	persistentId = 156033757
 	launchID = 1
 	parent = 7
-	position = -1.1156162023544312,3.8805193901062012,-0.33128589391708374
-	rotation = -0.171522841,0.903789937,-0.384907216,-0.0747671276
+	position = -1.0696583986282349,3.2640278339385986,-0.72440081834793091
+	rotation = -0.185741216,0.792264283,-0.580160379,-0.0350925066
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2289,8 +2348,8 @@ PART
 	attN = top, 9
 	mass = 0.659999967
 	shielded = False
-	temp = 273.6420521519338
-	tempExt = 273.83551118470837
+	temp = 167.56063901705744
+	tempExt = 168.15789151633393
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2377,7 +2436,7 @@ PART
 		servoMotorSize = 100
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
-		servoTransformPosition = 0,4.80063629,0
+		servoTransformPosition = 0,4.80251932,0
 		servoTransformRotation = 0.707106829,0,0,0.707106709
 		useMultipleDragCubes = False
 		stagingEnabled = True
@@ -2560,6 +2619,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2583,8 +2657,8 @@ PART
 	persistentId = 1723251235
 	launchID = 1
 	parent = 8
-	position = -3.9094314575195313,8.7816333770751953,-5.4242115020751953
-	rotation = 0.0747671276,0.384907216,0.903789937,-0.171522841
+	position = -3.6165785789489746,5.2241640090942383,-7.613861083984375
+	rotation = 0.0350925066,0.580160379,0.792264283,-0.185741216
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2600,8 +2674,8 @@ PART
 	attN = top, 8
 	mass = 0.375
 	shielded = False
-	temp = 272.86937870932871
-	tempExt = 273.3529592816688
+	temp = 167.62119826399766
+	tempExt = 168.18096688148441
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2724,6 +2798,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -2747,8 +2836,8 @@ PART
 	persistentId = 768152590
 	launchID = 1
 	parent = 9
-	position = -4.4517450332641602,9.7328968048095703,-6.4128422737121582
-	rotation = -0.171522841,0.903789937,-0.384907216,-0.0747671276
+	position = -4.1108064651489258,5.6044988632202148,-8.9507904052734375
+	rotation = -0.185741216,0.792264283,-0.580160379,-0.0350925066
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -2768,8 +2857,8 @@ PART
 	attN = N4, -1
 	mass = 0.140000001
 	shielded = False
-	temp = 272.85608094467494
-	tempExt = 273.00649012314113
+	temp = 167.6014955027006
+	tempExt = 167.98089402220609
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2851,7 +2940,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = 0.00581577467
+		previousTargetAngle = 0.00806397013
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -2861,7 +2950,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,2.2737367E-15,1.36560612E-08
-		servoTransformRotation = 0,7.03714177E-05,0,1
+		servoTransformRotation = 0,0.000620382838,0,0.999999821
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3034,6 +3123,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -3057,8 +3161,8 @@ PART
 	persistentId = 2454315522
 	launchID = 1
 	parent = 10
-	position = -4.7962636947631836,10.337359428405762,-7.0409178733825684
-	rotation = -0.171495974,0.903785884,-0.384916365,-0.0748308674
+	position = -4.4248290061950684,5.8461799621582031,-9.8002147674560547
+	rotation = -0.185380086,0.792246163,-0.580270648,-0.0355841182
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3074,8 +3178,8 @@ PART
 	attN = top, 12
 	mass = 0.140000001
 	shielded = False
-	temp = 272.81617523929822
-	tempExt = 272.89567816364075
+	temp = 167.59737486641879
+	tempExt = 168.12220124460842
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3155,7 +3259,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 0
-		previousTargetAngle = -90
+		previousTargetAngle = -76.2865448
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
@@ -3165,7 +3269,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.617630005,0,0,0.786468804
+		servoTransformRotation = 0.608484864,0,0,0.793565452
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3335,6 +3439,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -3358,8 +3477,8 @@ PART
 	persistentId = 19699111
 	launchID = 1
 	parent = 11
-	position = -4.8527746200561523,9.9948263168334961,-7.5609145164489746
-	rotation = -0.181092471,0.473067164,-0.860928357,0.0470670164
+	position = -4.3834199905395508,5.3249096870422363,-10.143063545227051
+	rotation = -0.168762714,0.275612533,-0.942553043,0.0845613256
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3375,8 +3494,8 @@ PART
 	attN = top, 13
 	mass = 0.140000001
 	shielded = False
-	temp = 272.75470264992992
-	tempExt = 272.55012669758275
+	temp = 167.60501549269424
+	tempExt = 167.99643112184262
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3456,7 +3575,7 @@ PART
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
-		previousTargetAngle = -0.0285903178
+		previousTargetAngle = -12.2164259
 		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 1.28700865E-32,-1.13446405E-16,1.13446405E-16,1
@@ -3466,7 +3585,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,0
-		servoTransformRotation = 0.106406599,0,0,0.994322717
+		servoTransformRotation = 0.125662342,0,0,0.992073059
 		useMultipleDragCubes = False
 		stagingEnabled = True
 		EVENTS
@@ -3636,6 +3755,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -3659,8 +3793,8 @@ PART
 	persistentId = 471375956
 	launchID = 1
 	parent = 12
-	position = -4.8756752014160156,8.7359399795532227,-8.829615592956543
-	rotation = 0.06607081,-0.906380117,-0.378768027,0.175055802
+	position = -4.1058363914489746,3.6628401279449463,-10.739336967468262
+	rotation = 0.10510046,-0.969715774,-0.154982075,0.156798601
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3676,8 +3810,8 @@ PART
 	attN = top, 12
 	mass = 0.375
 	shielded = False
-	temp = 272.5798741913772
-	tempExt = 271.86394447926148
+	temp = 167.62493279128944
+	tempExt = 168.08039345275313
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3800,6 +3934,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -3823,8 +3972,8 @@ PART
 	persistentId = 3421742092
 	launchID = 1
 	parent = 13
-	position = -4.8946123123168945,7.6967587471008301,-9.8766241073608398
-	rotation = -0.175055802,0.378768027,-0.906380117,0.06607081
+	position = -3.8768315315246582,2.2909727096557617,-11.231258392333984
+	rotation = -0.156798601,0.154982075,-0.969715774,0.10510046
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -3840,8 +3989,8 @@ PART
 	attN = bottom, 13
 	mass = 0.0199999996
 	shielded = False
-	temp = 272.06929900752436
-	tempExt = 269.78245825253708
+	temp = 167.61885927342058
+	tempExt = 167.81276371338313
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4057,8 +4206,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = RSE_Coupler
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4072,7 +4221,7 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -4095,8 +4244,8 @@ PART
 	persistentId = 2030267689
 	launchID = 1
 	parent = 8
-	position = -1.2776999473571777,3.0996954441070557,-0.10630539059638977
-	rotation = -0.305968136,0.257991254,-0.872435331,-0.28050071
+	position = -1.1840090751647949,2.6268706321716309,-0.20718556642532349
+	rotation = -0.206130639,0.0633527711,-0.938518226,-0.269592434
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4115,8 +4264,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 273.61979294010712
-	tempExt = 273.3302066352594
+	temp = 167.40058560644346
+	tempExt = 167.82525299660082
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4240,6 +4389,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -4263,8 +4427,8 @@ PART
 	persistentId = 3173354899
 	launchID = 1
 	parent = 15
-	position = -1.4296269416809082,3.0438015460968018,-0.2257663905620575
-	rotation = 0.833253264,-0.380780876,0.400551587,0.0159181785
+	position = -1.3123722076416016,2.5061335563659668,-0.30426567792892456
+	rotation = 0.809386253,-0.235439703,0.517874599,0.145835176
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4278,8 +4442,8 @@ PART
 	srfN = srfAttach, 15,TrussSquareMed
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.94942852674217
-	tempExt = 273.88454819855843
+	temp = 167.21784485357506
+	tempExt = 167.33114428459706
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -4447,6 +4611,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -4470,8 +4649,8 @@ PART
 	persistentId = 558754131
 	launchID = 1
 	parent = 8
-	position = -1.2751508951187134,3.6883120536804199,0.45875829458236694
-	rotation = -0.419005036,-0.0272698905,-0.4115327,-0.808907866
+	position = -1.3144823312759399,3.3875935077667236,0.057492315769195557
+	rotation = -0.212396055,-0.0945961252,-0.468293905,-0.852432013
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4490,8 +4669,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 273.63940219708115
-	tempExt = 273.61862487799152
+	temp = 167.65412085659901
+	tempExt = 168.1137440006805
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4601,6 +4780,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -4638,8 +4832,8 @@ PART
 	persistentId = 950283523
 	launchID = 1
 	parent = 8
-	position = -0.51630735397338867,3.8943262100219727,0.24074167013168335
-	rotation = -0.286597729,-0.296559036,0.29043293,-0.863460004
+	position = -0.55680656433105469,3.5945107936859131,-0.16372370719909668
+	rotation = -0.0942424983,-0.19713521,0.276241839,-0.935920119
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4658,8 +4852,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 273.63180999413231
-	tempExt = 273.5752635467079
+	temp = 167.61848966469097
+	tempExt = 167.8687529582192
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4769,6 +4963,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -4806,8 +5015,8 @@ PART
 	persistentId = 3539902257
 	launchID = 1
 	parent = 8
-	position = -0.5188480019569397,3.3056919574737549,-0.32432955503463745
-	rotation = 0.0136968838,-0.392128706,0.822274208,-0.412204564
+	position = -0.42633074522018433,2.8337647914886475,-0.42840513586997986
+	rotation = 0.079115063,-0.184194908,0.858969569,-0.471152067
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4826,8 +5035,8 @@ PART
 	attN = bottom01, -1
 	mass = 0.00200000009
 	shielded = False
-	temp = 273.61749376020401
-	tempExt = 273.49389840314541
+	temp = 167.61848966335236
+	tempExt = 167.8687529483127
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4937,6 +5146,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -4990,8 +5214,8 @@ PART
 	srfN = srfAttach, 4,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.98633708972068
-	tempExt = 273.95449974346184
+	temp = 167.14131648194771
+	tempExt = 167.22298571150486
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -5159,6 +5383,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -5197,8 +5436,8 @@ PART
 	srfN = srfAttach, 4,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.98633708972068
-	tempExt = 273.95449974346184
+	temp = 167.14131648194771
+	tempExt = 167.22298571150486
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -5366,6 +5605,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -5405,8 +5659,8 @@ PART
 	srfN = srfAttach, 4,COLLIDERBASE
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.98633708972068
-	tempExt = 273.95449974346184
+	temp = 167.14131648194771
+	tempExt = 167.22298571150486
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -5574,6 +5828,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -5615,8 +5884,8 @@ PART
 	attN = bottom, -1
 	mass = 0.180000007
 	shielded = False
-	temp = 274.23255734261738
-	tempExt = 273.67260680734972
+	temp = 167.212182501558
+	tempExt = 167.12780279870663
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5713,7 +5982,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 66981.491844314936
 		stagingEnabled = True
-		lastUpdateTime = 5084473.8767271368
+		lastUpdateTime = 4815411606.9930429
 		EVENTS
 		{
 		}
@@ -5744,6 +6013,21 @@ PART
 		name = ModuleRadioisotopeGenerator
 		isEnabled = True
 		EasyMode = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5783,8 +6067,8 @@ PART
 	attN = bottom, -1
 	mass = 0.180000007
 	shielded = False
-	temp = 274.29849836688362
-	tempExt = 273.96141247647637
+	temp = 167.28397489891097
+	tempExt = 167.46723273661007
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5881,7 +6165,7 @@ PART
 		CoreTempGoalAdjustment = 0
 		CoreThermalEnergy = 66981.491844314936
 		stagingEnabled = True
-		lastUpdateTime = 5084473.8767271368
+		lastUpdateTime = 4815411606.9930429
 		EVENTS
 		{
 		}
@@ -5923,6 +6207,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -5949,8 +6248,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.95801720491568
-	tempExt = 273.86054844296456
+	temp = 166.9949338700772
+	tempExt = 167.01359730958154
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -6118,6 +6417,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -6157,8 +6471,8 @@ PART
 	srfN = srfAttach, 3,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.95801720491568
-	tempExt = 273.86054844296456
+	temp = 166.9949338700772
+	tempExt = 167.01359730958154
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -6326,6 +6640,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -6364,8 +6693,8 @@ PART
 	srfN = srfAttach, 4,COLLIDERTOP
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.98633708972068
-	tempExt = 273.95449974346184
+	temp = 167.14131648194771
+	tempExt = 167.22298571150486
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -6533,6 +6862,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -6571,8 +6915,8 @@ PART
 	srfN = srfAttach, 4,COLLIDERTOP
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.98633708972068
-	tempExt = 273.95449974346184
+	temp = 167.14131648194771
+	tempExt = 167.22298571150486
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -6740,6 +7084,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -6763,8 +7122,8 @@ PART
 	persistentId = 2328703155
 	launchID = 1
 	parent = 9
-	position = -4.0448174476623535,9.0446786880493164,-6.6865935325622559
-	rotation = 0.40868029,0.437993526,0.800681293,-0.00718347589
+	position = -3.6060090065002441,4.9307522773742676,-8.8768062591552734
+	rotation = 0.32794705,0.6215716,0.709334791,0.0542555675
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6778,8 +7137,8 @@ PART
 	srfN = srfAttach, 9,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 272.73524376663784
-	tempExt = 272.68714129020623
+	temp = 167.621896645428
+	tempExt = 167.8026031386969
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -6947,6 +7306,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -6970,8 +7344,8 @@ PART
 	persistentId = 3543765052
 	launchID = 1
 	parent = 9
-	position = -4.6484189033508301,8.9483451843261719,-6.5874872207641602
-	rotation = -0.855272532,-0.314676762,-0.277163446,-0.304413944
+	position = -4.205237865447998,4.7970800399780273,-8.7963218688964844
+	rotation = -0.733643711,-0.40105924,-0.269676387,-0.477695525
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6985,8 +7359,8 @@ PART
 	srfN = srfAttach, 9,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 273.36390242469753
-	tempExt = 273.35268885491826
+	temp = 167.61981979191256
+	tempExt = 167.89157746760387
 	tempExtUnexp = 306.91679706435809
 	staticPressureAtm = 0
 	expt = 0
@@ -7154,6 +7528,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -7177,8 +7566,8 @@ PART
 	persistentId = 1752505666
 	launchID = 1
 	parent = 14
-	position = -4.898322582244873,7.4930105209350586,-10.081816673278809
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -3.8319582939147949,2.0220801830291748,-11.327651977539063
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7194,8 +7583,8 @@ PART
 	attN = bottom, 32
 	mass = 0.0199999996
 	shielded = False
-	temp = 261.02125363523794
-	tempExt = 264.49701236781027
+	temp = 167.25236920857583
+	tempExt = 167.49132481378851
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7411,8 +7800,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = RSE_Coupler
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7426,7 +7815,7 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -7449,8 +7838,8 @@ PART
 	persistentId = 377970025
 	launchID = 1
 	parent = 31
-	position = -4.8992323875427246,7.442408561706543,-10.132885932922363
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -3.8207807540893555,1.9552450180053711,-11.351683616638184
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7466,8 +7855,8 @@ PART
 	attN = bottom, 33
 	mass = 0.0500000007
 	shielded = False
-	temp = 260.46068238617255
-	tempExt = 261.82864018410606
+	temp = 167.23361771152307
+	tempExt = 167.35347923778886
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -7718,9 +8107,8 @@ PART
 	}
 	MODULE
 	{
-		name = ParkingBrakeModule
+		name = WBIPrinterRequirements
 		isEnabled = True
-		brakeActive = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7734,7 +8122,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -7790,8 +8178,8 @@ PART
 	persistentId = 1352815961
 	launchID = 1
 	parent = 32
-	position = -4.9025931358337402,7.2574820518493652,-10.319052696228027
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -3.7800040245056152,1.7111934423446655,-11.439046859741211
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7807,8 +8195,8 @@ PART
 	attN = bottom, 38
 	mass = 0.0199999996
 	shielded = False
-	temp = 259.92974140807468
-	tempExt = 260.01943673598186
+	temp = 167.23892324648003
+	tempExt = 167.47437849420373
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7911,6 +8299,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -7932,8 +8335,8 @@ PART
 	persistentId = 3817244150
 	launchID = 1
 	parent = 33
-	position = -4.6128325462341309,7.3761506080627441,-10.309074401855469
-	rotation = 0.117953114,-0.917040586,0.376889676,0.0554783121
+	position = -3.5075626373291016,1.8646914958953857,-11.457262992858887
+	rotation = 0.139142826,-0.804617584,0.577250838,0.00336049264
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7950,8 +8353,8 @@ PART
 	srfN = srfAttach, 33,node_collider.collider
 	mass = 0.0299999993
 	shielded = False
-	temp = 259.60940943299363
-	tempExt = 259.69662488696258
+	temp = 167.16276272317094
+	tempExt = 167.34625265285581
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8126,6 +8529,36 @@ PART
 	MODULE
 	{
 		name = ModuleRestockRCSGlow
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -8163,8 +8596,8 @@ PART
 	persistentId = 2240239844
 	launchID = 1
 	parent = 33
-	position = -4.9784793853759766,7.5296411514282227,-10.454631805419922
-	rotation = 0.731853366,-0.565038443,0.227271795,0.305728287
+	position = -3.8626828193664551,1.8871258497238159,-11.684866905212402
+	rotation = 0.667342007,-0.470560312,0.405801088,0.410552204
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8181,8 +8614,8 @@ PART
 	srfN = srfAttach, 33,node_collider.collider
 	mass = 0.0299999993
 	shielded = False
-	temp = 259.61226323909762
-	tempExt = 259.72070675109393
+	temp = 167.16937062484615
+	tempExt = 167.39791311935858
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8357,6 +8790,36 @@ PART
 	MODULE
 	{
 		name = ModuleRestockRCSGlow
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -8394,8 +8857,8 @@ PART
 	persistentId = 1195357896
 	launchID = 1
 	parent = 33
-	position = -5.1898961067199707,7.2719206809997559,-10.195087432861328
-	rotation = 0.917039275,0.117953494,-0.0554779172,0.376892686
+	position = -4.0817708969116211,1.7333098649978638,-11.358024597167969
+	rotation = 0.804620087,0.139141902,-0.00336006819,0.57724762
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8412,8 +8875,8 @@ PART
 	srfN = srfAttach, 33,node_collider.collider
 	mass = 0.0299999993
 	shielded = False
-	temp = 259.62951484155474
-	tempExt = 259.87123403558775
+	temp = 167.19694448623869
+	tempExt = 167.63849131457661
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8588,6 +9051,36 @@ PART
 	MODULE
 	{
 		name = ModuleRestockRCSGlow
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -8625,8 +9118,8 @@ PART
 	persistentId = 2818516426
 	launchID = 1
 	parent = 33
-	position = -4.8242635726928711,7.1185998916625977,-10.049465179443359
-	rotation = 0.565036952,0.731854498,-0.305727929,0.227272242
+	position = -3.7266597747802734,1.711037278175354,-11.130438804626465
+	rotation = 0.470557898,0.66734463,-0.410550505,0.405801296
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8643,8 +9136,8 @@ PART
 	srfN = srfAttach, 33,node_collider.collider
 	mass = 0.0299999993
 	shielded = False
-	temp = 259.6165445595679
-	tempExt = 259.75855888708259
+	temp = 167.16638005033445
+	tempExt = 167.3814032057042
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8833,6 +9326,36 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -8856,8 +9379,8 @@ PART
 	persistentId = 587119283
 	launchID = 1
 	parent = 33
-	position = -4.9084343910217285,6.9353976249694824,-10.643806457519531
-	rotation = -0.122634679,0.38194707,-0.914945662,0.0441765636
+	position = -3.7089757919311523,1.2858716249465942,-11.59184455871582
+	rotation = -0.10076496,0.160776168,-0.977128029,0.0960119441
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8873,8 +9396,8 @@ PART
 	attN = top, 39
 	mass = 0.125
 	shielded = False
-	temp = 260.11584657578123
-	tempExt = 260.68855879248605
+	temp = 167.41291990865781
+	tempExt = 167.7920276265103
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8979,6 +9502,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -8989,8 +9527,8 @@ PART
 	persistentId = 269870278
 	launchID = 1
 	parent = 38
-	position = -4.9451208114624023,4.9234437942504883,-12.671200752258301
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -3.2655849456787109,-1.3702863454818726,-12.544530868530273
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9006,8 +9544,8 @@ PART
 	attN = top, 38
 	mass = 0.75
 	shielded = False
-	temp = 260.64532500277596
-	tempExt = 261.27817191958968
+	temp = 167.68877901330336
+	tempExt = 168.11686701791197
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9116,6 +9654,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -9153,8 +9706,8 @@ PART
 	persistentId = 1184216834
 	launchID = 1
 	parent = 39
-	position = -5.0175924301147461,0.95106196403503418,-16.674215316772461
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -2.3901195526123047,-6.6146903038024902,-14.425819396972656
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9170,8 +9723,8 @@ PART
 	attN = top, 39
 	mass = 0.75
 	shielded = False
-	temp = 262.82912688312211
-	tempExt = 263.17865460825846
+	temp = 167.57825058015581
+	tempExt = 167.92739890538766
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9280,6 +9833,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -9317,8 +9885,8 @@ PART
 	persistentId = 3625550556
 	launchID = 1
 	parent = 40
-	position = -5.0900354385375977,-3.0213394165039063,-20.677463531494141
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -1.514634370803833,-11.85916805267334,-16.307136535644531
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9334,8 +9902,8 @@ PART
 	attN = top, 40
 	mass = 0.75
 	shielded = False
-	temp = 267.59890789590389
-	tempExt = 266.35758791683031
+	temp = 166.92670781049716
+	tempExt = 167.25695935014491
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9444,6 +10012,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -9481,8 +10064,8 @@ PART
 	persistentId = 1696137935
 	launchID = 1
 	parent = 41
-	position = -5.1624383926391602,-6.9939055442810059,-24.680349349975586
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -0.63909453153610229,-17.103673934936523,-18.188198089599609
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9498,8 +10081,8 @@ PART
 	attN = top, 41
 	mass = 0.75
 	shielded = False
-	temp = 268.38062959751898
-	tempExt = 267.97202394994235
+	temp = 167.22676700890921
+	tempExt = 167.36287761830937
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9608,6 +10191,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -9645,8 +10243,8 @@ PART
 	persistentId = 1577416149
 	launchID = 1
 	parent = 42
-	position = -5.2348651885986328,-10.966264724731445,-28.683195114135742
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 0.23638182878494263,-22.347885131835938,-20.069131851196289
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9662,8 +10260,8 @@ PART
 	attN = top, 42
 	mass = 0.75
 	shielded = False
-	temp = 271.48260790020032
-	tempExt = 267.97488428900618
+	temp = 166.85555949862271
+	tempExt = 167.06335857835188
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9772,6 +10370,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -9809,8 +10422,8 @@ PART
 	persistentId = 1039976754
 	launchID = 1
 	parent = 43
-	position = -5.307380199432373,-14.938520431518555,-32.685993194580078
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 1.1117566823959351,-27.592292785644531,-21.950386047363281
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9826,8 +10439,8 @@ PART
 	attN = top, 43
 	mass = 0.75
 	shielded = False
-	temp = 259.13716895708728
-	tempExt = 260.24079366444101
+	temp = 167.02981769926092
+	tempExt = 167.22680874428573
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9950,6 +10563,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -9973,8 +10601,8 @@ PART
 	persistentId = 3886086104
 	launchID = 1
 	parent = 44
-	position = -5.3519973754882813,-17.382282257080078,-35.148452758789063
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 1.6502772569656372,-30.81837272644043,-23.107637405395508
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9990,8 +10618,8 @@ PART
 	attN = top, 44
 	mass = 0.25
 	shielded = False
-	temp = 257.4160502513563
-	tempExt = 258.06836271401227
+	temp = 167.103382353043
+	tempExt = 167.14173869871905
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10096,6 +10724,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -10106,8 +10749,8 @@ PART
 	persistentId = 438727841
 	launchID = 1
 	parent = 45
-	position = -5.3631038665771484,-17.996734619140625,-35.767738342285156
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 1.7857984304428101,-31.629556655883789,-23.398717880249023
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10123,8 +10766,8 @@ PART
 	attN = bottom, 47
 	mass = 0.0500000007
 	shielded = False
-	temp = 255.36960413378208
-	tempExt = 255.09451055520034
+	temp = 167.11554010428168
+	tempExt = 167.07059792697183
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10195,6 +10838,21 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -10205,8 +10863,8 @@ PART
 	persistentId = 1972711783
 	launchID = 1
 	parent = 46
-	position = -5.3679800033569336,-18.264503479003906,-36.038002014160156
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 1.8448928594589233,-31.983554840087891,-23.525751113891602
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10222,8 +10880,8 @@ PART
 	attN = bottom, 48
 	mass = 0.125
 	shielded = False
-	temp = 252.77504528954088
-	tempExt = 252.63633405539858
+	temp = 167.13850236531312
+	tempExt = 167.14036074904399
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10294,6 +10952,21 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -10304,8 +10977,8 @@ PART
 	persistentId = 1436377059
 	launchID = 1
 	parent = 47
-	position = -5.3744034767150879,-18.615793228149414,-36.391517639160156
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 1.9222379922866821,-32.446849822998047,-23.691818237304688
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10321,8 +10994,8 @@ PART
 	attN = bottom, 49
 	mass = 0.5
 	shielded = False
-	temp = 252.00119195845016
-	tempExt = 251.82263899563588
+	temp = 167.14587836101501
+	tempExt = 167.28296581150701
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10393,8 +11066,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10427,8 +11100,8 @@ PART
 	persistentId = 4218619466
 	launchID = 1
 	parent = 48
-	position = -5.3893122673034668,-19.432458877563477,-37.214679718017578
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 2.1021995544433594,-33.525497436523438,-24.078449249267578
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10444,8 +11117,8 @@ PART
 	attN = node_stack_top, 48
 	mass = 4.73000002
 	shielded = False
-	temp = 251.8900126993075
-	tempExt = 251.68020192246593
+	temp = 167.14575520377409
+	tempExt = 167.45928902315865
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10572,8 +11245,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10658,8 +11331,8 @@ PART
 	persistentId = 1239317789
 	launchID = 1
 	parent = 49
-	position = -5.4132318496704102,-20.746099472045898,-38.538295745849609
-	rotation = -0.23883912,-0.733676434,-0.301315904,-0.560253084
+	position = 2.3917403221130371,-35.259204864501953,-24.700651168823242
+	rotation = -0.0457942486,-0.762181282,-0.181580588,-0.619686306
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10673,10 +11346,10 @@ PART
 	srfN = , -1
 	attN = node_stack_bottom, 51
 	attN = node_stack_top, 49
-	mass = 4.73000002
+	mass = 4.82399988
 	shielded = False
-	temp = 251.80785402800814
-	tempExt = 251.54971368225674
+	temp = 167.1393210465998
+	tempExt = 167.34314876493968
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10691,6 +11364,7 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
+	crew = Dony Kerman
 	EVENTS
 	{
 	}
@@ -10803,8 +11477,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10889,8 +11563,8 @@ PART
 	persistentId = 654635359
 	launchID = 1
 	parent = 50
-	position = -5.4372358322143555,-22.063138961791992,-39.865676879882813
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 2.6820545196533203,-36.998512268066406,-25.324277877807617
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10910,8 +11584,8 @@ PART
 	attN = Node3, 52
 	mass = 4.88600016
 	shielded = False
-	temp = 251.7514916861964
-	tempExt = 251.45717135166331
+	temp = 167.13290355467444
+	tempExt = 167.20669882455883
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10926,9 +11600,9 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Summer Kerman
 	crew = Leia Kerman
 	crew = Elpond Kerman
+	crew = Summer Kerman
 	crew = Telock Kerman
 	crew = Disted Kerman
 	EVENTS
@@ -11143,38 +11817,22 @@ PART
 	}
 	MODULE
 	{
-		name = ParkingBrakeModule
-		isEnabled = True
-		brakeActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ELWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -11260,8 +11918,8 @@ PART
 	persistentId = 1966376700
 	launchID = 1
 	parent = 51
-	position = -6.0379257202148438,-20.462078094482422,-41.443428039550781
-	rotation = 0.117953025,-0.917040288,0.376890391,0.055478625
+	position = 2.151975154876709,-36.311996459960938,-27.483537673950195
+	rotation = 0.139141321,-0.80461967,0.577248335,0.00336070848
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -11277,8 +11935,8 @@ PART
 	attN = bottom, 51
 	mass = 0.356000006
 	shielded = False
-	temp = 251.71650383240006
-	tempExt = 251.40485227015279
+	temp = 167.12812101888309
+	tempExt = 167.14856894318388
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11504,38 +12162,22 @@ PART
 	}
 	MODULE
 	{
-		name = ParkingBrakeModule
-		isEnabled = True
-		brakeActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ELWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -11621,8 +12263,8 @@ PART
 	persistentId = 2208334086
 	launchID = 1
 	parent = 51
-	position = -4.8365535736083984,-23.664323806762695,-38.287849426269531
-	rotation = -0.917040288,-0.117953025,0.055478625,-0.376890391
+	position = 3.2120938301086426,-37.684471130371094,-23.165075302124023
+	rotation = -0.80461967,-0.139141321,0.00336070848,-0.577248335
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -11638,8 +12280,8 @@ PART
 	attN = bottom, 51
 	mass = 0.356000006
 	shielded = False
-	temp = 251.71651836975343
-	tempExt = 251.40485759896751
+	temp = 167.12815343393606
+	tempExt = 167.14858202879094
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11865,38 +12507,22 @@ PART
 	}
 	MODULE
 	{
-		name = ParkingBrakeModule
-		isEnabled = True
-		brakeActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ELWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -11982,8 +12608,8 @@ PART
 	persistentId = 2071354582
 	launchID = 1
 	parent = 51
-	position = -5.4508543014526367,-22.812919616699219,-40.620769500732422
-	rotation = -0.122634679,0.38194707,-0.914945662,0.0441765636
+	position = 2.8472909927368164,-37.987934112548828,-25.679265975952148
+	rotation = -0.10076496,0.160776168,-0.977128029,0.0960119441
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -11999,8 +12625,8 @@ PART
 	attN = bottom, 51
 	mass = 0.449999988
 	shielded = False
-	temp = 251.74727453820935
-	tempExt = 251.67331107137616
+	temp = 167.13973617694748
+	tempExt = 167.38136228396746
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12176,8 +12802,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = RSE_Coupler
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -12191,7 +12817,7 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -12214,8 +12840,8 @@ PART
 	persistentId = 1825018773
 	launchID = 1
 	parent = 51
-	position = -3.4086217880249023,-21.696922302246094,-40.2659912109375
-	rotation = -0.565036476,-0.731854498,0.305728763,-0.227272347
+	position = 4.7006974220275879,-36.536140441894531,-25.673124313354492
+	rotation = -0.470557034,-0.66734463,0.410553634,-0.40579915
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -12231,8 +12857,8 @@ PART
 	attN = bottom, 51
 	mass = 0.0549999997
 	shielded = False
-	temp = 251.70198214881839
-	tempExt = 251.34734979590399
+	temp = 167.12967039611462
+	tempExt = 167.14496168819295
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12398,8 +13024,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -12493,8 +13119,8 @@ PART
 	persistentId = 3215912461
 	launchID = 1
 	parent = 55
-	position = -2.738713264465332,-21.926584243774414,-40.754447937011719
-	rotation = -0.238837942,-0.73367703,-0.301312506,-0.560254633
+	position = 5.4512577056884766,-36.847080230712891,-25.956283569335938
+	rotation = -0.0457923189,-0.76218152,-0.181577459,-0.619687021
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -12522,8 +13148,8 @@ PART
 	attN = front, -1
 	mass = 0.075000003
 	shielded = False
-	temp = 251.38237894929657
-	tempExt = 251.16346737748086
+	temp = 167.07880898477515
+	tempExt = 167.12371700781148
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12646,6 +13272,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -12669,8 +13310,8 @@ PART
 	persistentId = 3960399467
 	launchID = 1
 	parent = 56
-	position = -2.4246797561645508,-22.091695785522461,-40.157386779785156
-	rotation = -0.238837942,-0.73367703,-0.301312506,-0.560254633
+	position = 5.6939430236816406,-36.699119567871094,-25.322727203369141
+	rotation = -0.0457923189,-0.76218152,-0.181577459,-0.619687021
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12684,8 +13325,8 @@ PART
 	srfN = srfAttach, 56,Panel1
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.27058510621825
-	tempExt = 251.06843058443874
+	temp = 167.01191300225693
+	tempExt = 167.06148024194442
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12812,6 +13453,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -12849,8 +13505,8 @@ PART
 	persistentId = 1470201582
 	launchID = 1
 	parent = 56
-	position = -2.1564455032348633,-21.602495193481445,-40.647491455078125
-	rotation = -0.381943613,-0.122633591,-0.0441761464,-0.914947271
+	position = 5.9782834053039551,-36.425445556640625,-25.951711654663086
+	rotation = -0.160772324,-0.100762129,-0.0960116237,-0.977128983
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12864,8 +13520,8 @@ PART
 	srfN = srfAttach, 56,Panel1
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.27058467452224
-	tempExt = 251.06843027984993
+	temp = 167.01191724696605
+	tempExt = 167.06148140473559
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12992,6 +13648,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -13029,8 +13700,8 @@ PART
 	persistentId = 2502782651
 	launchID = 1
 	parent = 56
-	position = -2.7343134880065918,-21.267801284790039,-40.968307495117188
-	rotation = -0.301312506,0.560254633,0.238837942,-0.73367703
+	position = 5.4205451011657715,-36.345653533935547,-26.43292236328125
+	rotation = -0.181577459,0.619687021,0.0457923189,-0.76218152
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13044,8 +13715,8 @@ PART
 	srfN = srfAttach, 56,Panel1
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.27058461703189
-	tempExt = 251.06843043230649
+	temp = 167.01191729303559
+	tempExt = 167.06148141928608
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13186,6 +13857,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -13209,8 +13895,8 @@ PART
 	persistentId = 2916107048
 	launchID = 1
 	parent = 51
-	position = -7.4658832550048828,-22.42950439453125,-39.465122222900391
-	rotation = -0.731854498,0.565036476,-0.227272347,-0.305728763
+	position = 0.66337680816650391,-37.460414886474609,-24.975557327270508
+	rotation = -0.66734463,0.470557034,-0.40579915,-0.410553634
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13224,10 +13910,10 @@ PART
 	srfN = srfAttach, -1
 	attN = top, -1
 	attN = bottom, 51
-	mass = 0.144999996
+	mass = 0.0549999997
 	shielded = False
-	temp = 251.69937900627949
-	tempExt = 251.34657163825298
+	temp = 167.12895335320584
+	tempExt = 167.14182656510275
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13242,7 +13928,7 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Dony Kerman
+	crew = Johnrigh Kerman
 	EVENTS
 	{
 	}
@@ -13394,8 +14080,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -13489,8 +14175,8 @@ PART
 	persistentId = 1746526729
 	launchID = 1
 	parent = 60
-	position = -8.1484127044677734,-22.903970718383789,-39.687046051025391
-	rotation = -0.301312536,0.560261786,0.238836631,-0.733671963
+	position = 0.068272113800048828,-38.079322814941406,-25.026487350463867
+	rotation = -0.181578234,0.619688988,0.0457905829,-0.762179852
 	mirror = 1,1,1
 	symMethod = Mirror
 	istg = -1
@@ -13518,8 +14204,8 @@ PART
 	attN = front, -1
 	mass = 0.075000003
 	shielded = False
-	temp = 251.38225822999959
-	tempExt = 251.16315900088981
+	temp = 167.07036234160987
+	tempExt = 167.11090653352517
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13642,6 +14328,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -13665,8 +14366,8 @@ PART
 	persistentId = 1789573885
 	launchID = 1
 	parent = 61
-	position = -8.4546241760253906,-22.299434661865234,-39.841716766357422
-	rotation = -0.301312536,0.560261786,0.238836631,-0.733671963
+	position = -0.27139934897422791,-37.647735595703125,-25.452445983886719
+	rotation = -0.181578234,0.619688988,0.0457905829,-0.762179852
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13680,8 +14381,8 @@ PART
 	srfN = srfAttach, 61,Panel1
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.27267048468966
-	tempExt = 251.06891143115053
+	temp = 167.00094126822768
+	tempExt = 167.04923585985824
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13808,6 +14509,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -13845,8 +14561,8 @@ PART
 	persistentId = 1636561438
 	launchID = 1
 	parent = 61
-	position = -8.722625732421875,-22.788972854614258,-39.350936889648438
-	rotation = -0.0441767126,0.914946556,0.381944627,-0.122635879
+	position = -0.55554282665252686,-37.9212646484375,-24.822649002075195
+	rotation = -0.0960118175,0.977128506,0.160773471,-0.100764751
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13860,8 +14576,8 @@ PART
 	srfN = srfAttach, 61,Panel1
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.27289146522534
-	tempExt = 251.06898381132507
+	temp = 167.00175192908063
+	tempExt = 167.04950178055066
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13988,6 +14704,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -14025,8 +14756,8 @@ PART
 	persistentId = 1844131074
 	launchID = 1
 	parent = 61
-	position = -8.1448202133178711,-23.123544692993164,-39.030261993408203
-	rotation = 0.238836631,0.733671963,0.301312536,0.560261786
+	position = 0.0021386519074440002,-38.001243591308594,-24.341737747192383
+	rotation = 0.0457905829,0.762179852,0.181578234,0.619688988
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14040,8 +14771,8 @@ PART
 	srfN = srfAttach, 61,Panel1
 	mass = 0.0500000007
 	shielded = False
-	temp = 251.27260584316448
-	tempExt = 251.06889025169033
+	temp = 167.00057631362955
+	tempExt = 167.04911614413828
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14182,6 +14913,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -14205,8 +14951,8 @@ PART
 	persistentId = 1836687258
 	launchID = 1
 	parent = 44
-	position = -5.1281895637512207,-14.89513111114502,-32.709991455078125
-	rotation = 0.117953241,-0.917040229,0.376890481,0.0554784238
+	position = 1.2873964309692383,-27.536911010742188,-21.975662231445313
+	rotation = 0.13914232,-0.804618597,0.577249587,0.00336069055
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14221,8 +14967,8 @@ PART
 	srfN = srfAttach, 44,COLLIDER
 	mass = 0.833299994
 	shielded = False
-	temp = 258.25251865633106
-	tempExt = 258.60769557391728
+	temp = 166.91695862868448
+	tempExt = 166.95603752807014
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14370,6 +15116,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -14431,8 +15192,8 @@ PART
 	persistentId = 3098297902
 	launchID = 1
 	parent = 44
-	position = -5.4862031936645508,-14.959879875183105,-32.639255523681641
-	rotation = 0.917040884,0.117953762,-0.0554780737,0.376888722
+	position = 0.93114089965820313,-27.618383407592773,-21.913995742797852
+	rotation = 0.804620147,0.13914229,-0.0033605108,0.577247441
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14447,8 +15208,8 @@ PART
 	srfN = srfAttach, 44,COLLIDER
 	mass = 0.833299994
 	shielded = False
-	temp = 258.3457509751712
-	tempExt = 259.39944134538928
+	temp = 166.98077756425755
+	tempExt = 168.0697009798032
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14596,6 +15357,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -14657,8 +15433,8 @@ PART
 	persistentId = 174591932
 	launchID = 1
 	parent = 43
-	position = -5.0565156936645508,-10.938637733459473,-28.723184585571289
-	rotation = 0.117953241,-0.917040229,0.376890481,0.0554784238
+	position = 0.41496160626411438,-22.313451766967773,-20.102197647094727
+	rotation = 0.13914232,-0.804618597,0.577249587,0.00336069055
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14673,8 +15449,8 @@ PART
 	srfN = srfAttach, 43,COLLIDER
 	mass = 0.833299994
 	shielded = False
-	temp = 270.30535919520457
-	tempExt = 267.54653888079378
+	temp = 166.7785385593194
+	tempExt = 166.90153281773618
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14822,6 +15598,21 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -14883,8 +15674,8 @@ PART
 	persistentId = 2205981451
 	launchID = 1
 	parent = 43
-	position = -5.4135088920593262,-11.003174781799316,-28.652738571166992
-	rotation = 0.917040884,0.117953762,-0.0554780737,0.376888722
+	position = 0.059734806418418884,-22.394905090332031,-20.04071044921875
+	rotation = 0.804620147,0.13914229,-0.0033605108,0.577247441
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14899,8 +15690,8 @@ PART
 	srfN = srfAttach, 43,COLLIDER
 	mass = 0.833299994
 	shielded = False
-	temp = 270.4528070184225
-	tempExt = 268.95191686533678
+	temp = 166.83859744781719
+	tempExt = 167.91827829220006
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15062,6 +15853,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -15109,8 +15915,8 @@ PART
 	persistentId = 804287310
 	launchID = 1
 	parent = 41
-	position = -5.1661529541015625,-2.8294217586517334,-20.887495040893555
-	rotation = 0.30131191,-0.560257673,-0.238838822,0.733674645
+	position = -1.5792926549911499,-11.786271095275879,-16.584991455078125
+	rotation = 0.181576759,-0.619690597,-0.0457926765,0.762178779
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -15125,8 +15931,8 @@ PART
 	srfN = srfAttach, 41,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 268.09804465442483
-	tempExt = 268.34313703925056
+	temp = 166.87434662284664
+	tempExt = 167.03733012059033
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15299,6 +16105,36 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = RSE_Coupler
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -15309,8 +16145,8 @@ PART
 	persistentId = 1607147750
 	launchID = 1
 	parent = 69
-	position = -5.4822497367858887,-1.9573428630828857,-21.690744400024414
-	rotation = 0.30131191,-0.560257673,-0.238838822,0.733674645
+	position = -1.8648772239685059,-11.387516975402832,-17.709878921508789
+	rotation = 0.181576759,-0.619690597,-0.0457926765,0.762178779
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -15327,8 +16163,8 @@ PART
 	attN = bottom, 71
 	mass = 0.5
 	shielded = False
-	temp = 268.18250332694265
-	tempExt = 268.89983562617522
+	temp = 166.85497951302366
+	tempExt = 166.83405381707766
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15416,6 +16252,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -15435,7 +16286,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5084473.8767271368
+		LastUpdateTime = 4815411606.9930429
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -15461,38 +16312,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -15560,8 +16379,8 @@ PART
 	persistentId = 2805569566
 	launchID = 1
 	parent = 70
-	position = -5.5305609703063965,-4.6072053909301758,-24.361059188842773
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -1.2808753252029419,-14.885859489440918,-18.964780807495117
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -15578,8 +16397,8 @@ PART
 	attN = bottom, 72
 	mass = 0.5
 	shielded = False
-	temp = 270.71768619884494
-	tempExt = 270.76340870664103
+	temp = 166.76783850060556
+	tempExt = 167.06166190351371
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15667,6 +16486,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -15686,7 +16520,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5084473.8767271368
+		LastUpdateTime = 4815411606.9930429
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -15712,38 +16546,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -15811,8 +16613,8 @@ PART
 	persistentId = 3026625035
 	launchID = 1
 	parent = 71
-	position = -5.578892707824707,-7.2573246955871582,-27.031482696533203
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -0.69683462381362915,-18.384601593017578,-20.219621658325195
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -15829,8 +16631,8 @@ PART
 	attN = bottom, 73
 	mass = 0.5
 	shielded = False
-	temp = 274.17238457041611
-	tempExt = 273.11502699275979
+	temp = 166.81111713540494
+	tempExt = 166.9594343597922
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15918,6 +16720,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -15937,7 +16754,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5084473.8767271368
+		LastUpdateTime = 4815411606.9930429
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -15963,38 +16780,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -16062,8 +16847,8 @@ PART
 	persistentId = 32607967
 	launchID = 1
 	parent = 72
-	position = -5.6067752838134766,-8.7877836227416992,-28.57365608215332
-	rotation = -0.381942958,-0.122635327,-0.0441767052,-0.914947331
+	position = -0.3595009446144104,-20.405063629150391,-20.944276809692383
+	rotation = -0.160771355,-0.100764707,-0.0960117504,-0.977128863
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -16080,8 +16865,8 @@ PART
 	attN = bottom, 78
 	mass = 0.0799999982
 	shielded = False
-	temp = 279.69005731624628
-	tempExt = 277.83927526657453
+	temp = 166.89970014678147
+	tempExt = 167.03672327522804
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16184,6 +16969,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -16205,8 +17005,8 @@ PART
 	persistentId = 3292412592
 	launchID = 1
 	parent = 73
-	position = -6.1450986862182617,-8.5398187637329102,-28.76616096496582
-	rotation = 0.369781256,-0.236833647,-0.105349287,0.892229319
+	position = -0.88757681846618652,-20.343311309814453,-21.269638061523438
+	rotation = 0.185282856,-0.280835807,0.0271785781,0.941309094
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -16227,8 +17027,8 @@ PART
 	srfN = srfAttach, 73,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.27284180270664
-	tempExt = 287.12035057831719
+	temp = 166.88565161322222
+	tempExt = 166.95909923432495
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16399,6 +17199,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -16436,8 +17266,8 @@ PART
 	persistentId = 221808807
 	launchID = 1
 	parent = 73
-	position = -5.9178752899169922,-9.1455860137939453,-28.169168472290039
-	rotation = 0.335968643,0.463437855,0.186979905,0.798366427
+	position = -0.68709045648574829,-20.6026611328125,-20.452312469482422
+	rotation = 0.111797452,0.467030466,0.150230408,0.864184439
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -16458,8 +17288,8 @@ PART
 	srfN = srfAttach, 73,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.27304134908775
-	tempExt = 287.16712152946815
+	temp = 166.88565159230532
+	tempExt = 166.95909922705627
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16630,6 +17460,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -16667,8 +17527,8 @@ PART
 	persistentId = 1439705039
 	launchID = 1
 	parent = 73
-	position = -5.0677480697631836,-8.9920501708984375,-28.337045669555664
-	rotation = 0.105349287,0.892229319,0.369781256,0.236833647
+	position = 0.15884280204772949,-20.409261703491211,-20.598381042480469
+	rotation = -0.0271785781,0.941309094,0.185282856,0.280835807
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -16689,8 +17549,8 @@ PART
 	srfN = srfAttach, 73,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.27284180270664
-	tempExt = 287.12035057831719
+	temp = 166.88565159230532
+	tempExt = 166.95909922705627
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16861,6 +17721,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -16898,8 +17788,8 @@ PART
 	persistentId = 1770401304
 	launchID = 1
 	parent = 73
-	position = -5.2948827743530273,-8.3863353729248047,-28.933937072753906
-	rotation = -0.186979905,0.798366427,0.335968643,-0.463437855
+	position = -0.04155769944190979,-20.149658203125,-21.415372848510742
+	rotation = -0.150230408,0.864184439,0.111797452,-0.467030466
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -16920,8 +17810,8 @@ PART
 	srfN = srfAttach, 73,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.27284180270664
-	tempExt = 287.12035057831719
+	temp = 166.88565159230532
+	tempExt = 166.95909922705627
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17106,6 +17996,36 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -17129,8 +18049,8 @@ PART
 	persistentId = 830757847
 	launchID = 1
 	parent = 73
-	position = -5.6390337944030762,-9.0711545944213867,-28.996328353881836
-	rotation = -0.498098135,-0.12735258,-0.0277921278,-0.857267261
+	position = -0.30470937490463257,-20.840419769287109,-21.203689575195313
+	rotation = -0.286937535,-0.112435304,-0.0820388123,-0.947784126
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -17147,8 +18067,8 @@ PART
 	attN = bottom, -1
 	mass = 3.29999995
 	shielded = False
-	temp = 289.03972425683224
-	tempExt = 288.0917140302974
+	temp = 167.07015299690815
+	tempExt = 167.21547819782171
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17526,6 +18446,36 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_Engines
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -17549,8 +18499,8 @@ PART
 	persistentId = 837796318
 	launchID = 1
 	parent = 72
-	position = -4.9883675575256348,-8.1515045166015625,-27.93177604675293
-	rotation = -0.00605469383,-0.923125327,-0.384445488,0.00216143485
+	position = 0.098107576370239258,-19.474746704101563,-20.591812133789063
+	rotation = 0.0742059946,-0.981920838,-0.171933368,-0.0276376288
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -17565,8 +18515,8 @@ PART
 	srfN = srfAttach, 72,Cyl12
 	mass = 0.0500000007
 	shielded = False
-	temp = 272.81977329841578
-	tempExt = 271.47607262389744
+	temp = 166.83366602793046
+	tempExt = 166.90448026460373
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -17734,6 +18684,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -17757,8 +18722,8 @@ PART
 	persistentId = 3074442656
 	launchID = 1
 	parent = 70
-	position = -5.456812858581543,-0.56620073318481445,-20.288570404052734
-	rotation = -0.381942958,-0.122635327,-0.0441767052,-0.914947331
+	position = -2.1714749336242676,-9.5506954193115234,-17.05070686340332
+	rotation = -0.160771355,-0.100764707,-0.0960117504,-0.977128863
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -17774,8 +18739,8 @@ PART
 	attN = top, 81
 	mass = 0.100000001
 	shielded = False
-	temp = 267.33205036497185
-	tempExt = 267.62411871722617
+	temp = 167.01902822521998
+	tempExt = 166.99970520465189
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -18026,22 +18991,6 @@ PART
 	}
 	MODULE
 	{
-		name = ParkingBrakeModule
-		isEnabled = True
-		brakeActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
@@ -18057,8 +19006,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18095,7 +19044,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 15
+		amount = 12.226546748968444
 		maxAmount = 15
 		flowState = True
 		isTweakable = True
@@ -18113,8 +19062,8 @@ PART
 	persistentId = 497945803
 	launchID = 1
 	parent = 80
-	position = -5.4530463218688965,-0.35553005337715149,-20.076414108276367
-	rotation = -0.381942958,-0.122635327,-0.0441767052,-0.914947331
+	position = -2.2179408073425293,-9.2726621627807617,-16.951045989990234
+	rotation = -0.160771355,-0.100764707,-0.0960117504,-0.977128863
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -18130,8 +19079,8 @@ PART
 	attN = bottom, 80
 	mass = 0.100000001
 	shielded = False
-	temp = 266.43945944941095
-	tempExt = 266.2873044755321
+	temp = 167.16346251665493
+	tempExt = 167.11876532976038
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18277,8 +19226,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18300,8 +19249,8 @@ PART
 	persistentId = 2534370012
 	launchID = 1
 	parent = 81
-	position = -5.4490323066711426,-0.13726465404033661,-19.856657028198242
-	rotation = -0.381942958,-0.122635327,-0.0441767052,-0.914947331
+	position = -2.2659940719604492,-8.9845743179321289,-16.847795486450195
+	rotation = -0.160771355,-0.100764707,-0.0960117504,-0.977128863
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -18317,8 +19266,8 @@ PART
 	attN = bottom, 81
 	mass = 0.0500000007
 	shielded = False
-	temp = 265.54996565698633
-	tempExt = 265.23750854589844
+	temp = 167.32283448100708
+	tempExt = 167.3041367134735
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18423,8 +19372,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18439,7 +19388,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 1000
+		amount = 815.103116598127
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -18457,8 +19406,8 @@ PART
 	persistentId = 527835364
 	launchID = 1
 	parent = 82
-	position = -5.4450936317443848,0.080986484885215759,-19.636676788330078
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -2.3141570091247559,-8.6964302062988281,-16.744455337524414
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -18474,8 +19423,8 @@ PART
 	attN = bottom, 82
 	mass = 0.100000001
 	shielded = False
-	temp = 264.73426210591117
-	tempExt = 264.33032102777906
+	temp = 167.49005293328295
+	tempExt = 167.52915811033299
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18621,8 +19570,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18644,8 +19593,8 @@ PART
 	persistentId = 2099312545
 	launchID = 1
 	parent = 83
-	position = -5.4399309158325195,0.36129921674728394,-19.354181289672852
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -2.3758940696716309,-8.3263359069824219,-16.611587524414063
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -18661,8 +19610,8 @@ PART
 	attN = bottom, 83
 	mass = 0.100000001
 	shielded = False
-	temp = 263.98094498070441
-	tempExt = 263.43854976079314
+	temp = 167.64390299331532
+	tempExt = 167.78318227807722
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18808,8 +19757,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
+		name = ShipEffectsCollisions
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -18831,8 +19780,8 @@ PART
 	persistentId = 2253535066
 	launchID = 1
 	parent = 84
-	position = -5.4337091445922852,0.70246255397796631,-19.010366439819336
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -2.4510612487792969,-7.875938892364502,-16.450159072875977
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -18848,8 +19797,8 @@ PART
 	attN = bottom, 84
 	mass = 0.0799999982
 	shielded = False
-	temp = 263.4336589238078
-	tempExt = 262.99799775475032
+	temp = 167.77699167614918
+	tempExt = 167.78542952395523
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18952,6 +19901,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -18973,8 +19937,8 @@ PART
 	persistentId = 3738015057
 	launchID = 1
 	parent = 85
-	position = -4.894599437713623,0.49832159280776978,-18.773687362670898
-	rotation = 0.105349734,0.892229676,0.369779438,0.236834913
+	position = -1.9326422214508057,-7.8799395561218262,-16.104394912719727
+	rotation = -0.0271784607,0.941308737,0.185282558,0.280837208
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -18991,8 +19955,8 @@ PART
 	srfN = srfAttach, 85,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 263.03956332150472
-	tempExt = 262.84053815053659
+	temp = 167.82952863027629
+	tempExt = 167.77532365725546
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19163,6 +20127,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -19200,8 +20194,8 @@ PART
 	persistentId = 3918192729
 	launchID = 1
 	parent = 85
-	position = -5.121823787689209,1.1038811206817627,-19.370716094970703
-	rotation = -0.186979041,0.798368871,0.335966289,-0.46343568
+	position = -2.133124828338623,-7.6204957962036133,-16.921060562133789
+	rotation = -0.150229037,0.86418736,0.11179474,-0.467026144
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -19218,8 +20212,8 @@ PART
 	srfN = srfAttach, 85,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 263.03956334849443
-	tempExt = 262.84053815989802
+	temp = 167.83671323054944
+	tempExt = 167.85175526832398
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19390,6 +20384,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -19427,8 +20451,8 @@ PART
 	persistentId = 949943014
 	launchID = 1
 	parent = 85
-	position = -5.9720339775085449,0.95036661624908447,-19.202827453613281
-	rotation = -0.369779438,0.236834913,0.105349734,-0.892229676
+	position = -2.9791727066040039,-7.8140773773193359,-16.775079727172852
+	rotation = -0.185282558,0.280837208,-0.0271784607,-0.941308737
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -19445,8 +20469,8 @@ PART
 	srfN = srfAttach, 85,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 263.05082406308287
-	tempExt = 262.95413210216287
+	temp = 167.84699947171103
+	tempExt = 167.95647985053802
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19617,6 +20641,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -19654,8 +20708,8 @@ PART
 	persistentId = 3723482368
 	launchID = 1
 	parent = 85
-	position = -5.7448325157165527,0.34473961591720581,-18.605976104736328
-	rotation = -0.335966289,-0.46343568,-0.186979041,-0.798368871
+	position = -2.7786741256713867,-8.0736780166625977,-15.958392143249512
+	rotation = -0.11179474,-0.467026144,-0.150229037,-0.86418736
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -19672,8 +20726,8 @@ PART
 	srfN = srfAttach, 85,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 263.03956333894638
-	tempExt = 262.84053815658632
+	temp = 167.82952865035
+	tempExt = 167.77532366423097
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19858,6 +20912,36 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -19881,8 +20965,8 @@ PART
 	persistentId = 967455057
 	launchID = 1
 	parent = 85
-	position = -5.4220123291015625,1.3436408042907715,-18.364410400390625
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = -2.5923771858215332,-7.0295348167419434,-16.14671516418457
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -19897,8 +20981,8 @@ PART
 	attN = bottom01, 85
 	mass = 0.075000003
 	shielded = False
-	temp = 263.17667818659436
-	tempExt = 262.89153180813645
+	temp = 167.8169999128998
+	tempExt = 167.83330458457471
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20022,6 +21106,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -20045,8 +21144,8 @@ PART
 	persistentId = 2244677689
 	launchID = 1
 	parent = 84
-	position = -5.2494244575500488,-0.57720088958740234,-20.821281433105469
-	rotation = 0.0901328102,-0.565258443,0.432315975,-0.696750939
+	position = -1.89200758934021,-9.7525310516357422,-17.506956100463867
+	rotation = 0.251186609,-0.409283608,0.504838705,-0.717307508
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -20061,8 +21160,8 @@ PART
 	srfN = srfAttach, 84,COLLIDER
 	mass = 0.112000003
 	shielded = False
-	temp = 263.92016332973731
-	tempExt = 263.41844640167108
+	temp = 167.75059687489329
+	tempExt = 167.71293581401457
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20241,6 +21340,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -20303,8 +21417,8 @@ PART
 	persistentId = 2466526141
 	launchID = 1
 	parent = 84
-	position = -5.8289890289306641,-0.68205863237380981,-20.706972122192383
-	rotation = 0.0940036029,-0.428939909,0.556407511,0.705396771
+	position = -2.4686951637268066,-9.8847665786743164,-17.407451629638672
+	rotation = -0.067569375,-0.329594016,0.684823811,0.646388829
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -20319,8 +21433,8 @@ PART
 	srfN = srfAttach, 84,COLLIDER
 	mass = 0.112000003
 	shielded = False
-	temp = 263.94708194824761
-	tempExt = 263.86925292731968
+	temp = 167.76688011404411
+	tempExt = 168.26062198240496
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20499,6 +21613,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
@@ -20561,8 +21690,8 @@ PART
 	persistentId = 3672196593
 	launchID = 1
 	parent = 70
-	position = -6.0097026824951172,-2.258857250213623,-21.56397819519043
-	rotation = -0.372914046,-0.241008386,-0.0936519429,-0.891111314
+	position = -2.3726167678833008,-11.682905197143555,-17.509567260742188
+	rotation = -0.146869406,-0.227442533,-0.116175734,-0.955616295
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -20577,8 +21706,8 @@ PART
 	srfN = srfAttach, 70,Cyl12
 	mass = 0.0500000007
 	shielded = False
-	temp = 268.08261020167254
-	tempExt = 268.10599753957763
+	temp = 166.8909447255968
+	tempExt = 167.03166054451574
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -20746,6 +21875,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -20769,8 +21913,8 @@ PART
 	persistentId = 2675819941
 	launchID = 1
 	parent = 41
-	position = -5.0142674446105957,-3.2343480587005615,-20.488323211669922
-	rotation = 0.238838524,0.733677387,0.301314473,0.560252845
+	position = -1.4452735185623169,-11.959799766540527,-16.038908004760742
+	rotation = 0.0457939282,0.762181044,0.181578547,0.6196872
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -20785,8 +21929,8 @@ PART
 	srfN = srfAttach, 41,COLLIDER
 	mass = 0.0500000007
 	shielded = False
-	temp = 268.52963884138489
-	tempExt = 268.93819602237812
+	temp = 166.8705471022252
+	tempExt = 167.10727362374067
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20959,6 +22103,36 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = RSE_Coupler
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -20969,8 +22143,8 @@ PART
 	persistentId = 961273723
 	launchID = 1
 	parent = 94
-	position = -4.6970901489257813,-4.0498638153076172,-19.628175735473633
-	rotation = 0.238838524,0.733677387,0.301314473,0.560252845
+	position = -1.1720908880233765,-12.284062385559082,-14.887477874755859
+	rotation = 0.0457939282,0.762181044,0.181578547,0.6196872
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -20987,8 +22161,8 @@ PART
 	attN = bottom, 96
 	mass = 0.5
 	shielded = False
-	temp = 268.75565873653568
-	tempExt = 269.62503998167779
+	temp = 166.8532954827314
+	tempExt = 167.31999013061801
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21076,6 +22250,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -21095,7 +22284,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5084473.8767271368
+		LastUpdateTime = 4815411606.9930429
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -21121,38 +22310,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -21220,8 +22377,8 @@ PART
 	persistentId = 731573960
 	launchID = 1
 	parent = 95
-	position = -4.7455148696899414,-6.7000832557678223,-22.298789978027344
-	rotation = 0.381943762,0.122635081,0.0441768244,0.914946973
+	position = -0.5881040096282959,-15.782792091369629,-16.142555236816406
+	rotation = 0.16077432,0.100765325,0.0960125402,0.977128208
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -21238,8 +22395,8 @@ PART
 	attN = bottom, 97
 	mass = 0.5
 	shielded = False
-	temp = 271.0857359294971
-	tempExt = 271.28307987019724
+	temp = 166.80406161344854
+	tempExt = 167.24402572449668
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21327,6 +22484,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -21346,7 +22518,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5084473.8767271368
+		LastUpdateTime = 4815411606.9930429
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -21372,38 +22544,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -21471,8 +22611,8 @@ PART
 	persistentId = 290942721
 	launchID = 1
 	parent = 96
-	position = -4.7939133644104004,-9.3502702713012695,-24.969478607177734
-	rotation = 0.381943762,0.122635081,0.0441768244,0.914946973
+	position = -0.004091799259185791,-19.281589508056641,-17.397602081298828
+	rotation = 0.16077432,0.100765325,0.0960125402,0.977128208
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -21489,8 +22629,8 @@ PART
 	attN = bottom, 98
 	mass = 0.5
 	shielded = False
-	temp = 274.3757095736882
-	tempExt = 273.47960449286603
+	temp = 166.83239968520417
+	tempExt = 167.14417008179029
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21578,6 +22718,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleB9PartSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -21597,7 +22752,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5084473.8767271368
+		LastUpdateTime = 4815411606.9930429
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -21623,38 +22778,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -21722,8 +22845,8 @@ PART
 	persistentId = 3423133598
 	launchID = 1
 	parent = 97
-	position = -4.8217587471008301,-10.880556106567383,-26.511272430419922
-	rotation = 0.0441765636,-0.914945662,-0.38194707,0.122634679
+	position = 0.33319622278213501,-21.301830291748047,-18.122043609619141
+	rotation = 0.0960119441,-0.977128029,-0.160776168,0.10076496
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -21740,8 +22863,8 @@ PART
 	attN = bottom, 103
 	mass = 0.0799999982
 	shielded = False
-	temp = 279.91472820778222
-	tempExt = 278.14062419150264
+	temp = 166.91728047158
+	tempExt = 166.98991698124431
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21844,6 +22967,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -21865,8 +23003,8 @@ PART
 	persistentId = 3059906821
 	launchID = 1
 	parent = 98
-	position = -4.2826290130615234,-11.084562301635742,-26.274753570556641
-	rotation = 0.105349652,0.892229915,0.369779885,0.236833379
+	position = 0.8516538143157959,-21.305889129638672,-17.776487350463867
+	rotation = -0.027177915,0.941309571,0.185281113,0.28083542
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -21887,8 +23025,8 @@ PART
 	srfN = srfAttach, 98,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.50317945178449
-	tempExt = 287.37584052124282
+	temp = 166.89841430933112
+	tempExt = 166.93246420681265
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22059,6 +23197,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -22096,8 +23264,8 @@ PART
 	persistentId = 1049527184
 	launchID = 1
 	parent = 98
-	position = -4.5098457336425781,-10.479110717773438,-26.871599197387695
-	rotation = -0.186979026,0.798368454,0.335967183,-0.463435799
+	position = 0.65115553140640259,-21.046457290649414,-18.593381881713867
+	rotation = -0.150231168,0.864187181,0.111796387,-0.467025399
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -22118,8 +23286,8 @@ PART
 	srfN = srfAttach, 98,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.50317945178449
-	tempExt = 287.37584052124282
+	temp = 166.89841430933112
+	tempExt = 166.93246420681265
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22290,6 +23458,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -22327,8 +23525,8 @@ PART
 	persistentId = 316023949
 	launchID = 1
 	parent = 98
-	position = -5.36004638671875,-10.632620811462402,-26.703603744506836
-	rotation = -0.369779885,0.236833379,0.105349652,-0.892229915
+	position = -0.19489753246307373,-21.239824295043945,-18.446937561035156
+	rotation = -0.185281113,0.28083542,-0.027177915,-0.941309571
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -22349,8 +23547,8 @@ PART
 	srfN = srfAttach, 98,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.50317945178449
-	tempExt = 287.37584052124282
+	temp = 166.89841430933112
+	tempExt = 166.93246420681265
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22521,6 +23719,36 @@ PART
 	MODULE
 	{
 		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -22558,8 +23786,8 @@ PART
 	persistentId = 2210410599
 	launchID = 1
 	parent = 98
-	position = -5.1328005790710449,-11.238192558288574,-26.106887817382813
-	rotation = -0.335967183,-0.463435799,-0.186979026,-0.798368454
+	position = 0.0056634247303009033,-21.499540328979492,-17.630332946777344
+	rotation = -0.111796387,-0.467025399,-0.150231168,-0.864187181
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -22580,8 +23808,8 @@ PART
 	srfN = srfAttach, 98,COLLIDER
 	mass = 0.0399999991
 	shielded = False
-	temp = 288.50317945178449
-	tempExt = 287.37584052124282
+	temp = 166.89841430933112
+	tempExt = 166.93246420681265
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22766,6 +23994,36 @@ PART
 	}
 	MODULE
 	{
+		name = RSE_RCS
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -22789,8 +24047,8 @@ PART
 	persistentId = 2965711754
 	launchID = 1
 	parent = 98
-	position = -4.8024086952209473,-11.301351547241211,-26.798398971557617
-	rotation = 0.0598061308,-0.956972301,-0.259254962,0.115819432
+	position = 0.43352678418159485,-21.796085357666016,-18.196199417114258
+	rotation = 0.108343221,-0.989754081,-0.0318604335,0.0873703286
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -22807,8 +24065,8 @@ PART
 	attN = bottom, -1
 	mass = 3.29999995
 	shielded = False
-	temp = 289.27067352856585
-	tempExt = 288.35698740976079
+	temp = 167.08980170377913
+	tempExt = 167.25484108984224
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23194,6 +24452,36 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = RSE_Engines
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -23217,8 +24505,8 @@ PART
 	persistentId = 2589357083
 	launchID = 1
 	parent = 97
-	position = -5.4167466163635254,-10.232621192932129,-25.859146118164063
-	rotation = 0.384448737,0.00216196477,-0.00605514087,0.923123956
+	position = -0.40744897723197937,-20.53693962097168,-17.86640739440918
+	rotation = 0.171936318,-0.0276370626,0.0742054656,0.981920362
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -23233,8 +24521,8 @@ PART
 	srfN = srfAttach, 97,Cyl12
 	mass = 0.0500000007
 	shielded = False
-	temp = 272.92152273223928
-	tempExt = 271.63010483518559
+	temp = 166.84588767096068
+	tempExt = 166.94553618964468
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -23402,6 +24690,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -23425,8 +24728,8 @@ PART
 	persistentId = 1878299170
 	launchID = 1
 	parent = 95
-	position = -4.1731128692626953,-3.9305627346038818,-19.938438415527344
-	rotation = 0.0936526507,-0.891110599,-0.372914732,0.241009697
+	position = -0.62438905239105225,-12.22900390625,-15.173870086669922
+	rotation = 0.116175778,-0.955615878,-0.146869779,0.227444023
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -23441,8 +24744,8 @@ PART
 	srfN = srfAttach, 95,Cyl12
 	mass = 0.0500000007
 	shielded = False
-	temp = 268.32383384889619
-	tempExt = 268.42592312158564
+	temp = 166.89299803442708
+	tempExt = 167.03503602148308
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -23610,6 +24913,21 @@ PART
 	}
 	MODULE
 	{
+		name = ShipEffectsCollisions
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
@@ -23657,9 +24975,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = -1
-	yaw = 0.284800678
-	roll = 0.126935154
+	pitch = -0.04746685
+	yaw = 0.015719991
+	roll = 0.02681521
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -23673,40 +24991,7 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SystemHeatVessel
-	{
-	}
-	VesselModuleSave
-	{
-	}
-	SpaceDustVessel
-	{
-	}
-	VesselPhysicsHold
-	{
-		physicsHold = True
-		roboticsOverride = False
-	}
-	ParkingBrake
-	{
-		lat = 0
-		lon = 0
-		alt = 0
-		positionSet = False
-	}
-	RPMVesselComputer
-	{
-		PERSISTENT_VARS
-		{
-		}
-	}
-	AtmoFxModule
-	{
-	}
-	ModuleDynamicBatteryStorage
-	{
-	}
-	VesselDataManager
+	SuspensionLoadBalancer
 	{
 	}
 	CommNetVessel
@@ -23714,7 +24999,31 @@ VESSELMODULES
 		controlState = KerbalFull
 		canComm = True
 	}
-	SuspensionLoadBalancer
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	ShipEffects
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
 	{
 	}
 	GoldStrikeVesselModule
