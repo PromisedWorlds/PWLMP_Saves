@@ -6,24 +6,24 @@ sit = ORBITING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 18.30123519897461
-lct = 4783726001.927313
-lastUT = 4783726020.2485485
-distanceTraveled = 42230.94420086626
+met = 31687369.007009506
+lct = 4783726001.9273129
+lastUT = 4815413370.9543228
+distanceTraveled = 55763.822271918667
 root = 0
-lat = 0.0795929081554918
-lon = 125.69946521832865
-alt = 107921.7148456953
-hgt = 107921.72
-nrm = -0.03479362651705742,0.3829325735569,0.9231208562850952
-rot = -0.08258685,-0.038555283,0.7186021,0.6894229
-CoM = 2.38418261E-06,-8.90818596,2.86102295E-06
-stg = 3
+lat = -0.12814903324020904
+lon = 105.4022498846703
+alt = 1214994.408707839
+hgt = 1214994.38
+nrm = -0.0555133969,0.106118724,0.99280262
+rot = -0.0797855109,-0.0358639434,0.718918383,0.689568281
+CoM = 5.66244125E-07,-8.90818977,-1.90734863E-06
+stg = 1
 prst = False
 ref = 0
 ctrl = False
@@ -34,19 +34,19 @@ OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = DEFAULT
-cPch = 0
-cHdg = 0
-cMod = -1
+altDispState = ASL
+cPch = -0.466
+cHdg = 0.8419999
+cMod = 0
 ORBIT
 {
-	SMA = 1326511.8960300547
-	ECC = 0.4718495300548043
-	INC = 0.13247312119828253
-	LPE = 128.46111559243852
-	LAN = 276.8638928997506
-	MNA = 0.0663980662866559
-	EPH = 4783726009.948313
+	SMA = 1326511.8960354857
+	ECC = 0.47184953005548907
+	INC = 0.13247312121999122
+	LPE = 128.46111560686987
+	LAN = 276.8638928859861
+	MNA = 2.1711271149232716
+	EPH = 4815413370.9343224
 	REF = 1
 	IDENT = Squad/Kerbin
 }
@@ -63,11 +63,11 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 5
 	sqor = 2
-	sepI = 2
+	sepI = -1
 	sidx = 0
 	attm = 0
 	sameVesselCollision = False
@@ -76,8 +76,8 @@ PART
 	attN = bottom, 1
 	mass = 0.159999996
 	shielded = False
-	temp = 144.38144487346088
-	tempExt = 144.63061713507565
+	temp = 211.41304018147534
+	tempExt = 211.35435501459088
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -87,7 +87,7 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = Decoupler.2
+	rTrf = Decoupler.2 (Destroços da Kerbal X Restock)
 	modCost = 0
 	modMass = 0
 	moduleVariantName = BlackAndWhite
@@ -269,21 +269,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = RSE_Coupler
 		isEnabled = True
 		stagingEnabled = True
@@ -341,11 +326,11 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 0
 	sameVesselCollision = False
@@ -354,8 +339,8 @@ PART
 	attN = bottom, 2
 	mass = 2
 	shielded = False
-	temp = 144.68215674259369
-	tempExt = 145.53014909001726
+	temp = 211.41500391911595
+	tempExt = 211.42766139419203
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -477,7 +462,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783725918.3832474
+		LastUpdateTime = 4815413370.9543228
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -503,38 +488,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -606,11 +559,11 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 0
 	sameVesselCollision = False
@@ -619,8 +572,8 @@ PART
 	attN = bottom, 3
 	mass = 2
 	shielded = False
-	temp = 146.32895957263065
-	tempExt = 147.01655473824377
+	temp = 211.40628525030033
+	tempExt = 211.2664383522723
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -742,7 +695,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783725918.3832474
+		LastUpdateTime = 4815413370.9543228
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -768,38 +721,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -871,11 +792,11 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 0
 	sameVesselCollision = False
@@ -884,8 +805,8 @@ PART
 	attN = bottom, 4
 	mass = 2
 	shielded = False
-	temp = 150.01727151289572
-	tempExt = 149.54248710515327
+	temp = 211.41141748657816
+	tempExt = 211.36725828077766
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1006,7 +927,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 4783725918.3832474
+		LastUpdateTime = 4815413370.9543228
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -1032,38 +953,6 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFreeIva
-		isEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleB9PartSwitch
-		isEnabled = True
-		stagingEnabled = True
-		moduleID = FreeIvaSwitch
-		currentSubtype = Blocked
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -1135,11 +1024,11 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 0
 	resPri = 0
 	dstg = 6
-	sqor = 3
-	sepI = 2
+	sqor = 0
+	sepI = -1
 	sidx = 0
 	attm = 0
 	sameVesselCollision = False
@@ -1148,8 +1037,8 @@ PART
 	attN = bottom, -1
 	mass = 6
 	shielded = False
-	temp = 163.25692887987387
-	tempExt = 160.03870549967064
+	temp = 211.42245473904825
+	tempExt = 211.76562217928094
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1535,21 +1424,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = RSE_Engines
 		isEnabled = True
 		stagingEnabled = True
@@ -1592,11 +1466,11 @@ PART
 	rotation = 1.25607405E-15,8.42937027E-08,2.50320529E-08,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
@@ -1608,8 +1482,8 @@ PART
 	srfN = srfAttach, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 144.05061269290127
-	tempExt = 146.27715758788372
+	temp = 211.41161636434134
+	tempExt = 211.27466353741715
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -1894,11 +1768,11 @@ PART
 	rotation = 1.25160282E-08,0.500000119,2.16783942E-08,0.866025388
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
@@ -1910,8 +1784,8 @@ PART
 	srfN = srfAttach, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 144.03636412503315
-	tempExt = 146.27155615626248
+	temp = 211.41161636434134
+	tempExt = 211.27466353741715
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -2196,11 +2070,11 @@ PART
 	rotation = 2.1678396E-08,0.866025507,1.25160247E-08,0.499999911
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
@@ -2212,8 +2086,8 @@ PART
 	srfN = srfAttach, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 144.03446157028606
-	tempExt = 146.26590911555601
+	temp = 211.41161636434134
+	tempExt = 211.27466353741715
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -2498,11 +2372,11 @@ PART
 	rotation = 2.50320529E-08,1,-2.35025978E-15,-1.28005098E-07
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
@@ -2514,8 +2388,8 @@ PART
 	srfN = srfAttach, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 144.05227463434426
-	tempExt = 146.27881381787108
+	temp = 211.41239679109344
+	tempExt = 211.33643860363881
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -2800,11 +2674,11 @@ PART
 	rotation = 2.16783924E-08,0.866025329,-1.25160291E-08,-0.500000119
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
@@ -2816,8 +2690,8 @@ PART
 	srfN = srfAttach, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 144.1830023121498
-	tempExt = 146.46259256639669
+	temp = 211.41176745911679
+	tempExt = 211.28665404482692
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -3102,11 +2976,11 @@ PART
 	rotation = 1.25160264E-08,0.5,-2.16783942E-08,-0.866025448
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = -1
 	resPri = 0
 	dstg = 6
 	sqor = -1
-	sepI = 2
+	sepI = -1
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
@@ -3118,8 +2992,8 @@ PART
 	srfN = srfAttach, 3
 	mass = 0.100000001
 	shielded = False
-	temp = 144.18187132709332
-	tempExt = 146.46170104873136
+	temp = 211.41410583750186
+	tempExt = 211.48320647244375
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.100000001
@@ -3451,7 +3325,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 4815413370.9543228
 		selectedPad = 0
 		Productivity = 0
 	}
