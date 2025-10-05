@@ -1,7 +1,7 @@
-pid = 56db9a35957c40fcac7c8fe751db75ba
-persistentId = 3705096100
-name = A place that is very, very nice
-type = Flag
+pid = 1b40f1e12b5d449c8ebb611beecfcfff
+persistentId = 79529266
+name = elSurveyCone (STK-1 Survey Cone)
+type = DroppedPart
 sit = LANDED
 landed = True
 skipGroundPositioning = False
@@ -11,24 +11,24 @@ launchedFrom =
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 3640573946.908622
-lct = 1307309271.326124
+met = 755.735034942627
+lct = 4947882462.499711
 lastUT = 4947883218.291746
-distanceTraveled = 0.5872090887144379
+distanceTraveled = 3.8660932593341016E-14
 root = 0
-lat = 0.1798331279200136
-lon = 116.05192539146614
-alt = 2270.9792114006705
-hgt = 0.35210395
-nrm = 0.0739319771528244,0.9963403940200806,-0.04289579391479492
-rot = -0.03684292,0.67265016,0.6880797,0.2696865
+lat = 0.1291064027725356
+lon = 115.92002912503769
+alt = 2364.355188299436
+hgt = 0.22481
+nrm = 1.9878149032592773E-05,1,-2.9802322387695312E-06
+rot = -0.16074301,0.7155594,0.65744114,0.17293836
 CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 9
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,24 +40,24 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 161217.82612134432
-	ECC = 0.9989785680947861
-	INC = 0.17983312792001363
-	LPE = 270
-	LAN = 335.4545270023353
-	MNA = 3.5608232354508202
-	EPH = 4947883177.593632
+	SMA = 161264.61002448332
+	ECC = 0.9989776748869938
+	INC = 0.12910640615212188
+	LPE = 270.01310974875
+	LAN = 335.4810805364189
+	MNA = 3.1415926893860275
+	EPH = 4947883183.332338
 	REF = 6
 	IDENT = Squad/Duna
 }
 PART
 {
-	name = flag
-	cid = 4274978602
-	uid = 1249703492
-	mid = 370834
-	persistentId = 2215254767
-	launchID = 2
+	name = elSurveyCone
+	cid = 0
+	uid = 2337673364
+	mid = 2337673364
+	persistentId = 1434101713
+	launchID = 0
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -66,30 +66,31 @@ PART
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = -1
+	sqor = 0
 	sepI = 0
-	sidx = -1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
-	srfN = , -1
-	mass = 0.00999999978
+	srfN = srfAttach, -1
+	attN = bottom, -1
+	mass = 0.00200000009
 	shielded = False
-	temp = 219.87352390600108
-	tempExt = 219.93555854822924
-	tempExtUnexp = 219.93549783092527
-	staticPressureAtm = 0.052043981620361265
+	temp = 231.50363159179688
+	tempExt = 0
+	tempExtUnexp = 0
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
 	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = flag(Clone)(Clone)
+	flag = 
+	rTrf = elSurveyCone (STK-1 Survey Cone)
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
+	moduleCargoStackableQuantity = 10
 	EVENTS
 	{
 	}
@@ -113,25 +114,21 @@ PART
 		AutostrutOff
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutRoot
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutHeaviest
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		AutostrutGrandparent
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesEnableFlow
@@ -152,12 +149,9 @@ PART
 	}
 	MODULE
 	{
-		name = FlagSite
+		name = WBIPrinterRequirements
 		isEnabled = True
-		placedBy = Shepton Kerman
-		PlaqueText = - Leo
 		stagingEnabled = True
-		state = Placed
 		EVENTS
 		{
 		}
@@ -170,10 +164,66 @@ PART
 	}
 	MODULE
 	{
-		name = FlagDecal
+		name = ModulePartModuleFactory
 		isEnabled = True
-		flagDisplayed = True
-		isMirrored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		WBIMODULE
+		{
+			name = ELSurveyStake
+			isEnabled = True
+			bound = False
+			use = 0
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePhysicMaterial
+		isEnabled = True
+		bounceCombine = Average
+		bounciness = 0
+		dynamicFriction = 0.400000006
+		staticFriction = 0.400000006
+		frictionCombine = Average
+		activePhysicMaterialName = ExtremeGrip
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGroundPart
+		isEnabled = False
+		beingDeployed = False
+		deployedOnGround = False
+		beingAttached = False
+		beingSettled = True
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -203,8 +253,29 @@ PART
 	}
 	MODULE
 	{
-		name = WBIModuleEVAVariants
+		name = ModuleTripLogger
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ELSurveyStake
+		isEnabled = True
+		bound = False
+		use = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -260,4 +331,56 @@ CTRLSTATE
 }
 VESSELMODULES
 {
+	ModularFlightIntegrator
+	{
+	}
+	AxisGroupsModule
+	{
+	}
+	SuspensionLoadBalancer
+	{
+	}
+	CommNetVessel
+	{
+		controlState = None
+		canComm = True
+	}
+	VesselDataManager
+	{
+	}
+	ModuleDynamicBatteryStorage
+	{
+	}
+	AtmoFxModule
+	{
+	}
+	RPMVesselComputer
+	{
+		PERSISTENT_VARS
+		{
+		}
+	}
+	kOSVesselModule
+	{
+	}
+	SpaceDustVessel
+	{
+	}
+	VesselModuleSave
+	{
+	}
+	SystemHeatVessel
+	{
+	}
+	GoldStrikeVesselModule
+	{
+		lastProspectLongitude = 0
+		lastProspectLatitude = 0
+		lastProspectAltitude = 0
+		lastProspectPlanet = -1
+		lastProspectBiome = 
+	}
+	WBIPressureOverride
+	{
+	}
 }
