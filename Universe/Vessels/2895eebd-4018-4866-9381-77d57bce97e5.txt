@@ -1,52 +1,52 @@
-pid = 329dc7bd3c00444c98e83c4ba8a33457
-persistentId = 1957792799
+pid = 2895eebd40184866938177d57bce97e5
+persistentId = 853392960
 name = Vall RocketParts Shuttle V1
 type = Lander
 sit = SUB_ORBITAL
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = False
+vesselSpawning = True
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 49119696.94730568
-lct = 4971797962.449553
-lastUT = 5020917659.416859
-distanceTraveled = 22546886.736791704
+met = 51.28114414215088
+lct = 5020926375.296301
+lastUT = 5020926426.634445
+distanceTraveled = 3878.0413325777586
 root = 0
-lat = -5.795351023926916
-lon = 161.6611410924414
-alt = 19690.063238758536
-hgt = 19690.062
-nrm = -0.7205652594566345,0.024659939110279083,-0.6929484605789185
-rot = 0.9223177,-0.14281082,0.18734878,-0.30632594
-CoM = -6.43730164E-06,1.51602697,7.15255737E-06
-stg = 1
+lat = 5.101908363055166
+lon = 150.90830994908467
+alt = 1145.0881240346935
+hgt = 840.09595
+nrm = -0.7066850066184998,0.6566026210784912,-0.26357024908065796
+rot = 0.5702318,-0.56064117,-0.30645546,-0.51633537
+CoM = -5.13345003E-06,2.49972463,6.43730164E-05
+stg = 2
 prst = False
-ref = 3045666659
+ref = 0
 ctrl = True
 PQSMin = 2
-PQSMax = 10
+PQSMax = 9
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
-altDispState = ASL
-cPch = 0.2
-cHdg = 0.3
-cMod = 0
+altDispState = DEFAULT
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 253365.5229063414
-	ECC = 0.26195680290208234
-	INC = 125.95746574196316
-	LPE = 171.19781927264162
-	LAN = 191.55301836835815
-	MNA = 3.1887024438160783
-	EPH = 5020917661.256901
+	SMA = 151553.93643606897
+	ECC = 0.98814189146917
+	INC = 5.267768164639063
+	LPE = 255.81269146622034
+	LAN = 139.25925540225188
+	MNA = 3.048621113100046
+	EPH = 5020926427.774448
 	REF = 10
 	IDENT = Squad/Vall
 }
@@ -54,13 +54,13 @@ PART
 {
 	name = truss-octo-drone-01
 	cid = 4293417898
-	uid = 3045666659
-	mid = 4181345529
-	persistentId = 145822476
+	uid = 4045298355
+	mid = 1643218497
+	persistentId = 3444464952
 	launchID = 1
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -76,8 +76,8 @@ PART
 	attN = bottom, 104
 	mass = 0.649999976
 	shielded = False
-	temp = 207.01543536461929
-	tempExt = 206.97304665516737
+	temp = 423.82450807139361
+	tempExt = 418.36202961495792
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0
@@ -652,8 +652,8 @@ PART
 			}
 			MechJebModuleSmartASS
 			{
-				mode = ORBITAL
-				target = NODE
+				mode = SURFACE
+				target = VERTICAL_PLUS
 				advReference = INERTIAL
 				advDirection = FORWARD
 				forceRol = False
@@ -693,8 +693,8 @@ PART
 				}
 				rol
 				{
-					_val = 90
-					_text = 90
+					_val = 0
+					_text = 0
 				}
 			}
 			MechJebModuleDockingAutopilot
@@ -992,17 +992,17 @@ PART
 			}
 			MechJebModuleFlightRecorder
 			{
-				markUT = 4971797962.4495525
-				deltaVExpended = NaN
-				dragLosses = 112.54762117716716
-				gravityLosses = 800.1358704705757
-				steeringLosses = NaN
-				markLAN = 118.63862248643599
-				markLatitude = -0.097269393504649901
-				markLongitude = -74.557807768535014
-				markAltitude = 92.953350838238833
+				markUT = 5020918102.9739599
+				deltaVExpended = 823.71137205269429
+				dragLosses = 0.49164292474908072
+				gravityLosses = 1.3272534889970415
+				steeringLosses = 902.96831558930637
+				markLAN = 268.97725617124644
+				markLatitude = -0.09726950757346256
+				markLongitude = -74.557808587076238
+				markAltitude = 93.024378362135025
 				markBodyIndex = 1
-				maxDragGees = 0.41889958263907878
+				maxDragGees = 0.008722016118287013
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1092,18 +1092,10 @@ PART
 		{
 			flight = 0
 			0 = Flight,Kerbin
-			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
-			0 = Escape,Kerbin
-			0 = Flyby,Sun
-			0 = Orbit,Sun
-			0 = Flyby,Jool
-			0 = Escape,Jool
-			0 = Flyby,Tylo
-			0 = Escape,Tylo
-			0 = Orbit,Jool
-			0 = Flyby,Vall
-			0 = Escape,Vall
+			0 = Suborbit,Kerbin
+			0 = Suborbit,Vall
+			0 = Land,Vall
 		}
 		UPGRADESAPPLIED
 		{
@@ -1112,7 +1104,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 29.999981863518926
+		amount = 29.999942069342936
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -1131,13 +1123,13 @@ PART
 {
 	name = truss-octo-hub-01
 	cid = 4293186392
-	uid = 2564081220
-	mid = 4181345529
-	persistentId = 3658315532
+	uid = 2213586779
+	mid = 1643218497
+	persistentId = 3445313032
 	launchID = 1
 	parent = 0
-	position = 0,1.5728912353515625,0
-	rotation = 0,0,0,1
+	position = -2.1625528461299837E-05,1.5729029178619385,-2.1118925360497087E-05
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1157,8 +1149,8 @@ PART
 	attN = bottom, 0
 	mass = 0.5
 	shielded = False
-	temp = 207.01400533092132
-	tempExt = 206.87783155963572
+	temp = 436.0112839680869
+	tempExt = 428.65220006525436
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1250,13 +1242,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4293183272
-	uid = 1519867243
-	mid = 4181345529
-	persistentId = 3416380820
+	uid = 1712471207
+	mid = 1643218497
+	persistentId = 2123081035
 	launchID = 1
 	parent = 1
-	position = 0,3.1911544799804688,0
-	rotation = -1,0,0,0
+	position = -2.2716125386068597E-05,3.1911587715148926,-2.0249446606612764E-05
+	rotation = -1.00000012,0,0,0
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1272,8 +1264,8 @@ PART
 	attN = bottom, 3
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01448861836286
-	tempExt = 206.93653872908732
+	temp = 396.62149380763299
+	tempExt = 371.44518245112369
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1399,13 +1391,13 @@ PART
 {
 	name = strl-tankdrumw-250
 	cid = 4293196972
-	uid = 213143499
-	mid = 4181345529
-	persistentId = 1280295259
+	uid = 3437677404
+	mid = 1643218497
+	persistentId = 990810311
 	launchID = 1
 	parent = 2
-	position = 0,6.091156005859375,0
-	rotation = 0,0,0,1
+	position = 5.7689478126121685E-05,6.091160774230957,-2.4521399609511718E-05
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1429,8 +1421,8 @@ PART
 	attN = top03, -1
 	mass = 2.51600003
 	shielded = False
-	temp = 207.01533597566473
-	tempExt = 206.96487807695274
+	temp = 421.48732345762852
+	tempExt = 414.75811290966431
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1621,7 +1613,7 @@ PART
 	RESOURCE
 	{
 		name = RocketParts
-		amount = 0
+		amount = 24550
 		maxAmount = 24550
 		flowState = True
 		isTweakable = True
@@ -1634,13 +1626,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292949828
-	uid = 609905414
-	mid = 4181345529
-	persistentId = 557046053
+	uid = 2378809919
+	mid = 1643218497
+	persistentId = 1985310513
 	launchID = 1
 	parent = 3
-	position = 0,5.6911544799804688,1.3999999761581421
-	rotation = 0.707106829,1.76772144E-08,-1.76772144E-08,0.707106829
+	position = 4.88528203277383E-05,5.6911635398864746,1.3999778032302856
+	rotation = 0.707106948,2.50182968E-08,-6.83359092E-10,0.707106829
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1657,8 +1649,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543438456136
-	tempExt = 206.97721838254216
+	temp = 376.16611004992512
+	tempExt = 401.62537371212346
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1737,7 +1729,7 @@ PART
 	{
 		name = ModuleRCSFX
 		isEnabled = True
-		rcsEnabled = True
+		rcsEnabled = False
 		thrustPercentage = 100
 		currentShowToggles = False
 		enableYaw = True
@@ -1849,13 +1841,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292948398
-	uid = 538894830
-	mid = 4181345529
-	persistentId = 131826205
+	uid = 835415678
+	mid = 1643218497
+	persistentId = 1211075061
 	launchID = 1
 	parent = 3
-	position = 1.3999998569488525,5.6911544799804688,5.9604644775390625E-08
-	rotation = 0.5,0.50000006,-0.50000006,0.5
+	position = 1.4000389575958252,5.691159725189209,-2.0948751625837758E-05
+	rotation = 0.500000119,0.50000006,-0.50000006,0.500000119
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -1872,8 +1864,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543438456136
-	tempExt = 206.97721838254216
+	temp = 376.16611004992512
+	tempExt = 401.62537371212346
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1952,7 +1944,7 @@ PART
 	{
 		name = ModuleRCSFX
 		isEnabled = True
-		rcsEnabled = True
+		rcsEnabled = False
 		thrustPercentage = 100
 		currentShowToggles = False
 		enableYaw = True
@@ -2064,13 +2056,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292948272
-	uid = 2526644269
-	mid = 4181345529
-	persistentId = 2167073768
+	uid = 214616277
+	mid = 1643218497
+	persistentId = 2721180653
 	launchID = 1
 	parent = 3
-	position = -1.1920928955078125E-07,5.6911544799804688,-1.4000000953674316
-	rotation = -4.85858358E-08,0.707106829,-0.707106829,-4.85858358E-08
+	position = 9.3682483566226438E-06,5.6911587715148926,-1.400046706199646
+	rotation = -6.71494504E-08,0.707106888,-0.707106829,-4.28495497E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2087,8 +2079,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543438456136
-	tempExt = 206.97721838254216
+	temp = 376.16611004992512
+	tempExt = 401.62537371212346
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2167,7 +2159,7 @@ PART
 	{
 		name = ModuleRCSFX
 		isEnabled = True
-		rcsEnabled = True
+		rcsEnabled = False
 		thrustPercentage = 100
 		currentShowToggles = False
 		enableYaw = True
@@ -2279,13 +2271,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292948146
-	uid = 4127582381
-	mid = 4181345529
-	persistentId = 674276884
+	uid = 2698619507
+	mid = 1643218497
+	persistentId = 2684877816
 	launchID = 1
 	parent = 3
-	position = -1.3999998569488525,5.6911544799804688,5.9604644775390625E-08
-	rotation = -0.50000006,0.5,-0.5,-0.50000006
+	position = -1.3999768495559692,5.6911544799804688,-4.8155245167436078E-05
+	rotation = -0.500000119,0.50000006,-0.50000006,-0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2302,8 +2294,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543438456136
-	tempExt = 206.97721838254216
+	temp = 376.16611004992512
+	tempExt = 401.62537371212346
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2382,7 +2374,7 @@ PART
 	{
 		name = ModuleRCSFX
 		isEnabled = True
-		rcsEnabled = True
+		rcsEnabled = False
 		thrustPercentage = 100
 		currentShowToggles = False
 		enableYaw = True
@@ -2494,13 +2486,13 @@ PART
 {
 	name = dockingPortLarge
 	cid = 4292941718
-	uid = 3217199817
-	mid = 4181345529
-	persistentId = 3073759216
+	uid = 2935536207
+	mid = 1643218497
+	persistentId = 1557440566
 	launchID = 1
 	parent = 3
-	position = 0,9.091156005859375,0
-	rotation = 0,0,0,1
+	position = 5.2728697482962161E-05,9.0911645889282227,-2.0809698980883695E-05
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2516,8 +2508,8 @@ PART
 	attN = bottom, 3
 	mass = 0.200000003
 	shielded = False
-	temp = 207.01538806387907
-	tempExt = 206.99215343201345
+	temp = 422.23700290338616
+	tempExt = 416.7168500486045
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2825,13 +2817,13 @@ PART
 {
 	name = controller1000
 	cid = 4292902396
-	uid = 3892303930
-	mid = 4181345529
-	persistentId = 1566640648
+	uid = 1603341394
+	mid = 1643218497
+	persistentId = 2388382649
 	launchID = 1
 	parent = 3
-	position = 0.31264078617095947,6.9042816162109375,-1.1667917966842651
-	rotation = 0,0.13052626,0,-0.991444886
+	position = 0.3126254677772522,6.9042873382568359,-1.166795015335083
+	rotation = -2.61030646E-08,0.130526215,-7.27438954E-09,-0.991444945
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -2845,8 +2837,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.0152976517453
-	tempExt = 206.97721014301951
+	temp = 422.8201025670524
+	tempExt = 416.47338084199112
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2930,7 +2922,7 @@ PART
 		sequencePosition = 10
 		sequencePlaySpeed = 100
 		sequenceLength = 20
-		controllerEnabled = False
+		controllerEnabled = True
 		priorityField = 3
 		windowPosition = (-1120, -375)
 		windowSize = (600, 300)
@@ -3043,6 +3035,62 @@ PART
 		}
 		CONTROLLEDAXES
 		{
+			AXIS
+			{
+				persistentId = 3846358188
+				moduleId = 2595686644
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 0
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 100 0 -200
+					key = 0.5 0 -200 0
+					key = 1 0 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 2791023005
+				moduleId = 4099252261
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 1
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 100 0 -200
+					key = 0.5 0 -200 0
+					key = 1 0 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 740737263
+				moduleId = 490360055
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 2
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.5 0 0 200
+					key = 1 100 200 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 1609073323
+				moduleId = 1936429159
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 3
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.5 0 0 200
+					key = 1 100 200 0
+				}
+			}
 		}
 		CONTROLLEDACTIONS
 		{
@@ -3106,13 +3154,13 @@ PART
 {
 	name = controller1000
 	cid = 4291992410
-	uid = 1788378443
-	mid = 4181345529
-	persistentId = 1270762925
+	uid = 1460936378
+	mid = 1643218497
+	persistentId = 3643701347
 	launchID = 1
 	parent = 3
-	position = -0.31255459785461426,6.921722412109375,-1.1664705276489258
-	rotation = 0,-0.13052626,0,-0.991444886
+	position = -0.31260070204734802,6.9217114448547363,-1.1664527654647827
+	rotation = 1.98925285E-08,-0.130526304,1.41658107E-08,-0.991445005
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3126,8 +3174,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.0152976517453
-	tempExt = 206.97721014301951
+	temp = 422.8201025670524
+	tempExt = 416.47338084199112
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3210,7 +3258,7 @@ PART
 		sequencePosition = 10
 		sequencePlaySpeed = 100
 		sequenceLength = 20
-		controllerEnabled = False
+		controllerEnabled = True
 		priorityField = 3
 		windowPosition = (-1020, -546)
 		windowSize = (600, 300)
@@ -3323,6 +3371,62 @@ PART
 		}
 		CONTROLLEDAXES
 		{
+			AXIS
+			{
+				persistentId = 1303513086
+				moduleId = 1739266530
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 0
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 100 0 -200
+					key = 0.5 0 -200 0
+					key = 1 0 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 716676220
+				moduleId = 1995177690
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 1
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 100 0 -200
+					key = 0.5 0 -200 0
+					key = 1 0 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 391007175
+				moduleId = 67535794
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 2
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.5 0 0 200
+					key = 1 100 200 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 3707396967
+				moduleId = 2785229335
+				partNickName = LV-909 "Terrier" Liquid Fuel Engine
+				rowIndex = 3
+				axisName = independentThrottlePercentage
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.5 0 0 200
+					key = 1 100 200 0
+				}
+			}
 		}
 		CONTROLLEDACTIONS
 		{
@@ -3386,13 +3490,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290236676
-	uid = 1533417719
-	mid = 4181345529
-	persistentId = 986968713
+	uid = 183474026
+	mid = 1643218497
+	persistentId = 1740005727
 	launchID = 1
 	parent = 3
-	position = -1.1920928955078125E-07,8.3422622680664063,-1.2289831638336182
-	rotation = 0,-7.10721295E-08,0,-1
+	position = 2.0571522327372804E-05,8.3422565460205078,-1.2289278507232666
+	rotation = -1.41748724E-10,-8.42928216E-08,6.68434641E-09,-1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3409,8 +3513,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543388721632
-	tempExt = 206.98179196212666
+	temp = 430.45151099474032
+	tempExt = 418.31147454934808
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3626,13 +3730,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290236074
-	uid = 2481237160
-	mid = 4181345529
-	persistentId = 3440911874
+	uid = 766838863
+	mid = 1643218497
+	persistentId = 2555560734
 	launchID = 1
 	parent = 3
-	position = -1.2289829254150391,8.3422622680664063,5.9604644775390625E-08
-	rotation = 0,-0.707106829,0,-0.707106709
+	position = -1.2289530038833618,8.3422670364379883,-1.0479861884959973E-05
+	rotation = 2.19936389E-08,-0.707106948,-5.66978997E-08,-0.707106829
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3649,8 +3753,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543388721632
-	tempExt = 206.98179196212666
+	temp = 430.4515109947373
+	tempExt = 418.31147454934728
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -3862,13 +3966,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290235970
-	uid = 1072361262
-	mid = 4181345529
-	persistentId = 275603730
+	uid = 684571703
+	mid = 1643218497
+	persistentId = 885140244
 	launchID = 1
 	parent = 3
-	position = 2.384185791015625E-07,8.3422622680664063,1.2289831638336182
-	rotation = 0,-1,0,1.14783518E-07
+	position = -1.6755770047893748E-05,8.342259407043457,1.2290273904800415
+	rotation = -4.68950878E-09,-1.00000024,1.21739951E-09,1.26426031E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -3885,8 +3989,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543388721632
-	tempExt = 206.98179196212666
+	temp = 430.45151099473077
+	tempExt = 418.31147454934546
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4098,13 +4202,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290235866
-	uid = 3567122914
-	mid = 4181345529
-	persistentId = 46702520
+	uid = 3612430717
+	mid = 1643218497
+	persistentId = 2120691782
 	launchID = 1
 	parent = 3
-	position = 1.2289830446243286,8.3422622680664063,-1.7881393432617188E-07
-	rotation = 0,-0.707106709,0,0.707106829
+	position = 1.2290140390396118,8.3422641754150391,3.209832129869028E-06
+	rotation = 1.78716579E-08,-0.707106829,1.31643549E-08,0.707107008
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4121,8 +4225,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543388721632
-	tempExt = 206.98179196212666
+	temp = 430.4515109947385
+	tempExt = 418.31147454934757
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4334,13 +4438,13 @@ PART
 {
 	name = controller1000
 	cid = 4290186228
-	uid = 744649072
-	mid = 4181345529
-	persistentId = 4114757415
+	uid = 3308855281
+	mid = 1643218497
+	persistentId = 3243622717
 	launchID = 1
 	parent = 3
-	position = 1.1920928955078125E-07,7.6456146240234375,-1.2415144443511963
-	rotation = 0,7.10721295E-08,0,-1
+	position = -3.9111266232794151E-05,7.6456203460693359,-1.2415454387664795
+	rotation = -2.03345429E-09,4.21331841E-08,3.00816128E-09,-1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4355,8 +4459,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.0152976517453
-	tempExt = 206.97721014301951
+	temp = 422.8201025670524
+	tempExt = 416.47338084199112
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4436,16 +4540,16 @@ PART
 		name = ModuleRoboticController
 		isEnabled = True
 		displayName = Gear
-		sequencePosition = 0
+		sequencePosition = 5
 		sequencePlaySpeed = 100
 		sequenceLength = 10
-		controllerEnabled = True
+		controllerEnabled = False
 		priorityField = 3
 		windowPosition = (-357, -720)
 		windowSize = (600, 300)
 		stagingEnabled = True
 		sequenceIsPlaying = False
-		sequenceDirection = Forward
+		sequenceDirection = Reverse
 		sequenceLoopMode = Once
 		EVENTS
 		{
@@ -4552,9 +4656,221 @@ PART
 		}
 		CONTROLLEDAXES
 		{
+			AXIS
+			{
+				persistentId = 3055295860
+				moduleId = 625490111
+				partNickName = G-12L Alligator Hinge
+				rowIndex = 0
+				axisName = targetAngle
+				SYMPARTS
+				{
+					symPersistentId = 840565248
+				}
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.2 0 0 150
+					key = 0.8 90 150 0
+					key = 1 90 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 1303385085
+				moduleId = 1002133569
+				partNickName = 3PT Telescoping Hydraulic Cylinder
+				rowIndex = 1
+				axisName = targetExtension
+				SYMPARTS
+				{
+					symPersistentId = 2373703972
+				}
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.2 0 0 8
+					key = 0.8 4.8 8 0
+					key = 1 4.8 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 1717119002
+				moduleId = 1287320064
+				partNickName = 3PT Telescoping Hydraulic Cylinder
+				rowIndex = 2
+				axisName = targetExtension
+				SYMPARTS
+				{
+					symPersistentId = 4141448693
+				}
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.2 0 0 8
+					key = 0.8 4.8 8 0
+					key = 1 4.8 0 0
+				}
+			}
+			AXIS
+			{
+				persistentId = 70262225
+				moduleId = 4243917955
+				partNickName = G-12L Alligator Hinge
+				rowIndex = 3
+				axisName = targetAngle
+				SYMPARTS
+				{
+					symPersistentId = 1095726644
+				}
+				timeValueCurve
+				{
+					key = 0 0 0 0
+					key = 0.2 0 0 150
+					key = 0.8 90 150 0
+					key = 1 90 0 0
+				}
+			}
 		}
 		CONTROLLEDACTIONS
 		{
+			ACTION
+			{
+				persistentId = 70262225
+				moduleId = 4243917955
+				partNickName = G-12L Alligator Hinge
+				rowIndex = 4
+				actionName = ServoEngageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 1095726644
+				}
+				TIMES
+				{
+					time = 0
+					time = 1
+				}
+			}
+			ACTION
+			{
+				persistentId = 4141448693
+				moduleId = 3975790883
+				partNickName = 3PT Telescoping Hydraulic Cylinder
+				rowIndex = 5
+				actionName = ServoEngageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 1717119002
+				}
+				TIMES
+				{
+					time = 0
+					time = 1
+				}
+			}
+			ACTION
+			{
+				persistentId = 3055295860
+				moduleId = 625490111
+				partNickName = G-12L Alligator Hinge
+				rowIndex = 6
+				actionName = ServoEngageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 840565248
+				}
+				TIMES
+				{
+					time = 0
+					time = 1
+				}
+			}
+			ACTION
+			{
+				persistentId = 1303385085
+				moduleId = 1002133569
+				partNickName = 3PT Telescoping Hydraulic Cylinder
+				rowIndex = 7
+				actionName = ServoEngageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 2373703972
+				}
+				TIMES
+				{
+					time = 0
+					time = 1
+				}
+			}
+			ACTION
+			{
+				persistentId = 70262225
+				moduleId = 4243917955
+				partNickName = G-12L Alligator Hinge
+				rowIndex = 8
+				actionName = ServoDisgageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 1095726644
+				}
+				TIMES
+				{
+					time = 0.0199999996
+					time = 0.980000019
+				}
+			}
+			ACTION
+			{
+				persistentId = 4141448693
+				moduleId = 3975790883
+				partNickName = 3PT Telescoping Hydraulic Cylinder
+				rowIndex = 9
+				actionName = ServoDisgageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 1717119002
+				}
+				TIMES
+				{
+					time = 0.0199999996
+					time = 0.980000019
+				}
+			}
+			ACTION
+			{
+				persistentId = 1303385085
+				moduleId = 1002133569
+				partNickName = 3PT Telescoping Hydraulic Cylinder
+				rowIndex = 10
+				actionName = ServoDisgageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 2373703972
+				}
+				TIMES
+				{
+					time = 0.0199999996
+					time = 0.980000019
+				}
+			}
+			ACTION
+			{
+				persistentId = 3055295860
+				moduleId = 625490111
+				partNickName = G-12L Alligator Hinge
+				rowIndex = 11
+				actionName = ServoDisgageLockAction
+				SYMPARTS
+				{
+					symPersistentId = 840565248
+				}
+				TIMES
+				{
+					time = 0.0199999996
+					time = 0.980000019
+				}
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -4615,13 +4931,13 @@ PART
 {
 	name = controller1000
 	cid = 4290185972
-	uid = 1411545665
-	mid = 4181345529
-	persistentId = 1056155403
+	uid = 1553377062
+	mid = 1643218497
+	persistentId = 69948497
 	launchID = 1
 	parent = 3
-	position = 0,7.6456146240234375,1.2415144443511963
-	rotation = 0,-1,0,-2.73607412E-08
+	position = -2.392522401351016E-05,7.6456189155578613,1.2414425611495972
+	rotation = 0,-1.00000012,0,-1.20778428E-17
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4636,8 +4952,8 @@ PART
 	srfN = srfAttach, 3,Coll_1
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.0152976517453
-	tempExt = 206.97721014301951
+	temp = 422.8201025670524
+	tempExt = 416.47338084199112
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -4720,7 +5036,7 @@ PART
 		sequencePosition = 10
 		sequencePlaySpeed = 100
 		sequenceLength = 20
-		controllerEnabled = False
+		controllerEnabled = True
 		priorityField = 3
 		windowPosition = (-337, -720)
 		windowSize = (600, 300)
@@ -4896,13 +5212,13 @@ PART
 {
 	name = nfe-rtg-asrg-1
 	cid = 4292556578
-	uid = 3641157733
-	mid = 4181345529
-	persistentId = 795413502
+	uid = 2269889558
+	mid = 1643218497
+	persistentId = 1879038258
 	launchID = 1
 	parent = 2
-	position = 0.82262891530990601,3.1505050659179688,-0.82262885570526123
-	rotation = 0.903460622,0.0800110996,0.374225855,-0.193163767
+	position = 0.82256823778152466,3.1505053043365479,-0.82260012626647949
+	rotation = 0.903460681,0.0800110921,0.374225825,-0.193163827
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -4922,8 +5238,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.0154516538322
-	tempExt = 206.9775084446934
+	temp = 300.81704115873208
+	tempExt = 342.99487610243744
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5084,13 +5400,13 @@ PART
 {
 	name = nfe-rtg-asrg-1
 	cid = 4292554990
-	uid = 3792455466
-	mid = 4181345529
-	persistentId = 2610272497
+	uid = 2184210781
+	mid = 1643218497
+	persistentId = 3376518295
 	launchID = 1
 	parent = 2
-	position = 1.0365729331970215,3.1505050659179688,0.52816033363342285
-	rotation = 0.510950565,0.178269148,0.833795905,-0.10924343
+	position = 1.0365670919418335,3.1504979133605957,0.52818810939788818
+	rotation = 0.510950625,0.178269133,0.833795965,-0.109243445
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5110,8 +5426,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.0154516538322
-	tempExt = 206.9775084446934
+	temp = 300.81704115873208
+	tempExt = 342.99487610243744
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5272,13 +5588,13 @@ PART
 {
 	name = nfe-rtg-asrg-1
 	cid = 4292554940
-	uid = 2210483212
-	mid = 4181345529
-	persistentId = 3123986902
+	uid = 2962157994
+	mid = 1643218497
+	persistentId = 2464436752
 	launchID = 1
 	parent = 2
-	position = -0.18199169635772705,3.1505050659179688,1.1490498781204224
-	rotation = -0.0767252818,0.208434448,0.974884272,0.0164041966
+	position = -0.1819622665643692,3.1505155563354492,1.1490089893341064
+	rotation = -0.0767252743,0.208434448,0.974884391,0.0164041929
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5298,8 +5614,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.0154516538322
-	tempExt = 206.9775084446934
+	temp = 300.81704115873208
+	tempExt = 342.99487610243744
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5460,13 +5776,13 @@ PART
 {
 	name = nfe-rtg-asrg-1
 	cid = 4292554890
-	uid = 1138306224
-	mid = 4181345529
-	persistentId = 2246690676
+	uid = 2060747989
+	mid = 1643218497
+	persistentId = 3539161205
 	launchID = 1
 	parent = 2
-	position = -1.1490499973297119,3.1505050659179688,0.18199121952056885
-	rotation = -0.635094762,0.15898484,0.743599892,0.135785982
+	position = -1.1490283012390137,3.1505050659179688,0.18207046389579773
+	rotation = -0.635094821,0.15898484,0.743599951,0.135786012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5486,8 +5802,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.0154516538322
-	tempExt = 206.9775084446934
+	temp = 300.81704115873208
+	tempExt = 342.99487610243744
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5648,13 +5964,13 @@ PART
 {
 	name = nfe-rtg-asrg-1
 	cid = 4292554840
-	uid = 2023121119
-	mid = 4181345529
-	persistentId = 805844272
+	uid = 2606603557
+	mid = 1643218497
+	persistentId = 610853570
 	launchID = 1
 	parent = 2
-	position = -0.52816009521484375,3.1505050659179688,-1.036573052406311
-	rotation = -0.950879455,0.0488084555,0.22828567,0.203302115
+	position = -0.52821218967437744,3.1504960060119629,-1.0365499258041382
+	rotation = -0.950879514,0.0488084853,0.228285685,0.203302085
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5674,8 +5990,8 @@ PART
 	attN = bottom, -1
 	mass = 0.159999996
 	shielded = False
-	temp = 207.0154516538322
-	tempExt = 206.9775084446934
+	temp = 300.81704115873208
+	tempExt = 342.99487610243744
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5836,13 +6152,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293283574
-	uid = 1363284508
-	mid = 4181345529
-	persistentId = 1372601459
+	uid = 1663417854
+	mid = 1643218497
+	persistentId = 3989836725
 	launchID = 1
 	parent = 1
-	position = -3.1521039009094238,1.5658721923828125,0
-	rotation = 0,0,0.707106829,0.707106769
+	position = -3.1520736217498779,1.5658725500106812,4.0673327021067962E-05
+	rotation = 1.7557495E-08,7.13392865E-08,0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -5861,8 +6177,8 @@ PART
 	attN = bottom02, -1
 	mass = 2.0999999
 	shielded = False
-	temp = 207.01546098781148
-	tempExt = 206.93669017909431
+	temp = 446.04168304696742
+	tempExt = 439.51508997714865
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -5952,7 +6268,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -6017,7 +6333,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 925.3409938711824
+		amount = 1174.2008786962667
 		maxAmount = 1350
 		flowState = True
 		isTweakable = True
@@ -6028,7 +6344,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 1130.9723008429673
+		amount = 1435.1295455974002
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -6041,13 +6357,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4293173910
-	uid = 3329917202
-	mid = 4181345529
-	persistentId = 589510994
+	uid = 67342869
+	mid = 1643218497
+	persistentId = 1385441401
 	launchID = 1
 	parent = 22
-	position = -5.3771829605102539,1.5658721923828125,0
-	rotation = 0,0,-0.707106829,0.707106769
+	position = -5.3771686553955078,1.5658676624298096,5.1043203711742535E-05
+	rotation = 1.29523077E-08,3.86576104E-08,-0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6064,8 +6380,8 @@ PART
 	attN = bottom, 24
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01465386181275
-	tempExt = 206.94383718732476
+	temp = 435.13088906349356
+	tempExt = 422.38491754730092
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6191,13 +6507,13 @@ PART
 {
 	name = Size1p5.Size2.Adapter.01
 	cid = 4293113170
-	uid = 1001446671
-	mid = 4181345529
-	persistentId = 3968039400
+	uid = 3139097540
+	mid = 1643218497
+	persistentId = 2216914999
 	launchID = 1
 	parent = 23
-	position = -6.6808090209960938,1.5658721923828125,0
-	rotation = 0,0,0.707106829,0.707106769
+	position = -6.6807980537414551,1.5658740997314453,-7.37833715902525E-06
+	rotation = 1.7557495E-08,7.13392865E-08,0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6214,8 +6530,8 @@ PART
 	attN = bottom, 23
 	mass = 0.75
 	shielded = False
-	temp = 207.01546545641588
-	tempExt = 206.97878330501578
+	temp = 424.31864057438275
+	tempExt = 395.24981992057275
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6338,7 +6654,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -6402,7 +6718,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 370.1363975483411
+		amount = 469.68035147845796
 		maxAmount = 540
 		flowState = True
 		isTweakable = True
@@ -6413,7 +6729,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 452.3889203372195
+		amount = 574.0518182386102
 		maxAmount = 660
 		flowState = True
 		isTweakable = True
@@ -6426,13 +6742,13 @@ PART
 {
 	name = sspx-tube-1875-angled-1
 	cid = 4293169472
-	uid = 3861187069
-	mid = 4181345529
-	persistentId = 853505048
+	uid = 3120924706
+	mid = 1643218497
+	persistentId = 2641713236
 	launchID = 1
 	parent = 24
-	position = -8.6803083419799805,1.3978729248046875,0
-	rotation = 0,0,0,1
+	position = -8.6802616119384766,1.3978734016418457,2.1060743165435269E-05
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -6451,8 +6767,8 @@ PART
 	attN = bottom, 26
 	mass = 1.45000005
 	shielded = False
-	temp = 207.01543030525016
-	tempExt = 206.98239313891509
+	temp = 264.93923411107261
+	tempExt = 337.0253831961125
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6648,13 +6964,13 @@ PART
 {
 	name = LiquidEngineLV-TX87
 	cid = 4293123700
-	uid = 2741729667
-	mid = 4181345529
-	persistentId = 127267992
+	uid = 2509080598
+	mid = 1643218497
+	persistentId = 3936255094
 	launchID = 1
 	parent = 25
-	position = -8.8483085632324219,-0.43196868896484375,0
-	rotation = -5.96046448E-08,0.707106829,5.96046448E-08,0.707106829
+	position = -8.8483037948608398,-0.43197149038314819,-5.1048668865405489E-06
+	rotation = -6.89072905E-08,0.707106829,8.13259007E-08,0.707106769
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -6671,8 +6987,8 @@ PART
 	attN = bottom, -1
 	mass = 2
 	shielded = False
-	temp = 207.0154452498939
-	tempExt = 206.97944640770012
+	temp = 414.351023632183
+	tempExt = 386.98870021013795
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -6753,7 +7069,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0.427499861
 		thrustPercentage = 100
 		manuallyOverridden = False
 		includeinDVCalcs = False
@@ -6991,7 +7307,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0.427499831
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7007,7 +7323,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0.427499831
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7023,7 +7339,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7045,7 +7361,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7129,13 +7445,13 @@ PART
 {
 	name = stackPoint1
 	cid = 4292533558
-	uid = 49398407
-	mid = 4181345529
-	persistentId = 2585638522
+	uid = 32500386
+	mid = 1643218497
+	persistentId = 3926957905
 	launchID = 1
 	parent = 22
-	position = -2.9896111488342285,2.8337783813476563,-1.5139579772949219E-05
-	rotation = 6.71744347E-05,-0.707106829,6.7293644E-05,-0.707106829
+	position = -2.9896359443664551,2.8337793350219727,-6.3810599385760725E-05
+	rotation = 6.71685557E-05,-0.707106888,6.72960232E-05,-0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7151,8 +7467,8 @@ PART
 	attN = top, 28
 	mass = 0.0399999991
 	shielded = False
-	temp = 207.01512468022079
-	tempExt = 206.97340292690362
+	temp = 442.27983805566538
+	tempExt = 437.59901431598064
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7282,13 +7598,13 @@ PART
 {
 	name = asasmodule1-2
 	cid = 4292531284
-	uid = 186418751
-	mid = 4181345529
-	persistentId = 3860130269
+	uid = 2389240002
+	mid = 1643218497
+	persistentId = 833664270
 	launchID = 1
 	parent = 27
-	position = -2.3896098136901855,2.9306640625,-2.4139881134033203E-05
-	rotation = 2.10734257E-08,-2.10734239E-08,-2.08616257E-07,1.00000012
+	position = -2.3896026611328125,2.9306583404541016,1.4777953765587881E-05
+	rotation = 8.75024586E-09,4.21329602E-08,-2.16674025E-07,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7305,8 +7621,8 @@ PART
 	attN = bottom, 27
 	mass = 0.200000003
 	shielded = False
-	temp = 207.01529830932591
-	tempExt = 206.97870684248431
+	temp = 439.36179116600971
+	tempExt = 435.24066848087972
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7471,13 +7787,13 @@ PART
 {
 	name = asasmodule1-2
 	cid = 4292529874
-	uid = 3782028617
-	mid = 4181345529
-	persistentId = 3800540920
+	uid = 3196541330
+	mid = 1643218497
+	persistentId = 951973458
 	launchID = 1
 	parent = 28
-	position = -2.3896098136901855,3.4306640625,-2.3603439331054688E-05
-	rotation = 2.10734257E-08,-2.10734239E-08,-2.08616257E-07,1.00000012
+	position = -2.3895754814147949,3.4306621551513672,7.3671285463206004E-06
+	rotation = 8.75024586E-09,4.21329602E-08,-2.16674025E-07,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7494,8 +7810,8 @@ PART
 	attN = bottom, 28
 	mass = 0.200000003
 	shielded = False
-	temp = 207.01536089458801
-	tempExt = 206.97893112728624
+	temp = 438.74844842806078
+	tempExt = 434.38063836684734
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7660,13 +7976,13 @@ PART
 {
 	name = asasmodule1-2
 	cid = 4292529246
-	uid = 3687150452
-	mid = 4181345529
-	persistentId = 446448785
+	uid = 4062700657
+	mid = 1643218497
+	persistentId = 2477066096
 	launchID = 1
 	parent = 29
-	position = -2.3896102905273438,3.9306640625,-2.2649765014648438E-05
-	rotation = 2.10734257E-08,-2.10734239E-08,-2.08616257E-07,1.00000012
+	position = -2.3896551132202148,3.9306697845458984,-5.7751349231693894E-05
+	rotation = 8.75024586E-09,4.21329602E-08,-2.16674025E-07,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7683,8 +7999,8 @@ PART
 	attN = bottom, 29
 	mass = 0.200000003
 	shielded = False
-	temp = 207.0153349240216
-	tempExt = 206.97893050126186
+	temp = 438.3857390928668
+	tempExt = 433.85063082065557
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7849,13 +8165,13 @@ PART
 {
 	name = adapter-25-125
 	cid = 4292527390
-	uid = 141058047
-	mid = 4181345529
-	persistentId = 610181526
+	uid = 3070776862
+	mid = 1643218497
+	persistentId = 585635187
 	launchID = 1
 	parent = 30
-	position = -2.3896098136901855,4.3130645751953125,-2.2768974304199219E-05
-	rotation = 2.10734257E-08,-2.10734239E-08,-2.08616257E-07,1.00000012
+	position = -2.3896031379699707,4.3130741119384766,-3.9541493606520817E-05
+	rotation = 8.75024586E-09,4.21329602E-08,-2.16674025E-07,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7872,8 +8188,8 @@ PART
 	attN = bottom, 30
 	mass = 0.0500000007
 	shielded = False
-	temp = 207.01416210292507
-	tempExt = 206.93916796906313
+	temp = 437.44329500500737
+	tempExt = 433.13476553931554
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -7965,13 +8281,13 @@ PART
 {
 	name = RelayAntenna50
 	cid = 4292508978
-	uid = 471078120
-	mid = 4181345529
-	persistentId = 2897432528
+	uid = 2415608691
+	mid = 1643218497
+	persistentId = 789619816
 	launchID = 1
 	parent = 31
-	position = -2.3637206554412842,4.6780624389648438,-2.0861625671386719E-05
-	rotation = 1.68587405E-07,4.21468584E-08,0.130526006,0.991444945
+	position = -2.363694429397583,4.6780691146850586,-6.8139424911350943E-06
+	rotation = 1.04327427E-07,2.62047397E-08,0.130525976,0.991445005
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -7987,8 +8303,8 @@ PART
 	attN = bottom, 31
 	mass = 0.300000012
 	shielded = False
-	temp = 207.01541870260633
-	tempExt = 206.98774237017346
+	temp = 437.96402545797912
+	tempExt = 433.3270258420763
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8178,18 +8494,10 @@ PART
 		{
 			flight = 0
 			0 = Flight,Kerbin
-			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
-			0 = Escape,Kerbin
-			0 = Flyby,Sun
-			0 = Orbit,Sun
-			0 = Flyby,Jool
-			0 = Escape,Jool
-			0 = Flyby,Tylo
-			0 = Escape,Tylo
-			0 = Orbit,Jool
-			0 = Flyby,Vall
-			0 = Escape,Vall
+			0 = Suborbit,Kerbin
+			0 = Suborbit,Vall
+			0 = Land,Vall
 		}
 		UPGRADESAPPLIED
 		{
@@ -8215,13 +8523,13 @@ PART
 {
 	name = hinge.03
 	cid = 4290216072
-	uid = 475470052
-	mid = 4181345529
-	persistentId = 2681037288
+	uid = 2479905175
+	mid = 1643218497
+	persistentId = 3055295860
 	launchID = 1
 	parent = 22
-	position = -5.7521038055419922,0.1658782958984375,0
-	rotation = -0.707106709,-0.707106888,6.70134978E-05,-6.70556474E-05
+	position = -5.7520456314086914,0.1658911257982254,1.0172791007789783E-05
+	rotation = -0.707106769,-0.707106948,6.69847577E-05,-6.70117442E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8238,8 +8546,8 @@ PART
 	attN = top, -1
 	mass = 0.519999981
 	shielded = False
-	temp = 207.01541794638996
-	tempExt = 206.97471339097231
+	temp = 444.22933774019253
+	tempExt = 438.86727636928191
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8316,7 +8624,7 @@ PART
 		isEnabled = True
 		persistentId = 625490111
 		softMinMaxAngles = (0, 180)
-		targetAngle = 45
+		targetAngle = 90
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
@@ -8330,7 +8638,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,4.65659866E-09
-		servoTransformRotation = 0,0,-0.707106829,0.707106829
+		servoTransformRotation = 0,0,-1.1920929E-07,1
 		useMultipleDragCubes = True
 		stagingEnabled = True
 		EVENTS
@@ -8565,13 +8873,13 @@ PART
 {
 	name = piston.03
 	cid = 4290207850
-	uid = 3847923623
-	mid = 4181345529
-	persistentId = 4102827305
+	uid = 170477898
+	mid = 1643218497
+	persistentId = 1303385085
 	launchID = 1
 	parent = 33
-	position = -4.716921329498291,-0.25287628173828125,6.2644481658935547E-05
-	rotation = -0.500094891,-0.50000006,-0.499905169,0.500000119
+	position = -6.170933723449707,-0.86931413412094116,0.00020092535123694688
+	rotation = 0.707107067,2.11053361E-08,0.70710665,-1.85909997E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8588,8 +8896,8 @@ PART
 	attN = top, 35
 	mass = 0.659999967
 	shielded = False
-	temp = 207.01543773109412
-	tempExt = 206.97860724147239
+	temp = 441.29676114079086
+	tempExt = 437.4726841207646
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -8666,8 +8974,8 @@ PART
 		isEnabled = True
 		persistentId = 1002133569
 		softMinMaxExtension = (0, 4.80000019)
-		targetExtension = 2.4000001
-		traverseVelocity = 1
+		targetExtension = 4.80000019
+		traverseVelocity = 10
 		pistonDamping = 100
 		servoIsLocked = True
 		servoIsMotorized = True
@@ -8677,7 +8985,7 @@ PART
 		servoMotorSize = 100
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
-		servoTransformPosition = 0,0,0
+		servoTransformPosition = 0,4.8001833,0
 		servoTransformRotation = 0.707106829,0,0,0.707106709
 		useMultipleDragCubes = False
 		stagingEnabled = True
@@ -8894,13 +9202,13 @@ PART
 {
 	name = Panel1
 	cid = 4290190300
-	uid = 2204190641
-	mid = 4181345529
-	persistentId = 871977829
+	uid = 875811448
+	mid = 1643218497
+	persistentId = 2413522463
 	launchID = 1
 	parent = 34
-	position = -3.3729209899902344,-0.5528717041015625,-0.00013297796249389648
-	rotation = -3.77331162E-08,0.000134031492,0.707106769,0.707106948
+	position = -6.4708724021911621,-7.0134882926940918,0.00018402916612103581
+	rotation = 2.93865128E-08,3.7825465E-11,2.26497363E-07,-1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -8929,8 +9237,8 @@ PART
 	attN = front, 36
 	mass = 0.075000003
 	shielded = False
-	temp = 207.01538701037595
-	tempExt = 206.97892123919166
+	temp = 440.95110423042576
+	tempExt = 436.73682650228949
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9088,13 +9396,13 @@ PART
 {
 	name = lGripPad
 	cid = 4289458366
-	uid = 3897335198
-	mid = 4181345529
-	persistentId = 3592182928
+	uid = 4084389248
+	mid = 1643218497
+	persistentId = 4020280907
 	launchID = 1
 	parent = 35
-	position = -3.3395705223083496,-0.5528717041015625,-0.00013935565948486328
-	rotation = -0.500000119,-0.50000006,0.50000006,-0.500000119
+	position = -6.470858097076416,-7.0468287467956543,0.00012541135947685689
+	rotation = 0.707173824,-6.68357825E-05,-0.707039893,6.7190711E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9110,8 +9418,8 @@ PART
 	attN = bottom, 35
 	mass = 0.0780000016
 	shielded = False
-	temp = 207.01534062108618
-	tempExt = 206.9789454867369
+	temp = 440.71941263815756
+	tempExt = 436.19313429231005
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9307,13 +9615,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293132624
-	uid = 530271307
-	mid = 4181345529
-	persistentId = 3785308170
+	uid = 2354461778
+	mid = 1643218497
+	persistentId = 3106737829
 	launchID = 1
 	parent = 1
-	position = 3.1521039009094238,1.5658721923828125,-2.9802322387695313E-07
-	rotation = 0.707106829,0.707106769,-3.09086197E-08,-3.09086197E-08
+	position = 3.1520600318908691,1.5658646821975708,1.2493816029746085E-05
+	rotation = 0.707106888,0.707106829,-2.91851467E-08,-8.08023657E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9332,8 +9640,8 @@ PART
 	attN = bottom02, -1
 	mass = 2.0999999
 	shielded = False
-	temp = 207.0154609877238
-	tempExt = 206.93668965592417
+	temp = 446.04168096507726
+	tempExt = 439.51513744061367
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9423,7 +9731,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -9488,7 +9796,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 925.3409938711824
+		amount = 1174.2008786962667
 		maxAmount = 1350
 		flowState = True
 		isTweakable = True
@@ -9499,7 +9807,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 1130.9723008429673
+		amount = 1435.1295455974002
 		maxAmount = 1650
 		flowState = True
 		isTweakable = True
@@ -9512,13 +9820,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4293132382
-	uid = 4214563733
-	mid = 4181345529
-	persistentId = 262173577
+	uid = 493744633
+	mid = 1643218497
+	persistentId = 2366850244
 	launchID = 1
 	parent = 37
-	position = 5.3771829605102539,1.5658721923828125,-4.76837158203125E-07
-	rotation = -0.707106829,0.707106769,3.09086197E-08,-3.09086197E-08
+	position = 5.3771548271179199,1.5658695697784424,1.8855237158277305E-06
+	rotation = -0.707106888,0.707106888,3.86377152E-08,-7.13413897E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9535,8 +9843,8 @@ PART
 	attN = bottom, 39
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01465450483983
-	tempExt = 206.9438255243598
+	temp = 435.13093025188766
+	tempExt = 422.38601656536605
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9662,13 +9970,13 @@ PART
 {
 	name = Size1p5.Size2.Adapter.01
 	cid = 4293112748
-	uid = 1768240017
-	mid = 4181345529
-	persistentId = 2361286149
+	uid = 2013690666
+	mid = 1643218497
+	persistentId = 2665578814
 	launchID = 1
 	parent = 38
-	position = 6.6808090209960938,1.5658721923828125,-5.9604644775390625E-07
-	rotation = 0.707106769,0.707106829,-3.09086161E-08,-3.09086232E-08
+	position = 6.6808433532714844,1.5658783912658691,-4.6708879381185398E-05
+	rotation = 0.707106888,0.707106888,-7.13413897E-08,-3.86377152E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9685,8 +9993,8 @@ PART
 	attN = bottom, 38
 	mass = 0.75
 	shielded = False
-	temp = 207.01546541612063
-	tempExt = 206.97848182078533
+	temp = 424.31866910089025
+	tempExt = 395.24981919026004
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -9809,7 +10117,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -9873,7 +10181,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 370.1363975483411
+		amount = 469.68035147845796
 		maxAmount = 540
 		flowState = True
 		isTweakable = True
@@ -9884,7 +10192,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 452.3889203372195
+		amount = 574.0518182386102
 		maxAmount = 660
 		flowState = True
 		isTweakable = True
@@ -9897,13 +10205,13 @@ PART
 {
 	name = sspx-tube-1875-angled-1
 	cid = 4293092846
-	uid = 3170284560
-	mid = 4181345529
-	persistentId = 2188901730
+	uid = 1729096283
+	mid = 1643218497
+	persistentId = 688705543
 	launchID = 1
 	parent = 39
-	position = 8.6803092956542969,1.3978729248046875,-7.7486038208007813E-07
-	rotation = -8.94069672E-08,1,3.24793937E-15,-4.37113989E-08
+	position = 8.6803474426269531,1.3978805541992188,-4.1747898649191484E-05
+	rotation = -8.3648473E-08,1.00000012,-2.17271481E-08,-4.21667288E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -9922,8 +10230,8 @@ PART
 	attN = bottom, 41
 	mass = 1.45000005
 	shielded = False
-	temp = 207.01542627166745
-	tempExt = 206.97935953148937
+	temp = 264.93923694318653
+	tempExt = 337.0258468849388
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10119,13 +10427,13 @@ PART
 {
 	name = LiquidEngineLV-TX87
 	cid = 4293086516
-	uid = 1828010162
-	mid = 4181345529
-	persistentId = 1945479520
+	uid = 1654452676
+	mid = 1643218497
+	persistentId = 2286288154
 	launchID = 1
 	parent = 40
-	position = 8.8483104705810547,-0.43196868896484375,-7.7486038208007813E-07
-	rotation = 0,0.70710665,-1.1920929E-07,-0.707107067
+	position = 8.8483753204345703,-0.43196600675582886,-2.1715519324061461E-05
+	rotation = 8.35376568E-09,0.707106709,-1.24986258E-07,-0.707107127
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 1
@@ -10142,8 +10450,8 @@ PART
 	attN = bottom, -1
 	mass = 2
 	shielded = False
-	temp = 207.01544506849373
-	tempExt = 206.97907801110276
+	temp = 414.35105411708105
+	tempExt = 386.98956611200157
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10224,7 +10532,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0.427499861
 		thrustPercentage = 100
 		manuallyOverridden = False
 		includeinDVCalcs = False
@@ -10454,7 +10762,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0.427499831
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10470,7 +10778,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0.427499831
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10486,7 +10794,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10508,7 +10816,7 @@ PART
 	{
 		name = ModuleColorChanger
 		isEnabled = True
-		animState = True
+		animState = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10592,13 +10900,13 @@ PART
 {
 	name = stackPoint1
 	cid = 4292531814
-	uid = 2674588659
-	mid = 4181345529
-	persistentId = 3051514766
+	uid = 2363976338
+	mid = 1643218497
+	persistentId = 404345434
 	launchID = 1
 	parent = 37
-	position = 2.9896111488342285,2.8337783813476563,1.4841556549072266E-05
-	rotation = 6.71744347E-05,-0.707106471,-6.70850277E-05,0.707107186
+	position = 2.9896037578582764,2.8337821960449219,-5.5637665354879573E-05
+	rotation = 6.72299939E-05,-0.707106531,-6.70855661E-05,0.707107246
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10614,8 +10922,8 @@ PART
 	attN = top, 43
 	mass = 0.0399999991
 	shielded = False
-	temp = 207.01512469648688
-	tempExt = 206.9734038382515
+	temp = 442.27984187073753
+	tempExt = 437.5990447237545
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10745,13 +11053,13 @@ PART
 {
 	name = asasmodule1-2
 	cid = 4292530068
-	uid = 3978068978
-	mid = 4181345529
-	persistentId = 2217161048
+	uid = 808639362
+	mid = 1643218497
+	persistentId = 606534501
 	launchID = 1
 	parent = 42
-	position = 2.3896105289459229,2.9306640625,2.4437904357910156E-05
-	rotation = 1.78813934E-07,1.00000024,-6.32202841E-08,1.95088745E-08
+	position = 2.3895933628082275,2.9306631088256836,4.9030011723516509E-05
+	rotation = 1.86507876E-07,1.00000012,-8.52725464E-08,4.21788151E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10768,8 +11076,8 @@ PART
 	attN = bottom, 42
 	mass = 0.200000003
 	shielded = False
-	temp = 207.01529830943835
-	tempExt = 206.97870679179513
+	temp = 439.3617985256771
+	tempExt = 435.24068537109287
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -10934,13 +11242,13 @@ PART
 {
 	name = asasmodule1-2
 	cid = 4292529436
-	uid = 4115382462
-	mid = 4181345529
-	persistentId = 3220937983
+	uid = 4080413138
+	mid = 1643218497
+	persistentId = 400724694
 	launchID = 1
 	parent = 43
-	position = 2.3896090984344482,3.4306640625,2.3663043975830078E-05
-	rotation = 4.47034836E-07,1.00000024,-2.10734328E-08,-1.49078517E-07
+	position = 2.3896205425262451,3.4306707382202148,4.2035379010485485E-05
+	rotation = 4.54574916E-07,1.00000012,-2.165085E-08,-1.68520302E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -10957,8 +11265,8 @@ PART
 	attN = bottom, 43
 	mass = 0.200000003
 	shielded = False
-	temp = 207.01536088403637
-	tempExt = 206.978922913464
+	temp = 438.74845340859372
+	tempExt = 434.38064535151977
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11123,13 +11431,13 @@ PART
 {
 	name = asasmodule1-2
 	cid = 4292528802
-	uid = 2000746325
-	mid = 4181345529
-	persistentId = 3334337437
+	uid = 470050452
+	mid = 1643218497
+	persistentId = 3527997354
 	launchID = 1
 	parent = 44
-	position = 2.3896100521087646,3.9306640625,2.3901462554931641E-05
-	rotation = 5.36441803E-07,1.00000012,6.32202557E-08,-3.17665922E-07
+	position = 2.3896439075469971,3.9306633472442627,3.3373515179846436E-05
+	rotation = 5.41693282E-07,1.00000012,7.88850301E-08,-3.3714673E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -11146,8 +11454,8 @@ PART
 	attN = bottom, 44
 	mass = 0.200000003
 	shielded = False
-	temp = 207.01533468872697
-	tempExt = 206.97872781690168
+	temp = 438.38574159656832
+	tempExt = 433.8506333177894
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11312,13 +11620,13 @@ PART
 {
 	name = adapter-25-125
 	cid = 4292526846
-	uid = 3164484414
-	mid = 4181345529
-	persistentId = 1064144106
+	uid = 1489198019
+	mid = 1643218497
+	persistentId = 713151070
 	launchID = 1
 	parent = 45
-	position = 2.3896098136901855,4.3130645751953125,2.2947788238525391E-05
-	rotation = 4.47034836E-07,1.00000024,1.89660824E-07,-1.49078517E-07
+	position = 2.3895969390869141,4.3130636215209961,-6.474905603681691E-06
+	rotation = 4.56542182E-07,1.00000012,1.935407E-07,-1.68598007E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -11335,8 +11643,8 @@ PART
 	attN = bottom, 45
 	mass = 0.0500000007
 	shielded = False
-	temp = 207.01416814042312
-	tempExt = 206.93987174402955
+	temp = 437.44328157550234
+	tempExt = 433.13475441933031
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11428,13 +11736,13 @@ PART
 {
 	name = RelayAntenna50
 	cid = 4292506708
-	uid = 264230292
-	mid = 4181345529
-	persistentId = 2095259902
+	uid = 2661790731
+	mid = 1643218497
+	persistentId = 3967849371
 	launchID = 1
 	parent = 46
-	position = 2.3637204170227051,4.6780624389648438,2.1517276763916016E-05
-	rotation = 0.130526572,0.991445065,-6.89257575E-08,-4.43732517E-07
+	position = 2.3637135028839111,4.6780686378479004,-1.5105080819921568E-05
+	rotation = 0.130526572,0.991444945,-9.19294436E-08,-4.77890922E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -11450,8 +11758,8 @@ PART
 	attN = bottom, 46
 	mass = 0.300000012
 	shielded = False
-	temp = 207.01541156040847
-	tempExt = 206.98361565627604
+	temp = 437.9640075772125
+	tempExt = 433.32700917119757
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11641,18 +11949,10 @@ PART
 		{
 			flight = 0
 			0 = Flight,Kerbin
-			0 = Suborbit,Kerbin
 			0 = Orbit,Kerbin
-			0 = Escape,Kerbin
-			0 = Flyby,Sun
-			0 = Orbit,Sun
-			0 = Flyby,Jool
-			0 = Escape,Jool
-			0 = Flyby,Tylo
-			0 = Escape,Tylo
-			0 = Orbit,Jool
-			0 = Flyby,Vall
-			0 = Escape,Vall
+			0 = Suborbit,Kerbin
+			0 = Suborbit,Vall
+			0 = Land,Vall
 		}
 		UPGRADESAPPLIED
 		{
@@ -11678,13 +11978,13 @@ PART
 {
 	name = hinge.03
 	cid = 4290210858
-	uid = 3708467565
-	mid = 4181345529
-	persistentId = 2165758894
+	uid = 1229863056
+	mid = 1643218497
+	persistentId = 840565248
 	launchID = 1
 	parent = 37
-	position = 5.7521038055419922,0.1658782958984375,-4.76837158203125E-07
-	rotation = 6.7044406E-05,-6.70247391E-05,0.707106709,0.707106888
+	position = 5.752140998840332,0.16587702929973602,6.3167477492243052E-05
+	rotation = 6.70469235E-05,-6.70106747E-05,0.707106769,0.707106948
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -11701,8 +12001,8 @@ PART
 	attN = top, -1
 	mass = 0.519999981
 	shielded = False
-	temp = 207.01541795065273
-	tempExt = 206.97471552578045
+	temp = 444.22943656598659
+	tempExt = 438.8672941913656
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -11778,7 +12078,7 @@ PART
 		name = ModuleRoboticServoHinge
 		isEnabled = True
 		softMinMaxAngles = (0, 180)
-		targetAngle = 90
+		targetAngle = 0
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
@@ -11792,7 +12092,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,4.65659866E-09
-		servoTransformRotation = 0,0,-0.707106829,0.707106829
+		servoTransformRotation = 0,0,-5.59291675E-06,1
 		useMultipleDragCubes = True
 		stagingEnabled = True
 		EVENTS
@@ -12011,13 +12311,13 @@ PART
 {
 	name = piston.03
 	cid = 4290206370
-	uid = 2356050087
-	mid = 4181345529
-	persistentId = 2046651065
+	uid = 2031107252
+	mid = 1643218497
+	persistentId = 2373703972
 	launchID = 1
 	parent = 48
-	position = 4.7169203758239746,-0.25287628173828125,-6.3061714172363281E-05
-	rotation = -0.49990499,0.50000006,0.500095129,0.50000006
+	position = 6.1708197593688965,-0.86931836605072021,-0.00017968004976864904
+	rotation = 0.707106769,-4.15186605E-06,-0.707106948,-3.87733598E-06
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12034,8 +12334,8 @@ PART
 	attN = top, 50
 	mass = 0.659999967
 	shielded = False
-	temp = 207.01543773131314
-	tempExt = 206.97860758501889
+	temp = 441.29667875030037
+	tempExt = 437.47264645315448
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12111,10 +12411,10 @@ PART
 		name = ModuleRoboticServoPiston
 		isEnabled = True
 		softMinMaxExtension = (0, 4.80000019)
-		targetExtension = 4.8
-		traverseVelocity = 1
+		targetExtension = 4.80000019
+		traverseVelocity = 10
 		pistonDamping = 100
-		servoIsLocked = True
+		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
 		servoMotorIsEngaged = True
@@ -12122,7 +12422,7 @@ PART
 		servoMotorSize = 100
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
-		servoTransformPosition = 0,0,0
+		servoTransformPosition = 0,4.80009079,0
 		servoTransformRotation = 0.707106829,0,0,0.707106709
 		useMultipleDragCubes = False
 		stagingEnabled = True
@@ -12327,13 +12627,13 @@ PART
 {
 	name = Panel1
 	cid = 4290187184
-	uid = 2331020437
-	mid = 4181345529
-	persistentId = 3573410970
+	uid = 3460245817
+	mid = 1643218497
+	persistentId = 2207640748
 	launchID = 1
 	parent = 49
-	position = 3.372905969619751,-0.55287933349609375,0.00012832880020141602
-	rotation = 0.707106709,0.707107008,1.02198101E-07,-0.000134262053
+	position = 6.4707331657409668,-7.0134267807006836,-0.00015407281171064824
+	rotation = -5.21294714E-06,-1.00000012,5.50334534E-08,2.5215715E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12362,8 +12662,8 @@ PART
 	attN = front, 51
 	mass = 0.075000003
 	shielded = False
-	temp = 207.01538701038706
-	tempExt = 206.97892127813256
+	temp = 440.95102354455128
+	tempExt = 436.7367746315461
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12521,13 +12821,13 @@ PART
 {
 	name = lGripPad
 	cid = 4289452992
-	uid = 1631499107
-	mid = 4181345529
-	persistentId = 2203643033
+	uid = 2820666989
+	mid = 1643218497
+	persistentId = 3463464170
 	launchID = 1
 	parent = 50
-	position = 3.3395552635192871,-0.55287933349609375,0.00013452768325805664
-	rotation = 0.500000417,-0.500000238,0.5,0.49999994
+	position = 6.4707469940185547,-7.0467672348022461,-0.0002124521997757256
+	rotation = -0.707040012,7.09046071E-05,-0.707173645,6.32531592E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12543,8 +12843,8 @@ PART
 	attN = bottom, 50
 	mass = 0.0780000016
 	shielded = False
-	temp = 207.01534062108723
-	tempExt = 206.97894548841842
+	temp = 440.71933406278612
+	tempExt = 436.19307413359087
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12740,13 +13040,13 @@ PART
 {
 	name = truss-octo-01
 	cid = 4293084392
-	uid = 2612157270
-	mid = 4181345529
-	persistentId = 2222826053
+	uid = 2509803113
+	mid = 1643218497
+	persistentId = 3556847367
 	launchID = 1
 	parent = 1
-	position = 0,1.5728912353515625,-2
-	rotation = 0.500000119,0.500000119,0.499999911,-0.499999911
+	position = 2.4347598355234368E-06,1.5728914737701416,-1.9999516010284424
+	rotation = 0.500000179,0.500000119,0.49999997,-0.49999994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12765,8 +13065,8 @@ PART
 	attN = bottom02, -1
 	mass = 4.19999981
 	shielded = False
-	temp = 207.01546193518379
-	tempExt = 206.93482016629349
+	temp = 446.07135849344093
+	tempExt = 440.26138932814649
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -12856,7 +13156,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -12921,7 +13221,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 1850.6819877423648
+		amount = 2348.4017573925335
 		maxAmount = 2700
 		flowState = True
 		isTweakable = True
@@ -12932,7 +13232,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 2261.9446016859347
+		amount = 2870.2590911948005
 		maxAmount = 3300
 		flowState = True
 		isTweakable = True
@@ -12945,13 +13245,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293042926
-	uid = 1919435222
-	mid = 4181345529
-	persistentId = 27153305
+	uid = 2862974504
+	mid = 1643218497
+	persistentId = 3996701828
 	launchID = 1
 	parent = 52
-	position = -5.627476692199707,1.5728912353515625,-2
-	rotation = 0,0,-0.707106829,0.707106829
+	position = -5.6274876594543457,1.5728905200958252,-1.9999520778656006
+	rotation = -7.13434858E-08,5.97179408E-08,-0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -12970,8 +13270,8 @@ PART
 	attN = bottom02, -1
 	mass = 0.899999976
 	shielded = False
-	temp = 207.01542785230654
-	tempExt = 206.93801656055575
+	temp = 444.63500946508651
+	tempExt = 439.04461503071008
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13061,7 +13361,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -13126,7 +13426,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 375
+		amount = 702.8631654960931
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -13137,7 +13437,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4499.99727952784
+		amount = 4499.991310401436
 		maxAmount = 4500
 		flowState = True
 		isTweakable = True
@@ -13150,13 +13450,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4292986306
-	uid = 472258097
-	mid = 4181345529
-	persistentId = 935764086
+	uid = 564377613
+	mid = 1643218497
+	persistentId = 2971723014
 	launchID = 1
 	parent = 53
-	position = -7.8506813049316406,1.5728912353515625,-2
-	rotation = 0.500000119,0.500000119,0.50000006,-0.50000006
+	position = -7.8507170677185059,1.572901725769043,-2.0000636577606201
+	rotation = 0.500000179,0.500000119,0.50000006,-0.500000119
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13173,8 +13473,8 @@ PART
 	attN = bottom, 55
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01471333261398
-	tempExt = 206.9464793256027
+	temp = 443.35126766486621
+	tempExt = 437.51257462415344
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13300,13 +13600,13 @@ PART
 {
 	name = largeAdapter2
 	cid = 4292969690
-	uid = 2606716397
-	mid = 4181345529
-	persistentId = 3576736882
+	uid = 2414702672
+	mid = 1643218497
+	persistentId = 4258080556
 	launchID = 1
 	parent = 54
-	position = -8.4060230255126953,1.5728912353515625,-2
-	rotation = 0,0,-0.707106829,0.707106829
+	position = -8.4060192108154297,1.5728952884674072,-1.9999990463256836
+	rotation = -7.13434858E-08,5.97179408E-08,-0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13323,8 +13623,8 @@ PART
 	attN = bottom, 56
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01490968964737
-	tempExt = 206.97657455629661
+	temp = 438.36334259375428
+	tempExt = 434.40653466509929
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13482,13 +13782,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292731648
-	uid = 2522204764
-	mid = 4181345529
-	persistentId = 528684810
+	uid = 4164820341
+	mid = 1643218497
+	persistentId = 1609073323
 	launchID = 1
 	parent = 55
-	position = -8.5952396392822266,1.5728912353515625,-2
-	rotation = 0,0,0.707106829,-0.707106829
+	position = -8.5952663421630859,1.5728822946548462,-1.9999961853027344
+	rotation = 7.13434858E-08,-5.97179408E-08,0.707106888,-0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -13504,8 +13804,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533893015895
-	tempExt = 206.95577332418273
+	temp = 438.46204494681541
+	tempExt = 434.68728029668864
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -13649,7 +13949,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -13907,13 +14207,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292957718
-	uid = 2018660297
-	mid = 4181345529
-	persistentId = 2430384246
+	uid = 3834828008
+	mid = 1643218497
+	persistentId = 71857127
 	launchID = 1
 	parent = 53
-	position = -7.4520807266235352,1.5728607177734375,-3.3140525817871094
-	rotation = 0.707193971,0,1.48902473E-08,-0.707019687
+	position = -7.4520931243896484,1.5728611946105957,-3.3140583038330078
+	rotation = 0.707193911,-2.93539983E-08,2.60422439E-09,-0.707019687
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -13928,8 +14228,8 @@ PART
 	srfN = srfAttach, 53,COLLISION14
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543294478446
-	tempExt = 206.97405166650708
+	temp = 376.7424088755397
+	tempExt = 417.31841792172469
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14120,12 +14420,12 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290235524
-	uid = 3398762883
-	mid = 4181345529
-	persistentId = 4157863770
+	uid = 2953039780
+	mid = 1643218497
+	persistentId = 3572617078
 	launchID = 1
 	parent = 53
-	position = -3.8672494888305664,2.7591934204101563,-2
+	position = -3.8672053813934326,2.7592034339904785,-2.0000286102294922
 	rotation = 0.500047505,0.500047565,-0.499952465,0.499952555
 	mirror = 1,1,1
 	symMethod = Radial
@@ -14141,8 +14441,8 @@ PART
 	srfN = srfAttach, 53,COLLISION14
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543469125414
-	tempExt = 206.97969396382157
+	temp = 444.05385560590332
+	tempExt = 439.4639218681412
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14353,13 +14653,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293035888
-	uid = 3359674158
-	mid = 4181345529
-	persistentId = 4241915498
+	uid = 3140402134
+	mid = 1643218497
+	persistentId = 2983014525
 	launchID = 1
 	parent = 52
-	position = 5.6256036758422852,1.5728912353515625,-2
-	rotation = 0,0,-0.707106829,0.707106829
+	position = 5.625577449798584,1.572887659072876,-1.9999942779541016
+	rotation = -7.13434858E-08,5.97179408E-08,-0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14378,8 +14678,8 @@ PART
 	attN = bottom02, -1
 	mass = 0.899999976
 	shielded = False
-	temp = 207.01542750174357
-	tempExt = 206.93781099453474
+	temp = 444.6349899085547
+	tempExt = 439.0434229373181
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14469,7 +14769,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -14534,7 +14834,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 375
+		amount = 702.8631654960931
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -14545,7 +14845,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4499.99727952784
+		amount = 4499.991310401436
 		maxAmount = 4500
 		flowState = True
 		isTweakable = True
@@ -14558,13 +14858,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4292986526
-	uid = 1765516317
-	mid = 4181345529
-	persistentId = 182888827
+	uid = 2927255726
+	mid = 1643218497
+	persistentId = 1149491861
 	launchID = 1
 	parent = 59
-	position = 7.8506827354431152,1.5728912353515625,-2
-	rotation = -0.500000119,0.500000119,0.50000006,0.50000006
+	position = 7.8506684303283691,1.5728925466537476,-2.0000045299530029
+	rotation = -0.500000119,0.500000179,0.500000119,0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14581,8 +14881,8 @@ PART
 	attN = bottom, 61
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01477669312052
-	tempExt = 206.94792435103562
+	temp = 443.35161660607673
+	tempExt = 437.51802822381626
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14708,13 +15008,13 @@ PART
 {
 	name = largeAdapter2
 	cid = 4292970980
-	uid = 810597579
-	mid = 4181345529
-	persistentId = 2557465357
+	uid = 397702189
+	mid = 1643218497
+	persistentId = 2762328425
 	launchID = 1
 	parent = 60
-	position = 8.4060249328613281,1.5728912353515625,-2
-	rotation = 0.707106769,-0.707106888,5.96045631E-08,5.960473E-08
+	position = 8.4060850143432617,1.5729029178619385,-2.0000112056732178
+	rotation = 0.707106888,-0.707106948,2.4587246E-08,7.12963981E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -14731,8 +15031,8 @@ PART
 	attN = bottom, 62
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01490880992162
-	tempExt = 206.97655414241476
+	temp = 438.36383710353152
+	tempExt = 434.40825799861312
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -14890,13 +15190,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292966100
-	uid = 153801573
-	mid = 4181345529
-	persistentId = 443244419
+	uid = 3747493091
+	mid = 1643218497
+	persistentId = 3846358188
 	launchID = 1
 	parent = 61
-	position = 8.5952415466308594,1.5728912353515625,-2
-	rotation = 0.707106769,-0.707106888,5.96046306E-08,5.96046661E-08
+	position = 8.5952215194702148,1.5728929042816162,-2.0000731945037842
+	rotation = 0.707106888,-0.707106948,2.4587246E-08,7.12963981E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -14904,7 +15204,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -14912,8 +15212,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533152116701
-	tempExt = 206.9545477869745
+	temp = 438.46247817935489
+	tempExt = 434.69016437951905
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15057,7 +15357,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -15315,13 +15615,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292953672
-	uid = 251407192
-	mid = 4181345529
-	persistentId = 628699142
+	uid = 319516611
+	mid = 1643218497
+	persistentId = 3754654361
 	launchID = 1
 	parent = 59
-	position = 7.3872523307800293,1.5728607177734375,-3.3122661113739014
-	rotation = 0.707193851,-8.94069672E-08,-1.49120751E-08,-0.707019746
+	position = 7.3871898651123047,1.5728613138198853,-3.3122403621673584
+	rotation = 0.707193851,-1.55788783E-07,-1.44942746E-07,-0.707019806
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15336,8 +15636,8 @@ PART
 	srfN = srfAttach, 59,COLLISION14
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543333711859
-	tempExt = 206.97440385291964
+	temp = 376.74240891853975
+	tempExt = 417.31861202580683
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15528,13 +15828,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290233834
-	uid = 3536211359
-	mid = 4181345529
-	persistentId = 4015286938
+	uid = 1120327289
+	mid = 1643218497
+	persistentId = 3546558030
 	launchID = 1
 	parent = 59
-	position = 3.845940113067627,2.7596588134765625,-2
-	rotation = 0.500047326,0.500047505,-0.499952495,0.499952763
+	position = 3.8459672927856445,2.7596662044525146,-2
+	rotation = 0.500047326,0.500047505,-0.499952525,0.499952734
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15549,8 +15849,8 @@ PART
 	srfN = srfAttach, 59,COLLISION14
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543033995273
-	tempExt = 206.97614085671162
+	temp = 444.05381345060903
+	tempExt = 439.46345863043672
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15761,13 +16061,13 @@ PART
 {
 	name = truss-octo-attach-01
 	cid = 4293027508
-	uid = 3814549495
-	mid = 4181345529
-	persistentId = 1003822887
+	uid = 1870663160
+	mid = 1643218497
+	persistentId = 483041351
 	launchID = 1
 	parent = 52
-	position = 0,1.5728912353515625,-2.7999999523162842
-	rotation = 0.499952674,0.500047326,-0.499952674,-0.500047326
+	position = 4.9479018343845382E-05,1.572898268699646,-2.7999880313873291
+	rotation = 0.499952763,0.500047386,-0.499952734,-0.500047445
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15783,8 +16083,8 @@ PART
 	attN = top, 66
 	mass = 0.100000001
 	shielded = False
-	temp = 207.01457445438126
-	tempExt = 206.93686919588396
+	temp = 445.44350553799944
+	tempExt = 439.06546381887375
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -15908,13 +16208,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293014370
-	uid = 2602155641
-	mid = 4181345529
-	persistentId = 3484191138
+	uid = 1993321891
+	mid = 1643218497
+	persistentId = 3547703055
 	launchID = 1
 	parent = 65
-	position = 2.384185791015625E-07,1.5729598999023438,-5.0352025032043457
-	rotation = 0.653281629,0.270597875,-0.270597994,-0.653281629
+	position = -5.3152765758568421E-05,1.5729446411132813,-5.0351743698120117
+	rotation = 0.653281569,0.270597845,-0.270597965,-0.653281629
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -15933,8 +16233,8 @@ PART
 	attN = bottom02, 67
 	mass = 0.199999988
 	shielded = False
-	temp = 207.01472888399474
-	tempExt = 206.95189202138516
+	temp = 419.58792569310879
+	tempExt = 416.04898742256904
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16026,7 +16326,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -16093,13 +16393,13 @@ PART
 {
 	name = Size1p5.Tank.04
 	cid = 4293004566
-	uid = 4087718402
-	mid = 4181345529
-	persistentId = 402919712
+	uid = 3448405969
+	mid = 1643218497
+	persistentId = 711084532
 	launchID = 1
 	parent = 66
-	position = 2.384185791015625E-07,1.5729598999023438,-4.8352031707763672
-	rotation = -0.707106829,-1.49011612E-07,4.470348E-08,0.707106769
+	position = -2.1955840566079132E-05,1.5729610919952393,-4.8352446556091309
+	rotation = -0.707106888,-1.46808659E-07,4.60665639E-08,0.707106829
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16116,8 +16416,8 @@ PART
 	attN = bottom, 66
 	mass = 1.125
 	shielded = False
-	temp = 207.01546574858028
-	tempExt = 206.97877358595125
+	temp = 445.37974390859489
+	tempExt = 438.93932192233416
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16240,7 +16540,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -16328,13 +16628,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4292988146
-	uid = 2501138478
-	mid = 4181345529
-	persistentId = 4185920627
+	uid = 3066896849
+	mid = 1643218497
+	persistentId = 1478622798
 	launchID = 1
 	parent = 66
-	position = -1.9073486328125E-06,1.5729598999023438,-7.2602853775024414
-	rotation = 0.270597935,-0.65328151,-0.653281569,0.270598054
+	position = 1.7601452100279857E-06,1.5729557275772095,-7.2602815628051758
+	rotation = 0.270597965,-0.653281569,-0.653281569,0.270598084
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16351,8 +16651,8 @@ PART
 	attN = bottom, 69
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01437451387343
-	tempExt = 206.9434596650884
+	temp = 434.62680765560401
+	tempExt = 430.60962455615407
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16460,7 +16760,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = False
+		isEnabled = True
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -16478,13 +16778,13 @@ PART
 {
 	name = adapterLargeSmallBi
 	cid = 4292959964
-	uid = 723881269
-	mid = 4181345529
-	persistentId = 171931041
+	uid = 1760400220
+	mid = 1643218497
+	persistentId = 2391894810
 	launchID = 1
 	parent = 68
-	position = -1.9073486328125E-06,1.5729598999023438,-7.6264104843139648
-	rotation = -0.5,0.5,0.5,-0.5
+	position = 9.0941721282433718E-06,1.5729513168334961,-7.6263399124145508
+	rotation = -0.50000006,0.50000006,0.50000006,-0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -16501,8 +16801,8 @@ PART
 	attN = bottom02, 71
 	mass = 0.100000001
 	shielded = False
-	temp = 207.01483633284289
-	tempExt = 206.97627152841255
+	temp = 435.13048053197832
+	tempExt = 431.12596827451563
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16659,13 +16959,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292940830
-	uid = 3313924595
-	mid = 4181345529
-	persistentId = 3560960460
+	uid = 1623225083
+	mid = 1643218497
+	persistentId = 1303513086
 	launchID = 1
 	parent = 69
-	position = -0.62500190734863281,1.5729598999023438,-8.3764095306396484
-	rotation = -0.5,0.5,0.5,-0.5
+	position = -0.62502408027648926,1.5729590654373169,-8.3764114379882813
+	rotation = -0.50000006,0.50000006,0.50000006,-0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -16673,7 +16973,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 2
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -16681,8 +16981,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01534016051502
-	tempExt = 206.95729551072864
+	temp = 435.61349817949986
+	tempExt = 431.60497115635775
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -16826,7 +17126,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -17084,13 +17384,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292939968
-	uid = 2685743796
-	mid = 4181345529
-	persistentId = 3108938439
+	uid = 962492714
+	mid = 1643218497
+	persistentId = 716676220
 	launchID = 1
 	parent = 69
-	position = 0.62499809265136719,1.5729598999023438,-8.3764095306396484
-	rotation = -0.5,0.5,0.5,-0.5
+	position = 0.62500894069671631,1.5729539394378662,-8.3763809204101563
+	rotation = -0.50000006,0.50000006,0.50000006,-0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -17098,7 +17398,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 3
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -17106,8 +17406,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533585228407
-	tempExt = 206.95505913951769
+	temp = 435.61349812288222
+	tempExt = 431.60537502258239
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17251,7 +17551,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -17509,13 +17809,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292952954
-	uid = 2829837524
-	mid = 4181345529
-	persistentId = 2201066002
+	uid = 76933415
+	mid = 1643218497
+	persistentId = 22457435
 	launchID = 1
 	parent = 66
-	position = 1.4907050132751465,1.572998046875,-6.7714791297912598
-	rotation = 0.499926835,0.500073254,-0.499929398,0.500070572
+	position = 1.4907225370407104,1.5730067491531372,-6.7715153694152832
+	rotation = 0.499926835,0.500073195,-0.499929398,0.500070512
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -17530,8 +17830,8 @@ PART
 	srfN = srfAttach, 66,COLLISION18
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543608770436
-	tempExt = 206.9785815422081
+	temp = 376.12133054180282
+	tempExt = 400.41532961870411
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17722,13 +18022,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292950156
-	uid = 3437537726
-	mid = 4181345529
-	persistentId = 3888338954
+	uid = 437122172
+	mid = 1643218497
+	persistentId = 2244736637
 	launchID = 1
 	parent = 66
-	position = -1.493680477142334,1.5729217529296875,-6.7671713829040527
-	rotation = -0.500070691,0.499929577,0.500072837,0.499926984
+	position = -1.4936699867248535,1.5729193687438965,-6.7671656608581543
+	rotation = -0.500070691,0.499929667,0.500072956,0.499926984
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -17743,8 +18043,8 @@ PART
 	srfN = srfAttach, 66,COLLISION18
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543608770436
-	tempExt = 206.9785815422081
+	temp = 376.12133054180282
+	tempExt = 400.41532961870411
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -17935,13 +18235,13 @@ PART
 {
 	name = hinge.03
 	cid = 4290200366
-	uid = 4182165423
-	mid = 4181345529
-	persistentId = 3380054506
+	uid = 1387273083
+	mid = 1643218497
+	persistentId = 1095726644
 	launchID = 1
 	parent = 66
-	position = -1.9073486328125E-06,0.1729583740234375,-6.8352022171020508
-	rotation = -0.500000119,-0.50000006,-0.499999911,-0.500000119
+	position = 3.1540560030407505E-06,0.1729593425989151,-6.8351950645446777
+	rotation = -0.500000119,-0.50000006,-0.499999851,-0.500000119
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -17958,8 +18258,8 @@ PART
 	attN = top, -1
 	mass = 0.519999981
 	shielded = False
-	temp = 207.01542129214832
-	tempExt = 206.978543528003
+	temp = 441.92393154162596
+	tempExt = 436.45025404304482
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18035,12 +18335,12 @@ PART
 		name = ModuleRoboticServoHinge
 		isEnabled = True
 		softMinMaxAngles = (0, 180)
-		targetAngle = 45
+		targetAngle = 0
 		mirrorRotation = False
 		traverseVelocity = 90
 		hingeDamping = 100
 		previousTargetAngle = 180
-		servoIsLocked = True
+		servoIsLocked = False
 		servoIsMotorized = True
 		jointParentRotation = 0,0,0,1
 		servoMotorIsEngaged = True
@@ -18049,7 +18349,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,4.65659866E-09
-		servoTransformRotation = 0,0,-0.707106829,0.707106829
+		servoTransformRotation = 0,0,3.16947517E-05,1
 		useMultipleDragCubes = True
 		stagingEnabled = True
 		EVENTS
@@ -18268,13 +18568,13 @@ PART
 {
 	name = piston.03
 	cid = 4290200246
-	uid = 813805121
-	mid = 4181345529
-	persistentId = 2017555490
+	uid = 2202210276
+	mid = 1643218497
+	persistentId = 1717119002
 	launchID = 1
 	parent = 74
-	position = 1.4781951904296875E-05,-0.24578857421875,-5.8000202178955078
-	rotation = -6.74724579E-05,-0.707106888,-0.707106948,6.71295056E-05
+	position = -1.2230756510689389E-05,-0.86220449209213257,-7.2540230751037598
+	rotation = 1.89028768E-07,-3.173605E-05,1.00000012,-9.4968942E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -18291,8 +18591,8 @@ PART
 	attN = top, 76
 	mass = 0.659999967
 	shielded = False
-	temp = 207.01543787518898
-	tempExt = 206.97893378338705
+	temp = 440.83812664061816
+	tempExt = 436.17570720924516
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18369,8 +18669,8 @@ PART
 		isEnabled = True
 		persistentId = 1287320064
 		softMinMaxExtension = (0, 4.80000019)
-		targetExtension = 2.4000001
-		traverseVelocity = 1
+		targetExtension = 4.80000019
+		traverseVelocity = 10
 		pistonDamping = 100
 		servoIsLocked = True
 		servoIsMotorized = True
@@ -18380,7 +18680,7 @@ PART
 		servoMotorSize = 100
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
-		servoTransformPosition = 0,0,0
+		servoTransformPosition = 0,4.79998636,0
 		servoTransformRotation = 0.707106829,0,0,0.707106709
 		useMultipleDragCubes = False
 		stagingEnabled = True
@@ -18585,13 +18885,13 @@ PART
 {
 	name = Panel1
 	cid = 4290195608
-	uid = 3298317772
-	mid = 4181345529
-	persistentId = 4242560053
+	uid = 3194096381
+	mid = 1643218497
+	persistentId = 1318224118
 	launchID = 1
 	parent = 75
-	position = -0.00087392330169677734,-0.44579315185546875,-4.456019401550293
-	rotation = -2.83122091E-07,-0.707106709,0.707107008,2.38418579E-07
+	position = 2.136801413143985E-05,-7.0061750411987305,-7.4543695449829102
+	rotation = 2.38887537E-07,1.00000012,3.15515608E-05,-3.44587704E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -18620,8 +18920,8 @@ PART
 	attN = front, 77
 	mass = 0.075000003
 	shielded = False
-	temp = 207.01538705202228
-	tempExt = 206.97894944046084
+	temp = 440.57669307213558
+	tempExt = 435.9076400594202
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18779,13 +19079,13 @@ PART
 {
 	name = lGripPad
 	cid = 4289450508
-	uid = 3304806514
-	mid = 4181345529
-	persistentId = 1167671014
+	uid = 776823412
+	mid = 1643218497
+	persistentId = 820200672
 	launchID = 1
 	parent = 76
-	position = -0.00087392330169677734,-0.44579315185546875,-4.4226694107055664
-	rotation = -0.707106709,5.19388777E-07,-2.98023224E-08,-0.707107067
+	position = 3.5239867429481819E-05,-7.0395174026489258,-7.4544272422790527
+	rotation = 1.00000012,-5.87863099E-07,-2.60246679E-07,-3.15527614E-05
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -18801,8 +19101,8 @@ PART
 	attN = bottom, 76
 	mass = 0.0780000016
 	shielded = False
-	temp = 207.01534062401188
-	tempExt = 206.97894652112058
+	temp = 440.38857698255816
+	tempExt = 435.67592567631471
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -18998,13 +19298,13 @@ PART
 {
 	name = truss-octo-01
 	cid = 4293078980
-	uid = 3812387288
-	mid = 4181345529
-	persistentId = 1236328934
+	uid = 2590209666
+	mid = 1643218497
+	persistentId = 3414041156
 	launchID = 1
 	parent = 1
-	position = 1.1920928955078125E-07,1.5728912353515625,2
-	rotation = 0.499999881,-0.49999994,-0.500000119,-0.500000119
+	position = 6.491307431133464E-05,1.5728952884674072,1.9999656677246094
+	rotation = 0.499999911,-0.5,-0.500000179,-0.500000179
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -19023,8 +19323,8 @@ PART
 	attN = bottom02, -1
 	mass = 4.19999981
 	shielded = False
-	temp = 207.01546291369328
-	tempExt = 206.93972827194636
+	temp = 446.07134962597866
+	tempExt = 440.2610497081493
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19114,7 +19414,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -19179,7 +19479,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 1850.6819877423648
+		amount = 2348.4017573925335
 		maxAmount = 2700
 		flowState = True
 		isTweakable = True
@@ -19190,7 +19490,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 2261.9446016859347
+		amount = 2870.2590911948005
 		maxAmount = 3300
 		flowState = True
 		isTweakable = True
@@ -19203,13 +19503,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293041836
-	uid = 4271746730
-	mid = 4181345529
-	persistentId = 3382210912
+	uid = 3005527701
+	mid = 1643218497
+	persistentId = 3318590998
 	launchID = 1
 	parent = 78
-	position = 5.6274776458740234,1.5728912353515625,2.0000016689300537
-	rotation = -0.707106829,0.707106829,0,0
+	position = 5.6275014877319336,1.5728886127471924,2.0000729560852051
+	rotation = -0.707106888,0.707106888,5.97179408E-08,-7.13434858E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -19228,8 +19528,8 @@ PART
 	attN = bottom02, -1
 	mass = 0.899999976
 	shielded = False
-	temp = 207.01543371335524
-	tempExt = 206.9441299887325
+	temp = 444.63491557880167
+	tempExt = 439.04274699341437
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19319,7 +19619,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -19384,7 +19684,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 375
+		amount = 702.8631654960931
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -19395,7 +19695,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4499.99727952784
+		amount = 4499.991310401436
 		maxAmount = 4500
 		flowState = True
 		isTweakable = True
@@ -19408,13 +19708,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4292985986
-	uid = 3611854556
-	mid = 4181345529
-	persistentId = 1867103087
+	uid = 3460276642
+	mid = 1643218497
+	persistentId = 82446095
 	launchID = 1
 	parent = 79
-	position = 7.8506827354431152,1.5728912353515625,2.0000045299530029
-	rotation = 0.50000006,-0.50000006,-0.500000119,-0.500000119
+	position = 7.850677490234375,1.5728964805603027,2.0000214576721191
+	rotation = 0.5,-0.5,-0.50000006,-0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -19431,8 +19731,8 @@ PART
 	attN = bottom, 81
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.0147836780483
-	tempExt = 206.94704508932992
+	temp = 443.35106534778868
+	tempExt = 437.51155995611799
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19558,13 +19858,13 @@ PART
 {
 	name = largeAdapter2
 	cid = 4292969350
-	uid = 1607681767
-	mid = 4181345529
-	persistentId = 3001189214
+	uid = 2570286339
+	mid = 1643218497
+	persistentId = 579130609
 	launchID = 1
 	parent = 80
-	position = 8.4060249328613281,1.5728912353515625,2.0000083446502686
-	rotation = -0.707106829,0.707106829,0,0
+	position = 8.4060859680175781,1.5728952884674072,2.0000133514404297
+	rotation = -0.707106888,0.707106888,5.97179408E-08,-7.13434858E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -19581,8 +19881,8 @@ PART
 	attN = bottom, 82
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01492450182661
-	tempExt = 206.9770526452478
+	temp = 438.36215900676734
+	tempExt = 434.40473192595334
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19740,13 +20040,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292964784
-	uid = 995207183
-	mid = 4181345529
-	persistentId = 2923492953
+	uid = 2104490769
+	mid = 1643218497
+	persistentId = 2791023005
 	launchID = 1
 	parent = 81
-	position = 8.5952415466308594,1.5728912353515625,2.0000154972076416
-	rotation = -0.707106829,0.707106829,0,0
+	position = 8.5952262878417969,1.572900652885437,1.999953031539917
+	rotation = -0.707106888,0.707106888,5.97179408E-08,-7.13434858E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -19754,7 +20054,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 4
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -19762,8 +20062,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533178250713
-	tempExt = 206.9545868565902
+	temp = 438.46081050377876
+	tempExt = 434.68376946798628
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -19907,7 +20207,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -20165,13 +20465,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292957146
-	uid = 1551879857
-	mid = 4181345529
-	persistentId = 4209775009
+	uid = 678224023
+	mid = 1643218497
+	persistentId = 3419297677
 	launchID = 1
 	parent = 79
-	position = 7.4520816802978516,1.5728607177734375,3.3140573501586914
-	rotation = 5.96046448E-08,-0.707019806,-0.707193911,1.34114089E-07
+	position = 7.452059268951416,1.5728607177734375,3.314009428024292
+	rotation = 2.78570731E-08,-0.707019746,-0.707193911,1.36868522E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -20186,8 +20486,8 @@ PART
 	srfN = srfAttach, 79,COLLISION14
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543406222325
-	tempExt = 206.97486049413311
+	temp = 376.74241052656288
+	tempExt = 417.32011167889573
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20378,13 +20678,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290234572
-	uid = 1640950648
-	mid = 4181345529
-	persistentId = 3271285157
+	uid = 1916068194
+	mid = 1643218497
+	persistentId = 2750130544
 	launchID = 1
 	parent = 79
-	position = 3.8672504425048828,2.7591934204101563,2.0000019073486328
-	rotation = -0.499952406,0.499952644,-0.500047445,-0.500047565
+	position = 3.8672206401824951,2.759207010269165,1.9999630451202393
+	rotation = -0.499952555,0.499952763,-0.500047445,-0.500047684
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -20399,8 +20699,8 @@ PART
 	srfN = srfAttach, 79,COLLISION14
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543236060456
-	tempExt = 206.97783709417229
+	temp = 444.05375482973682
+	tempExt = 439.46321061674513
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20611,13 +20911,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293035420
-	uid = 2424323889
-	mid = 4181345529
-	persistentId = 923774480
+	uid = 1241485212
+	mid = 1643218497
+	persistentId = 2821898744
 	launchID = 1
 	parent = 78
-	position = -5.6256036758422852,1.5728912353515625,1.999998927116394
-	rotation = -0.707106829,0.707106829,0,0
+	position = -5.6256170272827148,1.5728914737701416,1.999950647354126
+	rotation = -0.707106888,0.707106888,5.97179408E-08,-7.13434858E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -20636,8 +20936,8 @@ PART
 	attN = bottom02, -1
 	mass = 0.899999976
 	shielded = False
-	temp = 207.01543453045326
-	tempExt = 206.94546591917154
+	temp = 444.63488534931076
+	tempExt = 439.0429746895
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20727,7 +21027,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -20761,7 +21061,7 @@ PART
 	MODULE
 	{
 		name = KOSNameTag
-		isEnabled = True
+		isEnabled = False
 		nameTag = 
 		stagingEnabled = True
 		EVENTS
@@ -20792,7 +21092,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 375
+		amount = 702.8631654960931
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -20803,7 +21103,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4499.99727952784
+		amount = 4499.991310401436
 		maxAmount = 4500
 		flowState = True
 		isTweakable = True
@@ -20816,13 +21116,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4292987788
-	uid = 2750776708
-	mid = 4181345529
-	persistentId = 3408529796
+	uid = 3384560837
+	mid = 1643218497
+	persistentId = 2147798843
 	launchID = 1
 	parent = 85
-	position = -7.8506832122802734,1.5728912353515625,1.999995231628418
-	rotation = 0.50000006,0.500000119,0.500000179,-0.5
+	position = -7.8507118225097656,1.5728904008865356,1.999961256980896
+	rotation = 0.50000006,0.50000006,0.500000179,-0.5
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -20839,8 +21139,8 @@ PART
 	attN = bottom, 87
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01483052108802
-	tempExt = 206.95345398171054
+	temp = 443.35114819872291
+	tempExt = 437.51163736573392
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -20966,13 +21266,13 @@ PART
 {
 	name = largeAdapter2
 	cid = 4292971458
-	uid = 3087153536
-	mid = 4181345529
-	persistentId = 1730844016
+	uid = 1005117660
+	mid = 1643218497
+	persistentId = 1217780513
 	launchID = 1
 	parent = 86
-	position = -8.4060249328613281,1.5728836059570313,1.9999918937683105
-	rotation = 0,-3.55271368E-15,-0.707106829,0.707106829
+	position = -8.4060115814208984,1.5728839635848999,2.000025749206543
+	rotation = -7.13434858E-08,5.97179408E-08,-0.707106888,0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -20989,8 +21289,8 @@ PART
 	attN = bottom, 88
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01492369914061
-	tempExt = 206.97712602443301
+	temp = 438.3622590632952
+	tempExt = 434.40531896822262
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21148,13 +21448,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292729010
-	uid = 77994038
-	mid = 4181345529
-	persistentId = 4169169027
+	uid = 2042053723
+	mid = 1643218497
+	persistentId = 740737263
 	launchID = 1
 	parent = 87
-	position = -8.5952415466308594,1.5728836059570313,1.9999861717224121
-	rotation = 1.25607363E-14,-1.2560738E-14,0.707106829,-0.707106829
+	position = -8.5952568054199219,1.5728746652603149,2.0000286102294922
+	rotation = 7.13434858E-08,-5.97179408E-08,0.707106888,-0.707106888
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -21162,7 +21462,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 5
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -21170,8 +21470,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533106600485
-	tempExt = 206.95449533378155
+	temp = 438.46085687346897
+	tempExt = 434.68315333666345
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21315,7 +21615,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -21573,13 +21873,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292953282
-	uid = 3476271460
-	mid = 4181345529
-	persistentId = 1552114732
+	uid = 2607590886
+	mid = 1643218497
+	persistentId = 816859722
 	launchID = 1
 	parent = 85
-	position = -7.3872528076171875,1.5728607177734375,3.3122615814208984
-	rotation = 5.96046448E-08,-0.707019806,-0.707193911,1.34114089E-07
+	position = -7.3872828483581543,1.572864294052124,3.3123006820678711
+	rotation = 2.78570731E-08,-0.707019746,-0.707193911,1.36868522E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -21594,8 +21894,8 @@ PART
 	srfN = srfAttach, 85,COLLISION14
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543437724013
-	tempExt = 206.97550894569338
+	temp = 376.74240902817041
+	tempExt = 417.31976035454682
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -21786,13 +22086,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290234266
-	uid = 3625590694
-	mid = 4181345529
-	persistentId = 2654773923
+	uid = 2337541686
+	mid = 1643218497
+	persistentId = 422186450
 	launchID = 1
 	parent = 85
-	position = -3.8459396362304688,2.7596588134765625,1.9999980926513672
-	rotation = -0.499952585,0.499952704,-0.500047266,-0.500047505
+	position = -3.8459258079528809,2.7596638202667236,2.0000619888305664
+	rotation = -0.499952644,0.499952853,-0.500047326,-0.500047565
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -21807,8 +22107,8 @@ PART
 	srfN = srfAttach, 85,COLLISION14
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01543258507854
-	tempExt = 206.97815099524882
+	temp = 444.0537369921912
+	tempExt = 439.46320720521601
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22019,13 +22319,13 @@ PART
 {
 	name = truss-octo-attach-01
 	cid = 4293027100
-	uid = 2749536325
-	mid = 4181345529
-	persistentId = 155849843
+	uid = 1915883230
+	mid = 1643218497
+	persistentId = 1347268803
 	launchID = 1
 	parent = 78
-	position = 1.0728836059570313E-06,1.5728912353515625,2.7999999523162842
-	rotation = -0.499952614,-0.500047445,-0.499952555,-0.500047505
+	position = 2.1681709768017754E-05,1.5728923082351685,2.8000020980834961
+	rotation = -0.499952704,-0.500047505,-0.499952585,-0.500047565
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -22041,8 +22341,8 @@ PART
 	attN = top, 92
 	mass = 0.100000001
 	shielded = False
-	temp = 207.0145650385619
-	tempExt = 206.93489450194366
+	temp = 445.44321546232106
+	tempExt = 439.06617263038601
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22166,13 +22466,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4293013530
-	uid = 3540882898
-	mid = 4181345529
-	persistentId = 318339447
+	uid = 4280310520
+	mid = 1643218497
+	persistentId = 2650935501
 	launchID = 1
 	parent = 91
-	position = 4.291534423828125E-06,1.5729598999023438,5.0352029800415039
-	rotation = -0.270597935,-0.653281689,-0.65328145,-0.270597965
+	position = 2.216363100160379E-06,1.5729678869247437,5.0351409912109375
+	rotation = -0.270597965,-0.653281748,-0.65328151,-0.270597994
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -22191,8 +22491,8 @@ PART
 	attN = bottom02, 93
 	mass = 0.199999988
 	shielded = False
-	temp = 207.01460785532007
-	tempExt = 206.94224204564952
+	temp = 419.63101483600303
+	tempExt = 416.08161866928094
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22284,7 +22584,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -22351,13 +22651,13 @@ PART
 {
 	name = Size1p5.Tank.04
 	cid = 4293003350
-	uid = 2442033108
-	mid = 4181345529
-	persistentId = 3770900781
+	uid = 617351913
+	mid = 1643218497
+	persistentId = 1021920828
 	launchID = 1
 	parent = 92
-	position = 2.6226043701171875E-06,1.5729598999023438,4.835205078125
-	rotation = 8.94069672E-08,0.707107067,0.70710665,1.49011754E-08
+	position = -2.8982976800762117E-05,1.5729553699493408,4.8352117538452148
+	rotation = 6.39051336E-08,0.707107127,0.707106709,3.83536793E-08
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -22374,8 +22674,8 @@ PART
 	attN = bottom, 92
 	mass = 1.125
 	shielded = False
-	temp = 207.01546571676764
-	tempExt = 206.97871219954393
+	temp = 445.37891946717878
+	tempExt = 438.93865405792661
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22498,7 +22798,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = False
 		BoiloffOccuring = False
@@ -22586,13 +22886,13 @@ PART
 {
 	name = truss-octo-adapter-01
 	cid = 4292989474
-	uid = 3312846033
-	mid = 4181345529
-	persistentId = 3686310390
+	uid = 1518805236
+	mid = 1643218497
+	persistentId = 1430196744
 	launchID = 1
 	parent = 92
-	position = 6.198883056640625E-06,1.5729598999023438,7.2602863311767578
-	rotation = -0.653281629,0.270597935,-0.270597786,0.653281569
+	position = 5.4070518672233447E-05,1.5729721784591675,7.2603054046630859
+	rotation = -0.653281689,0.270597965,-0.270597786,0.653281569
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -22609,8 +22909,8 @@ PART
 	attN = bottom, 95
 	mass = 0.0799999982
 	shielded = False
-	temp = 207.01454552554185
-	tempExt = 206.95158614361947
+	temp = 434.62939817129597
+	tempExt = 430.61149425077667
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22736,13 +23036,13 @@ PART
 {
 	name = adapterLargeSmallBi
 	cid = 4292959194
-	uid = 126979878
-	mid = 4181345529
-	persistentId = 2945807726
+	uid = 1892882501
+	mid = 1643218497
+	persistentId = 3703001378
 	launchID = 1
 	parent = 94
-	position = 9.5367431640625E-06,1.5729598999023438,7.6264133453369141
-	rotation = 0.50000006,-0.49999994,0.500000179,-0.499999851
+	position = -1.4360698514792603E-05,1.5729614496231079,7.6264715194702148
+	rotation = 0.50000006,-0.50000006,0.500000238,-0.499999911
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -22759,8 +23059,8 @@ PART
 	attN = bottom02, 97
 	mass = 0.100000001
 	shielded = False
-	temp = 207.01484245070262
-	tempExt = 206.97635526282517
+	temp = 435.13244800657191
+	tempExt = 431.12800085695233
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -22917,13 +23217,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292794284
-	uid = 941317201
-	mid = 4181345529
-	persistentId = 2524579540
+	uid = 1943481114
+	mid = 1643218497
+	persistentId = 391007175
 	launchID = 1
 	parent = 95
-	position = 0.62502425909042358,1.5729598999023438,8.3764133453369141
-	rotation = 0.50000006,-0.500000298,0.49999997,-0.499999732
+	position = 0.62507420778274536,1.5729688405990601,8.3764352798461914
+	rotation = 0.500000119,-0.500000358,0.5,-0.499999762
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -22931,7 +23231,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 6
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -22939,8 +23239,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533935775751
-	tempExt = 206.95567565976501
+	temp = 435.61526430087514
+	tempExt = 431.60713312287396
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23084,7 +23384,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -23342,13 +23642,13 @@ PART
 {
 	name = liquidEngine3.v2
 	cid = 4292791558
-	uid = 3135602999
-	mid = 4181345529
-	persistentId = 3975128379
+	uid = 692956829
+	mid = 1643218497
+	persistentId = 3707396967
 	launchID = 1
 	parent = 95
-	position = -0.62497806549072266,1.5729598999023438,8.3764152526855469
-	rotation = 0.50000006,-0.500000298,0.49999997,-0.499999732
+	position = -0.62495309114456177,1.5729739665985107,8.3764047622680664
+	rotation = 0.500000119,-0.500000358,0.5,-0.499999762
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -23356,7 +23656,7 @@ PART
 	dstg = 0
 	sqor = 0
 	sepI = -1
-	sidx = 7
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = srfAttach, -1
@@ -23364,8 +23664,8 @@ PART
 	attN = bottom, -1
 	mass = 0.5
 	shielded = False
-	temp = 207.01533632284659
-	tempExt = 206.95512169297672
+	temp = 435.61526455467032
+	tempExt = 431.60724712407591
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23509,7 +23809,7 @@ PART
 		enableYaw = True
 		enablePitch = True
 		enableRoll = True
-		gimbalActive = False
+		gimbalActive = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -23767,13 +24067,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292952304
-	uid = 620175025
-	mid = 4181345529
-	persistentId = 198388831
+	uid = 204154551
+	mid = 1643218497
+	persistentId = 4245210724
 	launchID = 1
 	parent = 92
-	position = -1.4907009601593018,1.572998046875,6.771484375
-	rotation = -0.499929458,0.500070632,-0.49992618,-0.500073612
+	position = -1.4906781911849976,1.5729936361312866,6.7715449333190918
+	rotation = -0.499929607,0.50007081,-0.499926269,-0.500073791
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -23788,8 +24088,8 @@ PART
 	srfN = srfAttach, 92,COLLISION18
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543579433735
-	tempExt = 206.97817272771454
+	temp = 376.12239685145693
+	tempExt = 400.4359461550419
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -23980,13 +24280,13 @@ PART
 {
 	name = nflv-rcs-heavy-4x-1
 	cid = 4292951976
-	uid = 3508091561
-	mid = 4181345529
-	persistentId = 1582628608
+	uid = 2226770059
+	mid = 1643218497
+	persistentId = 446764294
 	launchID = 1
 	parent = 92
-	position = 1.4936866760253906,1.5729217529296875,6.7671675682067871
-	rotation = 0.500072956,0.499927044,0.500070751,-0.49992916
+	position = 1.4937316179275513,1.572932243347168,6.7671842575073242
+	rotation = 0.500073075,0.499927133,0.50007081,-0.499929249
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -24001,8 +24301,8 @@ PART
 	srfN = srfAttach, 92,COLLISION18
 	mass = 0.159999996
 	shielded = False
-	temp = 207.01543579433735
-	tempExt = 206.97817272771454
+	temp = 376.12239685145693
+	tempExt = 400.4359461550419
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24193,13 +24493,13 @@ PART
 {
 	name = hinge.03
 	cid = 4290203096
-	uid = 2809362460
-	mid = 4181345529
-	persistentId = 1533338865
+	uid = 985796946
+	mid = 1643218497
+	persistentId = 70262225
 	launchID = 1
 	parent = 92
-	position = 5.6028366088867188E-06,0.1729583740234375,6.8352036476135254
-	rotation = -0.499999911,-0.499999911,0.500000179,0.5
+	position = 5.8598907344276085E-05,0.17296892404556274,6.8351802825927734
+	rotation = -0.49999997,-0.5,0.500000238,0.50000006
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -24216,8 +24516,8 @@ PART
 	attN = top, -1
 	mass = 0.519999981
 	shielded = False
-	temp = 207.01542095107413
-	tempExt = 206.97817282511178
+	temp = 441.92406772852547
+	tempExt = 436.45160331416628
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24308,7 +24608,7 @@ PART
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
 		servoTransformPosition = 0,0,4.65659866E-09
-		servoTransformRotation = 0,0,-0.707106829,0.707106829
+		servoTransformRotation = 0,0,0.000175386624,1
 		useMultipleDragCubes = True
 		stagingEnabled = True
 		EVENTS
@@ -24527,13 +24827,13 @@ PART
 {
 	name = piston.03
 	cid = 4290202966
-	uid = 2292118728
-	mid = 4181345529
-	persistentId = 4156183320
+	uid = 1575796785
+	mid = 1643218497
+	persistentId = 4141448693
 	launchID = 1
 	parent = 100
-	position = -1.1563301086425781E-05,-0.24578857421875,5.800020694732666
-	rotation = -0.707107008,6.7293644E-05,6.74133844E-05,0.707106769
+	position = -5.8867339248536155E-05,-0.86208468675613403,7.2543010711669922
+	rotation = 1.00000012,-9.49746536E-05,-1.98512822E-07,0.000175504392
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -24550,8 +24850,8 @@ PART
 	attN = top, 102
 	mass = 0.659999967
 	shielded = False
-	temp = 207.01543784497329
-	tempExt = 206.97890496481077
+	temp = 440.83813271515839
+	tempExt = 436.1760516301004
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -24628,8 +24928,8 @@ PART
 		isEnabled = True
 		persistentId = 3975790883
 		softMinMaxExtension = (0, 4.80000019)
-		targetExtension = 4.8
-		traverseVelocity = 1
+		targetExtension = 4.80000019
+		traverseVelocity = 10
 		pistonDamping = 100
 		servoIsLocked = True
 		servoIsMotorized = True
@@ -24639,7 +24939,7 @@ PART
 		servoMotorSize = 100
 		servoMotorLimit = 100
 		lockPartOnPowerLoss = True
-		servoTransformPosition = 0,0,0
+		servoTransformPosition = 0,4.80042505,0
 		servoTransformRotation = 0.707106829,0,0,0.707106709
 		useMultipleDragCubes = False
 		stagingEnabled = True
@@ -24844,13 +25144,13 @@ PART
 {
 	name = Panel1
 	cid = 4290196402
-	uid = 3334025232
-	mid = 4181345529
-	persistentId = 1276669064
+	uid = 148444754
+	mid = 1643218497
+	persistentId = 4120996929
 	launchID = 1
 	parent = 101
-	position = 0.00086903572082519531,-0.44579315185546875,4.456024169921875
-	rotation = 0.707106888,2.23517418E-07,-3.27825546E-07,0.707106829
+	position = 1.2424537771948962E-06,-7.0064339637756348,7.4565176963806152
+	rotation = 0.000175401059,-7.24070415E-10,1.35151367E-07,-1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -24879,8 +25179,8 @@ PART
 	attN = front, 103
 	mass = 0.075000003
 	shielded = False
-	temp = 207.01538704828218
-	tempExt = 206.9789471304677
+	temp = 440.57668278533589
+	tempExt = 435.90776441792343
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -25038,13 +25338,13 @@ PART
 {
 	name = lGripPad
 	cid = 4289451756
-	uid = 3785204175
-	mid = 4181345529
-	persistentId = 4079270080
+	uid = 722559227
+	mid = 1643218497
+	persistentId = 1867330145
 	launchID = 1
 	parent = 102
-	position = 0.00086843967437744141,-0.44579315185546875,4.422673225402832
-	rotation = -2.02198578E-08,-0.707106829,0.707106948,1.49011612E-07
+	position = 1.3206365110818297E-05,-7.0397744178771973,7.4564595222473145
+	rotation = 4.13846202E-08,-0.000175478955,-1.00000012,1.79747659E-07
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -25060,8 +25360,8 @@ PART
 	attN = bottom, 102
 	mass = 0.0780000016
 	shielded = False
-	temp = 207.01534062376473
-	tempExt = 206.97894644032573
+	temp = 440.38856272977768
+	tempExt = 435.67596537136978
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -25257,13 +25557,13 @@ PART
 {
 	name = truss-octo-02
 	cid = 4290252294
-	uid = 1693505925
-	mid = 4181345529
-	persistentId = 2921143946
+	uid = 1019386491
+	mid = 1643218497
+	persistentId = 509600200
 	launchID = 1
 	parent = 0
-	position = 0,-2.120758056640625,0
-	rotation = 0,0,0,1
+	position = -3.2485175324836746E-05,-2.1207659244537354,-2.7052612495026551E-05
+	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -25277,12 +25577,12 @@ PART
 	srfN = srfAttach, -1
 	attN = top01, 0
 	attN = top02, -1
-	attN = bottom01, 105
+	attN = bottom01, 107
 	attN = bottom02, -1
 	mass = 2.89499998
 	shielded = False
-	temp = 207.01397847685277
-	tempExt = 206.78112669813612
+	temp = 406.39037195213018
+	tempExt = 406.83626262221907
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -25372,7 +25672,7 @@ PART
 	{
 		name = ModuleCryoTank
 		isEnabled = True
-		LastUpdateTime = 5020900629.176877
+		LastUpdateTime = 5020918475.0869532
 		CoolingAllowed = True
 		CoolingEnabled = True
 		BoiloffOccuring = False
@@ -25437,7 +25737,7 @@ PART
 	RESOURCE
 	{
 		name = Lithium
-		amount = 0
+		amount = 15000
 		maxAmount = 15000
 		flowState = True
 		isTweakable = True
@@ -25448,315 +25748,15 @@ PART
 }
 PART
 {
-	name = truss-octo-docking-25
-	cid = 4293392708
-	uid = 672178763
-	mid = 4181345529
-	persistentId = 3170852044
-	launchID = 1
-	parent = 104
-	position = 0,-4.2554244995117188,0
-	rotation = -1,0,0,0
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	srfN = , -1
-	attN = top, -1
-	attN = bottom, 104
-	mass = 0.300000012
-	shielded = False
-	temp = 207.01507468639255
-	tempExt = 206.93518617010272
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Heaviest
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = truss-octo-docking-25
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleColorChanger
-		isEnabled = True
-		animState = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		acquireForceTweak = 200
-		crossfeed = True
-		nodeIsLocked = True
-		targetAngle = 0
-		inverted = False
-		stagingEnabled = False
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleLockedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ServoEngageLockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ServoDisgageLockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			UndockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableXFeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableXFeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleXFeedAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			targetAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDockingNodeNamed
-		isEnabled = True
-		portName = Octo-Girder Heavy Docking Connector
-		initialized = True
-		controlTransformName = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KOSNameTag
-		isEnabled = True
-		nameTag = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = DockingCameraModule
-		isEnabled = True
-		IsEnabled = False
-		noise = False
-		electricchargeCost = 0.02
-		_crossDPAI = True
-		_crossOLDD = True
-		_targetCrossStock = True
-		cameraPosition = (0, 0, 0)
-		cameraForward = (0, 1, 0)
-		cameraUp = (0, 1, 0)
-		transformModification = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
 	name = ReleaseValve
 	cid = 4290233528
-	uid = 4004020368
-	mid = 4181345529
-	persistentId = 931265251
+	uid = 4023115168
+	mid = 1643218497
+	persistentId = 1911730954
 	launchID = 1
 	parent = 104
-	position = -1.1920928955078125E-07,-0.6271209716796875,-1.1862468719482422
-	rotation = -1.67520668E-07,0.000123158068,-2.06315225E-11,-1
+	position = 6.2106853874865919E-05,-0.62710893154144287,-1.1862574815750122
+	rotation = -1.64504755E-07,0.000123153091,1.56805928E-08,-1.00000024
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -25767,12 +25767,12 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 107
+	sym = 106
 	srfN = srfAttach, 104,COLLISION14
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01536232723439
-	tempExt = 206.93902757376662
+	temp = 423.66568620398692
+	tempExt = 414.0436849125137
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -25983,13 +25983,13 @@ PART
 {
 	name = ReleaseValve
 	cid = 4290233304
-	uid = 2672159968
-	mid = 4181345529
-	persistentId = 1893402260
+	uid = 4141352918
+	mid = 1643218497
+	persistentId = 1030546288
 	launchID = 1
 	parent = 104
-	position = 2.384185791015625E-07,-0.6271209716796875,1.1862468719482422
-	rotation = -2.06242003E-11,-1,1.67520668E-07,-0.000123114354
+	position = 1.1264500244578812E-05,-0.62712556123733521,1.1862472295761108
+	rotation = 1.46726791E-08,-1.00000012,6.26814014E-08,-0.000123110978
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
@@ -26000,12 +26000,12 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 106
+	sym = 105
 	srfN = srfAttach, 104,COLLISION14
 	mass = 0.00999999978
 	shielded = False
-	temp = 207.01536232723439
-	tempExt = 206.93902757376662
+	temp = 423.6656862040162
+	tempExt = 414.04368491252177
 	tempExtUnexp = 4
 	staticPressureAtm = 0
 	expt = 0.5
@@ -26212,22 +26212,328 @@ PART
 		}
 	}
 }
+PART
+{
+	name = truss-octo-docking-25
+	cid = 4293392708
+	uid = 831160190
+	mid = 1643218497
+	persistentId = 4118682459
+	launchID = 1
+	parent = 104
+	position = 8.339096893905662E-06,-4.2554116249084473,-5.2779549150727689E-05
+	rotation = -1.00000012,0,0,0
+	mirror = 1,1,1
+	symMethod = Radial
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sqor = -1
+	sepI = 0
+	sidx = -1
+	attm = 0
+	sameVesselCollision = False
+	srfN = , -1
+	attN = top, -1
+	attN = bottom, 104
+	mass = 0.300000012
+	shielded = False
+	temp = 358.4876291516257
+	tempExt = 371.80875093332133
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
+	state = 0
+	PreFailState = 0
+	attached = True
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	flag = Squad/Flags/default
+	rTrf = truss-octo-docking-25
+	modCost = 0
+	modMass = 0
+	moduleVariantName = 
+	moduleCargoStackableQuantity = 1
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleColorChanger
+		isEnabled = True
+		animState = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		acquireForceTweak = 200
+		crossfeed = True
+		nodeIsLocked = True
+		targetAngle = 0
+		inverted = False
+		stagingEnabled = False
+		state = Disengage
+		dockUId = 2725897302
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleLockedAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ServoEngageLockAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ServoDisgageLockAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			UndockAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			targetAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisSpeedMultiplier = 0
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		DOCKEDVESSEL
+		{
+			vesselName = Vall RocketParts Shuttle V1
+			vesselType = Lander
+			rootUId = 4045298355
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDockingNodeNamed
+		isEnabled = True
+		portName = Octo-Girder Heavy Docking Connector
+		initialized = True
+		controlTransformName = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = DockingCameraModule
+		isEnabled = True
+		IsEnabled = True
+		noise = False
+		electricchargeCost = 0.02
+		_crossDPAI = True
+		_crossOLDD = True
+		_targetCrossStock = True
+		cameraPosition = (0, 0, 0)
+		cameraForward = (0, 1, 0)
+		cameraUp = (0, 1, 0)
+		transformModification = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			EnableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
 ACTIONGROUPS
 {
-	Stage = True, 5020895310.42535
-	Gear = False
+	Stage = False, 0
+	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
+	RCS = False
 	SAS = True
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 4992479439.44015
+	Custom01 = False, 0
 	Custom02 = False, 0
-	Custom03 = True, 4979805220.90349
+	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
-	Custom06 = False, 0
-	Custom07 = False, 0
+	Custom06 = True
+	Custom07 = True
 	Custom08 = False, 0
 	Custom09 = False, 0
 	Custom10 = False, 0
@@ -26245,9 +26551,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = -0.62554073
-	yaw = -0.36498812
-	roll = 0.0012850483
+	pitch = 0.096439615
+	yaw = -0.06550275
+	roll = -0.0056081307
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
@@ -26266,7 +26572,7 @@ VESSELMODULES
 	}
 	CommNetVessel
 	{
-		controlState = ProbeFull
+		controlState = ProbePartial
 		canComm = True
 	}
 	VesselDataManager
@@ -26277,7 +26583,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 5020900629.176877
+		lastUpdate = 0
 		selectedPad = 0
 		Productivity = 0
 	}
