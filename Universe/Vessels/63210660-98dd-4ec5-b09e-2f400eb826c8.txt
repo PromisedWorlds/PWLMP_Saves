@@ -2,8 +2,8 @@ pid = 6321066098dd4ec5b09e2f400eb826c8
 persistentId = 4129702034
 name = Mersonho Kerman
 type = EVA
-sit = LANDED
-landed = True
+sit = ORBITING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = False
@@ -11,17 +11,17 @@ launchedFrom = Runway
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 3516434729.572619
+met = 3781500163.157968
 lct = 1267054644.9276032
-lastUT = 4783489374.520223
-distanceTraveled = 1253.4200285101456
+lastUT = 5048554808.1055717
+distanceTraveled = 19401.519230929978
 root = 0
-lat = -6.852758030912936
-lon = -14.30226609283566
-alt = 0.24370935781189473
-hgt = 0.25761563
-nrm = 0.0005253851413726807,0.9999997615814209,0.000666499137878418
-rot = 0.66608906,0.64689887,-0.34075958,0.14741173
+lat = -6.7283847650204542
+lon = 10.77417957309215
+alt = 7540.051814182807
+hgt = 7540.05176
+nrm = -0.00211289525,0.907080412,0.420952022
+rot = -0.0833124444,0.0912662745,-0.743452191,0.657273412
 CoM = 0,0,0
 stg = 0
 prst = False
@@ -35,20 +35,19 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.2800001
-cHdg = -2.48
+cPch = 0.1239996
+cHdg = -4.686004
 cMod = 0
 ORBIT
 {
-	SMA = 30043.935959716342
-	ECC = 0.9970833312189068
-	INC = 6.852758030912935
-	LPE = 90
-	LAN = 18.545696420730337
-	MNA = 3.141592653589787
-	EPH = 4783489375.140237
+	SMA = 67700.481246124851
+	ECC = 0.0024456944321351167
+	INC = 6.9616359787224624
+	LPE = 299.19424724810341
+	LAN = 37.882653423199145
+	MNA = 6.0338405080741051
+	EPH = 5048554808.0855713
 	REF = 3
-	IDENT = Squad/Minmus
 }
 PART
 {
@@ -63,7 +62,7 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = -1
 	resPri = 0
 	dstg = 0
 	sqor = 0
@@ -72,10 +71,10 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
-	mass = 0.0899999961
+	mass = 0.0818516612
 	shielded = False
-	temp = 294.95203071094647
-	tempExt = 294.39197101368421
+	temp = 294.86826330718372
+	tempExt = 294.24598965608482
 	tempExtUnexp = 303
 	staticPressureAtm = 0
 	expt = 0
@@ -87,7 +86,7 @@ PART
 	flag = Squad/Flags/default
 	rTrf = referenceTransform
 	modCost = 25
-	modMass = 0.0449999981
+	modMass = 0.0368516594
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	partRendererBoundsIgnore = kbEVA_flagDecals,canopy,base,flag,collider,helmet,visor,flare1,flare2,EVAStorage_flagDecals,EVAStorageSlim_flagDecals,chute_standalone_flag,chute_container_flag
@@ -112,42 +111,6 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
-		AutostrutOff
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
 	}
 	PARTDATA
 	{
@@ -156,17 +119,17 @@ PART
 	{
 		name = KerbalEVA
 		isEnabled = True
-		JetpackDeployed = False
+		JetpackDeployed = True
 		lampOn = False
 		isHelmetEnabled = True
 		isNeckRingEnabled = True
 		isVisorEnabled = False
 		thrustPercentage = 100
-		lastBoundStep = 2.20593262
+		lastBoundStep = 1.20833337
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
-		state = Idle (Grounded)
+		state = Idle (Floating)
 		EVENTS
 		{
 		}
@@ -407,6 +370,7 @@ PART
 			flight = 0
 			0 = Suborbit,Minmus
 			0 = Land,Minmus
+			0 = Orbit,Minmus
 		}
 		UPGRADESAPPLIED
 		{
@@ -562,7 +526,7 @@ PART
 					cid = 4294224960
 					uid = 0
 					mid = 0
-					persistentId = 302507542
+					persistentId = 1834446613
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -689,7 +653,7 @@ PART
 					RESOURCE
 					{
 						name = EVA Propellant
-						amount = 5
+						amount = 3.3703321093150276
 						maxAmount = 5
 						flowState = True
 						isTweakable = False
@@ -699,42 +663,6 @@ PART
 					}
 				}
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KASLinkTargetKerbal
-		isEnabled = True
-		persistedLinkState = Available
-		persistedLinkPartId = 0
-		persistedLinkNodeName = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KASLinkTargetKerbal
-		isEnabled = True
-		persistedLinkState = Available
-		persistedLinkPartId = 0
-		persistedLinkNodeName = 
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -770,74 +698,14 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = WBIModuleEVAVariants
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleWearablesController
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAOverrides
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAResourceTransfer
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 }
 ACTIONGROUPS
 {
 	Stage = False, 0
 	Gear = False, 0
 	Light = False, 0
-	RCS = True, 0
-	SAS = False, 0
+	RCS = False, 5048554461.97231
+	SAS = False, 5048554788.14511
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -874,7 +742,7 @@ CTRLSTATE
 }
 VESSELMODULES
 {
-	ModularFlightIntegrator
+	FlightIntegrator
 	{
 	}
 	AxisGroupsModule
@@ -887,40 +755,5 @@ VESSELMODULES
 	{
 		controlState = None
 		canComm = False
-	}
-	VesselDataManager
-	{
-	}
-	ModuleDynamicBatteryStorage
-	{
-	}
-	AtmoFxModule
-	{
-	}
-	RPMVesselComputer
-	{
-		PERSISTENT_VARS
-		{
-		}
-	}
-	SpaceDustVessel
-	{
-	}
-	VesselModuleSave
-	{
-	}
-	SystemHeatVessel
-	{
-	}
-	GoldStrikeVesselModule
-	{
-		lastProspectLongitude = 0
-		lastProspectLatitude = 0
-		lastProspectAltitude = 0
-		lastProspectPlanet = -1
-		lastProspectBiome = 
-	}
-	WBIPressureOverride
-	{
 	}
 }
