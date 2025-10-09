@@ -6,24 +6,24 @@ sit = ESCAPING
 landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
-vesselSpawning = True
+vesselSpawning = False
 launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 6630683.099277496
-lct = 5049453707.574989
-lastUT = 5056084390.914267
-distanceTraveled = 5217179.842786508
+met = 34025393.057835579
+lct = 5049453707.5749893
+lastUT = 5083479100.6528254
+distanceTraveled = 34420568.888184682
 root = 0
-lat = 78.34427989878483
-lon = 169.98231662351904
-alt = 611874.7978094518
-hgt = 611874.8
-nrm = 0.25612035393714905,0.8360971808433533,-0.4851225018501282
-rot = 0.18150635,0.8167977,-0.06618581,0.5436143
-CoM = -1.90734863E-06,-49.1441574,-1.90734863E-06
-stg = 1
+lat = 45.926224905534781
+lon = -10.092780945473759
+alt = 198874909605.51328
+hgt = 1.98874907E+11
+nrm = -0.158110738,0.98735106,-0.0117951632
+rot = 0.115251802,0.189296022,0.420037001,-0.880030096
+CoM = 3.81469727E-06,-38.6845245,-4.95910645E-05
+stg = 0
 prst = False
 ref = 4239120555
 ctrl = True
@@ -35,20 +35,20 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = 0.2
-cHdg = 0.3
+cPch = 0.3540002
+cHdg = 3.029609
 cMod = 0
 ORBIT
 {
-	SMA = -168407.2129966258
-	ECC = 4.830347316839945
-	INC = 83.62749876340024
-	LPE = 16.03427758104829
-	LAN = 351.00820457404643
-	MNA = 5.500309942290418
-	EPH = 5056084392.994265
-	REF = 1
-	IDENT = Squad/Kerbin
+	SMA = -13251976632.82622
+	ECC = 2.6786414737383417
+	INC = 65.480025421101018
+	LPE = 25.142546686712933
+	LAN = 310.59932765830956
+	MNA = 13.326447574991807
+	EPH = 5083479100.6328249
+	REF = 0
+	IDENT = Squad/Sun
 }
 PART
 {
@@ -73,18 +73,18 @@ PART
 	sameVesselCollision = False
 	srfN = , -1
 	attN = bottom, 1
-	attN = top, 83
-	mass = 4.57999849
+	attN = top, 51
+	mass = 4.10999966
 	shielded = False
-	temp = 308.11588060010581
-	tempExt = 308.1681630945601
-	tempExtUnexp = 308.16656294141922
-	staticPressureAtm = 0.97959166893157845
+	temp = 57.33938049745629
+	tempExt = 57.337785289109007
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
 	attached = True
-	autostrutMode = Off
+	autostrutMode = Heaviest
 	rigidAttachment = False
 	flag = Squad/Flags/default
 	rTrf = _default
@@ -92,12 +92,7 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Aldous Kerman
-	crew = Bill Kerman
-	crew = Deski Kerman
-	crew = Samemy Kerman
-	crew = Mallie Kerman
-	crew = Lislong Kerman
+	crew = Tomtop Kerman
 	EVENTS
 	{
 	}
@@ -242,7 +237,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -553,6 +548,12 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Flight,Kerbin
+			0 = Suborbit,Kerbin
+			0 = Orbit,Kerbin
+			0 = Escape,Kerbin
+			0 = Flyby,Sun
+			0 = Escape,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -631,12 +632,12 @@ PART
 	srfN = , -1
 	attN = top, 0
 	attN = bottom, 2
-	mass = 3.77250004
+	mass = 3.30250001
 	shielded = False
-	temp = 308.11571793471603
-	tempExt = 308.06252748307816
-	tempExtUnexp = 308.05987364684165
-	staticPressureAtm = 0.98008320298043117
+	temp = 57.338207098637177
+	tempExt = 57.337082811616071
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -649,11 +650,6 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Burdun Kerman
-	crew = Luke Kerman
-	crew = Gwendorf Kerman
-	crew = Urman Kerman
-	crew = Luski Kerman
 	EVENTS
 	{
 	}
@@ -758,7 +754,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -1020,6 +1016,12 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Flight,Kerbin
+			0 = Suborbit,Kerbin
+			0 = Orbit,Kerbin
+			0 = Escape,Kerbin
+			0 = Flyby,Sun
+			0 = Escape,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -1078,10 +1080,10 @@ PART
 	attN = bottom, 3
 	mass = 1.3125
 	shielded = False
-	temp = 308.11595147668629
-	tempExt = 308.15936088338742
-	tempExtUnexp = 308.15795827105325
-	staticPressureAtm = 0.98036910291662804
+	temp = 57.337183793706963
+	tempExt = 57.336188426199392
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1245,12 +1247,12 @@ PART
 	srfN = , -1
 	attN = top, 2
 	attN = bottom, 4
-	mass = 4.04400015
+	mass = 3.48000002
 	shielded = False
-	temp = 308.11588320309278
-	tempExt = 308.16342079633262
-	tempExtUnexp = 308.16210025132102
-	staticPressureAtm = 0.98060839446185688
+	temp = 57.331024157657303
+	tempExt = 57.319754424119651
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -1263,12 +1265,6 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
-	crew = Haifen Kerman
-	crew = Virvan Kerman
-	crew = Tomtop Kerman
-	crew = Herdrin Kerman
-	crew = Glegun Kerman
-	crew = Franry Kerman
 	EVENTS
 	{
 	}
@@ -1522,6 +1518,12 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Flight,Kerbin
+			0 = Suborbit,Kerbin
+			0 = Orbit,Kerbin
+			0 = Escape,Kerbin
+			0 = Flyby,Sun
+			0 = Escape,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -1567,17 +1569,17 @@ PART
 	srfN = , -1
 	attN = top, 3
 	attN = bottom, 5
-	mass = 22
+	mass = 23.5039959
 	shielded = False
-	temp = 308.11598878969261
-	tempExt = 308.16975077684521
-	tempExtUnexp = 308.16812689800724
-	staticPressureAtm = 0.98130345432781274
+	temp = 57.337655153276295
+	tempExt = 57.338656691524577
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
 	attached = True
-	autostrutMode = Off
+	autostrutMode = Heaviest
 	rigidAttachment = False
 	flag = Squad/Flags/default
 	rTrf = sspx-expandable-centrifuge-5-1
@@ -1585,6 +1587,22 @@ PART
 	modMass = 0
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
+	crew = Haifen Kerman
+	crew = Virvan Kerman
+	crew = Deski Kerman
+	crew = Herdrin Kerman
+	crew = Glegun Kerman
+	crew = Franry Kerman
+	crew = Burdun Kerman
+	crew = Luke Kerman
+	crew = Gwendorf Kerman
+	crew = Urman Kerman
+	crew = Luski Kerman
+	crew = Aldous Kerman
+	crew = Bill Kerman
+	crew = Samemy Kerman
+	crew = Mallie Kerman
+	crew = Lislong Kerman
 	EVENTS
 	{
 	}
@@ -1716,7 +1734,7 @@ PART
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
-		lastUpdateTime = 0
+		lastUpdateTime = 5083479100.6528254
 		EVENTS
 		{
 		}
@@ -1904,6 +1922,12 @@ PART
 		Log
 		{
 			flight = 0
+			0 = Flight,Kerbin
+			0 = Suborbit,Kerbin
+			0 = Orbit,Kerbin
+			0 = Escape,Kerbin
+			0 = Flyby,Sun
+			0 = Escape,Sun
 		}
 		UPGRADESAPPLIED
 		{
@@ -1967,10 +1991,10 @@ PART
 	attN = N9_9, 26
 	mass = 0.925000012
 	shielded = False
-	temp = 308.11585552688371
-	tempExt = 308.12350611410062
-	tempExtUnexp = 308.12315204060178
-	staticPressureAtm = 0.98305507145073856
+	temp = 57.338737903114975
+	tempExt = 57.338621005902318
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2167,10 +2191,10 @@ PART
 	attN = bottom, 7
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848851958041
+	tempExt = 57.342847370310963
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.98308443699593662
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2245,7 +2269,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -2346,10 +2370,10 @@ PART
 	attN = bottom, 8
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315747437758294
+	temp = 57.346342252937824
+	tempExt = 57.345321838667019
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2424,7 +2448,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -2525,10 +2549,10 @@ PART
 	attN = bottom, 9
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323058705549893
+	temp = 57.346364895323553
+	tempExt = 57.345330048525973
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2603,7 +2627,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -2704,10 +2728,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330369973341503
+	temp = 57.346364568234385
+	tempExt = 57.345332747674419
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2782,7 +2806,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -2883,10 +2907,10 @@ PART
 	attN = bottom, 11
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848851905915
+	tempExt = 57.342847370257289
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.98308436169966684
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -2961,7 +2985,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -3062,10 +3086,10 @@ PART
 	attN = bottom, 12
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315739908131317
+	temp = 57.346342252679626
+	tempExt = 57.34532183840733
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3140,7 +3164,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -3241,10 +3265,10 @@ PART
 	attN = bottom, 13
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323051175922926
+	temp = 57.346364895063914
+	tempExt = 57.345330048265616
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3319,7 +3343,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -3420,10 +3444,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330362443714525
+	temp = 57.346364567974
+	tempExt = 57.345332747413622
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3498,7 +3522,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -3599,10 +3623,10 @@ PART
 	attN = bottom, 15
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848851898675
+	tempExt = 57.342847370249906
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.98308428640339718
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3677,7 +3701,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -3778,10 +3802,10 @@ PART
 	attN = bottom, 16
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315732378504339
+	temp = 57.346342252643737
+	tempExt = 57.345321838371248
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -3856,7 +3880,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -3957,10 +3981,10 @@ PART
 	attN = bottom, 17
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323043646295949
+	temp = 57.346364895027868
+	tempExt = 57.345330048229457
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4035,7 +4059,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -4136,10 +4160,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330347384460581
+	temp = 57.346364567937862
+	tempExt = 57.345332747377391
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4214,7 +4238,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -4315,10 +4339,10 @@ PART
 	attN = bottom, 19
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848851907258
+	tempExt = 57.342847370258681
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.9830842111071274
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4393,7 +4417,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -4494,10 +4518,10 @@ PART
 	attN = bottom, 20
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315724848877373
+	temp = 57.346342252686227
+	tempExt = 57.345321838413959
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4572,7 +4596,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -4673,10 +4697,10 @@ PART
 	attN = bottom, 21
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323036116668971
+	temp = 57.346364895070558
+	tempExt = 57.345330048272267
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4751,7 +4775,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -4852,10 +4876,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330347384460581
+	temp = 57.346364567980672
+	tempExt = 57.345332747420287
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -4930,7 +4954,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -5031,10 +5055,10 @@ PART
 	attN = bottom, 23
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848851899741
+	tempExt = 57.342847370251008
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.9830842111071274
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5109,7 +5133,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -5210,10 +5234,10 @@ PART
 	attN = bottom, 24
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315732378504339
+	temp = 57.34634225264908
+	tempExt = 57.345321838376613
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5288,7 +5312,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -5389,10 +5413,10 @@ PART
 	attN = bottom, 25
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323036116668971
+	temp = 57.346364895033233
+	tempExt = 57.345330048234835
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5467,7 +5491,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -5568,10 +5592,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330347384460581
+	temp = 57.346364567943247
+	tempExt = 57.345332747382784
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5646,7 +5670,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -5747,10 +5771,10 @@ PART
 	attN = bottom, 27
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341849822846491
+	tempExt = 57.342849060843037
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.98308428640339718
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -5825,7 +5849,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -5926,10 +5950,10 @@ PART
 	attN = bottom, 28
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315739908131317
+	temp = 57.346347155803294
+	tempExt = 57.345326769090136
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6004,7 +6028,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -6105,10 +6129,10 @@ PART
 	attN = bottom, 29
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323043646295949
+	temp = 57.346369824770711
+	tempExt = 57.345334990980582
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6183,7 +6207,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -6284,10 +6308,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330354914087559
+	temp = 57.346369511022644
+	tempExt = 57.345337698425965
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6362,7 +6386,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -6463,10 +6487,10 @@ PART
 	attN = bottom, 31
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848957288754
+	tempExt = 57.34284886915848
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.98308436169966684
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6541,7 +6565,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -6642,10 +6666,10 @@ PART
 	attN = bottom, 32
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315747437758294
+	temp = 57.346342947801688
+	tempExt = 57.345322537437404
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6720,7 +6744,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -6821,10 +6845,10 @@ PART
 	attN = bottom, 33
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323051175922926
+	temp = 57.346365593955859
+	tempExt = 57.345330748999437
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -6899,7 +6923,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -7000,10 +7024,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330362443714525
+	temp = 57.34636526875493
+	tempExt = 57.345333449322467
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7078,7 +7102,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -7179,10 +7203,10 @@ PART
 	attN = bottom, 35
 	mass = 0.200000003
 	shielded = True
-	temp = 308.11585103161002
-	tempExt = 308.11585096113248
+	temp = 57.341848851901773
+	tempExt = 57.342847370253061
 	tempExtUnexp = 308.11585096113248
-	staticPressureAtm = 0.98308443699593662
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7257,7 +7281,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -7358,10 +7382,10 @@ PART
 	attN = bottom, 36
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11596575359624
-	tempExt = 308.16879453087154
-	tempExtUnexp = 308.16718628460109
-	staticPressureAtm = 0.98315747437758294
+	temp = 57.346342252659177
+	tempExt = 57.345321838386766
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7436,7 +7460,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -7537,10 +7561,10 @@ PART
 	attN = bottom, 37
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11597140539811
-	tempExt = 308.16879500026386
-	tempExtUnexp = 308.1671866957314
-	staticPressureAtm = 0.98323058705549893
+	temp = 57.346364895043379
+	tempExt = 57.345330048245003
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7615,7 +7639,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -7716,10 +7740,10 @@ PART
 	attN = bottom, -1
 	mass = 0.200000003
 	shielded = False
-	temp = 308.11607130627056
-	tempExt = 308.16879990311395
-	tempExtUnexp = 308.16719114826219
-	staticPressureAtm = 0.98330369973341503
+	temp = 57.346364567953415
+	tempExt = 57.345332747392966
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -7794,7 +7818,7 @@ PART
 		isEnabled = True
 		actuatorModeCycle = 0
 		authorityLimiter = 100
-		stateString = Idle
+		stateString = Running
 		stagingEnabled = True
 		WheelState = Active
 		EVENTS
@@ -7888,10 +7912,10 @@ PART
 	attN = bottom, 39
 	mass = 1.60000002
 	shielded = False
-	temp = 308.11587922981761
-	tempExt = 308.1681853550881
-	tempExtUnexp = 308.16661227791968
-	staticPressureAtm = 0.98345429227289194
+	temp = 57.342541154168721
+	tempExt = 57.343462764169416
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -7996,10 +8020,10 @@ PART
 	attN = bottom, 40
 	mass = 1.60000002
 	shielded = False
-	temp = 308.115879431076
-	tempExt = 308.16875620561615
-	tempExtUnexp = 308.16715140964158
-	staticPressureAtm = 0.98352273658208422
+	temp = 57.346238211004064
+	tempExt = 57.345685400931515
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -8104,10 +8128,10 @@ PART
 	attN = bottom, 41
 	mass = 1.60000002
 	shielded = False
-	temp = 308.11587944722299
-	tempExt = 308.16878866185175
-	tempExtUnexp = 308.16718102152765
-	staticPressureAtm = 0.98359118089127651
+	temp = 57.349818322388501
+	tempExt = 57.348818522068548
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -8212,10 +8236,10 @@ PART
 	attN = bottom, 42
 	mass = 1.60000002
 	shielded = False
-	temp = 308.11587958673215
-	tempExt = 308.16879003691446
-	tempExtUnexp = 308.1671822310139
-	staticPressureAtm = 0.98365962520046879
+	temp = 57.353301230716198
+	tempExt = 57.352375351647332
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -8320,10 +8344,10 @@ PART
 	attN = bottom, 43
 	mass = 1.60000002
 	shielded = False
-	temp = 308.11588395085107
-	tempExt = 308.16879022578507
-	tempExtUnexp = 308.16718240267232
-	staticPressureAtm = 0.9837279942133913
+	temp = 57.35669656429873
+	tempExt = 57.356516062456173
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -8428,15 +8452,15 @@ PART
 	attN = bottom, 44
 	mass = 56
 	shielded = False
-	temp = 308.11586345980538
-	tempExt = 308.16878923898093
-	tempExtUnexp = 308.16718150845321
-	staticPressureAtm = 0.9843098837859301
+	temp = 57.360021166863987
+	tempExt = 57.359021578895728
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
 	attached = True
-	autostrutMode = Off
+	autostrutMode = Heaviest
 	rigidAttachment = False
 	flag = Squad/Flags/default
 	rTrf = fft-fueltank-pulseunits-5-3
@@ -8501,7 +8525,7 @@ PART
 	RESOURCE
 	{
 		name = FissionPulses
-		amount = 5600
+		amount = 4394.0054917196885
 		maxAmount = 5600
 		flowState = True
 		isTweakable = True
@@ -8536,15 +8560,15 @@ PART
 	attN = bottom, 45
 	mass = 56
 	shielded = False
-	temp = 308.11586344285575
-	tempExt = 308.16878839959952
-	tempExtUnexp = 308.16718074725679
-	staticPressureAtm = 0.98540845636141439
+	temp = 57.361781598445873
+	tempExt = 57.36048360895056
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
 	attached = True
-	autostrutMode = Off
+	autostrutMode = Heaviest
 	rigidAttachment = False
 	flag = Squad/Flags/default
 	rTrf = fft-fueltank-pulseunits-5-3
@@ -8609,7 +8633,7 @@ PART
 	RESOURCE
 	{
 		name = FissionPulses
-		amount = 5600
+		amount = 4394.0054917196885
 		maxAmount = 5600
 		flowState = True
 		isTweakable = True
@@ -8644,10 +8668,10 @@ PART
 	attN = bottom, 46
 	mass = 56
 	shielded = False
-	temp = 308.115863436003
-	tempExt = 308.16874726192123
-	tempExtUnexp = 308.1671420853317
-	staticPressureAtm = 0.98650800778840519
+	temp = 57.362469176936877
+	tempExt = 57.361346497947821
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -8717,7 +8741,7 @@ PART
 	RESOURCE
 	{
 		name = FissionPulses
-		amount = 5600
+		amount = 4394.0054917196885
 		maxAmount = 5600
 		flowState = True
 		isTweakable = True
@@ -8739,12 +8763,12 @@ PART
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 1
+	istg = 0
 	resPri = 0
 	dstg = 2
-	sqor = 1
+	sqor = 0
 	sepI = -1
-	sidx = 1
+	sidx = 0
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
@@ -8752,12 +8776,12 @@ PART
 	attN = bottom, -1
 	mass = 56
 	shielded = False
-	temp = 308.11585121630031
-	tempExt = 308.13826806386396
-	tempExtUnexp = 308.13752755414902
-	staticPressureAtm = 0.98771606114008914
+	temp = 57.363712878273894
+	tempExt = 57.373254512826847
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
-	state = 0
+	state = 1
 	PreFailState = 0
 	attached = True
 	autostrutMode = Off
@@ -8830,7 +8854,7 @@ PART
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
-		staged = False
+		staged = True
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
@@ -8995,7 +9019,7 @@ PART
 	{
 		name = FXModuleThrottleEffects
 		isEnabled = True
-		state = 1
+		state = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9040,6270 +9064,6 @@ PART
 	MODULE
 	{
 		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292823262
-	uid = 442565761
-	mid = 293150170
-	persistentId = 3294782613
-	launchID = 1
-	parent = 46
-	position = -2.6098067760467529,-52.116806030273438,1.1920928955078125E-07
-	rotation = 0,0,-1.43702179E-08,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 51
-	sym = 55
-	sym = 59
-	sym = 63
-	sym = 67
-	sym = 71
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397855122
-	tempExt = 308.16832475740358
-	tempExtUnexp = 308.16674920900925
-	staticPressureAtm = 0.98721135024403217
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292821086
-	uid = 2727778735
-	mid = 293150170
-	persistentId = 2568031060
-	launchID = 1
-	parent = 47
-	position = -5.8217039108276367,-51.687778472900391,1.1920928955078125E-07
-	rotation = -1.4353005E-08,-1,0,0
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 52
-	sym = 56
-	sym = 60
-	sym = 64
-	sym = 68
-	sym = 72
-	sym = 76
-	srfN = srfAttach, 47,COLLIDERDECOUPLER (1)
-	attN = top, 50
-	attN = bottom, 49
-	mass = 56
-	shielded = False
-	temp = 308.11586324233116
-	tempExt = 308.16727150610842
-	tempExtUnexp = 308.16575708067268
-	staticPressureAtm = 0.98714877904387954
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292818220
-	uid = 2588993213
-	mid = 293150170
-	persistentId = 3483657591
-	launchID = 1
-	parent = 48
-	position = -5.8217039108276367,-59.925777435302734,1.1920928955078125E-07
-	rotation = -1.28479757E-15,-8.94069672E-08,-6.80204693E-08,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 53
-	sym = 57
-	sym = 61
-	sym = 65
-	sym = 69
-	sym = 73
-	sym = 77
-	srfN = , -1
-	attN = top, 48
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.11585125530405
-	tempExt = 308.14178554878436
-	tempExtUnexp = 308.14093206431488
-	staticPressureAtm = 0.98835751006199102
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787106
-	uid = 448155238
-	mid = 293150170
-	persistentId = 3278926332
-	launchID = 1
-	parent = 48
-	position = -5.8217034339904785,-47.94677734375,1.1920928955078125E-07
-	rotation = 0,-0.382683456,0,0.923879504
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 54
-	sym = 58
-	sym = 62
-	sym = 66
-	sym = 70
-	sym = 74
-	sym = 78
-	srfN = , -1
-	attN = bottom, 48
-	mass = 0.800000012
-	shielded = False
-	temp = 308.11586123854136
-	tempExt = 308.1229740472487
-	tempExtUnexp = 308.12272472291863
-	staticPressureAtm = 0.98660032101510453
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292816456
-	uid = 1932181579
-	mid = 293150170
-	persistentId = 3961223221
-	launchID = 1
-	parent = 46
-	position = -1.8454117774963379,-52.116806030273438,1.8454122543334961
-	rotation = -5.49924462E-09,0.382683456,-1.32763498E-08,0.923879504
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 55
-	sym = 59
-	sym = 63
-	sym = 67
-	sym = 71
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397846862
-	tempExt = 308.16832462063877
-	tempExtUnexp = 308.16674908504746
-	staticPressureAtm = 0.9872112749477624
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292816374
-	uid = 1675378760
-	mid = 293150170
-	persistentId = 1688452163
-	launchID = 1
-	parent = 51
-	position = -4.1165657043457031,-51.687778472900391,4.1165666580200195
-	rotation = -1.3260447E-08,-0.923879504,5.49265744E-09,0.382683456
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 56
-	sym = 60
-	sym = 64
-	sym = 68
-	sym = 72
-	sym = 76
-	srfN = srfAttach, 51,COLLIDERDECOUPLER (1)
-	attN = top, 54
-	attN = bottom, 53
-	mass = 56
-	shielded = False
-	temp = 308.11586324213056
-	tempExt = 308.16727017572089
-	tempExtUnexp = 308.1657558349163
-	staticPressureAtm = 0.98714862845133999
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292816298
-	uid = 1259877289
-	mid = 293150170
-	persistentId = 2680261543
-	launchID = 1
-	parent = 52
-	position = -4.1165657043457031,-59.925777435302734,4.1165666580200195
-	rotation = -2.60303104E-08,0.382683367,-6.28427301E-08,0.923879564
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 57
-	sym = 61
-	sym = 65
-	sym = 69
-	sym = 73
-	sym = 77
-	srfN = , -1
-	attN = top, 52
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.11585124377655
-	tempExt = 308.14076864732891
-	tempExtUnexp = 308.13994854303712
-	staticPressureAtm = 0.98835735946945158
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292788034
-	uid = 3295666312
-	mid = 293150170
-	persistentId = 2805455800
-	launchID = 1
-	parent = 52
-	position = -4.1165657043457031,-47.94677734375,4.1165666580200195
-	rotation = 0,0,4.4408921E-16,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 58
-	sym = 62
-	sym = 66
-	sym = 70
-	sym = 74
-	sym = 78
-	srfN = , -1
-	attN = bottom, 52
-	mass = 0.800000012
-	shielded = False
-	temp = 308.11586123853158
-	tempExt = 308.1229740377243
-	tempExtUnexp = 308.12272471432408
-	staticPressureAtm = 0.98660009512629532
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292816040
-	uid = 2872511295
-	mid = 293150170
-	persistentId = 2533785294
-	launchID = 1
-	parent = 46
-	position = -5.9604644775390625E-08,-52.116806030273438,2.6098062992095947
-	rotation = -1.01612789E-08,0.707106829,-1.01612789E-08,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 51
-	sym = 59
-	sym = 63
-	sym = 67
-	sym = 71
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397846146
-	tempExt = 308.16832460907722
-	tempExtUnexp = 308.16674907456826
-	staticPressureAtm = 0.98721112435522296
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292815958
-	uid = 2740053469
-	mid = 293150170
-	persistentId = 1530726542
-	launchID = 1
-	parent = 55
-	position = 4.1723251342773438E-07,-51.687778472900391,5.8217048645019531
-	rotation = -1.01491073E-08,-0.707106829,1.01491073E-08,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 52
-	sym = 60
-	sym = 64
-	sym = 68
-	sym = 72
-	sym = 76
-	srfN = srfAttach, 55,COLLIDERDECOUPLER (1)
-	attN = top, 58
-	attN = bottom, 57
-	mass = 56
-	shielded = False
-	temp = 308.11586324211351
-	tempExt = 308.16727006325328
-	tempExtUnexp = 308.16575572960301
-	staticPressureAtm = 0.98714817667372157
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292815882
-	uid = 115653352
-	mid = 293150170
-	persistentId = 1876480656
-	launchID = 1
-	parent = 56
-	position = 4.1723251342773438E-07,-59.925777435302734,5.8217048645019531
-	rotation = -4.80977391E-08,0.707106769,-4.80977391E-08,0.707106888
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 53
-	sym = 61
-	sym = 65
-	sym = 69
-	sym = 73
-	sym = 77
-	srfN = , -1
-	attN = top, 56
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.11585124280253
-	tempExt = 308.14068273163639
-	tempExtUnexp = 308.13986544755841
-	staticPressureAtm = 0.98835690769183315
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787562
-	uid = 3515086004
-	mid = 293150170
-	persistentId = 3829692408
-	launchID = 1
-	parent = 56
-	position = 4.1723251342773438E-07,-47.94677734375,5.8217048645019531
-	rotation = 3.55271368E-15,0.382683426,1.33226763E-15,0.923879623
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 54
-	sym = 62
-	sym = 66
-	sym = 70
-	sym = 74
-	sym = 78
-	srfN = , -1
-	attN = bottom, 56
-	mass = 0.800000012
-	shielded = False
-	temp = 308.11586123853107
-	tempExt = 308.12297403693782
-	tempExtUnexp = 308.12272471361501
-	staticPressureAtm = 0.98659964334867689
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292815624
-	uid = 2585286689
-	mid = 293150170
-	persistentId = 4294847174
-	launchID = 1
-	parent = 46
-	position = 1.845412015914917,-52.116806030273438,1.845412015914917
-	rotation = -1.32763507E-08,0.923879564,-5.49924462E-09,0.382683456
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 51
-	sym = 55
-	sym = 63
-	sym = 67
-	sym = 71
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397846862
-	tempExt = 308.16832462065838
-	tempExtUnexp = 308.16674908506525
-	staticPressureAtm = 0.98721089846641374
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292815542
-	uid = 3393674452
-	mid = 293150170
-	persistentId = 1598152940
-	launchID = 1
-	parent = 59
-	position = 4.1165676116943359,-51.687778472900391,4.1165676116943359
-	rotation = -5.49265744E-09,-0.382683456,1.32604479E-08,0.923879564
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 52
-	sym = 56
-	sym = 64
-	sym = 68
-	sym = 72
-	sym = 76
-	srfN = srfAttach, 59,COLLIDERDECOUPLER (1)
-	attN = top, 62
-	attN = bottom, 61
-	mass = 56
-	shielded = False
-	temp = 308.11586324213062
-	tempExt = 308.16727017590966
-	tempExtUnexp = 308.16575583509331
-	staticPressureAtm = 0.98714772489610314
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292815466
-	uid = 578323073
-	mid = 293150170
-	persistentId = 1882968056
-	launchID = 1
-	parent = 60
-	position = 4.1165680885314941,-59.925777435302734,4.1165676116943359
-	rotation = -6.2842723E-08,0.923879504,-2.6030305E-08,0.382683545
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 53
-	sym = 57
-	sym = 65
-	sym = 69
-	sym = 73
-	sym = 77
-	srfN = , -1
-	attN = top, 60
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.11585124377757
-	tempExt = 308.14076874028524
-	tempExtUnexp = 308.13994863294187
-	staticPressureAtm = 0.98835645591421473
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787486
-	uid = 1695047848
-	mid = 293150170
-	persistentId = 728641463
-	launchID = 1
-	parent = 60
-	position = 4.1165685653686523,-47.94677734375,4.1165685653686523
-	rotation = -2.66453526E-15,0.707106769,-8.8817842E-16,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 54
-	sym = 58
-	sym = 66
-	sym = 70
-	sym = 74
-	sym = 78
-	srfN = , -1
-	attN = bottom, 60
-	mass = 0.800000012
-	shielded = False
-	temp = 308.11586123853266
-	tempExt = 308.12297403765217
-	tempExtUnexp = 308.12272471425644
-	staticPressureAtm = 0.98659919157105846
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292815208
-	uid = 2972962418
-	mid = 293150170
-	persistentId = 3894285840
-	launchID = 1
-	parent = 46
-	position = 2.6098067760467529,-52.116806030273438,-3.5762786865234375E-07
-	rotation = -1.43702179E-08,1,6.28142164E-16,-4.37113883E-08
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 51
-	sym = 55
-	sym = 59
-	sym = 67
-	sym = 71
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397838438
-	tempExt = 308.16832448152763
-	tempExtUnexp = 308.16674895895903
-	staticPressureAtm = 0.98721082317014397
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292815126
-	uid = 4231300035
-	mid = 293150170
-	persistentId = 626367511
-	launchID = 1
-	parent = 63
-	position = 5.8217039108276367,-51.687778472900391,-5.9604644775390625E-07
-	rotation = 6.27389787E-16,4.37113883E-08,1.4353005E-08,1
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 52
-	sym = 56
-	sym = 60
-	sym = 68
-	sym = 72
-	sym = 76
-	srfN = srfAttach, 63,COLLIDERDECOUPLER (1)
-	attN = top, 66
-	attN = bottom, 65
-	mass = 56
-	shielded = False
-	temp = 308.11586324192621
-	tempExt = 308.16726882250441
-	tempExtUnexp = 308.16575456778349
-	staticPressureAtm = 0.98714749900729393
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292815050
-	uid = 1935979790
-	mid = 293150170
-	persistentId = 9688545
-	launchID = 1
-	parent = 64
-	position = 5.8217039108276367,-59.925777435302734,-5.9604644775390625E-07
-	rotation = -6.80204693E-08,1,4.25806681E-15,4.56955789E-08
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 53
-	sym = 57
-	sym = 61
-	sym = 69
-	sym = 73
-	sym = 77
-	srfN = , -1
-	attN = top, 64
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.1158512320506
-	tempExt = 308.13973424690425
-	tempExtUnexp = 308.13894809719744
-	staticPressureAtm = 0.98835623002540551
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787410
-	uid = 503513208
-	mid = 293150170
-	persistentId = 1611986156
-	launchID = 1
-	parent = 64
-	position = 5.8217034339904785,-47.94677734375,-5.9604644775390625E-07
-	rotation = 0,0.923879564,0,0.382683456
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 54
-	sym = 58
-	sym = 62
-	sym = 70
-	sym = 74
-	sym = 78
-	srfN = , -1
-	attN = bottom, 64
-	mass = 0.800000012
-	shielded = False
-	temp = 308.115861238523
-	tempExt = 308.12297402796207
-	tempExtUnexp = 308.12272470551233
-	staticPressureAtm = 0.98659904097851892
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292814792
-	uid = 1373356027
-	mid = 293150170
-	persistentId = 696862125
-	launchID = 1
-	parent = 46
-	position = 1.8454117774963379,-52.116806030273438,-1.8454123735427856
-	rotation = -1.32763498E-08,0.923879504,5.4992455E-09,-0.382683516
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 51
-	sym = 55
-	sym = 59
-	sym = 63
-	sym = 71
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397845521
-	tempExt = 308.16832459849934
-	tempExtUnexp = 308.16674906498059
-	staticPressureAtm = 0.98721089846641374
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292814710
-	uid = 3116640281
-	mid = 293150170
-	persistentId = 963200190
-	launchID = 1
-	parent = 67
-	position = 4.1165657043457031,-51.687778472900391,-4.1165671348571777
-	rotation = 5.49265833E-09,0.382683516,1.3260447E-08,0.923879504
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 52
-	sym = 56
-	sym = 60
-	sym = 64
-	sym = 72
-	sym = 76
-	srfN = srfAttach, 67,COLLIDERDECOUPLER (1)
-	attN = top, 70
-	attN = bottom, 69
-	mass = 56
-	shielded = False
-	temp = 308.11586324209799
-	tempExt = 308.16726996035675
-	tempExtUnexp = 308.16575563325239
-	staticPressureAtm = 0.98714772489610314
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292814634
-	uid = 1326330698
-	mid = 293150170
-	persistentId = 502194337
-	launchID = 1
-	parent = 68
-	position = 4.1165657043457031,-59.925777435302734,-4.1165676116943359
-	rotation = -6.2842723E-08,0.923879564,2.60303157E-08,-0.382683426
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 53
-	sym = 57
-	sym = 61
-	sym = 65
-	sym = 73
-	sym = 77
-	srfN = , -1
-	attN = top, 68
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.11585124191026
-	tempExt = 308.14060402509278
-	tempExtUnexp = 308.13978932458855
-	staticPressureAtm = 0.98835645591421473
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787334
-	uid = 154898163
-	mid = 293150170
-	persistentId = 2788163397
-	launchID = 1
-	parent = 68
-	position = 4.1165661811828613,-47.94677734375,-4.1165676116943359
-	rotation = 0,1,4.4408921E-16,-2.98023224E-08
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 54
-	sym = 58
-	sym = 62
-	sym = 66
-	sym = 74
-	sym = 78
-	srfN = , -1
-	attN = bottom, 68
-	mass = 0.800000012
-	shielded = False
-	temp = 308.11586123853027
-	tempExt = 308.12297403617072
-	tempExtUnexp = 308.12272471292169
-	staticPressureAtm = 0.98659919157105846
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292814376
-	uid = 2677007149
-	mid = 293150170
-	persistentId = 3606066862
-	launchID = 1
-	parent = 46
-	position = -2.9802322387695313E-07,-52.116806030273438,-2.6098065376281738
-	rotation = -1.01612789E-08,0.707106829,1.01612789E-08,-0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 51
-	sym = 55
-	sym = 59
-	sym = 63
-	sym = 67
-	sym = 75
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397847397
-	tempExt = 308.16832462972366
-	tempExtUnexp = 308.16674909328191
-	staticPressureAtm = 0.98721112435522296
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292814294
-	uid = 1302932607
-	mid = 293150170
-	persistentId = 3936395840
-	launchID = 1
-	parent = 71
-	position = 1.7881393432617188E-07,-51.687778472900391,-5.8217048645019531
-	rotation = 1.01491073E-08,0.707106829,1.01491073E-08,0.707106829
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 52
-	sym = 56
-	sym = 60
-	sym = 64
-	sym = 68
-	sym = 76
-	srfN = srfAttach, 71,COLLIDERDECOUPLER (1)
-	attN = top, 74
-	attN = bottom, 73
-	mass = 56
-	shielded = False
-	temp = 308.11586324214386
-	tempExt = 308.16727026409245
-	tempExtUnexp = 308.16575591766616
-	staticPressureAtm = 0.98714817667372157
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292814218
-	uid = 367235159
-	mid = 293150170
-	persistentId = 1782364809
-	launchID = 1
-	parent = 72
-	position = 1.7881393432617188E-07,-59.925777435302734,-5.8217048645019531
-	rotation = -4.80977391E-08,0.707106888,4.80977391E-08,-0.707106769
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 53
-	sym = 57
-	sym = 61
-	sym = 65
-	sym = 69
-	sym = 77
-	srfN = , -1
-	attN = top, 72
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.11585124454217
-	tempExt = 308.14083620158328
-	tempExtUnexp = 308.14001387979465
-	staticPressureAtm = 0.98835690769183315
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787258
-	uid = 4227282883
-	mid = 293150170
-	persistentId = 302955173
-	launchID = 1
-	parent = 72
-	position = 1.7881393432617188E-07,-47.94677734375,-5.8217058181762695
-	rotation = 0,0.923879623,-1.77635684E-15,-0.382683426
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 54
-	sym = 58
-	sym = 62
-	sym = 66
-	sym = 70
-	sym = 78
-	srfN = , -1
-	attN = bottom, 72
-	mass = 0.800000012
-	shielded = False
-	temp = 308.1158612385322
-	tempExt = 308.12297403836232
-	tempExtUnexp = 308.12272471489996
-	staticPressureAtm = 0.98659964334867689
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = nflv-decoupler-radial-1
-	cid = 4292813960
-	uid = 3506204274
-	mid = 293150170
-	persistentId = 2820891019
-	launchID = 1
-	parent = 46
-	position = -1.8454127311706543,-52.116806030273438,-1.8454115390777588
-	rotation = -5.49924195E-09,0.382683277,1.32763516E-08,-0.923879623
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 3
-	sqor = 0
-	sepI = 0
-	sidx = 0
-	attm = 1
-	sameVesselCollision = False
-	sym = 47
-	sym = 51
-	sym = 55
-	sym = 59
-	sym = 63
-	sym = 67
-	sym = 71
-	srfN = srfAttach, 46,COL_BASE
-	mass = 0.400000006
-	shielded = False
-	temp = 308.11590397845521
-	tempExt = 308.1683245986975
-	tempExtUnexp = 308.16674906516022
-	staticPressureAtm = 0.9872112749477624
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = nflv-decoupler-radial-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = fft-fueltank-pulseunits-5-3
-	cid = 4292813878
-	uid = 861261368
-	mid = 293150170
-	persistentId = 2070351191
-	launchID = 1
-	parent = 75
-	position = -4.1165676116943359,-51.687778472900391,-4.1165657043457031
-	rotation = 1.32604479E-08,0.923879623,5.49265433E-09,0.382683277
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 1
-	sameVesselCollision = False
-	sym = 48
-	sym = 52
-	sym = 56
-	sym = 60
-	sym = 64
-	sym = 68
-	sym = 72
-	srfN = srfAttach, 75,COLLIDERDECOUPLER (1)
-	attN = top, 78
-	attN = bottom, 77
-	mass = 56
-	shielded = False
-	temp = 308.11586324209827
-	tempExt = 308.1672699622834
-	tempExtUnexp = 308.16575563505648
-	staticPressureAtm = 0.98714862845133999
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fueltank-pulseunits-5-3
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = FissionPulses
-		amount = 1952.6771311309233
-		maxAmount = 5600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = fft-fission-orion-5-1
-	cid = 4292813802
-	uid = 2139483361
-	mid = 293150170
-	persistentId = 4128602482
-	launchID = 1
-	parent = 76
-	position = -4.1165680885314941,-59.925777435302734,-4.1165661811828613
-	rotation = -2.60302961E-08,0.382683367,6.28427301E-08,-0.923879564
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 1
-	resPri = 0
-	dstg = 4
-	sqor = 1
-	sepI = 0
-	sidx = 0
-	attm = 0
-	sameVesselCollision = False
-	sym = 49
-	sym = 53
-	sym = 57
-	sym = 61
-	sym = 65
-	sym = 69
-	sym = 73
-	srfN = , -1
-	attN = top, 76
-	attN = bottom, -1
-	mass = 56
-	shielded = False
-	temp = 308.1158512419268
-	tempExt = 308.14060549789724
-	tempExtUnexp = 308.13979074904626
-	staticPressureAtm = 0.98835735946945158
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = fft-fission-orion-5-1
-	modCost = 0
-	modMass = 0
-	moduleVariantName = 
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePulseEngineAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleEngineExhaustDamage
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorAnimator
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWaterfallFX
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	name = rocketNoseConeSize4
-	cid = 4292787182
-	uid = 4141814699
-	mid = 293150170
-	persistentId = 1855317754
-	launchID = 1
-	parent = 76
-	position = -4.1165676116943359,-47.94677734375,-4.1165652275085449
-	rotation = 4.4408921E-16,0.707106709,-1.99840144E-15,-0.707106888
-	mirror = 1,1,1
-	symMethod = Radial
-	istg = 0
-	resPri = 0
-	dstg = 4
-	sqor = -1
-	sepI = 0
-	sidx = -1
-	attm = 0
-	sameVesselCollision = False
-	sym = 50
-	sym = 54
-	sym = 58
-	sym = 62
-	sym = 66
-	sym = 70
-	sym = 74
-	srfN = , -1
-	attN = bottom, 76
-	mass = 0.800000012
-	shielded = False
-	temp = 308.11586123853033
-	tempExt = 308.1229740361847
-	tempExtUnexp = 308.12272471293431
-	staticPressureAtm = 0.98660009512629532
-	expt = 0.5
-	state = 0
-	PreFailState = 0
-	attached = True
-	autostrutMode = Off
-	rigidAttachment = False
-	flag = Squad/Flags/default
-	rTrf = rocketNoseConeSize4
-	modCost = 0
-	modMass = 0
-	moduleVariantName = White
-	moduleCargoStackableQuantity = 1
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutOff
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutRoot
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutHeaviest
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		AutostrutGrandparent
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesEnableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-		ResourcesDisableFlow
-		{
-			actionGroup = None
-			active = False
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -15338,16 +9098,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 80
-	sym = 81
-	sym = 82
+	sym = 48
+	sym = 49
+	sym = 50
 	srfN = srfAttach, 3,COLLIDERHAB2
 	mass = 4.16669989
 	shielded = False
-	temp = 308.1158525758085
-	tempExt = 308.12897989710882
-	tempExtUnexp = 308.1285338482067
-	staticPressureAtm = 0.980568939216514
+	temp = 57.305817554141406
+	tempExt = 57.30421584312117
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15421,10 +9181,10 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 5049453691.3455677
-		currentRotation = (0.5, -0.49999997, -0.5, -0.5)
+		launchUT = 5049453707.5749893
+		currentRotation = (0.458806276, -0.458724022, 0.538141191, 0.538027048)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
 		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
@@ -15491,10 +9251,10 @@ PART
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 500
-		state = Retracted
+		state = ExtendedFixed
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 5049453691.3455677
+		launchUT = 5049453707.5749893
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -15532,16 +9292,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 79
-	sym = 81
-	sym = 82
+	sym = 47
+	sym = 49
+	sym = 50
 	srfN = srfAttach, 3,COLLIDERHAB2
 	mass = 4.16669989
 	shielded = False
-	temp = 308.1158525758085
-	tempExt = 308.12897989710882
-	tempExtUnexp = 308.1285338482067
-	staticPressureAtm = 0.98056924040159288
+	temp = 57.270217210389262
+	tempExt = 57.26340670636052
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15615,10 +9375,10 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 5049453691.3455677
-		currentRotation = (0.5, -0.49999997, -0.5, -0.5)
+		launchUT = 5049453707.5749893
+		currentRotation = (0.502947152, -0.502975464, 0.497228503, 0.496813595)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
 		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
@@ -15685,10 +9445,10 @@ PART
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 500
-		state = Retracted
+		state = ExtendedFixed
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 5049453691.3455677
+		launchUT = 5049453707.5749893
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -15726,16 +9486,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 79
-	sym = 80
-	sym = 82
+	sym = 47
+	sym = 48
+	sym = 50
 	srfN = srfAttach, 3,COLLIDERHAB2
 	mass = 4.16669989
 	shielded = False
-	temp = 308.1158525758085
-	tempExt = 308.12897989710882
-	tempExtUnexp = 308.1285338482067
-	staticPressureAtm = 0.980568939216514
+	temp = 57.28898874675393
+	tempExt = 57.283975892337502
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -15809,10 +9569,10 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 5049453691.3455677
-		currentRotation = (0.5, -0.49999997, -0.5, -0.5)
+		launchUT = 5049453707.5749893
+		currentRotation = (-0.538161755, 0.538004637, -0.45883882, -0.458693713)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
 		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
@@ -15879,10 +9639,10 @@ PART
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 500
-		state = Retracted
+		state = ExtendedFixed
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 5049453691.3455677
+		launchUT = 5049453707.5749893
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -15920,16 +9680,16 @@ PART
 	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	sym = 79
-	sym = 80
-	sym = 81
+	sym = 47
+	sym = 48
+	sym = 49
 	srfN = srfAttach, 3,COLLIDERHAB2
 	mass = 4.16669989
 	shielded = False
-	temp = 308.1158525758085
-	tempExt = 308.12897989710882
-	tempExtUnexp = 308.1285338482067
-	staticPressureAtm = 0.98056863803143501
+	temp = 57.316129166524121
+	tempExt = 57.317300727592695
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16003,10 +9763,10 @@ PART
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
 		efficiencyMult = 1
-		launchUT = 5049453691.3455677
-		currentRotation = (0.5, -0.49999997, -0.5, -0.5)
+		launchUT = 5049453707.5749893
+		currentRotation = (-0.496953428, 0.497067183, -0.503017306, -0.502926648)
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
 		deployState = EXTENDED
 		stagingEnabled = True
 		EVENTS
@@ -16073,10 +9833,10 @@ PART
 		name = KopernicusSolarPanel
 		isEnabled = True
 		nominalRate = 500
-		state = Retracted
+		state = ExtendedFixed
 		trackedSunIndex = 0
 		manualTracking = False
-		launchUT = 5049453691.3455677
+		launchUT = 5049453707.5749893
 		stagingEnabled = True
 		timeEfficCurve
 		{
@@ -16118,10 +9878,10 @@ PART
 	attN = bottom, 0
 	mass = 0.0390000008
 	shielded = False
-	temp = 308.11586507801928
-	tempExt = 308.19475134769471
-	tempExtUnexp = 308.19363523248666
-	staticPressureAtm = 0.97924214364745243
+	temp = 57.339766723096467
+	tempExt = 57.337079916048332
+	tempExtUnexp = 4
+	staticPressureAtm = 0
 	expt = 0.5
 	state = 0
 	PreFailState = 0
@@ -16195,8 +9955,8 @@ PART
 		totalSystemTemperature = 0
 		totalSystemFlux = 0
 		currentLoopID = 1
-		currentLoopTemperature = 287.021759
-		nominalLoopTemperature = 287.021759
+		currentLoopTemperature = 2.70000005
+		nominalLoopTemperature = 2.70000005
 		currentLoopFlux = 0
 		stagingEnabled = True
 		EVENTS
@@ -16221,11 +9981,11 @@ PART
 		CurrentThrottle = 0
 		CurrentElectricalGeneration = 0
 		MaxElectricalGeneration = 0
-		InternalCoreTemperature = 2.7
+		InternalCoreTemperature = 2.70000005
 		InternalCoreTemperatureResponseScale = 0.25
 		CurrentSafetyOverride = 1300
 		FirstLoad = False
-		LastUpdateTime = 5056084395.874262
+		LastUpdateTime = 5083479100.6528254
 		CoreIntegrity = 100
 		stagingEnabled = True
 		EVENTS
@@ -16397,11 +10157,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True
+	Stage = False, 5056084882.69724
 	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = True
+	SAS = True, 5056085327.5404
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -16426,15 +10186,20 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
+TARGET
+{
+	type = CelestialBody
+	tgtId = Debdeb
+}
 CTRLSTATE
 {
-	pitch = -0.016078992
-	yaw = 0.012738916
-	roll = 0.016131345
+	pitch = -0.000445496989
+	yaw = -0.000704966369
+	roll = 1.09673692E-06
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {
@@ -16460,9 +10225,9 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 5049453691.3455677
+		lastUpdate = 5083479100.6528254
 		selectedPad = 0
-		Productivity = 1.3990084362630335
+		Productivity = 7.236882904600634
 	}
 	RPMVesselComputer
 	{
