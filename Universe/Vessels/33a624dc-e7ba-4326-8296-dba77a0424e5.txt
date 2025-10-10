@@ -1,5 +1,5 @@
-pid = 0c933f444e46468381981998538f7898
-persistentId = 1984387065
+pid = 33a624dce7ba43268296dba77a0424e5
+persistentId = 2270483993
 name = Fusion Mass Driver 1 Debris
 type = Debris
 sit = SUB_ORBITAL
@@ -11,24 +11,24 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 0.019800186157226563
-lct = 5138788112.904294
-lastUT = 5138788112.9240942
-distanceTraveled = 11.165959362198015
+met = 0
+lct = 5138831116.7897167
+lastUT = 5138831116.7897167
+distanceTraveled = 5479766875518436
 root = 0
-lat = 0.0007780381299587716
-lon = -175.88984513229951
-alt = 486752.83335652098
-hgt = 486752.844
-nrm = -0.95387876,-0.0578341335,-0.294568449
-rot = 0.225380987,0.117149182,0.0136315357,0.967105865
+lat = -25.312036045103582
+lon = -123.01165829668257
+alt = 2739883317889220
+hgt = 2.73988339E+15
+nrm = -0.63796854,0.660806656,-0.395386845
+rot = 0.727053523,0.0672852322,0.0896979943,-0.67736268
 CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-PQSMin = 2
-PQSMax = 9
+PQSMin = 0
+PQSMax = 0
 GroupOverride = 0
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -40,57 +40,57 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 421980.28145503486
-	ECC = 0.64713482114901555
-	INC = 62.758672170583843
-	LPE = 186.5845504551977
-	LAN = 1.7185806623169242
-	MNA = 2.7359386297599473
-	EPH = 5138788112.9240942
-	REF = 2
-	IDENT = Squad/Mun
+	SMA = -6.1223353691366261E-17
+	ECC = 2.2183191585944151E+26
+	INC = 25.318413986960696
+	LPE = 178.75732035108527
+	LAN = 127.62732808104823
+	MNA = 4.4752264275886751E+31
+	EPH = 5138831116.7897167
+	REF = 0
+	IDENT = Squad/Sun
 }
 PART
 {
-	name = trussPiece3x
-	cid = 4292943998
-	uid = 3469867877
-	mid = 4040359138
-	persistentId = 4053351853
-	launchID = 2
+	name = nflv-battery-stack-5-1
+	cid = 4287775972
+	uid = 3644460821
+	mid = 4258495208
+	persistentId = 1843398487
+	launchID = 6
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = -1
 	resPri = 0
-	dstg = 8
+	dstg = 0
 	sqor = -1
 	sepI = -1
 	sidx = -1
 	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1
-	attN = bottom, -1
+	srfN = , -1
 	attN = top, -1
-	mass = 0.375
+	attN = bottom, -1
+	mass = 1.60000002
 	shielded = False
-	temp = 306.72419186103093
-	tempExt = 305.74148122042862
-	tempExtUnexp = 4
-	staticPressureAtm = 0
-	expt = 0.5
+	temp = 304.7133354420377
+	tempExt = 305.01192316124695
+	tempExtUnexp = 305.01186499724844
+	staticPressureAtm = 0.98870108694080772
+	expt = 0
 	state = 0
 	PreFailState = 0
 	attached = False
 	autostrutMode = Grandparent
 	rigidAttachment = True
 	flag = Squad/Flags/default
-	rTrf = trussPiece3x
+	rTrf = nflv-battery-stack-5-1
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Hollow
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -135,97 +135,41 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
 	PARTDATA
 	{
 	}
-	MODULE
+	RESOURCE
 	{
-		name = ModuleCargoPart
-		isEnabled = True
-		packedVolume = -1
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPrinterRequirements
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
+		name = ElectricCharge
+		amount = 31999.8359375
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 5138788112.88449
-	Gear = False, 0
+	Stage = True, 5138831116.75012
+	Gear = True, 0
 	Light = False, 0
 	RCS = False, 0
 	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = True, 5138788064.85744
-	Custom02 = False, 0
-	Custom03 = False, 0
+	Custom01 = True, 5138831089.56268
+	Custom02 = True, 5138831108.65639
+	Custom03 = True, 5138831087.10263
 	Custom04 = False, 0
 	Custom05 = False, 0
 	Custom06 = False, 0
