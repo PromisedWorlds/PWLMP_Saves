@@ -1,29 +1,29 @@
-pid = 7eedef08932d42f38a46fd1d315436b0
-persistentId = 259337755
-name = Ice Cream 1 Debris
+pid = 17aee5ef794d4df1963a7aba0b1c0172
+persistentId = 2743752607
+name = MREV Debris
 type = Debris
-sit = LANDED
-landed = True
+sit = SUB_ORBITAL
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = TSC 39A
-landedAt = LaunchpadFX
+landedAt = 
 displaylandedAt = 
 splashed = False
-met = 25.625513076782227
-lct = 5138857047.079457
-lastUT = 5138857072.78497
-distanceTraveled = 0
+met = 947.5104360580444
+lct = 5138859418.11668
+lastUT = 5138860365.647117
+distanceTraveled = 677797.112600347
 root = 0
-lat = 0.012933582858799085
-lon = -74.56173304813576
-alt = 75.72128662082832
-hgt = 1.389945
-nrm = 0.0010036230087280273,0.9999984502792358,-0.0014899373054504395
-rot = -0.68102604,0.0024517684,-0.1902594,0.70710605
+lat = 0.3149488203068008
+lon = 107.14770055928432
+alt = 72775.5469295797
+hgt = 72775.55
+nrm = 0.43323636054992676,0.7543361186981201,0.49323761463165283
+rot = -0.054440152,0.09279599,0.50420725,-0.85685486
 CoM = 0,0,0
-stg = 4
+stg = 3
 prst = False
 ref = 0
 ctrl = False
@@ -40,55 +40,57 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300820.2303702499
-	ECC = 0.9947984234572487
-	INC = 0.012933582858799085
-	LPE = 270
-	LAN = 71.76728389066983
-	MNA = 3.1415926535897887
-	EPH = 5138857083.70496
+	SMA = 675071.1314499921
+	ECC = 0.011728617977565805
+	INC = 0.9034612686461581
+	LPE = 94.19296443054056
+	LAN = 17.91317669300082
+	MNA = 3.7619693980424573
+	EPH = 5138859995.601154
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = launchClamp1
-	cid = 4288267606
-	uid = 1992985913
-	mid = 2090004805
-	persistentId = 3592069384
-	launchID = 3
+	name = Decoupler.3
+	cid = 4292072812
+	uid = 443961708
+	mid = 2842467221
+	persistentId = 2296256531
+	launchID = 4
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 4
+	istg = 2
 	resPri = 0
-	dstg = 4
-	sqor = 4
-	sepI = 4
-	sidx = 1
-	attm = 1
+	dstg = 1
+	sqor = 2
+	sepI = 2
+	sidx = 0
+	attm = 0
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDERNG
-	mass = 0.100000001
+	srfN = , -1
+	attN = top, -1
+	attN = bottom, -1
+	mass = 0.360000014
 	shielded = False
-	temp = 304.06631985034522
-	tempExt = 304.73622028779744
-	tempExtUnexp = 304.73554509765131
-	staticPressureAtm = 0.98882909059936308
-	expt = 0.100000001
+	temp = 306.50312523787375
+	tempExt = 316.78808425005684
+	tempExtUnexp = 4
+	staticPressureAtm = 0
+	expt = 0.5
 	state = 1
 	PreFailState = 0
 	attached = False
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Benjee10_MMSEV/Flags/PlanetsideStates
-	rTrf = launchClamp1
+	rTrf = Decoupler.3
 	modCost = 0
 	modMass = 0
-	moduleVariantName = 
+	moduleVariantName = BlackAndWhite
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -148,10 +150,31 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
+		name = ModuleDecouple
 		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
+		ejectionForcePercent = 100
+		isDecoupled = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -161,19 +184,16 @@ PART
 			ToggleAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ActivateAction
+			EnableAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ShutdownAction
+			DisableAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -198,22 +218,15 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRestockLaunchClamp
+		name = ModulePartVariants
 		isEnabled = True
-		scaleFactor = 1.01257622
-		height = 2.02515721
+		useVariantMass = True
 		stagingEnabled = True
-		towerRot = -1.93478442E-08,0.382683516,8.01413336E-09,-0.923879564
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ReleaseClamp
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -221,39 +234,14 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = WBIModuleEVAFlagSwitch
 		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -262,11 +250,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 0
+	Stage = False, 5138859202.33093
 	Gear = False, 0
-	Light = False, 0
-	RCS = False, 0
-	SAS = True, 5138856568.82503
+	Light = True, 5138858606.1438
+	RCS = False, 5138859401.33747
+	SAS = True, 5138858605.38379
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -320,7 +308,7 @@ VESSELMODULES
 	}
 	ELVesselWorkNet
 	{
-		lastUpdate = 0
+		lastUpdate = 5138859419.2767067
 		selectedPad = 0
 		Productivity = 0
 	}

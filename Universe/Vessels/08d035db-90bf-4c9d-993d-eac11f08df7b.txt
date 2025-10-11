@@ -1,29 +1,29 @@
-pid = bc65fe55d9414870a8e011d4c849ad2c
-persistentId = 2910775204
-name = Verbin Kerman
+pid = 08d035db90bf4c9d993deac11f08df7b
+persistentId = 3612028836
+name = Seandous Kerman
 type = EVA
-sit = LANDED
-landed = True
+sit = ORBITING
+landed = False
 skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
-launchedFrom = Runway
-landedAt = KSC_SPH_Grounds
-displaylandedAt = #autoLOC_6002119
+launchedFrom = TSC 39A
+landedAt = 
+displaylandedAt = 
 splashed = False
-met = 55360103.86651611
-lct = 5083499038.59024
-lastUT = 5138859142.496757
-distanceTraveled = 1.970253826564411
+met = 18.600425720214844
+lct = 5138860498.230151
+lastUT = 5138860516.850577
+distanceTraveled = 45624.68738977647
 root = 0
-lat = -0.026898208208630005
-lon = -74.6891060846323
-alt = 68.92928519845009
-hgt = 0.25682107
-nrm = 0.0009415745735168457,0.9999995827674866,0.0005161166191101074
-rot = 0.37283602,-0.4803661,0.6011054,-0.5185694
+lat = 0.200292209855731
+lon = 132.9937730275385
+alt = 85829.91311127553
+hgt = 85829.914
+nrm = -0.8798540830612183,0.2945252060890198,-0.3729765713214874
+rot = -0.5601278,-0.40436974,-0.0061681787,-0.7229826
 CoM = 0,0,0
-stg = 1
+stg = 0
 prst = False
 ref = 0
 ctrl = True
@@ -40,44 +40,44 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300816.7987348158
-	ECC = 0.9947986009604698
-	INC = 0.026898208209687014
-	LPE = 90
-	LAN = 286.000893775069
-	MNA = 3.1415926535897887
-	EPH = 5138859140.556712
+	SMA = 682715.5463374333
+	ECC = 0.004880634235172911
+	INC = 0.8407309021143118
+	LPE = 214.51041673269646
+	LAN = 52.92843029743233
+	MNA = 2.7763629079475014
+	EPH = 5138860518.9106245
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = kerbalEVAfemale
-	cid = 4292221324
-	uid = 1938615401
-	mid = 2873065998
-	persistentId = 1138639879
-	launchID = 1
+	name = kerbalEVA
+	cid = 4287499542
+	uid = 894184213
+	mid = 2842467221
+	persistentId = 228227231
+	launchID = 4
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000012
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
 	resPri = 0
 	dstg = 0
-	sqor = 0
-	sepI = -1
-	sidx = 0
+	sqor = -1
+	sepI = 0
+	sidx = -1
 	attm = 0
 	sameVesselCollision = False
 	srfN = , -1
 	mass = 0.0899999961
 	shielded = False
-	temp = 311.58253833016062
-	tempExt = 311.32793909047467
-	tempExtUnexp = 311.32763508879816
-	staticPressureAtm = 0.98983888887282567
+	temp = 302.99999705871141
+	tempExt = 302.98967929935321
+	tempExtUnexp = 303
+	staticPressureAtm = 0
 	expt = 0
 	state = 0
 	PreFailState = 0
@@ -91,7 +91,7 @@ PART
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	partRendererBoundsIgnore = kbEVA_flagDecals,canopy,base,flag,collider,helmet,visor,flare1,flare2,EVAStorage_flagDecals,EVAStorageSlim_flagDecals,chute_standalone_flag,chute_container_flag
-	crew = Verbin Kerman
+	crew = Seandous Kerman
 	EVENTS
 	{
 	}
@@ -166,7 +166,7 @@ PART
 		_flags = 1
 		useGlobalPhysicMaterial = True
 		stagingEnabled = True
-		state = Ragdoll
+		state = Ladder (Acquire)
 		EVENTS
 		{
 		}
@@ -222,9 +222,9 @@ PART
 		}
 		vInfo
 		{
-			vesselName = Verbin Kerman
+			vesselName = Seandous Kerman
 			vesselType = EVA
-			rootUId = 1938615401
+			rootUId = 894184213
 		}
 		UPGRADESAPPLIED
 		{
@@ -405,8 +405,6 @@ PART
 		Log
 		{
 			flight = 0
-			0 = Land,Kerbin
-			0 = Flight,Kerbin
 		}
 		UPGRADESAPPLIED
 		{
@@ -559,10 +557,10 @@ PART
 				PART
 				{
 					name = evaJetpack
-					cid = 4294240036
+					cid = 4294243864
 					uid = 0
 					mid = 0
-					persistentId = 4137803891
+					persistentId = 2574766688
 					launchID = 0
 					parent = 0
 					position = 0,0,0
@@ -836,7 +834,7 @@ ACTIONGROUPS
 	Stage = False, 0
 	Gear = False, 0
 	Light = False, 0
-	RCS = False, 0
+	RCS = True
 	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
@@ -887,9 +885,6 @@ VESSELMODULES
 	{
 		controlState = None
 		canComm = False
-	}
-	BetterBurnTimeData
-	{
 	}
 	VesselDataManager
 	{
