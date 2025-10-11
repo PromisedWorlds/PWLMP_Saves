@@ -1,6 +1,6 @@
-pid = b134f8a64d5c4745a64b0e9a54ef78d8
-persistentId = 3757575729
-name = Ice Cream 1 Lander Debris
+pid = ec1a7887e7e84e69a2c8134c96b3b976
+persistentId = 408595672
+name = Ice Cream 1 Debris
 type = Debris
 sit = LANDED
 landed = True
@@ -11,18 +11,18 @@ launchedFrom = TSC 39A
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 1129560.5056781769
-lct = 5158741559.204446
+met = 225.25533294677734
+lct = 5159870894.454791
 lastUT = 5159871125.871349
-distanceTraveled = 56.31086018606344
+distanceTraveled = 15.106991784599064
 root = 0
-lat = -6.89547518587912
-lon = -8.588520996448082
-alt = 1661.1931827649241
-hgt = 0.1420356
-nrm = -0.9866584539413452,9.98377799987793E-06,0.1628047227859497
-rot = -0.045299005,0.70868367,-0.7028981,-0.040618695
-CoM = -1.93715053E-07,-0.0999999121,-0.199999675
+lat = -7.063900579275221
+lon = -8.50228940834678
+alt = 1625.5341287281772
+hgt = 0.31212434
+nrm = 0.8113617300987244,0.5519073605537415,-0.1925889253616333
+rot = -0.2969281,-0.07657259,0.41777658,-0.85523856
+CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
@@ -40,43 +40,43 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 106527.99531662239
-	ECC = 0.98690648758806
-	INC = 6.895421789459353
-	LPE = 90.00000026578535
-	LAN = 350.72962012094996
-	MNA = 3.14159265219477
-	EPH = 5159871126.751369
+	SMA = 106509.20316610971
+	ECC = 0.9869225178474113
+	INC = 7.063900579275222
+	LPE = 90
+	LAN = 350.8158243061098
+	MNA = 3.141592653589796
+	EPH = 5159871126.731369
 	REF = 16
 	IDENT = Squad/Eeloo
 }
 PART
 {
-	name = smallRadialEngine.v2
-	cid = 4283590078
-	uid = 1880911277
-	mid = 2217081474
-	persistentId = 715536343
-	launchID = 6
+	name = sepMotor1
+	cid = 4275130734
+	uid = 2692916554
+	mid = 446362530
+	persistentId = 910504466
+	launchID = 14
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1.00000024
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	symMethod = Radial
 	istg = 0
 	resPri = 0
-	dstg = 0
+	dstg = 2
 	sqor = 0
 	sepI = -1
-	sidx = 0
+	sidx = 2
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER
-	mass = 0.0799999982
+	srfN = srfAttach, -1,collider.collider.001
+	mass = 0.0125000002
 	shielded = False
-	temp = 519.95779767807164
-	tempExt = 504.43587275739281
-	tempExtUnexp = 588.10068523909445
+	temp = 522.01452417188409
+	tempExt = 515.63754864183989
+	tempExtUnexp = 492.63701701012104
 	staticPressureAtm = 0
 	expt = 0.5
 	state = 1
@@ -85,10 +85,10 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Benjee10_MMSEV/Flags/PlanetsideStates
-	rTrf = smallRadialEngine.v2
+	rTrf = sepMotor1
 	modCost = 0
 	modMass = 0
-	moduleVariantName = Orange
+	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
 	{
@@ -153,8 +153,8 @@ PART
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = True
-		flameout = False
-		EngineIgnited = False
+		flameout = True
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -210,73 +210,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			LockAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			FreeAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitchAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleLookAtConstraint
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTestSubject
 		isEnabled = True
 		stagingEnabled = True
@@ -294,7 +227,7 @@ PART
 	{
 		name = ModuleCargoPart
 		isEnabled = True
-		packedVolume = 65
+		packedVolume = 25
 		beingAttached = False
 		beingSettled = False
 		reinitResourcesOnStoreInVessel = False
@@ -326,115 +259,9 @@ PART
 	}
 	MODULE
 	{
-		name = ModulePartVariants
+		name = FXModuleAnimateThrottle
 		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleLookAtConstraint
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleThrottleEffects
-		isEnabled = True
-		state = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorChanger
-		isEnabled = True
-		animState = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleColorChanger
-		isEnabled = True
-		animState = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleRestockDepthMask
-		isEnabled = True
+		animState = 0
 		stagingEnabled = True
 		EVENTS
 		{
@@ -461,32 +288,28 @@ PART
 		{
 		}
 	}
-	MODULE
+	RESOURCE
 	{
-		name = WBIModuleEVAFlagSwitch
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
+		name = SolidFuel
+		amount = 0
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 5158313166.58476
+	Stage = True, 5159870784.35227
 	Gear = True, 5158314001.567
 	Light = False, 0
 	RCS = False, 5158314308.90723
 	SAS = True, 5158314267.44628
 	Brakes = True, 5158315665.36948
 	Abort = False, 0
-	Custom01 = True, 5158720534.98594
+	Custom01 = False, 5159738104.82433
 	Custom02 = False, 0
 	Custom03 = False, 0
 	Custom04 = False, 0
