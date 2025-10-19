@@ -1,5 +1,5 @@
-pid = 36b7ed1205ec48d2aa2c8ee55684add1
-persistentId = 1571113502
+pid = d20ea99e5b4c4d73bf0a1f004d452376
+persistentId = 2737986721
 name = N00B380 Antimatter Collection Unit (ACU) Debris
 type = Debris
 sit = LANDED
@@ -8,22 +8,22 @@ skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = LaunchPad
-landedAt = LaunchPad
+landedAt = 
 displaylandedAt = 
 splashed = False
-met = 53.83714771270752
-lct = 5161452989.224589
-lastUT = 5161453043.178554
-distanceTraveled = 0
+met = 6.380146026611328
+lct = 5161459158.545204
+lastUT = 5161459164.965351
+distanceTraveled = 0.4626636207603734
 root = 0
-lat = -0.09665325893442889
-lon = -74.55828368231329
-alt = 93.02047555474564
-hgt = 20.66506
-nrm = -5.811452865600586E-07,1.0000001192092896,7.68899917602539E-06
-rot = -0.17839688,0.6118569,-0.68484867,0.35325345
+lat = -0.7099682663222769
+lon = -163.27548671695493
+alt = 340.99241031426936
+hgt = 0.21541174
+nrm = 0.11061480641365051,-0.0180616807192564,-0.9936991930007935
+rot = -0.5343421,-0.17092869,-0.80768055,-0.18142247
 CoM = 0,0,0
-stg = 3
+stg = 0
 prst = False
 ref = 0
 ctrl = False
@@ -40,52 +40,52 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300828.96817030327
-	ECC = 0.9947979881240495
-	INC = 0.0966532589344289
-	LPE = 90
-	LAN = 95.06473842695681
-	MNA = 3.1415926535897887
-	EPH = 5161453050.337268
+	SMA = 300954.1323782167
+	ECC = 0.9947923215616478
+	INC = 0.7099682663222767
+	LPE = 90.0000000552983
+	LAN = 108.48748975495624
+	MNA = 3.141592653590006
+	EPH = 5161459164.46534
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = launchClamp1
-	cid = 4290479336
-	uid = 708784443
+	name = radiator-fixed-3
+	cid = 4291182886
+	uid = 1798093182
 	mid = 720138302
-	persistentId = 3149389315
+	persistentId = 720997147
 	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,0.99999994
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = -1
 	resPri = 0
-	dstg = 4
-	sqor = 3
-	sepI = 3
-	sidx = 8
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER
-	mass = 0.100000001
+	srfN = srfAttach, -1,COL_MAGAZINE
+	mass = 0.133000001
 	shielded = False
-	temp = 307.08440295860891
-	tempExt = 307.56326852728387
-	tempExtUnexp = 307.56176963567611
-	staticPressureAtm = 0.98629130512409779
-	expt = 0.100000001
-	state = 1
+	temp = 213.08290085006573
+	tempExt = 228.20956979465967
+	tempExtUnexp = 228.35315063453854
+	staticPressureAtm = 0.95027047323645286
+	expt = 0.5
+	state = 0
 	PreFailState = 0
 	attached = False
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = launchClamp1
+	rTrf = radiator-fixed-3
 	modCost = 0
 	modMass = 0
 	moduleVariantName = 
@@ -148,32 +148,29 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
+		name = ModuleSystemHeatRadiator
 		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
+		sunTracking = True
+		IsCooling = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
+			ToggleRadiatorAction
 			{
-				actionGroup = None
-				active = False
+				actionGroup = Custom01
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ShutdownAction
 			{
 				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -183,7 +180,26 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTestSubject
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -198,22 +214,20 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRestockLaunchClamp
+		name = ModuleSystemHeat
 		isEnabled = True
-		scaleFactor = 10.6081285
-		height = 21.2162704
+		totalSystemTemperature = 0
+		totalSystemFlux = -92.6886444
+		currentLoopID = 0
+		currentLoopTemperature = 285.195831
+		nominalLoopTemperature = 285.195831
+		currentLoopFlux = -2257.41406
 		stagingEnabled = True
-		towerRot = 5.82890998E-08,-0.923879564,-1.40722292E-07,0.382683426
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ReleaseClamp
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -221,35 +235,14 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = ModuleSystemHeatColorAnimator
 		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -258,15 +251,15 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 5161452986.88454
+	Stage = True, 5161453224.91682
 	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
 	SAS = True, 5161452970.44416
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0
-	Custom02 = False, 0
+	Custom01 = True, 5161453279.73611
+	Custom02 = False, 5161454738.68811
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
@@ -295,7 +288,7 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
 VESSELMODULES
 {

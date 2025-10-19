@@ -1,5 +1,5 @@
-pid = 5f9f5cfaa39a4386b7824da4f9edf7ac
-persistentId = 3174776004
+pid = 063c4340df584452b67588824cdd6a5a
+persistentId = 3306057456
 name = N00B380 Antimatter Collection Unit (ACU) Debris
 type = Debris
 sit = LANDED
@@ -8,22 +8,22 @@ skipGroundPositioning = False
 skipGroundPositioningForDroppedPart = False
 vesselSpawning = True
 launchedFrom = LaunchPad
-landedAt = LaunchPad
+landedAt = 
 displaylandedAt = 
 splashed = False
-met = 53.83714771270752
-lct = 5161452989.224589
-lastUT = 5161453043.178554
-distanceTraveled = 0
+met = 8.680198669433594
+lct = 5161459156.2451515
+lastUT = 5161459164.965351
+distanceTraveled = 31.31226295999696
 root = 0
-lat = -0.0965003166037552
-lon = -74.55790363170948
-alt = 94.59519299829844
-hgt = 22.236835
-nrm = 2.8759241104125977E-06,1.0000001192092896,8.165836334228516E-06
-rot = 0.17839622,-0.6118572,0.68484783,-0.35325488
+lat = -0.7100045104859378
+lon = -163.27382000884919
+alt = 341.31068184878677
+hgt = 0.5810697
+nrm = -0.4852434992790222,0.7933564782142639,0.36759257316589355
+rot = 0.08102697,-0.409405,0.4408575,0.79464895
 CoM = 0,0,0
-stg = 3
+stg = 0
 prst = False
 ref = 0
 ctrl = False
@@ -40,54 +40,54 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 300829.7637652417
-	ECC = 0.9947979471249847
-	INC = 0.09650031660375522
-	LPE = 89.99999999999999
-	LAN = 95.06511847756065
-	MNA = 3.1415926535897976
-	EPH = 5161453050.337268
+	SMA = 300965.23394407914
+	ECC = 0.9947197981519217
+	INC = 0.7749023764823539
+	LPE = 66.38451590500154
+	LAN = 132.11321097878744
+	MNA = 3.141616742860654
+	EPH = 5161459164.865349
 	REF = 1
 	IDENT = Squad/Kerbin
 }
 PART
 {
-	name = launchClamp1
-	cid = 4290506216
-	uid = 911106290
+	name = hydrogen-radial-125-1
+	cid = 4291269436
+	uid = 1594909539
 	mid = 720138302
-	persistentId = 3136988481
+	persistentId = 64771686
 	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1.00000012
 	mirror = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = -1
 	resPri = 0
-	dstg = 4
-	sqor = 3
-	sepI = 3
-	sidx = 4
+	dstg = 0
+	sqor = -1
+	sepI = -1
+	sidx = -1
 	attm = 1
 	sameVesselCollision = False
-	srfN = srfAttach, -1,COLLIDER
-	mass = 0.100000001
+	srfN = srfAttach, -1,COL_BASE
+	mass = 0.0429880023
 	shielded = False
-	temp = 307.08430504917084
-	tempExt = 307.56297221798212
-	tempExtUnexp = 307.56150403952148
-	staticPressureAtm = 0.9860605220573494
-	expt = 0.100000001
+	temp = 278.28933132422031
+	tempExt = 297.75034192141482
+	tempExtUnexp = 297.85263577440514
+	staticPressureAtm = 0.94904020748519613
+	expt = 0.5
 	state = 1
 	PreFailState = 0
 	attached = False
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Squad/Flags/default
-	rTrf = launchClamp1
-	modCost = 0
-	modMass = 0
+	rTrf = hydrogen-radial-125-1
+	modCost = 404.800049
+	modMass = 0.0259840004
 	moduleVariantName = 
 	moduleCargoStackableQuantity = 1
 	EVENTS
@@ -133,13 +133,11 @@ PART
 		ResourcesEnableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 		ResourcesDisableFlow
 		{
 			actionGroup = None
-			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -148,32 +146,100 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGenerator
+		name = ModuleB9PartSwitch
 		isEnabled = True
-		generatorIsActive = True
-		throttle = 1
+		stagingEnabled = True
+		moduleID = textureSwitch
+		currentSubtype = Foil
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 1500
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPrinterRequirements
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleB9PartSwitch
+		isEnabled = True
+		stagingEnabled = True
+		moduleID = fuelSwitch
+		currentSubtype = Deuterium
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCryoTank
+		isEnabled = True
+		LastUpdateTime = 5161459156.2451515
+		CoolingAllowed = True
+		CoolingEnabled = True
+		BoiloffOccuring = False
+		DebugMode = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			EnableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DisableAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
 			ToggleAction
 			{
 				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				active = False
 				wasActiveBeforePartWasAdjusted = False
 			}
 		}
@@ -183,8 +249,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTestSubject
-		isEnabled = True
+		name = ModuleB9PartInfo
+		isEnabled = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -196,77 +262,29 @@ PART
 		{
 		}
 	}
-	MODULE
+	RESOURCE
 	{
-		name = ModuleRestockLaunchClamp
-		isEnabled = True
-		scaleFactor = 11.3940172
-		height = 22.7880478
-		stagingEnabled = True
-		towerRot = 3.74326774E-08,0.923879564,4.99864079E-08,-0.382683456
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ReleaseClamp
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
+		name = LqdDeuterium
+		amount = 799.99999449310064
+		maxAmount = 800
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 5161452986.88454
+	Stage = True, 5161453224.91682
 	Gear = False, 0
 	Light = False, 0
 	RCS = False, 0
 	SAS = True, 5161452970.44416
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0
-	Custom02 = False, 0
+	Custom01 = True, 5161453279.73611
+	Custom02 = False, 5161454738.68811
 	Custom03 = False, 0
 	Custom04 = False, 0
 	Custom05 = False, 0
