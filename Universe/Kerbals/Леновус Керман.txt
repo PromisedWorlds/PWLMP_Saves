@@ -13,20 +13,71 @@ inactiveTimeEnd = 0
 gExperienced = 0
 outDueToG = False
 ToD = 2000.02
-idx = 8
+idx = -1
 extraXP = 0
-hasHelmetOn = False
-hasNeckRingOn = False
-hasVisorDown = False
+hasHelmetOn = True
+hasNeckRingOn = True
+hasVisorDown = True
 lightR = 1
 lightG = 0.5176
 lightB = 0
-completedFirstEVA = False
+completedFirstEVA = True
 suit = Default
 hero = False
+EVACHUTE
+{
+	name = ModuleEvaChute
+	isEnabled = True
+	chuteYawRateAtMaxSpeed = 1
+	chuteMaxSpeedForYawRate = 50
+	chuteYawRateAtMinSpeed = 1
+	chuteMinSpeedForYawRate = 1
+	chuteRollRate = 1
+	chutePitchRate = 1
+	chuteDefaultForwardPitch = 9
+	semiDeployedChuteForwardPitch = 25
+	chutePitchRateDivisorWhenTurning = 1
+	chuteRollRateDivisorWhenPitching = 1
+	chuteYawRateDivisorWhenPitching = 1
+	persistentState = STOWED
+	animTime = 1
+	minAirPressureToOpen = 0.0399999991
+	deployAltitude = 1000
+	spreadAngle = 7
+	automateSafeDeploy = 0
+	stagingEnabled = False
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		DeployAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		CutAction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	UPGRADESAPPLIED
+	{
+	}
+}
 INVENTORY
 {
-	inventory = evaJetpack
+	name = ModuleInventoryPart
+	isEnabled = True
+	stagingEnabled = True
+	inventory = evaJetpack,evaChute
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
 	STOREDPARTS
 	{
 		STOREDPART
@@ -39,10 +90,10 @@ INVENTORY
 			PART
 			{
 				name = evaJetpack
-				cid = 4294240364
+				cid = 4294242866
 				uid = 0
 				mid = 0
-				persistentId = 0
+				persistentId = 1715768826
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -169,7 +220,7 @@ INVENTORY
 				RESOURCE
 				{
 					name = EVA Propellant
-					amount = 5
+					amount = 0
 					maxAmount = 5
 					flowState = True
 					isTweakable = False
@@ -179,20 +230,176 @@ INVENTORY
 				}
 			}
 		}
+		STOREDPART
+		{
+			slotIndex = 1
+			partName = evaChute
+			quantity = 1
+			stackCapacity = 1
+			variantName = 
+			PART
+			{
+				name = evaChute
+				cid = 4289384290
+				uid = 0
+				mid = 0
+				persistentId = 3362592162
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = None, -1
+				mass = 0.00400000019
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = evaChute
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutOff
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutRoot
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutHeaviest
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					AutostrutGrandparent
+					{
+						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
+					}
+					ResourcesEnableFlow
+					{
+						actionGroup = None
+						active = False
+						wasActiveBeforePartWasAdjusted = False
+					}
+					ResourcesDisableFlow
+					{
+						actionGroup = None
+						active = False
+						wasActiveBeforePartWasAdjusted = False
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					packedVolume = 10
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = WBIPrinterRequirements
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+		}
+	}
+	UPGRADESAPPLIED
+	{
 	}
 }
 CAREER_LOG
 {
-	flight = 3
+	flight = 7
 	0 = Training5,Kerbin
 	0 = Recover
 	1 = Recover
 	2 = Recover
-}
-FLIGHT_LOG
-{
-	flight = 3
 	3 = Flyby,Sun
 	3 = Spawn
 	3 = Flyby,Moho
+	3 = Flight,Kerbin
+	3 = ExitVessel,Kerbin
+	3 = Land,Kerbin
+	3 = Recover
+	4 = Flight,Kerbin
+	4 = Land,Kerbin
+	4 = Recover
+	5 = Flight,Kerbin
+	5 = ExitVessel,Kerbin
+	5 = Land,Kerbin
+	5 = Recover
+	6 = Flight,Kerbin
+	6 = Land,Kerbin
+	6 = Recover
+}
+FLIGHT_LOG
+{
+	flight = 7
 }
