@@ -11,18 +11,18 @@ launchedFrom = LaunchPad
 landedAt = 
 displaylandedAt = 
 splashed = False
-met = 236477.39730262756
-lct = 5159962628.1515617
-lastUT = 5160199105.7888641
+met = 65705035.41075516
+lct = 5159962628.151562
+lastUT = 5225667663.582317
 distanceTraveled = 2790096.8186222296
 root = 0
-lat = 12.580262951875191
-lon = -175.88756759058057
-alt = 0.94346598386619007
-hgt = 0.962004364
-nrm = -0.999983668,-0.00147715211,-0.00554297119
-rot = 0.978475153,-0.10167221,0.0564512275,-0.170477122
-CoM = -0.000346563756,-0.395399213,0.143622071
+lat = 12.580263236606951
+lon = -175.88756835969187
+alt = 0.9310279619821813
+hgt = 0.9599532
+nrm = -1,-6.884336471557617E-06,-2.7894973754882812E-05
+rot = 0.978547,-0.10194155,0.053672507,-0.17080158
+CoM = 1.86264515E-09,-0.392968982,0.160638198
 stg = 0
 prst = False
 ref = 0
@@ -35,18 +35,18 @@ OverrideActionControl = 0,0,0,0
 OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 altDispState = ASL
-cPch = -0.01668965
-cHdg = -4.977901
+cPch = 0.2
+cHdg = 0.3
 cMod = 0
 ORBIT
 {
-	SMA = 30042.858859446293
-	ECC = 0.997178227472169
-	INC = 12.58066810267046
-	LPE = 269.95792973277224
-	LAN = 216.38321499906112
-	MNA = 3.1415837715255739
-	EPH = 5160199105.5488644
+	SMA = 75066.58213241593
+	ECC = 0.9982384537130603
+	INC = 12.580425192781163
+	LPE = 270.0011653623469
+	LAN = 1.824722286973497
+	MNA = 3.1416033914453068
+	EPH = 5225667664.58234
 	REF = 3
 	IDENT = Squad/Minmus
 }
@@ -77,8 +77,8 @@ PART
 	attN = node_stack_left, -1
 	mass = 1.80999994
 	shielded = False
-	temp = 179.74643058933589
-	tempExt = 180.08309922100921
+	temp = 236.28157090904915
+	tempExt = 236.96683045954998
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -88,7 +88,7 @@ PART
 	autostrutMode = Off
 	rigidAttachment = False
 	flag = Benjee10_MMSEV/Flags/PlanetsideStates
-	rTrf = Benjee10.MMSEV.base.TNode1-25
+	rTrf = Benjee10.MMSEV.base.TNode1-25 (Base Alpha)
 	modCost = 1000
 	modMass = 0.300000012
 	moduleVariantName = 
@@ -241,7 +241,22 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ModuleFreeIva
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -296,8 +311,8 @@ PART
 	attN = node_stack_top, -1
 	mass = 3.00999999
 	shielded = False
-	temp = 179.76713179422012
-	tempExt = 180.26454027148185
+	temp = 236.28238007806092
+	tempExt = 237.50918109783805
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -480,7 +495,22 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ModuleFreeIva
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -533,8 +563,8 @@ PART
 	srfN = srfAttach, 1,greenhouseCollider
 	mass = 0.100000001
 	shielded = False
-	temp = 179.77484609759489
-	tempExt = 179.9913390931714
+	temp = 236.28600023552249
+	tempExt = 236.87987101198755
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -682,7 +712,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -700,30 +730,6 @@ PART
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KopernicusSolarPanel
-		isEnabled = True
-		nominalRate = 15
-		state = Broken
-		trackedSunIndex = 0
-		manualTracking = False
-		launchUT = 5159962628.1515617
-		stagingEnabled = True
-		timeEfficCurve
-		{
-			key = 0 1 0 0
-		}
 		EVENTS
 		{
 		}
@@ -761,8 +767,8 @@ PART
 	attN = node_stack_top, 0
 	mass = 2.875
 	shielded = False
-	temp = 179.73336688306347
-	tempExt = 180.21093083199204
+	temp = 236.28243166873443
+	tempExt = 237.48824474097924
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -965,7 +971,22 @@ PART
 	}
 	MODULE
 	{
-		name = SCANRPMStorage
+		name = ModuleFreeIva
+		isEnabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -1018,8 +1039,8 @@ PART
 	srfN = srfAttach, 3,habLongCollider
 	mass = 0.100000001
 	shielded = False
-	temp = 179.74359360560533
-	tempExt = 179.94394057747917
+	temp = 236.28600304089139
+	tempExt = 236.87809349100451
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1167,7 +1188,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -1185,30 +1206,6 @@ PART
 		name = ModuleB9PartInfo
 		isEnabled = False
 		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = KopernicusSolarPanel
-		isEnabled = True
-		nominalRate = 15
-		state = Broken
-		trackedSunIndex = 0
-		manualTracking = False
-		launchUT = 5159962628.1515617
-		stagingEnabled = True
-		timeEfficCurve
-		{
-			key = 0 1 0 0
-		}
 		EVENTS
 		{
 		}
@@ -1245,8 +1242,8 @@ PART
 	attN = node_stack_bottom, 6
 	mass = 0.5
 	shielded = False
-	temp = 179.69767136559986
-	tempExt = 179.86042414983947
+	temp = 236.28157841031529
+	tempExt = 236.87625744919424
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1355,7 +1352,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -1412,8 +1409,8 @@ PART
 	attN = node_stack_back, -1
 	mass = 1
 	shielded = False
-	temp = 179.66977822222884
-	tempExt = 179.65330127651976
+	temp = 236.28114308342467
+	tempExt = 236.73242801800183
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -1763,7 +1760,7 @@ PART
 			}
 			MechJebModuleSpaceplaneGuidance
 			{
-				runwayIndex = 4
+				runwayIndex = 0
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -1789,7 +1786,7 @@ PART
 			}
 			MechJebModuleSpaceplaneAutopilot
 			{
-				bBreakAsSoonAsLanded = True
+				bBreakAsSoonAsLanded = False
 				unlockParts = 
 				unlockTechs = 
 				glideslope
@@ -2272,10 +2269,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 5160197925.1244802
-				deltaVExpended = 9.7567016070190774E-05
+				deltaVExpended = NaN
 				dragLosses = 0
 				gravityLosses = -0.018964924476693901
-				steeringLosses = 8.972486670286945E-05
+				steeringLosses = NaN
 				markLAN = 12.174036178455003
 				markLatitude = 1.3495442561089315
 				markLongitude = -17.7347342635749
@@ -2297,7 +2294,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -2314,7 +2311,7 @@ PART
 	{
 		name = TrajectoriesVesselSettings
 		isEnabled = True
-		Initialized = False
+		Initialized = True
 		EntryAngle = 3.1415926535897931
 		EntryHorizon = False
 		HighAngle = 3.1415926535897931
@@ -2357,6 +2354,21 @@ PART
 	}
 	MODULE
 	{
+		name = FlightEngineerModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -2385,7 +2397,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 134.63677978515625
+		amount = 134.53538144745585
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -2419,8 +2431,8 @@ PART
 	attN = top, -1
 	mass = 0.0149999997
 	shielded = False
-	temp = 179.76311956026643
-	tempExt = 179.89069185570818
+	temp = 236.28658194702106
+	tempExt = 236.72148091179497
 	tempExtUnexp = 308.9952892582582
 	staticPressureAtm = 0
 	expt = 0.5
@@ -2512,7 +2524,7 @@ PART
 	}
 	MODULE
 	{
-		name = WBIPrinterRequirements
+		name = ShipEffectsCollisions
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -2557,11 +2569,6 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
-TARGET
-{
-	type = CelestialBody
-	tgtId = Minmus
-}
 CTRLSTATE
 {
 	pitch = 0
@@ -2580,30 +2587,16 @@ VESSELMODULES
 	AxisGroupsModule
 	{
 	}
-	SuspensionLoadBalancer
+	SystemHeatVessel
 	{
 	}
-	CommNetVessel
-	{
-		controlState = ProbePartial
-		canComm = True
-	}
-	BetterBurnTimeData
+	VesselModuleSave
 	{
 	}
-	VesselDataManager
+	SpaceDustVessel
 	{
 	}
-	ModuleDynamicBatteryStorage
-	{
-	}
-	ELVesselWorkNet
-	{
-		lastUpdate = 5160199105.7888641
-		selectedPad = 0
-		Productivity = 0
-	}
-	AtmoFxModule
+	ShipEffects
 	{
 	}
 	RPMVesselComputer
@@ -2612,13 +2605,27 @@ VESSELMODULES
 		{
 		}
 	}
-	SpaceDustVessel
+	AtmoFxModule
 	{
 	}
-	VesselModuleSave
+	ModuleDynamicBatteryStorage
 	{
 	}
-	SystemHeatVessel
+	VesselDataManager
+	{
+	}
+	BetterBurnTimeData
+	{
+	}
+	ModuleStabilization
+	{
+	}
+	CommNetVessel
+	{
+		controlState = ProbePartial
+		canComm = True
+	}
+	SuspensionLoadBalancer
 	{
 	}
 	GoldStrikeVesselModule
